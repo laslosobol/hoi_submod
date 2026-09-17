@@ -1,18 +1,19 @@
 on_actions = {
-	on_focus_complete = {
+	on_daily = {
 		effect = {
 			if = {
 				limit = {
-					tag = GRI
-					has_completed_focus = GRI_industry_modern
-					NOT = { has_country_flag = HSM_GRI_dawnclaw_asylum_checked }
 					CYA = {
 						exists = yes
+						NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_scheduled }
 						NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
 					}
+					GRI = {
+						has_completed_focus = GRI_industry_modern
+					}
 				}
-				set_country_flag = HSM_GRI_dawnclaw_asylum_checked
 				CYA = {
+					set_country_flag = HSM_CYA_dawnclaw_asylum_scheduled
 					country_event = { id = hsm_cyanolisia.1 days = 35 }
 				}
 			}
