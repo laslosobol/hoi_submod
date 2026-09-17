@@ -1,8 +1,4 @@
 HSM_CYA_dawnclaw_paths = {
-	icon = generic_political_discourse
-	allowed = { original_tag = CYA }
-	visible = { has_country_flag = HSM_CYA_dawnclaw_hidden_in_court }
-
 	HSM_CYA_maintain_dawnclaw_cover = {
 		icon = generic_political_discourse
 		cost = 35
@@ -15,7 +11,7 @@ HSM_CYA_dawnclaw_paths = {
 			set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 180 }
 			add_to_variable = { HSM_CYA_countess_dominance = 1 }
 		}
-		timeout_effect = {
+		remove_effect = {
 			country_event = { id = hsm_cyanolisia.11 }
 		}
 		ai_will_do = { factor = 1 }

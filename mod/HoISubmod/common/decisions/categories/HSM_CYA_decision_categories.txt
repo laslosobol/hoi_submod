@@ -6,7 +6,5 @@ HSM_CYA_dawnclaw_paths = {
 	visible = {
 		has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 	}
-	priority = {
-		base = 100
-	}
+	priority = 100
 }
