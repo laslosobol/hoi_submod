@@ -1,0 +1,21 @@
+on_actions = {
+	on_focus_complete = {
+		effect = {
+			if = {
+				limit = {
+					tag = GRI
+					has_completed_focus = GRI_industry_modern
+					NOT = { has_country_flag = HSM_GRI_dawnclaw_asylum_checked }
+					CYA = {
+						exists = yes
+						NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
+					}
+				}
+				set_country_flag = HSM_GRI_dawnclaw_asylum_checked
+				CYA = {
+					country_event = { id = hsm_cyanolisia.1 days = 35 }
+				}
+			}
+		}
+	}
+}

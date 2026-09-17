@@ -1,0 +1,149 @@
+decisions = {
+	HSM_CYA_dawnclaw_paths = {
+		icon = generic_political_discourse
+		allowed = { original_tag = CYA }
+		visible = { has_country_flag = HSM_CYA_dawnclaw_hidden_in_court }
+
+		HSM_CYA_maintain_dawnclaw_cover = {
+			icon = generic_political_discourse
+			cost = 35
+			days_remove = 90
+			available = {
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_revealed_to_empire }
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+			}
+			complete_effect = {
+				set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 180 }
+				add_to_variable = { HSM_CYA_countess_dominance = 1 }
+			}
+			timeout_effect = {
+				country_event = { id = hsm_cyanolisia.11 }
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_form_blackrock_county = {
+			icon = generic_political_discourse
+			cost = 50
+			available = {
+				has_country_flag = HSM_CYA_path_blackrock_county
+				NOT = { has_country_flag = HSM_CYA_blackrock_county_formed }
+			}
+			complete_effect = {
+				set_country_flag = HSM_CYA_blackrock_county_formed
+				add_ideas = HSM_CYA_blackrock_county_policy
+				add_political_power = 25
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_prepare_border_claims = {
+			icon = generic_political_discourse
+			cost = 35
+			available = {
+				has_country_flag = HSM_CYA_blackrock_county_formed
+				OR = {
+					has_war_with = MIT
+					has_war_with = SIC
+				}
+			}
+			complete_effect = {
+				set_country_flag = HSM_CYA_border_claims_prepared
+				add_war_support = 0.03
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_integrate_minotaur_outback = {
+			icon = generic_political_discourse
+			cost = 50
+			available = {
+				OR = {
+					has_country_flag = HSM_CYA_path_blackrock_county
+					has_country_flag = HSM_CYA_countess_dominant
+				}
+				NOT = { has_idea = HSM_CYA_integrative_minotaur_policy }
+			}
+			complete_effect = {
+				remove_ideas = HSM_CYA_hardline_minotaur_policy
+				add_ideas = HSM_CYA_integrative_minotaur_policy
+				add_to_variable = { HSM_CYA_countess_dominance = 1 }
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_police_minotaur_outback = {
+			icon = generic_political_discourse
+			cost = 50
+			available = {
+				OR = {
+					has_country_flag = HSM_CYA_path_marriage
+					has_country_flag = HSM_CYA_dawnclaw_dominant
+				}
+				NOT = { has_idea = HSM_CYA_hardline_minotaur_policy }
+			}
+			complete_effect = {
+				remove_ideas = HSM_CYA_integrative_minotaur_policy
+				add_ideas = HSM_CYA_hardline_minotaur_policy
+				add_to_variable = { HSM_CYA_dawnclaw_dominance = 1 }
+				if = {
+					limit = { check_variable = { HSM_CYA_dawnclaw_dominance > 2 } }
+					country_event = { id = hsm_cyanolisia.4 }
+				}
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_delegate_security_to_dawnclaw = {
+			icon = generic_political_discourse
+			cost = 35
+			available = {
+				has_country_flag = HSM_CYA_path_marriage
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+			}
+			complete_effect = {
+				add_to_variable = { HSM_CYA_dawnclaw_dominance = 1 }
+				add_war_support = 0.02
+				army_experience = 10
+				if = {
+					limit = { check_variable = { HSM_CYA_dawnclaw_dominance > 2 } }
+					country_event = { id = hsm_cyanolisia.4 }
+				}
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_expand_countess_cabinet = {
+			icon = generic_political_discourse
+			cost = 35
+			available = {
+				has_country_flag = HSM_CYA_path_marriage
+				NOT = { has_country_flag = HSM_CYA_countess_dominant }
+			}
+			complete_effect = {
+				add_to_variable = { HSM_CYA_countess_dominance = 1 }
+				add_stability = 0.02
+				add_political_power = 15
+				if = {
+					limit = { check_variable = { HSM_CYA_countess_dominance > 2 } }
+					country_event = { id = hsm_cyanolisia.5 }
+				}
+			}
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_imperial_administration_cleanup = {
+			icon = generic_political_discourse
+			cost = 25
+			available = {
+				has_country_flag = HSM_CYA_path_imperial_administration
+			}
+			complete_effect = {
+				add_stability = 0.01
+				add_political_power = 10
+			}
+			ai_will_do = { factor = 1 }
+		}
+	}
+}
