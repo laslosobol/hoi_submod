@@ -1,0 +1,12 @@
+HSM_CYA_dawnclaw_paths = {
+	icon = generic_political_discourse
+	allowed = {
+		original_tag = CYA
+	}
+	visible = {
+		has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+	}
+	priority = {
+		base = 100
+	}
+}
