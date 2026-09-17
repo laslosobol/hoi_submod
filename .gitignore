@@ -1,0 +1,18 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea/
+
+# HoI4 / Paradox generated local state
+*.log
+*.tmp
+*.bak
+*.zip
+*.rar
+*.7z
+
+# Keep build exports out of source control.
+dist/
+release/
