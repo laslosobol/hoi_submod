@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  hsm_cyanolisia.1.t:0 "A Fugitive From Griffenheim"
  hsm_cyanolisia.1.d:0 "The purge in Griffenheim has sent officers, informants, and frightened couriers scattering across the Herzland. One such courier arrives at the Countess' court under a false name, carrying a sealed confession and a request for sanctuary from Ferdinand Dawnclaw himself. Granting him refuge would risk imperial anger, but his knowledge of the army could prove useful if he is kept quiet and close."
  hsm_cyanolisia.1.a:0 "Hide him as the Countess' assistant."
@@ -6,6 +6,8 @@ l_english:
  HSM_CYA_ferdinand_dawnclaw:0 "Ferdinand Dawnclaw"
  HSM_CYA_ferdinand_dawnclaw_desc:0 "Officially a minor assistant in the Countess' household, Dawnclaw remains a dangerous exile with a soldier's memory for names, formations, and grudges. His presence stiffens resolve against Griffenheim, but keeping him hidden drains political capital."
  HSM_CYA_dawnclaw_assistant_appointed_tt:0 "Ferdinand Dawnclaw will be appointed as a Political Advisor and cannot be replaced."
+ HSM_CYA_dawnclaw_griffonian_files:0 "Dawnclaw's Griffenheim Files"
+ HSM_CYA_dawnclaw_griffonian_files_desc:0 "Dawnclaw brought names, maps, marching tables, and private grudges from Griffenheim. Even in exile, his knowledge makes Cyanolisia more dangerous to the Empire."
  hsm_cyanolisia.2.t:0 "Three Uses For A Fugitive"
  hsm_cyanolisia.2.d:0 "Dawnclaw has survived the first days in hiding. His name remains absent from the ledgers, his rooms are listed as storage, and the Countess' staff have learned not to ask why a minor assistant receives military reports. Now the court must decide what this dangerous guest is actually for."
  hsm_cyanolisia.2.a:0 "He is an adviser, nothing more."

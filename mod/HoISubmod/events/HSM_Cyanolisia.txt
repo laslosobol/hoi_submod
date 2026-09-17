@@ -27,13 +27,13 @@ country_event = {
 		ai_chance = { factor = 70 }
 		set_country_flag = HSM_CYA_dawnclaw_asylum_resolved
 		set_country_flag = HSM_CYA_dawnclaw_hidden_in_court
-		recruit_character = HSM_CYA_ferdinand_dawnclaw
 		activate_advisor = HSM_CYA_ferdinand_dawnclaw
 		set_can_be_fired_in_advisor_role = {
 			character = HSM_CYA_ferdinand_dawnclaw
 			slot = political_advisor
 			value = no
 		}
+		add_ideas = HSM_CYA_dawnclaw_griffonian_files
 		add_political_power = -25
 		add_stability = -0.02
 		hidden_effect = {
@@ -205,6 +205,7 @@ country_event = {
 		remove_ideas = HSM_CYA_dawnclaw_dominant_court
 		remove_ideas = HSM_CYA_countess_dominant_court
 		remove_ideas = HSM_CYA_blackrock_county_policy
+		remove_ideas = HSM_CYA_dawnclaw_griffonian_files
 		add_ideas = HSM_CYA_imperial_administration
 		retire_character = HSM_CYA_ferdinand_dawnclaw
 		custom_effect_tooltip = HSM_CYA_imperial_admin_path_tt
