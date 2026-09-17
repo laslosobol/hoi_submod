@@ -38,7 +38,13 @@ The dependency name must match EaW's launcher display name. In the launcher play
 
 `interface/` contains `.gui` and `.gfx` files. Add sprite definitions here when new art needs to be referenced by script.
 
+`country_metadata/` and `portraits/` are included because the upstream EaW repository uses those top-level folders. Keep submod additions compatible with EaW's conventions when touching country-specific presentation or portrait content.
+
 `map/` is present for rare map-adjacent work. Most submods should avoid touching it unless the design explicitly needs map changes.
+
+`scenario_tests/` is available for save/scenario validation files if the submod grows large enough to need repeatable checks.
+
+`tutorial/` is available for tutorial-facing content if needed. Most submods can leave it empty.
 
 ## Replace Path Policy
 

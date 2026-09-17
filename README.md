@@ -22,11 +22,13 @@ Copy it to your Hearts of Iron IV user mod directory as `HoISubmod.mod`, update 
 mod/HoISubmod/
   descriptor.mod              # packaged mod descriptor, no local path
   common/                     # shared game database files
+  country_metadata/           # EaW-style country metadata
   events/                     # event files
   history/                    # country, state, unit, general history
   localisation/english/       # text shown in-game
   gfx/                        # flags, portraits, interface art
   interface/                  # .gui and .gfx interface definitions
+  portraits/                  # EaW-style portrait assets/definitions
   music/                      # optional music definitions/assets
   sound/                      # optional sound definitions/assets
 
@@ -35,10 +37,12 @@ launcher/
 
 docs/
   STRUCTURE.md                # folder purpose and modding notes
+  EAW_UPSTREAM.md             # upstream EaW reference
 ```
 
 ## Notes
 
 - This template declares `Equestria at War` as a dependency in both descriptors.
+- Upstream EaW development repo: https://github.com/EaW-Team/equestria_dev
 - No `replace_path` entries are included by default. Prefer same-path file overrides or new files first; add `replace_path` only when you intentionally replace a whole loaded directory.
 - Localization files should use HoI4's expected encoding for your game version. If text fails to load, check `Documents/Paradox Interactive/Hearts of Iron IV/logs/error.log`.
