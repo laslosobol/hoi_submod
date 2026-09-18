@@ -21,16 +21,10 @@ Copy it to your Hearts of Iron IV user mod directory as `HoISubmod.mod`, update 
 ```text
 mod/HoISubmod/
   descriptor.mod              # packaged mod descriptor, no local path
-  common/                     # shared game database files
-  country_metadata/           # EaW-style country metadata
+  common/                     # shared game database files currently used by the submod
   events/                     # event files
-  history/                    # country, state, unit, general history
+  history/                    # country startup hooks
   localisation/english/       # text shown in-game
-  gfx/                        # flags, portraits, interface art
-  interface/                  # .gui and .gfx interface definitions
-  portraits/                  # EaW-style portrait assets/definitions
-  music/                      # optional music definitions/assets
-  sound/                      # optional sound definitions/assets
 
 launcher/
   HoISubmod.mod.example       # local launcher descriptor template

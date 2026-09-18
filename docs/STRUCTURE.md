@@ -26,25 +26,19 @@ The dependency name must match EaW's launcher display name. In the launcher play
 
 ## Folder Guide
 
-`common/` contains database-style definitions used by HoI4 systems. Common subfolders in this template cover decisions, ideas, focuses, characters, scripted triggers/effects, technologies, units, and on-actions.
+`common/` contains database-style definitions used by HoI4 systems. This project currently keeps only the folders that have real content, such as decisions, ideas, characters, and on-actions.
 
 `events/` contains country, news, and narrative event files.
 
-`history/` contains starting-state data: countries, states, units, and generals/admirals.
+`history/` contains starting-state data. This submod currently uses country history only to recruit the Dawnclaw advisor character at game start.
 
 `localisation/english/` contains player-facing strings. Keep key prefixes consistent, for example `HSM_` for this submod.
 
-`gfx/` contains image assets and generated sprite references. Use the nested folders for flags, leaders, focus icons, idea icons, and event art.
+Create `gfx/` and `interface/` only when adding new art or sprite definitions. Current content reuses existing EaW/HoI4 assets.
 
-`interface/` contains `.gui` and `.gfx` files. Add sprite definitions here when new art needs to be referenced by script.
+Create EaW-specific folders such as `country_metadata/` and `portraits/` only when touching country presentation or portrait content.
 
-`country_metadata/` and `portraits/` are included because the upstream EaW repository uses those top-level folders. Keep submod additions compatible with EaW's conventions when touching country-specific presentation or portrait content.
-
-`map/` is present for rare map-adjacent work. Most submods should avoid touching it unless the design explicitly needs map changes.
-
-`scenario_tests/` is available for save/scenario validation files if the submod grows large enough to need repeatable checks.
-
-`tutorial/` is available for tutorial-facing content if needed. Most submods can leave it empty.
+Create `map/`, `scenario_tests/`, `tutorial/`, `music/`, and `sound/` only when the design explicitly needs them.
 
 ## Replace Path Policy
 
