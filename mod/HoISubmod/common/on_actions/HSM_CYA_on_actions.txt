@@ -1,20 +1,70 @@
 on_actions = {
-	on_daily = {
+	on_daily_CYA = {
 		effect = {
 			if = {
 				limit = {
-					CYA = {
-						exists = yes
-						NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_scheduled }
-						NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
-					}
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_scheduled }
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
 					GRI = {
+						exists = yes
 						has_completed_focus = GRI_industry_modern
+						NOT = {
+							has_country_leader = {
+								character = GRI_ferdinand_dawnclaw
+								ruling_only = yes
+							}
+						}
 					}
 				}
-				CYA = {
-					set_country_flag = HSM_CYA_dawnclaw_asylum_scheduled
-					country_event = { id = hsm_cyanolisia.1 days = 35 }
+				set_country_flag = HSM_CYA_dawnclaw_asylum_scheduled
+				country_event = { id = hsm_cyanolisia.1 days = 35 }
+			}
+		}
+	}
+
+	on_weekly_CYA = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_assassination_risk_ended }
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_assassination_launched }
+				}
+				add_to_variable = { HSM_CYA_dawnclaw_exposure = 1 }
+				if = {
+					limit = { has_country_flag = HSM_CYA_countess_dominant }
+					add_to_variable = { HSM_CYA_dawnclaw_exposure = 1 }
+				}
+				else_if = {
+					limit = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+					add_to_variable = { HSM_CYA_dawnclaw_exposure = 2 }
+				}
+				clamp_variable = {
+					var = HSM_CYA_dawnclaw_exposure
+					min = 0
+					max = 10
+				}
+				if = {
+					limit = {
+						check_variable = { HSM_CYA_dawnclaw_exposure < 7 }
+					}
+					clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+				}
+				else_if = {
+					limit = {
+						check_variable = { HSM_CYA_dawnclaw_exposure > 9 }
+					}
+					set_country_flag = HSM_CYA_dawnclaw_assassination_pending
+					set_country_flag = HSM_CYA_dawnclaw_assassination_launched
+					country_event = { id = hsm_cyanolisia.10 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { HSM_CYA_dawnclaw_exposure > 6 }
+					}
+					set_country_flag = HSM_CYA_dawnclaw_assassination_pending
 				}
 			}
 		}

@@ -1,10 +1,27 @@
-HSM_CYA_dawnclaw_paths = {
+HSM_CYA_dawnclaw_hiding = {
 	icon = generic_political_discourse
 	allowed = {
 		original_tag = CYA
 	}
 	visible = {
 		has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_assassination_risk_ended }
 	}
-	priority = 100
+	visible_when_empty = yes
+	priority = 101
+}
+
+HSM_CYA_imperial_restoration = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = CYA
+	}
+	visible = {
+		has_country_flag = HSM_CYA_can_claim_empire_descendant
+		NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
+	}
+	visible_when_empty = yes
+	priority = 102
 }

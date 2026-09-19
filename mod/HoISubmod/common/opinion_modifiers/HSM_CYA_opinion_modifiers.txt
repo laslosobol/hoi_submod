@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	HSM_CYA_proxy_rule_trade = {
+		trade = yes
+		value = 50
+	}
+}

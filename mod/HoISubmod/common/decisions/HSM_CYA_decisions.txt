@@ -1,143 +1,186 @@
-HSM_CYA_dawnclaw_paths = {
+HSM_CYA_dawnclaw_hiding = {
+	HSM_CYA_griffenheim_agents_closing_in = {
+		icon = onmap_recruit_operative
+		is_good = no
+		selectable_mission = yes
+		cost = 0
+		available = { always = no }
+		activation = {
+			has_country_flag = HSM_CYA_dawnclaw_assassination_pending
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_assassination_launched }
+		}
+		days_mission_timeout = 28
+		cancel_trigger = {
+			OR = {
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_hidden_in_court }
+				has_country_flag = HSM_CYA_dawnclaw_dead
+				has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed
+				check_variable = { HSM_CYA_dawnclaw_exposure < 7 }
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = { HSM_CYA_dawnclaw_exposure > 9 }
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_assassination_launched }
+				}
+				set_country_flag = HSM_CYA_dawnclaw_assassination_launched
+				country_event = { id = hsm_cyanolisia.10 }
+			}
+			else = {
+				clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	HSM_CYA_maintain_dawnclaw_cover = {
 		icon = generic_political_discourse
 		cost = 35
-		days_remove = 90
+		days_re_enable = 21
 		available = {
-			NOT = { has_country_flag = HSM_CYA_dawnclaw_revealed_to_empire }
+			has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+			check_variable = { HSM_CYA_dawnclaw_exposure > 0 }
 			NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
 		}
 		complete_effect = {
-			set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 180 }
-			add_to_variable = { HSM_CYA_countess_dominance = 1 }
-		}
-		remove_effect = {
-			country_event = { id = hsm_cyanolisia.11 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_form_blackrock_county = {
-		icon = generic_political_discourse
-		cost = 50
-		available = {
-			has_country_flag = HSM_CYA_path_blackrock_county
-			NOT = { has_country_flag = HSM_CYA_blackrock_county_formed }
-		}
-		complete_effect = {
-			set_country_flag = HSM_CYA_blackrock_county_formed
-			add_ideas = HSM_CYA_blackrock_county_policy
-			add_political_power = 25
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_prepare_border_claims = {
-		icon = generic_political_discourse
-		cost = 35
-		available = {
-			has_country_flag = HSM_CYA_blackrock_county_formed
-			OR = {
-				has_war_with = MIT
-				has_war_with = SIC
+			custom_effect_tooltip = HSM_CYA_exposure_minus_2_tt
+			subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 2 }
+			clamp_variable = {
+				var = HSM_CYA_dawnclaw_exposure
+				min = 0
+				max = 10
 			}
-		}
-		complete_effect = {
-			set_country_flag = HSM_CYA_border_claims_prepared
-			add_war_support = 0.03
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_integrate_minotaur_outback = {
-		icon = generic_political_discourse
-		cost = 50
-		available = {
-			OR = {
-				has_country_flag = HSM_CYA_path_blackrock_county
-				has_country_flag = HSM_CYA_countess_dominant
+			if = {
+				limit = { check_variable = { HSM_CYA_dawnclaw_exposure < 7 } }
+				clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
 			}
-			NOT = { has_idea = HSM_CYA_integrative_minotaur_policy }
-		}
-		complete_effect = {
-			remove_ideas = HSM_CYA_hardline_minotaur_policy
-			add_ideas = HSM_CYA_integrative_minotaur_policy
 			add_to_variable = { HSM_CYA_countess_dominance = 1 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
-	HSM_CYA_police_minotaur_outback = {
-		icon = generic_political_discourse
-		cost = 50
-		available = {
-			OR = {
-				has_country_flag = HSM_CYA_path_marriage
-				has_country_flag = HSM_CYA_dawnclaw_dominant
-			}
-			NOT = { has_idea = HSM_CYA_hardline_minotaur_policy }
-		}
-		complete_effect = {
-			remove_ideas = HSM_CYA_integrative_minotaur_policy
-			add_ideas = HSM_CYA_hardline_minotaur_policy
-			add_to_variable = { HSM_CYA_dawnclaw_dominance = 1 }
-			if = {
-				limit = { check_variable = { HSM_CYA_dawnclaw_dominance > 2 } }
-				country_event = { id = hsm_cyanolisia.4 }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_delegate_security_to_dawnclaw = {
-		icon = generic_political_discourse
-		cost = 35
-		available = {
-			has_country_flag = HSM_CYA_path_marriage
-			NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
-			NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
-		}
-		complete_effect = {
-			add_to_variable = { HSM_CYA_dawnclaw_dominance = 1 }
-			add_war_support = 0.02
-			army_experience = 10
-			if = {
-				limit = { check_variable = { HSM_CYA_dawnclaw_dominance > 2 } }
-				country_event = { id = hsm_cyanolisia.4 }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_expand_countess_cabinet = {
-		icon = generic_political_discourse
-		cost = 35
-		available = {
-			has_country_flag = HSM_CYA_path_marriage
-			NOT = { has_country_flag = HSM_CYA_countess_dominant }
-		}
-		complete_effect = {
-			add_to_variable = { HSM_CYA_countess_dominance = 1 }
-			add_stability = 0.02
-			add_political_power = 15
-			if = {
-				limit = { check_variable = { HSM_CYA_countess_dominance > 2 } }
-				country_event = { id = hsm_cyanolisia.5 }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	HSM_CYA_imperial_administration_cleanup = {
+	HSM_CYA_counterintelligence_sweep = {
 		icon = generic_political_discourse
 		cost = 25
+		days_re_enable = 28
 		available = {
-			has_country_flag = HSM_CYA_path_imperial_administration
+			has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+			command_power > 24
+			check_variable = { HSM_CYA_dawnclaw_exposure > 1 }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
 		}
 		complete_effect = {
-			add_stability = 0.01
-			add_political_power = 10
+			custom_effect_tooltip = HSM_CYA_exposure_minus_3_tt
+			add_command_power = -25
+			subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 3 }
+			clamp_variable = {
+				var = HSM_CYA_dawnclaw_exposure
+				min = 0
+				max = 10
+			}
+			if = {
+				limit = { check_variable = { HSM_CYA_dawnclaw_exposure < 7 } }
+				clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+			}
 		}
 		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_stage_loyalist_raids = {
+		icon = generic_political_discourse
+		cost = 20
+		days_re_enable = 28
+		available = {
+			has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_stability > 0.03
+			check_variable = { HSM_CYA_dawnclaw_exposure > 2 }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
+		}
+		complete_effect = {
+			custom_effect_tooltip = HSM_CYA_exposure_minus_4_tt
+			add_stability = -0.03
+			subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 4 }
+			clamp_variable = {
+				var = HSM_CYA_dawnclaw_exposure
+				min = 0
+				max = 10
+			}
+			if = {
+				limit = { check_variable = { HSM_CYA_dawnclaw_exposure < 7 } }
+				clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_disappear_compromised_witnesses = {
+		icon = generic_political_discourse
+		cost = 10
+		days_re_enable = 35
+		available = {
+			has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			command_power > 29
+			has_stability > 0.05
+			check_variable = { HSM_CYA_dawnclaw_exposure > 3 }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+			NOT = { has_country_flag = HSM_CYA_dawnclaw_advisor_role_confirmed }
+		}
+		complete_effect = {
+			custom_effect_tooltip = HSM_CYA_exposure_minus_5_tt
+			add_command_power = -30
+			add_stability = -0.05
+			subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 5 }
+			clamp_variable = {
+				var = HSM_CYA_dawnclaw_exposure
+				min = 0
+				max = 10
+			}
+			if = {
+				limit = { check_variable = { HSM_CYA_dawnclaw_exposure < 7 } }
+				clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
+
+HSM_CYA_imperial_restoration = {
+	HSM_CYA_become_the_empire_descendant = {
+		icon = generic_formable_nations
+		cost = 75
+		fire_only_once = yes
+		visible = {
+			has_country_flag = HSM_CYA_can_claim_empire_descendant
+			NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
+		}
+		available = {
+			owns_state = 382
+			controls_state = 382
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HSM_CYA_become_the_empire_descendant"
+			set_country_flag = HSM_CYA_empire_descendant_declared
+			set_capital = { state = 382 remember_old_capital = yes }
+			add_ideas = HSM_CYA_herzland_devastation
+			GRI = { add_to_ROOT_potential_cores = yes }
+			STW = { add_to_ROOT_potential_cores = yes }
+			FEA = { add_to_ROOT_potential_cores = yes }
+			PYT = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			ANG = { add_to_ROOT_potential_cores = yes }
+			KAT = { add_to_ROOT_potential_cores = yes }
+			custom_effect_tooltip = HSM_CYA_empire_descendant_reconstruction_tt
+		}
+		ai_will_do = { factor = 20 }
 	}
 }
