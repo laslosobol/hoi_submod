@@ -59,7 +59,6 @@ country_event = {
 		name = hsm_cyanolisia.1.b
 		ai_chance = { factor = 30 }
 		set_country_flag = HSM_CYA_dawnclaw_asylum_resolved
-		add_political_power = 25
 	}
 }
 
@@ -82,7 +81,6 @@ country_event = {
 		set_country_flag = HSM_CYA_dawnclaw_path_chosen
 		set_country_flag = HSM_CYA_path_frontier_march
 		add_ideas = HSM_CYA_frontier_march_policy
-		add_stability = 0.03
 		custom_effect_tooltip = HSM_CYA_frontier_march_path_tt
 	}
 
@@ -93,7 +91,7 @@ country_event = {
 		add_ideas = HSM_CYA_unlikely_marriage
 		set_variable = { HSM_CYA_dawnclaw_dominance = 0 }
 		set_variable = { HSM_CYA_countess_dominance = 0 }
-		country_event = { id = hsm_cyanolisia.3 days = 14 }
+		country_event = { id = hsm_cyanolisia.3 }
 		custom_effect_tooltip = HSM_CYA_marriage_path_tt
 	}
 
@@ -102,7 +100,6 @@ country_event = {
 		set_country_flag = HSM_CYA_dawnclaw_path_chosen
 		set_country_flag = HSM_CYA_path_imperial_administration
 		add_ideas = HSM_CYA_imperial_administration
-		add_political_power = 50
 		custom_effect_tooltip = HSM_CYA_imperial_admin_path_tt
 	}
 }
@@ -174,7 +171,6 @@ country_event = {
 		set_country_flag = HSM_CYA_countess_dominant
 		set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 240 }
 		swap_ideas = { remove_idea = HSM_CYA_unlikely_marriage add_idea = HSM_CYA_countess_dominant_court }
-		add_stability = 0.05
 		subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 2 }
 		clamp_variable = {
 			var = HSM_CYA_dawnclaw_exposure
@@ -240,7 +236,6 @@ country_event = {
 		name = hsm_cyanolisia.12.a
 		set_country_flag = HSM_CYA_gri_proxy_rule_installed
 		add_ideas = HSM_CYA_gri_proxy_rule
-		add_stability = 0.03
 		if = {
 			limit = {
 				GRI = { exists = yes }
@@ -278,5 +273,563 @@ country_event = {
 		set_country_flag = HSM_CYA_dawnclaw_assassination_pending
 		set_country_flag = HSM_CYA_dawnclaw_assassination_launched
 		country_event = { id = hsm_cyanolisia.10 days = 14 random = 14 }
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.20" }
+	title = hsm_cyanolisia.20.t
+	desc = hsm_cyanolisia.20.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.20.a
+		set_country_flag = HSM_CYA_kivessin_compromise_accepted
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.21" }
+	title = hsm_cyanolisia.21.t
+	desc = hsm_cyanolisia.21.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.21.a
+		set_country_flag = HSM_CYA_kaiv_autonomy_promised
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.22" }
+	title = hsm_cyanolisia.22.t
+	desc = hsm_cyanolisia.22.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.22.a
+		set_country_flag = HSM_CYA_kivessin_estates_broken
+		add_war_support = 0.02
+		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.23" }
+	title = hsm_cyanolisia.23.t
+	desc = hsm_cyanolisia.23.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.23.a
+		set_country_flag = HSM_CYA_kaiv_rada_tamed
+		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.24" }
+	title = hsm_cyanolisia.24.t
+	desc = hsm_cyanolisia.24.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.24.a
+		set_country_flag = HSM_CYA_asterion_assembly_restored
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.24.b
+		set_country_flag = HSM_CYA_asterion_governor_petitions
+		add_ideas = HSM_CYA_countess_trade_boards_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.25" }
+	title = hsm_cyanolisia.25.t
+	desc = hsm_cyanolisia.25.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.25.a
+		set_country_flag = HSM_CYA_midoria_parish_charters
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.25.b
+		set_country_flag = HSM_CYA_midoria_customs_board
+		navy_experience = 10
+		add_ideas = HSM_CYA_countess_trade_boards_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.26" }
+	title = hsm_cyanolisia.26.t
+	desc = hsm_cyanolisia.26.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.26.a
+		set_country_flag = HSM_CYA_lushland_border_commissioned
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.26.b
+		set_country_flag = HSM_CYA_lushland_rail_survey
+		add_ideas = HSM_CYA_countess_trade_boards_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.27" }
+	title = hsm_cyanolisia.27.t
+	desc = hsm_cyanolisia.27.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.27.a
+		set_country_flag = HSM_CYA_gryphus_company_chartered
+		add_ideas = HSM_CYA_countess_trade_boards_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.27.b
+		set_country_flag = HSM_CYA_gryphus_free_towns_protected
+		add_ideas = HSM_CYA_countess_local_compacts_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.28" }
+	title = hsm_cyanolisia.28.t
+	desc = hsm_cyanolisia.28.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.28.a
+		set_country_flag = HSM_CYA_asterion_hostage_rolls
+		add_war_support = 0.02
+		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.28.b
+		set_country_flag = HSM_CYA_asterion_auxiliary_officers
+		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.29" }
+	title = hsm_cyanolisia.29.t
+	desc = hsm_cyanolisia.29.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.29.a
+		set_country_flag = HSM_CYA_midoria_dockyards_requisitioned
+		navy_experience = 15
+		add_ideas = HSM_CYA_dawnclaw_security_files_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.29.b
+		set_country_flag = HSM_CYA_midoria_corsair_amnesty
+		add_war_support = 0.01
+		add_ideas = HSM_CYA_dawnclaw_security_files_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.30" }
+	title = hsm_cyanolisia.30.t
+	desc = hsm_cyanolisia.30.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.30.a
+		set_country_flag = HSM_CYA_lushland_reprisals_authorized
+		add_war_support = 0.01
+		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.30.b
+		set_country_flag = HSM_CYA_lushland_informant_net
+		add_ideas = HSM_CYA_dawnclaw_security_files_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.31" }
+	title = hsm_cyanolisia.31.t
+	desc = hsm_cyanolisia.31.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.31.a
+		set_country_flag = HSM_CYA_gryphus_company_audited
+		add_ideas = HSM_CYA_dawnclaw_security_files_idea
+	}
+
+	option = {
+		name = hsm_cyanolisia.31.b
+		set_country_flag = HSM_CYA_gryphus_order_compromised
+		add_war_support = 0.01
+		add_ideas = HSM_CYA_dawnclaw_security_files_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.32" }
+	title = hsm_cyanolisia.32.t
+	desc = hsm_cyanolisia.32.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.32.a
+		set_country_flag = HSM_CYA_southern_amnesty_notables
+	}
+
+	option = {
+		name = hsm_cyanolisia.32.b
+		set_country_flag = HSM_CYA_southern_amnesty_registers_flag
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.33" }
+	title = hsm_cyanolisia.33.t
+	desc = hsm_cyanolisia.33.d
+	picture = GFX_event_school
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.33.a
+		set_country_flag = HSM_CYA_frontier_school_missions_flag
+		decrease_illiteracy = yes
+	}
+
+	option = {
+		name = hsm_cyanolisia.33.b
+		set_country_flag = HSM_CYA_frontier_loyalty_primers
+		add_ideas = HSM_CYA_frontier_loyalty_primers_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.34" }
+	title = hsm_cyanolisia.34.t
+	desc = hsm_cyanolisia.34.d
+	picture = GFX_event_dim_library
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.34.a
+		set_country_flag = HSM_CYA_grover_lesson_mercy
+	}
+
+	option = {
+		name = hsm_cyanolisia.34.b
+		set_country_flag = HSM_CYA_grover_lesson_authority
+	}
+
+	option = {
+		name = hsm_cyanolisia.34.c
+		set_country_flag = HSM_CYA_grover_lesson_frontier
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.35" }
+	title = hsm_cyanolisia.35.t
+	desc = hsm_cyanolisia.35.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.35.a
+		set_country_flag = HSM_CYA_frontier_public_tribunals
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = hsm_cyanolisia.35.b
+		set_country_flag = HSM_CYA_frontier_paper_tribunals
+		add_ideas = HSM_CYA_frontier_paper_tribunals_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.36" }
+	title = hsm_cyanolisia.36.t
+	desc = hsm_cyanolisia.36.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.36.a
+		set_country_flag = HSM_CYA_hostage_cadets_enrolled
+		army_experience = 10
+		add_war_support = 0.01
+	}
+
+	option = {
+		name = hsm_cyanolisia.36.b
+		set_country_flag = HSM_CYA_hostage_officer_bonds
+		add_ideas = HSM_CYA_hostage_officer_bonds_idea
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.37" }
+	title = hsm_cyanolisia.37.t
+	desc = hsm_cyanolisia.37.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.37.a
+		set_country_flag = HSM_CYA_grover_puppet_education_file
+	}
+
+	option = {
+		name = hsm_cyanolisia.37.b
+		set_country_flag = HSM_CYA_grover_liability_file
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = hsm_cyanolisia.37.c
+		set_country_flag = HSM_CYA_grover_sealed_file
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.40" }
+	title = hsm_cyanolisia.40.t
+	desc = hsm_cyanolisia.40.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.40.a
+		set_country_flag = HSM_CYA_1021_crown_in_trust
+		if = {
+			limit = { has_idea = HSM_CYA_grover_regency }
+			swap_ideas = { remove_idea = HSM_CYA_grover_regency add_idea = HSM_CYA_crown_in_trust_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_crown_in_trust_idea } }
+			add_ideas = HSM_CYA_crown_in_trust_idea
+		}
+		retire_country_leader = yes
+		every_possible_country = {
+			limit = { has_character = GRI_emperor_grover_vi }
+			GRI_emperor_grover_vi = { set_nationality = ROOT }
+		}
+		GRI_emperor_grover_vi = {
+			set_portraits = {
+				civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
+			}
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "grover_vi_desc"
+					expire = "1965.1.1"
+					ideology = constitutional_monarchism
+					traits = {  }
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
+			add_ideas = HSM_CYA_grover_mercy_lesson_idea
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
+			add_ideas = HSM_CYA_grover_authority_lesson_idea
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
+			add_ideas = HSM_CYA_grover_frontier_lesson_idea
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.41" }
+	title = hsm_cyanolisia.41.t
+	desc = hsm_cyanolisia.41.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.41.a
+		set_country_flag = HSM_CYA_1021_empty_throne
+		set_global_flag = GRI_grover_vi_dead
+		every_possible_country = {
+			limit = { has_character = GRI_emperor_grover_vi }
+			GRI_emperor_grover_vi = { retire = yes }
+		}
+		if = {
+			limit = { has_idea = HSM_CYA_boreas_without_bloodline_idea }
+			swap_ideas = { remove_idea = HSM_CYA_boreas_without_bloodline_idea add_idea = HSM_CYA_empty_throne_state_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_empty_throne_state_idea } }
+			add_ideas = HSM_CYA_empty_throne_state_idea
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_liability_file }
+			add_war_support = 0.02
+			add_ideas = HSM_CYA_grover_liability_file_idea
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.42" }
+	title = hsm_cyanolisia.42.t
+	desc = hsm_cyanolisia.42.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.42.a
+		set_country_flag = HSM_CYA_1021_caged_coronation
+		if = {
+			limit = { has_idea = HSM_CYA_puppet_imperial_tours_idea }
+			swap_ideas = { remove_idea = HSM_CYA_puppet_imperial_tours_idea add_idea = HSM_CYA_caged_emperor_1021_idea }
+		}
+		else_if = {
+			limit = { has_idea = HSM_CYA_puppet_emperor }
+			swap_ideas = { remove_idea = HSM_CYA_puppet_emperor add_idea = HSM_CYA_caged_emperor_1021_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_caged_emperor_1021_idea } }
+			add_ideas = HSM_CYA_caged_emperor_1021_idea
+		}
+		every_possible_country = {
+			limit = { has_character = GRI_emperor_grover_vi }
+			GRI_emperor_grover_vi = { set_nationality = ROOT }
+		}
+		add_war_support = 0.02
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_puppet_education_file }
+			add_ideas = HSM_CYA_puppet_education_file_idea
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.43" }
+	title = hsm_cyanolisia.43.t
+	desc = hsm_cyanolisia.43.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.43.a
+		set_country_flag = HSM_CYA_1021_grover_restored
+		if = {
+			limit = { has_idea = HSM_CYA_reconciled_imperial_oaths_idea }
+			swap_ideas = { remove_idea = HSM_CYA_reconciled_imperial_oaths_idea add_idea = HSM_CYA_restored_grover_1021_idea }
+		}
+		else_if = {
+			limit = { has_idea = HSM_CYA_restored_grover_supervised }
+			swap_ideas = { remove_idea = HSM_CYA_restored_grover_supervised add_idea = HSM_CYA_restored_grover_1021_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_restored_grover_1021_idea } }
+			add_ideas = HSM_CYA_restored_grover_1021_idea
+		}
+		retire_country_leader = yes
+		every_possible_country = {
+			limit = { has_character = GRI_emperor_grover_vi }
+			GRI_emperor_grover_vi = { set_nationality = ROOT }
+		}
+		GRI_emperor_grover_vi = {
+			set_portraits = {
+				civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
+			}
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "grover_vi_desc"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {  }
+				}
+			}
+		}
+		add_war_support = -0.02
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
+			add_ideas = HSM_CYA_grover_mercy_lesson_idea
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
+			add_ideas = HSM_CYA_grover_authority_lesson_idea
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
+			add_ideas = HSM_CYA_grover_frontier_lesson_idea
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.44" }
+	title = hsm_cyanolisia.44.t
+	desc = hsm_cyanolisia.44.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.44.a
 	}
 }

@@ -12,16 +12,3 @@ HSM_CYA_dawnclaw_hiding = {
 	visible_when_empty = yes
 	priority = 101
 }
-
-HSM_CYA_imperial_restoration = {
-	icon = generic_formable_nations
-	allowed = {
-		original_tag = CYA
-	}
-	visible = {
-		has_country_flag = HSM_CYA_can_claim_empire_descendant
-		NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
-	}
-	visible_when_empty = yes
-	priority = 102
-}

@@ -18,9 +18,11 @@ characters = {
 			}
 			visible = {
 				has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_country_leader }
 			}
 			available = {
 				has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+				NOT = { has_country_flag = HSM_CYA_dawnclaw_country_leader }
 			}
 			modifier = {
 				war_support_factor = 0.10

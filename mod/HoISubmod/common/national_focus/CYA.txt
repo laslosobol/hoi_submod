@@ -15,6 +15,21 @@ focus_tree = {
 	shared_focus = CYA_coastal_railway
 	shared_focus = CYA_expand_capital_docks
 	shared_focus = CYA_the_aeronaval_corps
+	shared_focus = HSM_CYA_cyanolisian_development_board
+	shared_focus = HSM_CYA_public_works_relief
+	shared_focus = HSM_CYA_scholastic_census
+	shared_focus = HSM_CYA_polytechnic_exchange
+	shared_focus = HSM_CYA_frontier_railway_corps
+	shared_focus = HSM_CYA_frontier_defense_industry
+	shared_focus = HSM_CYA_regency_land_credit
+	shared_focus = HSM_CYA_cabinet_industrial_plan
+	shared_focus = HSM_CYA_corporate_mobilisation_plan
+	shared_focus = HSM_CYA_black_budget_arsenals
+	shared_focus = HSM_CYA_general_staff_conference
+	shared_focus = HSM_CYA_frontier_doctrine_school
+	shared_focus = HSM_CYA_regency_general_staff
+	shared_focus = HSM_CYA_stratocratic_general_staff
+	shared_focus = HSM_CYA_admiralty_patrol_compact
 	shared_focus = CYA_the_conference_at_evosmoshafen
 	shared_focus = CYA_the_group_of_twenty
 	shared_focus = HSM_CYA_hide_the_fugitive
@@ -64,42 +79,79 @@ focus_tree = {
 	shared_focus = HSM_CYA_countess_sicameon_settlement
 	shared_focus = HSM_CYA_claim_sicameon_coast
 	shared_focus = HSM_CYA_countess_integrate_south
+	shared_focus = HSM_CYA_asterion_assembly_compact
+	shared_focus = HSM_CYA_midoria_parish_board
 	shared_focus = HSM_CYA_countess_southern_provincial_diets
 	shared_focus = HSM_CYA_countess_merchant_arbitration
 	shared_focus = HSM_CYA_countess_frontier_conference
+	shared_focus = HSM_CYA_southern_amnesty_registers
 	shared_focus = HSM_CYA_frontier_aristocratic_league
 	shared_focus = HSM_CYA_evi_valley_protectorates
+	shared_focus = HSM_CYA_kivessin_compromise
+	shared_focus = HSM_CYA_kaiv_autonomy_promise
+	shared_focus = HSM_CYA_lushland_border_commission
+	shared_focus = HSM_CYA_gryphus_company_charter
 	shared_focus = HSM_CYA_countess_integrate_evi_valley
+	shared_focus = HSM_CYA_evi_notables_council
+	shared_focus = HSM_CYA_frontier_school_missions
+	shared_focus = HSM_CYA_princely_lesson_books
 	shared_focus = HSM_CYA_regency_prepares_for_herzland
+	shared_focus = HSM_CYA_restore_imperial_provinces
 	shared_focus = HSM_CYA_countess_capital_restoration_plan
 	shared_focus = HSM_CYA_countess_herzland_reconstruction
-	shared_focus = HSM_CYA_restore_imperial_provinces
+	shared_focus = HSM_CYA_regency_bread_offices
+	shared_focus = HSM_CYA_restore_imperial_courts
 	shared_focus = HSM_CYA_countess_regency_for_grover
+	shared_focus = HSM_CYA_regency_coronation_preparations
+	shared_focus = HSM_CYA_crown_in_trust
+	shared_focus = HSM_CYA_groverite_reconciliation
+	shared_focus = HSM_CYA_regency_constitution
 	shared_focus = HSM_CYA_dawnclaw_corporate_rearmament
 	shared_focus = HSM_CYA_imperial_officer_cells
 	shared_focus = HSM_CYA_security_districts
 	shared_focus = HSM_CYA_dawnclaw_war_room
-	shared_focus = HSM_CYA_police_minotaur_outback
 	shared_focus = HSM_CYA_minotaurian_logistics_board
 	shared_focus = HSM_CYA_sicameon_informant_ports
 	shared_focus = HSM_CYA_operation_against_asterion
 	shared_focus = HSM_CYA_military_governorate_asterion
 	shared_focus = HSM_CYA_sicameon_security_corridor
 	shared_focus = HSM_CYA_dawnclaw_integrate_south
+	shared_focus = HSM_CYA_asterion_hostage_bureau
+	shared_focus = HSM_CYA_midoria_dockyard_command
 	shared_focus = HSM_CYA_minotaurian_security_registry
 	shared_focus = HSM_CYA_port_purge_lists
 	shared_focus = HSM_CYA_frontier_security_census
 	shared_focus = HSM_CYA_frontier_military_governorates
+	shared_focus = HSM_CYA_break_the_kivessin_estates
+	shared_focus = HSM_CYA_tame_the_kaiv_rada
+	shared_focus = HSM_CYA_lushland_reprisals
+	shared_focus = HSM_CYA_gryphus_company_audit
 	shared_focus = HSM_CYA_evi_governorate_codes
+	shared_focus = HSM_CYA_frontier_auxiliary_legions
+	shared_focus = HSM_CYA_frontier_tribunals
+	shared_focus = HSM_CYA_hostage_cadet_schools
+	shared_focus = HSM_CYA_grover_black_files
 	shared_focus = HSM_CYA_nationalist_frontier_mobilisation
 	shared_focus = HSM_CYA_prepare_herzland_offensive
+	shared_focus = HSM_CYA_march_on_imperial_provinces
 	shared_focus = HSM_CYA_dawnclaw_capital_restoration_plan
 	shared_focus = HSM_CYA_herzland_reconstruction_authority
-	shared_focus = HSM_CYA_march_on_imperial_provinces
+	shared_focus = HSM_CYA_emergency_griffenheim_command
+	shared_focus = HSM_CYA_purge_imperial_remainders
 	shared_focus = HSM_CYA_question_of_grover
 	shared_focus = HSM_CYA_execute_the_child_emperor
+	shared_focus = HSM_CYA_empty_throne_proclamation
+	shared_focus = HSM_CYA_purge_groverite_clergy
+	shared_focus = HSM_CYA_boreas_without_bloodline
+	shared_focus = HSM_CYA_empire_after_grover
 	shared_focus = HSM_CYA_the_puppet_emperor
+	shared_focus = HSM_CYA_caged_coronation
+	shared_focus = HSM_CYA_court_of_supervised_oaths
+	shared_focus = HSM_CYA_puppet_imperial_tours
 	shared_focus = HSM_CYA_the_child_may_rule
+	shared_focus = HSM_CYA_grover_restoration_ceremony
+	shared_focus = HSM_CYA_steel_regency_statutes
+	shared_focus = HSM_CYA_reconciled_imperial_oaths
 	shared_focus = HSM_CYA_cross_the_river_frontier
 }
 
@@ -1691,6 +1743,507 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
+
+shared_focus = {
+	id = HSM_CYA_cyanolisian_development_board
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { focus = CYA_industrial_stuff4 }
+	x = 0
+	y = 1
+	relative_position_id = CYA_industrial_stuff4
+
+	cost = 5
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cyanolisian_development_board"
+		add_ideas = HSM_CYA_development_board_idea
+		if = {
+			limit = { has_outdated_industry = yes }
+			increase_society_development_gradual = yes
+		}
+		else = {
+			add_stability = 0.01
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_public_works_relief
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_cyanolisian_development_board
+
+	cost = 4
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_public_works_relief"
+		add_ideas = HSM_CYA_public_works_relief_idea
+		if = {
+			limit = { has_poverty = yes }
+			decrease_poverty = yes
+		}
+		else = {
+			add_political_power = 20
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_scholastic_census
+	icon = GFX_goal_education
+	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_cyanolisian_development_board
+
+	cost = 4
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_scholastic_census"
+		if = {
+			limit = { has_illiteracy = yes }
+			decrease_illiteracy = yes
+		}
+		else = {
+			add_tech_bonus = {
+				name = HSM_CYA_scholastic_census
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+		add_stability = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_polytechnic_exchange
+	icon = GFX_focus_research
+	prerequisite = { focus = HSM_CYA_scholastic_census }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_scholastic_census
+
+	cost = 5
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_polytechnic_exchange"
+		add_ideas = HSM_CYA_polytechnic_exchange_idea
+		if = {
+			limit = { NOT = { has_idea = proper_science_base } }
+			increase_science_base = yes
+		}
+		else = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_railway_corps
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_cyanolisian_development_board
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_path_frontier_march
+		NOT = { has_country_flag = HSM_CYA_path_marriage }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_railway_corps"
+		add_ideas = HSM_CYA_frontier_railway_corps_idea
+		511 = { add_extra_state_shared_building_slots = 1 }
+		add_command_power = 10
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_defense_industry
+	icon = GFX_goal_generic_construct_military
+	prerequisite = { focus = HSM_CYA_frontier_railway_corps }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_frontier_railway_corps
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_path_frontier_march
+		NOT = { has_country_flag = HSM_CYA_path_marriage }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_defense_industry"
+		add_ideas = HSM_CYA_frontier_defense_industry_idea
+		511 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_regency_land_credit
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { focus = HSM_CYA_public_works_relief }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_public_works_relief
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_land_credit"
+		add_ideas = HSM_CYA_regency_land_credit_idea
+		add_stability = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_cabinet_industrial_plan
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = HSM_CYA_regency_land_credit }
+	prerequisite = { focus = HSM_CYA_polytechnic_exchange }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_regency_land_credit
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cabinet_industrial_plan"
+		add_ideas = HSM_CYA_cabinet_industrial_plan_idea
+		if = {
+			limit = { has_outdated_industry = yes }
+			increase_society_development = yes
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_corporate_mobilisation_plan
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = HSM_CYA_public_works_relief }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_public_works_relief
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_countess_dominant }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_corporate_mobilisation_plan"
+		add_ideas = HSM_CYA_corporate_mobilisation_plan_idea
+		if = {
+			limit = { has_poverty = yes }
+			decrease_poverty = yes
+		}
+		add_war_support = 0.02
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_black_budget_arsenals
+	icon = GFX_goal_munitions_factories
+	prerequisite = { focus = HSM_CYA_corporate_mobilisation_plan }
+	prerequisite = { focus = HSM_CYA_polytechnic_exchange }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_corporate_mobilisation_plan
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_countess_dominant }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_black_budget_arsenals"
+		add_ideas = HSM_CYA_black_budget_arsenals_idea
+		671 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { has_outdated_industry = yes }
+			increase_society_development = yes
+		}
+		add_stability = -0.01
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_general_staff_conference
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { focus = CYA_modernizing_army }
+	x = 6
+	y = 1
+	relative_position_id = CYA_modernizing_army
+
+	cost = 4
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_general_staff_conference"
+		army_experience = 20
+		add_command_power = 15
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_doctrine_school
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = HSM_CYA_general_staff_conference }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_general_staff_conference
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_path_frontier_march
+		NOT = { has_country_flag = HSM_CYA_path_marriage }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_doctrine_school"
+		add_ideas = HSM_CYA_frontier_doctrine_school_idea
+		army_experience = 10
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_regency_general_staff
+	icon = GFX_focus_RAJ_indian_gentlemen_offcers
+	prerequisite = { focus = HSM_CYA_general_staff_conference }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_general_staff_conference
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_general_staff"
+		if = {
+			limit = { has_idea = CYA_okw }
+			swap_ideas = { remove_idea = CYA_okw add_idea = HSM_CYA_regency_general_staff_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_regency_general_staff_idea } }
+			add_ideas = HSM_CYA_regency_general_staff_idea
+		}
+		army_experience = 10
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_stratocratic_general_staff
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = HSM_CYA_general_staff_conference }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_general_staff_conference
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_countess_dominant }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_stratocratic_general_staff"
+		if = {
+			limit = { has_idea = CYA_okw }
+			swap_ideas = { remove_idea = CYA_okw add_idea = HSM_CYA_stratocratic_general_staff_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_stratocratic_general_staff_idea } }
+			add_ideas = HSM_CYA_stratocratic_general_staff_idea
+		}
+		army_experience = 15
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_admiralty_patrol_compact
+	icon = GFX_goal_navy_hat_ships
+	prerequisite = { focus = CYA_found_admiralty }
+	x = 0
+	y = 3
+	relative_position_id = CYA_found_admiralty
+
+	cost = 4
+
+	allow_branch = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_countess_dominant
+			has_country_flag = HSM_CYA_dawnclaw_dominant
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_admiralty_patrol_compact"
+		add_ideas = HSM_CYA_admiralty_patrol_compact_idea
+		navy_experience = 15
+	}
+
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
 	
 shared_focus = {
 	id = CYA_expand_capital_docks
@@ -2332,7 +2885,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_hide_the_fugitive"
-		add_political_power = 25
+		set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 90 }
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2343,7 +2896,7 @@ shared_focus = {
 	icon = GFX_goal_generic_national_unity
 	prerequisite = { focus = HSM_CYA_hide_the_fugitive }
 	mutually_exclusive = { focus = HSM_CYA_frontier_march_plan }
-	x = -2
+	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_hide_the_fugitive
 
@@ -2371,7 +2924,7 @@ shared_focus = {
 		add_ideas = HSM_CYA_unlikely_marriage
 		set_variable = { HSM_CYA_dawnclaw_dominance = 0 }
 		set_variable = { HSM_CYA_countess_dominance = 0 }
-		country_event = { id = hsm_cyanolisia.3 days = 14 }
+		country_event = { id = hsm_cyanolisia.3 }
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2420,7 +2973,7 @@ shared_focus = {
 	icon = GFX_goal_generic_secret_weapon
 	prerequisite = { focus = HSM_CYA_an_unlikely_marriage }
 	mutually_exclusive = { focus = HSM_CYA_expand_countess_cabinet }
-	x = -2
+	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_an_unlikely_marriage
 
@@ -2456,7 +3009,7 @@ shared_focus = {
 	icon = GFX_goal_generic_political_pressure
 	prerequisite = { focus = HSM_CYA_an_unlikely_marriage }
 	mutually_exclusive = { focus = HSM_CYA_delegate_security_to_dawnclaw }
-	x = 2
+	x = 4
 	y = 1
 	relative_position_id = HSM_CYA_an_unlikely_marriage
 
@@ -2480,8 +3033,6 @@ shared_focus = {
 		mark_focus_tree_layout_dirty = yes
 		add_to_variable = { HSM_CYA_countess_dominance = 3 }
 		swap_ideas = { remove_idea = HSM_CYA_unlikely_marriage add_idea = HSM_CYA_countess_dominant_court }
-		add_stability = 0.02
-		add_political_power = 15
 		subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 2 }
 		clamp_variable = {
 			var = HSM_CYA_dawnclaw_exposure
@@ -2563,7 +3114,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_codify_household_compact"
 		swap_ideas = { remove_idea = HSM_CYA_countess_civilian_court add_idea = HSM_CYA_household_compact }
-		add_stability = 0.02
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -2969,8 +3519,7 @@ shared_focus = {
 	id = HSM_CYA_integrate_minotaur_outback
 	icon = GFX_goal_generic_construct_civilian
 	prerequisite = { focus = HSM_CYA_modernise_internal_intelligence }
-	mutually_exclusive = { focus = HSM_CYA_police_minotaur_outback }
-	x = -2
+	x = 0
 	y = 2
 	relative_position_id = HSM_CYA_modernise_internal_intelligence
 
@@ -3060,60 +3609,10 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_police_minotaur_outback
-	icon = GFX_goal_generic_secret_weapon
-	prerequisite = { focus = HSM_CYA_dawnclaw_war_room }
-	mutually_exclusive = { focus = HSM_CYA_integrate_minotaur_outback }
-	x = -1
-	y = 1
-	relative_position_id = HSM_CYA_dawnclaw_war_room
-
-	cost = 5
-
-	allow_branch = {
-		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
-		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
-		NOT = { has_country_flag = HSM_CYA_countess_dominant }
-		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
-	}
-
-	available = {
-		OR = {
-			has_country_flag = HSM_CYA_path_marriage
-			has_country_flag = HSM_CYA_dawnclaw_dominant
-		}
-		NOT = { has_idea = CYA_policed_outback }
-	}
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_police_minotaur_outback"
-		remove_ideas = CYA_opened_outback
-		remove_ideas = CYA_ignored_outback
-		if = {
-			limit = { has_idea = CYA_minotaurian_outback }
-			swap_ideas = { remove_idea = CYA_minotaurian_outback add_idea = CYA_policed_outback }
-		}
-		else_if = {
-			limit = {
-				NOT = { has_idea = CYA_policed_outback }
-			}
-			add_ideas = CYA_policed_outback
-		}
-		add_to_variable = { HSM_CYA_dawnclaw_dominance = 1 }
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
-}
-
-shared_focus = {
 	id = HSM_CYA_palace_security_directorate
 	icon = GFX_goal_generic_secret_weapon
 	prerequisite = { focus = HSM_CYA_delegate_security_to_dawnclaw }
-	x = -2
+	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_delegate_security_to_dawnclaw
 
@@ -3147,7 +3646,7 @@ shared_focus = {
 	id = HSM_CYA_field_security_battalions
 	icon = GFX_goal_generic_military_sphere
 	prerequisite = { focus = HSM_CYA_palace_security_directorate }
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = HSM_CYA_palace_security_directorate
 
@@ -3184,7 +3683,7 @@ shared_focus = {
 	id = HSM_CYA_the_colonels_household
 	icon = GFX_goal_generic_military_sphere
 	prerequisite = { focus = HSM_CYA_palace_security_directorate }
-	x = 0
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_palace_security_directorate
 
@@ -3221,8 +3720,8 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_the_colonels_household }
 	prerequisite = { focus = HSM_CYA_field_security_battalions }
 	x = 0
-	y = 4
-	relative_position_id = HSM_CYA_delegate_security_to_dawnclaw
+	y = 3
+	relative_position_id = HSM_CYA_palace_security_directorate
 
 	cost = 5
 
@@ -3260,6 +3759,16 @@ shared_focus = {
 			}
 			deactivate_advisor = HSM_CYA_ferdinand_dawnclaw
 		}
+		remove_advisor_role = {
+			character = HSM_CYA_ferdinand_dawnclaw
+			slot = political_advisor
+		}
+		set_country_flag = HSM_CYA_dawnclaw_country_leader
+		set_party_name = {
+			ideology = fascism
+			name = HSM_CYA_dawnclaw_fascism_party
+			long_name = HSM_CYA_dawnclaw_fascism_party_long
+		}
 		add_country_leader_role = {
 			character = HSM_CYA_ferdinand_dawnclaw
 			promote_leader = yes
@@ -3270,6 +3779,8 @@ shared_focus = {
 			}
 		}
 		retire_character = CYA_countess_taillow_sumpfkiel
+		set_country_flag = HSM_CYA_countess_dead
+		country_event = { id = hsm_cyanolisia.44 }
 		set_country_flag = HSM_CYA_dawnclaw_assassination_risk_ended
 		clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
 		clr_country_flag = HSM_CYA_dawnclaw_assassination_launched
@@ -3403,7 +3914,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_reopen_military_workshops"
 		add_ideas = HSM_CYA_imperial_workshop_program
-		add_political_power = 25
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3436,7 +3946,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cabinet_procurement_board"
 		swap_ideas = { remove_idea = HSM_CYA_imperial_workshop_program add_idea = HSM_CYA_cabinet_procurement_board_idea }
-		add_command_power = 10
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3468,8 +3977,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_consolidate_proxy_cabinet"
-		add_stability = 0.03
-		add_political_power = 35
 		if = {
 			limit = { has_idea = HSM_CYA_imperial_cabinet_direct_rule }
 			swap_ideas = { remove_idea = HSM_CYA_imperial_cabinet_direct_rule add_idea = HSM_CYA_consolidated_direct_rule }
@@ -3514,7 +4021,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_rationalise_proxy_quotas"
 		swap_ideas = { remove_idea = HSM_CYA_gri_proxy_rule add_idea = HSM_CYA_rationalised_proxy_quotas }
-		add_stability = 0.01
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -3540,8 +4046,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_blackrock_wasteland_surveys"
-		add_political_power = 15
-		add_command_power = 10
+		add_ideas = HSM_CYA_blackrock_survey_corps_idea
 		set_country_flag = HSM_CYA_blackrock_wasteland_mapped
 	}
 
@@ -3692,7 +4197,7 @@ shared_focus = {
 	id = HSM_CYA_countess_border_modernisation
 	icon = GFX_goal_generic_construct_infrastructure
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_the_countess_alone
 
@@ -3709,7 +4214,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_border_modernisation"
 		add_ideas = HSM_CYA_countess_frontier_reforms
-		add_stability = 0.01
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
@@ -3719,7 +4223,7 @@ shared_focus = {
 	id = HSM_CYA_aristocratic_credit_lines
 	icon = GFX_goal_generic_construct_civilian
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = HSM_CYA_the_countess_alone
 
@@ -3736,7 +4240,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_aristocratic_credit_lines"
 		add_ideas = HSM_CYA_aristocratic_credit_network
-		add_political_power = 25
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -3762,8 +4265,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_evosmoshafen_ministries"
-		add_political_power = 20
-		add_stability = 0.01
 		add_ideas = HSM_CYA_evosmoshafen_ministries
 	}
 
@@ -3811,7 +4312,6 @@ shared_focus = {
 			limit = { NOT = { has_idea = CYA_recognised_minotaurian_rights } }
 			add_ideas = CYA_recognised_minotaurian_rights
 		}
-		add_stability = 0.02
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -3837,7 +4337,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_mit_customs_zone"
 		add_ideas = HSM_CYA_countess_mit_customs_zone_idea
-		add_political_power = 15
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -3973,7 +4472,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_claim_sicameon_coast"
 		if = {
 			limit = { SIC = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } }
-			create_wargoal = { target = SIC type = puppet_wargoal_focus }
+			create_wargoal = { target = SIC type = annex_everything }
 		}
 		add_war_support = 0.03
 	}
@@ -3998,13 +4497,13 @@ shared_focus = {
 	}
 
 	available = {
-		OR = {
-			MIT = { exists = no }
-			MIT = { is_subject_of = ROOT }
-		}
-		OR = {
-			SIC = { exists = no }
-			SIC = { is_subject_of = ROOT }
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_south_capitals_tt
+			OR = {
+				controls_state = 386
+				MIT = { is_subject_of = ROOT }
+			}
+			controls_state = 445
 		}
 	}
 
@@ -4012,8 +4511,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_integrate_south"
-		MIT = { add_to_ROOT_potential_cores = yes }
 		SIC = { add_to_ROOT_potential_cores = yes }
+		if = {
+			limit = { MIT = { exists = yes is_subject_of = ROOT } }
+			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+		}
 		add_stability = 0.02
 	}
 
@@ -4021,12 +4523,75 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_countess_southern_provincial_diets
+	id = HSM_CYA_asterion_assembly_compact
 	icon = GFX_goal_collaborate_local_elites
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_countess_integrate_south
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		OR = {
+			controls_state = 386
+			MIT = { is_subject_of = ROOT }
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_asterion_assembly_compact"
+		country_event = { id = hsm_cyanolisia.24 }
+		add_stability = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_midoria_parish_board
+	icon = GFX_goal_generic_trade
+	prerequisite = { focus = HSM_CYA_countess_integrate_south }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_countess_integrate_south
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 445
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_midoria_parish_board"
+		country_event = { id = hsm_cyanolisia.25 }
+		navy_experience = 5
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_southern_provincial_diets
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_asterion_assembly_compact }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_asterion_assembly_compact
 
 	cost = 4
 
@@ -4039,8 +4604,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_southern_provincial_diets"
-		add_political_power = 20
-		add_stability = 0.01
+		add_ideas = HSM_CYA_southern_provincial_diets_idea
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -4049,10 +4613,10 @@ shared_focus = {
 shared_focus = {
 	id = HSM_CYA_countess_merchant_arbitration
 	icon = GFX_goal_generic_trade
-	prerequisite = { focus = HSM_CYA_countess_integrate_south }
-	x = 1
+	prerequisite = { focus = HSM_CYA_midoria_parish_board }
+	x = 0
 	y = 1
-	relative_position_id = HSM_CYA_countess_integrate_south
+	relative_position_id = HSM_CYA_midoria_parish_board
 
 	cost = 4
 
@@ -4065,8 +4629,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_merchant_arbitration"
-		add_political_power = 15
-		add_stability = 0.01
+		add_ideas = HSM_CYA_merchant_arbitration_idea
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -4078,7 +4641,7 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_countess_southern_provincial_diets }
 	prerequisite = { focus = HSM_CYA_countess_merchant_arbitration }
 	x = 0
-	y = 2
+	y = 3
 	relative_position_id = HSM_CYA_countess_integrate_south
 
 	cost = 4
@@ -4092,7 +4655,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_frontier_conference"
-		add_political_power = 25
 		add_ideas = HSM_CYA_frontier_conference_idea
 	}
 
@@ -4119,7 +4681,32 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_aristocratic_league"
 		add_ideas = HSM_CYA_frontier_aristocratic_league_idea
-		add_stability = 0.02
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_southern_amnesty_registers
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_countess_frontier_conference }
+	x = 1
+	y = 1
+	relative_position_id = HSM_CYA_countess_frontier_conference
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_southern_amnesty_registers"
+		country_event = { id = hsm_cyanolisia.32 }
+		add_ideas = HSM_CYA_southern_amnesty_registers_idea
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -4129,6 +4716,7 @@ shared_focus = {
 	id = HSM_CYA_evi_valley_protectorates
 	icon = GFX_goal_generic_demand_territory
 	prerequisite = { focus = HSM_CYA_frontier_aristocratic_league }
+	prerequisite = { focus = HSM_CYA_southern_amnesty_registers }
 	x = 1
 	y = 1
 	relative_position_id = HSM_CYA_frontier_aristocratic_league
@@ -4142,25 +4730,153 @@ shared_focus = {
 
 	ai_will_do = { factor = 10 }
 
+	bypass = {
+		GRU = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+		BRF = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+		LUS = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+		GRW = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+		GRY = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+	}
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_evi_valley_protectorates"
-		create_wargoal = { target = GRU type = annex_everything }
-		create_wargoal = { target = BRF type = annex_everything }
-		create_wargoal = { target = LUS type = annex_everything }
-		create_wargoal = { target = GRW type = annex_everything }
-		create_wargoal = { target = GRY type = annex_everything }
-		add_war_support = 0.04
+		if = { limit = { GRU = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { target = GRU type = annex_everything } }
+		if = { limit = { BRF = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { target = BRF type = annex_everything } }
+		if = { limit = { LUS = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { target = LUS type = annex_everything } }
+		if = { limit = { GRW = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { target = GRW type = annex_everything } }
+		if = { limit = { GRY = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { target = GRY type = annex_everything } }
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
-	id = HSM_CYA_countess_integrate_evi_valley
+	id = HSM_CYA_kivessin_compromise
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_evi_valley_protectorates }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_evi_valley_protectorates
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 508
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_kivessin_compromise"
+		country_event = { id = hsm_cyanolisia.20 }
+		add_ideas = HSM_CYA_kivessin_compromise_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_kaiv_autonomy_promise
 	icon = GFX_goal_generic_national_unity
 	prerequisite = { focus = HSM_CYA_evi_valley_protectorates }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_evi_valley_protectorates
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 598
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_kaiv_autonomy_promise"
+		country_event = { id = hsm_cyanolisia.21 }
+		add_ideas = HSM_CYA_kaiv_autonomy_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_lushland_border_commission
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = HSM_CYA_kivessin_compromise }
 	x = 0
 	y = 1
+	relative_position_id = HSM_CYA_kivessin_compromise
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 608
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_lushland_border_commission"
+		country_event = { id = hsm_cyanolisia.26 }
+		add_ideas = HSM_CYA_lushland_border_commission_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_gryphus_company_charter
+	icon = GFX_goal_generic_trade
+	prerequisite = { focus = HSM_CYA_kaiv_autonomy_promise }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_kaiv_autonomy_promise
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 512
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_gryphus_company_charter"
+		country_event = { id = hsm_cyanolisia.27 }
+		add_ideas = HSM_CYA_gryphus_company_charter_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_integrate_evi_valley
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = HSM_CYA_lushland_border_commission }
+	prerequisite = { focus = HSM_CYA_gryphus_company_charter }
+	x = 0
+	y = 3
 	relative_position_id = HSM_CYA_evi_valley_protectorates
 
 	cost = 5
@@ -4171,9 +4887,11 @@ shared_focus = {
 	}
 
 	available = {
-		OR = { GRU = { exists = no } GRU = { is_subject_of = ROOT } }
-		OR = { BRF = { exists = no } BRF = { is_subject_of = ROOT } }
-		OR = { LUS = { exists = no } LUS = { is_subject_of = ROOT } }
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_evi_capitals_tt
+			controls_state = 508
+			controls_state = 598
+		}
 	}
 
 	ai_will_do = { factor = 10 }
@@ -4185,8 +4903,90 @@ shared_focus = {
 		LUS = { add_to_ROOT_potential_cores = yes }
 		GRW = { add_to_ROOT_potential_cores = yes }
 		GRY = { add_to_ROOT_potential_cores = yes }
-		add_political_power = -50
-		add_stability = 0.02
+		remove_ideas = HSM_CYA_kivessin_compromise_idea
+		remove_ideas = HSM_CYA_kaiv_autonomy_idea
+		remove_ideas = HSM_CYA_lushland_border_commission_idea
+		remove_ideas = HSM_CYA_gryphus_company_charter_idea
+		add_ideas = HSM_CYA_integrated_evi_valley_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_evi_notables_council
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_countess_integrate_evi_valley }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_countess_integrate_evi_valley
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_evi_notables_council"
+		add_ideas = HSM_CYA_evi_notables_council_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_school_missions
+	icon = GFX_goal_education
+	prerequisite = { focus = HSM_CYA_evi_notables_council }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_evi_notables_council
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_school_missions"
+		country_event = { id = hsm_cyanolisia.33 }
+		add_ideas = HSM_CYA_frontier_school_missions_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_princely_lesson_books
+	icon = GFX_groverVIadult
+	prerequisite = { focus = HSM_CYA_countess_regency_for_grover }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_countess_regency_for_grover
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_global_flag = GRI_grover_vi_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_princely_lesson_books"
+		country_event = { id = hsm_cyanolisia.34 }
+		add_ideas = HSM_CYA_grover_tutelage_notes_idea
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -4195,10 +4995,10 @@ shared_focus = {
 shared_focus = {
 	id = HSM_CYA_regency_prepares_for_herzland
 	icon = GFX_goal_generic_position_armies
-	prerequisite = { focus = HSM_CYA_countess_integrate_evi_valley }
+	prerequisite = { focus = HSM_CYA_evi_notables_council }
 	x = 0
 	y = 1
-	relative_position_id = HSM_CYA_countess_integrate_evi_valley
+	relative_position_id = HSM_CYA_evi_notables_council
 
 	cost = 5
 
@@ -4212,7 +5012,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_prepares_for_herzland"
 		add_ideas = HSM_CYA_regency_claim
-		add_command_power = 20
 		set_country_flag = HSM_CYA_can_claim_empire_descendant
 	}
 
@@ -4220,38 +5019,12 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_countess_capital_restoration_plan
-	icon = GFX_goal_generic_construct_civilian
+	id = HSM_CYA_restore_imperial_provinces
+	icon = GFX_goal_generic_major_war
 	prerequisite = { focus = HSM_CYA_regency_prepares_for_herzland }
-	x = -1
+	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_regency_prepares_for_herzland
-
-	cost = 4
-
-	allow_branch = {
-		has_country_flag = HSM_CYA_countess_dominant
-		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
-	}
-
-	ai_will_do = { factor = 10 }
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_capital_restoration_plan"
-		add_ideas = HSM_CYA_capital_restoration_plan
-		add_political_power = 20
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-}
-
-shared_focus = {
-	id = HSM_CYA_countess_herzland_reconstruction
-	icon = GFX_goal_generic_construct_civilian
-	prerequisite = { focus = HSM_CYA_countess_capital_restoration_plan }
-	x = -1
-	y = 1
-	relative_position_id = HSM_CYA_countess_capital_restoration_plan
 
 	cost = 5
 
@@ -4261,7 +5034,81 @@ shared_focus = {
 	}
 
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_herzland_ready_tt
+			OR = {
+				date > 1013.1.1
+				var:382.owner = { has_country_flag = holds_griffon_capital }
+			}
+		}
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = HSM_CYA_empire_descendant_declared
+			controls_state = 382
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_restore_imperial_provinces"
+		if = { limit = { NOT = { controls_state = 382 } } create_wargoal = { type = annex_everything target = 382.owner } }
+		if = { limit = { STW = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = STW } }
+		if = { limit = { FEA = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = FEA } }
+		if = { limit = { PYT = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = PYT } }
+		if = { limit = { ROU = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = ROU } }
+		if = { limit = { YAL = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = YAL } }
+		if = { limit = { ANG = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = ANG } }
+		if = { limit = { KAT = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = KAT } }
+		if = { limit = { BRZ = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = BRZ } }
+		set_country_flag = HSM_CYA_can_claim_empire_descendant
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_capital_restoration_plan
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { focus = HSM_CYA_restore_imperial_provinces }
+	x = -1
+	y = 1
+	relative_position_id = HSM_CYA_restore_imperial_provinces
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
 		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_capital_restoration_plan"
+		add_ideas = HSM_CYA_capital_restoration_plan
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_herzland_reconstruction
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { focus = HSM_CYA_countess_capital_restoration_plan }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_countess_capital_restoration_plan
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
 	ai_will_do = { factor = 10 }
@@ -4276,55 +5123,77 @@ shared_focus = {
 			limit = { NOT = { has_idea = HSM_CYA_herzland_reconstruction } }
 			add_ideas = HSM_CYA_herzland_reconstruction
 		}
-		add_stability = -0.02
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
-	id = HSM_CYA_restore_imperial_provinces
-	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = HSM_CYA_regency_prepares_for_herzland }
-	x = 1
+	id = HSM_CYA_regency_bread_offices
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { focus = HSM_CYA_countess_herzland_reconstruction }
+	x = -1
 	y = 1
-	relative_position_id = HSM_CYA_regency_prepares_for_herzland
+	relative_position_id = HSM_CYA_countess_herzland_reconstruction
 
-	cost = 5
+	cost = 4
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_restore_imperial_provinces"
-		create_wargoal = { type = annex_everything target = 382.owner }
-		create_wargoal = { type = annex_everything target = FAT }
-		create_wargoal = { type = annex_everything target = JER }
-		create_wargoal = { type = annex_everything target = HLQ }
-		create_wargoal = { type = annex_everything target = LNS }
-		add_war_support = 0.05
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_bread_offices"
+		add_ideas = HSM_CYA_regency_bread_offices_idea
 	}
 
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_restore_imperial_courts
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = HSM_CYA_countess_herzland_reconstruction }
+	x = 1
+	y = 1
+	relative_position_id = HSM_CYA_countess_herzland_reconstruction
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_restore_imperial_courts"
+		add_ideas = HSM_CYA_restored_imperial_courts_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
 	id = HSM_CYA_countess_regency_for_grover
 	icon = GFX_goal_generic_neutrality_focus
-	prerequisite = { focus = HSM_CYA_countess_herzland_reconstruction }
-	prerequisite = { focus = HSM_CYA_restore_imperial_provinces }
+	prerequisite = { focus = HSM_CYA_regency_bread_offices }
+	prerequisite = { focus = HSM_CYA_restore_imperial_courts }
 	x = 0
-	y = 3
-	relative_position_id = HSM_CYA_regency_prepares_for_herzland
+	y = 2
+	relative_position_id = HSM_CYA_countess_herzland_reconstruction
 
 	cost = 5
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
@@ -4334,7 +5203,126 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_regency_for_grover"
 		add_ideas = HSM_CYA_grover_regency
 		set_country_flag = HSM_CYA_countess_regency_for_grover
-		add_stability = 0.03
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_regency_coronation_preparations
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = HSM_CYA_countess_regency_for_grover }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_countess_regency_for_grover
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_coronation_preparations"
+		add_ideas = HSM_CYA_regency_coronation_commission
+		set_country_flag = HSM_CYA_countess_crown_prepared
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_crown_in_trust
+	icon = GFX_groverVIadult
+	prerequisite = { focus = HSM_CYA_regency_coronation_preparations }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_regency_coronation_preparations
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_countess_crown_prepared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		date > 1021.5.21
+		NOT = { has_global_flag = GRI_grover_vi_dead }
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_imperial_centres_tt
+			controls_state = 382
+			controls_state = 389
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_crown_in_trust"
+		country_event = { id = hsm_cyanolisia.40 }
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_groverite_reconciliation
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_crown_in_trust }
+	x = -1
+	y = 1
+	relative_position_id = HSM_CYA_crown_in_trust
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_1021_crown_in_trust
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_groverite_reconciliation"
+		add_ideas = HSM_CYA_groverite_reconciliation_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_regency_constitution
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = HSM_CYA_crown_in_trust }
+	x = 1
+	y = 1
+	relative_position_id = HSM_CYA_crown_in_trust
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_1021_crown_in_trust
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_constitution"
+		if = {
+			limit = { has_idea = HSM_CYA_grover_regency }
+			swap_ideas = { remove_idea = HSM_CYA_grover_regency add_idea = HSM_CYA_regency_constitution_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_regency_constitution_idea } }
+			add_ideas = HSM_CYA_regency_constitution_idea
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -4344,7 +5332,7 @@ shared_focus = {
 	id = HSM_CYA_dawnclaw_corporate_rearmament
 	icon = GFX_goal_generic_construct_mil_factory
 	prerequisite = { focus = HSM_CYA_the_revealed_exile }
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_the_revealed_exile
 
@@ -4371,7 +5359,7 @@ shared_focus = {
 	id = HSM_CYA_imperial_officer_cells
 	icon = GFX_goal_generic_military_sphere
 	prerequisite = { focus = HSM_CYA_the_revealed_exile }
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = HSM_CYA_the_revealed_exile
 
@@ -4445,6 +5433,16 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_war_room"
 		add_command_power = 20
 		add_ideas = HSM_CYA_dawnclaw_war_room_idea
+		remove_ideas = CYA_opened_outback
+		remove_ideas = CYA_ignored_outback
+		if = {
+			limit = { has_idea = CYA_minotaurian_outback }
+			swap_ideas = { remove_idea = CYA_minotaurian_outback add_idea = CYA_policed_outback }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = CYA_policed_outback } }
+			add_ideas = CYA_policed_outback
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -4454,7 +5452,7 @@ shared_focus = {
 	id = HSM_CYA_minotaurian_logistics_board
 	icon = GFX_goal_generic_construct_infrastructure
 	prerequisite = { focus = HSM_CYA_dawnclaw_war_room }
-	x = 0
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_dawnclaw_war_room
 
@@ -4505,7 +5503,6 @@ shared_focus = {
 shared_focus = {
 	id = HSM_CYA_operation_against_asterion
 	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = HSM_CYA_police_minotaur_outback }
 	prerequisite = { focus = HSM_CYA_minotaurian_logistics_board }
 	x = 0
 	y = 1
@@ -4550,7 +5547,7 @@ shared_focus = {
 
 	available = {
 		OR = {
-			MIT = { exists = no }
+			controls_state = 386
 			MIT = { is_subject_of = ROOT }
 		}
 	}
@@ -4560,6 +5557,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_military_governorate_asterion"
 		add_ideas = HSM_CYA_military_governorates
+		if = {
+			limit = { MIT = { exists = yes is_subject_of = ROOT } }
+			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+		}
 		add_command_power = 20
 	}
 
@@ -4571,7 +5572,7 @@ shared_focus = {
 	icon = GFX_goal_generic_major_war
 	prerequisite = { focus = HSM_CYA_sicameon_informant_ports }
 	x = 0
-	y = 1
+	y = 2
 	relative_position_id = HSM_CYA_sicameon_informant_ports
 
 	cost = 5
@@ -4588,7 +5589,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_sicameon_security_corridor"
 		if = {
 			limit = { SIC = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } }
-			create_wargoal = { target = SIC type = puppet_wargoal_focus }
+			create_wargoal = { target = SIC type = annex_everything }
 		}
 		add_war_support = 0.04
 	}
@@ -4601,9 +5602,9 @@ shared_focus = {
 	icon = GFX_goal_generic_secret_weapon
 	prerequisite = { focus = HSM_CYA_military_governorate_asterion }
 	prerequisite = { focus = HSM_CYA_sicameon_security_corridor }
-	x = 0
-	y = 2
-	relative_position_id = HSM_CYA_dawnclaw_war_room
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_military_governorate_asterion
 
 	cost = 5
 
@@ -4613,30 +5614,103 @@ shared_focus = {
 	}
 
 	available = {
-		OR = { MIT = { exists = no } MIT = { is_subject_of = ROOT } }
-		OR = { SIC = { exists = no } SIC = { is_subject_of = ROOT } }
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_south_capitals_tt
+			OR = {
+				controls_state = 386
+				MIT = { is_subject_of = ROOT }
+			}
+			controls_state = 445
+		}
 	}
 
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_integrate_south"
-		MIT = { add_to_ROOT_potential_cores = yes }
 		SIC = { add_to_ROOT_potential_cores = yes }
+		if = {
+			limit = { MIT = { exists = yes is_subject_of = ROOT } }
+			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+		}
 		add_political_power = -50
 		add_war_support = 0.02
+		add_stability = 0.02
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
-	id = HSM_CYA_minotaurian_security_registry
+	id = HSM_CYA_asterion_hostage_bureau
 	icon = GFX_goal_generic_secret_weapon
 	prerequisite = { focus = HSM_CYA_dawnclaw_integrate_south }
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_dawnclaw_integrate_south
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		OR = {
+			controls_state = 386
+			MIT = { is_subject_of = ROOT }
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_asterion_hostage_bureau"
+		country_event = { id = hsm_cyanolisia.28 }
+		add_war_support = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_midoria_dockyard_command
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = HSM_CYA_dawnclaw_integrate_south }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_dawnclaw_integrate_south
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 445
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_midoria_dockyard_command"
+		country_event = { id = hsm_cyanolisia.29 }
+		navy_experience = 10
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_minotaurian_security_registry
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = HSM_CYA_asterion_hostage_bureau }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_asterion_hostage_bureau
 
 	cost = 4
 
@@ -4651,7 +5725,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_minotaurian_security_registry"
 		add_command_power = 15
 		add_war_support = 0.01
-		add_stability = -0.01
+		add_stability = 0.01
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -4660,10 +5734,10 @@ shared_focus = {
 shared_focus = {
 	id = HSM_CYA_port_purge_lists
 	icon = GFX_goal_generic_intelligence_exchange
-	prerequisite = { focus = HSM_CYA_dawnclaw_integrate_south }
-	x = 1
+	prerequisite = { focus = HSM_CYA_midoria_dockyard_command }
+	x = 0
 	y = 1
-	relative_position_id = HSM_CYA_dawnclaw_integrate_south
+	relative_position_id = HSM_CYA_midoria_dockyard_command
 
 	cost = 4
 
@@ -4678,7 +5752,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_port_purge_lists"
 		add_political_power = 15
 		add_war_support = 0.01
-		add_stability = -0.01
+		add_stability = 0.01
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -4690,7 +5764,7 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_minotaurian_security_registry }
 	prerequisite = { focus = HSM_CYA_port_purge_lists }
 	x = 0
-	y = 2
+	y = 3
 	relative_position_id = HSM_CYA_dawnclaw_integrate_south
 
 	cost = 4
@@ -4742,11 +5816,135 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_evi_governorate_codes
+	id = HSM_CYA_break_the_kivessin_estates
 	icon = GFX_goal_generic_secret_weapon
 	prerequisite = { focus = HSM_CYA_frontier_military_governorates }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_frontier_military_governorates
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 508
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_break_the_kivessin_estates"
+		country_event = { id = hsm_cyanolisia.22 }
+		add_political_power = 20
+		add_war_support = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_tame_the_kaiv_rada
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = HSM_CYA_frontier_military_governorates }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_frontier_military_governorates
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 598
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_tame_the_kaiv_rada"
+		country_event = { id = hsm_cyanolisia.23 }
+		add_command_power = 15
+		add_stability = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_lushland_reprisals
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = HSM_CYA_break_the_kivessin_estates }
 	x = 0
 	y = 1
+	relative_position_id = HSM_CYA_break_the_kivessin_estates
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 608
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_lushland_reprisals"
+		country_event = { id = hsm_cyanolisia.30 }
+		add_command_power = 10
+		add_stability = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_gryphus_company_audit
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = HSM_CYA_tame_the_kaiv_rada }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_tame_the_kaiv_rada
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = {
+		controls_state = 512
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_gryphus_company_audit"
+		country_event = { id = hsm_cyanolisia.31 }
+		add_political_power = 15
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_evi_governorate_codes
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = HSM_CYA_lushland_reprisals }
+	prerequisite = { focus = HSM_CYA_gryphus_company_audit }
+	x = 0
+	y = 3
 	relative_position_id = HSM_CYA_frontier_military_governorates
 
 	cost = 5
@@ -4757,9 +5955,11 @@ shared_focus = {
 	}
 
 	available = {
-		OR = { GRU = { exists = no } GRU = { is_subject_of = ROOT } }
-		OR = { BRF = { exists = no } BRF = { is_subject_of = ROOT } }
-		OR = { LUS = { exists = no } LUS = { is_subject_of = ROOT } }
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_evi_capitals_tt
+			controls_state = 508
+			controls_state = 598
+		}
 	}
 
 	ai_will_do = { factor = 10 }
@@ -4773,18 +5973,98 @@ shared_focus = {
 		GRY = { add_to_ROOT_potential_cores = yes }
 		add_political_power = -50
 		add_war_support = 0.02
+		add_stability = 0.03
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
-	id = HSM_CYA_nationalist_frontier_mobilisation
+	id = HSM_CYA_frontier_tribunals
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_evi_governorate_codes
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_tribunals"
+		country_event = { id = hsm_cyanolisia.35 }
+		add_ideas = HSM_CYA_frontier_tribunals_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_hostage_cadet_schools
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_evi_governorate_codes
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_hostage_cadet_schools"
+		country_event = { id = hsm_cyanolisia.36 }
+		add_ideas = HSM_CYA_hostage_cadet_schools_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_auxiliary_legions
 	icon = GFX_goal_generic_allies_build_infantry
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_evi_governorate_codes
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_auxiliary_legions"
+		add_ideas = HSM_CYA_frontier_auxiliary_legions_idea
+		add_command_power = 20
+		army_experience = 10
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_nationalist_frontier_mobilisation
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { focus = HSM_CYA_frontier_auxiliary_legions }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_frontier_auxiliary_legions
 
 	cost = 4
 
@@ -4802,6 +6082,35 @@ shared_focus = {
 	}
 
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_grover_black_files
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = HSM_CYA_emergency_griffenheim_command }
+	prerequisite = { focus = HSM_CYA_purge_imperial_remainders }
+	x = 0
+	y = 2
+	relative_position_id = HSM_CYA_herzland_reconstruction_authority
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_global_flag = GRI_grover_vi_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_black_files"
+		country_event = { id = hsm_cyanolisia.37 }
+		add_ideas = HSM_CYA_grover_black_files_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -4824,7 +6133,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_prepare_herzland_offensive"
 		add_ideas = HSM_CYA_herzland_reconstruction_authority_idea
-		add_war_support = 0.03
 		set_country_flag = HSM_CYA_can_claim_empire_descendant
 	}
 
@@ -4832,38 +6140,12 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_dawnclaw_capital_restoration_plan
-	icon = GFX_goal_generic_construct_civilian
+	id = HSM_CYA_march_on_imperial_provinces
+	icon = GFX_goal_generic_major_war
 	prerequisite = { focus = HSM_CYA_prepare_herzland_offensive }
-	x = -1
+	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_prepare_herzland_offensive
-
-	cost = 4
-
-	allow_branch = {
-		has_country_flag = HSM_CYA_dawnclaw_dominant
-		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
-	}
-
-	ai_will_do = { factor = 10 }
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_capital_restoration_plan"
-		add_ideas = HSM_CYA_capital_restoration_plan
-		add_political_power = 20
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-}
-
-shared_focus = {
-	id = HSM_CYA_herzland_reconstruction_authority
-	icon = GFX_goal_generic_construct_civilian
-	prerequisite = { focus = HSM_CYA_dawnclaw_capital_restoration_plan }
-	x = -1
-	y = 1
-	relative_position_id = HSM_CYA_dawnclaw_capital_restoration_plan
 
 	cost = 5
 
@@ -4873,7 +6155,81 @@ shared_focus = {
 	}
 
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_herzland_ready_tt
+			OR = {
+				date > 1013.1.1
+				var:382.owner = { has_country_flag = holds_griffon_capital }
+			}
+		}
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = HSM_CYA_empire_descendant_declared
+			controls_state = 382
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_march_on_imperial_provinces"
+		if = { limit = { NOT = { controls_state = 382 } } create_wargoal = { type = annex_everything target = 382.owner } }
+		if = { limit = { STW = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = STW } }
+		if = { limit = { FEA = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = FEA } }
+		if = { limit = { PYT = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = PYT } }
+		if = { limit = { ROU = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = ROU } }
+		if = { limit = { YAL = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = YAL } }
+		if = { limit = { ANG = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = ANG } }
+		if = { limit = { KAT = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = KAT } }
+		if = { limit = { BRZ = { exists = yes NOT = { is_subject_of = ROOT } NOT = { has_war_with = ROOT } } } create_wargoal = { type = annex_everything target = BRZ } }
+		set_country_flag = HSM_CYA_can_claim_empire_descendant
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_dawnclaw_capital_restoration_plan
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { focus = HSM_CYA_march_on_imperial_provinces }
+	x = -1
+	y = 1
+	relative_position_id = HSM_CYA_march_on_imperial_provinces
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
 		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_capital_restoration_plan"
+		add_ideas = HSM_CYA_capital_restoration_plan
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_herzland_reconstruction_authority
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { focus = HSM_CYA_dawnclaw_capital_restoration_plan }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_dawnclaw_capital_restoration_plan
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
 	ai_will_do = { factor = 10 }
@@ -4888,55 +6244,77 @@ shared_focus = {
 			limit = { NOT = { has_idea = HSM_CYA_herzland_reconstruction } }
 			add_ideas = HSM_CYA_herzland_reconstruction
 		}
-		add_stability = -0.03
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
-	id = HSM_CYA_march_on_imperial_provinces
-	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = HSM_CYA_prepare_herzland_offensive }
-	x = 1
+	id = HSM_CYA_emergency_griffenheim_command
+	icon = GFX_goal_generic_construct_military
+	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
+	x = -1
 	y = 1
-	relative_position_id = HSM_CYA_prepare_herzland_offensive
+	relative_position_id = HSM_CYA_herzland_reconstruction_authority
 
-	cost = 5
+	cost = 4
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_march_on_imperial_provinces"
-		create_wargoal = { type = annex_everything target = 382.owner }
-		create_wargoal = { type = annex_everything target = FAT }
-		create_wargoal = { type = annex_everything target = JER }
-		create_wargoal = { type = annex_everything target = HLQ }
-		create_wargoal = { type = annex_everything target = LNS }
-		add_war_support = 0.06
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_emergency_griffenheim_command"
+		add_ideas = HSM_CYA_emergency_griffenheim_command_idea
 	}
 
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_CYA_purge_imperial_remainders
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
+	x = 1
+	y = 1
+	relative_position_id = HSM_CYA_herzland_reconstruction_authority
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_purge_imperial_remainders"
+		add_ideas = HSM_CYA_purge_imperial_remainders_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
 	id = HSM_CYA_question_of_grover
 	icon = GFX_goal_generic_propaganda
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
-	prerequisite = { focus = HSM_CYA_march_on_imperial_provinces }
-	x = 0
-	y = 3
-	relative_position_id = HSM_CYA_prepare_herzland_offensive
+	prerequisite = { focus = HSM_CYA_grover_black_files }
+	x = 1
+	y = 1
+	relative_position_id = HSM_CYA_grover_black_files
 
 	cost = 4
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
@@ -4945,7 +6323,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_question_of_grover"
 		set_country_flag = HSM_CYA_question_of_grover_opened
-		add_political_power = 20
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4974,6 +6351,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_execute_the_child_emperor"
 		add_ideas = HSM_CYA_child_emperor_executed
 		set_country_flag = HSM_CYA_grover_executed
+		set_global_flag = GRI_grover_vi_dead
 		add_stability = -0.05
 		add_war_support = 0.08
 	}
@@ -5004,7 +6382,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_the_puppet_emperor"
 		add_ideas = HSM_CYA_puppet_emperor
 		set_country_flag = HSM_CYA_grover_puppet
-		add_stability = 0.01
 		add_war_support = 0.03
 	}
 
@@ -5042,12 +6419,322 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = HSM_CYA_empty_throne_proclamation
+	icon = GFX_goal_generic_dangerous_deal
+	prerequisite = { focus = HSM_CYA_execute_the_child_emperor }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_execute_the_child_emperor
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_executed
+	}
+
+	ai_will_do = { factor = 4 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_empty_throne_proclamation"
+		set_country_flag = HSM_CYA_empty_throne_prepared
+		add_ideas = HSM_CYA_empty_throne_proclamation_idea
+		add_stability = -0.02
+		add_war_support = 0.04
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+}
+
+shared_focus = {
+	id = HSM_CYA_purge_groverite_clergy
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = HSM_CYA_empty_throne_proclamation }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_empty_throne_proclamation
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_executed
+	}
+
+	ai_will_do = { factor = 4 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_purge_groverite_clergy"
+		add_ideas = HSM_CYA_purged_groverite_clergy
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_boreas_without_bloodline
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = HSM_CYA_purge_groverite_clergy }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_purge_groverite_clergy
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_executed
+	}
+
+	ai_will_do = { factor = 4 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_boreas_without_bloodline"
+		if = {
+			limit = { has_idea = HSM_CYA_child_emperor_executed }
+			swap_ideas = { remove_idea = HSM_CYA_child_emperor_executed add_idea = HSM_CYA_boreas_without_bloodline_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_boreas_without_bloodline_idea } }
+			add_ideas = HSM_CYA_boreas_without_bloodline_idea
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_caged_coronation
+	icon = GFX_groverVIadult
+	prerequisite = { focus = HSM_CYA_the_puppet_emperor }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_the_puppet_emperor
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_puppet
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_caged_coronation"
+		set_country_flag = HSM_CYA_caged_coronation_prepared
+		add_ideas = HSM_CYA_caged_coronation_idea
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_court_of_supervised_oaths
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_caged_coronation }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_caged_coronation
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_puppet
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_court_of_supervised_oaths"
+		add_ideas = HSM_CYA_supervised_oaths_idea
+		add_war_support = 0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_puppet_imperial_tours
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = HSM_CYA_court_of_supervised_oaths }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_court_of_supervised_oaths
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_puppet
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_puppet_imperial_tours"
+		if = {
+			limit = { has_idea = HSM_CYA_puppet_emperor }
+			swap_ideas = { remove_idea = HSM_CYA_puppet_emperor add_idea = HSM_CYA_puppet_imperial_tours_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_puppet_imperial_tours_idea } }
+			add_ideas = HSM_CYA_puppet_imperial_tours_idea
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_grover_restoration_ceremony
+	icon = GFX_groverVIadult
+	prerequisite = { focus = HSM_CYA_the_child_may_rule }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_the_child_may_rule
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_restored
+	}
+
+	ai_will_do = { factor = 5 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_restoration_ceremony"
+		set_country_flag = HSM_CYA_grover_restoration_prepared
+		add_ideas = HSM_CYA_grover_restoration_ceremony_idea
+		add_stability = 0.03
+		add_war_support = -0.01
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_steel_regency_statutes
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = HSM_CYA_grover_restoration_ceremony }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_grover_restoration_ceremony
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_restored
+	}
+
+	ai_will_do = { factor = 5 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_steel_regency_statutes"
+		add_ideas = HSM_CYA_steel_regency_statutes_idea
+		add_stability = 0.02
+		add_political_power = 25
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_reconciled_imperial_oaths
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = HSM_CYA_steel_regency_statutes }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_steel_regency_statutes
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_restored
+	}
+
+	ai_will_do = { factor = 5 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_reconciled_imperial_oaths"
+		if = {
+			limit = { has_idea = HSM_CYA_restored_grover_supervised }
+			swap_ideas = { remove_idea = HSM_CYA_restored_grover_supervised add_idea = HSM_CYA_reconciled_imperial_oaths_idea }
+		}
+		else_if = {
+			limit = { NOT = { has_idea = HSM_CYA_reconciled_imperial_oaths_idea } }
+			add_ideas = HSM_CYA_reconciled_imperial_oaths_idea
+		}
+		add_stability = 0.02
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_empire_after_grover
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = HSM_CYA_boreas_without_bloodline focus = HSM_CYA_puppet_imperial_tours focus = HSM_CYA_reconciled_imperial_oaths }
+	x = 0
+	y = 5
+	relative_position_id = HSM_CYA_question_of_grover
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		OR = {
+			has_country_flag = HSM_CYA_empty_throne_prepared
+			has_country_flag = HSM_CYA_caged_coronation_prepared
+			has_country_flag = HSM_CYA_grover_restoration_prepared
+		}
+	}
+
+	available = {
+		date > 1021.5.21
+		OR = {
+			has_country_flag = HSM_CYA_grover_executed
+			NOT = { has_global_flag = GRI_grover_vi_dead }
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_CYA_controls_imperial_centres_tt
+			controls_state = 382
+			controls_state = 389
+		}
+	}
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_empire_after_grover"
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_executed }
+			country_event = { id = hsm_cyanolisia.41 }
+		}
+		else_if = {
+			limit = { has_country_flag = HSM_CYA_grover_puppet }
+			country_event = { id = hsm_cyanolisia.42 }
+		}
+		else_if = {
+			limit = { has_country_flag = HSM_CYA_grover_restored }
+			country_event = { id = hsm_cyanolisia.43 }
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
 	id = HSM_CYA_cross_the_river_frontier
 	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = HSM_CYA_execute_the_child_emperor focus = HSM_CYA_the_puppet_emperor }
+	prerequisite = { focus = HSM_CYA_boreas_without_bloodline focus = HSM_CYA_puppet_imperial_tours }
 	x = -1
-	y = 2
-	relative_position_id = HSM_CYA_the_puppet_emperor
+	y = 1
+	relative_position_id = HSM_CYA_empire_after_grover
 
 	cost = 5
 	will_lead_to_war_with = JRV

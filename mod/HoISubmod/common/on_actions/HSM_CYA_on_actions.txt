@@ -3,6 +3,23 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					has_country_flag = holds_griffon_capital
+					OR = {
+						has_country_flag = HSM_CYA_can_claim_empire_descendant
+						has_completed_focus = HSM_CYA_restore_imperial_provinces
+						has_completed_focus = HSM_CYA_march_on_imperial_provinces
+					}
+					NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
+				}
+				set_country_flag = HSM_CYA_empire_descendant_declared
+				if = {
+					limit = { NOT = { has_idea = HSM_CYA_herzland_devastation } }
+					add_ideas = HSM_CYA_herzland_devastation
+				}
+				custom_effect_tooltip = HSM_CYA_empire_descendant_reconstruction_tt
+			}
+			if = {
+				limit = {
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_scheduled }
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
 					GRI = {

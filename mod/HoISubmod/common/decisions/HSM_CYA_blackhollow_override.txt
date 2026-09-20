@@ -1,0 +1,69 @@
+CYA_deal_with_blackhollow = {
+	CYA_blackhollow_republic = {
+		icon = hol_war_on_pacifism
+		visible = {
+			BAN = { exists = no }
+			has_full_control_of_state = 490
+			NOT = { has_country_flag = HSM_CYA_path_marriage }
+		}
+		available = {
+			has_full_control_of_state = 490
+			has_full_control_of_state = 606
+			has_full_control_of_state = 489
+			has_full_control_of_state = 532
+		}
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		modifier = {
+			political_power_factor = -0.15
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CYA_blackhollow_republic"
+			release_autonomy = {
+				target = BAN
+				autonomy_state = autonomy_integrated_puppet
+			}
+			BAN = {
+				load_focus_tree = generic_griffon_focus
+				set_capital = {
+					state = 490
+					remember_old_capital = no
+				}
+			}
+			transfer_state = 446
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	CYA_rename_highhall = {
+		icon = hol_draw_up_staff_plans
+		visible = {
+			has_full_control_of_state = 446
+		}
+		available = {
+			has_full_control_of_state = 446
+		}
+		cost = 25
+		days_remove = 10
+		fire_only_once = yes
+		modifier = {
+			political_power_factor = -0.2
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 446
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CYA_rename_highhall"
+			set_province_name = { id = 12433 name = "CYA_state_hohehalle" }
+			add_state_core = 446
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
