@@ -3744,6 +3744,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_the_revealed_exile"
 		swap_ideas = { remove_idea = HSM_CYA_colonels_household add_idea = HSM_CYA_revealed_exile_regime }
+		if = {
+			limit = { has_idea = CYA_minotaurian_indigenes }
+			swap_ideas = { remove_idea = CYA_minotaurian_indigenes add_idea = HSM_CYA_strained_minotaurian_indigenes }
+		}
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		set_popularities = {
 			democratic = 5
@@ -4512,6 +4516,11 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_integrate_south"
 		SIC = { add_to_ROOT_potential_cores = yes }
+		remove_ideas = HSM_CYA_countess_mit_protectorate
+		remove_ideas = HSM_CYA_countess_sicameon_mandate
+		remove_ideas = HSM_CYA_countess_mit_customs_zone_idea
+		remove_ideas = HSM_CYA_countess_port_authority
+		add_ideas = HSM_CYA_countess_southern_settlement
 		if = {
 			limit = { MIT = { exists = yes is_subject_of = ROOT } }
 			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
@@ -5349,7 +5358,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_corporate_rearmament"
 		add_ideas = HSM_CYA_corporate_rearmament
-		add_stability = -0.01
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5405,7 +5413,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_security_districts"
 		add_ideas = HSM_CYA_security_districts_idea
 		add_war_support = 0.03
-		add_stability = -0.02
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -5435,13 +5442,22 @@ shared_focus = {
 		add_ideas = HSM_CYA_dawnclaw_war_room_idea
 		remove_ideas = CYA_opened_outback
 		remove_ideas = CYA_ignored_outback
+		remove_ideas = CYA_policed_outback
 		if = {
 			limit = { has_idea = CYA_minotaurian_outback }
-			swap_ideas = { remove_idea = CYA_minotaurian_outback add_idea = CYA_policed_outback }
+			swap_ideas = { remove_idea = CYA_minotaurian_outback add_idea = HSM_CYA_policed_minotaurian_outback }
 		}
 		else_if = {
-			limit = { NOT = { has_idea = CYA_policed_outback } }
-			add_ideas = CYA_policed_outback
+			limit = { NOT = { has_idea = HSM_CYA_policed_minotaurian_outback } }
+			add_ideas = HSM_CYA_policed_minotaurian_outback
+		}
+		if = {
+			limit = { has_idea = CYA_minotaurian_indigenes }
+			swap_ideas = { remove_idea = CYA_minotaurian_indigenes add_idea = HSM_CYA_strained_minotaurian_indigenes }
+		}
+		else_if = {
+			limit = { has_idea = CYA_suppressed_indigenes }
+			swap_ideas = { remove_idea = CYA_suppressed_indigenes add_idea = HSM_CYA_strained_minotaurian_indigenes }
 		}
 	}
 
@@ -5556,7 +5572,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_military_governorate_asterion"
-		add_ideas = HSM_CYA_military_governorates
+		remove_ideas = HSM_CYA_minotaurian_logistics_board_idea
+		add_ideas = HSM_CYA_asterion_military_governorate
 		if = {
 			limit = { MIT = { exists = yes is_subject_of = ROOT } }
 			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
@@ -5629,6 +5646,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_integrate_south"
 		SIC = { add_to_ROOT_potential_cores = yes }
+		remove_ideas = HSM_CYA_sicameon_informant_ports_idea
+		remove_ideas = HSM_CYA_asterion_military_governorate
+		add_ideas = HSM_CYA_southern_security_administration
+		if = {
+			limit = { has_idea = HSM_CYA_strained_minotaurian_indigenes }
+			swap_ideas = { remove_idea = HSM_CYA_strained_minotaurian_indigenes add_idea = HSM_CYA_registered_minotaurian_communities }
+		}
+		else_if = {
+			limit = { has_idea = CYA_minotaurian_indigenes }
+			swap_ideas = { remove_idea = CYA_minotaurian_indigenes add_idea = HSM_CYA_registered_minotaurian_communities }
+		}
 		if = {
 			limit = { MIT = { exists = yes is_subject_of = ROOT } }
 			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
@@ -5723,9 +5751,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_minotaurian_security_registry"
-		add_command_power = 15
 		add_war_support = 0.01
 		add_stability = 0.01
+		remove_ideas = CYA_suppressed_indigenes
+		remove_ideas = CYA_defeated_indigenes
+		remove_ideas = CYA_radicalised_indigenes
+		if = {
+			limit = { has_idea = HSM_CYA_strained_minotaurian_indigenes }
+			swap_ideas = { remove_idea = HSM_CYA_strained_minotaurian_indigenes add_idea = HSM_CYA_registered_minotaurian_communities }
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -6236,6 +6270,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_herzland_reconstruction_authority"
+		if = {
+			limit = { has_idea = HSM_CYA_revealed_exile_regime }
+			swap_ideas = { remove_idea = HSM_CYA_revealed_exile_regime add_idea = HSM_CYA_revealed_exile_regime_secure }
+		}
+		if = {
+			limit = { has_idea = HSM_CYA_herzland_reconstruction_authority_idea }
+			swap_ideas = { remove_idea = HSM_CYA_herzland_reconstruction_authority_idea add_idea = HSM_CYA_herzland_reconstruction_authority_settled }
+		}
 		if = {
 			limit = { has_idea = HSM_CYA_herzland_devastation }
 			swap_ideas = { remove_idea = HSM_CYA_herzland_devastation add_idea = HSM_CYA_herzland_reconstruction }
