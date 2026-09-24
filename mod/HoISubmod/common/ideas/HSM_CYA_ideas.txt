@@ -1,5 +1,23 @@
 ideas = {
 	country = {
+		HSM_CYA_industrial_program_dynamic_modifier_dummy_idea = {
+			picture = generic_industry_2
+			allowed = { always = no }
+			removal_cost = -1
+		}
+
+		HSM_CYA_military_program_dynamic_modifier_dummy_idea = {
+			picture = generic_army_bonus
+			allowed = { always = no }
+			removal_cost = -1
+		}
+
+		HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea = {
+			picture = FAT_imperial_duchy_idea
+			allowed = { always = no }
+			removal_cost = -1
+		}
+
 		HSM_CYA_dawnclaw_griffonian_files = {
 			picture = generic_intel_bonus
 			allowed = { always = no }
@@ -123,7 +141,6 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				stability_factor = -0.03
 				political_power_factor = -0.02
 				army_org_factor = 0.03
 				production_speed_industrial_complex_factor = 0.03
@@ -138,7 +155,6 @@ ideas = {
 				war_support_factor = 0.10
 				army_org_factor = 0.08
 				planning_speed = 0.10
-				stability_factor = -0.03
 				political_power_factor = -0.04
 			}
 			targeted_modifier = { tag = GRI attack_bonus_against = 0.05 defense_bonus_against = 0.05 }
@@ -153,7 +169,6 @@ ideas = {
 				army_org_factor = 0.08
 				planning_speed = 0.12
 				decryption_factor = 0.02
-				stability_factor = -0.04
 				political_power_factor = -0.05
 			}
 			targeted_modifier = { tag = GRI attack_bonus_against = 0.05 defense_bonus_against = 0.05 }
@@ -168,7 +183,6 @@ ideas = {
 				army_org_factor = 0.09
 				planning_speed = 0.12
 				decryption_factor = 0.02
-				stability_factor = -0.05
 				political_power_factor = -0.06
 			}
 			targeted_modifier = { tag = GRI attack_bonus_against = 0.06 defense_bonus_against = 0.06 }
@@ -770,9 +784,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.04
-				planning_speed = 0.06
-				war_support_factor = 0.03
+				army_org_factor = 0.06
+				planning_speed = 0.10
+				max_planning_factor = 0.05
+				experience_gain_army_factor = 0.05
+				war_support_factor = 0.04
 				stability_factor = -0.01
 			}
 		}
@@ -782,12 +798,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				decryption_factor = 0.02
-				encryption_factor = 0.01
 				drift_defence_factor = 0.05
-				army_core_defence_factor = 0.03
-				stability_factor = 0.01
+				army_core_defence_factor = 0.05
+				stability_factor = 0.02
 				political_power_factor = 0.03
+				command_power_gain_mult = 0.05
 			}
 		}
 
@@ -796,10 +811,12 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				planning_speed = 0.06
-				army_org_factor = 0.02
-				war_support_factor = 0.03
+				planning_speed = 0.12
+				max_planning_factor = 0.08
+				army_org_factor = 0.05
+				war_support_factor = 0.05
 				political_power_factor = 0.02
+				command_power_gain_mult = 0.10
 			}
 		}
 
@@ -808,12 +825,13 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				supply_consumption_factor = -0.03
-				production_speed_infrastructure_factor = 0.05
-				army_core_attack_factor = 0.02
-				conscription_factor = 0.05
+				supply_consumption_factor = -0.05
+				attrition = -0.05
+				production_speed_infrastructure_factor = 0.07
+				army_core_attack_factor = 0.03
+				conscription_factor = 0.08
 			}
-			targeted_modifier = { tag = MIT attack_bonus_against = 0.08 defense_bonus_against = 0.04 }
+			targeted_modifier = { tag = MIT attack_bonus_against = 0.12 defense_bonus_against = 0.06 }
 		}
 
 		HSM_CYA_sicameon_informant_ports_idea = {
@@ -821,11 +839,12 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				decryption_factor = 0.02
 				drift_defence_factor = 0.03
-				planning_speed = 0.03
+				planning_speed = 0.06
+				naval_coordination = 0.05
+				convoy_escort_efficiency = 0.05
 			}
-			targeted_modifier = { tag = SIC attack_bonus_against = 0.07 defense_bonus_against = 0.03 }
+			targeted_modifier = { tag = SIC attack_bonus_against = 0.10 defense_bonus_against = 0.05 }
 		}
 
 		HSM_CYA_asterion_military_governorate = {
@@ -833,14 +852,14 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.04
-				army_core_attack_factor = 0.03
-				war_support_factor = 0.04
+				army_org_factor = 0.06
+				army_core_attack_factor = 0.04
+				war_support_factor = 0.05
 				consumer_goods_factor = 0.02
 				stability_factor = 0.01
-				conscription_factor = 0.03
+				conscription_factor = 0.06
 			}
-			targeted_modifier = { tag = SIC attack_bonus_against = 0.05 defense_bonus_against = 0.03 }
+			targeted_modifier = { tag = SIC attack_bonus_against = 0.08 defense_bonus_against = 0.04 }
 		}
 
 		HSM_CYA_southern_security_administration = {
@@ -848,12 +867,12 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.03
-				army_core_attack_factor = 0.02
-				war_support_factor = 0.03
+				army_org_factor = 0.05
+				army_core_attack_factor = 0.03
+				war_support_factor = 0.04
 				consumer_goods_factor = 0.01
 				stability_factor = 0.02
-				conscription_factor = 0.02
+				conscription_factor = 0.05
 				political_power_factor = 0.03
 			}
 		}
@@ -863,10 +882,126 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				decryption_factor = 0.04
-				encryption_factor = 0.03
-				army_core_defence_factor = 0.02
+				decryption_factor = 0.02
+				encryption_factor = 0.01
+				army_core_defence_factor = 0.04
+				stability_factor = 0.02
+				command_power_gain_mult = 0.05
+			}
+		}
+
+		HSM_CYA_port_purge_network_idea = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				naval_coordination = 0.05
+				convoy_escort_efficiency = 0.06
+				drift_defence_factor = 0.03
+				stability_factor = -0.01
+			}
+		}
+
+		HSM_CYA_kivessin_estate_audits_idea = {
+			picture = generic_fascism_drift_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.02
+				army_core_attack_factor = 0.02
+				stability_factor = -0.01
+			}
+		}
+
+		HSM_CYA_kaiv_supervised_rada_idea = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.03
+				command_power_gain_mult = 0.04
+				drift_defence_factor = 0.03
+			}
+		}
+
+		HSM_CYA_lushland_reprisals_idea = {
+			picture = generic_fascism_drift_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.03
+				war_support_factor = 0.03
+				stability_factor = -0.02
+			}
+		}
+
+		HSM_CYA_gryphus_audit_board_idea = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.03
+				industrial_capacity_factory = 0.02
+				consumer_goods_factor = -0.01
+				stability_factor = -0.01
+			}
+		}
+
+		HSM_CYA_evi_governorate_codes_idea = {
+			picture = generic_fascism_drift_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.04
+				army_core_attack_factor = 0.03
+				army_core_defence_factor = 0.03
+				resistance_growth_on_our_occupied_states = -0.05
+			}
+		}
+
+		HSM_CYA_evi_civic_modernisation_idea = {
+			picture = generic_industry_2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.04
+				production_speed_industrial_complex_factor = 0.03
+				consumer_goods_factor = -0.01
+				stability_factor = 0.02
+			}
+		}
+
+		HSM_CYA_evi_frontier_schools_idea = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+				political_power_factor = 0.02
 				stability_factor = 0.01
+			}
+		}
+
+		HSM_CYA_frontier_registry_modernisation_idea = {
+			picture = generic_industry_2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				resistance_growth_on_our_occupied_states = -0.03
+				political_power_factor = 0.02
+			}
+		}
+
+		HSM_CYA_security_polytechnic_cells_idea = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+				production_speed_arms_factory_factor = 0.03
+				command_power_gain_mult = 0.04
 			}
 		}
 
@@ -875,10 +1010,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.06
-				army_org_factor = 0.03
-				training_time_factor = -0.04
-				conscription_factor = 0.06
+				war_support_factor = 0.08
+				army_org_factor = 0.06
+				training_time_factor = -0.06
+				conscription_factor = 0.10
+				experience_gain_army_factor = 0.05
 			}
 		}
 
@@ -898,9 +1034,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.03
-				army_org_factor = 0.03
-				training_time_factor = -0.03
+				war_support_factor = 0.04
+				army_org_factor = 0.05
+				training_time_factor = -0.05
+				conscription_factor = 0.05
 				stability_factor = -0.01
 			}
 		}
@@ -910,9 +1047,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.03
+				war_support_factor = 0.04
 				political_power_factor = 0.02
 				drift_defence_factor = 0.04
+				army_core_attack_factor = 0.02
 				stability_factor = -0.01
 			}
 		}
@@ -922,9 +1060,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.02
-				training_time_factor = -0.03
-				war_support_factor = 0.03
+				army_org_factor = 0.05
+				training_time_factor = -0.04
+				war_support_factor = 0.04
+				command_power_gain_mult = 0.05
 				stability_factor = -0.01
 			}
 		}
@@ -945,12 +1084,13 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.05
-				political_power_factor = -0.03
-				army_core_attack_factor = 0.04
+				war_support_factor = 0.07
+				political_power_factor = -0.02
+				army_core_attack_factor = 0.06
+				max_planning_factor = 0.08
 				stability_factor = -0.02
 			}
-			targeted_modifier = { tag = GRI attack_bonus_against = 0.06 defense_bonus_against = 0.04 }
+			targeted_modifier = { tag = GRI attack_bonus_against = 0.10 defense_bonus_against = 0.06 }
 		}
 
 		HSM_CYA_herzland_reconstruction_authority_settled = {
@@ -1364,8 +1504,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.02
-				war_support_factor = 0.02
+				army_org_factor = 0.04
+				planning_speed = 0.04
+				war_support_factor = 0.03
+				command_power_gain_mult = 0.04
 				stability_factor = -0.01
 			}
 		}

@@ -1,0 +1,74 @@
+HSM_CYA_western_griffonia_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_western_griffonia_secured_tt
+		NOT = {
+			any_country = {
+				OR = {
+					original_tag = FAT
+					tag = FAW
+					original_tag = SRS
+					original_tag = MNC
+					original_tag = VED
+					original_tag = HAU
+					original_tag = AVI
+					original_tag = BAN
+					original_tag = EYR
+					original_tag = ERI
+					original_tag = POM
+					original_tag = BOI
+					original_tag = LAK
+					original_tag = TRD
+					original_tag = FEZ
+					original_tag = AET
+					original_tag = HEL
+					original_tag = JRR
+					original_tag = JER
+					original_tag = JES
+					original_tag = JEB
+					original_tag = JFT
+					original_tag = VIN
+					original_tag = FLO
+					original_tag = ARA
+					original_tag = FRN
+					original_tag = TAL
+					original_tag = WNG
+					original_tag = FAL
+					original_tag = SIC
+					original_tag = MIT
+				}
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+HSM_CYA_eastern_griffonia_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_eastern_griffonia_secured_tt
+		NOT = {
+			any_country = {
+				OR = {
+					tag = JRV
+					original_tag = LCT
+					original_tag = RCT
+					original_tag = NIM
+					original_tag = WIT
+					original_tag = BAK
+					original_tag = DEP
+					original_tag = FRE
+					original_tag = DMT
+					original_tag = HLQ
+					original_tag = LNS
+					original_tag = LSC
+					original_tag = LSM
+					tag = JHP
+					original_tag = FBK
+					original_tag = FIR
+					original_tag = WAT
+					original_tag = NCH
+				}
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+}

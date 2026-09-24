@@ -12,7 +12,7 @@ country_event = {
 		tag = CYA
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
 		GRI = {
-			has_completed_focus = GRI_industry_modern
+			exists = yes
 			NOT = {
 				has_country_leader = {
 					character = GRI_ferdinand_dawnclaw
@@ -28,6 +28,8 @@ country_event = {
 		set_country_flag = HSM_CYA_dawnclaw_asylum_resolved
 		set_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 		set_country_flag = HSM_CYA_dawnclaw_branch_unlocked
+		set_country_flag = HSM_CYA_dawnclaw_programs_reworked
+		HSM_CYA_install_dawnclaw_programs = yes
 		set_variable = { HSM_CYA_dawnclaw_exposure = 1 }
 		if = {
 			limit = {
@@ -41,9 +43,9 @@ country_event = {
 			slot = political_advisor
 			value = no
 		}
-		add_ideas = HSM_CYA_dawnclaw_griffonian_files
 		add_political_power = -25
-		add_stability = -0.02
+		add_to_variable = { HSM_CYA_decryption_factor = 0.02 }
+		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.02 }
 		hidden_effect = {
 			GRI = { set_country_flag = HSM_GRI_dawnclaw_hidden_in_cyanolisia }
 			load_focus_tree = {
@@ -121,7 +123,6 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.3.a
 		set_country_flag = HSM_CYA_dawnclaw_married_countess
-		add_stability = -0.03
 		add_political_power = -50
 		custom_effect_tooltip = HSM_CYA_power_struggle_unlocked_tt
 	}
@@ -287,7 +288,6 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.20.a
 		set_country_flag = HSM_CYA_kivessin_compromise_accepted
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 }
 
@@ -302,7 +302,6 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.21.a
 		set_country_flag = HSM_CYA_kaiv_autonomy_promised
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 }
 
@@ -318,7 +317,6 @@ country_event = {
 		name = hsm_cyanolisia.22.a
 		set_country_flag = HSM_CYA_kivessin_estates_broken
 		add_war_support = 0.02
-		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
 	}
 }
 
@@ -333,7 +331,6 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.23.a
 		set_country_flag = HSM_CYA_kaiv_rada_tamed
-		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
 	}
 }
 
@@ -348,13 +345,11 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.24.a
 		set_country_flag = HSM_CYA_asterion_assembly_restored
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.24.b
 		set_country_flag = HSM_CYA_asterion_governor_petitions
-		add_ideas = HSM_CYA_countess_trade_boards_idea
 	}
 }
 
@@ -369,14 +364,12 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.25.a
 		set_country_flag = HSM_CYA_midoria_parish_charters
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.25.b
 		set_country_flag = HSM_CYA_midoria_customs_board
 		navy_experience = 10
-		add_ideas = HSM_CYA_countess_trade_boards_idea
 	}
 }
 
@@ -391,13 +384,11 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.26.a
 		set_country_flag = HSM_CYA_lushland_border_commissioned
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.26.b
 		set_country_flag = HSM_CYA_lushland_rail_survey
-		add_ideas = HSM_CYA_countess_trade_boards_idea
 	}
 }
 
@@ -412,13 +403,11 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.27.a
 		set_country_flag = HSM_CYA_gryphus_company_chartered
-		add_ideas = HSM_CYA_countess_trade_boards_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.27.b
 		set_country_flag = HSM_CYA_gryphus_free_towns_protected
-		add_ideas = HSM_CYA_countess_local_compacts_idea
 	}
 }
 
@@ -434,13 +423,11 @@ country_event = {
 		name = hsm_cyanolisia.28.a
 		set_country_flag = HSM_CYA_asterion_hostage_rolls
 		add_war_support = 0.02
-		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.28.b
 		set_country_flag = HSM_CYA_asterion_auxiliary_officers
-		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
 	}
 }
 
@@ -456,14 +443,12 @@ country_event = {
 		name = hsm_cyanolisia.29.a
 		set_country_flag = HSM_CYA_midoria_dockyards_requisitioned
 		navy_experience = 15
-		add_ideas = HSM_CYA_dawnclaw_security_files_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.29.b
 		set_country_flag = HSM_CYA_midoria_corsair_amnesty
 		add_war_support = 0.01
-		add_ideas = HSM_CYA_dawnclaw_security_files_idea
 	}
 }
 
@@ -479,13 +464,11 @@ country_event = {
 		name = hsm_cyanolisia.30.a
 		set_country_flag = HSM_CYA_lushland_reprisals_authorized
 		add_war_support = 0.01
-		add_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.30.b
 		set_country_flag = HSM_CYA_lushland_informant_net
-		add_ideas = HSM_CYA_dawnclaw_security_files_idea
 	}
 }
 
@@ -500,14 +483,12 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.31.a
 		set_country_flag = HSM_CYA_gryphus_company_audited
-		add_ideas = HSM_CYA_dawnclaw_security_files_idea
 	}
 
 	option = {
 		name = hsm_cyanolisia.31.b
 		set_country_flag = HSM_CYA_gryphus_order_compromised
 		add_war_support = 0.01
-		add_ideas = HSM_CYA_dawnclaw_security_files_idea
 	}
 }
 
@@ -547,7 +528,8 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.33.b
 		set_country_flag = HSM_CYA_frontier_loyalty_primers
-		add_ideas = HSM_CYA_frontier_loyalty_primers_idea
+		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.02 }
+		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.03 }
 	}
 }
 
@@ -592,7 +574,8 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.35.b
 		set_country_flag = HSM_CYA_frontier_paper_tribunals
-		add_ideas = HSM_CYA_frontier_paper_tribunals_idea
+		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.01 }
 	}
 }
 
@@ -614,7 +597,9 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.36.b
 		set_country_flag = HSM_CYA_hostage_officer_bonds
-		add_ideas = HSM_CYA_hostage_officer_bonds_idea
+		add_to_variable = { HSM_CYA_army_org_factor = 0.03 }
+		add_to_variable = { HSM_CYA_planning_speed = 0.03 }
+		add_to_variable = { HSM_CYA_command_power_gain_mult = 0.03 }
 	}
 }
 
@@ -708,23 +693,22 @@ country_event = {
 		name = hsm_cyanolisia.41.a
 		set_country_flag = HSM_CYA_1021_empty_throne
 		set_global_flag = GRI_grover_vi_dead
+		remove_ideas = GRI_grover_vi
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { retire = yes }
 		}
-		if = {
-			limit = { has_idea = HSM_CYA_boreas_without_bloodline_idea }
-			swap_ideas = { remove_idea = HSM_CYA_boreas_without_bloodline_idea add_idea = HSM_CYA_empty_throne_state_idea }
-		}
-		else_if = {
-			limit = { NOT = { has_idea = HSM_CYA_empty_throne_state_idea } }
-			add_ideas = HSM_CYA_empty_throne_state_idea
+		hidden_effect = {
+			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 }
+			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
+			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_liability_file }
 			add_war_support = 0.02
-			add_ideas = HSM_CYA_grover_liability_file_idea
+			hidden_effect = { add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.03 } }
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -739,27 +723,24 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.42.a
 		set_country_flag = HSM_CYA_1021_caged_coronation
-		if = {
-			limit = { has_idea = HSM_CYA_puppet_imperial_tours_idea }
-			swap_ideas = { remove_idea = HSM_CYA_puppet_imperial_tours_idea add_idea = HSM_CYA_caged_emperor_1021_idea }
-		}
-		else_if = {
-			limit = { has_idea = HSM_CYA_puppet_emperor }
-			swap_ideas = { remove_idea = HSM_CYA_puppet_emperor add_idea = HSM_CYA_caged_emperor_1021_idea }
-		}
-		else_if = {
-			limit = { NOT = { has_idea = HSM_CYA_caged_emperor_1021_idea } }
-			add_ideas = HSM_CYA_caged_emperor_1021_idea
-		}
+		remove_ideas = GRI_grover_vi
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { set_nationality = ROOT }
 		}
-		add_war_support = 0.02
+		hidden_effect = {
+			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.04 }
+			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
+			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_puppet_education_file }
-			add_ideas = HSM_CYA_puppet_education_file_idea
+			hidden_effect = {
+				add_to_variable = { HSM_CYA_imperial_stability_factor = 0.02 }
+				add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+			}
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -774,19 +755,8 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.43.a
 		set_country_flag = HSM_CYA_1021_grover_restored
-		if = {
-			limit = { has_idea = HSM_CYA_reconciled_imperial_oaths_idea }
-			swap_ideas = { remove_idea = HSM_CYA_reconciled_imperial_oaths_idea add_idea = HSM_CYA_restored_grover_1021_idea }
-		}
-		else_if = {
-			limit = { has_idea = HSM_CYA_restored_grover_supervised }
-			swap_ideas = { remove_idea = HSM_CYA_restored_grover_supervised add_idea = HSM_CYA_restored_grover_1021_idea }
-		}
-		else_if = {
-			limit = { NOT = { has_idea = HSM_CYA_restored_grover_1021_idea } }
-			add_ideas = HSM_CYA_restored_grover_1021_idea
-		}
 		retire_country_leader = yes
+		remove_ideas = GRI_grover_vi
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { set_nationality = ROOT }
@@ -805,19 +775,28 @@ country_event = {
 				}
 			}
 		}
-		add_war_support = -0.02
+		hidden_effect = {
+			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.06 }
+			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 }
+			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.06 }
+			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.01 }
+		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
-			add_ideas = HSM_CYA_grover_mercy_lesson_idea
+			hidden_effect = { add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 } }
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
-			add_ideas = HSM_CYA_grover_authority_lesson_idea
+			hidden_effect = { add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 } }
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
-			add_ideas = HSM_CYA_grover_frontier_lesson_idea
+			hidden_effect = {
+				add_to_variable = { HSM_CYA_army_core_defence_factor = 0.02 }
+				add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
+			}
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

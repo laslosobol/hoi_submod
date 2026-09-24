@@ -1,0 +1,123 @@
+HSM_CYA_install_dawnclaw_programs = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_CYA_dynamic_modifiers_installed } }
+		set_country_flag = HSM_CYA_dynamic_modifiers_installed
+		add_dynamic_modifier = { modifier = HSM_CYA_industrial_program_dynamic_modifier }
+		add_dynamic_modifier = { modifier = HSM_CYA_military_program_dynamic_modifier }
+		add_dynamic_modifier = { modifier = HSM_CYA_imperial_legitimacy_dynamic_modifier }
+	}
+}
+
+HSM_CYA_consolidate_dawnclaw_spirits = {
+	set_country_flag = HSM_CYA_dawnclaw_spirits_consolidated
+	remove_ideas = HSM_CYA_dawnclaw_griffonian_files
+	remove_ideas = HSM_CYA_unlikely_marriage
+	remove_ideas = HSM_CYA_dawnclaw_dominant_court
+	remove_ideas = HSM_CYA_security_directorate_court
+	remove_ideas = HSM_CYA_colonels_household
+	remove_ideas = HSM_CYA_revealed_exile_regime
+	remove_ideas = HSM_CYA_revealed_exile_regime_secure
+	remove_ideas = HSM_CYA_development_board_idea
+	remove_ideas = HSM_CYA_public_works_relief_idea
+	remove_ideas = HSM_CYA_polytechnic_exchange_idea
+	remove_ideas = HSM_CYA_corporate_mobilisation_plan_idea
+	remove_ideas = HSM_CYA_black_budget_arsenals_idea
+	remove_ideas = HSM_CYA_stratocratic_general_staff_idea
+	remove_ideas = HSM_CYA_corporate_rearmament
+	remove_ideas = HSM_CYA_imperial_officer_cells_idea
+	remove_ideas = HSM_CYA_security_districts_idea
+	remove_ideas = HSM_CYA_dawnclaw_war_room_idea
+	remove_ideas = HSM_CYA_minotaurian_logistics_board_idea
+	remove_ideas = HSM_CYA_sicameon_informant_ports_idea
+	remove_ideas = HSM_CYA_asterion_military_governorate
+	remove_ideas = HSM_CYA_southern_security_administration
+	remove_ideas = HSM_CYA_hostage_officer_bonds_idea
+	remove_ideas = HSM_CYA_port_purge_network_idea
+	remove_ideas = HSM_CYA_frontier_security_census_idea
+	remove_ideas = HSM_CYA_kivessin_estate_audits_idea
+	remove_ideas = HSM_CYA_kaiv_supervised_rada_idea
+	remove_ideas = HSM_CYA_lushland_reprisals_idea
+	remove_ideas = HSM_CYA_gryphus_audit_board_idea
+	remove_ideas = HSM_CYA_evi_governorate_codes_idea
+	remove_ideas = HSM_CYA_frontier_registry_modernisation_idea
+	remove_ideas = HSM_CYA_security_polytechnic_cells_idea
+	remove_ideas = HSM_CYA_frontier_tribunals_idea
+	remove_ideas = HSM_CYA_hostage_cadet_schools_idea
+	remove_ideas = HSM_CYA_frontier_auxiliary_legions_idea
+	remove_ideas = HSM_CYA_nationalist_frontier_mobilisation_idea
+	remove_ideas = HSM_CYA_grover_black_files_idea
+	remove_ideas = HSM_CYA_child_emperor_executed
+	remove_ideas = HSM_CYA_empty_throne_proclamation_idea
+	remove_ideas = HSM_CYA_purged_groverite_clergy
+	remove_ideas = HSM_CYA_boreas_without_bloodline_idea
+	remove_ideas = HSM_CYA_empty_throne_state_idea
+	remove_ideas = HSM_CYA_puppet_emperor
+	remove_ideas = HSM_CYA_caged_coronation_idea
+	remove_ideas = HSM_CYA_supervised_oaths_idea
+	remove_ideas = HSM_CYA_puppet_imperial_tours_idea
+	remove_ideas = HSM_CYA_caged_emperor_1021_idea
+	remove_ideas = HSM_CYA_restored_grover_supervised
+	remove_ideas = HSM_CYA_grover_restoration_ceremony_idea
+	remove_ideas = HSM_CYA_steel_regency_statutes_idea
+	remove_ideas = HSM_CYA_reconciled_imperial_oaths_idea
+	remove_ideas = HSM_CYA_restored_grover_1021_idea
+	remove_ideas = HSM_CYA_grover_liability_file_idea
+	remove_ideas = HSM_CYA_puppet_education_file_idea
+	remove_ideas = HSM_CYA_river_frontier_war_plan
+	remove_ideas = HSM_CYA_dawnclaw_frontier_controls_idea
+	remove_ideas = HSM_CYA_dawnclaw_security_files_idea
+	remove_ideas = HSM_CYA_frontier_loyalty_primers_idea
+	remove_ideas = HSM_CYA_frontier_paper_tribunals_idea
+	remove_ideas = HSM_CYA_imperial_cabinet_direct_rule
+	remove_ideas = HSM_CYA_consolidated_direct_rule
+	remove_ideas = HSM_CYA_imperial_workshop_program
+	remove_ideas = HSM_CYA_cabinet_procurement_board_idea
+	remove_ideas = HSM_CYA_policed_minotaurian_outback
+	remove_ideas = HSM_CYA_strained_minotaurian_indigenes
+	remove_ideas = HSM_CYA_registered_minotaurian_communities
+	remove_ideas = CYA_direct_rule_from_evosmoshafen
+	remove_ideas = CYA_minotaurian_outback
+	remove_ideas = CYA_opened_outback
+	remove_ideas = CYA_ignored_outback
+	remove_ideas = CYA_policed_outback
+	remove_ideas = CYA_minotaurian_indigenes
+	remove_ideas = CYA_recognised_minotaurian_rights
+	remove_ideas = CYA_suppressed_indigenes
+	remove_ideas = CYA_defeated_indigenes
+	remove_ideas = CYA_radicalised_indigenes
+
+	# By the time Griffenheim falls, the starting poverty and industrial backwardness
+	# have become reconstruction problems rather than permanent national spirits.
+	if = { limit = { has_outdated_industry = yes } increase_society_development = yes }
+	if = { limit = { has_outdated_industry = yes } increase_society_development = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+
+	if = {
+		limit = { NOT = { has_country_flag = HSM_CYA_dawnclaw_programs_reworked } }
+		# Migration for saves made before the regional spirits were consolidated.
+		add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.08 }
+		add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.08 }
+		add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.08 }
+		add_to_variable = { HSM_CYA_consumer_goods_factor = -0.02 }
+		add_to_variable = { HSM_CYA_research_speed_factor = 0.03 }
+		add_to_variable = { HSM_CYA_army_org_factor = 0.08 }
+		add_to_variable = { HSM_CYA_army_core_attack_factor = 0.05 }
+		add_to_variable = { HSM_CYA_army_core_defence_factor = 0.05 }
+		add_to_variable = { HSM_CYA_planning_speed = 0.08 }
+		add_to_variable = { HSM_CYA_max_planning_factor = 0.05 }
+		add_to_variable = { HSM_CYA_supply_consumption_factor = -0.05 }
+		add_to_variable = { HSM_CYA_command_power_gain_mult = 0.08 }
+		add_to_variable = { HSM_CYA_conscription_factor = 0.05 }
+		add_to_variable = { HSM_CYA_decryption_factor = 0.03 }
+		add_to_variable = { HSM_CYA_encryption_factor = 0.03 }
+		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
+		add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.08 }
+		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.08 }
+		add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.04 }
+		set_country_flag = HSM_CYA_dawnclaw_programs_reworked
+	}
+}

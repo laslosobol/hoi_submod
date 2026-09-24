@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "name": "HoISubmod",
+            "path": "mod/HoISubmod"
+        },
+        {
+            "name": "Equestria at War (dependency)",
+            "path": "EaW"
+        }
+    ],
+    "settings": {
+        "hoi4ModUtilities.installPath": "C:\\shit\\Steam\\steamapps\\common\\Hearts of Iron IV",
+        "hoi4ModUtilities.modFile": "",
+        "hoi4ModUtilities.previewLocalisation": "Russian"
+    }
+}
