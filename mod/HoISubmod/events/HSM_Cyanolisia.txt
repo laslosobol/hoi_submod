@@ -29,7 +29,7 @@ country_event = {
 		set_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 		set_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		set_country_flag = HSM_CYA_dawnclaw_programs_reworked
-		HSM_CYA_install_dawnclaw_programs = yes
+		HSM_CYA_install_national_programs = yes
 		set_variable = { HSM_CYA_dawnclaw_exposure = 1 }
 		if = {
 			limit = {
@@ -177,6 +177,7 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.5.a
 		set_country_flag = HSM_CYA_countess_dominant
+		HSM_CYA_install_national_programs = yes
 		set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 240 }
 		swap_ideas = { remove_idea = HSM_CYA_unlikely_marriage add_idea = HSM_CYA_countess_dominant_court }
 		subtract_from_variable = { HSM_CYA_dawnclaw_exposure = 2 }
@@ -676,14 +677,11 @@ country_event = {
 		name = hsm_cyanolisia.40.a
 		set_country_flag = HSM_CYA_1021_crown_in_trust
 		remove_ideas = GRI_grover_vi
-		if = {
-			limit = { has_idea = HSM_CYA_grover_regency }
-			swap_ideas = { remove_idea = HSM_CYA_grover_regency add_idea = HSM_CYA_crown_in_trust_idea }
-		}
-		else_if = {
-			limit = { NOT = { has_idea = HSM_CYA_crown_in_trust_idea } }
-			add_ideas = HSM_CYA_crown_in_trust_idea
-		}
+		remove_ideas = HSM_CYA_grover_regency
+		remove_ideas = HSM_CYA_crown_in_trust_idea
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.07 tooltip = stability_factor_tt }
+		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.01 tooltip = drift_defence_factor_tt }
 		set_politics = { ruling_party = neutrality elections_allowed = no }
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
@@ -705,15 +703,20 @@ country_event = {
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
-			add_ideas = HSM_CYA_grover_mercy_lesson_idea
+			custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 tooltip = stability_factor_tt }
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
-			add_ideas = HSM_CYA_grover_authority_lesson_idea
+			custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 tooltip = political_power_factor_tt }
+			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.03 tooltip = drift_defence_factor_tt }
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
-			add_ideas = HSM_CYA_grover_frontier_lesson_idea
+			custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.03 tooltip = army_core_defence_factor_tt }
+			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 tooltip = supply_consumption_factor_tt }
 		}
 	}
 }

@@ -7,6 +7,7 @@ HSM_CYA_industrial_program_dynamic_modifier = {
 	production_speed_rail_way_factor = HSM_CYA_production_speed_rail_way_factor
 	production_speed_industrial_complex_factor = HSM_CYA_production_speed_industrial_complex_factor
 	production_speed_arms_factory_factor = HSM_CYA_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = HSM_CYA_production_speed_dockyard_factor
 	production_speed_bunker_factor = HSM_CYA_production_speed_bunker_factor
 	production_speed_coastal_bunker_factor = HSM_CYA_production_speed_coastal_bunker_factor
 	industrial_capacity_factory = HSM_CYA_industrial_capacity_factory
@@ -52,4 +53,5 @@ HSM_CYA_imperial_legitimacy_dynamic_modifier = {
 	consumer_goods_factor = HSM_CYA_imperial_consumer_goods_factor
 	resistance_growth = HSM_CYA_resistance_growth
 	compliance_growth = HSM_CYA_compliance_growth
+	MONTHLY_POPULATION = HSM_CYA_imperial_monthly_population
 }

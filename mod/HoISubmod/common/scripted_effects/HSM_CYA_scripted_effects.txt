@@ -1,4 +1,4 @@
-HSM_CYA_install_dawnclaw_programs = {
+HSM_CYA_install_national_programs = {
 	if = {
 		limit = { NOT = { has_country_flag = HSM_CYA_dynamic_modifiers_installed } }
 		set_country_flag = HSM_CYA_dynamic_modifiers_installed
@@ -112,29 +112,13 @@ HSM_CYA_consolidate_dawnclaw_spirits = {
 
 HSM_CYA_consolidate_countess_spirits = {
 	set_country_flag = HSM_CYA_countess_spirits_consolidated
-
-	if = {
-		limit = { has_completed_focus = HSM_CYA_evi_civic_modernisation }
-		add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.04 }
-	}
-	if = {
-		limit = { has_completed_focus = HSM_CYA_evi_frontier_schools }
-		add_to_variable = { HSM_CYA_research_speed_factor = 0.03 }
-	}
-	if = {
-		limit = { has_completed_focus = HSM_CYA_frontier_school_missions }
-		add_to_variable = { HSM_CYA_research_speed_factor = 0.02 }
-	}
-	if = {
-		limit = { has_completed_focus = HSM_CYA_countess_merchant_arbitration }
-		add_to_variable = { HSM_CYA_consumer_goods_factor = -0.02 }
-	}
-	if = {
-		limit = { has_completed_focus = HSM_CYA_countess_southern_provincial_diets }
-		add_to_variable = { HSM_CYA_compliance_growth = 0.02 }
-	}
+	HSM_CYA_install_national_programs = yes
 
 	remove_ideas = HSM_CYA_countess_dominant_court
+	remove_ideas = HSM_CYA_countess_civilian_court
+	remove_ideas = HSM_CYA_household_compact
+	remove_ideas = HSM_CYA_hidden_assistant_court
+	remove_ideas = HSM_CYA_countess_alone_court
 	remove_ideas = HSM_CYA_frontier_county_administration
 	remove_ideas = HSM_CYA_blackrock_survey_corps_idea
 	remove_ideas = HSM_CYA_countess_frontier_reforms
@@ -169,11 +153,7 @@ HSM_CYA_consolidate_countess_spirits = {
 	if = { limit = { has_poverty = yes } decrease_poverty = yes }
 	if = { limit = { has_poverty = yes } decrease_poverty = yes }
 
-	add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.08 }
-	add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.03 }
-	add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.05 }
-	add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
-	add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.06 }
-	add_to_variable = { HSM_CYA_compliance_growth = 0.05 }
-	add_to_variable = { HSM_CYA_army_core_defence_factor = 0.07 }
+	add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.05 }
+	add_to_variable = { HSM_CYA_army_core_defence_factor = 0.05 }
+	add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
 }

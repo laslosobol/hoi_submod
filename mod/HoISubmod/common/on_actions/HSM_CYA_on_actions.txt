@@ -32,8 +32,16 @@ on_actions = {
 			if = {
 				limit = {
 					has_country_flag = HSM_CYA_dynamic_modifiers_installed
-					NOT = { has_country_flag = HSM_CYA_dawnclaw_hidden_in_court }
-					NOT = { has_country_flag = HSM_CYA_dawnclaw_branch_unlocked }
+					OR = {
+						has_country_flag = HSM_CYA_dawnclaw_dead
+						NOT = {
+							OR = {
+								has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+								has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
+								has_country_flag = HSM_CYA_countess_dominant
+							}
+						}
+					}
 				}
 				remove_dynamic_modifier = { modifier = HSM_CYA_industrial_program_dynamic_modifier }
 				remove_dynamic_modifier = { modifier = HSM_CYA_military_program_dynamic_modifier }
@@ -42,10 +50,14 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+					OR = {
+						has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+						has_country_flag = HSM_CYA_countess_dominant
+					}
 					NOT = { has_country_flag = HSM_CYA_dynamic_modifiers_installed }
 				}
-				HSM_CYA_install_dawnclaw_programs = yes
+				HSM_CYA_install_national_programs = yes
 			}
 			if = {
 				limit = {
@@ -88,6 +100,21 @@ on_actions = {
 					NOT = { has_country_flag = HSM_CYA_empire_tree_refreshed }
 				}
 				set_country_flag = HSM_CYA_empire_tree_refreshed
+				load_focus_tree = {
+					tree = cyan_original
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = HSM_CYA_1021_crown_in_trust
+						has_country_flag = HSM_CYA_1021_memorial_regency
+					}
+					NOT = { has_country_flag = HSM_CYA_countess_succession_tree_refreshed }
+				}
+				set_country_flag = HSM_CYA_countess_succession_tree_refreshed
 				load_focus_tree = {
 					tree = cyan_original
 					keep_completed = yes
