@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_idea_HSM_CYA_industrial_program
+		textureFile = "gfx/interface/ideas/cya_industrial_program.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_military_program
+		textureFile = "gfx/interface/ideas/cya_military_program.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_imperial_legitimacy
+		textureFile = "gfx/interface/ideas/cya_imperial_legitimacy.tga"
+	}
+
+	spriteType = {
+		name = GFX_idea_HSM_CYA_grover_regency
+		textureFile = "gfx/interface/ideas/cya_grover_regency.tga"
+	}
+}

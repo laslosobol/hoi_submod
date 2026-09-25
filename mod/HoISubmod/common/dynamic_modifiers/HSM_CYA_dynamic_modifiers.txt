@@ -1,6 +1,6 @@
 HSM_CYA_industrial_program_dynamic_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_pre_war_industry
+	icon = GFX_idea_HSM_CYA_industrial_program
 
 	production_speed_buildings_factor = HSM_CYA_production_speed_buildings_factor
 	production_speed_infrastructure_factor = HSM_CYA_production_speed_infrastructure_factor
@@ -19,7 +19,7 @@ HSM_CYA_industrial_program_dynamic_modifier = {
 
 HSM_CYA_military_program_dynamic_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_generic_army
+	icon = GFX_idea_HSM_CYA_military_program
 
 	army_org_factor = HSM_CYA_army_org_factor
 	army_core_attack_factor = HSM_CYA_army_core_attack_factor
@@ -43,7 +43,7 @@ HSM_CYA_military_program_dynamic_modifier = {
 
 HSM_CYA_imperial_legitimacy_dynamic_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_FAT_imperial_duchy_idea
+	icon = GFX_idea_HSM_CYA_imperial_legitimacy
 
 	political_power_factor = HSM_CYA_imperial_political_power_factor
 	stability_factor = HSM_CYA_imperial_stability_factor

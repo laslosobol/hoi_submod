@@ -1867,7 +1867,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_scholastic_census
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_griffon_books
 	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
 	x = 2
 	y = 1
@@ -2504,7 +2504,7 @@ shared_focus = {
 
 shared_focus = {
 	id = CYA_screening_effort
-	icon = GFX_goal_generic_navy_cruiser
+	icon = GFX_goal_JER_destroyer_developments
 	prerequisite = { focus = CYA_build_a_navy }
 	x = -1
 	y = 3
@@ -2530,7 +2530,7 @@ shared_focus = {
 
 shared_focus = {
 	id = CYA_cruiser_effort
-	icon = GFX_goal_generic_navy_battleship
+	icon = GFX_goal_JER_cruisers
 	prerequisite = { focus = CYA_build_a_navy }
 	x = 1
 	y = 3
@@ -3236,7 +3236,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_codify_household_compact
-	icon = GFX_goal_new_treaty
+	icon = GFX_focus_generic_treaty
 	prerequisite = { focus = HSM_CYA_civilian_liaison_offices }
 	x = 0
 	y = 1
@@ -3417,7 +3417,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_modernise_internal_intelligence
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_secret_agents_red
 	prerequisite = { focus = HSM_CYA_reorganise_border_forces }
 	x = 2
 	y = 1
@@ -3627,7 +3627,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_proclaim_cyanolisian_march
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_generic_national_unity_claws
 	prerequisite = { focus = HSM_CYA_defensive_victory_claims }
 	x = 0
 	y = 1
@@ -3712,7 +3712,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_recognise_outback_councils
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_PLB_griffon_council
 	prerequisite = { focus = HSM_CYA_integrate_minotaur_outback }
 	x = 0
 	y = 2
@@ -3968,7 +3968,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_install_imperial_cabinet
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_TBK_AF_empire_administration
 	x = 0
 	y = 2
 	relative_position_id = HSM_CYA_hide_the_fugitive
@@ -4010,7 +4010,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regularise_minotaur_administration
-	icon = GFX_goal_griffon_parchment
+	icon = GFX_goal_AF23_shared_parishes_and_minotaurs
 	prerequisite = { focus = HSM_CYA_install_imperial_cabinet }
 	x = -1
 	y = 1
@@ -4316,7 +4316,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_border_embassies
-	icon = GFX_goal_new_treaty
+	icon = GFX_focus_generic_diplomatic_treaty_pony_griffon
 	prerequisite = { focus = HSM_CYA_frontier_county_garrisons }
 	x = 1
 	y = 1
@@ -4343,7 +4343,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_blackrock_autonomy_statute
-	icon = GFX_goal_new_treaty
+	icon = GFX_focus_generic_treaty_black
 	prerequisite = { focus = HSM_CYA_frontier_war_games }
 	prerequisite = { focus = HSM_CYA_evi_border_embassies }
 	x = 0
@@ -4423,7 +4423,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_evosmoshafen_ministries
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_focus_NTR_a_true_administrative_state
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = 0
 	y = 1
@@ -4449,7 +4449,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_minotaur_charter
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_griffon_parchment
 	prerequisite = { focus = HSM_CYA_countess_border_modernisation }
 	prerequisite = { focus = HSM_CYA_aristocratic_credit_lines }
 	prerequisite = { focus = HSM_CYA_countess_evosmoshafen_ministries }
@@ -4497,7 +4497,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_mit_customs_zone
-	icon = GFX_goal_generic_trade
+	icon = GFX_focus_FAT_protect_trade_routes
 	prerequisite = { focus = HSM_CYA_countess_minotaur_charter }
 	x = -2
 	y = 1
@@ -4574,7 +4574,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_subdue_asterion
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_JER_subjugate_the_minotaurs
 	prerequisite = { focus = HSM_CYA_prepare_asterion_protectorate }
 	x = 0
 	y = 1
@@ -4716,7 +4716,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_asterion_assembly_compact
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_PLB_griffon_council
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
 	x = -2
 	y = 1
@@ -4749,7 +4749,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_midoria_parish_board
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_AF23_shared_parishes_and_minotaurs
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
 	x = 2
 	y = 1
@@ -4779,7 +4779,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_southern_provincial_diets
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_focus_FAT_establishlocalcouncils
 	prerequisite = { focus = HSM_CYA_asterion_assembly_compact }
 	x = 0
 	y = 1
@@ -4804,7 +4804,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_merchant_arbitration
-	icon = GFX_goal_generic_trade
+	icon = GFX_focus_FAT_formalize_trade_relations
 	prerequisite = { focus = HSM_CYA_midoria_parish_board }
 	x = 0
 	y = 1
@@ -4829,7 +4829,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_frontier_conference
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_focus_FAT_appoint_civilian_ministers
 	prerequisite = { focus = HSM_CYA_countess_southern_provincial_diets }
 	prerequisite = { focus = HSM_CYA_countess_merchant_arbitration }
 	x = 0
@@ -4855,7 +4855,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_aristocratic_league
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_PLB_council_of_lords
 	prerequisite = { focus = HSM_CYA_countess_frontier_conference }
 	x = -1
 	y = 1
@@ -4880,7 +4880,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_southern_amnesty_registers
-	icon = GFX_goal_new_treaty
+	icon = GFX_focus_FST_amnesty_for_the_kemerskai_government
 	prerequisite = { focus = HSM_CYA_countess_frontier_conference }
 	x = 1
 	y = 1
@@ -5103,7 +5103,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_civic_modernisation
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_factory_complex
 	prerequisite = { focus = HSM_CYA_countess_integrate_evi_valley }
 	x = -2
 	y = 1
@@ -5163,7 +5163,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_notables_council
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_PLB_council_of_lords
 	prerequisite = { focus = HSM_CYA_countess_integrate_evi_valley }
 	x = 0
 	y = 2
@@ -5251,7 +5251,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regency_prepares_for_herzland
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_AF23_shared_the_frontier
 	prerequisite = { focus = HSM_CYA_evi_notables_council }
 	x = 0
 	y = 1
@@ -5277,7 +5277,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_restore_imperial_provinces
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_AF23_shared_unite_the_herzland
 	prerequisite = { focus = HSM_CYA_regency_prepares_for_herzland }
 	x = 0
 	y = 1
@@ -5367,7 +5367,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_herzland_reconstruction
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_JER_rapid_reconstruction
 	prerequisite = { focus = HSM_CYA_countess_capital_restoration_plan }
 	x = 0
 	y = 1
@@ -5546,7 +5546,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_union_mandate
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_HSM_CYA_countess_union_mandate
 	prerequisite = { focus = HSM_CYA_countess_regency_for_grover }
 	x = 0
 	y = 2
@@ -5587,7 +5587,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_northern_charters
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_griffon_parchment
 	prerequisite = { focus = HSM_CYA_countess_union_mandate }
 	x = -6
 	y = 1
@@ -5621,7 +5621,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_western_concord
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_focus_FAT_reconcile_with_north
 	prerequisite = { focus = HSM_CYA_countess_union_mandate }
 	x = -2
 	y = 1
@@ -5689,7 +5689,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_river_missions
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_AF23_shared_river_federation
 	prerequisite = { focus = HSM_CYA_countess_union_mandate }
 	x = 6
 	y = 1
@@ -5792,7 +5792,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_western_circuits
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_GRI_the_imperial_core
 	prerequisite = { focus = HSM_CYA_countess_northern_charters }
 	prerequisite = { focus = HSM_CYA_countess_western_concord }
 	prerequisite = { focus = HSM_CYA_countess_southern_compacts }
@@ -5855,7 +5855,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_eastern_circuits
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_TBK_AF_empire_administration
 	prerequisite = { focus = HSM_CYA_countess_river_missions }
 	prerequisite = { focus = HSM_CYA_countess_regency_general_staff }
 	x = 3
@@ -6327,7 +6327,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_dawnclaw_war_room
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_offensive_army
 	prerequisite = { focus = HSM_CYA_security_districts }
 	x = 0
 	y = 1
@@ -6451,7 +6451,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_operation_against_asterion
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_JER_subjugate_the_minotaurs
 	prerequisite = { focus = HSM_CYA_minotaurian_logistics_board }
 	x = 0
 	y = 1
@@ -6569,7 +6569,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_dawnclaw_integrate_south
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_AF23_shared_the_south_east
 	prerequisite = { focus = HSM_CYA_military_governorate_asterion }
 	prerequisite = { focus = HSM_CYA_sicameon_security_corridor }
 	x = 2
@@ -6701,7 +6701,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_minotaurian_security_registry
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_AF23_shared_parishes_and_minotaurs
 	prerequisite = { focus = HSM_CYA_asterion_hostage_bureau }
 	x = 0
 	y = 1
@@ -6759,7 +6759,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_port_purge_lists
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_JER_special_police
 	prerequisite = { focus = HSM_CYA_midoria_dockyard_command }
 	x = 0
 	y = 1
@@ -6796,7 +6796,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_security_census
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_focus_NTR_a_true_administrative_state
 	prerequisite = { focus = HSM_CYA_minotaurian_security_registry }
 	prerequisite = { focus = HSM_CYA_port_purge_lists }
 	x = 0
@@ -6908,7 +6908,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_tame_the_kaiv_rada
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_gunpoint_diplomacy
 	prerequisite = { focus = HSM_CYA_frontier_military_governorates }
 	x = 2
 	y = 1
@@ -7082,7 +7082,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_registry_modernisation
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_griffon_books
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = -4
 	y = 1
@@ -7403,7 +7403,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_march_on_imperial_provinces
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_AF23_shared_unite_the_herzland
 	prerequisite = { focus = HSM_CYA_prepare_herzland_offensive }
 	x = 0
 	y = 1
@@ -7493,7 +7493,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_herzland_reconstruction_authority
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_JER_rapid_reconstruction
 	prerequisite = { focus = HSM_CYA_dawnclaw_capital_restoration_plan }
 	x = 0
 	y = 1
@@ -7535,7 +7535,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_emergency_griffenheim_command
-	icon = GFX_goal_generic_martial_law
+	icon = GFX_goal_AF23_shared_form_imperial_guard
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
 	x = -2
 	y = 1
@@ -7586,7 +7586,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_purge_imperial_remainders
-	icon = GFX_goal_generic_trial
+	icon = GFX_goal_GRI_a_clean_imperium
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
 	x = 2
 	y = 1
@@ -7797,7 +7797,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_child_may_rule
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_grover_vi
 	prerequisite = { focus = HSM_CYA_question_of_grover }
 	mutually_exclusive = { focus = HSM_CYA_execute_the_child_emperor }
 	mutually_exclusive = { focus = HSM_CYA_the_puppet_emperor }
@@ -7989,7 +7989,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_heirless_provincial_compact
-	icon = GFX_goal_new_treaty
+	icon = GFX_focus_generic_treaty_black
 	prerequisite = { focus = HSM_CYA_memorial_imperial_council }
 	x = 0
 	y = 1
@@ -8060,7 +8060,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_court_of_supervised_oaths
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_focus_FAT_demand_their_oaths
 	prerequisite = { focus = HSM_CYA_caged_coronation }
 	x = 0
 	y = 1
@@ -8243,7 +8243,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_empire_after_grover
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_HSM_CYA_imperial_interregnum
 	prerequisite = { focus = HSM_CYA_execute_the_child_emperor focus = HSM_CYA_the_puppet_emperor focus = HSM_CYA_the_child_may_rule focus = HSM_CYA_grover_lost_to_others }
 	x = 0
 	y = 3
@@ -8290,7 +8290,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_cross_the_river_frontier
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_river_fed_suppression
 	prerequisite = { focus = HSM_CYA_empire_after_grover }
 	x = -1
 	y = 1
@@ -8332,7 +8332,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_northern_submission
-	icon = GFX_focus_FAT_abandon_the_republican_dream
+	icon = GFX_goal_AF23_shared_cleanup_the_north
 	prerequisite = { focus = HSM_CYA_empire_after_grover }
 	x = -5
 	y = 1
@@ -8373,7 +8373,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_break_the_lake_countries
-	icon = GFX_goal_generic_attack_griffonstone
+	icon = GFX_goal_AF23_shared_around_the_lake
 	prerequisite = { focus = HSM_CYA_empire_after_grover }
 	x = -3
 	y = 1
@@ -8450,7 +8450,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_subdue_the_hillponies
-	icon = GFX_goal_generic_major_war
+	icon = GFX_goal_AF23_shared_hillponies
 	prerequisite = { focus = HSM_CYA_empire_after_grover }
 	x = 1
 	y = 1
@@ -8527,7 +8527,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_western_imperial_circuits
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_AF23_shared_plan_west
 	prerequisite = { focus = HSM_CYA_the_northern_submission }
 	prerequisite = { focus = HSM_CYA_break_the_lake_countries }
 	prerequisite = { focus = HSM_CYA_crush_the_western_crowns }
@@ -8601,7 +8601,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_eastern_imperial_circuits
-	icon = GFX_goal_generic_bureaucracy_griffon
+	icon = GFX_goal_AF23_shared_plan_east
 	prerequisite = { focus = HSM_CYA_cross_the_river_frontier }
 	prerequisite = { focus = HSM_CYA_subdue_the_hillponies }
 	x = 0
@@ -11981,7 +11981,7 @@ shared_focus = {
 
 shared_focus = {
 	id = CYA_tunnel_to_em
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_generic_railway_construction
 	prerequisite = { focus = CYA_lands_acquisition_act }
 	prerequisite = { focus = CYA_develop_outskirts }
 	x = 1
@@ -12248,7 +12248,7 @@ shared_focus = {
 
 shared_focus = {
 	id = CYA_new_foreign_minister
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_foreign_diplomacy
 	prerequisite = { focus = CYA_decree_for_reformed_governance }
 	x = 5
 	y = 5

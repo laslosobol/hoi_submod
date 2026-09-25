@@ -1,19 +1,19 @@
 ideas = {
 	country = {
 		HSM_CYA_industrial_program_dynamic_modifier_dummy_idea = {
-			picture = generic_industry_2
+			picture = HSM_CYA_industrial_program
 			allowed = { always = no }
 			removal_cost = -1
 		}
 
 		HSM_CYA_military_program_dynamic_modifier_dummy_idea = {
-			picture = generic_army_bonus
+			picture = HSM_CYA_military_program
 			allowed = { always = no }
 			removal_cost = -1
 		}
 
 		HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea = {
-			picture = FAT_imperial_duchy_idea
+			picture = HSM_CYA_imperial_legitimacy
 			allowed = { always = no }
 			removal_cost = -1
 		}
@@ -685,7 +685,7 @@ ideas = {
 		}
 
 		HSM_CYA_herzland_devastation = {
-			picture = generic_army_bonus
+			picture = FAT_herzland_civil_war
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -699,7 +699,7 @@ ideas = {
 		}
 
 		HSM_CYA_herzland_reconstruction = {
-			picture = generic_army_bonus
+			picture = generic_build_infrastructure
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -711,7 +711,7 @@ ideas = {
 		}
 
 		HSM_CYA_grover_regency = {
-			picture = generic_neutrality_drift_bonus
+			picture = HSM_CYA_grover_regency
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -734,7 +734,7 @@ ideas = {
 		}
 
 		HSM_CYA_crown_in_trust_idea = {
-			picture = generic_neutrality_drift_bonus
+			picture = HSM_CYA_grover_regency
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {

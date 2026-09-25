@@ -1,5 +1,15 @@
 spriteTypes = {
 	spriteType = {
+		name = GFX_HSM_CYA_countess_union_mandate
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_union_mandate.tga"
+	}
+
+	spriteType = {
+		name = GFX_HSM_CYA_imperial_interregnum
+		textureFile = "gfx/interface/goals/HSM_CYA_imperial_interregnum.tga"
+	}
+
+	spriteType = {
 		name = GFX_HSM_CYA_countess_regency_for_grover
 		textureFile = "gfx/interface/goals/HSM_CYA_countess_regency_for_grover.tga"
 	}
