@@ -1,0 +1,24 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_HSM_CYA_countess_regency_for_grover
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_regency_for_grover.tga"
+	}
+
+	spriteType = {
+		name = GFX_HSM_CYA_evi_governorate_codes
+		textureFile = "gfx/interface/goals/HSM_CYA_evi_governorate_codes.tga"
+	}
+
+	spriteType = {
+		name = GFX_HSM_CYA_question_of_grover
+		textureFile = "gfx/interface/goals/HSM_CYA_question_of_grover.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_one_griffonia_under_the_crown
+		textureFile = "gfx/interface/goals/HSM_CYA_one_griffonia_under_the_crown.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_one_griffonia_under_claw
+		textureFile = "gfx/interface/goals/HSM_CYA_one_griffonia_under_claw.tga"
+	}
+}

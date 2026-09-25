@@ -1,5 +1,5 @@
 name="HoISubmod"
-version="0.2.0"
+version="0.3.0"
 supported_version="1.19.*"
 tags={
     "Alternative History"

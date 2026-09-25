@@ -12,3 +12,20 @@ HSM_CYA_dawnclaw_hiding = {
 	visible_when_empty = yes
 	priority = 101
 }
+
+HSM_CYA_imperial_administration_diplomacy = {
+	icon = generic_political_discourse
+	allowed = { original_tag = CYA }
+	visible = {
+		has_country_flag = HSM_CYA_path_imperial_administration
+		is_subject = no
+		is_in_faction = no
+		GRI = {
+			exists = yes
+			is_faction_leader = yes
+			is_neighbor_of = ROOT
+		}
+	}
+	visible_when_empty = yes
+	priority = 100
+}

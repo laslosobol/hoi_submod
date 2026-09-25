@@ -72,19 +72,7 @@ HSM_CYA_consolidate_dawnclaw_spirits = {
 	remove_ideas = HSM_CYA_consolidated_direct_rule
 	remove_ideas = HSM_CYA_imperial_workshop_program
 	remove_ideas = HSM_CYA_cabinet_procurement_board_idea
-	remove_ideas = HSM_CYA_policed_minotaurian_outback
-	remove_ideas = HSM_CYA_strained_minotaurian_indigenes
-	remove_ideas = HSM_CYA_registered_minotaurian_communities
 	remove_ideas = CYA_direct_rule_from_evosmoshafen
-	remove_ideas = CYA_minotaurian_outback
-	remove_ideas = CYA_opened_outback
-	remove_ideas = CYA_ignored_outback
-	remove_ideas = CYA_policed_outback
-	remove_ideas = CYA_minotaurian_indigenes
-	remove_ideas = CYA_recognised_minotaurian_rights
-	remove_ideas = CYA_suppressed_indigenes
-	remove_ideas = CYA_defeated_indigenes
-	remove_ideas = CYA_radicalised_indigenes
 
 	# By the time Griffenheim falls, the starting poverty and industrial backwardness
 	# have become reconstruction problems rather than permanent national spirits.
@@ -116,8 +104,76 @@ HSM_CYA_consolidate_dawnclaw_spirits = {
 		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
 		add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.08 }
 		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
-		add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.08 }
-		add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.04 }
+		add_to_variable = { HSM_CYA_resistance_growth = -0.08 }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.04 }
 		set_country_flag = HSM_CYA_dawnclaw_programs_reworked
 	}
+}
+
+HSM_CYA_consolidate_countess_spirits = {
+	set_country_flag = HSM_CYA_countess_spirits_consolidated
+
+	if = {
+		limit = { has_completed_focus = HSM_CYA_evi_civic_modernisation }
+		add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.04 }
+	}
+	if = {
+		limit = { has_completed_focus = HSM_CYA_evi_frontier_schools }
+		add_to_variable = { HSM_CYA_research_speed_factor = 0.03 }
+	}
+	if = {
+		limit = { has_completed_focus = HSM_CYA_frontier_school_missions }
+		add_to_variable = { HSM_CYA_research_speed_factor = 0.02 }
+	}
+	if = {
+		limit = { has_completed_focus = HSM_CYA_countess_merchant_arbitration }
+		add_to_variable = { HSM_CYA_consumer_goods_factor = -0.02 }
+	}
+	if = {
+		limit = { has_completed_focus = HSM_CYA_countess_southern_provincial_diets }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 }
+	}
+
+	remove_ideas = HSM_CYA_countess_dominant_court
+	remove_ideas = HSM_CYA_frontier_county_administration
+	remove_ideas = HSM_CYA_blackrock_survey_corps_idea
+	remove_ideas = HSM_CYA_countess_frontier_reforms
+	remove_ideas = HSM_CYA_aristocratic_credit_network
+	remove_ideas = HSM_CYA_evosmoshafen_ministries
+	remove_ideas = HSM_CYA_countess_mit_customs_zone_idea
+	remove_ideas = HSM_CYA_countess_port_authority
+	remove_ideas = HSM_CYA_countess_mit_protectorate
+	remove_ideas = HSM_CYA_countess_sicameon_mandate
+	remove_ideas = HSM_CYA_countess_southern_settlement
+	remove_ideas = HSM_CYA_southern_provincial_diets_idea
+	remove_ideas = HSM_CYA_merchant_arbitration_idea
+	remove_ideas = HSM_CYA_frontier_conference_idea
+	remove_ideas = HSM_CYA_frontier_aristocratic_league_idea
+	remove_ideas = HSM_CYA_southern_amnesty_registers_idea
+	remove_ideas = HSM_CYA_kivessin_compromise_idea
+	remove_ideas = HSM_CYA_kaiv_autonomy_idea
+	remove_ideas = HSM_CYA_lushland_border_commission_idea
+	remove_ideas = HSM_CYA_gryphus_company_charter_idea
+	remove_ideas = HSM_CYA_integrated_evi_valley_idea
+	remove_ideas = HSM_CYA_evi_civic_modernisation_idea
+	remove_ideas = HSM_CYA_evi_frontier_schools_idea
+	remove_ideas = HSM_CYA_evi_notables_council_idea
+	remove_ideas = HSM_CYA_frontier_school_missions_idea
+	remove_ideas = HSM_CYA_regency_claim
+	remove_ideas = CYA_direct_rule_from_evosmoshafen
+
+	if = { limit = { has_outdated_industry = yes } increase_society_development = yes }
+	if = { limit = { has_outdated_industry = yes } increase_society_development = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+	if = { limit = { has_poverty = yes } decrease_poverty = yes }
+
+	add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.08 }
+	add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.03 }
+	add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.05 }
+	add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
+	add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.06 }
+	add_to_variable = { HSM_CYA_compliance_growth = 0.05 }
+	add_to_variable = { HSM_CYA_army_core_defence_factor = 0.07 }
 }

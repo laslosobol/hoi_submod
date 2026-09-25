@@ -104,10 +104,24 @@ focus_tree = {
 	shared_focus = HSM_CYA_regency_bread_offices
 	shared_focus = HSM_CYA_restore_imperial_courts
 	shared_focus = HSM_CYA_countess_regency_for_grover
+	shared_focus = HSM_CYA_countess_union_mandate
+	shared_focus = HSM_CYA_countess_northern_charters
+	shared_focus = HSM_CYA_countess_western_concord
+	shared_focus = HSM_CYA_countess_southern_compacts
+	shared_focus = HSM_CYA_countess_river_missions
+	shared_focus = HSM_CYA_countess_continental_rail_board
+	shared_focus = HSM_CYA_countess_regency_general_staff
+	shared_focus = HSM_CYA_countess_western_circuits
+	shared_focus = HSM_CYA_countess_eastern_circuits
+	shared_focus = HSM_CYA_one_griffonia_under_the_crown
 	shared_focus = HSM_CYA_regency_coronation_preparations
 	shared_focus = HSM_CYA_crown_in_trust
 	shared_focus = HSM_CYA_groverite_reconciliation
 	shared_focus = HSM_CYA_regency_constitution
+	shared_focus = HSM_CYA_grover_first_council
+	shared_focus = HSM_CYA_grover_imperial_academies
+	shared_focus = HSM_CYA_countess_memorial_regency
+	shared_focus = HSM_CYA_countess_succession_council
 	shared_focus = HSM_CYA_dawnclaw_corporate_rearmament
 	shared_focus = HSM_CYA_imperial_officer_cells
 	shared_focus = HSM_CYA_security_districts
@@ -143,10 +157,13 @@ focus_tree = {
 	shared_focus = HSM_CYA_emergency_griffenheim_command
 	shared_focus = HSM_CYA_purge_imperial_remainders
 	shared_focus = HSM_CYA_question_of_grover
+	shared_focus = HSM_CYA_grover_lost_to_others
 	shared_focus = HSM_CYA_execute_the_child_emperor
 	shared_focus = HSM_CYA_empty_throne_proclamation
 	shared_focus = HSM_CYA_purge_groverite_clergy
 	shared_focus = HSM_CYA_boreas_without_bloodline
+	shared_focus = HSM_CYA_memorial_imperial_council
+	shared_focus = HSM_CYA_heirless_provincial_compact
 	shared_focus = HSM_CYA_empire_after_grover
 	shared_focus = HSM_CYA_the_puppet_emperor
 	shared_focus = HSM_CYA_caged_coronation
@@ -1780,9 +1797,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cyanolisian_development_board"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.04 }
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.02 }
+		add_to_variable = {
+			HSM_CYA_production_speed_buildings_factor = 0.04
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.02
+			tooltip = industrial_capacity_factory_tt
 		}
 		if = {
 			limit = { has_outdated_industry = yes }
@@ -1820,10 +1841,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_public_works_relief"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.08 }
-			add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.04 }
-			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.01 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.08
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_industrial_complex_factor = 0.04
+			tooltip = production_speed_industrial_complex_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.01
+			tooltip = consumer_goods_factor_tt
 		}
 		if = {
 			limit = { has_poverty = yes }
@@ -1839,7 +1867,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_scholastic_census
-	icon = GFX_goal_education
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
 	x = 2
 	y = 1
@@ -1902,9 +1930,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_polytechnic_exchange"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_research_speed_factor = 0.03 }
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.02 }
+		add_to_variable = {
+			HSM_CYA_research_speed_factor = 0.03
+			tooltip = research_speed_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.02
+			tooltip = industrial_capacity_factory_tt
 		}
 		if = {
 			limit = { NOT = { has_idea = proper_science_base } }
@@ -1925,7 +1957,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_railway_corps
-	icon = GFX_goal_generic_construct_infrastructure
+	icon = GFX_goal_generic_railway_construction
 	prerequisite = { focus = HSM_CYA_cyanolisian_development_board }
 	x = -2
 	y = 1
@@ -1945,11 +1977,21 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_railway_corps"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.04 }
-			add_to_variable = { HSM_CYA_production_speed_rail_way_factor = 0.10 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.03 }
-			add_to_variable = { HSM_CYA_attrition = -0.03 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.04
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_rail_way_factor = 0.10
+			tooltip = production_speed_rail_way_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.03
+			tooltip = supply_consumption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_attrition = -0.03
+			tooltip = attrition_tt
 		}
 		511 = { add_extra_state_shared_building_slots = 1 }
 		add_command_power = 10
@@ -1980,9 +2022,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_defense_industry"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.05 }
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_production_speed_arms_factory_factor = 0.05
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.02
+			tooltip = army_core_defence_factor_tt
 		}
 		511 = {
 			add_building_construction = {
@@ -1998,7 +2044,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regency_land_credit
-	icon = GFX_goal_generic_consumer_goods
+	icon = GFX_goal_bag_of_money
 	prerequisite = { focus = HSM_CYA_public_works_relief }
 	x = 0
 	y = 1
@@ -2016,10 +2062,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_land_credit"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.02 }
-			add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.04 }
-			add_to_variable = { HSM_CYA_industry_stability_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.02
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_industrial_complex_factor = 0.04
+			tooltip = production_speed_industrial_complex_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_industry_stability_factor = 0.02
+			tooltip = stability_factor_tt
 		}
 		add_stability = 0.01
 	}
@@ -2048,9 +2101,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cabinet_industrial_plan"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.03 }
-			add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.03
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_buildings_factor = 0.04
+			tooltip = production_speed_buildings_factor_tt
 		}
 		if = {
 			limit = { has_outdated_industry = yes }
@@ -2088,9 +2145,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_corporate_mobilisation_plan"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.04 }
-			add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.04
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_arms_factory_factor = 0.05
+			tooltip = production_speed_arms_factory_factor_tt
 		}
 		if = {
 			limit = { has_poverty = yes }
@@ -2124,10 +2185,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_black_budget_arsenals"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.05 }
-			add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.06 }
-			add_to_variable = { HSM_CYA_production_factory_max_efficiency_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_arms_factory_factor = 0.06
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_factory_max_efficiency_factor = 0.03
+			tooltip = production_factory_max_efficiency_factor_tt
 		}
 		671 = {
 			add_building_construction = {
@@ -2177,7 +2245,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_doctrine_school
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_military_academy
 	prerequisite = { focus = HSM_CYA_general_staff_conference }
 	x = -2
 	y = 1
@@ -2196,10 +2264,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_doctrine_school"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.04 }
-			add_to_variable = { HSM_CYA_army_org_factor = 0.02 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.04
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.02
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.02
+			tooltip = supply_consumption_factor_tt
 		}
 		army_experience = 10
 	}
@@ -2262,10 +2337,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_stratocratic_general_staff"
 		remove_ideas = CYA_okw
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.03 }
-			add_to_variable = { HSM_CYA_army_org_factor = 0.03 }
-			add_to_variable = { HSM_CYA_training_time_army_factor = -0.04 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.03
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.03
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_training_time_army_factor = -0.04
+			tooltip = training_time_army_factor_tt
 		}
 		army_experience = 15
 	}
@@ -2297,9 +2379,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_admiralty_patrol_compact"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_convoy_escort_efficiency = 0.08 }
-			add_to_variable = { HSM_CYA_naval_coordination = 0.03 }
+		add_to_variable = {
+			HSM_CYA_convoy_escort_efficiency = 0.08
+			tooltip = convoy_escort_efficiency_tt
+		}
+		add_to_variable = {
+			HSM_CYA_naval_coordination = 0.03
+			tooltip = naval_coordination_tt
 		}
 		navy_experience = 15
 	}
@@ -2922,7 +3008,7 @@ shared_focus = {
 	x = 29
 	y = 0
 
-	cost = 4
+	cost = 1
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
@@ -2947,6 +3033,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_hide_the_fugitive"
+		add_political_power = 35
 		set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 90 }
 	}
 
@@ -2955,7 +3042,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_an_unlikely_marriage
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_hide_the_fugitive }
 	mutually_exclusive = { focus = HSM_CYA_frontier_march_plan }
 	x = 0
@@ -3032,7 +3119,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_delegate_security_to_dawnclaw
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_an_unlikely_marriage }
 	mutually_exclusive = { focus = HSM_CYA_expand_countess_cabinet }
 	x = -2
@@ -3149,7 +3236,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_codify_household_compact
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_civilian_liaison_offices }
 	x = 0
 	y = 1
@@ -3672,7 +3759,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_palace_security_directorate
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_delegate_security_to_dawnclaw }
 	x = 0
 	y = 1
@@ -3808,19 +3895,30 @@ shared_focus = {
 		remove_ideas = HSM_CYA_colonels_household
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.08 }
-			add_to_variable = { HSM_CYA_planning_speed = 0.10 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.10 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.08
+			tooltip = army_org_factor_tt
 		}
-		remove_ideas = CYA_minotaurian_indigenes
-		remove_ideas = CYA_recognised_minotaurian_rights
-		remove_ideas = CYA_suppressed_indigenes
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.10
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.10
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
 		remove_ideas = CYA_direct_rule_from_evosmoshafen
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		set_popularities = {
@@ -3870,7 +3968,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_install_imperial_cabinet
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_generic_bureaucracy_griffon
 	x = 0
 	y = 2
 	relative_position_id = HSM_CYA_hide_the_fugitive
@@ -3912,7 +4010,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regularise_minotaur_administration
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_griffon_parchment
 	prerequisite = { focus = HSM_CYA_install_imperial_cabinet }
 	x = -1
 	y = 1
@@ -4031,7 +4129,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_consolidate_proxy_cabinet
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_goal_griffon_chair
 	prerequisite = { focus = HSM_CYA_regularise_minotaur_administration }
 	prerequisite = { focus = HSM_CYA_cabinet_procurement_board }
 	x = 0
@@ -4106,7 +4204,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_blackrock_wasteland_surveys
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_griffon_parchment
 	prerequisite = { focus = HSM_CYA_proclaim_cyanolisian_march }
 	x = -1
 	y = 1
@@ -4218,7 +4316,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_border_embassies
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_frontier_county_garrisons }
 	x = 1
 	y = 1
@@ -4245,7 +4343,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_blackrock_autonomy_statute
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_frontier_war_games }
 	prerequisite = { focus = HSM_CYA_evi_border_embassies }
 	x = 0
@@ -4299,7 +4397,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_aristocratic_credit_lines
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_bag_of_money
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = 2
 	y = 1
@@ -4325,7 +4423,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_evosmoshafen_ministries
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = 0
 	y = 1
@@ -4382,6 +4480,8 @@ shared_focus = {
 			add_ideas = CYA_opened_outback
 		}
 		remove_ideas = CYA_suppressed_indigenes
+		remove_ideas = CYA_defeated_indigenes
+		remove_ideas = CYA_radicalised_indigenes
 		if = {
 			limit = { has_idea = CYA_minotaurian_indigenes }
 			swap_ideas = { remove_idea = CYA_minotaurian_indigenes add_idea = CYA_recognised_minotaurian_rights }
@@ -4422,7 +4522,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_sicameon_port_authority
-	icon = GFX_goal_generic_trade
+	icon = GFX_goal_expand_dockyard
 	prerequisite = { focus = HSM_CYA_countess_minotaur_charter }
 	x = 2
 	y = 1
@@ -4448,7 +4548,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_prepare_asterion_protectorate
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_goal_generic_demand_territory
 	prerequisite = { focus = HSM_CYA_countess_mit_customs_zone }
 	x = 0
 	y = 1
@@ -4489,6 +4589,13 @@ shared_focus = {
 	}
 
 	ai_will_do = { factor = 10 }
+
+	bypass = {
+		OR = {
+			HSM_CYA_all_asterion_territory_owned = yes
+			MIT = { is_subject_of = ROOT }
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_subdue_asterion"
@@ -4545,6 +4652,8 @@ shared_focus = {
 	}
 
 	ai_will_do = { factor = 10 }
+
+	bypass = { HSM_CYA_all_sicameon_territory_owned = yes }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_claim_sicameon_coast"
@@ -4640,7 +4749,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_midoria_parish_board
-	icon = GFX_goal_generic_trade
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
 	x = 2
 	y = 1
@@ -4771,7 +4880,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_southern_amnesty_registers
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_countess_frontier_conference }
 	x = 1
 	y = 1
@@ -4814,11 +4923,7 @@ shared_focus = {
 	ai_will_do = { factor = 10 }
 
 	bypass = {
-		GRU = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
-		BRF = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
-		LUS = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
-		GRW = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
-		GRY = { OR = { exists = no is_subject_of = ROOT has_war_with = ROOT } }
+		HSM_CYA_all_evi_territory_owned = yes
 	}
 
 	completion_reward = {
@@ -4865,7 +4970,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_kaiv_autonomy_promise
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_goal_new_treaty
 	prerequisite = { focus = HSM_CYA_evi_valley_protectorates }
 	x = 2
 	y = 1
@@ -4895,7 +5000,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_lushland_border_commission
-	icon = GFX_goal_generic_construct_infrastructure
+	icon = GFX_goal_griffon_parchment
 	prerequisite = { focus = HSM_CYA_kivessin_compromise }
 	x = 0
 	y = 1
@@ -5109,7 +5214,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_princely_lesson_books
-	icon = GFX_groverVIadult
+	icon = GFX_goal_bookstack
 	prerequisite = { focus = HSM_CYA_countess_regency_for_grover }
 	x = -2
 	y = 1
@@ -5122,6 +5227,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 		NOT = { has_global_flag = GRI_grover_vi_dead }
+		NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
 	}
 
 	ai_will_do = { factor = 10 }
@@ -5129,7 +5235,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_princely_lesson_books"
 		country_event = { id = hsm_cyanolisia.34 }
-		add_ideas = HSM_CYA_grover_tutelage_notes_idea
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.03
+			tooltip = drift_defence_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -5234,10 +5348,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_capital_restoration_plan"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.05 }
-			add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.05
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_industrial_complex_factor = 0.03
+			tooltip = production_speed_industrial_complex_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 	}
 
@@ -5265,9 +5386,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_herzland_reconstruction"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.02 }
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.02
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 		if = {
 			limit = { has_idea = HSM_CYA_herzland_devastation }
@@ -5303,10 +5428,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_bread_offices"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.01 }
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.03 }
-			add_to_variable = { HSM_CYA_industry_stability_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.01
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.03
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_industry_stability_factor = 0.03
+			tooltip = stability_factor_tt
 		}
 	}
 
@@ -5315,7 +5447,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_restore_imperial_courts
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_goal_generic_trial
 	prerequisite = { focus = HSM_CYA_countess_herzland_reconstruction }
 	x = 1
 	y = 1
@@ -5333,11 +5465,31 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_restore_imperial_courts"
+		if = {
+			limit = {
+				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
+				NOT = { has_idea = GRI_grover_vi }
+			}
+			every_possible_country = {
+				limit = { has_character = GRI_emperor_grover_vi }
+				GRI_emperor_grover_vi = { set_nationality = ROOT }
+			}
+			add_ideas = GRI_grover_vi
+		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.02 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.02
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.03
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -5346,7 +5498,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_regency_for_grover
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_HSM_CYA_countess_regency_for_grover
 	prerequisite = { focus = HSM_CYA_regency_bread_offices }
 	prerequisite = { focus = HSM_CYA_restore_imperial_courts }
 	x = 0
@@ -5365,10 +5517,19 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_regency_for_grover"
-		add_ideas = HSM_CYA_grover_regency
 		if = {
 			limit = {
 				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
+			}
+			add_ideas = HSM_CYA_grover_regency
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
 				NOT = { has_idea = GRI_grover_vi }
 			}
 			every_possible_country = {
@@ -5384,12 +5545,400 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HSM_CYA_regency_coronation_preparations
-	icon = GFX_goal_generic_political_pressure
+	id = HSM_CYA_countess_union_mandate
+	icon = GFX_goal_generic_national_unity
 	prerequisite = { focus = HSM_CYA_countess_regency_for_grover }
 	x = 0
-	y = 1
+	y = 2
 	relative_position_id = HSM_CYA_countess_regency_for_grover
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_empire_descendant_declared
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+
+	available = { controls_state = 382 }
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_union_mandate"
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_rail_way_factor = 0.06
+			tooltip = production_speed_rail_way_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.05
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.03
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_northern_charters
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = -6
+	y = 1
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_northern_charters"
+		country_event = { id = hsm_cyanolisia.47 }
+		every_other_country = {
+			limit = {
+				OR = { original_tag = FAT tag = FAW original_tag = SRS original_tag = MNC original_tag = VED original_tag = HAU original_tag = AVI original_tag = BAN original_tag = EYR original_tag = ERI original_tag = LAK original_tag = BOI }
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_western_concord
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = -2
+	y = 1
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_western_concord"
+		country_event = { id = hsm_cyanolisia.50 }
+		every_other_country = {
+			limit = {
+				OR = { original_tag = TRD original_tag = FEZ original_tag = AET original_tag = HEL original_tag = JRR original_tag = JER original_tag = JES original_tag = JEB original_tag = JFT original_tag = VIN original_tag = POM original_tag = FLO }
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_local_resources_factor = 0.04
+			tooltip = local_resources_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_southern_compacts
+	icon = GFX_goal_new_treaty
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_southern_compacts"
+		country_event = { id = hsm_cyanolisia.51 }
+		every_other_country = {
+			limit = {
+				OR = { original_tag = ARA original_tag = FRN original_tag = TAL original_tag = WNG original_tag = FAL original_tag = SIC original_tag = MIT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.05
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_river_missions
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = 6
+	y = 1
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_river_missions"
+		country_event = { id = hsm_cyanolisia.48 }
+		every_other_country = {
+			limit = {
+				OR = { tag = JRV original_tag = LCT original_tag = RCT original_tag = NIM original_tag = WIT original_tag = BAK original_tag = DEP original_tag = FRE original_tag = DMT original_tag = HLQ original_tag = LNS original_tag = LSC original_tag = LSM tag = JHP original_tag = FBK original_tag = FIR original_tag = WAT original_tag = NCH }
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.03
+			tooltip = supply_consumption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.04
+			tooltip = planning_speed_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_continental_rail_board
+	icon = GFX_goal_GRI_northrail
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = -4
+	y = 2
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_continental_rail_board"
+		382 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_rail_way_factor = 0.10
+			tooltip = production_speed_rail_way_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.02
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_regency_general_staff
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { focus = HSM_CYA_countess_union_mandate }
+	x = 4
+	y = 2
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_regency_general_staff"
+		382 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.05
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.04
+			tooltip = supply_consumption_factor_tt
+		}
+		army_experience = 15
+	}
+
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_western_circuits
+	icon = GFX_goal_collaborate_local_elites
+	prerequisite = { focus = HSM_CYA_countess_northern_charters }
+	prerequisite = { focus = HSM_CYA_countess_western_concord }
+	prerequisite = { focus = HSM_CYA_countess_southern_compacts }
+	prerequisite = { focus = HSM_CYA_countess_continental_rail_board }
+	x = -3
+	y = 3
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	available = { HSM_CYA_western_griffonia_secured = yes }
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_western_circuits"
+		FAT = { add_to_ROOT_potential_original_cores = yes }
+		FAW = { add_to_ROOT_potential_original_cores = yes }
+		SRS = { add_to_ROOT_potential_cores = yes }
+		MNC = { add_to_ROOT_potential_cores = yes }
+		VED = { add_to_ROOT_potential_cores = yes }
+		HAU = { add_to_ROOT_potential_cores = yes }
+		AVI = { add_to_ROOT_potential_cores = yes }
+		BAN = { add_to_ROOT_potential_cores = yes }
+		EYR = { add_to_ROOT_potential_cores = yes }
+		ERI = { add_to_ROOT_potential_cores = yes }
+		LAK = { add_to_ROOT_potential_cores = yes }
+		BOI = { add_to_ROOT_potential_cores = yes }
+		TRD = { add_to_ROOT_potential_cores = yes }
+		FEZ = { add_to_ROOT_potential_cores = yes }
+		AET = { add_to_ROOT_potential_cores = yes }
+		HEL = { add_to_ROOT_potential_cores = yes }
+		JER = { add_to_ROOT_potential_cores = yes }
+		JRR = { add_to_ROOT_potential_cores = yes }
+		JES = { add_to_ROOT_potential_cores = yes }
+		JEB = { add_to_ROOT_potential_cores = yes }
+		JFT = { add_to_ROOT_potential_cores = yes }
+		VIN = { add_to_ROOT_potential_cores = yes }
+		POM = { add_to_ROOT_potential_cores = yes }
+		FLO = { add_to_ROOT_potential_cores = yes }
+		ARA = { add_to_ROOT_potential_cores = yes }
+		FRN = { add_to_ROOT_potential_cores = yes }
+		TAL = { add_to_ROOT_potential_cores = yes }
+		WNG = { add_to_ROOT_potential_cores = yes }
+		FAL = { add_to_ROOT_potential_cores = yes }
+		SIC = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_buildings_factor = 0.05
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_eastern_circuits
+	icon = GFX_goal_generic_bureaucracy_griffon
+	prerequisite = { focus = HSM_CYA_countess_river_missions }
+	prerequisite = { focus = HSM_CYA_countess_regency_general_staff }
+	x = 3
+	y = 3
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 5
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	available = { HSM_CYA_eastern_griffonia_secured = yes }
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_eastern_circuits"
+		country_event = { id = hsm_cyanolisia.49 }
+		HLQ = { add_to_ROOT_potential_cores = yes }
+		LNS = { add_to_ROOT_potential_cores = yes }
+		LSC = { add_to_ROOT_potential_cores = yes }
+		LSM = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_rail_way_factor = 0.08
+			tooltip = production_speed_rail_way_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.05
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_one_griffonia_under_the_crown
+	icon = GFX_HSM_CYA_one_griffonia_under_the_crown
+	prerequisite = { focus = HSM_CYA_countess_western_circuits }
+	prerequisite = { focus = HSM_CYA_countess_eastern_circuits }
+	x = 0
+	y = 5
+	relative_position_id = HSM_CYA_countess_union_mandate
+
+	cost = 7
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_one_griffonia_under_the_crown"
+		set_country_flag = HSM_CYA_countess_griffonia_unified
+		382 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.06
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.06
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.05
+			tooltip = political_power_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_regency_coronation_preparations
+	icon = GFX_goal_griffon_crown
+	prerequisite = { focus = HSM_CYA_one_griffonia_under_the_crown }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_one_griffonia_under_the_crown
 
 	cost = 4
 
@@ -5399,11 +5948,21 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 	}
 
+	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
+
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_coronation_preparations"
-		add_ideas = HSM_CYA_regency_coronation_commission
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
+		}
 		set_country_flag = HSM_CYA_countess_crown_prepared
 	}
 
@@ -5427,8 +5986,12 @@ shared_focus = {
 	}
 
 	available = {
-		date > 1021.5.21
+		OR = {
+			date > 1021.5.21
+			has_country_flag = HSM_CYA_grover_reigned_elsewhere
+		}
 		NOT = { has_global_flag = GRI_grover_vi_dead }
+		has_war = no
 		custom_trigger_tooltip = {
 			tooltip = HSM_CYA_controls_imperial_centres_tt
 			controls_state = 382
@@ -5465,7 +6028,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_groverite_reconciliation"
-		add_ideas = HSM_CYA_groverite_reconciliation_idea
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -5473,7 +6044,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regency_constitution
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_goal_constitutional_guarantees
 	prerequisite = { focus = HSM_CYA_crown_in_trust }
 	x = 1
 	y = 1
@@ -5490,13 +6061,146 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_regency_constitution"
-		if = {
-			limit = { has_idea = HSM_CYA_grover_regency }
-			swap_ideas = { remove_idea = HSM_CYA_grover_regency add_idea = HSM_CYA_regency_constitution_idea }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.06
+			tooltip = political_power_factor_tt
 		}
-		else_if = {
-			limit = { NOT = { has_idea = HSM_CYA_regency_constitution_idea } }
-			add_ideas = HSM_CYA_regency_constitution_idea
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_grover_first_council
+	icon = GFX_goal_griffon_chair
+	prerequisite = { focus = HSM_CYA_groverite_reconciliation }
+	prerequisite = { focus = HSM_CYA_regency_constitution }
+	x = 0
+	y = 2
+	relative_position_id = HSM_CYA_crown_in_trust
+
+	cost = 5
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_1021_crown_in_trust
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_first_council"
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_production_speed_industrial_complex_factor = 0.05
+			tooltip = production_speed_industrial_complex_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.05
+			tooltip = political_power_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_grover_imperial_academies
+	icon = GFX_goal_education
+	prerequisite = { focus = HSM_CYA_grover_first_council }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_grover_first_council
+
+	cost = 5
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_1021_crown_in_trust
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_imperial_academies"
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_research_speed_factor = 0.05
+			tooltip = research_speed_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.04
+			tooltip = army_org_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_memorial_regency
+	icon = GFX_goal_imperial_tomb
+	prerequisite = { focus = HSM_CYA_one_griffonia_under_the_crown }
+	x = -3
+	y = 1
+	relative_position_id = HSM_CYA_one_griffonia_under_the_crown
+
+	cost = 5
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	available = {
+		has_global_flag = GRI_grover_vi_dead
+		has_war = no
+		controls_state = 382
+	}
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_memorial_regency"
+		country_event = { id = hsm_cyanolisia.46 }
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_countess_succession_council
+	icon = GFX_goal_new_treaty
+	prerequisite = { focus = HSM_CYA_countess_memorial_regency }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_countess_memorial_regency
+
+	cost = 5
+	allow_branch = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_1021_memorial_regency
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	}
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_succession_council"
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.05
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 	}
 
@@ -5524,10 +6228,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_corporate_rearmament"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.05 }
-			add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.06 }
-			add_to_variable = { HSM_CYA_production_factory_max_efficiency_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_arms_factory_factor = 0.06
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_factory_max_efficiency_factor = 0.03
+			tooltip = production_factory_max_efficiency_factor_tt
 		}
 	}
 
@@ -5555,10 +6266,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_imperial_officer_cells"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.04 }
-			add_to_variable = { HSM_CYA_planning_speed = 0.06 }
-			add_to_variable = { HSM_CYA_experience_gain_army_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.04
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.06
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_experience_gain_army_factor = 0.05
+			tooltip = experience_gain_army_factor_tt
 		}
 		army_experience = 10
 	}
@@ -5568,7 +6286,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_security_districts
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_dawnclaw_corporate_rearmament }
 	prerequisite = { focus = HSM_CYA_imperial_officer_cells }
 	x = 0
@@ -5589,10 +6307,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_security_districts"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.05 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.05
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.05
+			tooltip = command_power_gain_mult_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
 		}
 		add_war_support = 0.03
 	}
@@ -5622,19 +6347,21 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_war_room"
 		add_command_power = 20
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_planning_speed = 0.08 }
-			add_to_variable = { HSM_CYA_max_planning_factor = 0.06 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.08 }
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.08
+			tooltip = planning_speed_tt
 		}
-		remove_ideas = CYA_opened_outback
-		remove_ideas = CYA_ignored_outback
-		remove_ideas = CYA_policed_outback
-		remove_ideas = CYA_minotaurian_outback
-		remove_ideas = CYA_minotaurian_indigenes
-		remove_ideas = CYA_suppressed_indigenes
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
+		add_to_variable = {
+			HSM_CYA_max_planning_factor = 0.06
+			tooltip = max_planning_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.08
+			tooltip = command_power_gain_mult_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
 		}
 	}
 
@@ -5660,12 +6387,24 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_minotaurian_logistics_board"
+		remove_ideas = CYA_minotaurian_outback
+		remove_ideas = CYA_opened_outback
+		remove_ideas = CYA_ignored_outback
+		remove_ideas = CYA_policed_outback
+		remove_ideas = HSM_CYA_policed_minotaurian_outback
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.07 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.05 }
-			add_to_variable = { HSM_CYA_attrition = -0.05 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.07
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.05
+			tooltip = supply_consumption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_attrition = -0.05
+			tooltip = attrition_tt
 		}
 		add_command_power = 10
 	}
@@ -5693,10 +6432,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_sicameon_informant_ports"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_decryption_factor = 0.03 }
-			add_to_variable = { HSM_CYA_naval_coordination = 0.05 }
-			add_to_variable = { HSM_CYA_convoy_escort_efficiency = 0.05 }
+		add_to_variable = {
+			HSM_CYA_decryption_factor = 0.03
+			tooltip = decryption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_naval_coordination = 0.05
+			tooltip = naval_coordination_tt
+		}
+		add_to_variable = {
+			HSM_CYA_convoy_escort_efficiency = 0.05
+			tooltip = convoy_escort_efficiency_tt
 		}
 	}
 
@@ -5721,6 +6467,13 @@ shared_focus = {
 
 	ai_will_do = { factor = 10 }
 
+	bypass = {
+		OR = {
+			HSM_CYA_all_asterion_territory_owned = yes
+			MIT = { is_subject_of = ROOT }
+		}
+	}
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_operation_against_asterion"
 		if = {
@@ -5735,7 +6488,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_military_governorate_asterion
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_operation_against_asterion }
 	x = 0
 	y = 1
@@ -5760,10 +6513,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_military_governorate_asterion"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.05 }
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.04 }
-			add_to_variable = { HSM_CYA_conscription_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.05
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.04
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_conscription_factor = 0.05
+			tooltip = conscription_factor_tt
 		}
 		if = {
 			limit = { MIT = { exists = yes is_subject_of = ROOT } }
@@ -5793,6 +6553,8 @@ shared_focus = {
 
 	ai_will_do = { factor = 10 }
 
+	bypass = { HSM_CYA_all_sicameon_territory_owned = yes }
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_sicameon_security_corridor"
 		if = {
@@ -5807,7 +6569,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_dawnclaw_integrate_south
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_military_governorate_asterion }
 	prerequisite = { focus = HSM_CYA_sicameon_security_corridor }
 	x = 2
@@ -5837,13 +6599,18 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_integrate_south"
 		SIC = { add_to_ROOT_potential_cores = yes }
-		remove_ideas = HSM_CYA_strained_minotaurian_indigenes
-		remove_ideas = CYA_minotaurian_indigenes
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.04 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.02 }
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.04
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.02
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 		if = {
 			limit = { MIT = { exists = yes is_subject_of = ROOT } }
@@ -5885,10 +6652,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_asterion_hostage_bureau"
 		country_event = { id = hsm_cyanolisia.28 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.03 }
-			add_to_variable = { HSM_CYA_planning_speed = 0.03 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.03 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.03
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.03
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.03
+			tooltip = command_power_gain_mult_tt
 		}
 	}
 
@@ -5927,7 +6701,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_minotaurian_security_registry
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_asterion_hostage_bureau }
 	x = 0
 	y = 1
@@ -5944,15 +6718,39 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_minotaurian_security_registry"
-		remove_ideas = CYA_suppressed_indigenes
-		remove_ideas = CYA_defeated_indigenes
-		remove_ideas = CYA_radicalised_indigenes
-		remove_ideas = HSM_CYA_strained_minotaurian_indigenes
-		remove_ideas = CYA_minotaurian_indigenes
+		if = {
+			limit = {
+				OR = {
+					has_idea = CYA_suppressed_indigenes
+					has_idea = CYA_defeated_indigenes
+					has_idea = CYA_radicalised_indigenes
+					has_idea = HSM_CYA_strained_minotaurian_indigenes
+					has_idea = CYA_minotaurian_indigenes
+				}
+			}
+			remove_ideas = CYA_suppressed_indigenes
+			remove_ideas = CYA_defeated_indigenes
+			remove_ideas = CYA_radicalised_indigenes
+			remove_ideas = HSM_CYA_strained_minotaurian_indigenes
+			remove_ideas = CYA_minotaurian_indigenes
+			if = {
+				limit = {
+					NOT = { has_idea = CYA_recognised_minotaurian_rights }
+					NOT = { has_idea = CYA_true_equality }
+					NOT = { has_idea = CYA_seperate_but_equal }
+					NOT = { has_idea = HSM_CYA_registered_minotaurian_communities }
+				}
+				add_ideas = HSM_CYA_registered_minotaurian_communities
+			}
+		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.02 }
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.02
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 	}
 
@@ -5979,10 +6777,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_port_purge_lists"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_naval_coordination = 0.05 }
-			add_to_variable = { HSM_CYA_convoy_escort_efficiency = 0.06 }
-			add_to_variable = { HSM_CYA_decryption_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_naval_coordination = 0.05
+			tooltip = naval_coordination_tt
+		}
+		add_to_variable = {
+			HSM_CYA_convoy_escort_efficiency = 0.06
+			tooltip = convoy_escort_efficiency_tt
+		}
+		add_to_variable = {
+			HSM_CYA_decryption_factor = 0.02
+			tooltip = decryption_factor_tt
 		}
 	}
 
@@ -5991,7 +6796,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_security_census
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_minotaurian_security_registry }
 	prerequisite = { focus = HSM_CYA_port_purge_lists }
 	x = 0
@@ -6010,11 +6815,21 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_security_census"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.04 }
-			add_to_variable = { HSM_CYA_decryption_factor = 0.02 }
-			add_to_variable = { HSM_CYA_encryption_factor = 0.02 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.04
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_decryption_factor = 0.02
+			tooltip = decryption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_encryption_factor = 0.02
+			tooltip = encryption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.05
+			tooltip = command_power_gain_mult_tt
 		}
 		add_command_power = 15
 	}
@@ -6039,13 +6854,18 @@ shared_focus = {
 
 	ai_will_do = { factor = 10 }
 
+	bypass = { HSM_CYA_all_evi_territory_owned = yes }
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_military_governorates"
-		create_wargoal = { target = GRU type = annex_everything }
-		create_wargoal = { target = BRF type = annex_everything }
-		create_wargoal = { target = LUS type = annex_everything }
-		create_wargoal = { target = GRW type = annex_everything }
-		create_wargoal = { target = GRY type = annex_everything }
+		every_other_country = {
+			limit = {
+				OR = { original_tag = GRU original_tag = BRF original_tag = LUS original_tag = GRW original_tag = GRY }
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+		}
 		add_war_support = 0.05
 	}
 
@@ -6077,7 +6897,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_break_the_kivessin_estates"
 		country_event = { id = hsm_cyanolisia.22 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = { add_to_variable = { HSM_CYA_army_core_attack_factor = 0.02 } }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.02
+			tooltip = army_core_attack_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -6108,9 +6931,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_tame_the_kaiv_rada"
 		country_event = { id = hsm_cyanolisia.23 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.03 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.04 }
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.03
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.04
+			tooltip = command_power_gain_mult_tt
 		}
 	}
 
@@ -6119,7 +6946,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_lushland_reprisals
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_break_the_kivessin_estates }
 	x = 0
 	y = 1
@@ -6142,7 +6969,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_lushland_reprisals"
 		country_event = { id = hsm_cyanolisia.30 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = { add_to_variable = { HSM_CYA_army_core_attack_factor = 0.03 } }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.03
+			tooltip = army_core_attack_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
@@ -6150,7 +6980,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_gryphus_company_audit
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_generic_trial
 	prerequisite = { focus = HSM_CYA_tame_the_kaiv_rada }
 	x = 0
 	y = 1
@@ -6173,9 +7003,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_gryphus_company_audit"
 		country_event = { id = hsm_cyanolisia.31 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.02 }
-			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.01 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.02
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.01
+			tooltip = consumer_goods_factor_tt
 		}
 	}
 
@@ -6184,7 +7018,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_governorate_codes
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_HSM_CYA_evi_governorate_codes
 	prerequisite = { focus = HSM_CYA_lushland_reprisals }
 	prerequisite = { focus = HSM_CYA_gryphus_company_audit }
 	x = 0
@@ -6210,6 +7044,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_evi_governorate_codes"
+		if = {
+			limit = { NOT = { has_country_flag = HSM_CYA_empire_descendant_declared } }
+			set_cosmetic_tag = HSM_CYA_DIRECTORATE
+			set_country_flag = HSM_CYA_directorate_identity_applied
+		}
 		GRU = { add_to_ROOT_potential_cores = yes }
 		BRF = { add_to_ROOT_potential_cores = yes }
 		LUS = { add_to_ROOT_potential_cores = yes }
@@ -6217,11 +7056,21 @@ shared_focus = {
 		GRY = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.03 }
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.05 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.03
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.03
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.04
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.05
+			tooltip = HSM_CYA_resistance_growth_tt
 		}
 		add_political_power = -25
 		add_war_support = 0.04
@@ -6233,7 +7082,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_registry_modernisation
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = -4
 	y = 1
@@ -6252,10 +7101,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_registry_modernisation"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.05 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.05
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 		increase_society_development_gradual = yes
 		if = {
@@ -6288,10 +7144,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_security_polytechnic_cells"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_research_speed_factor = 0.02 }
-			add_to_variable = { HSM_CYA_production_speed_arms_factory_factor = 0.03 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.04 }
+		add_to_variable = {
+			HSM_CYA_research_speed_factor = 0.02
+			tooltip = research_speed_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_arms_factory_factor = 0.03
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.04
+			tooltip = command_power_gain_mult_tt
 		}
 		if = {
 			limit = { has_illiteracy = yes }
@@ -6305,7 +7168,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_tribunals
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_trial
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = -2
 	y = 1
@@ -6324,9 +7187,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_tribunals"
 		country_event = { id = hsm_cyanolisia.35 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.04
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -6335,7 +7202,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_hostage_cadet_schools
-	icon = GFX_goal_generic_allies_build_infantry
+	icon = GFX_goal_GRI_feath_cadet_school
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = 2
 	y = 1
@@ -6354,10 +7221,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_hostage_cadet_schools"
 		country_event = { id = hsm_cyanolisia.36 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.04 }
-			add_to_variable = { HSM_CYA_training_time_factor = -0.04 }
-			add_to_variable = { HSM_CYA_command_power_gain_mult = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.04
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_training_time_factor = -0.04
+			tooltip = HSM_CYA_training_time_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.05
+			tooltip = command_power_gain_mult_tt
 		}
 	}
 
@@ -6366,7 +7240,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_auxiliary_legions
-	icon = GFX_goal_generic_allies_build_infantry
+	icon = GFX_goal_generic_drafted_army
 	prerequisite = { focus = HSM_CYA_evi_governorate_codes }
 	x = 0
 	y = 1
@@ -6384,10 +7258,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_frontier_auxiliary_legions"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.05 }
-			add_to_variable = { HSM_CYA_training_time_factor = -0.04 }
-			add_to_variable = { HSM_CYA_conscription_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.05
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_training_time_factor = -0.04
+			tooltip = HSM_CYA_training_time_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_conscription_factor = 0.05
+			tooltip = conscription_factor_tt
 		}
 		add_command_power = 20
 		army_experience = 10
@@ -6398,7 +7279,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_nationalist_frontier_mobilisation
-	icon = GFX_goal_generic_allies_build_infantry
+	icon = GFX_goal_generic_griffon_soldier_active
 	prerequisite = { focus = HSM_CYA_frontier_auxiliary_legions }
 	x = 0
 	y = 1
@@ -6416,11 +7297,21 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_nationalist_frontier_mobilisation"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.05 }
-			add_to_variable = { HSM_CYA_training_time_factor = -0.05 }
-			add_to_variable = { HSM_CYA_conscription_factor = 0.08 }
-			add_to_variable = { HSM_CYA_experience_gain_army_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.05
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_training_time_factor = -0.05
+			tooltip = HSM_CYA_training_time_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_conscription_factor = 0.08
+			tooltip = conscription_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_experience_gain_army_factor = 0.05
+			tooltip = experience_gain_army_factor_tt
 		}
 		add_command_power = 20
 	}
@@ -6430,7 +7321,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_grover_black_files
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_the_black_book
 	prerequisite = { focus = HSM_CYA_emergency_griffenheim_command }
 	prerequisite = { focus = HSM_CYA_purge_imperial_remainders }
 	x = -1
@@ -6443,19 +7334,28 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
 		has_country_flag = HSM_CYA_empire_descendant_declared
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
-		NOT = { has_global_flag = GRI_grover_vi_dead }
 	}
 
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_black_files"
-		country_event = { id = hsm_cyanolisia.37 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+			}
+			country_event = { id = hsm_cyanolisia.37 }
+		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_decryption_factor = 0.02 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_decryption_factor = 0.02
+			tooltip = decryption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
 		}
 	}
 
@@ -6483,10 +7383,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_prepare_herzland_offensive"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.04 }
-			add_to_variable = { HSM_CYA_max_planning_factor = 0.06 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.04
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_max_planning_factor = 0.06
+			tooltip = max_planning_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.04
+			tooltip = war_support_factor_tt
 		}
 		set_country_flag = HSM_CYA_can_claim_empire_descendant
 	}
@@ -6567,10 +7474,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_dawnclaw_capital_restoration_plan"
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.05 }
-			add_to_variable = { HSM_CYA_production_speed_industrial_complex_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.05
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_industrial_complex_factor = 0.03
+			tooltip = production_speed_industrial_complex_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 	}
 
@@ -6598,9 +7512,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_herzland_reconstruction_authority"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.02 }
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.02
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 		if = {
 			limit = { has_idea = HSM_CYA_herzland_devastation }
@@ -6617,7 +7535,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_emergency_griffenheim_command
-	icon = GFX_goal_generic_construct_military
+	icon = GFX_goal_generic_martial_law
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
 	x = -2
 	y = 1
@@ -6635,11 +7553,31 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_emergency_griffenheim_command"
+		if = {
+			limit = {
+				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
+				NOT = { has_idea = GRI_grover_vi }
+			}
+			every_possible_country = {
+				limit = { has_character = GRI_emperor_grover_vi }
+				GRI_emperor_grover_vi = { set_nationality = ROOT }
+			}
+			add_ideas = GRI_grover_vi
+		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_org_factor = 0.03 }
-			add_to_variable = { HSM_CYA_planning_speed = 0.05 }
-			add_to_variable = { HSM_CYA_army_war_support_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.03
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.05
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_war_support_factor = 0.03
+			tooltip = war_support_factor_tt
 		}
 	}
 
@@ -6648,7 +7586,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_purge_imperial_remainders
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_goal_generic_trial
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
 	x = 2
 	y = 1
@@ -6667,9 +7605,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_purge_imperial_remainders"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -6678,7 +7620,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_question_of_grover
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_HSM_CYA_question_of_grover
 	prerequisite = { focus = HSM_CYA_herzland_reconstruction_authority }
 	prerequisite = { focus = HSM_CYA_grover_black_files }
 	x = 1
@@ -6699,7 +7641,49 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_question_of_grover"
 		set_country_flag = HSM_CYA_question_of_grover_opened
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = { add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.02 } }
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.02
+			tooltip = drift_defence_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_CYA_grover_lost_to_others
+	icon = GFX_goal_imperial_tomb
+	prerequisite = { focus = HSM_CYA_question_of_grover }
+	mutually_exclusive = { focus = HSM_CYA_execute_the_child_emperor }
+	mutually_exclusive = { focus = HSM_CYA_the_puppet_emperor }
+	mutually_exclusive = { focus = HSM_CYA_the_child_may_rule }
+	x = -4
+	y = 1
+	relative_position_id = HSM_CYA_question_of_grover
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+	}
+
+	available = { has_global_flag = GRI_grover_vi_dead }
+
+	ai_will_do = { factor = 10 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_lost_to_others"
+		set_country_flag = HSM_CYA_grover_absent
+		remove_ideas = GRI_grover_vi
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.03
+			tooltip = war_support_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6711,6 +7695,7 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_question_of_grover }
 	mutually_exclusive = { focus = HSM_CYA_the_puppet_emperor }
 	mutually_exclusive = { focus = HSM_CYA_the_child_may_rule }
+	mutually_exclusive = { focus = HSM_CYA_grover_lost_to_others }
 	x = -2
 	y = 1
 	relative_position_id = HSM_CYA_question_of_grover
@@ -6719,8 +7704,9 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_question_of_grover_opened
 	}
+
+	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
 
 	ai_will_do = { factor = 3 }
 
@@ -6737,10 +7723,17 @@ shared_focus = {
 		add_war_support = 0.05
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.06 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.04
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.06
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -6753,6 +7746,7 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_question_of_grover }
 	mutually_exclusive = { focus = HSM_CYA_execute_the_child_emperor }
 	mutually_exclusive = { focus = HSM_CYA_the_child_may_rule }
+	mutually_exclusive = { focus = HSM_CYA_grover_lost_to_others }
 	x = 0
 	y = 1
 	relative_position_id = HSM_CYA_question_of_grover
@@ -6761,7 +7755,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_question_of_grover_opened
 	}
 
 	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
@@ -6773,6 +7766,8 @@ shared_focus = {
 		if = {
 			limit = {
 				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
 				NOT = { has_idea = GRI_grover_vi }
 			}
 			every_possible_country = {
@@ -6783,10 +7778,17 @@ shared_focus = {
 		}
 		set_country_flag = HSM_CYA_grover_puppet
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.03
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -6799,6 +7801,7 @@ shared_focus = {
 	prerequisite = { focus = HSM_CYA_question_of_grover }
 	mutually_exclusive = { focus = HSM_CYA_execute_the_child_emperor }
 	mutually_exclusive = { focus = HSM_CYA_the_puppet_emperor }
+	mutually_exclusive = { focus = HSM_CYA_grover_lost_to_others }
 	x = 2
 	y = 1
 	relative_position_id = HSM_CYA_question_of_grover
@@ -6807,7 +7810,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_question_of_grover_opened
 	}
 
 	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
@@ -6819,6 +7821,8 @@ shared_focus = {
 		if = {
 			limit = {
 				NOT = { has_global_flag = GRI_grover_vi_dead }
+				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
 				NOT = { has_idea = GRI_grover_vi }
 			}
 			every_possible_country = {
@@ -6829,10 +7833,17 @@ shared_focus = {
 		}
 		set_country_flag = HSM_CYA_grover_restored
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.06 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.06
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -6859,9 +7870,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_empty_throne_proclamation"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.05
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 	}
 
@@ -6888,9 +7903,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_purge_groverite_clergy"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.03 }
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.03
+			tooltip = HSM_CYA_resistance_growth_tt
 		}
 	}
 
@@ -6918,14 +7937,92 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_boreas_without_bloodline"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.04
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.05
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
 		}
 	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_memorial_imperial_council
+	icon = GFX_goal_griffon_chair
+	prerequisite = { focus = HSM_CYA_empty_throne_proclamation }
+	x = 2
+	y = 1
+	relative_position_id = HSM_CYA_empty_throne_proclamation
+
+	cost = 4
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_absent
+	}
+
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_memorial_imperial_council"
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_CYA_heirless_provincial_compact
+	icon = GFX_goal_new_treaty
+	prerequisite = { focus = HSM_CYA_memorial_imperial_council }
+	x = 0
+	y = 1
+	relative_position_id = HSM_CYA_memorial_imperial_council
+
+	cost = 5
+
+	allow_branch = {
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_grover_absent
+	}
+
+	ai_will_do = { factor = 8 }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_heirless_provincial_compact"
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -6948,9 +8045,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_caged_coronation"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
 		}
 	}
 
@@ -6977,10 +8078,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_court_of_supervised_oaths"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -7007,10 +8115,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_puppet_imperial_tours"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.05
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -7037,9 +8152,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_restoration_ceremony"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -7048,7 +8167,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_steel_regency_statutes
-	icon = GFX_goal_generic_neutrality_focus
+	icon = GFX_goal_constitutional_guarantees
 	prerequisite = { focus = HSM_CYA_grover_restoration_ceremony }
 	x = 0
 	y = 1
@@ -7067,10 +8186,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_steel_regency_statutes"
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_defence_factor = 0.02 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.04 }
+		add_to_variable = {
+			HSM_CYA_army_core_defence_factor = 0.02
+			tooltip = army_core_defence_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
 		}
 		add_political_power = 25
 	}
@@ -7098,10 +8224,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_reconciled_imperial_oaths"
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.06 }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.05
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.06
+			tooltip = drift_defence_factor_tt
 		}
 	}
 
@@ -7111,7 +8244,7 @@ shared_focus = {
 shared_focus = {
 	id = HSM_CYA_empire_after_grover
 	icon = GFX_goal_generic_national_unity
-	prerequisite = { focus = HSM_CYA_execute_the_child_emperor focus = HSM_CYA_the_puppet_emperor focus = HSM_CYA_the_child_may_rule }
+	prerequisite = { focus = HSM_CYA_execute_the_child_emperor focus = HSM_CYA_the_puppet_emperor focus = HSM_CYA_the_child_may_rule focus = HSM_CYA_grover_lost_to_others }
 	x = 0
 	y = 3
 	relative_position_id = HSM_CYA_question_of_grover
@@ -7120,11 +8253,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		OR = {
-			has_country_flag = HSM_CYA_grover_executed
-			has_country_flag = HSM_CYA_grover_puppet
-			has_country_flag = HSM_CYA_grover_restored
-		}
 	}
 
 	available = {
@@ -7139,11 +8267,21 @@ shared_focus = {
 		set_country_flag = HSM_CYA_imperial_campaigns_open
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_max_planning_factor = 0.08 }
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.06 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.03 }
+		add_to_variable = {
+			HSM_CYA_max_planning_factor = 0.08
+			tooltip = max_planning_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.05
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.06
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.03
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 	}
 
@@ -7163,17 +8301,21 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 6 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_cross_the_river_frontier"
+		country_event = { id = hsm_cyanolisia.48 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_planning_speed = 0.08 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.03 }
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.08
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.03
+			tooltip = supply_consumption_factor_tt
 		}
 		every_other_country = {
 			limit = {
@@ -7200,13 +8342,13 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 8 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_the_northern_submission"
+		country_event = { id = hsm_cyanolisia.47 }
 		every_other_country = {
 			limit = {
 				OR = { original_tag = FAT tag = FAW original_tag = SRS original_tag = MNC original_tag = VED original_tag = HAU }
@@ -7216,9 +8358,13 @@ shared_focus = {
 			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
 		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.03 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.03
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.02
+			tooltip = supply_consumption_factor_tt
 		}
 	}
 
@@ -7237,7 +8383,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 8 }
@@ -7253,7 +8398,10 @@ shared_focus = {
 			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
 		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = { add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 } }
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.04
+			tooltip = war_support_factor_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
@@ -7271,13 +8419,13 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 8 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_crush_the_western_crowns"
+		country_event = { id = hsm_cyanolisia.50 }
 		every_other_country = {
 			limit = {
 				OR = { original_tag = TRD original_tag = FEZ original_tag = AET original_tag = HEL original_tag = JRR original_tag = JER original_tag = JES original_tag = JEB original_tag = JFT original_tag = VIN original_tag = POM original_tag = FLO }
@@ -7287,9 +8435,13 @@ shared_focus = {
 			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
 		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.04 }
-			add_to_variable = { HSM_CYA_max_planning_factor = 0.05 }
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.04
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_max_planning_factor = 0.05
+			tooltip = max_planning_factor_tt
 		}
 	}
 
@@ -7308,7 +8460,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 7 }
@@ -7324,7 +8475,10 @@ shared_focus = {
 			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
 		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = { add_to_variable = { HSM_CYA_attrition = -0.03 } }
+		add_to_variable = {
+			HSM_CYA_attrition = -0.03
+			tooltip = attrition_tt
+		}
 	}
 
 	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_BONUS }
@@ -7342,13 +8496,13 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
-		has_country_flag = HSM_CYA_imperial_campaigns_open
 	}
 
 	ai_will_do = { factor = 8 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_claim_the_southern_crowns"
+		country_event = { id = hsm_cyanolisia.51 }
 		every_other_country = {
 			limit = {
 				OR = { original_tag = ARA original_tag = FRN original_tag = TAL original_tag = WNG original_tag = FAL original_tag = SIC original_tag = MIT }
@@ -7358,9 +8512,13 @@ shared_focus = {
 			ROOT = { create_wargoal = { target = PREV type = annex_everything } }
 		}
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
-			add_to_variable = { HSM_CYA_naval_coordination = 0.04 }
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.02
+			tooltip = supply_consumption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_naval_coordination = 0.04
+			tooltip = naval_coordination_tt
 		}
 	}
 
@@ -7380,7 +8538,7 @@ shared_focus = {
 
 	cost = 5
 
-	allow_branch = { has_country_flag = HSM_CYA_imperial_campaigns_open }
+	allow_branch = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 
 	available = { HSM_CYA_western_griffonia_secured = yes }
 
@@ -7418,14 +8576,23 @@ shared_focus = {
 		WNG = { add_to_ROOT_potential_cores = yes }
 		FAL = { add_to_ROOT_potential_cores = yes }
 		SIC = { add_to_ROOT_potential_cores = yes }
-		MIT = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_buildings_factor = 0.05 }
-			add_to_variable = { HSM_CYA_local_resources_factor = 0.05 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.05 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.03 }
+		add_to_variable = {
+			HSM_CYA_production_speed_buildings_factor = 0.05
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.05
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.03
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 	}
 
@@ -7434,7 +8601,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_eastern_imperial_circuits
-	icon = GFX_goal_collaborate_local_elites
+	icon = GFX_goal_generic_bureaucracy_griffon
 	prerequisite = { focus = HSM_CYA_cross_the_river_frontier }
 	prerequisite = { focus = HSM_CYA_subdue_the_hillponies }
 	x = 0
@@ -7443,7 +8610,7 @@ shared_focus = {
 
 	cost = 5
 
-	allow_branch = { has_country_flag = HSM_CYA_imperial_campaigns_open }
+	allow_branch = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 
 	available = { HSM_CYA_eastern_griffonia_secured = yes }
 
@@ -7451,33 +8618,33 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_eastern_imperial_circuits"
-		JRV = { add_to_ROOT_potential_cores = yes }
-		LCT = { add_to_ROOT_potential_cores = yes }
-		RCT = { add_to_ROOT_potential_cores = yes }
-		NIM = { add_to_ROOT_potential_cores = yes }
-		WIT = { add_to_ROOT_potential_cores = yes }
-		BAK = { add_to_ROOT_potential_cores = yes }
-		DEP = { add_to_ROOT_potential_cores = yes }
-		FRE = { add_to_ROOT_potential_cores = yes }
-		DMT = { add_to_ROOT_potential_cores = yes }
+		country_event = { id = hsm_cyanolisia.49 }
 		HLQ = { add_to_ROOT_potential_cores = yes }
 		LNS = { add_to_ROOT_potential_cores = yes }
 		LSC = { add_to_ROOT_potential_cores = yes }
 		LSM = { add_to_ROOT_potential_cores = yes }
-		JHP = { add_to_ROOT_potential_cores = yes }
-		FBK = { add_to_ROOT_potential_cores = yes }
-		FIR = { add_to_ROOT_potential_cores = yes }
-		WAT = { add_to_ROOT_potential_cores = yes }
-		NCH = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.05 }
-			add_to_variable = { HSM_CYA_production_speed_rail_way_factor = 0.08 }
-			add_to_variable = { HSM_CYA_supply_consumption_factor = -0.03 }
-			add_to_variable = { HSM_CYA_resistance_growth_on_our_occupied_states = -0.06 }
-			add_to_variable = { HSM_CYA_compliance_growth_on_our_occupied_states = 0.04 }
+		add_to_variable = {
+			HSM_CYA_production_speed_infrastructure_factor = 0.05
+			tooltip = production_speed_infrastructure_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_production_speed_rail_way_factor = 0.08
+			tooltip = production_speed_rail_way_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_supply_consumption_factor = -0.03
+			tooltip = supply_consumption_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_resistance_growth = -0.06
+			tooltip = HSM_CYA_resistance_growth_tt
+		}
+		add_to_variable = {
+			HSM_CYA_compliance_growth = 0.04
+			tooltip = HSM_CYA_compliance_growth_tt
 		}
 	}
 
@@ -7486,7 +8653,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_one_griffonia_under_claw
-	icon = GFX_goal_hoist_the_flag
+	icon = GFX_HSM_CYA_one_griffonia_under_claw
 	prerequisite = { focus = HSM_CYA_western_imperial_circuits }
 	prerequisite = { focus = HSM_CYA_eastern_imperial_circuits }
 	x = -2
@@ -7495,7 +8662,7 @@ shared_focus = {
 
 	cost = 7
 
-	allow_branch = { has_country_flag = HSM_CYA_imperial_campaigns_open }
+	allow_branch = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 
 	ai_will_do = { factor = 10 }
 
@@ -7510,12 +8677,25 @@ shared_focus = {
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.08 }
-			add_to_variable = { HSM_CYA_army_org_factor = 0.05 }
-			add_to_variable = { HSM_CYA_army_core_attack_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.08 }
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.08 }
+		add_to_variable = {
+			HSM_CYA_industrial_capacity_factory = 0.08
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.05
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_army_core_attack_factor = 0.05
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.08
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.08
+			tooltip = war_support_factor_tt
 		}
 	}
 

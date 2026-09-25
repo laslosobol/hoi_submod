@@ -235,3 +235,38 @@ HSM_CYA_dawnclaw_hiding = {
 		ai_will_do = { factor = 1 }
 	}
 }
+
+HSM_CYA_imperial_administration_diplomacy = {
+	HSM_CYA_enter_griffonian_imperial_alliance = {
+		icon = generic_political_discourse
+		cost = 35
+		fire_only_once = yes
+
+		allowed = { original_tag = CYA }
+		visible = {
+			has_country_flag = HSM_CYA_path_imperial_administration
+			is_subject = no
+			is_in_faction = no
+			GRI = {
+				exists = yes
+				is_faction_leader = yes
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			GRI = {
+				exists = yes
+				is_faction_leader = yes
+				is_neighbor_of = ROOT
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HSM_CYA_enter_griffonian_imperial_alliance"
+			GRI = { add_to_faction = ROOT }
+			set_country_flag = HSM_CYA_joined_imperial_alliance
+		}
+		ai_will_do = { factor = 5 }
+	}
+}

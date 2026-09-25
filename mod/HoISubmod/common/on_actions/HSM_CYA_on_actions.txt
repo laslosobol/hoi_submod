@@ -3,6 +3,34 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					has_completed_focus = HSM_CYA_evi_governorate_codes
+					has_country_flag = HSM_CYA_dawnclaw_dominant
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+					NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
+					NOT = { has_country_flag = HSM_CYA_directorate_identity_applied }
+				}
+				set_cosmetic_tag = HSM_CYA_DIRECTORATE
+				set_country_flag = HSM_CYA_directorate_identity_applied
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+					HSM_CYA_grover_reigns_anywhere = yes
+				}
+				set_country_flag = HSM_CYA_grover_reigned_elsewhere
+			}
+			if = {
+				limit = {
+					has_idea = GRI_grover_vi
+					OR = {
+						has_global_flag = GRI_grover_vi_dead
+						has_country_flag = HSM_CYA_grover_reigned_elsewhere
+					}
+				}
+				remove_ideas = GRI_grover_vi
+			}
+			if = {
+				limit = {
 					has_country_flag = HSM_CYA_dynamic_modifiers_installed
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_hidden_in_court }
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_branch_unlocked }
@@ -21,10 +49,11 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					has_country_flag = holds_griffon_capital
+					owns_state = 382
 					OR = {
-						has_country_flag = holds_griffon_capital
-						controls_state = 382
-						owns_state = 382
+						has_country_flag = HSM_CYA_dawnclaw_dominant
+						has_country_flag = HSM_CYA_countess_dominant
 					}
 					OR = {
 						has_country_flag = HSM_CYA_can_claim_empire_descendant
@@ -34,20 +63,18 @@ on_actions = {
 					NOT = { has_country_flag = HSM_CYA_empire_descendant_declared }
 				}
 				set_country_flag = HSM_CYA_empire_descendant_declared
+				set_global_flag = GRI_empire_rising_flag
 				if = {
 					limit = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 					HSM_CYA_consolidate_dawnclaw_spirits = yes
-					if = {
-						limit = {
-							NOT = { has_global_flag = GRI_grover_vi_dead }
-							NOT = { has_idea = GRI_grover_vi }
-						}
-						every_possible_country = {
-							limit = { has_character = GRI_emperor_grover_vi }
-							GRI_emperor_grover_vi = { set_nationality = ROOT }
-						}
-						add_ideas = GRI_grover_vi
+				}
+				if = {
+					limit = {
+						has_country_flag = HSM_CYA_countess_dominant
+						NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+						NOT = { has_country_flag = HSM_CYA_countess_spirits_consolidated }
 					}
+					HSM_CYA_consolidate_countess_spirits = yes
 				}
 				if = {
 					limit = { NOT = { has_idea = HSM_CYA_herzland_devastation } }
@@ -77,6 +104,15 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					has_country_flag = HSM_CYA_empire_descendant_declared
+					has_country_flag = HSM_CYA_countess_dominant
+					NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+					NOT = { has_country_flag = HSM_CYA_countess_spirits_consolidated }
+				}
+				HSM_CYA_consolidate_countess_spirits = yes
+			}
+			if = {
+				limit = {
 					date > 1021.5.21
 					has_country_flag = HSM_CYA_griffonia_claimed
 					has_war = no
@@ -84,6 +120,14 @@ on_actions = {
 				}
 				set_country_flag = HSM_CYA_grover_settlement_resolved
 				if = {
+					limit = {
+						has_global_flag = GRI_grover_vi_dead
+						NOT = { has_country_flag = HSM_CYA_grover_executed }
+					}
+					set_country_flag = HSM_CYA_grover_absent
+					country_event = { id = hsm_cyanolisia.45 }
+				}
+				else_if = {
 					limit = { has_country_flag = HSM_CYA_grover_executed }
 					country_event = { id = hsm_cyanolisia.41 }
 				}

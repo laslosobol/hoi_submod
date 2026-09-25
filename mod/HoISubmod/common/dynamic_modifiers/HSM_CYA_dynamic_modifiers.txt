@@ -50,6 +50,6 @@ HSM_CYA_imperial_legitimacy_dynamic_modifier = {
 	war_support_factor = HSM_CYA_imperial_war_support_factor
 	drift_defence_factor = HSM_CYA_imperial_drift_defence_factor
 	consumer_goods_factor = HSM_CYA_imperial_consumer_goods_factor
-	resistance_growth_on_our_occupied_states = HSM_CYA_resistance_growth_on_our_occupied_states
-	compliance_growth_on_our_occupied_states = HSM_CYA_compliance_growth_on_our_occupied_states
+	resistance_growth = HSM_CYA_resistance_growth
+	compliance_growth = HSM_CYA_compliance_growth
 }

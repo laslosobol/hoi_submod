@@ -72,3 +72,90 @@ HSM_CYA_eastern_griffonia_secured = {
 		}
 	}
 }
+
+HSM_CYA_grover_reigns_anywhere = {
+	any_country = {
+		has_country_leader = {
+			character = GRI_emperor_grover_vi
+			ruling_only = yes
+		}
+	}
+}
+
+HSM_CYA_all_evi_territory_owned = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_all_evi_territory_owned_tt
+		owns_state = 385
+		owns_state = 414
+		owns_state = 508
+		owns_state = 512
+		owns_state = 514
+		owns_state = 559
+		owns_state = 588
+		owns_state = 589
+		owns_state = 590
+		owns_state = 591
+		owns_state = 592
+		owns_state = 593
+		owns_state = 594
+		owns_state = 595
+		owns_state = 596
+		owns_state = 597
+		owns_state = 598
+		owns_state = 599
+		owns_state = 600
+		owns_state = 605
+		owns_state = 607
+		owns_state = 608
+		owns_state = 609
+		owns_state = 610
+		owns_state = 611
+		owns_state = 612
+		owns_state = 613
+		owns_state = 623
+		owns_state = 630
+		owns_state = 631
+		owns_state = 632
+		owns_state = 651
+		owns_state = 663
+	}
+}
+
+HSM_CYA_all_asterion_territory_owned = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_all_asterion_territory_owned_tt
+		owns_state = 386
+		owns_state = 462
+		owns_state = 463
+		owns_state = 464
+		owns_state = 465
+		owns_state = 466
+		owns_state = 467
+		owns_state = 468
+		owns_state = 469
+		owns_state = 513
+		owns_state = 654
+		owns_state = 655
+		owns_state = 656
+		owns_state = 657
+		owns_state = 664
+		owns_state = 667
+	}
+}
+
+HSM_CYA_all_sicameon_territory_owned = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_all_sicameon_territory_owned_tt
+		owns_state = 394
+		owns_state = 395
+		owns_state = 444
+		owns_state = 445
+		owns_state = 460
+		owns_state = 509
+		owns_state = 518
+		owns_state = 527
+		owns_state = 528
+		owns_state = 535
+		owns_state = 570
+	}
+}

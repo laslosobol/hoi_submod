@@ -1,0 +1,2023 @@
+GRI_diplomacy = {
+	GRI_takeover_TRD_fleet = {
+		icon = generic_naval
+		allowed = {
+			always = yes
+		}
+		targets = { TRD }
+		target_trigger = {
+			FROM = {
+				tag = TRD
+				is_ai = no
+			}
+		}
+		visible = {
+			FROM = {
+				is_subject_of = ROOT
+				has_navy_size = { size > 8 }
+			}
+			NOT = {
+				has_dlc = "By Blood Alone"
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRI_takeover_TRD_fleet target: [From.GetName]"
+			FROM = { transfer_navy = { target = ROOT } }
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	#GRI_kill_blockers = {
+	#	icon = generic_decision
+	#	allowed = {
+	#		always = yes
+	#		#is_ai = yes
+	#	}
+		# target_root_trigger = {
+			# is_ai = yes
+			# has_war = yes
+			# is_major = yes
+			# is_on_griffon_continent = yes
+			# any_enemy_country = {
+				# NOT = { is_neighbor_of = ROOT }
+				# custom_trigger_tooltip = {
+					# tooltip = IS_IN_GRIFFONIA_TT
+					# is_on_griffon_continent = yes
+				# }
+			# }
+		# }
+		# visible = {
+			# is_ai = yes
+			# has_war = yes
+			# any_enemy_country = {
+				# NOT = { is_neighbor_of = ROOT }
+				# custom_trigger_tooltip = {
+					# tooltip = IS_IN_GRIFFONIA_TT
+					# is_on_griffon_continent = yes
+				# }
+			# }
+			# FROM = {
+				# is_ai = yes
+				# is_major = no
+				# exists = yes
+				# NOT = { has_idea = detached_country }
+				# is_neighbor_of = ROOT
+				# is_in_faction = no
+				# NOT = {
+					# has_war_with = ROOT
+					# is_subject_of = ROOT
+					# has_war_together_with = ROOT
+					# gives_military_access_to = ROOT
+				# }
+				# any_neighbor_country = {
+					# OR = {
+						# AND = {
+							# has_war_with = ROOT
+							# NOT = { is_neighbor_of = ROOT }
+						# }
+						# any_neighbor_country = {
+							# has_war_with = ROOT
+							# NOT = { is_neighbor_of = ROOT }
+						# }
+					# }
+				# }
+				# FROM = {
+					# NOT = {
+						# any_country = {
+							# NOT = { has_war_with = ROOT }
+							# has_guaranteed = PREV
+						# }
+					# }
+				# }
+			# }
+		# }
+		# target_trigger = {
+			# FROM = {
+				# is_ai = yes
+				# is_major = no
+				# exists = yes
+				# NOT = { has_idea = detached_country }
+				# is_neighbor_of = ROOT
+				# is_in_faction = no
+				# NOT = {
+					# has_war_with = ROOT
+					# is_subject_of = ROOT
+					# is_in_faction_with = ROOT
+					# has_war_together_with = ROOT
+					# gives_military_access_to = ROOT
+				# }
+			# }
+		# }
+		# war_with_target_on_remove = yes
+		# target_array = neighbors
+		# cost = 125
+		# days_remove = 30
+		# ai_will_do = {
+			# factor = 2
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# enemies_strength_ratio > 1.5
+					# strength_ratio = { tag = FROM ratio < 1 }
+				# }
+			# }
+		# }
+		# remove_effect = {
+			# log = "[GetDateText]: [Root.GetName]: Decision remove GRI_kill_blockers target: [From.GetName]"
+			# create_wargoal = { type = annex_everything target = FROM }
+		# }
+	# }
+	GRI_demand_land = {
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = GRI_empire_rising
+			is_subject = no
+			FROM = {
+				exists = yes
+				NOT = { original_tag = FAW }
+				NOT = { has_country_flag = GRI_demand_awaits_response }
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				OR = {
+					any_owned_state = {
+						is_core_of_griffon_empire_country = yes
+					}
+					any_of_scopes = {
+						array = subjects
+						any_owned_state = {
+							is_core_of_griffon_empire_country = yes
+						}
+					}
+				}
+			}
+		}
+		target_root_trigger = {
+			has_completed_focus = GRI_empire_rising
+			is_subject = no
+		}
+		target_array = allies
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				is_griffon_empire_country = no
+				OR = {
+					any_owned_state = {
+						is_core_of_griffon_empire_country = yes
+					}
+					any_of_scopes = {
+						array = subjects
+						any_owned_state = {
+							is_core_of_griffon_empire_country = yes
+						}
+					}
+				}
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					enemies_strength_ratio > 1.5
+					strength_ratio = { tag = FROM ratio < 1 }
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRI_demand_land target: [From.GetName]"
+			FROM = {
+				set_country_flag = { flag = GRI_demand_awaits_response value = 1 days = 30 }
+				country_event = { id = imperial.70 days = 1 }
+				custom_effect_tooltip = if_accepts
+				effect_tooltip = {
+					every_state = {
+						limit = {
+							is_core_of_griffon_empire_country = yes
+							owner = {
+								OR = {
+									tag = FROM
+									is_subject_of = FROM
+								}
+							}
+						}
+						ROOT = { transfer_state = PREV }
+					}
+				}
+			}
+		}
+	}
+}
+
+GRI_mandates = {
+	release_EQC = { # Reichsmandat Neustutenland
+
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			EQC = { exists = no }
+			owns_state = 356
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		available = {
+			EQC = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_EQC"
+			custom_effect_tooltip = release_EQC_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = EQC
+					transfer_state = 360
+					transfer_state = 361
+					transfer_state = 675
+					transfer_state = 676
+					transfer_state = 362
+					transfer_state = 363
+					transfer_state = 364
+					transfer_state = 365
+					transfer_state = 354
+					transfer_state = 355
+					transfer_state = 356
+					transfer_state = 357
+					transfer_state = 358
+					transfer_state = 359
+					set_capital = {
+						state = 356 # Sunset
+					}
+					unlock_hq = yes
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						pony_race
+						modern_society
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					add_ideas = EQC_economic_chaos_1
+					add_ideas = EQC_legal_chaos_1
+					every_possible_country = {
+						limit = {
+							has_character = EQC_elsa_von_schnabeltass
+						}
+						EQC_elsa_von_schnabeltass = {
+							set_nationality = PREV.PREV
+						}
+					}
+					every_possible_country = {
+						limit = {
+							has_character = EQC_willy_pferdefreund
+						}
+						EQC_willy_pferdefreund = {
+							set_nationality = PREV.PREV
+						}
+					}
+					every_possible_country = {
+						limit = {
+							has_character = EQC_werner_rotfluegel
+						}
+						EQC_werner_rotfluegel = {
+							set_nationality = PREV.PREV
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								OR = {
+									has_government = neutrality
+									has_government = fascism
+								}
+							}
+						}
+						set_party_name = {
+							ideology = neutrality
+							long_name = EQC_GRI_party_neutrality_long
+							name = EQC_GRI_party_neutrality
+						}
+						set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+						add_popularity = {
+							ideology = neutrality
+							popularity = 0.3
+						}
+						if = { # To avoid false positives in the error log
+							limit = {
+								has_character = EQC_elsa_von_schnabeltass
+							}
+							add_country_leader_role = {
+								character = EQC_elsa_von_schnabeltass
+								country_leader = {
+									desc = EQC_elsa_von_schnabeltass_desc
+									expire = "1965.1.1"
+									ideology = despotism
+									traits = { }
+								}
+								promote_leader = yes
+							}
+						}
+						set_cosmetic_tag = EQC_mandate
+						load_focus_tree = { tree = reichsmandat_neustutenland_neutrality keep_completed = yes }
+
+						ROOT = { country_event = EQC_reichsmandat.1 }
+					} else_if = {
+						limit = {
+							ROOT = {
+								has_government = democratic
+							}
+						}
+						set_party_name = {
+							ideology = democratic
+							long_name = EQC_GRI_party_harmony_long
+							name = EQC_GRI_party_harmony
+						}
+						set_politics = {
+							ruling_party = democratic
+							elections_allowed = no
+						}
+						add_popularity = {
+							ideology = democratic
+							popularity = 0.3
+						}
+						if = { # To avoid false positives in the error log
+							limit = {
+								has_character = EQC_willy_pferdefreund
+							}
+							add_country_leader_role = {
+								character = EQC_willy_pferdefreund
+								country_leader = {
+									desc = EQC_willy_pferdefreund_desc
+									expire = "1965.1.1"
+									ideology = conservatism
+									traits = { }
+								}
+								promote_leader = yes
+							}
+						}
+						set_cosmetic_tag = EQC_mandate
+						load_focus_tree = { tree = reichsmandat_neustutenland_harmony keep_completed = yes }
+
+						ROOT = { country_event = EQC_reichsmandat.5 }
+					} else_if = {
+						limit = {
+							ROOT = {
+								has_government = communism
+							}
+						}
+						set_party_name = {
+							ideology = communism
+							long_name = EQC_GRI_party_communism_long
+							name = EQC_GRI_party_communism
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+						add_popularity = {
+							ideology = communism
+							popularity = 0.3
+						}
+						if = { # To avoid false positives in the error log
+							limit = {
+								has_character = EQC_werner_rotfluegel
+							}
+							add_country_leader_role = {
+								character = EQC_werner_rotfluegel
+								country_leader = {
+									desc = EQC_werner_rotfluegel_desc
+									expire = "1965.1.1"
+									ideology = socialist_monarchism
+									traits = { }
+								}
+								promote_leader = yes
+							}
+						}
+						set_cosmetic_tag = EQC_mandate
+						load_focus_tree = { tree = reichsmandat_neustutenland_communism keep_completed = yes }
+
+						ROOT = { country_event = EQC_reichsmandat.10 }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	release_NCH = { # Greneclyf
+
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			NCH = { exists = no }
+			owns_state = 670
+		}
+
+		available = {
+			NCH = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_NCH"
+			custom_effect_tooltip = release_NCH_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = NCH
+					transfer_state = 668
+					transfer_state = 669
+					transfer_state = 670
+					set_capital = {
+						state = 670 # Greneclyf capital
+					}
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						changeling_race
+						modern_society
+					}
+					unlock_hq = yes
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					generate_character = {
+						token_base = NCH_puppet_leader
+						name = NCH_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = NCH_puppet_leader
+						}
+						set_portraits = {
+							character = NCH_puppet_leader
+							civilian = { large ="gfx/leaders/Asia/Unknown_Griffon.dds" }
+						}
+						add_country_leader_role = {
+							character = NCH_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = NCH_GRI_party_long
+						name = NCH_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.15
+					}
+					set_cosmetic_tag = NCH_mandate
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = no }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	release_FBK = { # Reichsmandat Hügelland
+
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			FBK = { exists = no }
+			FIR = { exists = no }
+			WAT = { exists = no }
+			owns_state = 642
+			owns_state = 454
+			owns_state = 455
+		}
+
+		available= {
+			FBK = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+			FIR = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+			WAT = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_FBK"
+			custom_effect_tooltip = release_FBK_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = FBK
+					# Ownership of these states is ensured by available condition
+					# FBK states
+					transfer_state = 603
+					603 = { add_core_of = PREV }
+					transfer_state = 455
+					455 = { add_core_of = PREV }
+					transfer_state = 571
+					571 = { add_core_of = PREV }
+					transfer_state = 572
+					572 = { add_core_of = PREV }
+					transfer_state = 569
+					569 = { add_core_of = PREV }
+					transfer_state = 639
+					639 = { add_core_of = PREV }
+					# WAT states
+					transfer_state = 640
+					640 = { add_core_of = PREV }
+					transfer_state = 643
+					643 = { add_core_of = PREV }
+					transfer_state = 642
+					642 = { add_core_of = PREV }
+					transfer_state = 641
+					641 = { add_core_of = PREV }
+					# FIR states
+					transfer_state = 636
+					636 = { add_core_of = PREV }
+					transfer_state = 478
+					478 = { add_core_of = PREV }
+					transfer_state = 650
+					650 = { add_core_of = PREV }
+					transfer_state = 454
+					454 = { add_core_of = PREV }
+					transfer_state = 604
+					604 = { add_core_of = PREV }
+					transfer_state = 644
+					644 = { add_core_of = PREV }
+					transfer_state = 453
+					453 = { add_core_of = PREV }
+					set_capital = {
+						state = 455
+					}
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						pony_race
+						modern_society
+					}
+					unlock_hq = yes
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					generate_character = {
+						token_base = FBK_puppet_leader
+						name = FBK_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = FBK_puppet_leader
+						}
+						set_portraits = {
+							character = FBK_puppet_leader
+							civilian = { large ="gfx/leaders/Asia/Unknown_Griffon.dds" }
+						}
+						add_country_leader_role = {
+							character = FBK_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = FBK_GRI_party_long
+						name = FBK_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					set_cosmetic_tag = FBK_mandate
+					load_focus_tree = generic_griffon_focus
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	release_RIV = { # Reichsmandat Flussland
+
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			OR = {
+				original_tag = CYA
+				NOT = {
+					has_country_leader = {
+						character = GRI_ferdinand_dawnclaw
+						ruling_only = yes
+					}
+				}
+			}
+			OR = {
+				# Controls at least one capital in Flussland region
+
+				# BRZ doesn't care about DMT, as it's not part of Flussland for them
+				if = {
+					limit = {
+						tag = BRZ
+					}
+					hidden_trigger = {
+						always = no
+					}
+				}
+				else = {
+					owns_state = 637 # Diamond Mountain capital
+				}
+				owns_state = 649 # Bakara capital
+				owns_state = 544 # Deponya capital
+				owns_state = 387 # Lake City capital
+				owns_state = 619 # River Republic capital
+				owns_state = 617 # Wittenland capital
+				owns_state = 645 # Nimbusia capital
+				owns_state = 580 # Ponaidhen capital
+			}
+		}
+
+		available = {
+			has_global_flag = GRI_empire_rising_flag
+			OR = {
+				original_tag = CYA
+				NOT = {
+					has_country_leader = {
+						character = GRI_ferdinand_dawnclaw
+						ruling_only = yes
+					}
+				}
+			}
+			OR = {
+				# Fully controls at least one Flussland state
+
+				# BRZ doesn't care about DMT, as it's not part of Flussland for them
+				if = {
+					limit = {
+						tag = BRZ
+					}
+					hidden_trigger = {
+						always = no
+					}
+				}
+				else = {
+					DMT = {
+						all_original_cores_owned_and_controlled_by_ROOT = yes
+					}
+				}
+				BAK = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				DEP = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				LCT = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				RCT = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				WIT = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				NIM = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				FRE = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_RIV"
+			custom_effect_tooltip = release_RIV_tt
+			hidden_effect = {
+
+				GRI_figure_out_reichsmandate_riverland_tag = yes
+
+				create_dynamic_country = {
+					# Use the original tag of a tag that is owned
+					original_tag = GRI_reichsmandate_riverland_tag
+
+					ROOT = { # Save the dynamic tag in ROOT
+						set_country_flag = GRI_has_reichsmandate_riverland
+						set_variable = { GRI_reichsmandate_riverland_tag = PREV }
+					}
+
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									is_core_of = RCT
+									is_core_of = NIM
+									is_core_of = BAK
+									is_core_of = FRE
+									is_core_of = DEP
+									is_core_of = WIT
+									is_core_of = LCT
+									is_core_of = DMT
+								}
+								# Some Riverland Nations might get cores on states of these tags,
+								# but the Empire should not cede states that it can integrate, therefore exclude
+								NOT = {
+									OR = {
+										is_core_of = LUS
+										is_core_of = GRY
+										is_core_of = HLQ
+										is_core_of = LNS
+										is_core_of = LSM
+										is_core_of = LSC
+										is_core_of = GRU
+										is_core_of = BRF
+										is_core_of = GRW
+										# Hügelland seperate
+										is_core_of = WAT
+										is_core_of = FBK
+										is_core_of = FIR
+										AND = {
+											is_core_of = DMT
+											ROOT = {
+												tag = BRZ
+											}
+										}
+									}
+								}
+							}
+							add_core_of = PREV.PREV # first prev: root, second prev: dyanamic rtc tag
+							transfer_state_to = PREV.PREV
+						}
+						unlock_hq = yes
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+
+					GRI_set_most_preferable_river_capital = yes
+
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						pony_race
+						modern_society
+					}
+
+					if = {
+						limit = {
+							NOT = {
+								has_government = communism
+							}
+						}
+						every_possible_country = {
+							limit = {
+								has_character = LSM_konrada_wavewing
+							}
+							LSM_konrada_wavewing = {
+								set_nationality = PREV.PREV
+							}
+						}
+					}
+
+					set_cosmetic_tag = RIV_mandate
+					load_focus_tree = generic_griffon_focus
+					retire_country_leader = yes
+
+					if = {
+						limit = {
+							ROOT = {
+								has_government = communism
+							}
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = communism
+							long_name = YAL_RCT_comm_party_long
+							name = YAL_RCT_comm_party
+						}
+						add_popularity = {
+							ideology = communism
+							popularity = 0.5
+						}
+						generate_character = {
+							token_base = RIV_mandate_comm_puppet_leader
+							name = RIV_mandate_comm_puppet_leader
+						}
+						if = {
+							limit = {
+								has_character = RIV_mandate_comm_puppet_leader
+							}
+							add_country_leader_role = {
+								character = RIV_mandate_comm_puppet_leader
+								country_leader = {
+									expire = "1965.1.1"
+									ideology = socialist_monarchism
+									traits = { }
+								}
+								promote_leader = yes
+							}
+						}
+					}
+					else = {
+						set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = neutrality
+							long_name = YAL_RCT_fasc_party_long
+							name = YAL_RCT_fasc_party
+						}
+						add_popularity = {
+							ideology = neutrality
+							popularity = 0.5
+						}
+
+						if = {
+							limit = {
+								has_character = LSM_konrada_wavewing
+							}
+							if = {
+								limit = {
+									NOT = {
+										LSM_konrada_wavewing = {
+											has_ideology_group = neutrality
+										}
+									}
+								}
+								add_country_leader_role = {
+									character = LSM_konrada_wavewing
+									promote_leader = yes
+									country_leader = {
+										ideology = holy_order_n
+										expire = "1965.1.1.1"
+										traits = { }
+									}
+								}
+							}
+							LSM_konrada_wavewing = {
+								promote_character = holy_order_n
+							}
+						}
+						else = { # Konrada dead - Fallback
+							generate_character = {
+								token_base = RIV_puppet_leader
+								name = RIV_puppet_leader
+							}
+							if = {
+								limit = {
+									has_character = RIV_puppet_leader
+								}
+								set_portraits = {
+									character = RIV_puppet_leader
+									civilian = { large ="gfx/leaders/Asia/Unknown_Griffon.dds" }
+								}
+								add_country_leader_role = {
+									character = RIV_puppet_leader
+									promote_leader = yes
+									country_leader = {
+										ideology = holy_order_n
+										expire = "1965.1.1.1"
+										traits = { }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	add_to_reichsmandate_RIV = {
+		icon = generic_form_nation
+
+		state_target = yes
+		target_array = owned_controlled_states
+
+		on_map_mode = map_and_decisions_view
+
+		target_root_trigger = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			has_country_flag = GRI_has_reichsmandate_riverland
+			NOT = {
+				has_country_leader = {
+					character = GRI_ferdinand_dawnclaw
+					ruling_only = yes
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+
+				if = {
+					limit = {
+						ROOT = {
+							tag = BRZ
+						}
+					}
+					NOT = { is_core_of = DMT }
+				}
+
+				OR = {
+					is_core_of = RCT
+					is_core_of = LCT
+					is_core_of = DMT
+					is_core_of = WIT
+					is_core_of = FRE
+					is_core_of = BAK
+					is_core_of = NIM
+					is_core_of = DEP
+				}
+
+				NOT = {
+					OR = {
+						is_core_of = LUS
+						is_core_of = GRY
+						is_core_of = HLQ
+						is_core_of = LNS
+						is_core_of = LSM
+						is_core_of = LSC
+						is_core_of = GRU
+						is_core_of = BRF
+						is_core_of = GRW
+						# Hügelland seperate
+						is_core_of = WAT
+						is_core_of = FBK
+						is_core_of = FIR
+						AND = {
+							is_core_of = DMT
+							ROOT = {
+								tag = BRZ
+							}
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GRI_transfer_from_to_flussland_tt
+			hidden_effect = {
+				FROM = {
+					add_core_of = ROOT.GRI_reichsmandate_riverland_tag
+					transfer_state_to = ROOT.GRI_reichsmandate_riverland_tag
+				}
+
+				if = {
+					limit = {
+						var:ROOT.GRI_reichsmandate_riverland_tag = {
+							NOT = {
+								is_subject_of = ROOT
+							}
+						}
+					}
+
+					ROOT = {
+						set_autonomy = {
+							target = var:ROOT.GRI_reichsmandate_riverland_tag
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	release_MIT = {
+
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			OR = {
+				AND = {
+					MIT = { exists = no }
+					owns_state = 386
+				}
+				AND = {
+					has_subject = MIT
+					NOT = { has_country_flag = GRI_released_MIT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		available = {
+			OR = {
+				MIT = {
+					all_original_cores_owned_and_controlled_by_ROOT = yes
+				}
+				has_subject = MIT
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_MIT"
+			custom_effect_tooltip = GRI_release_MIT_tp
+
+			if = {
+				limit = {
+					has_subject = MIT
+				}
+				annex_country = {
+					target = MIT
+					transfer_troops = no
+				}
+			}
+
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = MIT
+					transfer_state = 386
+					transfer_state = 462
+					transfer_state = 463
+					transfer_state = 464
+					transfer_state = 465
+					transfer_state = 466
+					transfer_state = 467
+					transfer_state = 468
+					transfer_state = 469
+					transfer_state = 513
+					transfer_state = 654
+					transfer_state = 655
+					transfer_state = 656
+					transfer_state = 657
+					transfer_state = 664
+					transfer_state = 667
+
+					set_capital = {
+						state = 386
+					}
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						minotaur_race
+						modern_society
+					}
+
+					unlock_hq = yes
+
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+
+					generate_character = {
+						token_base = MIT_puppet_leader
+						name = MIT_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = MIT_puppet_leader
+						}
+						set_portraits = {
+							character = MIT_puppet_leader
+							civilian = { large ="gfx/leaders/MIT/agamemnon_iv.tga" }
+						}
+						add_country_leader_role = {
+							character = MIT_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+								traits={ unpopular_monarch }
+								desc = MIT_puppet_leader_desc
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = MIT_GRI_party_long
+						name = MIT_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.15
+					}
+					set_cosmetic_tag = MIT_kingdom
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = no }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	release_NTR = {
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			NTR = { exists = no }
+			owns_state = 562
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		available = {
+			NTR = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_NTR"
+			custom_effect_tooltip = GRI_release_NTR_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = NTR
+
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								is_in_array = { state_original_cores = NTR }
+								NOT = { is_core_of = SRS }
+								NOT = { is_core_of = MNC }
+							}
+							transfer_state_to = PREV.PREV
+						}
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					set_capital = {
+						state = 562
+					}
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						pony_race
+						modern_society
+					}
+					unlock_hq = yes
+
+					generate_character = {
+						token_base = NTR_puppet_leader
+						name = NTR_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = NTR_puppet_leader
+						}
+						set_portraits = {
+							character = NTR_puppet_leader
+							civilian = { large ="gfx/leaders/Pony/unknown_pony.dds" }
+						}
+						add_country_leader_role = {
+							character = NTR_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+								traits={ }
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = NTR_GRI_party_long
+						name = NTR_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.15
+					}
+					set_cosmetic_tag = NTR_mandate
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = no }
+				}
+			}
+		}
+	}
+	release_HLR_mandate = {
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			HLR = { exists = no }
+			DED = { exists = no }
+			owns_state = 425
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		available = {
+			HLR = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+			DED = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_HLR"
+			custom_effect_tooltip = GRI_release_HLR_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = HLR
+
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									is_core_of = HLR
+									is_core_of = DED
+									# DED can loose its cores, spell out explicitly
+									state = 420 # Passage
+									state = 419 # Neyhorn
+									state = 418 # Marshes of the Dead
+									state = 417 # Last Hope
+									state = 416 # Darkest Forest
+									state = 415 # Magehold
+								}
+							}
+							add_core_of = PREV.PREV
+							transfer_state_to = PREV.PREV
+						}
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					unlock_hq = yes
+					set_capital = {
+						state = 425
+					}
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						griffon_race
+						modern_society
+					}
+
+					generate_character = {
+						token_base = HLR_puppet_leader
+						name = HLR_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = HLR_puppet_leader
+						}
+						set_portraits = {
+							character = HLR_puppet_leader
+							civilian = { large ="gfx/leaders/Asia/Unknown_Griffon.dds" }
+						}
+						add_country_leader_role = {
+							character = HLR_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+								traits={ }
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = HLR_GRI_party_long
+						name = HLR_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.15
+					}
+					set_cosmetic_tag = HLR_mandate
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = no }
+				}
+			}
+		}
+	}
+	release_ZES_mandate = {
+		icon = generic_form_nation
+
+		visible = {
+			GRI_has_access_to_reichsmandates = yes
+			is_subject = no
+			has_global_flag = GRI_empire_rising_flag
+			ZES = { exists = no }
+			OLV = { exists = no }
+			BAR = { exists = no }
+			owns_state = 413
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		available = {
+			ZES = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+			OLV = {
+				all_original_cores_owned_and_controlled_by_ROOT = yes
+			}
+			if = { # Tooltip
+				limit = {
+					624 = { NOT = { is_core_of = WIT } }
+					626 = { NOT = { is_core_of = WIT } }
+					625 = { NOT = { is_core_of = WIT } }
+				}
+				if = {
+					limit = {
+						624 = { is_core_of = BAR }
+						625 = { is_core_of = BAR }
+						626 = { is_core_of = BAR }
+					}
+					BAR = {
+						all_original_cores_owned_and_controlled_by_ROOT = yes
+					}
+				}
+				else = {
+					owns_state = 624
+					owns_state = 625
+					owns_state = 626
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision release_HLR"
+			custom_effect_tooltip = GRI_release_ZES_tp
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = ZES
+
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									is_in_array = { state_original_cores = ZES }
+									is_in_array = { state_original_cores = OLV }
+								}
+							}
+							add_core_of = PREV.PREV
+							transfer_state_to = PREV.PREV
+						}
+					}
+					if = {
+						limit = {
+							624 = {
+								NOT = { is_core_of = WIT }
+								is_owned_by = ROOT
+							}
+						}
+						624 = {
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+					}
+					if = {
+						limit = {
+							625 = {
+								NOT = { is_core_of = WIT }
+								is_owned_by = ROOT
+							}
+						}
+						625 = {
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+					}
+					if = {
+						limit = {
+							626 = {
+								NOT = { is_core_of = WIT }
+								is_owned_by = ROOT
+							}
+						}
+						626 = {
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+					}
+
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_imperial_mandate
+						}
+					}
+					set_capital = {
+						state = 413
+					}
+					unlock_hq = yes
+					add_ideas = {
+						proper_science_base
+						no_lack_of_scientists
+						no_poverty
+						zebra_race
+						modern_society
+					}
+
+					generate_character = {
+						token_base = ZES_puppet_leader
+						name = ZES_puppet_leader
+					}
+					if = {
+						limit = {
+							has_character = ZES_puppet_leader
+						}
+						set_portraits = {
+							character = ZES_puppet_leader
+							civilian = { large ="gfx/leaders/Asia/Unknown_Griffon.dds" }
+						}
+						add_country_leader_role = {
+							character = ZES_puppet_leader
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+								traits={ }
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = ZES_GRI_party_long
+						name = ZES_GRI_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.15
+					}
+					if = {
+						limit = {
+							ROOT = {
+								has_country_leader = {
+									character = BRZ_barker_steelpaw
+									ruling_only = yes
+								}
+							}
+						}
+						set_cosmetic_tag = ZES_mandate_steelpaw
+					}
+					else = {
+						set_cosmetic_tag = ZES_mandate
+					}
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = no }
+				}
+			}
+		}
+	}
+}
+
+GRI_attache_decisions = {
+    GRI_propose_military_exchange_program = {
+		icon = ger_reichskommissariats
+		available = {
+		    NOT = {
+			    has_country_flag = GRI_proposal_denied
+			}
+		}
+		visible = {
+			has_completed_focus = GRI_further_cooperation
+			has_idea = CHN_GRI_Attache_For_GRI
+			NOT = {
+			    has_country_flag = GRI_proposal_accepted
+			}
+			NOT = {
+			    has_war_with = CHN
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 180
+		days_remove = 7
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_propose_military_exchange_program"
+			CHN = {
+		        country_event = {
+			        id = imperial.117
+			    }
+		    }
+		}
+	}
+
+	GRI_knight_jager_program = {
+		icon = generic_army_support
+		available = {
+			hidden_trigger = { command_power > 29 }
+			NOT = {
+			    has_country_flag = GRI_program_ongoing
+			}
+		}
+		visible = {
+			has_idea = CHN_GRI_Attache_For_GRI
+			has_country_flag = GRI_proposal_accepted
+			NOT = {
+			    has_war_with = CHN
+			}
+			NOT = {
+			    has_idea = GRI_knight_boost
+			}
+		}
+
+		custom_cost_trigger = {
+			check_variable = { var = command_power value = 30 compare = greater_than_or_equals }
+			has_political_power > 24
+		}
+		ai_hint_pp_cost = 25
+		custom_cost_text = decision_cost_CP_30_pp_25
+
+		days_remove = 90
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 10
+		}
+
+        modifier = {
+		    command_power_gain = -0.20
+			experience_gain_army = -0.02
+			political_power_gain = -0.10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRI_knight_jager_program"
+			hidden_effect = {
+				add_command_power = -30
+			    add_political_power = -25
+				set_country_flag = GRI_program_ongoing
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_knight_jager_program"
+		    add_ideas = GRI_knight_boost
+			CHN = {
+		        country_event = {
+			        id = imperial.120
+			    }
+		    }
+			hidden_effect = {
+			    clr_country_flag = GRI_program_ongoing
+			}
+		}
+	}
+
+	GRI_tactics_integration = {
+		icon = generic_operation
+		available = {
+			hidden_trigger = { command_power > 29 }
+			NOT = {
+			    has_country_flag = GRI_program_ongoing
+			}
+		}
+		visible = {
+			has_idea = CHN_GRI_Attache_For_GRI
+			has_country_flag = GRI_proposal_accepted
+			NOT = {
+			    has_war_with = CHN
+			}
+			NOT = {
+			    has_idea = GRI_infiltration_boost
+				has_idea = GRI_infiltration_boost_lar
+			}
+		}
+
+		custom_cost_trigger = {
+			check_variable = { var = command_power value = 30 compare = greater_than_or_equals }
+			has_political_power > 24
+		}
+		ai_hint_pp_cost = 25
+		custom_cost_text = decision_cost_CP_30_pp_25
+
+		days_remove = 90
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 10
+		}
+
+        modifier = {
+		    command_power_gain = -0.20
+			experience_gain_army = -0.02
+			political_power_gain = -0.10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRI_tactics_integration"
+			hidden_effect = {
+				add_command_power = -30
+			    add_political_power = -25
+				set_country_flag = GRI_program_ongoing
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_tactics_integration"
+		    if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_ideas = GRI_infiltration_boost_lar
+			}
+			else = {
+				add_ideas = GRI_infiltration_boost
+			}
+			CHN = {
+		        country_event = {
+			        id = imperial.121
+			    }
+		    }
+			hidden_effect = {
+			    clr_country_flag = GRI_program_ongoing
+			}
+		}
+	}
+}
+foreign_politics = {
+	GRI_demand_frontier = {
+		icon = rifles
+		allowed = {
+			OR = {
+				original_tag = GRI
+				original_tag = PYT
+				original_tag = ANG
+				original_tag = ROU
+				original_tag = FEA
+				original_tag = KAT
+				original_tag = BRZ
+				original_tag = YAL
+				original_tag = STW
+				original_tag = FAT
+				original_tag = FAW
+			}
+		}
+		available = {
+			is_subject = no
+			has_war = no
+		}
+		cost = 75
+		fire_only_once = yes
+		visible = {
+			has_country_flag = griffon_can_demand_east_frontier
+			FROM = {
+				exists = yes
+				is_neighbor_of = ROOT
+				is_griffon_continent_griffon_country = no
+				NOT = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+					original_tag = GRI
+				}
+				custom_trigger_tooltip = {
+					tooltip = owns_frontier_states_tooltip
+					hidden_trigger = {
+						any_owned_state = {
+							OR = {
+								is_core_of = HLQ
+								is_core_of = LNS
+								is_core_of = LSC
+								is_core_of = LSM
+								is_core_of = GRW
+								is_core_of = BRF
+								is_core_of = GRU
+								is_core_of = GRY
+								is_core_of = LUS
+							}
+						}
+					}
+				}
+			}
+		}
+		target_root_trigger = { has_country_flag = griffon_can_demand_east_frontier }
+		target_array = neighbors
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_griffon_continent_griffon_country = no
+				NOT = { original_tag = GRI }
+			}
+		}
+		days_remove = 30
+		war_with_target_on_remove = yes
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				has_war = yes
+				FROM = {
+					OR = {
+						exists = no
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		ai_will_do = { base = 120 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_demand_frontier target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
+			FROM = {
+				country_event = imperial.149
+			}
+		}
+
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
+	}
+	GRI_offer_peace = {
+		icon = griffon
+		cost = 25
+		allowed = {
+			OR = {
+				original_tag = GRI
+				original_tag = PYT
+				original_tag = ANG
+				original_tag = ROU
+				original_tag = FEA
+				original_tag = KAT
+				original_tag = BRZ
+				original_tag = YAL
+				original_tag = STW
+				original_tag = FAT
+				original_tag = FAW
+			}
+		}
+		days_remove = 30
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 180
+			modifier = {
+				factor = 0.5
+				has_government = fascism
+			}
+		}
+
+		target_array = enemies
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				is_griffon_continent_griffon_country = no
+			}
+		}
+		available = {
+			is_subject = no
+			FROM = {
+				surrender_progress > 0.2
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = { has_war_with = FROM }
+				is_subject = yes
+			}
+		}
+		target_root_trigger = { has_country_flag = griffon_can_demand_east_frontier }
+		visible = {
+			has_war_with = FROM
+			has_country_flag = griffon_can_demand_east_frontier
+			FROM = {
+				exists = yes
+				is_griffon_continent_griffon_country = no
+				custom_trigger_tooltip = {
+				tooltip = owns_frontier_states_tooltip
+					hidden_trigger = {
+						any_owned_state = {
+							OR = {
+								is_core_of = HLQ
+								is_core_of = LNS
+								is_core_of = LSC
+								is_core_of = LSM
+								is_core_of = GRW
+								is_core_of = BRF
+								is_core_of = GRU
+								is_core_of = GRY
+								is_core_of = LUS
+							}
+						}
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_offer_peace target: [From.GetName]"
+			add_stability = 0.05
+			add_war_support = -0.05
+			FROM = { country_event = imperial.152 }
+		}
+	}
+
+	GRI_intergrate_bronzehill = {
+		icon = generic_form_nation
+
+		targets = { BRZ }
+		targets_dynamic = yes
+
+		target_trigger = {
+			FROM = {
+				is_ai = yes
+				original_tag = BRZ
+			}
+		}
+
+		allowed = {
+			OR = {
+				original_tag = GRI
+				original_tag = YAL
+			}
+		}
+
+		cost = 200
+
+		ai_will_do = {
+			base = 20
+
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+
+			modifier = {
+				factor = 3
+				has_completed_focus = GRI_core_the_north
+			}
+		}
+
+		target_root_trigger = { is_subject = no }
+
+		visible = {
+			if = {
+				limit = { original_tag = GRI }
+				OR = {
+					has_completed_focus = GRI_unite_nobles
+					has_completed_focus = GRI_reward_loyalty
+				}
+			}
+			else = { has_completed_focus = YAL_loyal_dogs }
+
+			is_subject = no
+
+			FROM = {
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRI_intergrate_bronzehill target: [From.GetName]"
+
+			FROM = {
+				every_character = {
+					limit = {
+						is_unit_leader = yes
+						is_country_leader = no
+					}
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = ROOT
+				}
+			}
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+	}
+}

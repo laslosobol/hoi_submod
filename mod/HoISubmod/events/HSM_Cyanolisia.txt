@@ -43,9 +43,16 @@ country_event = {
 			slot = political_advisor
 			value = no
 		}
-		add_political_power = -25
-		add_to_variable = { HSM_CYA_decryption_factor = 0.02 }
-		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.02 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_decryption_factor = 0.02
+			tooltip = decryption_factor_tt
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.02
+			tooltip = drift_defence_factor_tt
+		}
 		hidden_effect = {
 			GRI = { set_country_flag = HSM_GRI_dawnclaw_hidden_in_cyanolisia }
 			load_focus_tree = {
@@ -208,6 +215,10 @@ country_event = {
 		clr_country_flag = HSM_CYA_dawnclaw_assassination_launched
 		set_country_flag = HSM_CYA_dawnclaw_dead
 		set_country_flag = HSM_CYA_path_imperial_administration
+		if = {
+			limit = { has_cosmetic_tag = HSM_CYA_DIRECTORATE }
+			set_cosmetic_tag = CYA
+		}
 		remove_ideas = HSM_CYA_unlikely_marriage
 		remove_ideas = HSM_CYA_dawnclaw_dominant_court
 		remove_ideas = HSM_CYA_countess_dominant_court
@@ -528,8 +539,15 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.33.b
 		set_country_flag = HSM_CYA_frontier_loyalty_primers
-		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.02 }
-		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.03 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.02
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.03
+			tooltip = drift_defence_factor_tt
+		}
 	}
 }
 
@@ -574,8 +592,15 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.35.b
 		set_country_flag = HSM_CYA_frontier_paper_tribunals
-		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
-		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.01 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.02
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.01
+			tooltip = stability_factor_tt
+		}
 	}
 }
 
@@ -597,9 +622,19 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.36.b
 		set_country_flag = HSM_CYA_hostage_officer_bonds
-		add_to_variable = { HSM_CYA_army_org_factor = 0.03 }
-		add_to_variable = { HSM_CYA_planning_speed = 0.03 }
-		add_to_variable = { HSM_CYA_command_power_gain_mult = 0.03 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_army_org_factor = 0.03
+			tooltip = army_org_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_planning_speed = 0.03
+			tooltip = planning_speed_tt
+		}
+		add_to_variable = {
+			HSM_CYA_command_power_gain_mult = 0.03
+			tooltip = command_power_gain_mult_tt
+		}
 	}
 }
 
@@ -632,13 +667,15 @@ country_event = {
 	id = hsm_cyanolisia.40
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.40" }
 	title = hsm_cyanolisia.40.t
-	desc = hsm_cyanolisia.40.d
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } } text = hsm_cyanolisia.40.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } text = hsm_cyanolisia.40.adult.d }
 	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
 	option = {
 		name = hsm_cyanolisia.40.a
 		set_country_flag = HSM_CYA_1021_crown_in_trust
+		remove_ideas = GRI_grover_vi
 		if = {
 			limit = { has_idea = HSM_CYA_grover_regency }
 			swap_ideas = { remove_idea = HSM_CYA_grover_regency add_idea = HSM_CYA_crown_in_trust_idea }
@@ -647,23 +684,23 @@ country_event = {
 			limit = { NOT = { has_idea = HSM_CYA_crown_in_trust_idea } }
 			add_ideas = HSM_CYA_crown_in_trust_idea
 		}
-		retire_country_leader = yes
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { set_nationality = ROOT }
 		}
-		GRI_emperor_grover_vi = {
-			set_portraits = {
-				civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
-			}
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					desc = "grover_vi_desc"
-					expire = "1965.1.1"
-					ideology = constitutional_monarchism
-					traits = {  }
-				}
+		set_portraits = {
+			character = GRI_emperor_grover_vi
+			civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
+		}
+		add_country_leader_role = {
+			character = GRI_emperor_grover_vi
+			promote_leader = yes
+			country_leader = {
+				desc = "grover_vi_desc"
+				expire = "1965.1.1"
+				ideology = constitutional_monarchism
+				traits = { }
 			}
 		}
 		if = {
@@ -698,15 +735,26 @@ country_event = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { retire = yes }
 		}
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_war_support_factor = 0.04
+			tooltip = war_support_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.03
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_liability_file }
 			add_war_support = 0.02
-			hidden_effect = { add_to_variable = { HSM_CYA_imperial_war_support_factor = 0.03 } }
+			add_to_variable = {
+				HSM_CYA_imperial_war_support_factor = 0.03
+				tooltip = war_support_factor_tt
+			}
 		}
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -716,7 +764,8 @@ country_event = {
 	id = hsm_cyanolisia.42
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.42" }
 	title = hsm_cyanolisia.42.t
-	desc = hsm_cyanolisia.42.d
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } } text = hsm_cyanolisia.42.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } text = hsm_cyanolisia.42.adult.d }
 	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
@@ -728,16 +777,28 @@ country_event = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { set_nationality = ROOT }
 		}
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.05
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.05
+			tooltip = drift_defence_factor_tt
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_puppet_education_file }
-			hidden_effect = {
-				add_to_variable = { HSM_CYA_imperial_stability_factor = 0.02 }
-				add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.02 }
+			add_to_variable = {
+				HSM_CYA_imperial_stability_factor = 0.02
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				HSM_CYA_imperial_political_power_factor = 0.02
+				tooltip = political_power_factor_tt
 			}
 		}
 		mark_focus_tree_layout_dirty = yes
@@ -748,52 +809,76 @@ country_event = {
 	id = hsm_cyanolisia.43
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.43" }
 	title = hsm_cyanolisia.43.t
-	desc = hsm_cyanolisia.43.d
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } } text = hsm_cyanolisia.43.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_grover_reigned_elsewhere } text = hsm_cyanolisia.43.adult.d }
 	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
 	option = {
 		name = hsm_cyanolisia.43.a
 		set_country_flag = HSM_CYA_1021_grover_restored
-		retire_country_leader = yes
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		remove_ideas = GRI_grover_vi
 		every_possible_country = {
 			limit = { has_character = GRI_emperor_grover_vi }
 			GRI_emperor_grover_vi = { set_nationality = ROOT }
 		}
-		GRI_emperor_grover_vi = {
-			set_portraits = {
-				civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
-			}
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					desc = "grover_vi_desc"
-					expire = "1965.1.1"
-					ideology = despotism
-					traits = {  }
-				}
+		set_portraits = {
+			character = GRI_emperor_grover_vi
+			civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" }
+		}
+		add_country_leader_role = {
+			character = GRI_emperor_grover_vi
+			promote_leader = yes
+			country_leader = {
+				desc = "grover_vi_desc"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = { }
 			}
 		}
-		hidden_effect = {
-			add_to_variable = { HSM_CYA_imperial_stability_factor = 0.06 }
-			add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 }
-			add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.06 }
-			add_to_variable = { HSM_CYA_consumer_goods_factor = -0.01 }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.06
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.06
+			tooltip = drift_defence_factor_tt
+		}
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_consumer_goods_factor = -0.01
+			tooltip = consumer_goods_factor_tt
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
-			hidden_effect = { add_to_variable = { HSM_CYA_imperial_stability_factor = 0.03 } }
+			add_to_variable = {
+				HSM_CYA_imperial_stability_factor = 0.03
+				tooltip = stability_factor_tt
+			}
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
-			hidden_effect = { add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 } }
+			add_to_variable = {
+				HSM_CYA_imperial_political_power_factor = 0.03
+				tooltip = political_power_factor_tt
+			}
 		}
 		if = {
 			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
-			hidden_effect = {
-				add_to_variable = { HSM_CYA_army_core_defence_factor = 0.02 }
-				add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 }
+			custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+			add_to_variable = {
+				HSM_CYA_army_core_defence_factor = 0.02
+				tooltip = army_core_defence_factor_tt
+			}
+			add_to_variable = {
+				HSM_CYA_supply_consumption_factor = -0.02
+				tooltip = supply_consumption_factor_tt
 			}
 		}
 		mark_focus_tree_layout_dirty = yes
@@ -810,5 +895,124 @@ country_event = {
 
 	option = {
 		name = hsm_cyanolisia.44.a
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.45" }
+	title = hsm_cyanolisia.45.t
+	desc = hsm_cyanolisia.45.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.45.a
+		set_country_flag = HSM_CYA_1021_empty_throne
+		remove_ideas = GRI_grover_vi
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.03
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_drift_defence_factor = 0.04
+			tooltip = drift_defence_factor_tt
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.46" }
+	title = hsm_cyanolisia.46.t
+	desc = hsm_cyanolisia.46.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.46.a
+		set_country_flag = HSM_CYA_1021_memorial_regency
+		remove_ideas = GRI_grover_vi
+		remove_ideas = HSM_CYA_grover_regency
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = {
+			HSM_CYA_imperial_stability_factor = 0.04
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			HSM_CYA_imperial_political_power_factor = 0.04
+			tooltip = political_power_factor_tt
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.47" }
+	title = hsm_cyanolisia.47.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.47.countess.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant } text = hsm_cyanolisia.47.dawnclaw.d }
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	option = {
+		name = hsm_cyanolisia.47.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.48" }
+	title = hsm_cyanolisia.48.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.48.countess.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant } text = hsm_cyanolisia.48.dawnclaw.d }
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	option = {
+		name = hsm_cyanolisia.48.a
+		add_command_power = 25
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.49" }
+	title = hsm_cyanolisia.49.t
+	desc = hsm_cyanolisia.49.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	option = {
+		name = hsm_cyanolisia.49.a
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.50" }
+	title = hsm_cyanolisia.50.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.50.countess.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant } text = hsm_cyanolisia.50.dawnclaw.d }
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	option = {
+		name = hsm_cyanolisia.50.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hsm_cyanolisia.51" }
+	title = hsm_cyanolisia.51.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.51.countess.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant } text = hsm_cyanolisia.51.dawnclaw.d }
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	option = {
+		name = hsm_cyanolisia.51.a
+		add_command_power = 25
 	}
 }
