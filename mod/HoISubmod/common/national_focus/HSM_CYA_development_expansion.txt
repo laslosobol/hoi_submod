@@ -1,0 +1,512 @@
+shared_focus = {
+	id = HSM_CYA_quartermaster_service
+	icon = GFX_goal_JER_mobile_logistics_corps
+	prerequisite = { focus = HSM_CYA_frontier_supply_corps }
+	x = -3
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 15
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 150 producer = CYA }
+		add_equipment_to_stockpile = { type = support_equipment amount = 125 producer = CYA }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_railway_battalions
+	icon = GFX_goal_JER_permenant_transport_ties
+	prerequisite = { focus = HSM_CYA_frontier_supply_corps }
+	x = -1
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 producer = CYA }
+		if = { limit = { controls_state = 671 controls_state = 510 controls_state = 511 } build_railway = { level = 3 start_state = 671 target_state = 511 build_only_on_allied = yes } }
+		if = { limit = { controls_state = 511 } 511 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		if = { limit = { controls_state = 671 } 671 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_signal_companies
+	icon = GFX_goal_radio
+	prerequisite = { focus = HSM_CYA_combined_arms_school }
+	x = 3
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 20
+		add_equipment_to_stockpile = { type = support_equipment amount = 175 producer = CYA }
+		add_tech_bonus = { name = cya_signals_bonus bonus = 0.5 uses = 1 category = support_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_field_hospitals
+	icon = GFX_goal_generic_hospitals
+	prerequisite = { focus = HSM_CYA_combined_arms_school }
+	x = 5
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 15
+		add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = CYA }
+		add_tech_bonus = { name = cya_hospitals_bonus bonus = 0.5 uses = 1 category = support_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_frontier_artillery
+	icon = GFX_goal_artillery
+	prerequisite = { focus = HSM_CYA_joint_general_staff }
+	x = -3
+	y = 6
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 20
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 200 producer = CYA }
+		add_tech_bonus = { name = cya_artillery_bonus bonus = 0.5 uses = 1 category = artillery }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_engineer_brigades
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = HSM_CYA_joint_general_staff }
+	x = -1
+	y = 6
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 15
+		add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = CYA }
+		if = { limit = { controls_state = 511 } 511 = { add_building_construction = { type = bunker level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_aerial_reconnaissance
+	icon = GFX_goal_generic_air_fighter
+	prerequisite = { focus = HSM_CYA_joint_general_staff }
+	x = 4
+	y = 6
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		air_experience = 30
+		army_experience = 10
+		if = { limit = { controls_state = 511 } 511 = { add_building_construction = { type = air_base level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_motorised_reserves
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = HSM_CYA_joint_general_staff }
+	x = 6
+	y = 6
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 25
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 300 producer = CYA }
+		add_tech_bonus = { name = cya_mobile_bonus bonus = 0.5 uses = 1 category = motorized_equipment }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_crown_military_colleges
+	icon = GFX_goal_GRI_feath_cadet_school
+	prerequisite = { focus = HSM_CYA_crown_field_staff }
+	x = 2
+	y = 7
+	cost = 5
+	ai_will_do = { factor = 10 }
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant }
+	completion_reward = {
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_experience_gain_army_factor = 0.10 tooltip = experience_gain_army_factor_tt }
+		army_experience = 25
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_dawnclaw_war_college
+	icon = GFX_goal_GRI_army_expansion
+	prerequisite = { focus = HSM_CYA_dawnclaw_operational_staff }
+	x = 4
+	y = 9
+	cost = 5
+	ai_will_do = { factor = 10 }
+	allow_branch = { has_country_flag = HSM_CYA_dawnclaw_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	completion_reward = {
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_max_planning_factor = 0.07 tooltip = max_planning_factor_tt }
+		army_experience = 25
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_imperial_officer_exchange
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = HSM_CYA_griffonian_armament_standard }
+	x = -2
+	y = 11
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+		army_experience = 35
+		add_command_power = 25
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_continental_ordnance
+	icon = GFX_goal_Arms_Export
+	prerequisite = { focus = HSM_CYA_griffonian_armament_standard }
+	x = 4
+	y = 11
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1200 producer = CYA }
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = CYA }
+		if = { limit = { controls_state = 382 } 382 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_port_customs_houses
+	icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = { focus = HSM_CYA_port_foundries }
+	x = 10
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		add_political_power = 75
+		if = { limit = { controls_state = 510 } 510 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_coastal_quarries
+	icon = GFX_focus_generic_steel
+	prerequisite = { focus = HSM_CYA_port_foundries }
+	x = 8
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 511 } add_resource = { type = steel amount = 8 state = 511 } }
+		if = { limit = { controls_state = 511 } 511 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_electrify_the_workshops
+	icon = GFX_goal_factory_complex
+	prerequisite = { focus = HSM_CYA_arsenal_network }
+	x = 14
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 671 } 671 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+		add_tech_bonus = { name = cya_electrification_bonus bonus = 0.5 uses = 1 category = electronics }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_apprenticeship_halls
+	icon = GFX_focus_research
+	prerequisite = { focus = HSM_CYA_arsenal_network }
+	x = 16
+	y = 3
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { has_illiteracy = yes } decrease_illiteracy = yes }
+		if = { limit = { has_outdated_industry = yes } increase_society_development = yes }
+		add_tech_bonus = { name = cya_apprenticeship_bonus bonus = 0.5 uses = 1 category = industry }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_rural_cooperatives
+	icon = GFX_goal_agricultural_aid
+	prerequisite = { focus = HSM_CYA_national_development_plan }
+	x = 8
+	y = 7
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { has_poverty = yes } decrease_poverty = yes }
+		if = { limit = { controls_state = 511 } 511 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_industrial_standards_board
+	icon = GFX_goal_economic_control
+	prerequisite = { focus = HSM_CYA_national_development_plan }
+	x = 16
+	y = 7
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		add_tech_bonus = { name = cya_standards_bonus bonus = 0.5 uses = 2 category = industry }
+		if = { limit = { has_country_flag = HSM_CYA_dynamic_modifiers_installed } custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt } add_to_variable = { HSM_CYA_industrial_capacity_factory = 0.04 tooltip = industrial_capacity_factory_tt } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_crown_municipal_loans
+	icon = GFX_goal_endless_money
+	prerequisite = { focus = HSM_CYA_crown_credit_authority }
+	x = 10
+	y = 6
+	cost = 4
+	ai_will_do = { factor = 10 }
+	allow_branch = { has_country_flag = HSM_CYA_countess_dominant }
+	completion_reward = {
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.08 tooltip = production_speed_infrastructure_factor_tt }
+		if = { limit = { controls_state = 510 } 510 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_dawnclaw_factory_contracts
+	icon = GFX_goal_artillery_factories
+	prerequisite = { focus = HSM_CYA_dawnclaw_procurement_office }
+	x = 10
+	y = 7
+	cost = 4
+	ai_will_do = { factor = 10 }
+	allow_branch = { has_country_flag = HSM_CYA_dawnclaw_dominant NOT = { has_country_flag = HSM_CYA_dawnclaw_dead } }
+	completion_reward = {
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+		if = { limit = { controls_state = 671 } 671 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_griffenheim_rail_hub
+	icon = GFX_goal_som_railway
+	prerequisite = { focus = HSM_CYA_imperial_supply_grid }
+	x = 10
+	y = 9
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 382 controls_state = 671 } build_railway = { level = 3 start_state = 671 target_state = 382 build_only_on_allied = yes } }
+		if = { limit = { controls_state = 382 } 382 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_herzland_industrial_survey
+	icon = GFX_All_resource
+	prerequisite = { focus = HSM_CYA_imperial_supply_grid }
+	x = 14
+	y = 9
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 382 } add_resource = { type = steel amount = 12 state = 382 } }
+		if = { limit = { controls_state = 382 } 382 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_evi_freight_corridor
+	icon = GFX_goal_cry_railway
+	prerequisite = { focus = HSM_CYA_griffenheim_rail_hub }
+	x = 10
+	y = 10
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 508 } 508 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } } }
+		if = { limit = { controls_state = 598 } 598 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } } }
+		if = { limit = { controls_state = 382 controls_state = 508 } build_railway = { level = 2 start_state = 382 target_state = 508 build_only_on_allied = yes } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_imperial_research_exchange
+	icon = GFX_goal_double_research
+	prerequisite = { focus = HSM_CYA_herzland_industrial_survey }
+	x = 14
+	y = 10
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { amount_research_slots < 6 } add_research_slot = 1 }
+		add_tech_bonus = { name = cya_imperial_research_bonus bonus = 0.5 uses = 2 category = industry }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_convoy_escorts
+	icon = GFX_goal_generic_coastal_navy
+	prerequisite = { focus = HSM_CYA_coastal_patrols }
+	x = 20
+	y = 2
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		navy_experience = 25
+		add_tech_bonus = { name = cya_escort_bonus bonus = 0.5 uses = 1 category = dd_tech }
+		if = { limit = { controls_state = 671 } 671 = { add_building_construction = { type = naval_base level = 1 instant_build = yes province = 7342 } } }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_naval_signals_school
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	prerequisite = { focus = HSM_CYA_coastal_patrols }
+	x = 22
+	y = 2
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		navy_experience = 20
+		add_tech_bonus = { name = cya_naval_signals_bonus bonus = 0.5 uses = 1 category = naval_equipment }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_CYA_seaplane_stations
+	icon = GFX_goal_generic_air_fighter2
+	prerequisite = { focus = HSM_CYA_naval_air_school }
+	x = 25
+	y = 2
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		air_experience = 25
+		if = { limit = { controls_state = 510 } 510 = { add_building_construction = { type = air_base level = 2 instant_build = yes } } }
+		if = { limit = { controls_state = 507 } 507 = { add_building_construction = { type = radar_station level = 1 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_marine_training_ground
+	icon = GFX_goal_generic_amphibious_assault
+	prerequisite = { focus = HSM_CYA_seaborne_corps }
+	x = 28
+	y = 4
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		army_experience = 20
+		navy_experience = 20
+		add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = CYA }
+		add_tech_bonus = { name = cya_marine_bonus bonus = 0.5 uses = 1 category = marine_tech }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_coastal_defence_batteries
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = HSM_CYA_admiralty_compact }
+	x = 23
+	y = 6
+	cost = 4
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 671 } 671 = { add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 7342 } } }
+		if = { limit = { controls_state = 510 } 510 = { add_building_construction = { type = bunker level = 2 instant_build = yes } } }
+		navy_experience = 15
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_bluewater_shipyards
+	icon = GFX_goal_generic_build_navy
+	prerequisite = { focus = HSM_CYA_admiralty_compact }
+	x = 27
+	y = 6
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		if = { limit = { controls_state = 671 } 671 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = dockyard level = 2 instant_build = yes } } }
+		if = { limit = { controls_state = 510 } 510 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } } }
+		add_tech_bonus = { name = cya_bluewater_bonus bonus = 0.5 uses = 1 category = naval_equipment }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_CYA_imperial_convoy_authority
+	icon = GFX_goal_generic_navy_cruiser
+	prerequisite = { focus = HSM_CYA_coastal_defence_batteries }
+	prerequisite = { focus = HSM_CYA_bluewater_shipyards }
+	x = 25
+	y = 7
+	cost = 5
+	ai_will_do = { factor = 10 }
+	available = { has_country_flag = HSM_CYA_empire_descendant_declared }
+	completion_reward = {
+		navy_experience = 35
+		if = { limit = { has_country_flag = HSM_CYA_dynamic_modifiers_installed } custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt } add_to_variable = { HSM_CYA_convoy_escort_efficiency = 0.10 tooltip = convoy_escort_efficiency_tt } }
+		if = { limit = { controls_state = 382 } 382 = { add_building_construction = { type = air_base level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_CYA_expeditionary_fleet
+	icon = GFX_goal_battleship
+	prerequisite = { focus = HSM_CYA_imperial_convoy_authority }
+	x = 25
+	y = 8
+	cost = 5
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		navy_experience = 45
+		air_experience = 20
+		add_tech_bonus = { name = cya_expeditionary_bonus bonus = 0.5 uses = 2 category = naval_equipment }
+		if = { limit = { controls_state = 510 } 510 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = dockyard level = 2 instant_build = yes } } }
+	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+}

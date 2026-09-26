@@ -33,7 +33,10 @@ on_actions = {
 				limit = {
 					has_country_flag = HSM_CYA_dynamic_modifiers_installed
 					OR = {
-						has_country_flag = HSM_CYA_dawnclaw_dead
+						AND = {
+							has_country_flag = HSM_CYA_dawnclaw_dead
+							NOT = { has_country_flag = HSM_CYA_countess_dominant }
+						}
 						NOT = {
 							OR = {
 								has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
@@ -50,10 +53,12 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 					OR = {
-						has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 						has_country_flag = HSM_CYA_countess_dominant
+						AND = {
+							has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
+							NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+						}
 					}
 					NOT = { has_country_flag = HSM_CYA_dynamic_modifiers_installed }
 				}
@@ -83,7 +88,6 @@ on_actions = {
 				if = {
 					limit = {
 						has_country_flag = HSM_CYA_countess_dominant
-						NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
 						NOT = { has_country_flag = HSM_CYA_countess_spirits_consolidated }
 					}
 					HSM_CYA_consolidate_countess_spirits = yes
@@ -184,8 +188,8 @@ on_actions = {
 						GRI = { has_completed_focus = GRI_industry_modern }
 						has_completed_focus = CYA_the_conference_at_evosmoshafen
 						has_completed_focus = CYA_the_group_of_twenty
-						has_completed_focus = CYA_found_admiralty
-						has_completed_focus = HSM_CYA_general_staff_conference
+						has_completed_focus = HSM_CYA_admiralty_compact
+						has_completed_focus = HSM_CYA_joint_general_staff
 					}
 				}
 				set_country_flag = HSM_CYA_dawnclaw_asylum_scheduled

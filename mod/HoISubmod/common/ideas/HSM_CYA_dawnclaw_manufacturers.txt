@@ -1,0 +1,25 @@
+ideas = {
+	materiel_manufacturer = {
+		designer = yes
+
+		HSM_CYA_lowenstein_motor_pool = {
+			picture = GRI_lionstone
+			allowed = { original_tag = CYA }
+			visible = { has_country_flag = HSM_CYA_dawnclaw_contractors_arrived }
+			available = { has_country_flag = HSM_CYA_dawnclaw_contractors_arrived }
+			research_bonus = { motorized_equipment = 0.15 }
+			traits = { motorized_equipment_manufacturer }
+			ai_will_do = { factor = 1 }
+		}
+
+		HSM_CYA_reichswaffen_fieldworks = {
+			picture = GRI_imperial_arms_co
+			allowed = { original_tag = CYA }
+			visible = { has_country_flag = HSM_CYA_dawnclaw_contractors_arrived }
+			available = { has_country_flag = HSM_CYA_dawnclaw_contractors_arrived }
+			research_bonus = { support_tech = 0.15 }
+			traits = { support_equipment_manufacturer }
+			ai_will_do = { factor = 1 }
+		}
+	}
+}
