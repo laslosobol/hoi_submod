@@ -1,5 +1,89 @@
 spriteTypes = {
 	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_civilian_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_civilian_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_household_compact
+		textureFile = "gfx/interface/ideas/HSM_CYA_household_compact.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_hidden_assistant_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_hidden_assistant_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_alone_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_alone_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_security_directorate_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_security_directorate_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_colonels_household
+		textureFile = "gfx/interface/ideas/HSM_CYA_colonels_household.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_revealed_exile_regime
+		textureFile = "gfx/interface/ideas/HSM_CYA_revealed_exile_regime.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_revealed_exile_regime_secure
+		textureFile = "gfx/interface/ideas/HSM_CYA_revealed_exile_regime_secure.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_regency_land_credit
+		textureFile = "gfx/interface/ideas/HSM_CYA_regency_land_credit.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_corporate_mobilisation_plan
+		textureFile = "gfx/interface/ideas/HSM_CYA_corporate_mobilisation_plan.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_public_works_relief
+		textureFile = "gfx/interface/ideas/HSM_CYA_public_works_relief.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_polytechnic_exchange
+		textureFile = "gfx/interface/ideas/HSM_CYA_polytechnic_exchange.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_drill_standards
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_drill_standards.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_local_supply_depots
+		textureFile = "gfx/interface/ideas/HSM_CYA_local_supply_depots.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_development_board
+		textureFile = "gfx/interface/ideas/HSM_CYA_development_board.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_signals_network
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_signals_network.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_dawnclaw_dominant_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_dawnclaw_dominant_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_dominant_court
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_dominant_court.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_dawnclaw_griffonian_files
+		textureFile = "gfx/interface/ideas/HSM_CYA_dawnclaw_griffonian_files.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_march_policy
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_march_policy.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_unlikely_marriage
+		textureFile = "gfx/interface/ideas/HSM_CYA_unlikely_marriage.tga"
+	}
+	spriteType = {
 		name = GFX_idea_HSM_CYA_industrial_program
 		textureFile = "gfx/interface/ideas/cya_industrial_program.tga"
 	}

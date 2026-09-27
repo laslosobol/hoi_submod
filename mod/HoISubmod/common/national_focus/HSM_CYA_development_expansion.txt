@@ -1,6 +1,6 @@
 shared_focus = {
 	id = HSM_CYA_quartermaster_service
-	icon = GFX_goal_JER_mobile_logistics_corps
+	icon = GFX_HSM_CYA_quartermaster_service
 	prerequisite = { focus = HSM_CYA_frontier_supply_corps }
 	x = -3
 	y = 3
@@ -16,7 +16,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_railway_battalions
-	icon = GFX_goal_JER_permenant_transport_ties
+	icon = GFX_HSM_CYA_railway_battalions
 	prerequisite = { focus = HSM_CYA_frontier_supply_corps }
 	x = -1
 	y = 3
@@ -33,7 +33,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_signal_companies
-	icon = GFX_goal_radio
+	icon = GFX_HSM_CYA_signal_companies
 	prerequisite = { focus = HSM_CYA_combined_arms_school }
 	x = 3
 	y = 3
@@ -49,7 +49,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_field_hospitals
-	icon = GFX_goal_generic_hospitals
+	icon = GFX_HSM_CYA_field_hospitals
 	prerequisite = { focus = HSM_CYA_combined_arms_school }
 	x = 5
 	y = 3
@@ -65,7 +65,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_artillery
-	icon = GFX_goal_artillery
+	icon = GFX_HSM_CYA_frontier_artillery
 	prerequisite = { focus = HSM_CYA_joint_general_staff }
 	x = -3
 	y = 6
@@ -81,7 +81,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_engineer_brigades
-	icon = GFX_goal_generic_construction2
+	icon = GFX_HSM_CYA_engineer_brigades
 	prerequisite = { focus = HSM_CYA_joint_general_staff }
 	x = -1
 	y = 6
@@ -97,7 +97,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_aerial_reconnaissance
-	icon = GFX_goal_generic_air_fighter
+	icon = GFX_HSM_CYA_aerial_reconnaissance
 	prerequisite = { focus = HSM_CYA_joint_general_staff }
 	x = 4
 	y = 6
@@ -113,7 +113,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_motorised_reserves
-	icon = GFX_goal_generic_army_motorized
+	icon = GFX_HSM_CYA_motorised_reserves
 	prerequisite = { focus = HSM_CYA_joint_general_staff }
 	x = 6
 	y = 6
@@ -129,7 +129,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_crown_military_colleges
-	icon = GFX_goal_GRI_feath_cadet_school
+	icon = GFX_HSM_CYA_crown_military_colleges
 	prerequisite = { focus = HSM_CYA_crown_field_staff }
 	x = 2
 	y = 7
@@ -146,7 +146,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_dawnclaw_war_college
-	icon = GFX_goal_GRI_army_expansion
+	icon = GFX_HSM_CYA_dawnclaw_war_college
 	prerequisite = { focus = HSM_CYA_dawnclaw_operational_staff }
 	x = 4
 	y = 9
@@ -163,7 +163,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_imperial_officer_exchange
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_HSM_CYA_imperial_officer_exchange
 	prerequisite = { focus = HSM_CYA_griffonian_armament_standard }
 	x = -2
 	y = 11
@@ -180,7 +180,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_continental_ordnance
-	icon = GFX_goal_Arms_Export
+	icon = GFX_HSM_CYA_continental_ordnance
 	prerequisite = { focus = HSM_CYA_griffonian_armament_standard }
 	x = 4
 	y = 11
@@ -196,7 +196,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_port_customs_houses
-	icon = GFX_goal_generic_positive_trade_relations
+	icon = GFX_HSM_CYA_port_customs_houses
 	prerequisite = { focus = HSM_CYA_port_foundries }
 	x = 10
 	y = 3
@@ -211,7 +211,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_coastal_quarries
-	icon = GFX_focus_generic_steel
+	icon = GFX_HSM_CYA_coastal_quarries
 	prerequisite = { focus = HSM_CYA_port_foundries }
 	x = 8
 	y = 3
@@ -226,7 +226,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_electrify_the_workshops
-	icon = GFX_goal_factory_complex
+	icon = GFX_HSM_CYA_electrify_the_workshops
 	prerequisite = { focus = HSM_CYA_arsenal_network }
 	x = 14
 	y = 3
@@ -241,7 +241,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_apprenticeship_halls
-	icon = GFX_focus_research
+	icon = GFX_HSM_CYA_apprenticeship_halls
 	prerequisite = { focus = HSM_CYA_arsenal_network }
 	x = 16
 	y = 3
@@ -257,7 +257,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_rural_cooperatives
-	icon = GFX_goal_agricultural_aid
+	icon = GFX_HSM_CYA_rural_cooperatives
 	prerequisite = { focus = HSM_CYA_national_development_plan }
 	x = 8
 	y = 7
@@ -272,7 +272,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_industrial_standards_board
-	icon = GFX_goal_economic_control
+	icon = GFX_HSM_CYA_industrial_standards_board
 	prerequisite = { focus = HSM_CYA_national_development_plan }
 	x = 16
 	y = 7
@@ -287,7 +287,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_crown_municipal_loans
-	icon = GFX_goal_endless_money
+	icon = GFX_HSM_CYA_crown_municipal_loans
 	prerequisite = { focus = HSM_CYA_crown_credit_authority }
 	x = 10
 	y = 6
@@ -304,7 +304,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_dawnclaw_factory_contracts
-	icon = GFX_goal_artillery_factories
+	icon = GFX_HSM_CYA_dawnclaw_factory_contracts
 	prerequisite = { focus = HSM_CYA_dawnclaw_procurement_office }
 	x = 10
 	y = 7
@@ -321,7 +321,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_griffenheim_rail_hub
-	icon = GFX_goal_som_railway
+	icon = GFX_HSM_CYA_griffenheim_rail_hub
 	prerequisite = { focus = HSM_CYA_imperial_supply_grid }
 	x = 10
 	y = 9
@@ -336,7 +336,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_herzland_industrial_survey
-	icon = GFX_All_resource
+	icon = GFX_HSM_CYA_herzland_industrial_survey
 	prerequisite = { focus = HSM_CYA_imperial_supply_grid }
 	x = 14
 	y = 9
@@ -351,7 +351,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_freight_corridor
-	icon = GFX_goal_cry_railway
+	icon = GFX_HSM_CYA_evi_freight_corridor
 	prerequisite = { focus = HSM_CYA_griffenheim_rail_hub }
 	x = 10
 	y = 10
@@ -367,7 +367,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_imperial_research_exchange
-	icon = GFX_goal_double_research
+	icon = GFX_HSM_CYA_imperial_research_exchange
 	prerequisite = { focus = HSM_CYA_herzland_industrial_survey }
 	x = 14
 	y = 10
@@ -382,7 +382,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_convoy_escorts
-	icon = GFX_goal_generic_coastal_navy
+	icon = GFX_HSM_CYA_convoy_escorts
 	prerequisite = { focus = HSM_CYA_coastal_patrols }
 	x = 20
 	y = 2
@@ -398,7 +398,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_naval_signals_school
-	icon = GFX_goal_generic_navy_doctrines_tactics
+	icon = GFX_HSM_CYA_naval_signals_school
 	prerequisite = { focus = HSM_CYA_coastal_patrols }
 	x = 22
 	y = 2
@@ -413,7 +413,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_seaplane_stations
-	icon = GFX_goal_generic_air_fighter2
+	icon = GFX_HSM_CYA_seaplane_stations
 	prerequisite = { focus = HSM_CYA_naval_air_school }
 	x = 25
 	y = 2
@@ -429,7 +429,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_marine_training_ground
-	icon = GFX_goal_generic_amphibious_assault
+	icon = GFX_HSM_CYA_marine_training_ground
 	prerequisite = { focus = HSM_CYA_seaborne_corps }
 	x = 28
 	y = 4
@@ -446,7 +446,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_coastal_defence_batteries
-	icon = GFX_focus_generic_coastal_fort
+	icon = GFX_HSM_CYA_coastal_defence_batteries
 	prerequisite = { focus = HSM_CYA_admiralty_compact }
 	x = 23
 	y = 6
@@ -462,7 +462,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_bluewater_shipyards
-	icon = GFX_goal_generic_build_navy
+	icon = GFX_HSM_CYA_bluewater_shipyards
 	prerequisite = { focus = HSM_CYA_admiralty_compact }
 	x = 27
 	y = 6
@@ -478,7 +478,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_imperial_convoy_authority
-	icon = GFX_goal_generic_navy_cruiser
+	icon = GFX_HSM_CYA_imperial_convoy_authority
 	prerequisite = { focus = HSM_CYA_coastal_defence_batteries }
 	prerequisite = { focus = HSM_CYA_bluewater_shipyards }
 	x = 25
@@ -496,7 +496,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_expeditionary_fleet
-	icon = GFX_goal_battleship
+	icon = GFX_HSM_CYA_expeditionary_fleet
 	prerequisite = { focus = HSM_CYA_imperial_convoy_authority }
 	x = 25
 	y = 8

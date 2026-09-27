@@ -242,7 +242,7 @@ focus_tree = {
 
 shared_focus = {
 	id = HSM_CYA_hide_the_fugitive
-	icon = GFX_goal_skull_treaty2
+	icon = GFX_HSM_CYA_hide_the_fugitive
 	x = 37
 	y = 0
 
@@ -280,7 +280,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_an_unlikely_marriage
-	icon = GFX_goal_new_treaty
+	icon = GFX_HSM_CYA_an_unlikely_marriage
 	prerequisite = { focus = HSM_CYA_hide_the_fugitive }
 	mutually_exclusive = { focus = HSM_CYA_frontier_march_plan }
 	x = 0
@@ -319,7 +319,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_march_plan
-	icon = GFX_goal_generic_construct_military
+	icon = GFX_HSM_CYA_frontier_march_plan
 	prerequisite = { focus = HSM_CYA_hide_the_fugitive }
 	mutually_exclusive = { focus = HSM_CYA_an_unlikely_marriage }
 	x = 9
@@ -357,7 +357,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_delegate_security_to_dawnclaw
-	icon = GFX_goal_generic_martial_law
+	icon = GFX_HSM_CYA_delegate_security_to_dawnclaw
 	prerequisite = { focus = HSM_CYA_an_unlikely_marriage }
 	mutually_exclusive = { focus = HSM_CYA_expand_countess_cabinet }
 	x = -2
@@ -393,7 +393,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_expand_countess_cabinet
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_HSM_CYA_expand_countess_cabinet
 	prerequisite = { focus = HSM_CYA_an_unlikely_marriage }
 	mutually_exclusive = { focus = HSM_CYA_delegate_security_to_dawnclaw }
 	x = 4
@@ -434,7 +434,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_civilian_liaison_offices
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_HSM_CYA_civilian_liaison_offices
 	prerequisite = { focus = HSM_CYA_expand_countess_cabinet }
 	x = 0
 	y = 1
@@ -474,7 +474,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_codify_household_compact
-	icon = GFX_focus_generic_treaty
+	icon = GFX_HSM_CYA_codify_household_compact
 	prerequisite = { focus = HSM_CYA_civilian_liaison_offices }
 	x = 0
 	y = 1
@@ -508,7 +508,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_hidden_assistant
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_HSM_CYA_the_hidden_assistant
 	prerequisite = { focus = HSM_CYA_codify_household_compact }
 	x = -1
 	y = 1
@@ -548,7 +548,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_countess_alone
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_HSM_CYA_the_countess_alone
 	prerequisite = { focus = HSM_CYA_the_hidden_assistant }
 	x = 0
 	y = 1
@@ -587,7 +587,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_reorganise_border_forces
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_HSM_CYA_reorganise_border_forces
 	prerequisite = { focus = HSM_CYA_frontier_march_plan }
 	x = 0
 	y = 1
@@ -655,7 +655,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_modernise_internal_intelligence
-	icon = GFX_goal_secret_agents_red
+	icon = GFX_HSM_CYA_modernise_internal_intelligence
 	prerequisite = { focus = HSM_CYA_reorganise_border_forces }
 	x = 2
 	y = 1
@@ -762,7 +762,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_fortify_against_minotauria
-	icon = GFX_goal_generic_fortify_city
+	icon = GFX_HSM_CYA_fortify_against_minotauria
 	prerequisite = { focus = HSM_CYA_local_supply_depots }
 	x = 0
 	y = 1
@@ -796,7 +796,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_watch_sicameon
-	icon = GFX_goal_generic_radar
+	icon = GFX_HSM_CYA_watch_sicameon
 	prerequisite = { focus = HSM_CYA_frontier_signals_network }
 	x = 0
 	y = 1
@@ -830,7 +830,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_defensive_victory_claims
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_HSM_CYA_defensive_victory_claims
 	prerequisite = { focus = HSM_CYA_fortify_against_minotauria focus = HSM_CYA_watch_sicameon }
 	x = -1
 	y = 4
@@ -865,7 +865,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_proclaim_cyanolisian_march
-	icon = GFX_goal_generic_national_unity_claws
+	icon = GFX_HSM_CYA_proclaim_cyanolisian_march
 	prerequisite = { focus = HSM_CYA_defensive_victory_claims }
 	x = 0
 	y = 1
@@ -904,7 +904,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_integrate_minotaur_outback
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_HSM_CYA_integrate_minotaur_outback
 	prerequisite = { focus = HSM_CYA_modernise_internal_intelligence }
 	x = 1
 	y = 2
@@ -950,7 +950,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_recognise_outback_councils
-	icon = GFX_goal_PLB_griffon_council
+	icon = GFX_HSM_CYA_recognise_outback_councils
 	prerequisite = { focus = HSM_CYA_integrate_minotaur_outback }
 	x = 0
 	y = 2
@@ -997,7 +997,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_palace_security_directorate
-	icon = GFX_goal_generic_martial_law
+	icon = GFX_HSM_CYA_palace_security_directorate
 	prerequisite = { focus = HSM_CYA_delegate_security_to_dawnclaw }
 	x = 0
 	y = 1
@@ -1031,7 +1031,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_field_security_battalions
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_HSM_CYA_field_security_battalions
 	prerequisite = { focus = HSM_CYA_palace_security_directorate }
 	x = 2
 	y = 1
@@ -1068,7 +1068,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_colonels_household
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_HSM_CYA_the_colonels_household
 	prerequisite = { focus = HSM_CYA_palace_security_directorate }
 	x = -2
 	y = 1
@@ -1103,7 +1103,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_the_revealed_exile
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_HSM_CYA_the_revealed_exile
 	prerequisite = { focus = HSM_CYA_the_colonels_household }
 	prerequisite = { focus = HSM_CYA_field_security_battalions }
 	x = 0
@@ -1206,7 +1206,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_install_imperial_cabinet
-	icon = GFX_goal_TBK_AF_empire_administration
+	icon = GFX_HSM_CYA_install_imperial_cabinet
 	x = 0
 	y = 2
 	relative_position_id = HSM_CYA_hide_the_fugitive
@@ -1248,7 +1248,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_regularise_minotaur_administration
-	icon = GFX_goal_AF23_shared_parishes_and_minotaurs
+	icon = GFX_HSM_CYA_regularise_minotaur_administration
 	prerequisite = { focus = HSM_CYA_install_imperial_cabinet }
 	x = -2
 	y = 1
@@ -1303,7 +1303,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_reopen_military_workshops
-	icon = GFX_goal_generic_construct_mil_factory
+	icon = GFX_HSM_CYA_reopen_military_workshops
 	prerequisite = { focus = HSM_CYA_install_imperial_cabinet }
 	x = 2
 	y = 1
@@ -1335,7 +1335,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_cabinet_procurement_board
-	icon = GFX_goal_generic_construct_mil_factory
+	icon = GFX_HSM_CYA_cabinet_procurement_board
 	prerequisite = { focus = HSM_CYA_reopen_military_workshops }
 	x = 0
 	y = 1
@@ -1367,7 +1367,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_consolidate_proxy_cabinet
-	icon = GFX_goal_griffon_chair
+	icon = GFX_HSM_CYA_consolidate_proxy_cabinet
 	prerequisite = { focus = HSM_CYA_regularise_minotaur_administration }
 	prerequisite = { focus = HSM_CYA_cabinet_procurement_board }
 	x = 0
@@ -1410,7 +1410,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_rationalise_proxy_quotas
-	icon = GFX_goal_generic_trade
+	icon = GFX_HSM_CYA_rationalise_proxy_quotas
 	prerequisite = { focus = HSM_CYA_consolidate_proxy_cabinet }
 	x = 0
 	y = 1
@@ -1442,7 +1442,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_blackrock_wasteland_surveys
-	icon = GFX_goal_griffon_parchment
+	icon = GFX_HSM_CYA_blackrock_wasteland_surveys
 	prerequisite = { focus = HSM_CYA_proclaim_cyanolisian_march }
 	x = 0
 	y = 1
@@ -1469,7 +1469,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_restore_frontier_county
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_HSM_CYA_restore_frontier_county
 	prerequisite = { focus = HSM_CYA_blackrock_wasteland_surveys }
 	x = 0
 	y = 1
@@ -1499,7 +1499,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_county_garrisons
-	icon = GFX_goal_generic_construct_military
+	icon = GFX_HSM_CYA_frontier_county_garrisons
 	prerequisite = { focus = HSM_CYA_restore_frontier_county }
 	x = 0
 	y = 1
@@ -1527,7 +1527,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_war_games
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_HSM_CYA_frontier_war_games
 	prerequisite = { focus = HSM_CYA_frontier_county_garrisons }
 	x = -1
 	y = 1
@@ -1554,7 +1554,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_evi_border_embassies
-	icon = GFX_focus_generic_diplomatic_treaty_pony_griffon
+	icon = GFX_HSM_CYA_evi_border_embassies
 	prerequisite = { focus = HSM_CYA_frontier_county_garrisons }
 	x = 1
 	y = 1
@@ -1581,7 +1581,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_blackrock_autonomy_statute
-	icon = GFX_focus_generic_treaty_black
+	icon = GFX_HSM_CYA_blackrock_autonomy_statute
 	prerequisite = { focus = HSM_CYA_frontier_war_games }
 	prerequisite = { focus = HSM_CYA_evi_border_embassies }
 	x = 0
@@ -1609,7 +1609,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_border_modernisation
-	icon = GFX_goal_generic_construct_infrastructure
+	icon = GFX_HSM_CYA_countess_border_modernisation
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = -2
 	y = 1
@@ -1638,7 +1638,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_aristocratic_credit_lines
-	icon = GFX_goal_bag_of_money
+	icon = GFX_HSM_CYA_aristocratic_credit_lines
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = 2
 	y = 1
@@ -1666,7 +1666,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_evosmoshafen_ministries
-	icon = GFX_focus_NTR_a_true_administrative_state
+	icon = GFX_HSM_CYA_countess_evosmoshafen_ministries
 	prerequisite = { focus = HSM_CYA_the_countess_alone }
 	x = 0
 	y = 1
@@ -1694,7 +1694,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_minotaur_charter
-	icon = GFX_goal_griffon_parchment
+	icon = GFX_HSM_CYA_countess_minotaur_charter
 	prerequisite = { focus = HSM_CYA_countess_border_modernisation }
 	prerequisite = { focus = HSM_CYA_aristocratic_credit_lines }
 	prerequisite = { focus = HSM_CYA_countess_evosmoshafen_ministries }
@@ -1735,7 +1735,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_mit_customs_zone
-	icon = GFX_focus_FAT_protect_trade_routes
+	icon = GFX_HSM_CYA_countess_mit_customs_zone
 	prerequisite = { focus = HSM_CYA_countess_minotaur_charter }
 	x = -2
 	y = 1
@@ -1763,7 +1763,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_sicameon_port_authority
-	icon = GFX_goal_expand_dockyard
+	icon = GFX_HSM_CYA_countess_sicameon_port_authority
 	prerequisite = { focus = HSM_CYA_countess_minotaur_charter }
 	x = 2
 	y = 1
@@ -1792,7 +1792,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_prepare_asterion_protectorate
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_HSM_CYA_prepare_asterion_protectorate
 	prerequisite = { focus = HSM_CYA_countess_mit_customs_zone }
 	x = 0
 	y = 1
@@ -1820,7 +1820,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_subdue_asterion
-	icon = GFX_goal_JER_subjugate_the_minotaurs
+	icon = GFX_HSM_CYA_subdue_asterion
 	prerequisite = { focus = HSM_CYA_prepare_asterion_protectorate }
 	x = 0
 	y = 1
@@ -1857,7 +1857,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_sicameon_settlement
-	icon = GFX_goal_generic_trade
+	icon = GFX_HSM_CYA_countess_sicameon_settlement
 	prerequisite = { focus = HSM_CYA_countess_sicameon_port_authority }
 	x = 0
 	y = 1
@@ -1886,7 +1886,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_claim_sicameon_coast
-	icon = GFX_goal_generic_major_war
+	icon = GFX_HSM_CYA_claim_sicameon_coast
 	prerequisite = { focus = HSM_CYA_countess_sicameon_settlement }
 	x = 0
 	y = 1
@@ -1918,7 +1918,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_integrate_south
-	icon = GFX_goal_generic_national_unity
+	icon = GFX_HSM_CYA_countess_integrate_south
 	prerequisite = { focus = HSM_CYA_subdue_asterion }
 	prerequisite = { focus = HSM_CYA_claim_sicameon_coast }
 	x = 0
@@ -1964,7 +1964,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_asterion_assembly_compact
-	icon = GFX_goal_PLB_griffon_council
+	icon = GFX_HSM_CYA_asterion_assembly_compact
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
 	x = -2
 	y = 1
@@ -1997,7 +1997,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_midoria_parish_board
-	icon = GFX_goal_AF23_shared_parishes_and_minotaurs
+	icon = GFX_HSM_CYA_midoria_parish_board
 	prerequisite = { focus = HSM_CYA_countess_integrate_south }
 	x = 2
 	y = 1
@@ -2027,7 +2027,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_southern_provincial_diets
-	icon = GFX_focus_FAT_establishlocalcouncils
+	icon = GFX_HSM_CYA_countess_southern_provincial_diets
 	prerequisite = { focus = HSM_CYA_asterion_assembly_compact }
 	x = 0
 	y = 1
@@ -2054,7 +2054,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_merchant_arbitration
-	icon = GFX_focus_FAT_formalize_trade_relations
+	icon = GFX_HSM_CYA_countess_merchant_arbitration
 	prerequisite = { focus = HSM_CYA_midoria_parish_board }
 	x = 0
 	y = 1
@@ -2080,7 +2080,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_countess_frontier_conference
-	icon = GFX_focus_FAT_appoint_civilian_ministers
+	icon = GFX_HSM_CYA_countess_frontier_conference
 	prerequisite = { focus = HSM_CYA_countess_southern_provincial_diets }
 	prerequisite = { focus = HSM_CYA_countess_merchant_arbitration }
 	x = 0
@@ -2108,7 +2108,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HSM_CYA_frontier_aristocratic_league
-	icon = GFX_goal_PLB_council_of_lords
+	icon = GFX_HSM_CYA_frontier_aristocratic_league
 	prerequisite = { focus = HSM_CYA_countess_frontier_conference }
 	x = -1
 	y = 1

@@ -19,14 +19,14 @@ ideas = {
 		}
 
 		HSM_CYA_dawnclaw_griffonian_files = {
-			picture = generic_intel_bonus
+			picture = HSM_CYA_dawnclaw_griffonian_files
 			allowed = { always = no }
 			removal_cost = -1
 			targeted_modifier = { tag = GRI attack_bonus_against = 0.05 defense_bonus_against = 0.05 }
 		}
 
 		HSM_CYA_frontier_march_policy = {
-			picture = generic_army_bonus
+			picture = HSM_CYA_frontier_march_policy
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -51,7 +51,7 @@ ideas = {
 		}
 
 		HSM_CYA_frontier_drill_standards_idea = {
-			picture = generic_army_bonus
+			picture = HSM_CYA_frontier_drill_standards
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -74,7 +74,7 @@ ideas = {
 		}
 
 		HSM_CYA_frontier_signals_network_idea = {
-			picture = generic_intel_bonus
+			picture = HSM_CYA_frontier_signals_network
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -86,7 +86,7 @@ ideas = {
 		}
 
 		HSM_CYA_local_supply_depots_idea = {
-			picture = generic_army_bonus
+			picture = HSM_CYA_local_supply_depots
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -137,7 +137,7 @@ ideas = {
 		}
 
 		HSM_CYA_unlikely_marriage = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_unlikely_marriage
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -148,7 +148,7 @@ ideas = {
 		}
 
 		HSM_CYA_dawnclaw_dominant_court = {
-			picture = generic_fascism_drift_bonus
+			picture = HSM_CYA_dawnclaw_dominant_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -161,7 +161,7 @@ ideas = {
 		}
 
 		HSM_CYA_security_directorate_court = {
-			picture = generic_fascism_drift_bonus
+			picture = HSM_CYA_security_directorate_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -175,7 +175,7 @@ ideas = {
 		}
 
 		HSM_CYA_colonels_household = {
-			picture = generic_fascism_drift_bonus
+			picture = HSM_CYA_colonels_household
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -189,7 +189,7 @@ ideas = {
 		}
 
 		HSM_CYA_countess_dominant_court = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_countess_dominant_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -201,7 +201,7 @@ ideas = {
 		}
 
 		HSM_CYA_countess_civilian_court = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_countess_civilian_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -214,7 +214,7 @@ ideas = {
 		}
 
 		HSM_CYA_household_compact = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_household_compact
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -227,7 +227,7 @@ ideas = {
 		}
 
 		HSM_CYA_hidden_assistant_court = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_hidden_assistant_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -241,7 +241,7 @@ ideas = {
 		}
 
 		HSM_CYA_countess_alone_court = {
-			picture = CYA_sumpfkiel
+			picture = HSM_CYA_countess_alone_court
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -254,7 +254,7 @@ ideas = {
 		}
 
 		HSM_CYA_revealed_exile_regime = {
-			picture = saf_ossewabrandwag_fascism
+			picture = HSM_CYA_revealed_exile_regime
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -270,7 +270,7 @@ ideas = {
 		}
 
 		HSM_CYA_revealed_exile_regime_secure = {
-			picture = saf_ossewabrandwag_fascism
+			picture = HSM_CYA_revealed_exile_regime_secure
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -1287,7 +1287,7 @@ ideas = {
 		}
 
 		HSM_CYA_development_board_idea = {
-			picture = generic_central_management
+			picture = HSM_CYA_development_board
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -1298,7 +1298,7 @@ ideas = {
 		}
 
 		HSM_CYA_public_works_relief_idea = {
-			picture = generic_central_management
+			picture = HSM_CYA_public_works_relief
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -1310,7 +1310,7 @@ ideas = {
 		}
 
 		HSM_CYA_polytechnic_exchange_idea = {
-			picture = generic_research_bonus
+			picture = HSM_CYA_polytechnic_exchange
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -1343,7 +1343,7 @@ ideas = {
 		}
 
 		HSM_CYA_regency_land_credit_idea = {
-			picture = generic_foreign_capital
+			picture = HSM_CYA_regency_land_credit
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -1365,7 +1365,7 @@ ideas = {
 		}
 
 		HSM_CYA_corporate_mobilisation_plan_idea = {
-			picture = generic_central_management
+			picture = HSM_CYA_corporate_mobilisation_plan
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {

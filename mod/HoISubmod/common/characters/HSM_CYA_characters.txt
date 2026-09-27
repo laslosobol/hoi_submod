@@ -4,8 +4,8 @@ characters = {
 		can_be_captured = no
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRI/Ferdinand.tga"
-				small = "gfx/interface/ideas/Advisors/GRI/GRI_ferdinand.tga"
+				large = "gfx/leaders/CYA/HSM_CYA_Ferdinand_Dawnclaw.tga"
+				small = "gfx/interface/ideas/Advisors/CYA/HSM_CYA_ferdinand_dawnclaw.tga"
 			}
 		}
 		advisor = {
