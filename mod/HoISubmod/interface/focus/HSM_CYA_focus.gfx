@@ -467,4 +467,356 @@ spriteTypes = {
 		name = GFX_HSM_CYA_frontier_aristocratic_league
 		textureFile = "gfx/interface/goals/HSM_CYA_frontier_aristocratic_league.tga"
 	}
+	spriteType = {
+		name = GFX_HSM_CYA_southern_amnesty_registers
+		textureFile = "gfx/interface/goals/HSM_CYA_southern_amnesty_registers.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_evi_valley_protectorates
+		textureFile = "gfx/interface/goals/HSM_CYA_evi_valley_protectorates.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_kivessin_compromise
+		textureFile = "gfx/interface/goals/HSM_CYA_kivessin_compromise.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_kaiv_autonomy_promise
+		textureFile = "gfx/interface/goals/HSM_CYA_kaiv_autonomy_promise.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_lushland_border_commission
+		textureFile = "gfx/interface/goals/HSM_CYA_lushland_border_commission.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_gryphus_company_charter
+		textureFile = "gfx/interface/goals/HSM_CYA_gryphus_company_charter.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_integrate_evi_valley
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_integrate_evi_valley.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_evi_civic_modernisation
+		textureFile = "gfx/interface/goals/HSM_CYA_evi_civic_modernisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_evi_frontier_schools
+		textureFile = "gfx/interface/goals/HSM_CYA_evi_frontier_schools.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_evi_notables_council
+		textureFile = "gfx/interface/goals/HSM_CYA_evi_notables_council.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_school_missions
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_school_missions.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_princely_lesson_books
+		textureFile = "gfx/interface/goals/HSM_CYA_princely_lesson_books.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_regency_prepares_for_herzland
+		textureFile = "gfx/interface/goals/HSM_CYA_regency_prepares_for_herzland.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_restore_imperial_provinces
+		textureFile = "gfx/interface/goals/HSM_CYA_restore_imperial_provinces.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_capital_restoration_plan
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_capital_restoration_plan.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_herzland_reconstruction
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_herzland_reconstruction.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_regency_bread_offices
+		textureFile = "gfx/interface/goals/HSM_CYA_regency_bread_offices.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_restore_imperial_courts
+		textureFile = "gfx/interface/goals/HSM_CYA_restore_imperial_courts.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_northern_charters
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_northern_charters.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_western_concord
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_western_concord.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_southern_compacts
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_southern_compacts.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_river_missions
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_river_missions.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_continental_rail_board
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_continental_rail_board.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_regency_general_staff
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_regency_general_staff.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_western_circuits
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_western_circuits.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_eastern_circuits
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_eastern_circuits.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_regency_coronation_preparations
+		textureFile = "gfx/interface/goals/HSM_CYA_regency_coronation_preparations.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_crown_in_trust
+		textureFile = "gfx/interface/goals/HSM_CYA_crown_in_trust.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_groverite_reconciliation
+		textureFile = "gfx/interface/goals/HSM_CYA_groverite_reconciliation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_regency_constitution
+		textureFile = "gfx/interface/goals/HSM_CYA_regency_constitution.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_grover_first_council
+		textureFile = "gfx/interface/goals/HSM_CYA_grover_first_council.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_grover_imperial_academies
+		textureFile = "gfx/interface/goals/HSM_CYA_grover_imperial_academies.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_memorial_regency
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_memorial_regency.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_countess_succession_council
+		textureFile = "gfx/interface/goals/HSM_CYA_countess_succession_council.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_dawnclaw_corporate_rearmament
+		textureFile = "gfx/interface/goals/HSM_CYA_dawnclaw_corporate_rearmament.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_imperial_officer_cells
+		textureFile = "gfx/interface/goals/HSM_CYA_imperial_officer_cells.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_security_districts
+		textureFile = "gfx/interface/goals/HSM_CYA_security_districts.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_dawnclaw_war_room
+		textureFile = "gfx/interface/goals/HSM_CYA_dawnclaw_war_room.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_minotaurian_logistics_board
+		textureFile = "gfx/interface/goals/HSM_CYA_minotaurian_logistics_board.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_sicameon_informant_ports
+		textureFile = "gfx/interface/goals/HSM_CYA_sicameon_informant_ports.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_operation_against_asterion
+		textureFile = "gfx/interface/goals/HSM_CYA_operation_against_asterion.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_military_governorate_asterion
+		textureFile = "gfx/interface/goals/HSM_CYA_military_governorate_asterion.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_sicameon_security_corridor
+		textureFile = "gfx/interface/goals/HSM_CYA_sicameon_security_corridor.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_dawnclaw_integrate_south
+		textureFile = "gfx/interface/goals/HSM_CYA_dawnclaw_integrate_south.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_asterion_hostage_bureau
+		textureFile = "gfx/interface/goals/HSM_CYA_asterion_hostage_bureau.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_midoria_dockyard_command
+		textureFile = "gfx/interface/goals/HSM_CYA_midoria_dockyard_command.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_minotaurian_security_registry
+		textureFile = "gfx/interface/goals/HSM_CYA_minotaurian_security_registry.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_port_purge_lists
+		textureFile = "gfx/interface/goals/HSM_CYA_port_purge_lists.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_security_census
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_security_census.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_military_governorates
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_military_governorates.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_break_the_kivessin_estates
+		textureFile = "gfx/interface/goals/HSM_CYA_break_the_kivessin_estates.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_tame_the_kaiv_rada
+		textureFile = "gfx/interface/goals/HSM_CYA_tame_the_kaiv_rada.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_lushland_reprisals
+		textureFile = "gfx/interface/goals/HSM_CYA_lushland_reprisals.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_gryphus_company_audit
+		textureFile = "gfx/interface/goals/HSM_CYA_gryphus_company_audit.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_registry_modernisation
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_registry_modernisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_security_polytechnic_cells
+		textureFile = "gfx/interface/goals/HSM_CYA_security_polytechnic_cells.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_tribunals
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_tribunals.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_hostage_cadet_schools
+		textureFile = "gfx/interface/goals/HSM_CYA_hostage_cadet_schools.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_auxiliary_legions
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_auxiliary_legions.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_nationalist_frontier_mobilisation
+		textureFile = "gfx/interface/goals/HSM_CYA_nationalist_frontier_mobilisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_grover_black_files
+		textureFile = "gfx/interface/goals/HSM_CYA_grover_black_files.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_prepare_herzland_offensive
+		textureFile = "gfx/interface/goals/HSM_CYA_prepare_herzland_offensive.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_march_on_imperial_provinces
+		textureFile = "gfx/interface/goals/HSM_CYA_march_on_imperial_provinces.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_dawnclaw_capital_restoration_plan
+		textureFile = "gfx/interface/goals/HSM_CYA_dawnclaw_capital_restoration_plan.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_herzland_reconstruction_authority
+		textureFile = "gfx/interface/goals/HSM_CYA_herzland_reconstruction_authority.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_emergency_griffenheim_command
+		textureFile = "gfx/interface/goals/HSM_CYA_emergency_griffenheim_command.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_purge_imperial_remainders
+		textureFile = "gfx/interface/goals/HSM_CYA_purge_imperial_remainders.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_grover_lost_to_others
+		textureFile = "gfx/interface/goals/HSM_CYA_grover_lost_to_others.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_execute_the_child_emperor
+		textureFile = "gfx/interface/goals/HSM_CYA_execute_the_child_emperor.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_the_puppet_emperor
+		textureFile = "gfx/interface/goals/HSM_CYA_the_puppet_emperor.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_the_child_may_rule
+		textureFile = "gfx/interface/goals/HSM_CYA_the_child_may_rule.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_empty_throne_proclamation
+		textureFile = "gfx/interface/goals/HSM_CYA_empty_throne_proclamation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_purge_groverite_clergy
+		textureFile = "gfx/interface/goals/HSM_CYA_purge_groverite_clergy.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_boreas_without_bloodline
+		textureFile = "gfx/interface/goals/HSM_CYA_boreas_without_bloodline.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_memorial_imperial_council
+		textureFile = "gfx/interface/goals/HSM_CYA_memorial_imperial_council.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_heirless_provincial_compact
+		textureFile = "gfx/interface/goals/HSM_CYA_heirless_provincial_compact.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_caged_coronation
+		textureFile = "gfx/interface/goals/HSM_CYA_caged_coronation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_court_of_supervised_oaths
+		textureFile = "gfx/interface/goals/HSM_CYA_court_of_supervised_oaths.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_puppet_imperial_tours
+		textureFile = "gfx/interface/goals/HSM_CYA_puppet_imperial_tours.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_grover_restoration_ceremony
+		textureFile = "gfx/interface/goals/HSM_CYA_grover_restoration_ceremony.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_steel_regency_statutes
+		textureFile = "gfx/interface/goals/HSM_CYA_steel_regency_statutes.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_reconciled_imperial_oaths
+		textureFile = "gfx/interface/goals/HSM_CYA_reconciled_imperial_oaths.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_cross_the_river_frontier
+		textureFile = "gfx/interface/goals/HSM_CYA_cross_the_river_frontier.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_the_northern_submission
+		textureFile = "gfx/interface/goals/HSM_CYA_the_northern_submission.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_break_the_lake_countries
+		textureFile = "gfx/interface/goals/HSM_CYA_break_the_lake_countries.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_crush_the_western_crowns
+		textureFile = "gfx/interface/goals/HSM_CYA_crush_the_western_crowns.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_subdue_the_hillponies
+		textureFile = "gfx/interface/goals/HSM_CYA_subdue_the_hillponies.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_claim_the_southern_crowns
+		textureFile = "gfx/interface/goals/HSM_CYA_claim_the_southern_crowns.tga"
+	}
 }

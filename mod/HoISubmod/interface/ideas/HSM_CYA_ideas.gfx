@@ -100,4 +100,132 @@ spriteTypes = {
 		name = GFX_idea_HSM_CYA_grover_regency
 		textureFile = "gfx/interface/ideas/cya_grover_regency.tga"
 	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_reorganised_border_forces
+		textureFile = "gfx/interface/ideas/HSM_CYA_reorganised_border_forces.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_internal_intelligence_modernisation
+		textureFile = "gfx/interface/ideas/HSM_CYA_internal_intelligence_modernisation.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_minotaurian_border_works
+		textureFile = "gfx/interface/ideas/HSM_CYA_minotaurian_border_works.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_sicameon_watch_posts
+		textureFile = "gfx/interface/ideas/HSM_CYA_sicameon_watch_posts.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_proclaimed_cyanolisian_march
+		textureFile = "gfx/interface/ideas/HSM_CYA_proclaimed_cyanolisian_march.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_strained_minotaurian_indigenes
+		textureFile = "gfx/interface/ideas/HSM_CYA_strained_minotaurian_indigenes.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_policed_minotaurian_outback
+		textureFile = "gfx/interface/ideas/HSM_CYA_policed_minotaurian_outback.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_registered_minotaurian_communities
+		textureFile = "gfx/interface/ideas/HSM_CYA_registered_minotaurian_communities.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_imperial_administration
+		textureFile = "gfx/interface/ideas/HSM_CYA_imperial_administration.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_gri_proxy_rule
+		textureFile = "gfx/interface/ideas/HSM_CYA_gri_proxy_rule.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_imperial_cabinet_direct_rule
+		textureFile = "gfx/interface/ideas/HSM_CYA_imperial_cabinet_direct_rule.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_consolidated_direct_rule
+		textureFile = "gfx/interface/ideas/HSM_CYA_consolidated_direct_rule.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_rationalised_proxy_quotas
+		textureFile = "gfx/interface/ideas/HSM_CYA_rationalised_proxy_quotas.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_imperial_workshop_program
+		textureFile = "gfx/interface/ideas/HSM_CYA_imperial_workshop_program.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_cabinet_procurement_board_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_cabinet_procurement_board_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_county_administration
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_county_administration.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_blackrock_survey_corps_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_blackrock_survey_corps_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_frontier_reforms
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_frontier_reforms.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_aristocratic_credit_network
+		textureFile = "gfx/interface/ideas/HSM_CYA_aristocratic_credit_network.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_evosmoshafen_ministries
+		textureFile = "gfx/interface/ideas/HSM_CYA_evosmoshafen_ministries.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_mit_customs_zone_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_mit_customs_zone_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_port_authority
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_port_authority.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_mit_protectorate
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_mit_protectorate.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_sicameon_mandate
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_sicameon_mandate.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_countess_southern_settlement
+		textureFile = "gfx/interface/ideas/HSM_CYA_countess_southern_settlement.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_aristocratic_league_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_aristocratic_league_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_frontier_conference_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_frontier_conference_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_southern_amnesty_registers_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_southern_amnesty_registers_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_southern_provincial_diets_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_southern_provincial_diets_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_merchant_arbitration_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_merchant_arbitration_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_kivessin_compromise_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_kivessin_compromise_idea.tga"
+	}
+	spriteType = {
+		name = GFX_idea_HSM_CYA_kaiv_autonomy_idea
+		textureFile = "gfx/interface/ideas/HSM_CYA_kaiv_autonomy_idea.tga"
+	}
 }
