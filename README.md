@@ -40,3 +40,15 @@ docs/
 - Upstream EaW development repo: https://github.com/EaW-Team/equestria_dev
 - No `replace_path` entries are included by default. Prefer same-path file overrides or new files first; add `replace_path` only when you intentionally replace a whole loaded directory.
 - Localization files should use HoI4's expected encoding for your game version. If text fails to load, check `Documents/Paradox Interactive/Hearts of Iron IV/logs/error.log`.
+
+## Narrative Validation
+
+Run with PowerShell 7.2+ on Windows, with the reference dependency in `EaW/`:
+
+```powershell
+pwsh -NoProfile -File tools/Test-CyanolisiaNarrative.ps1
+```
+
+Add `-CompareHead` before committing to check that the editorial changes preserve focus layout, icons and art approvals. These are static regression checks, not an in-game playthrough.
+
+The same-path event overrides `GriffonianEmpire Events.txt` and `Cyanolisia Events.txt` preserve the reference files except for `imperial.99` and the entry guards of `cyan.9`, `cyan.10`, `cyan.11`. Reconcile them with upstream when updating EaW; do not replace them with duplicate event IDs in a differently named file. See `docs/cyanolisia-lore-audit.md` for the audit and authorized implementation notes.

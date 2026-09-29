@@ -256,6 +256,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_path_chosen }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	bypass = {
@@ -292,6 +293,7 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 	}
 
@@ -331,6 +333,7 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 	}
 
@@ -370,6 +373,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_countess_dominant }
 	}
 
@@ -406,6 +410,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -446,6 +451,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -486,6 +492,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -520,6 +527,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -560,6 +568,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -599,6 +608,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -633,6 +643,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -667,6 +678,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -706,6 +718,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -740,6 +753,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -774,6 +788,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -808,6 +823,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -842,6 +858,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -877,6 +894,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -916,6 +934,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -962,6 +981,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_branch_unlocked
 		NOT = { has_country_flag = HSM_CYA_path_marriage }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dominant }
 	}
 
@@ -1010,6 +1030,7 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_countess_dominant }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -1044,6 +1065,7 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_countess_dominant }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -1081,6 +1103,7 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_countess_dominant }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -1117,6 +1140,7 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_path_frontier_march }
 		NOT = { has_country_flag = HSM_CYA_countess_dominant }
 		NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+		NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
 	}
 
 	available = {
@@ -1215,7 +1239,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1258,7 +1281,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1313,7 +1335,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1345,7 +1366,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1378,7 +1398,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1420,7 +1439,6 @@ shared_focus = {
 
 	allow_branch = {
 		has_country_flag = HSM_CYA_path_imperial_administration
-		has_country_flag = HSM_CYA_dawnclaw_dead
 	}
 
 	available = {
@@ -1936,7 +1954,11 @@ shared_focus = {
 		custom_trigger_tooltip = {
 			tooltip = HSM_CYA_controls_south_capitals_tt
 			OR = {
-				controls_state = 386
+				AND = {
+					MIT = { exists = no }
+					HSM_CYA_all_asterion_territory_owned = yes
+					has_war = no
+				}
 				MIT = { is_subject_of = ROOT }
 			}
 			controls_state = 445
@@ -1952,10 +1974,7 @@ shared_focus = {
 		add_to_variable = { HSM_CYA_production_speed_infrastructure_factor = 0.04 tooltip = production_speed_infrastructure_factor_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = { HSM_CYA_imperial_stability_factor = 0.04 tooltip = stability_factor_tt }
-		if = {
-			limit = { MIT = { exists = yes is_subject_of = ROOT } }
-			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
-		}
+		HSM_CYA_establish_asterion_protectorate = yes
 		add_stability = 0.02
 	}
 
@@ -2485,6 +2504,12 @@ shared_focus = {
 		NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
 	}
 
+	available = {
+		HSM_CYA_grover_in_our_custody = yes
+		date < 1021.5.21
+	}
+	bypass = { OR = { date > 1021.5.20 has_global_flag = GRI_grover_vi_dead } }
+
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
@@ -2722,19 +2747,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_restore_imperial_courts"
-		if = {
-			limit = {
-				NOT = { has_global_flag = GRI_grover_vi_dead }
-				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
-				NOT = { has_idea = GRI_grover_vi }
-			}
-			every_possible_country = {
-				limit = { has_character = GRI_emperor_grover_vi }
-				GRI_emperor_grover_vi = { set_nationality = ROOT }
-			}
-			add_ideas = GRI_grover_vi
-		}
+		HSM_CYA_receive_grover_household = yes
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
 			HSM_CYA_imperial_political_power_factor = 0.03
@@ -2774,19 +2787,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_countess_regency_for_grover"
-		if = {
-			limit = {
-				NOT = { has_global_flag = GRI_grover_vi_dead }
-				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
-				NOT = { has_idea = GRI_grover_vi }
-			}
-			every_possible_country = {
-				limit = { has_character = GRI_emperor_grover_vi }
-				GRI_emperor_grover_vi = { set_nationality = ROOT }
-			}
-			add_ideas = GRI_grover_vi
-		}
+		HSM_CYA_receive_grover_household = yes
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.04 tooltip = political_power_factor_tt }
 		add_to_variable = { HSM_CYA_imperial_drift_defence_factor = 0.05 tooltip = drift_defence_factor_tt }
@@ -3238,6 +3239,7 @@ shared_focus = {
 	}
 
 	available = {
+		HSM_CYA_grover_in_our_custody = yes
 		OR = {
 			date > 1021.5.21
 			has_country_flag = HSM_CYA_grover_reigned_elsewhere
@@ -3346,6 +3348,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_grover_first_council"
+		country_event = { id = hsm_cyanolisia.53 days = 1 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
@@ -3755,7 +3758,11 @@ shared_focus = {
 
 	available = {
 		OR = {
-			controls_state = 386
+			AND = {
+				MIT = { exists = no }
+				HSM_CYA_all_asterion_territory_owned = yes
+				has_war = no
+			}
 			MIT = { is_subject_of = ROOT }
 		}
 	}
@@ -3777,10 +3784,7 @@ shared_focus = {
 			HSM_CYA_conscription_factor = 0.05
 			tooltip = conscription_factor_tt
 		}
-		if = {
-			limit = { MIT = { exists = yes is_subject_of = ROOT } }
-			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
-		}
+		HSM_CYA_establish_asterion_protectorate = yes
 		add_command_power = 20
 	}
 
@@ -3839,7 +3843,11 @@ shared_focus = {
 		custom_trigger_tooltip = {
 			tooltip = HSM_CYA_controls_south_capitals_tt
 			OR = {
-				controls_state = 386
+				AND = {
+					MIT = { exists = no }
+					HSM_CYA_all_asterion_territory_owned = yes
+					has_war = no
+				}
 				MIT = { is_subject_of = ROOT }
 			}
 			controls_state = 445
@@ -3864,10 +3872,7 @@ shared_focus = {
 			HSM_CYA_compliance_growth = 0.02
 			tooltip = HSM_CYA_compliance_growth_tt
 		}
-		if = {
-			limit = { MIT = { exists = yes is_subject_of = ROOT } }
-			set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
-		}
+		HSM_CYA_establish_asterion_protectorate = yes
 		add_political_power = -50
 		add_war_support = 0.02
 		add_stability = 0.02
@@ -4532,6 +4537,8 @@ shared_focus = {
 		if = {
 			limit = {
 				NOT = { has_global_flag = GRI_grover_vi_dead }
+				date < 1021.5.21
+				HSM_CYA_grover_in_our_custody = yes
 				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
 			}
 			country_event = { id = hsm_cyanolisia.37 }
@@ -4742,19 +4749,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_emergency_griffenheim_command"
-		if = {
-			limit = {
-				NOT = { has_global_flag = GRI_grover_vi_dead }
-				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
-				NOT = { has_idea = GRI_grover_vi }
-			}
-			every_possible_country = {
-				limit = { has_character = GRI_emperor_grover_vi }
-				GRI_emperor_grover_vi = { set_nationality = ROOT }
-			}
-			add_ideas = GRI_grover_vi
-		}
+		HSM_CYA_receive_grover_household = yes
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
 			HSM_CYA_army_org_factor = 0.03
@@ -4895,7 +4890,7 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
 	}
 
-	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
+	available = { HSM_CYA_grover_in_our_custody = yes }
 
 	ai_will_do = { factor = 3 }
 
@@ -4904,10 +4899,7 @@ shared_focus = {
 		set_country_flag = HSM_CYA_grover_executed
 		set_global_flag = GRI_grover_vi_dead
 		remove_ideas = GRI_grover_vi
-		every_possible_country = {
-			limit = { has_character = GRI_emperor_grover_vi }
-			GRI_emperor_grover_vi = { retire = yes }
-		}
+		retire_character = GRI_emperor_grover_vi
 		add_political_power = -100
 		add_war_support = 0.05
 		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
@@ -4946,25 +4938,13 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
 	}
 
-	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
+	available = { HSM_CYA_grover_in_our_custody = yes }
 
 	ai_will_do = { factor = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_the_puppet_emperor"
-		if = {
-			limit = {
-				NOT = { has_global_flag = GRI_grover_vi_dead }
-				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
-				NOT = { has_idea = GRI_grover_vi }
-			}
-			every_possible_country = {
-				limit = { has_character = GRI_emperor_grover_vi }
-				GRI_emperor_grover_vi = { set_nationality = ROOT }
-			}
-			add_ideas = GRI_grover_vi
-		}
+		HSM_CYA_receive_grover_household = yes
 		set_country_flag = HSM_CYA_grover_puppet
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
@@ -5001,25 +4981,13 @@ shared_focus = {
 		has_country_flag = HSM_CYA_dawnclaw_dominant
 	}
 
-	available = { NOT = { has_global_flag = GRI_grover_vi_dead } }
+	available = { HSM_CYA_grover_in_our_custody = yes }
 
 	ai_will_do = { factor = 5 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_the_child_may_rule"
-		if = {
-			limit = {
-				NOT = { has_global_flag = GRI_grover_vi_dead }
-				NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-				NOT = { HSM_CYA_grover_reigns_anywhere = yes }
-				NOT = { has_idea = GRI_grover_vi }
-			}
-			every_possible_country = {
-				limit = { has_character = GRI_emperor_grover_vi }
-				GRI_emperor_grover_vi = { set_nationality = ROOT }
-			}
-			add_ideas = GRI_grover_vi
-		}
+		HSM_CYA_receive_grover_household = yes
 		set_country_flag = HSM_CYA_grover_restored
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
@@ -5412,6 +5380,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HSM_CYA_reconciled_imperial_oaths"
+		country_event = { id = hsm_cyanolisia.53 days = 1 }
 		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
 		add_to_variable = {
 			HSM_CYA_imperial_stability_factor = 0.05

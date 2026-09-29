@@ -1,75 +1,61 @@
 HSM_CYA_western_griffonia_secured = {
 	custom_trigger_tooltip = {
 		tooltip = HSM_CYA_western_griffonia_secured_tt
-		NOT = {
-			any_country = {
-				OR = {
-					original_tag = FAT
-					tag = FAW
-					original_tag = SRS
-					original_tag = MNC
-					original_tag = VED
-					original_tag = HAU
-					original_tag = AVI
-					original_tag = BAN
-					original_tag = EYR
-					original_tag = ERI
-					original_tag = POM
-					original_tag = BOI
-					original_tag = LAK
-					original_tag = TRD
-					original_tag = FEZ
-					original_tag = AET
-					original_tag = HEL
-					original_tag = JRR
-					original_tag = JER
-					original_tag = JES
-					original_tag = JEB
-					original_tag = JFT
-					original_tag = VIN
-					original_tag = FLO
-					original_tag = ARA
-					original_tag = FRN
-					original_tag = TAL
-					original_tag = WNG
-					original_tag = FAL
-					original_tag = SIC
-					original_tag = MIT
-				}
-				NOT = { is_subject_of = ROOT }
-			}
-		}
+		FAT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FAW = { HSM_CYA_original_griffonian_cores_secured = yes }
+		SRS = { HSM_CYA_original_griffonian_cores_secured = yes }
+		MNC = { HSM_CYA_original_griffonian_cores_secured = yes }
+		VED = { HSM_CYA_original_griffonian_cores_secured = yes }
+		HAU = { HSM_CYA_original_griffonian_cores_secured = yes }
+		AVI = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BAN = { HSM_CYA_original_griffonian_cores_secured = yes }
+		EYR = { HSM_CYA_original_griffonian_cores_secured = yes }
+		ERI = { HSM_CYA_original_griffonian_cores_secured = yes }
+		POM = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BOI = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LAK = { HSM_CYA_original_griffonian_cores_secured = yes }
+		TRD = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FEZ = { HSM_CYA_original_griffonian_cores_secured = yes }
+		AET = { HSM_CYA_original_griffonian_cores_secured = yes }
+		HEL = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JRR = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JER = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JES = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JEB = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JFT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		VIN = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FLO = { HSM_CYA_original_griffonian_cores_secured = yes }
+		ARA = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FRN = { HSM_CYA_original_griffonian_cores_secured = yes }
+		TAL = { HSM_CYA_original_griffonian_cores_secured = yes }
+		WNG = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FAL = { HSM_CYA_original_griffonian_cores_secured = yes }
+		SIC = { HSM_CYA_original_griffonian_cores_secured = yes }
+		MIT = { HSM_CYA_original_griffonian_cores_secured = yes }
 	}
 }
 
 HSM_CYA_eastern_griffonia_secured = {
 	custom_trigger_tooltip = {
 		tooltip = HSM_CYA_eastern_griffonia_secured_tt
-		NOT = {
-			any_country = {
-				OR = {
-					tag = JRV
-					original_tag = LCT
-					original_tag = RCT
-					original_tag = NIM
-					original_tag = WIT
-					original_tag = BAK
-					original_tag = DEP
-					original_tag = FRE
-					original_tag = DMT
-					original_tag = HLQ
-					original_tag = LNS
-					original_tag = LSC
-					original_tag = LSM
-					tag = JHP
-					original_tag = FBK
-					original_tag = FIR
-					original_tag = WAT
-					original_tag = NCH
-				}
-				NOT = { is_subject_of = ROOT }
-			}
-		}
+		JRV = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LCT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		RCT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		NIM = { HSM_CYA_original_griffonian_cores_secured = yes }
+		WIT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BAK = { HSM_CYA_original_griffonian_cores_secured = yes }
+		DEP = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FRE = { HSM_CYA_original_griffonian_cores_secured = yes }
+		DMT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		HLQ = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LNS = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LSC = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LSM = { HSM_CYA_original_griffonian_cores_secured = yes }
+		JHP = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FBK = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FIR = { HSM_CYA_original_griffonian_cores_secured = yes }
+		WAT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		NCH = { HSM_CYA_original_griffonian_cores_secured = yes }
 	}
 }
 
@@ -157,5 +143,52 @@ HSM_CYA_all_sicameon_territory_owned = {
 		owns_state = 528
 		owns_state = 535
 		owns_state = 570
+	}
+}
+
+
+# The base mod records original_cores for each tag, including an annexed country.
+HSM_CYA_original_griffonian_cores_secured = {
+	all_of_scopes = {
+		array = original_cores
+		OR = {
+			NOT = { is_on_continent = asia }
+			HSM_CYA_state_in_imperial_sphere = yes
+		}
+	}
+}
+
+# State scope: annexation by an unrelated third party is not imperial unification.
+HSM_CYA_state_in_imperial_sphere = {
+	owner = { OR = { tag = ROOT is_subject_of = ROOT } }
+	controller = { OR = { tag = ROOT is_subject_of = ROOT } }
+}
+
+HSM_CYA_grover_reigns_abroad = {
+	any_country = {
+		NOT = { tag = ROOT }
+		has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+	}
+}
+
+# Country scope, ROOT is Cyanolisia. A sovereign foreign court is excluded.
+HSM_CYA_grover_household_can_transfer = {
+	has_character = GRI_emperor_grover_vi
+	NOT = { tag = ROOT }
+	OR = {
+		is_subject_of = ROOT
+		AND = {
+			exists = no
+			any_original_cores_controlled_by_ROOT = yes
+			all_original_cores_owned_and_controlled_by_ROOT = yes
+		}
+	}
+}
+
+HSM_CYA_grover_in_our_custody = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_grover_in_our_custody_tt
+		has_character = GRI_emperor_grover_vi
+		NOT = { has_global_flag = GRI_grover_vi_dead }
 	}
 }

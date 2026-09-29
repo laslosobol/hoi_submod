@@ -157,3 +157,87 @@ HSM_CYA_consolidate_countess_spirits = {
 	add_to_variable = { HSM_CYA_army_core_defence_factor = 0.05 }
 	add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.05 }
 }
+
+
+# Only a subject or a fully conquered former host can surrender the household.
+HSM_CYA_receive_grover_household = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = GRI_grover_vi_dead }
+			NOT = { has_character = GRI_emperor_grover_vi }
+		}
+		every_possible_country = {
+			limit = { HSM_CYA_grover_household_can_transfer = yes }
+			if = {
+				limit = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
+				ROOT = { set_country_flag = HSM_CYA_grover_reigned_elsewhere }
+			}
+			remove_ideas = GRI_grover_vi
+			GRI_emperor_grover_vi = { set_nationality = ROOT }
+			ROOT = { country_event = { id = hsm_cyanolisia.52 } }
+		}
+	}
+	if = {
+		limit = {
+			HSM_CYA_grover_in_our_custody = yes
+			date < 1021.5.21
+			NOT = { HSM_CYA_grover_reigns_anywhere = yes }
+			NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+			NOT = { has_idea = GRI_grover_vi }
+		}
+		add_ideas = GRI_grover_vi
+	}
+}
+
+HSM_CYA_establish_asterion_protectorate = {
+	if = {
+		limit = { MIT = { exists = no } HSM_CYA_all_asterion_territory_owned = yes has_war = no }
+		# Preserve our homeland if an earlier Asterion regime added cores there.
+		446 = { if = { limit = { is_owned_by = ROOT } set_state_flag = HSM_CYA_retained_homeland } }
+		507 = { if = { limit = { is_owned_by = ROOT } set_state_flag = HSM_CYA_retained_homeland } }
+		510 = { if = { limit = { is_owned_by = ROOT } set_state_flag = HSM_CYA_retained_homeland } }
+		511 = { if = { limit = { is_owned_by = ROOT } set_state_flag = HSM_CYA_retained_homeland } }
+		671 = { if = { limit = { is_owned_by = ROOT } set_state_flag = HSM_CYA_retained_homeland } }
+		release_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+		446 = {
+			if = {
+				limit = { has_state_flag = HSM_CYA_retained_homeland }
+				ROOT = { transfer_state = 446 }
+				clr_state_flag = HSM_CYA_retained_homeland
+			}
+		}
+		507 = {
+			if = {
+				limit = { has_state_flag = HSM_CYA_retained_homeland }
+				ROOT = { transfer_state = 507 }
+				clr_state_flag = HSM_CYA_retained_homeland
+			}
+		}
+		510 = {
+			if = {
+				limit = { has_state_flag = HSM_CYA_retained_homeland }
+				ROOT = { transfer_state = 510 }
+				clr_state_flag = HSM_CYA_retained_homeland
+			}
+		}
+		511 = {
+			if = {
+				limit = { has_state_flag = HSM_CYA_retained_homeland }
+				ROOT = { transfer_state = 511 }
+				clr_state_flag = HSM_CYA_retained_homeland
+			}
+		}
+		671 = {
+			if = {
+				limit = { has_state_flag = HSM_CYA_retained_homeland }
+				ROOT = { transfer_state = 671 }
+				clr_state_flag = HSM_CYA_retained_homeland
+			}
+		}
+		MIT = { load_focus_tree = generic_griffon_focus }
+	}
+	if = {
+		limit = { MIT = { exists = yes is_subject_of = ROOT } }
+		set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+	}
+}

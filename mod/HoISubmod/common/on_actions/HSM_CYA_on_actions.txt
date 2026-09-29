@@ -15,7 +15,7 @@ on_actions = {
 			if = {
 				limit = {
 					NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
-					HSM_CYA_grover_reigns_anywhere = yes
+					HSM_CYA_grover_reigns_abroad = yes
 				}
 				set_country_flag = HSM_CYA_grover_reigned_elsewhere
 			}
@@ -25,6 +25,7 @@ on_actions = {
 					OR = {
 						has_global_flag = GRI_grover_vi_dead
 						has_country_flag = HSM_CYA_grover_reigned_elsewhere
+						date > 1021.5.20
 					}
 				}
 				remove_ideas = GRI_grover_vi
@@ -37,6 +38,7 @@ on_actions = {
 							has_country_flag = HSM_CYA_dawnclaw_dead
 							NOT = { has_country_flag = HSM_CYA_countess_dominant }
 						}
+						has_country_flag = HSM_CYA_dawnclaw_departed
 						NOT = {
 							OR = {
 								has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
@@ -144,10 +146,32 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					owns_state = 382
+					OR = {
+						has_completed_focus = HSM_CYA_emergency_griffenheim_command
+						has_completed_focus = HSM_CYA_restore_imperial_courts
+					}
+					NOT = { has_character = GRI_emperor_grover_vi }
+					NOT = { has_global_flag = GRI_grover_vi_dead }
+				}
+				HSM_CYA_receive_grover_household = yes
+			}
+			if = {
+				limit = {
 					date > 1021.5.21
 					has_country_flag = HSM_CYA_griffonia_claimed
 					has_war = no
 					NOT = { has_country_flag = HSM_CYA_grover_settlement_resolved }
+					OR = {
+						has_global_flag = GRI_grover_vi_dead
+						AND = {
+							has_character = GRI_emperor_grover_vi
+							OR = {
+								has_country_flag = HSM_CYA_grover_puppet
+								has_country_flag = HSM_CYA_grover_restored
+							}
+						}
+					}
 				}
 				set_country_flag = HSM_CYA_grover_settlement_resolved
 				if = {
@@ -175,22 +199,7 @@ on_actions = {
 				limit = {
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_scheduled }
 					NOT = { has_country_flag = HSM_CYA_dawnclaw_asylum_resolved }
-					GRI = {
-						exists = yes
-						NOT = {
-							has_country_leader = {
-								character = GRI_ferdinand_dawnclaw
-								ruling_only = yes
-							}
-						}
-					}
-					OR = {
-						GRI = { has_completed_focus = GRI_industry_modern }
-						has_completed_focus = CYA_the_conference_at_evosmoshafen
-						has_completed_focus = CYA_the_group_of_twenty
-						has_completed_focus = HSM_CYA_admiralty_compact
-						has_completed_focus = HSM_CYA_joint_general_staff
-					}
+					has_country_flag = HSM_CYA_dawnclaw_escaped_execution
 				}
 				set_country_flag = HSM_CYA_dawnclaw_asylum_scheduled
 				country_event = { id = hsm_cyanolisia.1 days = 35 }

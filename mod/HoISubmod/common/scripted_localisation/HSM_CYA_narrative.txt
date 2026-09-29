@@ -1,0 +1,63 @@
+defined_text = {
+	name = GetHSMCyaKaivSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_kaiv_autonomy_promised }
+		localization_key = HSM_CYA_petitions_kaiv_charter
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_kaiv_cossack_guard }
+		localization_key = HSM_CYA_petitions_kaiv_officers
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_kaiv_commandant_veto }
+		localization_key = HSM_CYA_petitions_kaiv_veto
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_kaiv_rada_tamed }
+		localization_key = HSM_CYA_petitions_kaiv_supervised
+	}
+	text = { localization_key = HSM_CYA_petitions_kaiv_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaMidoriaSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_midoria_parish_charters }
+		localization_key = HSM_CYA_petitions_midoria_charters
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_midoria_customs_board }
+		localization_key = HSM_CYA_petitions_midoria_customs
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_midoria_corsair_amnesty }
+		localization_key = HSM_CYA_petitions_midoria_amnesty
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_midoria_dockyards_requisitioned }
+		localization_key = HSM_CYA_petitions_midoria_requisition
+	}
+	text = { localization_key = HSM_CYA_petitions_midoria_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaGryphusSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_gryphus_company_chartered }
+		localization_key = HSM_CYA_petitions_gryphus_company
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_gryphus_free_towns_protected }
+		localization_key = HSM_CYA_petitions_gryphus_towns
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_gryphus_company_audited }
+		localization_key = HSM_CYA_petitions_gryphus_audit
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_gryphus_order_compromised }
+		localization_key = HSM_CYA_petitions_gryphus_order
+	}
+	text = { localization_key = HSM_CYA_petitions_gryphus_unsettled }
+}
+
