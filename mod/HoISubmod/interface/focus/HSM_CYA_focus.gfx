@@ -819,4 +819,588 @@ spriteTypes = {
 		name = GFX_HSM_CYA_claim_the_southern_crowns
 		textureFile = "gfx/interface/goals/HSM_CYA_claim_the_southern_crowns.tga"
 	}
+	spriteType = {
+		name = GFX_HSM_CYA_western_imperial_circuits
+		textureFile = "gfx/interface/goals/HSM_CYA_western_imperial_circuits.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_eastern_imperial_circuits
+		textureFile = "gfx/interface/goals/HSM_CYA_eastern_imperial_circuits.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_conference_at_evosmoshafen
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_conference_at_evosmoshafen.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_group_of_twenty
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_group_of_twenty.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_form_sailors_committees
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_form_sailors_committees.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_radicalising_the_troops
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_radicalising_the_troops.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_liasing_with_the_indigenes
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_liasing_with_the_indigenes.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_coordinating_with_the_cadres
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_coordinating_with_the_cadres.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_anarchists_and_equalists
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_anarchists_and_equalists.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_roll_the_die
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_roll_the_die.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_officers_putsch
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_officers_putsch.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_our_finest_hour
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_our_finest_hour.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_democratic_socialism_focus
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_democratic_socialism_focus.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_equalism_focus
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_equalism_focus.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_equal_rights_bill
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_equal_rights_bill.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_abolish_private_ownership
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_abolish_private_ownership.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_land_redistribution
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_land_redistribution.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_communist_patriotism
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_communist_patriotism.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_unions_in_politics
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_unions_in_politics.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_mixed_species_brigades
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_mixed_species_brigades.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_horizontalised_military_structure
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_horizontalised_military_structure.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_equalist_society
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_equalist_society.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_collectivisation
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_collectivisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_military_commissars
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_military_commissars.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_drill_standards
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_drill_standards.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_frontier_signals_network
+		textureFile = "gfx/interface/goals/HSM_CYA_frontier_signals_network.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_local_supply_depots
+		textureFile = "gfx/interface/goals/HSM_CYA_local_supply_depots.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_sicameon_war_reparations
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_sicameon_war_reparations.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_claim_sic_mountains
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_claim_sic_mountains.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_expand_snowtop_mines
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_expand_snowtop_mines.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_claim_mit_islands
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_claim_mit_islands.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_island_resources
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_island_resources.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_hurrah
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_hurrah.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_reclaim_coastal_cities
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_reclaim_coastal_cities.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_reintegrate_coastal_provinces
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_reintegrate_coastal_provinces.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_onwards_to_glory
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_onwards_to_glory.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_secret_police
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_secret_police.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_operation_volkswunsch
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_operation_volkswunsch.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_de_aguilar_hydroponics
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_de_aguilar_hydroponics.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_right_the_wrongs
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_right_the_wrongs.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_war_on_sic
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_war_on_sic.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_war_on_mit
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_war_on_mit.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_control_sic
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_control_sic.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_control_mit
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_control_mit.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_recognition_of_minotaurian_rights
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_recognition_of_minotaurian_rights.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_expand_the_horst_oil_refineries
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_expand_the_horst_oil_refineries.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_nt_golden_fleet
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_nt_golden_fleet.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_raze_the_dockside_slums
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_raze_the_dockside_slums.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_land_reclamation_in_the_sea
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_land_reclamation_in_the_sea.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_aerial_defense
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_aerial_defense.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_atomic_research
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_atomic_research.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_propaganda_in_life
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_propaganda_in_life.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_agricultural_mechanisation
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_agricultural_mechanisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_operation_nightlight
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_operation_nightlight.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_tarmuth_rocket_site
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_tarmuth_rocket_site.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_generals
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_generals.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_griffon_jagers
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_griffon_jagers.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_welcome_pony_immigration
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_welcome_pony_immigration.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_equine_military_units
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_equine_military_units.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_nt_polytech
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_nt_polytech.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_da_engineering_college
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_da_engineering_college.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_banking_guild
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_banking_guild.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_civil_guard
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_civil_guard.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_economic_minister
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_economic_minister.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_industrial_minister
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_industrial_minister.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_war_minister
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_war_minister.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_foreign_minister
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_foreign_minister.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_form_the_new_thymiau_merchant_navy
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_form_the_new_thymiau_merchant_navy.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_open_door_immigration_policy
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_open_door_immigration_policy.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_horst_arms
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_horst_arms.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_economic_minister2
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_economic_minister2.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_new_industrial_minister1
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_new_industrial_minister1.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_lands_acquisition_act
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_lands_acquisition_act.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_tunnel_to_em
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_tunnel_to_em.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_walled_city
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_walled_city.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_decree_bureaucratic_rehabilitation
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_decree_bureaucratic_rehabilitation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_dissolve_coastal_governates
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_dissolve_coastal_governates.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_reconvene_neundrachen_chamber
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_reconvene_neundrachen_chamber.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_focus_inwards
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_focus_inwards.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_by_griffons_for_griffons
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_by_griffons_for_griffons.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_decree_for_reformed_governance
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_decree_for_reformed_governance.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_declare_the_league
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_declare_the_league.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_hurrah_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_hurrah_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_onwards_to_glory_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_onwards_to_glory_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_free_city
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_free_city.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_decree_for_civic_service
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_decree_for_civic_service.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_decree_for_market_liberalisation
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_decree_for_market_liberalisation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_decree_urban_consolidation
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_decree_urban_consolidation.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_develop_outskirts
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_develop_outskirts.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_control_sic_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_control_sic_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_sicameon_war_reparations_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_sicameon_war_reparations_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_claim_sic_mountains_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_claim_sic_mountains_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_expand_snowtop_mines_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_expand_snowtop_mines_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_economic_shock_therapy
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_economic_shock_therapy.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_look_to_the_empire
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_look_to_the_empire.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_rejoin_the_fatherland
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_rejoin_the_fatherland.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_on_our_own
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_on_our_own.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_loot_the_cities
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_loot_the_cities.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_black_book
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_black_book.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_deepen_tribal_conflicts
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_deepen_tribal_conflicts.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_demilitarise_minotauria
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_demilitarise_minotauria.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_claim_mit_islands_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_claim_mit_islands_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_island_resources_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_island_resources_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_fortify_western_border
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_fortify_western_border.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_war_on_sic_county
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_war_on_sic_county.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_armaments_effort
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_armaments_effort.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_naval_intelligence_service
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_naval_intelligence_service.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_train_the_troops
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_train_the_troops.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_comission_on_minotaurian_affairs
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_comission_on_minotaurian_affairs.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_naval_auxiliary_patrol
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_naval_auxiliary_patrol.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_ignore_the_outback
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_ignore_the_outback.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_first_blow
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_first_blow.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_what_to_do_with_minotauria
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_what_to_do_with_minotauria.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_fortify_thymiashafen
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_fortify_thymiashafen.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_army_intelligence_division
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_army_intelligence_division.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_protected_supply_lines
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_protected_supply_lines.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_police_the_outback
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_police_the_outback.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_military_training_exercises_in_the_outback
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_military_training_exercises_in_the_outback.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_kustenschutzwand
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_kustenschutzwand.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_admiral
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_admiral.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_requisition_landing_craft
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_requisition_landing_craft.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_protection_troops
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_protection_troops.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_penal_bataillon
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_penal_bataillon.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_military_police
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_military_police.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_coma_battalions
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_coma_battalions.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_generalissimo
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_generalissimo.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_fortification_effort
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_fortification_effort.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_requisition_firearms
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_requisition_firearms.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_imperial_advisors
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_imperial_advisors.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_into_the_world
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_into_the_world.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_communist_future
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_communist_future.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_communism_in_one_country
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_communism_in_one_country.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_standard_of_living
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_standard_of_living.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_proletarian_factories
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_proletarian_factories.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_best_defense
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_best_defense.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_stamp_out_dissent
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_stamp_out_dissent.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_control_the_press
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_control_the_press.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_commie_mit_indigenes
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_commie_mit_indigenes.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_the_means_of_production
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_the_means_of_production.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_miners_collectives
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_miners_collectives.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_national_health_bureau
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_national_health_bureau.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_free_education
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_free_education.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_intercommunalism
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_intercommunalism.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_liberate_the_north
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_liberate_the_north.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_liberate_the_west
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_liberate_the_west.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_CYA_commie_mit_outback
+		textureFile = "gfx/interface/goals/HSM_CYA_CYA_commie_mit_outback.tga"
+	}
 }

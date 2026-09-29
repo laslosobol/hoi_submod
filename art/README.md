@@ -12,10 +12,9 @@ spirit, with a consistent painted style: dark iron, antique gold, ivory, royal
 blue, restrained crimson, and transparent backgrounds. Do not treat a newly
 chosen EaW icon as a finished replacement.
 
-As of this series, 116 of 350 focus definitions use a Cyanolisian GFX sprite.
-26 of 137 HSM idea blocks use a Cyanolisian image.
-The remaining icons are still provisional EaW or generic assets. The two uses
-of the `HSM_CYA_grover_regency` idea intentionally share one image.
+All 350 focus definitions use an approved Cyanolisian GFX sprite.
+All 137 HSM idea uses have approved Cyanolisian images.
+The two uses of the `HSM_CYA_grover_regency` idea intentionally share one image.
 
 `docs/icon-generation-manifest.md` is the authoritative focus and national-spirit
 status and art-direction register. The descriptions below are historical source notes,
