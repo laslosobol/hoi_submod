@@ -221,6 +221,7 @@ on_actions = {
 
 	on_weekly_CYA = {
 		effect = {
+			HSM_CYA_story_tick = yes
 			if = {
 				limit = {
 					has_country_flag = HSM_CYA_dawnclaw_hidden_in_court

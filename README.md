@@ -2,7 +2,7 @@
 
 HoI4 Equestria at War submod development workspace.
 
-Current release: **0.5.1**. See [PATCH_NOTES.md](PATCH_NOTES.md) for release history.
+Current release: **0.5.2**. See [PATCH_NOTES.md](PATCH_NOTES.md) for release history.
 
 The playable mod root is:
 

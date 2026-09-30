@@ -1,0 +1,20 @@
+defined_text = {
+	name = GetHSMCyaStoryChildhood
+	text = { trigger = { has_country_flag = HSM_CYA_story_unedited_reports } localization_key = HSM_CYA_story_memory_open }
+	text = { trigger = { has_country_flag = HSM_CYA_story_filtered_reports } localization_key = HSM_CYA_story_memory_filtered }
+	text = { localization_key = HSM_CYA_story_memory_adult }
+}
+
+defined_text = {
+	name = GetHSMCyaStoryInheritance
+	text = { trigger = { HSM_CYA_story_provincial_compensation_due = yes } localization_key = HSM_CYA_story_inheritance_provinces }
+	text = { trigger = { HSM_CYA_story_officer_compensation_due = yes } localization_key = HSM_CYA_story_inheritance_officers }
+	text = { localization_key = HSM_CYA_story_inheritance_unpledged }
+}
+
+defined_text = {
+	name = GetHSMCyaStorySettlement
+	text = { trigger = { has_country_flag = HSM_CYA_story_reviewed_mandates } localization_key = HSM_CYA_story_settlement_reviewed }
+	text = { trigger = { OR = { has_country_flag = HSM_CYA_story_provinces_compensated has_country_flag = HSM_CYA_story_officers_compensated } } localization_key = HSM_CYA_story_settlement_adjusted }
+	text = { localization_key = HSM_CYA_story_settlement_inherited }
+}

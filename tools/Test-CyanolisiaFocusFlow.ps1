@@ -58,16 +58,26 @@ foreach ($file in @('CYA.txt', 'HSM_CYA_development.txt', 'HSM_CYA_development_e
     }
 }
 $triggers = @{}
-foreach ($node in (Read-Code 'mod/HoISubmod/common/scripted_triggers/HSM_CYA_scripted_triggers.txt')) { $triggers[$node.Key] = $node }
+foreach ($file in @('HSM_CYA_scripted_triggers.txt', 'HSM_CYA_story.txt')) {
+    foreach ($node in (Read-Code "mod/HoISubmod/common/scripted_triggers/$file")) { $triggers[$node.Key] = $node }
+}
 $effects = @{}
-foreach ($node in (Read-Code 'mod/HoISubmod/common/scripted_effects/HSM_CYA_scripted_effects.txt')) { $effects[$node.Key] = $node }
+foreach ($file in @('HSM_CYA_scripted_effects.txt', 'HSM_CYA_story.txt')) {
+    foreach ($node in (Read-Code "mod/HoISubmod/common/scripted_effects/$file")) { $effects[$node.Key] = $node }
+}
 $events = @{}
-foreach ($node in (Read-Code 'mod/HoISubmod/events/HSM_Cyanolisia.txt')) {
-    if ($node.Key -eq 'country_event') { $events[(Value $node 'id')] = $node }
+foreach ($file in @('HSM_Cyanolisia.txt', 'HSM_CYA_story.txt')) {
+    foreach ($node in (Read-Code "mod/HoISubmod/events/$file")) {
+        if ($node.Key -eq 'country_event') {
+            $id = Value $node 'id'
+            if ($events.ContainsKey($id)) { throw "Duplicate event: $id" }
+            $events[$id] = $node
+        }
+    }
 }
 
 function New-World {
-    $cya = @{ Tag = 'CYA'; Flags = @(); Ideas = @(); Characters = @(); Goals = @(); Wars = @() }
+    $cya = @{ Tag = 'CYA'; Flags = @(); Ideas = @(); Characters = @(); Goals = @(); Wars = @(); Events = @() }
     return @{ Root = $cya; Countries = @{ CYA = $cya }; States = @{}; Global = @(); Completed = @(); Hide = $true; Date = [datetime]::new(1021, 5, 22) }
 }
 function Add-State($world, [int] $id, [string] $owner = 'CYA', [string] $controller = 'CYA', [string] $continent = 'asia', [bool] $impassable = $false) {
@@ -118,6 +128,7 @@ function Test-Conditions($nodes, $world, $scope = $world.Root, $previous = $null
             'is_on_continent' { $scope.Continent -eq $v }
             'impassable' { [bool] $scope.Impassable -eq ($v -eq 'yes') }
             'tag' { $scope.Tag -eq $(if ($v -eq 'ROOT') { $world.Root.Tag } else { $v }) }
+            'original_tag' { $(if ($scope.OriginalTag) { $scope.OriginalTag } else { $scope.Tag }) -eq $v }
             'is_subject_of' { $scope.Overlord -eq $world.Root.Tag }
             'owner' { Test-Conditions $node.Children $world $world.Countries[$scope.Owner] $scope }
             'controller' { Test-Conditions $node.Children $world $world.Countries[$scope.Controller] $scope }
@@ -528,7 +539,10 @@ function Invoke-Policy($nodes, $world, $scope = $world.Root) {
     foreach ($n in $nodes) {
         switch ($n.Key) {
             { $_ -in @('name', 'trigger', 'ai_chance', 'custom_effect_tooltip', 'log') } { continue }
-            'set_country_flag' { $scope.Flags = @($scope.Flags) + $n.Value }
+            'set_country_flag' {
+                $flag = if ($n.Children.Count) { Value $n 'flag' } else { $n.Value }
+                $scope.Flags = @($scope.Flags) + $flag
+            }
             'clr_country_flag' { $scope.Flags = @($scope.Flags | Where-Object { $_ -ne $n.Value }) }
             'add_to_variable' {
                 if (-not $scope.Variables) { $scope.Variables = @{} }
@@ -1110,6 +1124,252 @@ Test-Case 'March policy and county choices change shared programmes, not permane
             Assert-That ($w.Root.Variables.Count -gt 0) 'Choice has no programme consequences'
             Assert-That (-not (Test-Conditions (Prop $e 'trigger').Children $w)) 'Settlement awards twice'
         }
+    }
+}
+
+function Story-World([int] $number) {
+    $w = New-World
+    $w.Root.Characters = @('GRI_emperor_grover_vi')
+    if ($number -in @(3, 4, 9, 10, 11)) {
+        $w.Root.Flags = @('HSM_CYA_dawnclaw_dominant')
+        $w.Root.Leader = 'HSM_CYA_ferdinand_dawnclaw'
+    } else {
+        $w.Root.Flags = @('HSM_CYA_countess_dominant')
+        $w.Root.Leader = 'CYA_countess_taillow_sumpfkiel'
+    }
+    switch ($number) {
+        1 { $w.Completed = @('HSM_CYA_countess_integrate_evi_valley') }
+        2 { $w.Root.Flags += 'HSM_CYA_story_1_resolved' }
+        3 { $w.Completed = @('HSM_CYA_evi_governorate_codes') }
+        4 { $w.Root.Flags += 'HSM_CYA_story_3_resolved' }
+        { $_ -in @(5, 6) } {
+            $w.Date = [datetime]::new(1020, 1, 1)
+            if ($number -eq 6) { $w.Root.Flags += 'HSM_CYA_story_5_resolved' }
+        }
+        { $_ -in @(7, 8) } {
+            $w.Root.Leader = 'GRI_emperor_grover_vi'
+            $w.Root.Flags += 'HSM_CYA_1021_crown_in_trust'
+            if ($number -eq 8) { $w.Root.Flags += @('HSM_CYA_story_7_resolved', 'HSM_CYA_peace_constitution_done') }
+        }
+        { $_ -in @(9, 10) } {
+            $w.Root.Flags += @('HSM_CYA_1021_caged_coronation', 'HSM_CYA_puppet_petitions_resolved')
+            if ($number -eq 10) { $w.Root.Flags += @('HSM_CYA_story_9_resolved', 'HSM_CYA_peace_constitution_done') }
+        }
+        { $_ -in @(11, 12) } {
+            $w.Global += 'GRI_grover_vi_dead'
+            $w.Root.Characters = @()
+            $w.Root.Flags += 'HSM_CYA_peace_constitution_done'
+        }
+    }
+    return $w
+}
+foreach ($number in 1..12) {
+    Test-Case "Character scene $number opens once, records its outcome and spaces further scenes" {
+        $w = Story-World $number
+        $e = $events["hsm_cya_story.$number"]
+        Assert-That (Test-Conditions (Prop $e 'trigger').Children $w) 'Valid scene blocked'
+        Invoke-Policy (Prop $e 'immediate').Children $w
+        Assert-That (-not (Test-Conditions (Prop $e 'trigger').Children $w)) 'Scene can repeat'
+        Assert-That ('HSM_CYA_story_cooldown' -in $w.Root.Flags) 'Missing global scene spacing'
+        $options = @(Eligible-Options $e $w)
+        Assert-That ($options.Count -eq $(if ($number -in @(1, 3, 5, 7)) { 2 } else { 1 })) 'Wrong story options'
+        Invoke-Policy $options[0].Children $w
+        Assert-That ("HSM_CYA_story_$($number)_resolved" -in $w.Root.Flags) 'Outcome lost'
+        Assert-That ($w.Root.Ideas.Count -eq 0) 'Story adds a micro-spirit'
+    }
+    Test-Case "Character scene $number offers only a harmless fallback after presence or authority changes" {
+        $w = Story-World $number; $e = $events["hsm_cya_story.$number"]
+        Invoke-Policy (Prop $e 'immediate').Children $w
+        $w.Root.Leader = 'unrelated_leader'; $w.Root.Characters = @()
+        $options = @(Eligible-Options $e $w)
+        Assert-That ($options.Count -eq 1 -and (Value $options[0] 'name') -eq 'HSM_CYA_story_circumstances_changed') 'Stale character choice still active'
+        Invoke-Policy $options[0].Children $w
+        Assert-That ("HSM_CYA_story_$($number)_resolved" -notin $w.Root.Flags -and -not $w.Root.Variables) 'Fallback awards effects'
+    }
+}
+Test-Case 'A route flag cannot make a retired Countess or departed Dawnclaw speak as ruler' {
+    $w = Story-World 1; $w.Root.Leader = 'GRI_emperor_grover_vi'
+    Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_1_ready.Children $w)) 'Countess remains ruler in scene'
+    foreach ($flag in @('HSM_CYA_dawnclaw_dead', 'HSM_CYA_dawnclaw_departed')) {
+        $w = Story-World 3; $w.Root.Flags += $flag
+        Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_3_ready.Children $w)) 'Absent Dawnclaw appears'
+    }
+}
+Test-Case 'New budget promises cannot be made after the corresponding post-war settlement' {
+    foreach ($spec in @(@(1, 'HSM_CYA_peace_reconstruction_done'), @(3, 'HSM_CYA_peace_demobilization_done'))) {
+        $w = Story-World $spec[0]; $w.Root.Flags += $spec[1]
+        Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($spec[0])_ready"].Children $w)) 'Retroactive promise'
+    }
+}
+Test-Case 'Child scenes reject death, foreign custody, a previous reign and the majority birthday' {
+    foreach ($number in @(5, 6)) {
+        foreach ($change in @('dead', 'abroad', 'reigned', 'adult', 'ruler')) {
+            $w = Story-World $number
+            switch ($change) {
+                dead { $w.Global += 'GRI_grover_vi_dead' }
+                abroad { $w.Root.Characters = @() }
+                reigned { $w.Root.Flags += 'HSM_CYA_grover_reigned_elsewhere' }
+                adult { $w.Date = [datetime]::new(1021, 5, 21) }
+                ruler { $w.Root.Leader = 'GRI_emperor_grover_vi' }
+            }
+            Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($number)_ready"].Children $w)) "Unsafe childhood: $number / $change"
+        }
+    }
+}
+Test-Case 'Every real coronation variant opens the adult ruler story, including the court in exile' {
+    foreach ($flag in @('HSM_CYA_1021_crown_in_trust', 'HSM_CYA_1021_grover_restored', 'HSM_CYA_exile_coronation_done')) {
+        $w = Story-World 7; $w.Root.Flags = @($flag)
+        Assert-That (Test-Conditions $triggers.HSM_CYA_story_7_ready.Children $w) "Coronation excluded: $flag"
+        $w.Root.Leader = 'CYA_countess_taillow_sumpfkiel'
+        Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_7_ready.Children $w)) 'Title mistaken for actual authority'
+    }
+    $w = Story-World 7; $w.Global += 'GRI_grover_vi_dead'
+    Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_7_ready.Children $w)) 'Dead ruler appears'
+}
+Test-Case 'Puppet and independent Grover scenes are mutually exclusive and preserve authority' {
+    $w = Story-World 9
+    Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_7_ready.Children $w)) 'Puppet gets executive power'
+    Invoke-Policy (Prop $events['hsm_cya_story.9'] 'option')[0].Children $w
+    Assert-That ($w.Root.Leader -eq 'HSM_CYA_ferdinand_dawnclaw') 'Puppet scene silently replaces ruler'
+    $w.Root.Leader = 'GRI_emperor_grover_vi'
+    Assert-That (-not (Test-Conditions $triggers.HSM_CYA_story_9_ready.Children $w)) 'Independent ruler still caged'
+}
+foreach ($spec in @(@(2, 1, 45), @(4, 3, 45), @(6, 5, 45), @(8, 7, 60), @(10, 9, 45))) {
+    Test-Case "Follow-up $($spec[0]) waits for a resolved choice and the declared interval" {
+        $w = Story-World $spec[0]
+        $ready = $triggers["HSM_CYA_story_$($spec[0])_ready"].Children
+        $w.Root.Flags = @($w.Root.Flags | Where-Object { $_ -ne "HSM_CYA_story_$($spec[1])_resolved" })
+        Assert-That (-not (Test-Conditions $ready $w)) 'Follow-up without a choice'
+        $w.Root.Flags += @("HSM_CYA_story_$($spec[1])_resolved", "HSM_CYA_story_$($spec[1])_wait")
+        Assert-That (-not (Test-Conditions $ready $w)) 'Follow-up during waiting period'
+        foreach ($o in (Prop $events["hsm_cya_story.$($spec[1])"] 'option' | Where-Object { (Value $_ 'name') -ne 'HSM_CYA_story_circumstances_changed' })) {
+            $wait = @(Prop $o 'set_country_flag' | Where-Object { (Value $_ 'flag') -eq "HSM_CYA_story_$($spec[1])_wait" })
+            Assert-That ($wait.Count -eq 1 -and (Value $wait[0] 'days') -eq "$($spec[2])") 'Wrong declared delay'
+        }
+    }
+}
+Test-Case 'Final scenes wait for peace and settlement; exile ruler has a reachable alternative' {
+    foreach ($number in @(8, 10, 11, 12)) {
+        $w = Story-World $number; $w.Root.AtWar = $true
+        Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($number)_ready"].Children $w)) 'Wartime epilogue'
+        $w.Root.AtWar = $false
+        $w.Root.Flags = @($w.Root.Flags | Where-Object { $_ -ne 'HSM_CYA_peace_constitution_done' })
+        Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($number)_ready"].Children $w)) 'Epilogue before settlement'
+        if ($number -eq 8) {
+            $w.Root.Flags += 'HSM_CYA_path_imperial_administration'
+            Assert-That (Test-Conditions $triggers.HSM_CYA_story_8_ready.Children $w) 'Exile ruler trapped behind unavailable settlement'
+        }
+    }
+    foreach ($number in @(11, 12)) {
+        $w = Story-World $number; $w.Global = @()
+        Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($number)_ready"].Children $w)) 'Mourning a living Grover'
+    }
+}
+Test-Case 'Weekly dispatcher prioritizes one scene and respects cooldown, occupation and country' {
+    $w = Story-World 5; $w.Completed += 'HSM_CYA_countess_integrate_evi_valley'
+    Invoke-Policy $effects.HSM_CYA_story_tick.Children $w
+    Assert-That ((@($w.Root.Events) -join ',') -eq 'hsm_cya_story.5') 'Several simultaneous scenes or wrong priority'
+    Invoke-Policy (Prop $events['hsm_cya_story.5'] 'immediate').Children $w
+    Invoke-Policy $effects.HSM_CYA_story_tick.Children $w
+    Assert-That (@($w.Root.Events).Count -eq 1) 'Cooldown ignored'
+    foreach ($change in @('capitulated', 'subject', 'foreign')) {
+        $w = Story-World 1
+        switch ($change) {
+            capitulated { $w.Root.Capitulated = $true }
+            subject { $w.Root.Overlord = 'GRI' }
+            foreign { $w.Root.OriginalTag = 'GRI' }
+        }
+        Invoke-Policy $effects.HSM_CYA_story_tick.Children $w
+        Assert-That (-not $w.Root.Events) "Wrong dispatch: $change"
+    }
+    $actions = @(Read-Code 'mod/HoISubmod/common/on_actions/HSM_CYA_on_actions.txt')[0]
+    $weekly = Prop (Prop $actions 'on_weekly_CYA') 'effect'
+    Assert-That ((Value $weekly 'HSM_CYA_story_tick') -eq 'yes') 'Story dispatcher not wired to weekly action'
+}
+foreach ($spec in @(
+    @{ Number = 1; Promise = 'provincial'; Variable = 'HSM_CYA_compliance_growth'; Delta = [decimal]0.03; Event = 59; Option = 1; KeptOption = 0; Settled = 'provinces' },
+    @{ Number = 3; Promise = 'officer'; Variable = 'HSM_CYA_training_time_factor'; Delta = [decimal]-0.05; Event = 58; Option = 0; KeptOption = 1; Settled = 'officers' }
+)) {
+    Test-Case "The $($spec.Promise) guarantee has a reversible benefit and a one-time conflicting settlement" {
+        $w = Peace-World; $w.Root.Variables = @{ $spec.Variable = [decimal]0.12 }
+        Invoke-Policy (Prop $events["hsm_cya_story.$($spec.Number)"] 'option')[0].Children $w
+        Assert-That ($w.Root.Variables[$spec.Variable] -eq (0.12 + $spec.Delta)) 'Promise benefit missing'
+        $policy = (Prop $events["hsm_cyanolisia.$($spec.Event)"] 'option')[$spec.Option]
+        Invoke-Policy $policy.Children $w
+        Assert-That ($w.Root.add_political_power -eq -75) 'Settlement fee missing'
+        Assert-That ($w.Root.Variables[$spec.Variable] -eq 0.12) 'Other programme bonuses damaged'
+        Assert-That ("HSM_CYA_story_$($spec.Settled)_compensated" -in $w.Root.Flags) 'Settlement not recorded'
+        Assert-That ("HSM_CYA_story_$($spec.Promise)_guarantee" -in $w.Root.Flags) 'Promise history erased'
+        Invoke-Policy $effects["HSM_CYA_story_release_$($spec.Promise)_guarantee"].Children $w
+        Assert-That ($w.Root.Variables[$spec.Variable] -eq 0.12) 'Benefit removed twice'
+        Assert-That (-not (Test-Conditions $triggers["HSM_CYA_story_$($spec.Promise)_compensation_due"].Children $w)) 'Fee still due'
+    }
+    Test-Case "Honouring the $($spec.Promise) guarantee preserves its benefit without a settlement fee" {
+        $w = Peace-World
+        Invoke-Policy (Prop $events["hsm_cya_story.$($spec.Number)"] 'option')[0].Children $w
+        Invoke-Policy (Prop $events["hsm_cyanolisia.$($spec.Event)"] 'option')[$spec.KeptOption].Children $w
+        Assert-That (-not $w.Root.add_political_power) 'Honoured commitment charged'
+        Assert-That ("HSM_CYA_story_$($spec.Promise)_support_active" -in $w.Root.Flags) 'Honoured benefit lost'
+    }
+    Test-Case "No extra settlement fee without the $($spec.Promise) guarantee" {
+        $w = Peace-World
+        Invoke-Policy (Prop $events["hsm_cyanolisia.$($spec.Event)"] 'option')[$spec.Option].Children $w
+        Assert-That (-not $w.Root.add_political_power) 'Ordinary post-war policy penalized'
+        Assert-That (-not $w.Root.Variables -or -not $w.Root.Variables[$spec.Variable]) 'Nonexistent bonus subtracted'
+    }
+}
+Test-Case 'Grover can retain inherited commitments without altering them' {
+    $w = Story-World 7
+    Invoke-Policy (Prop $events['hsm_cya_story.1'] 'option')[0].Children $w
+    Invoke-Policy (Prop $events['hsm_cya_story.7'] 'option')[0].Children $w
+    Assert-That (Test-Conditions $triggers.HSM_CYA_story_provincial_compensation_due.Children $w) 'Guarantee silently cancelled'
+    Assert-That ($w.Root.Variables.HSM_CYA_compliance_growth -eq 0.03 -and -not $w.Root.add_political_power) 'Confirmation changes benefits or charges a fee'
+}
+Test-Case 'Public renegotiation charges once, removes only its own benefits, and prevents later settlement fees' {
+    $w = Peace-World
+    foreach ($number in @(1, 3)) { Invoke-Policy (Prop $events["hsm_cya_story.$number"] 'option')[0].Children $w }
+    Invoke-Policy (Prop $events['hsm_cya_story.7'] 'option')[1].Children $w
+    Assert-That ($w.Root.add_political_power -eq -50) 'Public negotiation charged incorrectly'
+    Assert-That ($w.Root.Variables.HSM_CYA_compliance_growth -eq 0 -and $w.Root.Variables.HSM_CYA_training_time_factor -eq 0) 'Renegotiated benefits persist'
+    Invoke-Policy (Prop $events['hsm_cyanolisia.58'] 'option')[0].Children $w
+    Invoke-Policy (Prop $events['hsm_cyanolisia.59'] 'option')[1].Children $w
+    Assert-That ($w.Root.add_political_power -eq -50) 'Double settlement charge'
+    $w = Story-World 7
+    Invoke-Policy (Prop $events['hsm_cya_story.7'] 'option')[1].Children $w
+    Assert-That (-not $w.Root.add_political_power -and -not $w.Root.Variables) 'Negotiation invents obligations'
+}
+
+foreach ($spec in @(
+    @(2, 'HSM_CYA_story_provincial_guarantee', 'HSM_CYA_story_provinces_compensated', 'discretion', 'bound', 'settled'),
+    @(4, 'HSM_CYA_story_officer_guarantee', 'HSM_CYA_story_officers_compensated', 'term', 'bound', 'settled')
+)) {
+    Test-Case "Scene $($spec[0]) remembers a promise, a refusal and a settlement before its delayed follow-up" {
+        $w = Story-World $spec[0]
+        foreach ($index in 0..2) {
+            if ($index -eq 1) { $w.Root.Flags += $spec[1] }
+            if ($index -eq 2) { $w.Root.Flags += $spec[2] }
+            $matching = @(Prop $events["hsm_cya_story.$($spec[0])"] 'desc' | Where-Object { Test-Conditions (Prop $_ 'trigger').Children $w })
+            Assert-That ($matching.Count -eq 1 -and (Value $matching[0] 'text') -eq "hsm_cya_story.$($spec[0]).$($spec[3 + $index]).d") 'Narrative ignores actual settlement'
+        }
+    }
+}
+Test-Case 'Adult memories, inherited obligations and epilogue text follow actual outcomes' {
+    $getters = @{}
+    foreach ($getter in (Read-Code 'mod/HoISubmod/common/scripted_localisation/HSM_CYA_story.txt')) { $getters[(Value $getter 'name')] = $getter }
+    foreach ($spec in @(
+        @('Childhood', '', 'memory_adult'),
+        @('Childhood', 'HSM_CYA_story_unedited_reports', 'memory_open'),
+        @('Childhood', 'HSM_CYA_story_filtered_reports', 'memory_filtered'),
+        @('Inheritance', 'HSM_CYA_story_provincial_guarantee', 'inheritance_provinces'),
+        @('Inheritance', 'HSM_CYA_story_officer_guarantee', 'inheritance_officers'),
+        @('Inheritance', 'HSM_CYA_story_provincial_guarantee,HSM_CYA_story_provinces_compensated', 'inheritance_unpledged'),
+        @('Settlement', 'HSM_CYA_story_reviewed_mandates', 'settlement_reviewed'),
+        @('Settlement', 'HSM_CYA_story_officers_compensated', 'settlement_adjusted'),
+        @('Settlement', 'HSM_CYA_story_inherited_mandates', 'settlement_inherited')
+    )) {
+        $w = New-World; $w.Root.Flags = $spec[1].Split(',')
+        $match = @(Prop $getters["GetHSMCyaStory$($spec[0])"] 'text' | Where-Object { Test-Conditions (Prop $_ 'trigger').Children $w })[0]
+        Assert-That ((Value $match 'localization_key') -eq "HSM_CYA_story_$($spec[2])") "Wrong callback: $($spec -join '/')"
     }
 }
 

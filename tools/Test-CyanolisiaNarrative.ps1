@@ -56,11 +56,15 @@ $triggerPath = 'mod/HoISubmod/common/scripted_triggers/HSM_CYA_scripted_triggers
 $effectPath = 'mod/HoISubmod/common/scripted_effects/HSM_CYA_scripted_effects.txt'
 $onActionPath = 'mod/HoISubmod/common/on_actions/HSM_CYA_on_actions.txt'
 $dynamicLocPath = 'mod/HoISubmod/common/scripted_localisation/HSM_CYA_narrative.txt'
+$storyPaths = @('mod/HoISubmod/events/HSM_CYA_story.txt',
+    'mod/HoISubmod/common/scripted_triggers/HSM_CYA_story.txt',
+    'mod/HoISubmod/common/scripted_effects/HSM_CYA_story.txt',
+    'mod/HoISubmod/common/scripted_localisation/HSM_CYA_story.txt')
 $paths = @($focusPath, $eventPath, $triggerPath, $effectPath, $onActionPath, $dynamicLocPath,
     'mod/HoISubmod/events/GriffonianEmpire Events.txt', 'mod/HoISubmod/events/Cyanolisia Events.txt',
     'mod/HoISubmod/common/decisions/HSM_CYA_imperial_settlement.txt',
 	'mod/HoISubmod/common/decisions/HSM_CYA_secondary_paths.txt',
-    'mod/HoISubmod/common/decisions/categories/HSM_CYA_decision_categories.txt')
+    'mod/HoISubmod/common/decisions/categories/HSM_CYA_decision_categories.txt') + $storyPaths
 foreach ($path in $paths) {
     Test-Case "Balanced script: $path" {
         $depth = 0
@@ -178,16 +182,18 @@ Test-Case 'Asterion protectorate is actually released after annexation, with hom
 $locales = @{}
 foreach ($language in @('english', 'russian')) {
     Test-Case "Localization encoding, quoting and unique keys: $language" {
-        $path = "mod/HoISubmod/localisation/$language/hsm_cyanolisia_l_$language.yml"
-        $bytes = [System.IO.File]::ReadAllBytes((Join-Path $root $path))
-        Assert-That ($bytes[0] -eq 239 -and $bytes[1] -eq 187 -and $bytes[2] -eq 191) 'Missing UTF-8 BOM'
         $map = @{}
-        foreach ($line in (Read-Code $path) -split '\r?\n') {
-            if ($line.Trim() -eq '' -or $line.TrimStart().StartsWith('#') -or $line -match '^l_\w+:') { continue }
-            Assert-That ($line -match '^\s+([\w.]+):\d*\s+"((?:[^"\\]|\\.)*)"\s*$') "Malformed localization: $line"
-            $key = $Matches[1]
-            Assert-That (-not $map.ContainsKey($key)) "Duplicate key: $key"
-            $map[$key] = $Matches[2]
+        foreach ($stem in @('hsm_cyanolisia', 'hsm_cya_story')) {
+            $path = "mod/HoISubmod/localisation/$language/$($stem)_l_$language.yml"
+            $bytes = [System.IO.File]::ReadAllBytes((Join-Path $root $path))
+            Assert-That ($bytes[0] -eq 239 -and $bytes[1] -eq 187 -and $bytes[2] -eq 191) "Missing UTF-8 BOM: $path"
+            foreach ($line in (Read-Code $path) -split '\r?\n') {
+                if ($line.Trim() -eq '' -or $line.TrimStart().StartsWith('#') -or $line -match '^l_\w+:') { continue }
+                Assert-That ($line -match '^\s+([\w.]+):\d*\s+"((?:[^"\\]|\\.)*)"\s*$') "Malformed localization: $line"
+                $key = $Matches[1]
+                Assert-That (-not $map.ContainsKey($key)) "Duplicate key: $key"
+                $map[$key] = $Matches[2]
+            }
         }
         $locales[$language] = $map
     }
@@ -195,7 +201,7 @@ foreach ($language in @('english', 'russian')) {
 Test-Case 'EN/RU keys and all new narrative references agree' {
     Assert-That ((($locales.english.Keys | Sort-Object) -join ',') -ceq (($locales.russian.Keys | Sort-Object) -join ',')) 'Locale inventories differ'
     foreach ($path in $paths) {
-        foreach ($m in [regex]::Matches((Read-Code $path), '\b(?:title|desc|text|name|tooltip|localization_key|custom_effect_tooltip)\s*=\s*"?((?:HSM_CYA_|hsm_cyanolisia\.)[\w.]+)')) {
+        foreach ($m in [regex]::Matches((Read-Code $path), '\b(?:title|desc|text|name|tooltip|localization_key|custom_effect_tooltip)\s*=\s*"?((?:HSM_CYA_|hsm_cyanolisia\.|hsm_cya_story\.)[\w.]+)')) {
             Assert-That ($locales.english.ContainsKey($m.Groups[1].Value)) "Unlocalized reference: $($m.Groups[1].Value)"
         }
     }
@@ -252,6 +258,57 @@ Test-Case 'Regional callbacks use recorded choices and have an unsettled fallbac
     foreach ($region in @('Kaiv', 'Midoria', 'Gryphus')) {
         Assert-That ($dynamic.Contains("name = GetHSMCya$($region)Settlement")) "Missing dynamic text: $region"
         Assert-That ($dynamic.Contains("HSM_CYA_petitions_$($region.ToLowerInvariant())_unsettled")) "Missing fallback: $region"
+    }
+}
+$storyEvents = Get-Definitions (Read-Code $storyPaths[0]) 'country_event'
+Test-Case 'Twelve character scenes use a separate, consistent namespace and existing event pictures' {
+    Assert-That ($storyEvents.Count -eq 12) 'Unexpected character scene inventory'
+    $gfx = Read-Code 'EaW/interface/eaw_eventpictures.gfx'
+    foreach ($number in 1..12) {
+        $id = "hsm_cya_story.$number"
+        Assert-That ($storyEvents.ContainsKey($id)) "Missing scene: $id"
+        Assert-That (-not $events.ContainsKey($id)) "Duplicate event ID: $id"
+        Assert-That ($storyEvents[$id].Contains("trigger = { HSM_CYA_story_$($number)_ready = yes }")) "Missing readiness gate: $id"
+        $picture = [regex]::Match($storyEvents[$id], '\bpicture = (\w+)').Groups[1].Value
+        Assert-That ($picture -and $gfx.Contains("name = `"$picture`"")) "Unknown event picture: $picture"
+        foreach ($language in @('english', 'russian')) {
+            Assert-That ($locales[$language].ContainsKey("$id.t") -and $locales[$language].ContainsKey("$id.a")) "Missing title/option: $language / $id"
+        }
+    }
+}
+Test-Case 'Character scenes never appoint, transfer, resurrect or kill rulers, or add national spirits' {
+    $code = (Read-Code $storyPaths[0]) + (Read-Code $storyPaths[2])
+    Assert-That (-not ($code -match '\b(?:promote_character|add_country_leader_role|retire_character|recruit_character|set_nationality|set_politics|clr_global_flag|add_ideas|swap_ideas|load_focus_tree)\s*=')) 'Narrative scene changes succession, spirits or tree'
+}
+Test-Case 'Story callbacks refer to recorded outcomes and every getter has an unconditional fallback' {
+    $dynamic = Read-Code $storyPaths[3]
+    $code = (Read-Code $storyPaths[0]) + (Read-Code $eventPath)
+    foreach ($m in [regex]::Matches($dynamic, 'has_country_flag = (\w+)')) {
+        Assert-That ($code.Contains("set_country_flag = $($m.Groups[1].Value)")) "Callback never recorded: $($m.Groups[1].Value)"
+    }
+    Assert-That ([regex]::Matches($dynamic, 'text = \{ localization_key = ').Count -eq 3) 'Missing callback fallback'
+    foreach ($language in @('english', 'russian')) {
+        foreach ($text in $locales[$language].Values) {
+            foreach ($m in [regex]::Matches($text, '\[Root\.(GetHSMCyaStory\w+)\]')) {
+                Assert-That ($dynamic.Contains("name = $($m.Groups[1].Value)")) "Unresolved story getter: $($m.Groups[1].Value)"
+            }
+        }
+    }
+}
+Test-Case 'Budget commitment flags shown by conditions and effects have readable EN/RU names' {
+    $code = (Read-Code $storyPaths[1]) + (Read-Code $storyPaths[2])
+    foreach ($m in [regex]::Matches($code, 'has_country_flag = (HSM_CYA_story_(?:\w+_guarantee|reviewed_mandates|\w+_compensated|\w+_support_active))')) {
+        foreach ($language in @('english', 'russian')) {
+            Assert-That ($locales[$language].ContainsKey($m.Groups[1].Value)) "Raw commitment flag: $language / $($m.Groups[1].Value)"
+        }
+    }
+}
+Test-Case 'New story files have no merge markers or trailing whitespace' {
+    $files = $storyPaths + @('mod/HoISubmod/localisation/english/hsm_cya_story_l_english.yml',
+        'mod/HoISubmod/localisation/russian/hsm_cya_story_l_russian.yml')
+    foreach ($path in $files) {
+        $code = (Read-Code $path) -replace '\r\n', "`n"
+        Assert-That (-not ($code -match '(?m)^(?:<<<<<<<|=======|>>>>>>>)|[\t ]+$')) "Merge marker or whitespace: $path"
     }
 }
 if ($CompareHead) {

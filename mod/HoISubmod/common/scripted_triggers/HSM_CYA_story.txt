@@ -1,0 +1,142 @@
+# Character presence and actual authority, not historical route flags alone.
+HSM_CYA_story_countess = {
+	has_country_flag = HSM_CYA_countess_dominant
+	has_country_leader = { character = CYA_countess_taillow_sumpfkiel ruling_only = yes }
+}
+
+HSM_CYA_story_dawnclaw = {
+	has_country_flag = HSM_CYA_dawnclaw_dominant
+	NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+	NOT = { has_country_flag = HSM_CYA_dawnclaw_departed }
+	has_country_leader = { character = HSM_CYA_ferdinand_dawnclaw ruling_only = yes }
+}
+
+HSM_CYA_story_child = {
+	HSM_CYA_grover_in_our_custody = yes
+	date < 1021.5.21
+	NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+	NOT = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
+	OR = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+		has_country_flag = HSM_CYA_path_imperial_administration
+	}
+}
+
+HSM_CYA_story_ruler = {
+	HSM_CYA_grover_in_our_custody = yes
+	date > 1021.5.20
+	has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+	OR = {
+		has_country_flag = HSM_CYA_1021_crown_in_trust
+		has_country_flag = HSM_CYA_1021_grover_restored
+		has_country_flag = HSM_CYA_exile_coronation_done
+	}
+}
+
+HSM_CYA_story_puppet = {
+	HSM_CYA_grover_in_our_custody = yes
+	date > 1021.5.20
+	has_country_flag = HSM_CYA_1021_caged_coronation
+	HSM_CYA_story_dawnclaw = yes
+	NOT = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
+}
+
+HSM_CYA_story_officer_compensation_due = {
+	has_country_flag = HSM_CYA_story_officer_guarantee
+	NOT = { has_country_flag = HSM_CYA_story_reviewed_mandates }
+	NOT = { has_country_flag = HSM_CYA_story_officers_compensated }
+}
+
+HSM_CYA_story_provincial_compensation_due = {
+	has_country_flag = HSM_CYA_story_provincial_guarantee
+	NOT = { has_country_flag = HSM_CYA_story_reviewed_mandates }
+	NOT = { has_country_flag = HSM_CYA_story_provinces_compensated }
+}
+
+HSM_CYA_story_1_ready = {
+	HSM_CYA_story_countess = yes
+	NOT = { has_country_flag = HSM_CYA_story_1_opened }
+	has_completed_focus = HSM_CYA_countess_integrate_evi_valley
+	NOT = { has_country_flag = HSM_CYA_peace_reconstruction_done }
+}
+
+HSM_CYA_story_2_ready = {
+	HSM_CYA_story_countess = yes
+	NOT = { has_country_flag = HSM_CYA_story_2_opened }
+	has_country_flag = HSM_CYA_story_1_resolved
+	NOT = { has_country_flag = HSM_CYA_story_1_wait }
+	has_war = no
+}
+
+HSM_CYA_story_3_ready = {
+	HSM_CYA_story_dawnclaw = yes
+	NOT = { has_country_flag = HSM_CYA_story_3_opened }
+	has_completed_focus = HSM_CYA_evi_governorate_codes
+	NOT = { has_country_flag = HSM_CYA_peace_demobilization_done }
+}
+
+HSM_CYA_story_4_ready = {
+	HSM_CYA_story_dawnclaw = yes
+	NOT = { has_country_flag = HSM_CYA_story_4_opened }
+	has_country_flag = HSM_CYA_story_3_resolved
+	NOT = { has_country_flag = HSM_CYA_story_3_wait }
+	has_war = no
+}
+
+HSM_CYA_story_5_ready = {
+	HSM_CYA_story_child = yes
+	NOT = { has_country_flag = HSM_CYA_story_5_opened }
+}
+
+HSM_CYA_story_6_ready = {
+	HSM_CYA_story_child = yes
+	NOT = { has_country_flag = HSM_CYA_story_6_opened }
+	has_country_flag = HSM_CYA_story_5_resolved
+	NOT = { has_country_flag = HSM_CYA_story_5_wait }
+}
+
+HSM_CYA_story_7_ready = {
+	HSM_CYA_story_ruler = yes
+	NOT = { has_country_flag = HSM_CYA_story_7_opened }
+}
+
+HSM_CYA_story_8_ready = {
+	HSM_CYA_story_ruler = yes
+	NOT = { has_country_flag = HSM_CYA_story_8_opened }
+	has_country_flag = HSM_CYA_story_7_resolved
+	NOT = { has_country_flag = HSM_CYA_story_7_wait }
+	has_war = no
+	OR = { has_country_flag = HSM_CYA_peace_constitution_done has_country_flag = HSM_CYA_path_imperial_administration }
+}
+
+HSM_CYA_story_9_ready = {
+	HSM_CYA_story_puppet = yes
+	NOT = { has_country_flag = HSM_CYA_story_9_opened }
+	has_country_flag = HSM_CYA_puppet_petitions_resolved
+}
+
+HSM_CYA_story_10_ready = {
+	HSM_CYA_story_puppet = yes
+	NOT = { has_country_flag = HSM_CYA_story_10_opened }
+	has_country_flag = HSM_CYA_story_9_resolved
+	NOT = { has_country_flag = HSM_CYA_story_9_wait }
+	has_country_flag = HSM_CYA_peace_constitution_done
+	has_war = no
+}
+
+HSM_CYA_story_11_ready = {
+	HSM_CYA_story_dawnclaw = yes
+	NOT = { has_country_flag = HSM_CYA_story_11_opened }
+	has_global_flag = GRI_grover_vi_dead
+	has_country_flag = HSM_CYA_peace_constitution_done
+	has_war = no
+}
+
+HSM_CYA_story_12_ready = {
+	HSM_CYA_story_countess = yes
+	NOT = { has_country_flag = HSM_CYA_story_12_opened }
+	has_global_flag = GRI_grover_vi_dead
+	has_country_flag = HSM_CYA_peace_constitution_done
+	has_war = no
+}

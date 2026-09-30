@@ -1634,6 +1634,13 @@ country_event = {
 		clr_country_flag = HSM_CYA_peace_demobilization_pending
 		set_country_flag = HSM_CYA_peace_demobilization_done
 		set_country_flag = HSM_CYA_civilian_demobilization
+		if = {
+			limit = { HSM_CYA_story_officer_compensation_due = yes }
+			custom_effect_tooltip = HSM_CYA_story_officer_settlement_tt
+			add_political_power = -75
+			set_country_flag = HSM_CYA_story_officers_compensated
+			HSM_CYA_story_release_officer_guarantee = yes
+		}
 		382 = {
 			if = {
 				limit = { HSM_CYA_state_in_imperial_sphere = yes }
@@ -1708,6 +1715,13 @@ country_event = {
 		clr_country_flag = HSM_CYA_peace_reconstruction_pending
 		set_country_flag = HSM_CYA_peace_reconstruction_done
 		set_country_flag = HSM_CYA_central_research_budget
+		if = {
+			limit = { HSM_CYA_story_provincial_compensation_due = yes }
+			custom_effect_tooltip = HSM_CYA_story_provincial_settlement_tt
+			add_political_power = -75
+			set_country_flag = HSM_CYA_story_provinces_compensated
+			HSM_CYA_story_release_provincial_guarantee = yes
+		}
 		add_tech_bonus = { name = industrial_bonus bonus = 0.75 uses = 2 category = industry }
 	}
 

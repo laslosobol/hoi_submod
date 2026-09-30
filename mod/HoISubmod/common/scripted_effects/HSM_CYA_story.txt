@@ -1,0 +1,78 @@
+# Remove only the contribution made by this promise, once; retain its history.
+HSM_CYA_story_release_provincial_guarantee = {
+	if = {
+		limit = { has_country_flag = HSM_CYA_story_provincial_support_active }
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = -0.03 tooltip = HSM_CYA_compliance_growth_tt }
+		clr_country_flag = HSM_CYA_story_provincial_support_active
+	}
+}
+
+HSM_CYA_story_release_officer_guarantee = {
+	if = {
+		limit = { has_country_flag = HSM_CYA_story_officer_support_active }
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_training_time_factor = 0.05 tooltip = HSM_CYA_training_time_factor_tt }
+		clr_country_flag = HSM_CYA_story_officer_support_active
+	}
+}
+
+# One scene per dispatch; the timed flag spaces independent arcs as well.
+HSM_CYA_story_tick = {
+	if = {
+		limit = {
+			original_tag = CYA
+			has_capitulated = no
+			is_subject = no
+			NOT = { has_country_flag = HSM_CYA_story_cooldown }
+		}
+		if = {
+			limit = { HSM_CYA_story_7_ready = yes }
+			country_event = { id = hsm_cya_story.7 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_8_ready = yes }
+			country_event = { id = hsm_cya_story.8 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_11_ready = yes }
+			country_event = { id = hsm_cya_story.11 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_12_ready = yes }
+			country_event = { id = hsm_cya_story.12 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_9_ready = yes }
+			country_event = { id = hsm_cya_story.9 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_10_ready = yes }
+			country_event = { id = hsm_cya_story.10 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_5_ready = yes }
+			country_event = { id = hsm_cya_story.5 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_6_ready = yes }
+			country_event = { id = hsm_cya_story.6 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_1_ready = yes }
+			country_event = { id = hsm_cya_story.1 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_2_ready = yes }
+			country_event = { id = hsm_cya_story.2 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_3_ready = yes }
+			country_event = { id = hsm_cya_story.3 }
+		}
+		else_if = {
+			limit = { HSM_CYA_story_4_ready = yes }
+			country_event = { id = hsm_cya_story.4 }
+		}
+	}
+}

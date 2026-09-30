@@ -1,0 +1,389 @@
+add_namespace = hsm_cya_story
+
+country_event = {
+	id = hsm_cya_story.1
+	title = hsm_cya_story.1.t
+	desc = hsm_cya_story.1.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_1_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_1_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.1.a
+		trigger = { HSM_CYA_story_countess = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_1_resolved
+		set_country_flag = { flag = HSM_CYA_story_1_wait days = 45 }
+		set_country_flag = HSM_CYA_story_provincial_guarantee
+		set_country_flag = HSM_CYA_story_provincial_support_active
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.03 tooltip = HSM_CYA_compliance_growth_tt }
+		custom_effect_tooltip = HSM_CYA_story_provincial_guarantee_tt
+	}
+
+	option = {
+		name = hsm_cya_story.1.b
+		trigger = { HSM_CYA_story_countess = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_1_resolved
+		set_country_flag = { flag = HSM_CYA_story_1_wait days = 45 }
+		set_country_flag = HSM_CYA_story_revocable_mandate
+		custom_effect_tooltip = HSM_CYA_story_revocable_mandate_tt
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_countess = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.2
+	title = hsm_cya_story.2.t
+	desc = { trigger = { has_country_flag = HSM_CYA_story_provinces_compensated } text = hsm_cya_story.2.settled.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_story_provincial_guarantee NOT = { has_country_flag = HSM_CYA_story_provinces_compensated } } text = hsm_cya_story.2.bound.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_story_provincial_guarantee } } text = hsm_cya_story.2.discretion.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_2_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_2_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.2.a
+		trigger = { HSM_CYA_story_countess = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_2_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_countess = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.3
+	title = hsm_cya_story.3.t
+	desc = hsm_cya_story.3.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_3_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_3_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.3.a
+		trigger = { HSM_CYA_story_dawnclaw = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_3_resolved
+		set_country_flag = { flag = HSM_CYA_story_3_wait days = 45 }
+		set_country_flag = HSM_CYA_story_officer_guarantee
+		set_country_flag = HSM_CYA_story_officer_support_active
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_training_time_factor = -0.05 tooltip = HSM_CYA_training_time_factor_tt }
+		custom_effect_tooltip = HSM_CYA_story_officer_guarantee_tt
+	}
+
+	option = {
+		name = hsm_cya_story.3.b
+		trigger = { HSM_CYA_story_dawnclaw = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_3_resolved
+		set_country_flag = { flag = HSM_CYA_story_3_wait days = 45 }
+		set_country_flag = HSM_CYA_story_term_commissions
+		custom_effect_tooltip = HSM_CYA_story_term_commissions_tt
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_dawnclaw = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.4
+	title = hsm_cya_story.4.t
+	desc = { trigger = { has_country_flag = HSM_CYA_story_officers_compensated } text = hsm_cya_story.4.settled.d }
+	desc = { trigger = { has_country_flag = HSM_CYA_story_officer_guarantee NOT = { has_country_flag = HSM_CYA_story_officers_compensated } } text = hsm_cya_story.4.bound.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_story_officer_guarantee } } text = hsm_cya_story.4.term.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_4_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_4_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.4.a
+		trigger = { HSM_CYA_story_dawnclaw = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_4_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_dawnclaw = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.5
+	title = hsm_cya_story.5.t
+	desc = hsm_cya_story.5.d
+	picture = GFX_event_school
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_5_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_5_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.5.a
+		trigger = { HSM_CYA_story_child = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_5_resolved
+		set_country_flag = { flag = HSM_CYA_story_5_wait days = 45 }
+		set_country_flag = HSM_CYA_story_unedited_reports
+	}
+
+	option = {
+		name = hsm_cya_story.5.b
+		trigger = { HSM_CYA_story_child = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_5_resolved
+		set_country_flag = { flag = HSM_CYA_story_5_wait days = 45 }
+		set_country_flag = HSM_CYA_story_filtered_reports
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_child = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.6
+	title = hsm_cya_story.6.t
+	desc = { trigger = { has_country_flag = HSM_CYA_story_unedited_reports } text = hsm_cya_story.6.open.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_story_unedited_reports } } text = hsm_cya_story.6.filtered.d }
+	picture = GFX_event_school
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_6_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_6_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.6.a
+		trigger = { HSM_CYA_story_child = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_6_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_child = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.7
+	title = hsm_cya_story.7.t
+	desc = hsm_cya_story.7.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_7_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_7_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.7.a
+		trigger = { HSM_CYA_story_ruler = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_7_resolved
+		set_country_flag = { flag = HSM_CYA_story_7_wait days = 60 }
+		set_country_flag = HSM_CYA_story_inherited_mandates
+		custom_effect_tooltip = HSM_CYA_story_inherited_mandates_tt
+	}
+
+	option = {
+		name = hsm_cya_story.7.b
+		trigger = { HSM_CYA_story_ruler = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_7_resolved
+		set_country_flag = { flag = HSM_CYA_story_7_wait days = 60 }
+		if = {
+			limit = {
+				OR = {
+					HSM_CYA_story_officer_compensation_due = yes
+					HSM_CYA_story_provincial_compensation_due = yes
+				}
+			}
+			add_political_power = -50
+		}
+		set_country_flag = HSM_CYA_story_reviewed_mandates
+		HSM_CYA_story_release_provincial_guarantee = yes
+		HSM_CYA_story_release_officer_guarantee = yes
+		custom_effect_tooltip = HSM_CYA_story_reviewed_mandates_tt
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_ruler = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.8
+	title = hsm_cya_story.8.t
+	desc = hsm_cya_story.8.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_8_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_8_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.8.a
+		trigger = { HSM_CYA_story_ruler = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_8_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_ruler = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.9
+	title = hsm_cya_story.9.t
+	desc = { trigger = { has_country_flag = HSM_CYA_puppet_civil_audiences } text = hsm_cya_story.9.civil.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_puppet_civil_audiences } } text = hsm_cya_story.9.staff.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_9_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_9_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.9.a
+		trigger = { HSM_CYA_story_puppet = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_9_resolved
+		set_country_flag = { flag = HSM_CYA_story_9_wait days = 45 }
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_puppet = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.10
+	title = hsm_cya_story.10.t
+	desc = { trigger = { has_country_flag = HSM_CYA_puppet_civil_audiences } text = hsm_cya_story.10.civil.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_puppet_civil_audiences } } text = hsm_cya_story.10.staff.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_10_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_10_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.10.a
+		trigger = { HSM_CYA_story_puppet = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_10_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_puppet = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.11
+	title = hsm_cya_story.11.t
+	desc = { trigger = { has_country_flag = HSM_CYA_grover_executed } text = hsm_cya_story.11.executed.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_grover_executed } } text = hsm_cya_story.11.absent.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_11_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_11_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.11.a
+		trigger = { HSM_CYA_story_dawnclaw = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_11_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_dawnclaw = no }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = hsm_cya_story.12
+	title = hsm_cya_story.12.t
+	desc = hsm_cya_story.12.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_story_12_ready = yes }
+	immediate = {
+		set_country_flag = HSM_CYA_story_12_opened
+		set_country_flag = { flag = HSM_CYA_story_cooldown days = 21 }
+	}
+
+	option = {
+		name = hsm_cya_story.12.a
+		trigger = { HSM_CYA_story_countess = yes }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_story_12_resolved
+	}
+
+	option = {
+		name = HSM_CYA_story_circumstances_changed
+		trigger = { HSM_CYA_story_countess = no }
+		ai_chance = { factor = 1 }
+	}
+}
