@@ -1,4 +1,8 @@
 opinion_modifiers = {
+	HSM_CYA_border_compact_trade = {
+		trade = yes
+		value = 30
+	}
 	HSM_CYA_proxy_rule_trade = {
 		trade = yes
 		value = 50

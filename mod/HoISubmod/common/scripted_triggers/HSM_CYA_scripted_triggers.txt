@@ -1,3 +1,76 @@
+# Secondary routes use custody, not imperial cosmetics, as the dynastic authority.
+HSM_CYA_blackhollow_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_blackhollow_secured_tt
+		490 = { HSM_CYA_state_in_imperial_sphere = yes }
+		606 = { HSM_CYA_state_in_imperial_sphere = yes }
+		489 = { HSM_CYA_state_in_imperial_sphere = yes }
+		532 = { HSM_CYA_state_in_imperial_sphere = yes }
+	}
+}
+
+# EaW's grover.35/.41 transfer the child after the successor decision.
+# Do not pre-empt those courts, or the executions in grover.32/.40.
+HSM_CYA_displaced_court_available = {
+	tag = CYA
+	has_country_flag = HSM_CYA_path_imperial_administration
+	NOT = { has_country_flag = HSM_CYA_exile_court_resolved }
+	is_subject = no
+	has_capitulated = no
+	date < 1021.5.21
+	NOT = { has_global_flag = GRI_grover_vi_dead }
+	NOT = { HSM_CYA_grover_reigns_anywhere = yes }
+	NOT = { has_country_flag = HSM_CYA_grover_reigned_elsewhere }
+	NOT = { has_character = HSM_CYA_ferdinand_dawnclaw }
+	has_country_leader = { character = CYA_countess_taillow_sumpfkiel ruling_only = yes }
+	NOT = { has_war_with = GRI }
+	GRI = {
+		has_character = GRI_emperor_grover_vi
+		OR = { exists = no has_capitulated = yes }
+		OR = {
+			AND = {
+				has_character = GRI_archon_eros_vii
+				has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes }
+				NOT = { has_global_flag = GRI_eros_dead }
+			}
+			AND = {
+				has_character = STW_gabriela_eagleclaw
+				has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
+			}
+		}
+	}
+	382 = {
+		owner = {
+			has_country_flag = holds_griffon_capital
+			controls_state = 382
+			NOT = { tag = GRI }
+			NOT = { tag = ROOT }
+			NOT = { tag = BRZ }
+			NOT = { has_idea = GRI_grover_vi }
+			NOT = { has_character = GRI_emperor_grover_vi }
+			NOT = { has_focus_tree = angriver_focus_blackclaw_imperial }
+			NOT = { has_country_leader = { character = ANG_baron_leer_the_vicious ruling_only = yes } }
+			NOT = { AND = { tag = PYT OR = { has_government = fascism has_government = communism } } }
+			NOT = {
+				AND = {
+					tag = YAL
+					OR = {
+						has_government = fascism
+						has_government = communism
+						has_country_flag = YAL_right_coalition_chosen
+						has_country_leader = { character = YAL_emperor_grover_ii ruling_only = yes }
+					}
+				}
+			}
+		}
+	}
+}
+
+HSM_CYA_exile_household_present = {
+	has_country_flag = HSM_CYA_exile_court_received
+	HSM_CYA_grover_in_our_custody = yes
+}
+
 HSM_CYA_western_griffonia_secured = {
 	custom_trigger_tooltip = {
 		tooltip = HSM_CYA_western_griffonia_secured_tt

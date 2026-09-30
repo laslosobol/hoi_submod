@@ -1,4 +1,45 @@
 characters = {
+	HSM_CYA_otto_wagenfels = {
+		name = HSM_CYA_otto_wagenfels
+		portraits = { civilian = { small = GFX_idea_generic_griffon_with_cap } }
+		advisor = {
+			slot = political_advisor
+			idea_token = HSM_CYA_otto_wagenfels
+			cost = 125
+			allowed = { original_tag = CYA }
+			available = { has_completed_focus = HSM_CYA_frontier_supply_corps }
+			traits = { HSM_CYA_transport_commissioner }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HSM_CYA_marta_eisenfeder = {
+		name = HSM_CYA_marta_eisenfeder
+		gender = female
+		portraits = { civilian = { small = GFX_idea_generic_griffon_chill2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = HSM_CYA_marta_eisenfeder
+			cost = 125
+			allowed = { original_tag = CYA }
+			available = { has_completed_focus = HSM_CYA_arsenal_network }
+			traits = { HSM_CYA_armament_coordinator }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	HSM_CYA_klara_morgenflug = {
+		name = HSM_CYA_klara_morgenflug
+		gender = female
+		portraits = { civilian = { small = GFX_idea_generic_griffon_air } }
+		advisor = {
+			slot = political_advisor
+			idea_token = HSM_CYA_klara_morgenflug
+			cost = 125
+			allowed = { original_tag = CYA }
+			available = { has_completed_focus = HSM_CYA_flight_instructors }
+			traits = { HSM_CYA_aviation_organiser }
+			ai_will_do = { factor = 1 }
+		}
+	}
 	HSM_CYA_ferdinand_dawnclaw = {
 		name = GRI_ferdinand_dawnclaw
 		can_be_captured = no

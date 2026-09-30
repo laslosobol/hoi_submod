@@ -1,6 +1,16 @@
 on_actions = {
 	on_daily_CYA = {
 		effect = {
+			# Give the successor's EaW fate events time to resolve before offering asylum.
+			if = {
+				limit = {
+					has_completed_focus = HSM_CYA_safe_harbour
+					HSM_CYA_displaced_court_available = yes
+					NOT = { has_country_flag = HSM_CYA_exile_offer_scheduled }
+				}
+				set_country_flag = HSM_CYA_exile_offer_scheduled
+				country_event = { id = hsm_cyanolisia.73 days = 14 }
+			}
 			if = {
 				limit = {
 					has_completed_focus = HSM_CYA_evi_governorate_codes
@@ -33,6 +43,7 @@ on_actions = {
 			if = {
 				limit = {
 					has_country_flag = HSM_CYA_dynamic_modifiers_installed
+					NOT = { has_country_flag = HSM_CYA_path_imperial_administration }
 					OR = {
 						AND = {
 							has_country_flag = HSM_CYA_dawnclaw_dead
@@ -57,6 +68,7 @@ on_actions = {
 				limit = {
 					OR = {
 						has_country_flag = HSM_CYA_countess_dominant
+						has_country_flag = HSM_CYA_path_imperial_administration
 						AND = {
 							has_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 							NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }

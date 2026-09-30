@@ -93,8 +93,17 @@ function Test-Conditions($nodes, $world, $scope = $world.Root, $previous = $null
             'has_game_rule' { $world.Hide }
             'has_idea' { $v -in $scope.Ideas }
             'has_character' { $v -in $scope.Characters }
+			'has_country_leader' { $scope.Leader -eq (Value $node 'character') }
+			'has_capitulated' { [bool] $scope.Capitulated -eq ($v -eq 'yes') }
+			'has_focus_tree' { $scope.Tree -eq $v }
+			'has_government' { $scope.Government -eq $v }
+			'is_in_faction' { [bool] $scope.Faction -eq ($v -eq 'yes') }
+			'any_country' { @($world.Countries.Values | Where-Object { $_.Exists -and (Test-Conditions $node.Children $world $_ $scope) }).Count -gt 0 }
             'has_war' { [bool] $scope.AtWar -eq ($v -eq 'yes') }
-            'has_war_with' { $world.Root.Tag -in $scope.Wars }
+            'has_war_with' {
+                $target = switch ($v) { 'ROOT' { $world.Root.Tag }; 'FROM' { $world.Sender.Tag }; default { $v } }
+                $target -in $scope.Wars
+            }
             'has_wargoal_against' { $previous.Tag -in $scope.Goals }
             'exists' { [bool] $scope.Exists -eq ($v -eq 'yes') }
             'is_subject' { [bool] $scope.Overlord -eq ($v -eq 'yes') }
@@ -148,8 +157,8 @@ Test-Case 'Parser ignores comments and quoted braces, preserving repeated blocks
     $sample = Parse-Code "shared_focus = { id = real icon = actual log = `"id = fake }`" # }`n prerequisite = { focus = a } prerequisite = { focus = b } }"
     Assert-That ((Value $sample[0] 'id') -eq 'real' -and (Prop $sample[0] 'prerequisite').Count -eq 2) 'Incorrect extraction'
 }
-Test-Case 'All 364 focus references exist and mutually exclusive links are symmetric' {
-    Assert-That ($focus.Count -eq 364) 'Unexpected focus inventory'
+Test-Case 'All 383 focus references exist and mutually exclusive links are symmetric' {
+    Assert-That ($focus.Count -eq 383) 'Unexpected focus inventory'
     foreach ($id in $focus.Keys) {
         foreach ($key in @('prerequisite', 'mutually_exclusive')) {
             foreach ($p in (Prop $focus[$id] $key)) {
@@ -479,6 +488,9 @@ $scenarios = @{
     dawnclaw = @('dawnclaw_branch_unlocked', 'path_marriage', 'dawnclaw_dominant')
     administration = @('dawnclaw_branch_unlocked', 'path_imperial_administration', 'dawnclaw_dead')
     departure = @('dawnclaw_branch_unlocked', 'path_imperial_administration', 'dawnclaw_departed')
+	refusal = @('path_imperial_administration')
+	exile = @('path_imperial_administration', 'exile_court_received')
+	exile_crowned = @('path_imperial_administration', 'exile_court_received', 'exile_coronation_done')
 }
 foreach ($settlement in @('countess_crown_prepared', '1021_crown_in_trust', '1021_memorial_regency')) {
     $scenarios[$settlement] = $scenarios.countess + @('empire_descendant_declared', 'countess_crown_prepared', $settlement)
@@ -512,6 +524,7 @@ foreach ($name in ($scenarios.Keys | Sort-Object)) {
 
 # Exercise policy effects directly; this remains a small scenario interpreter.
 function Invoke-Policy($nodes, $world, $scope = $world.Root) {
+    $branchTaken = $false
     foreach ($n in $nodes) {
         switch ($n.Key) {
             { $_ -in @('name', 'trigger', 'ai_chance', 'custom_effect_tooltip', 'log') } { continue }
@@ -522,11 +535,35 @@ function Invoke-Policy($nodes, $world, $scope = $world.Root) {
                 $v = @($n.Children | Where-Object Key -ne 'tooltip')[0]
                 $scope.Variables[$v.Key] = [decimal] $scope.Variables[$v.Key] + [decimal] $v.Value
             }
+            'remove_ideas' { $scope.Ideas = @($scope.Ideas | Where-Object { $_ -ne $n.Value }) }
+            'add_ideas' { $scope.Ideas = @($scope.Ideas) + $n.Value }
+            'recruit_character' { $scope.Characters = @($scope.Characters) + $n.Value }
             'if' {
-                if (Test-Conditions (Prop $n 'limit').Children $world $scope) {
+                $branchTaken = Test-Conditions (Prop $n 'limit').Children $world $scope
+                if ($branchTaken) {
                     Invoke-Policy @($n.Children | Where-Object Key -ne 'limit') $world $scope
                 }
             }
+            'else_if' {
+                if (-not $branchTaken -and (Test-Conditions (Prop $n 'limit').Children $world $scope)) {
+                    $branchTaken = $true
+                    Invoke-Policy @($n.Children | Where-Object Key -ne 'limit') $world $scope
+                }
+            }
+            'else' { if (-not $branchTaken) { Invoke-Policy $n.Children $world $scope }; $branchTaken = $true }
+            'ROOT' { Invoke-Policy $n.Children $world $world.Root }
+            'swap_ideas' {
+                $scope.Ideas = @($scope.Ideas | Where-Object { $_ -ne (Value $n 'remove_idea') }) + (Value $n 'add_idea')
+            }
+            'mark_focus_tree_layout_dirty' { $world.LayoutDirty = $true }
+            'promote_character' { $scope.Leader = $n.Value }
+            'set_politics' { $scope.Government = Value $n 'ruling_party' }
+            'set_portraits' { $scope.Portraits = $n }
+            'add_country_leader_role' {
+                Assert-That ((Value $n 'promote_leader') -eq 'yes') 'Unexpected leader role without promotion'
+                $scope.Leader = Value $n 'character'
+            }
+            'add_dynamic_modifier' { $scope.Programs = @($scope.Programs) + (Value $n 'modifier') }
             'FROM' { Invoke-Policy $n.Children $world $world.Sender }
             'set_autonomy' {
                 Assert-That ((Value $n 'target') -eq 'ROOT') 'Unexpected autonomy target'
@@ -536,9 +573,16 @@ function Invoke-Policy($nodes, $world, $scope = $world.Root) {
             'add_building_construction' { $scope.Buildings = @($scope.Buildings) + $n }
             'add_extra_state_shared_building_slots' { $scope.Slots = [int] $scope.Slots + [int] $n.Value }
             'add_tech_bonus' { $scope.Research = @($scope.Research) + $n }
-            { $_ -in @('add_political_power', 'army_experience') } { $scope[$n.Key] = [decimal] $scope[$n.Key] + [decimal] $n.Value }
+            { $_ -in @('add_political_power', 'army_experience', 'add_command_power', 'add_stability') } { $scope[$n.Key] = [decimal] $scope[$n.Key] + [decimal] $n.Value }
             default {
-                if ($world.States.ContainsKey($n.Key)) { Invoke-Policy $n.Children $world $world.States[$n.Key] }
+                if ($effects.ContainsKey($n.Key)) { Invoke-Policy $effects[$n.Key].Children $world $scope }
+                elseif ($world.Countries.ContainsKey($n.Key)) { Invoke-Policy $n.Children $world $world.Countries[$n.Key] }
+                elseif ($n.Key -in $scope.Characters) {
+                    Assert-That ($n.Children.Count -eq 1 -and (Value $n 'set_nationality') -eq 'ROOT') 'Unexpected character effect'
+                    $scope.Characters = @($scope.Characters | Where-Object { $_ -ne $n.Key })
+                    $world.Root.Characters += $n.Key
+                }
+                elseif ($world.States.ContainsKey($n.Key)) { Invoke-Policy $n.Children $world $world.States[$n.Key] }
                 else { throw "Unsupported policy effect: $($n.Key)" }
             }
         }
@@ -722,6 +766,349 @@ Test-Case 'Campaign rewards no longer stack generic permanent modifiers; new var
             foreach ($v in @($n.Children | Where-Object Key -ne 'tooltip')) {
                 Assert-That ($modifiers.Contains("= $($v.Key)")) "Unbound modifier variable: $($v.Key)"
             }
+        }
+    }
+}
+
+# Regressions from the Dawnclaw playtest: inspect effects as well as prerequisites.
+foreach ($initial in @('CYA_minotaurian_indigenes', 'CYA_suppressed_indigenes', 'CYA_defeated_indigenes')) {
+    Test-Case "Prewar logistics replaces harsh minority policy: $initial" {
+        $w = New-World; $w.Root.Ideas = @($initial, 'CYA_minotaurian_outback')
+        Invoke-Policy (Prop $focus.HSM_CYA_minotaurian_logistics_board 'completion_reward').Children $w
+        Assert-That (($w.Root.Ideas -join ',') -eq 'HSM_CYA_strained_minotaurian_indigenes') 'Old penalties remain or new policy missing'
+        $ideas = (Read-Code 'mod/HoISubmod/common/ideas/HSM_CYA_ideas.txt')[0]
+        $policy = Prop (Prop $ideas 'country') 'HSM_CYA_strained_minotaurian_indigenes'
+        Assert-That ([decimal] (Value (Prop $policy 'modifier') 'conscription_factor') -eq -0.20) 'Prewar recruitment penalty is not -20%'
+        Assert-That ((Prop $focus.HSM_CYA_operation_against_asterion 'prerequisite').Children.Value -contains 'HSM_CYA_minotaurian_logistics_board') 'Mitigation is not before the war goal'
+        Assert-That (-not $w.Completed -and -not $w.Root.AtWar) 'Fixture accidentally required a conquered south'
+    }
+}
+Test-Case 'Prewar minority settlement is idempotent and never worsens a better policy' {
+    foreach ($idea in @('', 'CYA_radicalised_indigenes', 'CYA_recognised_minotaurian_rights', 'CYA_true_equality', 'CYA_seperate_but_equal', 'HSM_CYA_registered_minotaurian_communities', 'HSM_CYA_strained_minotaurian_indigenes')) {
+        $w = New-World; $w.Root.Ideas = @($idea | Where-Object { $_ })
+        $before = $w.Root.Ideas -join ','
+        1..2 | ForEach-Object { Invoke-Policy $effects.HSM_CYA_prewar_minotaur_settlement.Children $w }
+        Assert-That (($w.Root.Ideas -join ',') -eq $before) "Policy worsened or duplicated: $idea"
+    }
+}
+Test-Case 'Asterion minority follow-up does not require Sicameon and replaces rather than stacks ideas' {
+    $w = New-World; Add-State $w 386 'MIT' 'MIT'
+    $w.Countries.MIT = @{ Tag = 'MIT'; Exists = $true; Overlord = 'CYA' }
+    $w.Completed = @('HSM_CYA_military_governorate_asterion')
+    Assert-That (Test-Available 'HSM_CYA_asterion_hostage_bureau' $w) 'Asterion follow-up still needs Sicameon'
+    $w.Completed += 'HSM_CYA_asterion_hostage_bureau'
+    Assert-That (Test-Available 'HSM_CYA_minotaurian_security_registry' $w) 'Registry still needs Sicameon'
+    $w.Root.Ideas = @('HSM_CYA_strained_minotaurian_indigenes')
+    Invoke-Policy (Prop $focus.HSM_CYA_minotaurian_security_registry 'completion_reward').Children $w
+    Assert-That (($w.Root.Ideas -join ',') -eq 'HSM_CYA_registered_minotaurian_communities') 'Postwar policy stacks or removes the wrong idea'
+}
+Test-Case 'Asterion protectorate preserves existing autonomy and is not repeated by Sicameon' {
+    $w = New-World; $w.Countries.MIT = @{ Tag = 'MIT'; Exists = $true; Overlord = 'CYA'; Autonomy = 'autonomy_dominion' }
+    Invoke-Policy $effects.HSM_CYA_establish_asterion_protectorate.Children $w
+    Assert-That ($w.Countries.MIT.Autonomy -eq 'autonomy_dominion') 'Existing subject autonomy changed'
+    Assert-That (@(Descendants $effects.HSM_CYA_establish_asterion_protectorate.Children | Where-Object Key -eq 'set_autonomy').Count -eq 0) 'Protectorate reimposes autonomy'
+    Assert-That ((Prop (Prop $focus.HSM_CYA_dawnclaw_integrate_south 'completion_reward') 'HSM_CYA_establish_asterion_protectorate').Count -eq 0) 'Sicameon still establishes Asterion'
+    Assert-That ((Prop (Prop $focus.HSM_CYA_military_governorate_asterion 'completion_reward') 'HSM_CYA_establish_asterion_protectorate').Count -eq 1) 'First settlement no longer releases annexed Asterion'
+}
+Test-Case 'Evi ends minority penalties regardless of the registry order, preserving better policies' {
+    $cleanup = @(Prop (Prop $focus.HSM_CYA_evi_governorate_codes 'completion_reward') 'if' | Where-Object { (Prop $_ 'remove_ideas').Count })
+    Assert-That ($cleanup.Count -eq 6) 'Evi does not cover every negative minority policy'
+    foreach ($initial in @('', 'CYA_minotaurian_indigenes', 'CYA_suppressed_indigenes', 'CYA_defeated_indigenes', 'CYA_radicalised_indigenes', 'HSM_CYA_strained_minotaurian_indigenes', 'HSM_CYA_registered_minotaurian_communities')) {
+        foreach ($registryFirst in @($true, $false)) {
+            $w = New-World; $w.Root.Ideas = @($initial | Where-Object { $_ })
+            $registry = (Prop $focus.HSM_CYA_minotaurian_security_registry 'completion_reward').Children
+            if ($registryFirst) { Invoke-Policy $registry $w }
+            Invoke-Policy $cleanup $w
+            $w.Completed += 'HSM_CYA_evi_governorate_codes'
+            if (-not $registryFirst) { Invoke-Policy $registry $w }
+            Assert-That ($w.Root.Ideas.Count -eq 0) "Minority penalty survives Evi: $initial, registry first=$registryFirst"
+        }
+    }
+    foreach ($policy in @('CYA_recognised_minotaurian_rights', 'CYA_true_equality', 'CYA_seperate_but_equal')) {
+        $w = New-World; $w.Root.Ideas = @($policy)
+        Invoke-Policy $cleanup $w
+        Assert-That (($w.Root.Ideas -join ',') -eq $policy) "Evi erases a better minority settlement: $policy"
+    }
+}
+Test-Case 'Late minority reforms cannot restore penalties after Evi consolidation' {
+    foreach ($initial in @('CYA_minotaurian_indigenes', 'CYA_suppressed_indigenes', 'CYA_defeated_indigenes')) {
+        $w = New-World; $w.Completed = @('HSM_CYA_evi_governorate_codes')
+        $w.Root.Ideas = @($initial)
+        Invoke-Policy $effects.HSM_CYA_prewar_minotaur_settlement.Children $w
+        Assert-That ($w.Root.Ideas.Count -eq 0) 'Logistics reintroduces the prewar penalty'
+        $w.Root.Ideas = @($initial)
+        Invoke-Policy (Prop $focus.HSM_CYA_minotaurian_security_registry 'completion_reward').Children $w
+        Assert-That ($w.Root.Ideas.Count -eq 0) 'Registry reintroduces the postwar penalty'
+        Assert-That ($w.Root.Variables.HSM_CYA_compliance_growth -eq 0.02) 'Late registry lost its administrative reward'
+    }
+}
+Test-Case 'Playtest tooltips attribute every variable to its actual national program' {
+    $binding = @{}
+    foreach ($m in (Read-Code 'mod/HoISubmod/common/dynamic_modifiers/HSM_CYA_dynamic_modifiers.txt')) {
+        foreach ($v in $m.Children | Where-Object Value -like 'HSM_CYA_*') { $binding[$v.Value] = "$($m.Key)_dummy_idea" }
+    }
+    foreach ($id in @('the_revealed_exile', 'security_districts', 'dawnclaw_war_room', 'minotaurian_logistics_board', 'minotaurian_security_registry', 'evi_governorate_codes', 'continental_ordnance')) {
+        $header = ''; $hasDelta = $false
+        foreach ($n in (Prop $focus["HSM_CYA_$id"] 'completion_reward').Children) {
+            if ($n.Key -eq 'custom_effect_tooltip' -and (Value $n 'localization_key') -eq 'modify_idea_tt') {
+                Assert-That (-not $header -or $hasDelta) "Empty modifier header: $id"
+                $header = Value $n 'IDEA'; $hasDelta = $false
+            } elseif ($n.Key -eq 'add_to_variable') {
+                $v = @($n.Children | Where-Object Key -ne 'tooltip')[0].Key
+                Assert-That ($binding[$v] -eq $header) "Wrong program heading for $id / $v"
+                $hasDelta = $true
+            }
+        }
+        Assert-That (-not $header -or $hasDelta) "Trailing empty modifier header: $id"
+    }
+}
+Test-Case 'Inactive minority and outback removals are guarded individually' {
+    function Assert-GuardedRemoval($nodes, $guards = @()) {
+        foreach ($n in $nodes) {
+            if ($n.Key -eq 'remove_ideas') { Assert-That ($n.Value -in $guards) "Unguarded removal: $($n.Value)" }
+            if ($n.Key -eq 'if') {
+                $direct = @((Prop $n 'limit').Children | Where-Object Key -eq 'has_idea' | ForEach-Object Value)
+                Assert-GuardedRemoval @($n.Children | Where-Object Key -ne 'limit') ($guards + $direct)
+            }
+        }
+    }
+    foreach ($id in @('the_revealed_exile', 'minotaurian_logistics_board', 'minotaurian_security_registry', 'evi_governorate_codes')) {
+        Assert-GuardedRemoval (Prop $focus["HSM_CYA_$id"] 'completion_reward').Children
+    }
+    Assert-GuardedRemoval $effects.HSM_CYA_prewar_minotaur_settlement.Children
+}
+Test-Case 'Dawnclaw receives a leader trait without an arbitrary political-power penalty' {
+    $role = Prop (Prop (Prop $focus.HSM_CYA_the_revealed_exile 'completion_reward') 'add_country_leader_role') 'country_leader'
+    Assert-That ((Prop $role 'traits').Children.Key -contains 'HSM_CYA_military_state_builder') 'Leader trait missing'
+    $trait = Prop (Read-Code 'mod/HoISubmod/common/country_leader/HSM_CYA_traits.txt')[0] 'HSM_CYA_military_state_builder'
+    Assert-That ($trait.Count -eq 1 -and (Prop $trait 'political_power_factor').Count -eq 0) 'Leader trait absent or PP penalty added'
+}
+Test-Case 'Continental ordnance uses current equipment and preserves factories and a lasting production benefit' {
+    $r = Prop $focus.HSM_CYA_continental_ordnance 'completion_reward'
+    $equipment = @(Prop $r 'add_equipment_to_stockpile')
+    Assert-That (@($equipment | Where-Object { (Value $_ 'type') -eq 'infantry_equipment_0' }).Count -eq 0) 'Obsolete fixed rifle model remains'
+    Assert-That (@($equipment | Where-Object { (Value $_ 'type') -eq 'infantry_equipment' -and (Value $_ 'amount') -eq '2000' }).Count -eq 1) 'Current rifle delivery missing'
+    Assert-That ((Prop $r 'add_to_variable').Children.Key -contains 'HSM_CYA_production_factory_max_efficiency_factor') 'Production reward missing'
+    Assert-That (@(Descendants $r.Children | Where-Object { $_.Key -eq 'add_building_construction' -and (Value $_ 'type') -eq 'arms_factory' -and (Value $_ 'level') -eq '2' }).Count -eq 1) 'Factory reward lost'
+}
+Test-Case 'All eight aviation focuses are early, shared, localized and have nonempty rewards' {
+    $air = @('independent_air_service', 'flight_instructors', 'aircraft_workshops', 'interceptor_contracts', 'battlefield_aircraft', 'air_warning_network', 'air_ground_liaison', 'unified_air_command')
+    $w = New-World
+    foreach ($name in $air) {
+        $id = "HSM_CYA_$name"; $f = $focus[$id]
+        Assert-That ($f -and $id -in $membership.cyan_original) "Unlinked aviation focus: $id"
+        Assert-That (Visible $id $w) "Aviation hidden before Dawnclaw: $id"
+        Assert-That ((Prop $f 'available').Count -eq 0 -and (Value $f 'cost') -in @('4', '5')) "Late or overlong aviation focus: $id"
+        Assert-That ((Prop $f 'completion_reward').Children.Count -gt 0) "Empty aviation reward: $id"
+        foreach ($lang in @('english', 'russian')) {
+            $loc = [IO.File]::ReadAllText((Join-Path $root "mod/HoISubmod/localisation/$lang/hsm_cyanolisia_l_$lang.yml"))
+            Assert-That ($loc -match "(?m)^ $($id):0 " -and $loc -match "(?m)^ $($id)_desc:0 ") "Missing $lang aviation text: $id"
+        }
+    }
+    foreach ($name in @('aircraft_workshops', 'interceptor_contracts', 'battlefield_aircraft')) {
+        $reward = (Prop $focus["HSM_CYA_$name"] 'completion_reward').Children
+        Assert-That (@($reward | Where-Object Key -eq 'else').Count -eq 1) "No non-BBA research fallback: $name"
+    }
+}
+Test-Case 'Aviation research categories, doctrine helpers and shine sprites exist' {
+    $categories = Get-ClausewitzTokens ([IO.File]::ReadAllText((Join-Path $root 'EaW/common/technology_tags/00_technology.txt')))
+    $doctrines = Read-Code 'EaW/common/scripted_effects/EAW_doctrine_mastery_effect.txt'
+    $shine = [IO.File]::ReadAllText((Join-Path $root 'mod/HoISubmod/interface/focus/shine/HSM_CYA_focus_shine.gfx'))
+    foreach ($name in @('independent_air_service', 'flight_instructors', 'aircraft_workshops', 'interceptor_contracts', 'battlefield_aircraft', 'air_warning_network', 'air_ground_liaison', 'unified_air_command')) {
+        $f = $focus["HSM_CYA_$name"]
+        foreach ($bonus in @(Descendants (Prop $f 'completion_reward').Children | Where-Object Key -eq 'add_tech_bonus')) {
+            foreach ($category in (Prop $bonus 'category').Value) { Assert-That ($category -in $categories) "Unknown aviation category: $category" }
+        }
+        foreach ($effect in @(Descendants (Prop $f 'completion_reward').Children | Where-Object Key -like 'air_*_mastery_doctrine_*')) {
+            Assert-That ($effect.Key -in $doctrines.Key) "Missing EaW doctrine effect: $($effect.Key)"
+        }
+        $sprite = Value $f 'icon'
+        Assert-That ($shine -match "\bname\s*=\s*$($sprite)_shine\b") "Missing shine sprite: $sprite"
+    }
+}
+foreach ($pair in @(@('otto_wagenfels', 'frontier_supply_corps'), @('marta_eisenfeder', 'arsenal_network'), @('klara_morgenflug', 'flight_instructors'))) {
+    Test-Case "New political advisor unlocks through a common focus: $($pair[0])" {
+        $id = "HSM_CYA_$($pair[0])"; $unlock = "HSM_CYA_$($pair[1])"
+        $character = Prop (Read-Code 'mod/HoISubmod/common/characters/HSM_CYA_characters.txt')[0] $id
+        $advisor = Prop $character 'advisor'
+        Assert-That ((Value $advisor 'slot') -eq 'political_advisor' -and (Value $advisor 'cost') -eq '125') 'Wrong advisor slot/cost'
+        Assert-That ((Value (Prop $advisor 'available') 'has_completed_focus') -eq $unlock) 'Wrong unlock requirement'
+        $traitId = (Prop $advisor 'traits').Children[0].Key
+        $trait = Prop (Read-Code 'mod/HoISubmod/common/country_leader/HSM_CYA_traits.txt')[0] $traitId
+        Assert-That ($trait.Count -eq 1) "Unknown advisor trait: $traitId"
+        foreach ($lang in @('english', 'russian')) {
+            $loc = [IO.File]::ReadAllText((Join-Path $root "mod/HoISubmod/localisation/$lang/hsm_cyanolisia_l_$lang.yml"))
+            foreach ($key in @($id, "$($id)_desc", $traitId)) { Assert-That ($loc -match "(?m)^ $($key):0 ") "Missing $lang advisor text: $key" }
+        }
+        $recruit = @(Prop (Prop $focus[$unlock] 'completion_reward') 'if' | Where-Object { (Value $_ 'recruit_character') -eq $id })
+        Assert-That ($recruit.Count -eq 1) 'Missing recruitment hook'
+        $w = New-World
+        1..2 | ForEach-Object { Invoke-Policy $recruit $w }
+        Assert-That (($w.Root.Characters -join ',') -eq $id) 'Recruitment absent or repeated'
+    }
+}
+
+function Exile-World([string] $regent = 'GRI_archon_eros_vii') {
+    $w = New-World
+    $w.Date = [datetime]::new(1015, 1, 1)
+    $w.Root.Exists = $true
+    $w.Root.Flags = @('HSM_CYA_path_imperial_administration')
+    $w.Root.Characters = @('CYA_countess_taillow_sumpfkiel')
+    $w.Root.Leader = 'CYA_countess_taillow_sumpfkiel'
+    $w.Countries.GRI = @{ Tag = 'GRI'; Exists = $false; Leader = $regent; Characters = @($regent, 'GRI_emperor_grover_vi'); Ideas = @('GRI_grover_vi'); Flags = @() }
+    $w.Countries.INV = @{ Tag = 'INV'; Exists = $true; Flags = @('holds_griffon_capital'); Characters = @(); Government = 'neutrality' }
+    Add-State $w 382 'INV' 'INV'
+    return $w
+}
+foreach ($regent in @('GRI_archon_eros_vii', 'STW_gabriela_eagleclaw')) {
+    Test-Case "Exile transfers the actual living household once, leaving the Countess in office: $regent" {
+        $w = Exile-World $regent
+        Assert-That (Test-Conditions $triggers.HSM_CYA_displaced_court_available.Children $w) 'Valid exile blocked'
+        Invoke-Policy $effects.HSM_CYA_receive_exiled_court.Children $w
+        Assert-That ($regent -in $w.Root.Characters -and 'GRI_emperor_grover_vi' -in $w.Root.Characters) 'Household not transferred'
+        Assert-That ($w.Countries.GRI.Characters.Count -eq 0) 'Source retains duplicate characters'
+        Assert-That ('GRI_grover_vi' -notin $w.Countries.GRI.Ideas -and 'GRI_grover_vi' -in $w.Root.Ideas) 'Child spirit in wrong country'
+        Assert-That ($w.Root.Leader -eq 'CYA_countess_taillow_sumpfkiel') 'Regent displaced the host ruler'
+        Invoke-Policy $effects.HSM_CYA_receive_exiled_court.Children $w
+        Assert-That ($w.Root.add_political_power -eq -50 -and $w.Root.Characters.Count -eq 3) 'Repeated arrival charged or duplicated'
+        Assert-That ([bool] $w.LayoutDirty) 'Arrival did not refresh the tree'
+    }
+}
+$exileDenials = @{
+    march = { param($w) $w.Root.Flags = @('HSM_CYA_path_frontier_march') }
+    subject = { param($w) $w.Root.Overlord = 'INV' }
+    capitulated_host = { param($w) $w.Root.Capitulated = $true }
+    adult = { param($w) $w.Date = [datetime]::new(1021, 5, 21) }
+    dead_child = { param($w) $w.Global += 'GRI_grover_vi_dead' }
+    dead_archon = { param($w) $w.Global += 'GRI_eros_dead' }
+    retired_regent = { param($w) $w.Countries.GRI.Characters = @('GRI_emperor_grover_vi') }
+    unrelated_ruler = { param($w) $w.Countries.GRI.Leader = 'GRI_ferdinand_dawnclaw' }
+    empire_still_fighting = { param($w) $w.Countries.GRI.Exists = $true }
+    dawnclaw_present = { param($w) $w.Root.Characters += 'HSM_CYA_ferdinand_dawnclaw' }
+    hostile_host = { param($w) $w.Root.Wars += 'GRI' }
+    already_refused = { param($w) $w.Root.Flags += 'HSM_CYA_exile_court_resolved' }
+    previous_adult_reign = { param($w) $w.Root.Flags += 'HSM_CYA_grover_reigned_elsewhere' }
+    foreign_custody = { param($w) $w.Countries.GRI.Characters = @('GRI_archon_eros_vii'); $w.Countries.INV.Characters += 'GRI_emperor_grover_vi' }
+    foreign_coronation = { param($w) $w.Countries.INV.Leader = 'GRI_emperor_grover_vi' }
+    successor_not_declared = { param($w) $w.Countries.INV.Flags = @() }
+    capital_contested = { param($w) $w.States['382'].Controller = 'GRI' }
+    successor_already_regent = { param($w) $w.Countries.INV.Ideas = @('GRI_grover_vi') }
+    pending_blackclaw_custody = { param($w) $w.Countries.INV.Tree = 'angriver_focus_blackclaw_imperial' }
+    pending_leer_execution = { param($w) $w.Countries.INV.Leader = 'ANG_baron_leer_the_vicious' }
+    bronzehill_custody = { param($w) $w.Countries.INV.Tag = 'BRZ' }
+    pending_yale_custody = { param($w) $w.Countries.INV.Tag = 'YAL'; $w.Countries.INV.Government = 'fascism' }
+    pending_yale_execution = { param($w) $w.Countries.INV.Tag = 'YAL'; $w.Countries.INV.Government = 'communism' }
+    pending_yale_coalition = { param($w) $w.Countries.INV.Tag = 'YAL'; $w.Countries.INV.Flags += 'YAL_right_coalition_chosen' }
+    pending_grover_ii_custody = { param($w) $w.Countries.INV.Tag = 'YAL'; $w.Countries.INV.Leader = 'YAL_emperor_grover_ii' }
+    pending_greifenmarschen_custody = { param($w) $w.Countries.INV.Tag = 'PYT'; $w.Countries.INV.Government = 'fascism' }
+    pending_greifenmarschen_execution = { param($w) $w.Countries.INV.Tag = 'PYT'; $w.Countries.INV.Government = 'communism' }
+}
+foreach ($denialName in $exileDenials.Keys | Sort-Object) {
+    Test-Case "Exile guard: $denialName" {
+        $w = Exile-World
+        & ($exileDenials[$denialName]) $w
+        Assert-That (-not (Test-Conditions $triggers.HSM_CYA_displaced_court_available.Children $w)) 'Unsafe asylum permitted'
+        Invoke-Policy $effects.HSM_CYA_receive_exiled_court.Children $w
+        Assert-That ('HSM_CYA_exile_court_received' -notin $w.Root.Flags) 'Arrival bypasses its own guard'
+    }
+}
+Test-Case 'Asylum is revalidated on acceptance after a queued offer' {
+    $w = Exile-World; $w.Global += 'GRI_grover_vi_dead'
+    $choices = Eligible-Options $events['hsm_cyanolisia.73'] $w
+    Assert-That ($choices.Count -eq 1 -and (Value $choices[0] 'name') -eq 'hsm_cyanolisia.73.b') 'Stale offer can resurrect Grover'
+}
+Test-Case 'Exile coronation respects age, custody and peace but not possession of the capital' {
+    $w = Exile-World
+    Invoke-Policy $effects.HSM_CYA_receive_exiled_court.Children $w
+    $w.Completed = @('HSM_CYA_court_in_exile')
+    Assert-That (-not (Test-Available 'HSM_CYA_exile_coronation' $w)) 'Minor can be crowned'
+    $w.Date = [datetime]::new(1021, 5, 21)
+    Assert-That (Test-Available 'HSM_CYA_exile_coronation' $w) 'Adult coronation requires reconquest'
+    $w.Root.AtWar = $true
+    Assert-That (-not (Test-Available 'HSM_CYA_exile_coronation' $w)) 'Coronation during war'
+    $choices = Eligible-Options $events['hsm_cyanolisia.74'] $w
+    Assert-That ($choices.Count -eq 1 -and (Value $choices[0] 'name') -eq 'hsm_cyanolisia.74.b') 'No defer option after conditions change'
+    $w.Root.AtWar = $false
+    Invoke-Policy (Eligible-Options $events['hsm_cyanolisia.74'] $w)[0].Children $w
+    Assert-That ($w.Root.Leader -eq 'GRI_emperor_grover_vi' -and $w.Root.Government -eq 'neutrality') 'Grover not the actual ruler'
+    Assert-That ('GRI_grover_vi' -notin $w.Root.Ideas) 'Child spirit survived coronation'
+    Assert-That (-not (Test-Conditions (Prop $events['hsm_cyanolisia.74'] 'trigger').Children $w)) 'Coronation repeats'
+}
+Test-Case 'Blackhollow reconstruction requires ownership and control, including our subjects' {
+    $w = New-World; $w.Root.Flags = @('HSM_CYA_path_frontier_march')
+    $w.Countries.BAN = @{ Tag = 'BAN'; Overlord = 'CYA' }
+    foreach ($s in @(490, 606, 489, 532)) { Add-State $w $s 'BAN' 'BAN' }
+    $w.Completed = @('HSM_CYA_restore_frontier_county')
+    Assert-That (Test-Available 'HSM_CYA_frontier_county_garrisons' $w) 'Subject county rejected'
+    $w.Countries.BAN.Remove('Overlord')
+    Assert-That (-not (Test-Available 'HSM_CYA_frontier_county_garrisons' $w)) 'Independent county can be administered'
+    $w.Countries.BAN.Overlord = 'CYA'; $w.States['489'].Controller = 'INV'; $w.Countries.INV = @{ Tag = 'INV' }
+    Assert-That (-not (Test-Available 'HSM_CYA_frontier_county_garrisons' $w)) 'Enemy occupation ignored'
+    $w.Completed = @('HSM_CYA_march_market_roads', 'HSM_CYA_march_volunteer_reserves')
+    Assert-That (Test-Available 'HSM_CYA_march_frontier_compact' $w) 'Peaceful March finale requires Blackhollow conquest'
+}
+Test-Case 'Blackhollow claims are limited to the county and exclude allies, subjects and duplicate goals' {
+    $branch = Prop (Prop $effects.HSM_CYA_claim_blackhollow_state 'owner') 'if'
+    $limit = (Prop $branch 'limit').Children
+    $goal = Prop (Prop $branch 'ROOT') 'create_wargoal'
+    Assert-That ((Value $goal 'type') -eq 'take_state_focus') 'County dispute grants total annexation'
+    Assert-That (((Prop $goal 'generator').Children.Key -join ',') -eq '490,606,489,532') 'Wrong county states'
+    $w = New-World; $w.Countries.INV = @{ Tag = 'INV' }
+    Assert-That (Test-Conditions $limit $w $w.Countries.INV) 'Independent owner rejected'
+    $w.Root.Faction = 'league'; $w.Countries.INV.Faction = 'league'
+    Assert-That (-not (Test-Conditions $limit $w $w.Countries.INV)) 'War goal against ally'
+    $w.Countries.INV.Remove('Faction'); $w.Countries.INV.Overlord = 'CYA'
+    Assert-That (-not (Test-Conditions $limit $w $w.Countries.INV)) 'War goal against subject'
+    $w.Countries.INV.Remove('Overlord'); $w.Root.Goals = @('INV')
+    Assert-That (-not (Test-Conditions $limit $w $w.Countries.INV)) 'Duplicate county claim'
+}
+Test-Case 'Secondary civic settlement preserves better rights and removes all exceptional conscription penalties' {
+    foreach ($rights in @('', 'CYA_true_equality', 'CYA_seperate_but_equal', 'CYA_recognised_minotaurian_rights')) {
+        $w = New-World
+        $w.Root.Ideas = @('CYA_minotaurian_indigenes', 'CYA_suppressed_indigenes', 'CYA_radicalised_indigenes',
+            'CYA_defeated_indigenes', 'HSM_CYA_strained_minotaurian_indigenes', 'HSM_CYA_registered_minotaurian_communities')
+        if ($rights) { $w.Root.Ideas += $rights }
+        1..2 | ForEach-Object { Invoke-Policy $effects.HSM_CYA_secondary_civic_settlement.Children $w }
+        $expected = if ($rights) { $rights } else { 'CYA_recognised_minotaurian_rights' }
+        Assert-That (($w.Root.Ideas -join ',') -eq $expected) 'Rights replaced, penalties retained or idea duplicated'
+    }
+}
+Test-Case 'Administrative regularisation cannot restore suppressed minorities' {
+    foreach ($rights in @('CYA_true_equality', 'CYA_recognised_minotaurian_rights', 'HSM_CYA_registered_minotaurian_communities')) {
+        $w = New-World; $w.Root.Ideas = @($rights, 'CYA_opened_outback')
+        Invoke-Policy (Prop $focus.HSM_CYA_regularise_minotaur_administration 'completion_reward').Children $w
+        Assert-That ($rights -in $w.Root.Ideas -and 'CYA_suppressed_indigenes' -notin $w.Root.Ideas) 'Earlier reform regressed'
+    }
+}
+Test-Case 'Administrative programmes survive both death and voluntary departure' {
+    $daily = (Prop @(Read-Code 'mod/HoISubmod/common/on_actions/HSM_CYA_on_actions.txt')[0] 'on_daily_CYA')
+    $branches = Prop (Prop $daily 'effect') 'if'
+    $removal = @($branches | Where-Object { (Prop $_ 'remove_dynamic_modifier').Count -gt 0 })[0]
+    $install = @($branches | Where-Object { (Prop $_ 'HSM_CYA_install_national_programs').Count -gt 0 })[0]
+    foreach ($state in @('HSM_CYA_dawnclaw_dead', 'HSM_CYA_dawnclaw_departed')) {
+        $w = New-World; $w.Root.Flags = @('HSM_CYA_path_imperial_administration', $state, 'HSM_CYA_dynamic_modifiers_installed')
+        Assert-That (-not (Test-Conditions (Prop $removal 'limit').Children $w)) 'Daily cleanup removes administrative reforms'
+        $w.Root.Flags = @('HSM_CYA_path_imperial_administration', $state)
+        Assert-That (Test-Conditions (Prop $install 'limit').Children $w) 'Missing administrative programmes cannot be installed'
+    }
+}
+Test-Case 'March policy and county choices change shared programmes, not permanent micro-ideas' {
+    foreach ($id in @('reorganise_border_forces', 'frontier_drill_standards', 'modernise_internal_intelligence',
+        'frontier_signals_network', 'local_supply_depots', 'fortify_against_minotauria', 'watch_sicameon',
+        'blackrock_wasteland_surveys', 'frontier_county_garrisons', 'reopen_military_workshops', 'cabinet_procurement_board',
+        'consolidate_proxy_cabinet', 'rationalise_proxy_quotas')) {
+        $reward = Prop $focus["HSM_CYA_$id"] 'completion_reward'
+        Assert-That (@(Descendants $reward | Where-Object { $_.Key -in @('add_ideas', 'swap_ideas') }).Count -eq 0) "Micro-idea persists: $id"
+        Assert-That (@(Prop $reward 'add_to_variable').Count -gt 0) "No programme effect: $id"
+    }
+    foreach ($number in @(71, 72)) {
+        foreach ($choice in @(0, 1)) {
+            $w = New-World; $w.Root.Flags = @('HSM_CYA_path_frontier_march')
+            foreach ($s in @(490, 606, 489, 532)) { Add-State $w $s }
+            $e = $events["hsm_cyanolisia.$number"]
+            Invoke-Policy (Prop $e 'option')[$choice].Children $w
+            Assert-That ($w.Root.Variables.Count -gt 0) 'Choice has no programme consequences'
+            Assert-That (-not (Test-Conditions (Prop $e 'trigger').Children $w)) 'Settlement awards twice'
         }
     }
 }

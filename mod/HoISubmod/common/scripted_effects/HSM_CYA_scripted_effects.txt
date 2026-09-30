@@ -354,6 +354,75 @@ HSM_CYA_claim_hills = {
 	}
 }
 
+# Civic equality replaces exceptional recruitment restrictions, not earlier rights.
+HSM_CYA_secondary_civic_settlement = {
+	if = { limit = { has_idea = CYA_minotaurian_indigenes } remove_ideas = CYA_minotaurian_indigenes }
+	if = { limit = { has_idea = CYA_suppressed_indigenes } remove_ideas = CYA_suppressed_indigenes }
+	if = { limit = { has_idea = CYA_radicalised_indigenes } remove_ideas = CYA_radicalised_indigenes }
+	if = { limit = { has_idea = CYA_defeated_indigenes } remove_ideas = CYA_defeated_indigenes }
+	if = { limit = { has_idea = HSM_CYA_strained_minotaurian_indigenes } remove_ideas = HSM_CYA_strained_minotaurian_indigenes }
+	if = { limit = { has_idea = HSM_CYA_registered_minotaurian_communities } remove_ideas = HSM_CYA_registered_minotaurian_communities }
+	if = {
+		limit = {
+			NOT = { has_idea = CYA_recognised_minotaurian_rights }
+			NOT = { has_idea = CYA_true_equality }
+			NOT = { has_idea = CYA_seperate_but_equal }
+		}
+		add_ideas = CYA_recognised_minotaurian_rights
+	}
+}
+
+# State scope; a county claim is not a mandate to annex its owner's whole country.
+HSM_CYA_claim_blackhollow_state = {
+	owner = {
+		if = {
+			limit = {
+				NOT = { tag = ROOT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				NOT = { ROOT = { has_wargoal_against = PREV } }
+			}
+			ROOT = { create_wargoal = { target = PREV type = take_state_focus generator = { 490 606 489 532 } } }
+		}
+	}
+}
+
+HSM_CYA_begin_frontier_march = {
+	HSM_CYA_install_national_programs = yes
+	custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+	add_to_variable = { HSM_CYA_army_core_defence_factor = 0.05 tooltip = army_core_defence_factor_tt }
+	add_to_variable = { HSM_CYA_max_dig_in = 2 tooltip = max_dig_in_tt }
+	custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+	add_to_variable = { HSM_CYA_production_speed_bunker_factor = 0.10 tooltip = production_speed_bunker_factor_tt }
+}
+
+# Recheck immediately before transferring the original characters. Never recruit copies.
+HSM_CYA_receive_exiled_court = {
+	if = {
+		limit = { HSM_CYA_displaced_court_available = yes }
+		GRI = {
+			if = {
+				limit = { has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes } }
+				GRI_archon_eros_vii = { set_nationality = ROOT }
+				ROOT = { set_country_flag = HSM_CYA_exiled_archon }
+			}
+			else = {
+				STW_gabriela_eagleclaw = { set_nationality = ROOT }
+				ROOT = { set_country_flag = HSM_CYA_exiled_duchess }
+			}
+			remove_ideas = GRI_grover_vi
+			GRI_emperor_grover_vi = { set_nationality = ROOT }
+		}
+		add_ideas = GRI_grover_vi
+		promote_character = CYA_countess_taillow_sumpfkiel
+		set_country_flag = HSM_CYA_exile_court_received
+		set_country_flag = HSM_CYA_exile_court_resolved
+		mark_focus_tree_layout_dirty = yes
+		add_political_power = -50
+	}
+}
+
 # Only a subject or a fully conquered former host can surrender the household.
 HSM_CYA_receive_grover_household = {
 	if = {
@@ -431,8 +500,32 @@ HSM_CYA_establish_asterion_protectorate = {
 		}
 		MIT = { load_focus_tree = generic_griffon_focus }
 	}
+}
+
+# Replace only harsher policies; never reintroduce a penalty after reconciliation.
+HSM_CYA_prewar_minotaur_settlement = {
 	if = {
-		limit = { MIT = { exists = yes is_subject_of = ROOT } }
-		set_autonomy = { target = MIT autonomy_state = autonomy_puppet }
+		limit = {
+			OR = {
+				has_idea = CYA_minotaurian_indigenes
+				has_idea = CYA_suppressed_indigenes
+				has_idea = CYA_defeated_indigenes
+			}
+		}
+		if = { limit = { has_idea = CYA_minotaurian_indigenes } remove_ideas = CYA_minotaurian_indigenes }
+		if = { limit = { has_idea = CYA_suppressed_indigenes } remove_ideas = CYA_suppressed_indigenes }
+		if = { limit = { has_idea = CYA_defeated_indigenes } remove_ideas = CYA_defeated_indigenes }
+		if = {
+			limit = {
+				NOT = { has_idea = HSM_CYA_strained_minotaurian_indigenes }
+				NOT = { has_completed_focus = HSM_CYA_evi_governorate_codes }
+				NOT = { has_idea = HSM_CYA_registered_minotaurian_communities }
+				NOT = { has_idea = CYA_radicalised_indigenes }
+				NOT = { has_idea = CYA_recognised_minotaurian_rights }
+				NOT = { has_idea = CYA_true_equality }
+				NOT = { has_idea = CYA_seperate_but_equal }
+			}
+			add_ideas = HSM_CYA_strained_minotaurian_indigenes
+		}
 	}
 }

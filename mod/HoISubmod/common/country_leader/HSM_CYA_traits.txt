@@ -1,4 +1,25 @@
 leader_traits = {
+	HSM_CYA_transport_commissioner = {
+		random = no
+		supply_consumption_factor = -0.05
+		attrition = -0.05
+	}
+	HSM_CYA_armament_coordinator = {
+		random = no
+		production_speed_arms_factory_factor = 0.10
+		production_factory_max_efficiency_factor = 0.05
+	}
+	HSM_CYA_aviation_organiser = {
+		random = no
+		air_accidents_factor = -0.10
+		experience_gain_air_factor = 0.10
+	}
+	HSM_CYA_military_state_builder = {
+		random = no
+		max_planning_factor = 0.05
+		mobilization_speed = 0.15
+		supply_consumption_factor = -0.05
+	}
 	HSM_CYA_exiled_imperial_strategist = {
 		random = no
 		planning_speed = 0.08

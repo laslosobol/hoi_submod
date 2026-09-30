@@ -187,8 +187,11 @@ shared_focus = {
 	cost = 5
 	ai_will_do = { factor = 10 }
 	completion_reward = {
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1200 producer = CYA }
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = CYA }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = CYA }
+		add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = CYA }
 		if = { limit = { controls_state = 382 } 382 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } } }
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }

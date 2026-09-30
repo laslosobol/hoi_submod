@@ -1,3 +1,15 @@
+HSM_CYA_secondary_diplomacy = {
+	icon = generic_political_discourse
+	allowed = { original_tag = CYA }
+	visible = {
+		OR = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_path_imperial_administration
+		}
+	}
+	priority = 100
+}
+
 HSM_CYA_imperial_settlement = {
 	icon = generic_political_discourse
 	allowed = { original_tag = CYA }

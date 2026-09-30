@@ -1,6 +1,8 @@
-# Cyanolisia Dawnclaw Path Skeleton
+# Historical Cyanolisia Dawnclaw Path Skeleton
 
-This submod currently wires the Dawnclaw content through events and decisions to avoid overriding the upstream `CYA.txt` focus tree. Future focus files can call the same flags, events, and ideas listed here.
+This document records the early prototype, not the current implementation.
+The submod now overrides `CYA.txt`. For the secondary routes and court-in-exile
+rules added after 0.5.0, see [CYA_SECONDARY_PATHS.md](CYA_SECONDARY_PATHS.md).
 
 ## Shared Entry
 

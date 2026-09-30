@@ -1,5 +1,49 @@
 spriteTypes = {
 	spriteType = {
+		name = GFX_HSM_CYA_march_volunteer_reserves
+		textureFile = "gfx/interface/goals/HSM_CYA_march_volunteer_reserves.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_march_market_roads
+		textureFile = "gfx/interface/goals/HSM_CYA_march_market_roads.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_march_frontier_compact
+		textureFile = "gfx/interface/goals/HSM_CYA_march_frontier_compact.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_civil_service_school
+		textureFile = "gfx/interface/goals/HSM_CYA_civil_service_school.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_imperial_transit_office
+		textureFile = "gfx/interface/goals/HSM_CYA_imperial_transit_office.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_provincial_service_charter
+		textureFile = "gfx/interface/goals/HSM_CYA_provincial_service_charter.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_imperial_liaison_mission
+		textureFile = "gfx/interface/goals/HSM_CYA_imperial_liaison_mission.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_safe_harbour
+		textureFile = "gfx/interface/goals/HSM_CYA_safe_harbour.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_court_in_exile
+		textureFile = "gfx/interface/goals/HSM_CYA_court_in_exile.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_exile_restoration_staff
+		textureFile = "gfx/interface/goals/HSM_CYA_exile_restoration_staff.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_CYA_exile_coronation
+		textureFile = "gfx/interface/goals/HSM_CYA_exile_coronation.tga"
+	}
+	spriteType = {
 		name = GFX_HSM_CYA_codify_household_compact
 		textureFile = "gfx/interface/goals/HSM_CYA_codify_household_compact.tga"
 	}

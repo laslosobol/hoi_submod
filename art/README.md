@@ -12,7 +12,9 @@ spirit, with a consistent painted style: dark iron, antique gold, ivory, royal
 blue, restrained crimson, and transparent backgrounds. Do not treat a newly
 chosen EaW icon as a finished replacement.
 
-All 364 focus definitions use an approved Cyanolisian GFX sprite.
+Of 383 focus definitions, 375 have approved Cyanolisian GFX uses. Eight aviation
+focuses provisionally reuse existing custom sprites and remain NEEDS_REVIEW
+for their new context; dedicated art briefs are in the manifest.
 Regional reconstruction focuses can share an existing approved image where appropriate.
 All 137 HSM idea uses have approved Cyanolisian images.
 The two uses of the `HSM_CYA_grover_regency` idea intentionally share one image.
@@ -28,7 +30,34 @@ rules for `-MarkDone`, `-ResolveFix`, and read-only `-Check`.
 Run `tools/Get-CyanolisiaIconCoverage.ps1 -ListPending` for a quick independent
 check of provisional focus and idea sprites.
 
+The eleven new March/Administration focuses now have dedicated PNG/TGA pairs and
+standard/shine sprites. Their prompts and the liaison-clasp correction are recorded
+in `art/secondary-paths-icon-prompts.md`. Source and native-size export QA passed;
+in-game verification is still pending.
+
 New focus sources (99x86 exports):
+
+- `HSM_CYA_march_volunteer_reserves.png`: Blue-steel helmet and rolled reservist greatcoat above a filled district muster ledger; wheat binding detail.
+
+- `HSM_CYA_march_market_roads.png`: Stone market bridge with tollhouse, produce crates and plain blue pennant; no borrowed national heraldry.
+
+- `HSM_CYA_march_frontier_compact.png`: Defensive shield behind a civic compact with fortified-district plan, accounts and embossed justice seal.
+
+- `HSM_CYA_civil_service_school.png`: Civic academy, open survey/account ledger and brass dividers; ornamental compass motifs are not state heraldry.
+
+- `HSM_CYA_imperial_transit_office.png`: Railway semaphore above freight crate, populated route waybill and mooring rope.
+
+- `HSM_CYA_provincial_service_charter.png`: Public charter with district diagram, balanced justice scales and two distinct geometric seals.
+
+- `HSM_CYA_imperial_liaison_mission.png`: Diplomatic dispatch case with mapped correspondence route, tower-sealed letters and telegraph key.
+
+- `HSM_CYA_safe_harbour.png`: Harbour lighthouse shelters travelling trunk and archival charts; no premature crown.
+
+- `HSM_CYA_court_in_exile.png`: Portable chancery with state register, archives and pointed coronet; neutral to Eros/Gabriela identity.
+
+- `HSM_CYA_exile_restoration_staff.png`: Field map case with schematic rail supply network, return arrow, fortified-city model and dividers; not a literal geographic map.
+
+- `HSM_CYA_exile_coronation.png`: Pointed gold coronet, blue ceremonial cloth, marked constitutional charter and silver feather ornaments.
 
 - `HSM_CYA_joint_general_staff.png`: Three theater maps under one plotting compass.
 - `HSM_CYA_national_development_plan.png`: Rail, school and factory on a shared plan.

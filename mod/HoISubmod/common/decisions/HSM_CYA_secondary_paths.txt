@@ -1,0 +1,76 @@
+HSM_CYA_secondary_diplomacy = {
+	HSM_CYA_offer_border_compact = {
+		icon = generic_political_discourse
+		cost = 35
+		days_re_enable = 180
+		targets = { MIT SIC GRW BRF GRY LUS }
+		target_trigger = {
+			FROM = { exists = yes is_subject = no NOT = { tag = ROOT } }
+		}
+		visible = {
+			has_country_flag = HSM_CYA_path_frontier_march
+			has_country_flag = HSM_CYA_border_compacts_open
+			FROM = { NOT = { has_non_aggression_pact_with = ROOT } NOT = { has_country_flag = HSM_CYA_border_offer_pending } }
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			FROM = { has_war = no is_subject = no NOT = { has_war_with = ROOT } }
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = { flag = HSM_CYA_border_offer_pending days = 180 }
+				country_event = { id = hsm_cyanolisia.75 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_exile_capital_claim = {
+		icon = generic_prepare_civil_war
+		cost = 75
+		days_re_enable = 120
+		target_root_trigger = {
+			has_country_flag = HSM_CYA_path_imperial_administration
+			has_completed_focus = HSM_CYA_exile_restoration_staff
+		}
+		target_trigger = {
+			FROM = { owns_state = 382 NOT = { tag = ROOT } NOT = { tag = GRI } }
+		}
+		available = {
+			HSM_CYA_exile_household_present = yes
+			is_subject = no
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = { has_wargoal_against = FROM }
+		}
+		complete_effect = {
+			create_wargoal = { target = FROM type = take_state_focus generator = { 382 } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_resume_exile_coronation = {
+		icon = generic_political_discourse
+		cost = 0
+		visible = {
+			has_country_flag = HSM_CYA_path_imperial_administration
+			has_country_flag = HSM_CYA_exile_coronation_deferred
+			NOT = { has_country_flag = HSM_CYA_exile_coronation_done }
+		}
+		available = {
+			HSM_CYA_exile_household_present = yes
+			date > 1021.5.20
+			has_war = no
+			is_subject = no
+		}
+		complete_effect = {
+			clr_country_flag = HSM_CYA_exile_coronation_deferred
+			country_event = { id = hsm_cyanolisia.74 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+}

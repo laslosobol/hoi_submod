@@ -59,6 +59,7 @@ $dynamicLocPath = 'mod/HoISubmod/common/scripted_localisation/HSM_CYA_narrative.
 $paths = @($focusPath, $eventPath, $triggerPath, $effectPath, $onActionPath, $dynamicLocPath,
     'mod/HoISubmod/events/GriffonianEmpire Events.txt', 'mod/HoISubmod/events/Cyanolisia Events.txt',
     'mod/HoISubmod/common/decisions/HSM_CYA_imperial_settlement.txt',
+	'mod/HoISubmod/common/decisions/HSM_CYA_secondary_paths.txt',
     'mod/HoISubmod/common/decisions/categories/HSM_CYA_decision_categories.txt')
 foreach ($path in $paths) {
     Test-Case "Balanced script: $path" {
@@ -118,7 +119,7 @@ Test-Case 'Voluntary departure opens administration without inventing a death' {
     foreach ($block in $focus.Values | Where-Object { $_.Contains('has_country_flag = HSM_CYA_path_imperial_administration') }) {
         Assert-That (-not $block.Contains('has_country_flag = HSM_CYA_dawnclaw_dead')) 'Administration still requires a death'
     }
-    Assert-That ($actions.Contains('has_country_flag = HSM_CYA_dawnclaw_departed')) 'Departure leaves dynamic programmes active'
+    Assert-That ($actions.Contains('has_country_flag = HSM_CYA_dynamic_modifiers_installed NOT = { has_country_flag = HSM_CYA_path_imperial_administration }')) 'Administration loses the shared programmes after departure'
 }
 
 Test-Case 'Grover transfer excludes independent foreign holders' {
@@ -166,10 +167,11 @@ Test-Case 'Continental unification checks original territory, ownership and cont
 }
 Test-Case 'Asterion protectorate is actually released after annexation, with homeland safeguards' {
     Assert-That ($effects.Contains('release_autonomy = { target = MIT autonomy_state = autonomy_puppet }')) 'Protectorate never released'
-    foreach ($id in @('HSM_CYA_countess_integrate_south', 'HSM_CYA_dawnclaw_integrate_south', 'HSM_CYA_military_governorate_asterion')) {
+    foreach ($id in @('HSM_CYA_countess_integrate_south', 'HSM_CYA_military_governorate_asterion')) {
         Assert-That ($focus[$id].Contains('HSM_CYA_establish_asterion_protectorate = yes')) "No protectorate effect: $id"
         Assert-That ($focus[$id].Contains('HSM_CYA_all_asterion_territory_owned = yes has_war = no')) "Incomplete wartime annexation accepted: $id"
     }
+    Assert-That (-not $focus['HSM_CYA_dawnclaw_integrate_south'].Contains('HSM_CYA_establish_asterion_protectorate = yes')) 'Sicameon repeats the Asterion settlement'
     Assert-That ($effects.Contains('has_state_flag = HSM_CYA_retained_homeland')) 'No protection for pre-owned Cyanolisian land'
 }
 
@@ -213,6 +215,34 @@ Test-Case 'Imperial decision titles, descriptions and new visible flags are loca
             Assert-That ($locales[$language].ContainsKey($m.Groups[1].Value)) "Raw flag tooltip: $language / $($m.Groups[1].Value)"
         }
     }
+}
+Test-Case 'Secondary route focuses, events and decisions have EN/RU narrative text' {
+    $ids = @('march_volunteer_reserves', 'march_market_roads', 'march_frontier_compact',
+        'civil_service_school', 'imperial_transit_office', 'provincial_service_charter',
+        'imperial_liaison_mission', 'safe_harbour', 'court_in_exile', 'exile_restoration_staff', 'exile_coronation',
+        'offer_border_compact', 'exile_capital_claim', 'resume_exile_coronation')
+    foreach ($language in @('english', 'russian')) {
+        foreach ($id in $ids) {
+            foreach ($key in @("HSM_CYA_$id", "HSM_CYA_$($id)_desc")) {
+                Assert-That ($locales[$language].ContainsKey($key)) "Missing secondary text: $language / $key"
+            }
+        }
+        foreach ($id in 70..78) {
+            foreach ($m in [regex]::Matches($events["hsm_cyanolisia.$id"], '\b(?:title|desc|name) = (hsm_cyanolisia\.[^ {}]+)')) {
+                Assert-That ($locales[$language].ContainsKey($m.Groups[1].Value)) "Missing secondary event text: $language / $($m.Groups[1].Value)"
+            }
+        }
+    }
+}
+Test-Case 'Exile arrival never clears death flags or recruits replacement characters' {
+    $code = Read-Code $effectPath
+    $start = $code.IndexOf('HSM_CYA_receive_exiled_court = {')
+    $end = $code.IndexOf('HSM_CYA_receive_grover_household = {', $start)
+    $arrival = $code.Substring($start, $end - $start)
+    Assert-That (-not ($arrival -match 'recruit_character|clr_global_flag')) 'Arrival resurrects or duplicates a character'
+    Assert-That ($arrival.Contains('HSM_CYA_displaced_court_available = yes')) 'Arrival does not revalidate custody'
+    Assert-That ($events['hsm_cyanolisia.73'].Contains('trigger = { HSM_CYA_displaced_court_available = yes }')) 'Queued offer lacks a fate guard'
+    Assert-That ($actions.Contains('id = hsm_cyanolisia.73 days = 14')) 'Successor events are not given a settlement interval'
 }
 Test-Case 'Regional callbacks use recorded choices and have an unsettled fallback' {
     $dynamic = Read-Code $dynamicLocPath
