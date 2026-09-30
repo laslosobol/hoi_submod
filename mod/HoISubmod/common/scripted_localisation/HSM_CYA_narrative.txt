@@ -1,4 +1,109 @@
 defined_text = {
+	name = GetHSMCyaNorthSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_northern_charters }
+		localization_key = HSM_CYA_history_northern_charters
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_northern_crown_offices }
+		localization_key = HSM_CYA_history_northern_crown_offices
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_northern_local_officers }
+		localization_key = HSM_CYA_history_northern_local_officers
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_northern_staff_garrisons }
+		localization_key = HSM_CYA_history_northern_staff_garrisons
+	}
+	text = { localization_key = HSM_CYA_history_north_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaLakeSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_lake_houses_confirmed }
+		localization_key = HSM_CYA_history_lake_houses_confirmed
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_lake_crown_magistrates }
+		localization_key = HSM_CYA_history_lake_crown_magistrates
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_lake_service_nobility }
+		localization_key = HSM_CYA_history_lake_service_nobility
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_lake_military_administration }
+		localization_key = HSM_CYA_history_lake_military_administration
+	}
+	text = { localization_key = HSM_CYA_history_lake_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaWestSettlement
+	text = {
+		trigger = { has_country_flag = HSM_CYA_western_industrial_compacts }
+		localization_key = HSM_CYA_history_western_industrial_compacts
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_western_public_contracts }
+		localization_key = HSM_CYA_history_western_public_contracts
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_western_licensed_industry }
+		localization_key = HSM_CYA_history_western_licensed_industry
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_western_sequestered_arsenals }
+		localization_key = HSM_CYA_history_western_sequestered_arsenals
+	}
+	text = { localization_key = HSM_CYA_history_west_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaEducation
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_lesson_mercy }
+		localization_key = HSM_CYA_history_grover_lesson_mercy
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_lesson_authority }
+		localization_key = HSM_CYA_history_grover_lesson_authority
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_lesson_frontier }
+		localization_key = HSM_CYA_history_grover_lesson_frontier
+	}
+	text = { localization_key = HSM_CYA_history_education_unsettled }
+}
+
+defined_text = {
+	name = GetHSMCyaCrownPolicy
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_guarantees_charters }
+		localization_key = HSM_CYA_history_grover_guarantees_charters
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_civilian_oversight }
+		localization_key = HSM_CYA_history_grover_civilian_oversight
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_grover_provincial_inspections }
+		localization_key = HSM_CYA_history_grover_provincial_inspections
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_puppet_civil_audiences }
+		localization_key = HSM_CYA_history_puppet_civil_audiences
+	}
+	text = {
+		trigger = { has_country_flag = HSM_CYA_puppet_staff_audiences }
+		localization_key = HSM_CYA_history_puppet_staff_audiences
+	}
+	text = { localization_key = HSM_CYA_history_crown_policy_unsettled }
+}
+
+defined_text = {
 	name = GetHSMCyaKaivSettlement
 	text = {
 		trigger = { has_country_flag = HSM_CYA_kaiv_autonomy_promised }

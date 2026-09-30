@@ -159,6 +159,201 @@ HSM_CYA_consolidate_countess_spirits = {
 }
 
 
+# The last regional campaign covers surviving enclaves and third-party annexations.
+HSM_CYA_claim_remaining_griffonia = {
+	every_other_country = {
+		limit = {
+			NOT = { is_subject_of = ROOT }
+			NOT = { has_war_with = ROOT }
+			NOT = { ROOT = { has_wargoal_against = PREV } }
+			any_owned_state = { is_on_continent = asia NOT = { impassable = yes } }
+		}
+		ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+	}
+}
+
+# Country scope: target the current owner of each original state, including third-party annexers.
+HSM_CYA_claim_original_griffonian_land = {
+	every_of_scopes = {
+		array = original_cores
+		limit = { is_on_continent = asia NOT = { impassable = yes } }
+		owner = {
+			if = {
+				limit = {
+					NOT = { tag = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { has_war_with = ROOT }
+					NOT = { ROOT = { has_wargoal_against = PREV } }
+				}
+				ROOT = { create_wargoal = { target = PREV type = annex_everything } }
+			}
+		}
+	}
+}
+
+HSM_CYA_claim_north = {
+	custom_effect_tooltip = HSM_CYA_claim_north_tt
+	hidden_effect = {
+		FAT = { HSM_CYA_claim_original_griffonian_land = yes }
+		FAW = { HSM_CYA_claim_original_griffonian_land = yes }
+		SRS = { HSM_CYA_claim_original_griffonian_land = yes }
+		MNC = { HSM_CYA_claim_original_griffonian_land = yes }
+		VED = { HSM_CYA_claim_original_griffonian_land = yes }
+		HAU = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_integrate_north = {
+	custom_effect_tooltip = HSM_CYA_integrate_north_tt
+	hidden_effect = {
+		FAT = { add_to_ROOT_potential_original_cores = yes }
+		FAW = { add_to_ROOT_potential_original_cores = yes }
+		SRS = { add_to_ROOT_potential_original_cores = yes }
+		MNC = { add_to_ROOT_potential_original_cores = yes }
+		VED = { add_to_ROOT_potential_original_cores = yes }
+		HAU = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+
+HSM_CYA_claim_central = {
+	custom_effect_tooltip = HSM_CYA_claim_central_tt
+	hidden_effect = {
+		AVI = { HSM_CYA_claim_original_griffonian_land = yes }
+		BAN = { HSM_CYA_claim_original_griffonian_land = yes }
+		EYR = { HSM_CYA_claim_original_griffonian_land = yes }
+		ERI = { HSM_CYA_claim_original_griffonian_land = yes }
+		LAK = { HSM_CYA_claim_original_griffonian_land = yes }
+		BOI = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_integrate_central = {
+	custom_effect_tooltip = HSM_CYA_integrate_central_tt
+	hidden_effect = {
+		AVI = { add_to_ROOT_potential_original_cores = yes }
+		BAN = { add_to_ROOT_potential_original_cores = yes }
+		EYR = { add_to_ROOT_potential_original_cores = yes }
+		ERI = { add_to_ROOT_potential_original_cores = yes }
+		LAK = { add_to_ROOT_potential_original_cores = yes }
+		BOI = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+
+HSM_CYA_claim_west = {
+	custom_effect_tooltip = HSM_CYA_claim_west_tt
+	hidden_effect = {
+		TRD = { HSM_CYA_claim_original_griffonian_land = yes }
+		FEZ = { HSM_CYA_claim_original_griffonian_land = yes }
+		AET = { HSM_CYA_claim_original_griffonian_land = yes }
+		HEL = { HSM_CYA_claim_original_griffonian_land = yes }
+		JRR = { HSM_CYA_claim_original_griffonian_land = yes }
+		JER = { HSM_CYA_claim_original_griffonian_land = yes }
+		JES = { HSM_CYA_claim_original_griffonian_land = yes }
+		JEB = { HSM_CYA_claim_original_griffonian_land = yes }
+		JFT = { HSM_CYA_claim_original_griffonian_land = yes }
+		VIN = { HSM_CYA_claim_original_griffonian_land = yes }
+		POM = { HSM_CYA_claim_original_griffonian_land = yes }
+		FLO = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_integrate_west = {
+	custom_effect_tooltip = HSM_CYA_integrate_west_tt
+	hidden_effect = {
+		TRD = { add_to_ROOT_potential_original_cores = yes }
+		FEZ = { add_to_ROOT_potential_original_cores = yes }
+		AET = { add_to_ROOT_potential_original_cores = yes }
+		HEL = { add_to_ROOT_potential_original_cores = yes }
+		JRR = { add_to_ROOT_potential_original_cores = yes }
+		JER = { add_to_ROOT_potential_original_cores = yes }
+		JES = { add_to_ROOT_potential_original_cores = yes }
+		JEB = { add_to_ROOT_potential_original_cores = yes }
+		JFT = { add_to_ROOT_potential_original_cores = yes }
+		VIN = { add_to_ROOT_potential_original_cores = yes }
+		POM = { add_to_ROOT_potential_original_cores = yes }
+		FLO = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+
+HSM_CYA_claim_south = {
+	custom_effect_tooltip = HSM_CYA_claim_south_tt
+	hidden_effect = {
+		ARA = { HSM_CYA_claim_original_griffonian_land = yes }
+		FRN = { HSM_CYA_claim_original_griffonian_land = yes }
+		TAL = { HSM_CYA_claim_original_griffonian_land = yes }
+		WNG = { HSM_CYA_claim_original_griffonian_land = yes }
+		FAL = { HSM_CYA_claim_original_griffonian_land = yes }
+		SIC = { HSM_CYA_claim_original_griffonian_land = yes }
+		MIT = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_integrate_south = {
+	custom_effect_tooltip = HSM_CYA_integrate_south_tt
+	hidden_effect = {
+		ARA = { add_to_ROOT_potential_original_cores = yes }
+		FRN = { add_to_ROOT_potential_original_cores = yes }
+		TAL = { add_to_ROOT_potential_original_cores = yes }
+		WNG = { add_to_ROOT_potential_original_cores = yes }
+		FAL = { add_to_ROOT_potential_original_cores = yes }
+		SIC = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+
+HSM_CYA_claim_frontier = {
+	custom_effect_tooltip = HSM_CYA_claim_frontier_tt
+	hidden_effect = {
+		HLQ = { HSM_CYA_claim_original_griffonian_land = yes }
+		LNS = { HSM_CYA_claim_original_griffonian_land = yes }
+		LSC = { HSM_CYA_claim_original_griffonian_land = yes }
+		LSM = { HSM_CYA_claim_original_griffonian_land = yes }
+		LUS = { HSM_CYA_claim_original_griffonian_land = yes }
+		GRW = { HSM_CYA_claim_original_griffonian_land = yes }
+		BRF = { HSM_CYA_claim_original_griffonian_land = yes }
+		GRY = { HSM_CYA_claim_original_griffonian_land = yes }
+		GRU = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_integrate_frontier = {
+	custom_effect_tooltip = HSM_CYA_integrate_frontier_tt
+	hidden_effect = {
+		HLQ = { add_to_ROOT_potential_original_cores = yes }
+		LNS = { add_to_ROOT_potential_original_cores = yes }
+		LSC = { add_to_ROOT_potential_original_cores = yes }
+		LSM = { add_to_ROOT_potential_original_cores = yes }
+		LUS = { add_to_ROOT_potential_original_cores = yes }
+		GRW = { add_to_ROOT_potential_original_cores = yes }
+		BRF = { add_to_ROOT_potential_original_cores = yes }
+		GRY = { add_to_ROOT_potential_original_cores = yes }
+		GRU = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+
+HSM_CYA_claim_river = {
+	custom_effect_tooltip = HSM_CYA_claim_river_tt
+	hidden_effect = {
+		LCT = { HSM_CYA_claim_original_griffonian_land = yes }
+		RCT = { HSM_CYA_claim_original_griffonian_land = yes }
+		NIM = { HSM_CYA_claim_original_griffonian_land = yes }
+		WIT = { HSM_CYA_claim_original_griffonian_land = yes }
+		BAK = { HSM_CYA_claim_original_griffonian_land = yes }
+		DEP = { HSM_CYA_claim_original_griffonian_land = yes }
+		FRE = { HSM_CYA_claim_original_griffonian_land = yes }
+		DMT = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
+HSM_CYA_claim_hills = {
+	custom_effect_tooltip = HSM_CYA_claim_hills_tt
+	hidden_effect = {
+		FBK = { HSM_CYA_claim_original_griffonian_land = yes }
+		FIR = { HSM_CYA_claim_original_griffonian_land = yes }
+		WAT = { HSM_CYA_claim_original_griffonian_land = yes }
+		NCH = { HSM_CYA_claim_original_griffonian_land = yes }
+	}
+}
+
 # Only a subject or a fully conquered former host can surrender the household.
 HSM_CYA_receive_grover_household = {
 	if = {

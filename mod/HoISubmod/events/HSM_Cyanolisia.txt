@@ -102,6 +102,7 @@ country_event = {
 		name = hsm_cyanolisia.2.a
 		set_country_flag = HSM_CYA_dawnclaw_path_chosen
 		set_country_flag = HSM_CYA_path_frontier_march
+		mark_focus_tree_layout_dirty = yes
 		add_ideas = HSM_CYA_frontier_march_policy
 		custom_effect_tooltip = HSM_CYA_frontier_march_path_tt
 	}
@@ -110,6 +111,7 @@ country_event = {
 		name = hsm_cyanolisia.2.b
 		set_country_flag = HSM_CYA_dawnclaw_path_chosen
 		set_country_flag = HSM_CYA_path_marriage
+		mark_focus_tree_layout_dirty = yes
 		add_ideas = HSM_CYA_unlikely_marriage
 		set_variable = { HSM_CYA_dawnclaw_dominance = 0 }
 		set_variable = { HSM_CYA_countess_dominance = 0 }
@@ -124,9 +126,9 @@ country_event = {
 		clr_country_flag = HSM_CYA_dawnclaw_hidden_in_court
 		clr_country_flag = HSM_CYA_dawnclaw_assassination_pending
 		retire_character = HSM_CYA_ferdinand_dawnclaw
-		mark_focus_tree_layout_dirty = yes
 		set_country_flag = HSM_CYA_dawnclaw_path_chosen
 		set_country_flag = HSM_CYA_path_imperial_administration
+		mark_focus_tree_layout_dirty = yes
 		add_ideas = HSM_CYA_imperial_administration
 		custom_effect_tooltip = HSM_CYA_imperial_admin_path_tt
 	}
@@ -172,6 +174,7 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.4.a
 		set_country_flag = HSM_CYA_dawnclaw_dominant
+		mark_focus_tree_layout_dirty = yes
 		swap_ideas = { remove_idea = HSM_CYA_unlikely_marriage add_idea = HSM_CYA_dawnclaw_dominant_court }
 		add_war_support = 0.05
 		custom_effect_tooltip = HSM_CYA_dawnclaw_dominance_tt
@@ -196,6 +199,7 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.5.a
 		set_country_flag = HSM_CYA_countess_dominant
+		mark_focus_tree_layout_dirty = yes
 		HSM_CYA_install_national_programs = yes
 		set_country_flag = { flag = HSM_CYA_dawnclaw_identity_secured days = 240 }
 		swap_ideas = { remove_idea = HSM_CYA_unlikely_marriage add_idea = HSM_CYA_countess_dominant_court }
@@ -235,6 +239,9 @@ country_event = {
 		clr_country_flag = HSM_CYA_dawnclaw_assassination_launched
 		set_country_flag = HSM_CYA_dawnclaw_dead
 		set_country_flag = HSM_CYA_path_imperial_administration
+		clr_country_flag = HSM_CYA_dawnclaw_dominant
+		clr_country_flag = HSM_CYA_countess_dominant
+		mark_focus_tree_layout_dirty = yes
 		if = {
 			limit = { has_cosmetic_tag = HSM_CYA_DIRECTORATE }
 			set_cosmetic_tag = CYA
@@ -787,6 +794,7 @@ country_event = {
 	option = {
 		name = hsm_cyanolisia.40.a
 		set_country_flag = HSM_CYA_1021_crown_in_trust
+		mark_focus_tree_layout_dirty = yes
 		remove_ideas = GRI_grover_vi
 		remove_ideas = HSM_CYA_grover_regency
 		remove_ideas = HSM_CYA_crown_in_trust_idea
@@ -1137,5 +1145,459 @@ country_event = {
 	desc = hsm_cyanolisia.53.d
 	picture = GFX_event_gothic_interior
 	is_triggered_only = yes
-	option = { name = hsm_cyanolisia.53.a }
+	trigger = { HSM_CYA_grover_in_our_custody = yes OR = { has_country_flag = HSM_CYA_1021_crown_in_trust has_country_flag = HSM_CYA_1021_grover_restored } NOT = { has_country_flag = HSM_CYA_grover_first_policy_chosen } }
+
+	option = {
+		name = hsm_cyanolisia.53.a
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_grover_first_policy_chosen
+		set_country_flag = HSM_CYA_grover_guarantees_charters
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 tooltip = HSM_CYA_compliance_growth_tt }
+		if = {
+			limit = { OR = { has_country_flag = HSM_CYA_northern_charters has_country_flag = HSM_CYA_lake_houses_confirmed has_country_flag = HSM_CYA_kaiv_autonomy_promised } }
+			add_political_power = 50
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_mercy }
+			add_political_power = 25
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.53.b
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_grover_first_policy_chosen
+		set_country_flag = HSM_CYA_grover_civilian_oversight
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
+		if = {
+			limit = { OR = { has_country_flag = HSM_CYA_northern_staff_garrisons has_country_flag = HSM_CYA_lake_military_administration has_country_flag = HSM_CYA_kaiv_commandant_veto } }
+			army_experience = 25
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_authority }
+			add_political_power = 25
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.53.c
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_grover_first_policy_chosen
+		set_country_flag = HSM_CYA_grover_provincial_inspections
+		382 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { has_country_flag = HSM_CYA_grover_lesson_frontier }
+			add_tech_bonus = { name = industrial_bonus bonus = 0.5 uses = 1 category = industry }
+		}
+	}
+}
+
+# Provincial settlements and the peace after unification.
+
+country_event = {
+	id = hsm_cyanolisia.54
+	title = hsm_cyanolisia.54.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.54.countess.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_countess_dominant } } text = hsm_cyanolisia.54.dawnclaw.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = HSM_CYA_north_settlement_chosen } OR = { has_country_flag = HSM_CYA_countess_dominant has_country_flag = HSM_CYA_dawnclaw_dominant } }
+
+	option = {
+		name = hsm_cyanolisia.54.a
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_north_settlement_chosen
+		set_country_flag = HSM_CYA_northern_charters
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 tooltip = HSM_CYA_compliance_growth_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.54.b
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_north_settlement_chosen
+		set_country_flag = HSM_CYA_northern_crown_offices
+		485 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.54.c
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_north_settlement_chosen
+		set_country_flag = HSM_CYA_northern_local_officers
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.54.d
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_north_settlement_chosen
+		set_country_flag = HSM_CYA_northern_staff_garrisons
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_planning_speed = 0.05 tooltip = planning_speed_tt }
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.55
+	title = hsm_cyanolisia.55.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.55.countess.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_countess_dominant } } text = hsm_cyanolisia.55.dawnclaw.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = HSM_CYA_lake_settlement_chosen } OR = { has_country_flag = HSM_CYA_countess_dominant has_country_flag = HSM_CYA_dawnclaw_dominant } }
+
+	option = {
+		name = hsm_cyanolisia.55.a
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_lake_settlement_chosen
+		set_country_flag = HSM_CYA_lake_houses_confirmed
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 tooltip = political_power_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.55.b
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_lake_settlement_chosen
+		set_country_flag = HSM_CYA_lake_crown_magistrates
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 tooltip = HSM_CYA_compliance_growth_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.55.c
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_lake_settlement_chosen
+		set_country_flag = HSM_CYA_lake_service_nobility
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_supply_consumption_factor = -0.02 tooltip = supply_consumption_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.55.d
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_lake_settlement_chosen
+		set_country_flag = HSM_CYA_lake_military_administration
+		470 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.56
+	title = hsm_cyanolisia.56.t
+	desc = { trigger = { has_country_flag = HSM_CYA_countess_dominant } text = hsm_cyanolisia.56.countess.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_CYA_countess_dominant } } text = hsm_cyanolisia.56.dawnclaw.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = HSM_CYA_west_settlement_chosen } OR = { has_country_flag = HSM_CYA_countess_dominant has_country_flag = HSM_CYA_dawnclaw_dominant } }
+
+	option = {
+		name = hsm_cyanolisia.56.a
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_west_settlement_chosen
+		set_country_flag = HSM_CYA_western_industrial_compacts
+		377 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.56.b
+		trigger = { has_country_flag = HSM_CYA_countess_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_west_settlement_chosen
+		set_country_flag = HSM_CYA_western_public_contracts
+		add_tech_bonus = { name = industrial_bonus bonus = 0.75 uses = 1 category = industry }
+	}
+
+	option = {
+		name = hsm_cyanolisia.56.c
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_west_settlement_chosen
+		set_country_flag = HSM_CYA_western_licensed_industry
+		custom_effect_tooltip = { IDEA = HSM_CYA_industrial_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_production_factory_max_efficiency_factor = 0.03 tooltip = production_factory_max_efficiency_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.56.d
+		trigger = { has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_west_settlement_chosen
+		set_country_flag = HSM_CYA_western_sequestered_arsenals
+		377 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.57
+	title = hsm_cyanolisia.57.t
+	desc = hsm_cyanolisia.57.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_CYA_grover_in_our_custody = yes has_country_flag = HSM_CYA_1021_caged_coronation NOT = { has_country_flag = HSM_CYA_puppet_petitions_resolved } }
+
+	option = {
+		name = hsm_cyanolisia.57.a
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_puppet_petitions_resolved
+		set_country_flag = HSM_CYA_puppet_civil_audiences
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 tooltip = HSM_CYA_compliance_growth_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.57.b
+		ai_chance = { factor = 1 }
+		set_country_flag = HSM_CYA_puppet_petitions_resolved
+		set_country_flag = HSM_CYA_puppet_staff_audiences
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_planning_speed = 0.04 tooltip = planning_speed_tt }
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.58
+	title = hsm_cyanolisia.58.t
+	desc = hsm_cyanolisia.58.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { has_country_flag = HSM_CYA_peace_demobilization_pending NOT = { has_country_flag = HSM_CYA_peace_demobilization_done } }
+
+	option = {
+		name = hsm_cyanolisia.58.a
+		trigger = { HSM_CYA_postwar_ready = yes  }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_demobilization_pending
+		set_country_flag = HSM_CYA_peace_demobilization_done
+		set_country_flag = HSM_CYA_civilian_demobilization
+		382 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.58.b
+		trigger = { HSM_CYA_postwar_ready = yes  }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_demobilization_pending
+		set_country_flag = HSM_CYA_peace_demobilization_done
+		set_country_flag = HSM_CYA_professional_reserve
+		army_experience = 40
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_training_time_factor = -0.03 tooltip = HSM_CYA_training_time_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.58.defer
+		trigger = { HSM_CYA_postwar_ready = no }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_demobilization_pending
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.59
+	title = hsm_cyanolisia.59.t
+	desc = hsm_cyanolisia.59.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { has_country_flag = HSM_CYA_peace_reconstruction_pending NOT = { has_country_flag = HSM_CYA_peace_reconstruction_done } }
+
+	option = {
+		name = hsm_cyanolisia.59.a
+		trigger = { HSM_CYA_postwar_ready = yes  }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_reconstruction_pending
+		set_country_flag = HSM_CYA_peace_reconstruction_done
+		set_country_flag = HSM_CYA_provincial_reconstruction
+		485 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		470 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		377 = {
+			if = {
+				limit = { HSM_CYA_state_in_imperial_sphere = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.59.b
+		trigger = { HSM_CYA_postwar_ready = yes  }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_reconstruction_pending
+		set_country_flag = HSM_CYA_peace_reconstruction_done
+		set_country_flag = HSM_CYA_central_research_budget
+		add_tech_bonus = { name = industrial_bonus bonus = 0.75 uses = 2 category = industry }
+	}
+
+	option = {
+		name = hsm_cyanolisia.59.defer
+		trigger = { HSM_CYA_postwar_ready = no }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_reconstruction_pending
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.60
+	title = hsm_cyanolisia.60.t
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_cyanolisia.60.dead.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } has_country_flag = HSM_CYA_1021_caged_coronation } text = hsm_cyanolisia.60.puppet.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } NOT = { has_country_flag = HSM_CYA_1021_caged_coronation } } text = hsm_cyanolisia.60.living.d }
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { has_country_flag = HSM_CYA_peace_constitution_pending NOT = { has_country_flag = HSM_CYA_peace_constitution_done } }
+
+	option = {
+		name = hsm_cyanolisia.60.a
+		trigger = { HSM_CYA_postwar_ready = yes OR = { has_country_flag = HSM_CYA_countess_dominant has_country_flag = HSM_CYA_1021_grover_restored } }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_constitution_pending
+		set_country_flag = HSM_CYA_peace_constitution_done
+		set_country_flag = HSM_CYA_chartered_imperial_order
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_compliance_growth = 0.02 tooltip = HSM_CYA_compliance_growth_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.60.b
+		trigger = { HSM_CYA_postwar_ready = yes has_country_flag = HSM_CYA_dawnclaw_dominant }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_constitution_pending
+		set_country_flag = HSM_CYA_peace_constitution_done
+		set_country_flag = HSM_CYA_service_imperial_order
+		custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.60.c
+		trigger = { HSM_CYA_postwar_ready = yes has_global_flag = GRI_grover_vi_dead }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_constitution_pending
+		set_country_flag = HSM_CYA_peace_constitution_done
+		set_country_flag = HSM_CYA_succession_statutes
+		add_political_power = 100
+		custom_effect_tooltip = { IDEA = HSM_CYA_imperial_legitimacy_dynamic_modifier_dummy_idea localization_key = modify_idea_tt }
+		add_to_variable = { HSM_CYA_imperial_political_power_factor = 0.03 tooltip = political_power_factor_tt }
+	}
+
+	option = {
+		name = hsm_cyanolisia.60.defer
+		trigger = { HSM_CYA_postwar_ready = no }
+		ai_chance = { factor = 1 }
+		clr_country_flag = HSM_CYA_peace_constitution_pending
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.61
+	title = hsm_cyanolisia.61.t
+	desc = hsm_cyanolisia.61.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.61.a
+		trigger = { HSM_CYA_accession_offer_valid = yes }
+		ai_chance = { factor = 20 }
+		FROM = {
+			set_autonomy = { target = ROOT autonomy_state = autonomy_puppet }
+			country_event = { id = hsm_cyanolisia.62 }
+		}
+	}
+
+	option = {
+		name = hsm_cyanolisia.61.b
+		ai_chance = { factor = 80 }
+		FROM = { country_event = { id = hsm_cyanolisia.63 } }
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.62
+	title = hsm_cyanolisia.62.t
+	desc = hsm_cyanolisia.62.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.62.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = hsm_cyanolisia.63
+	title = hsm_cyanolisia.63.t
+	desc = hsm_cyanolisia.63.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+
+	option = {
+		name = hsm_cyanolisia.63.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = HSM_CYA_accession_refused_tt
+	}
 }

@@ -57,7 +57,9 @@ $effectPath = 'mod/HoISubmod/common/scripted_effects/HSM_CYA_scripted_effects.tx
 $onActionPath = 'mod/HoISubmod/common/on_actions/HSM_CYA_on_actions.txt'
 $dynamicLocPath = 'mod/HoISubmod/common/scripted_localisation/HSM_CYA_narrative.txt'
 $paths = @($focusPath, $eventPath, $triggerPath, $effectPath, $onActionPath, $dynamicLocPath,
-    'mod/HoISubmod/events/GriffonianEmpire Events.txt', 'mod/HoISubmod/events/Cyanolisia Events.txt')
+    'mod/HoISubmod/events/GriffonianEmpire Events.txt', 'mod/HoISubmod/events/Cyanolisia Events.txt',
+    'mod/HoISubmod/common/decisions/HSM_CYA_imperial_settlement.txt',
+    'mod/HoISubmod/common/decisions/categories/HSM_CYA_decision_categories.txt')
 foreach ($path in $paths) {
     Test-Case "Balanced script: $path" {
         $depth = 0
@@ -193,6 +195,22 @@ Test-Case 'EN/RU keys and all new narrative references agree' {
     foreach ($path in $paths) {
         foreach ($m in [regex]::Matches((Read-Code $path), '\b(?:title|desc|text|name|tooltip|localization_key|custom_effect_tooltip)\s*=\s*"?((?:HSM_CYA_|hsm_cyanolisia\.)[\w.]+)')) {
             Assert-That ($locales.english.ContainsKey($m.Groups[1].Value)) "Unlocalized reference: $($m.Groups[1].Value)"
+        }
+    }
+}
+Test-Case 'Imperial decision titles, descriptions and new visible flags are localized' {
+    $decisions = Read-Code 'mod/HoISubmod/common/decisions/HSM_CYA_imperial_settlement.txt'
+    foreach ($m in [regex]::Matches($decisions, '(?m)^\t(HSM_CYA_\w+) = \{')) {
+        foreach ($language in @('english', 'russian')) {
+            foreach ($key in @($m.Groups[1].Value, "$($m.Groups[1].Value)_desc")) {
+                Assert-That ($locales[$language].ContainsKey($key)) "Missing decision localization: $language / $key"
+            }
+        }
+    }
+    $newEvents = (53..63 | ForEach-Object { $events["hsm_cyanolisia.$_"] }) -join ' '
+    foreach ($m in [regex]::Matches("$decisions $newEvents", '\bhas_country_flag\s*=\s*(HSM_CYA_\w+)')) {
+        foreach ($language in @('english', 'russian')) {
+            Assert-That ($locales[$language].ContainsKey($m.Groups[1].Value)) "Raw flag tooltip: $language / $($m.Groups[1].Value)"
         }
     }
 }

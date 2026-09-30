@@ -1,0 +1,202 @@
+HSM_CYA_imperial_settlement = {
+
+	HSM_CYA_renew_north_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_northern_charters has_completed_focus = HSM_CYA_the_northern_submission }
+			NOT = { HSM_CYA_campaign_north_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_north = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_central_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_lake_charters has_completed_focus = HSM_CYA_break_the_lake_countries }
+			NOT = { HSM_CYA_campaign_central_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_central = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_west_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_western_concord has_completed_focus = HSM_CYA_crush_the_western_crowns }
+			NOT = { HSM_CYA_campaign_west_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_west = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_south_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_southern_compacts has_completed_focus = HSM_CYA_claim_the_southern_crowns }
+			NOT = { HSM_CYA_campaign_south_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_south = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_frontier_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_frontier_mandate has_completed_focus = HSM_CYA_reclaim_the_griffon_frontier }
+			NOT = { HSM_CYA_campaign_frontier_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_frontier = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_river_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_river_missions has_completed_focus = HSM_CYA_cross_the_river_frontier }
+			NOT = { HSM_CYA_campaign_river_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_river = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_hills_claims = {
+		icon = generic_prepare_civil_war
+		cost = 35
+		days_re_enable = 90
+		visible = {
+			OR = { has_completed_focus = HSM_CYA_countess_hill_compacts has_completed_focus = HSM_CYA_subdue_the_hillponies }
+			NOT = { HSM_CYA_campaign_hills_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_hills = yes }
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_renew_continental_claims = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		days_re_enable = 90
+		visible = {
+			OR = {
+				AND = { has_completed_focus = HSM_CYA_countess_western_circuits has_completed_focus = HSM_CYA_countess_eastern_circuits }
+				AND = { has_completed_focus = HSM_CYA_western_imperial_circuits has_completed_focus = HSM_CYA_eastern_imperial_circuits }
+			}
+			NOT = { HSM_CYA_griffonia_secured = yes }
+		}
+		available = { is_subject = no }
+		complete_effect = { HSM_CYA_claim_remaining_griffonia = yes }
+		ai_will_do = { factor = 1 }
+	}
+	HSM_CYA_offer_imperial_accession = {
+		icon = generic_political_discourse
+		cost = 75
+		target_array = allies
+		target_root_trigger = { HSM_CYA_imperial_campaign_active = yes }
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = { tag = ROOT }
+				is_subject = no
+				any_owned_state = { is_on_continent = asia NOT = { impassable = yes } }
+			}
+		}
+		visible = { FROM = { NOT = { has_country_flag = HSM_CYA_accession_cooldown } } }
+		available = {
+			is_subject = no
+			has_war = no
+			is_in_faction_with = FROM
+			FROM = { is_faction_leader = no has_war = no is_subject = no }
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = { flag = HSM_CYA_accession_cooldown days = 180 }
+				country_event = { id = hsm_cyanolisia.61 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	HSM_CYA_peace_demobilization = {
+		icon = generic_political_discourse
+		cost = 50
+		days_remove = 30
+		visible = {
+			OR = { has_country_flag = HSM_CYA_countess_griffonia_unified has_country_flag = HSM_CYA_griffonia_claimed }
+			NOT = { has_country_flag = HSM_CYA_peace_demobilization_pending }
+			NOT = { has_country_flag = HSM_CYA_peace_demobilization_done }
+		}
+		available = { HSM_CYA_postwar_ready = yes }
+		cancel_trigger = { HSM_CYA_postwar_ready = no }
+		remove_effect = {
+			if = {
+				limit = { HSM_CYA_postwar_ready = yes NOT = { has_country_flag = HSM_CYA_peace_demobilization_done } }
+				set_country_flag = HSM_CYA_peace_demobilization_pending
+				country_event = { id = hsm_cyanolisia.58 }
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	HSM_CYA_peace_reconstruction = {
+		icon = generic_political_discourse
+		cost = 50
+		days_remove = 30
+		visible = {
+			OR = { has_country_flag = HSM_CYA_countess_griffonia_unified has_country_flag = HSM_CYA_griffonia_claimed }
+			has_country_flag = HSM_CYA_peace_demobilization_done
+			NOT = { has_country_flag = HSM_CYA_peace_reconstruction_pending }
+			NOT = { has_country_flag = HSM_CYA_peace_reconstruction_done }
+		}
+		available = { HSM_CYA_postwar_ready = yes }
+		cancel_trigger = { HSM_CYA_postwar_ready = no }
+		remove_effect = {
+			if = {
+				limit = { HSM_CYA_postwar_ready = yes NOT = { has_country_flag = HSM_CYA_peace_reconstruction_done } }
+				set_country_flag = HSM_CYA_peace_reconstruction_pending
+				country_event = { id = hsm_cyanolisia.59 }
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	HSM_CYA_peace_constitution = {
+		icon = generic_political_discourse
+		cost = 50
+		days_remove = 30
+		visible = {
+			OR = { has_country_flag = HSM_CYA_countess_griffonia_unified has_country_flag = HSM_CYA_griffonia_claimed }
+			has_country_flag = HSM_CYA_peace_reconstruction_done
+			NOT = { has_country_flag = HSM_CYA_peace_constitution_pending }
+			NOT = { has_country_flag = HSM_CYA_peace_constitution_done }
+		}
+		available = { HSM_CYA_postwar_ready = yes }
+		cancel_trigger = { HSM_CYA_postwar_ready = no }
+		remove_effect = {
+			if = {
+				limit = { HSM_CYA_postwar_ready = yes NOT = { has_country_flag = HSM_CYA_peace_constitution_done } }
+				set_country_flag = HSM_CYA_peace_constitution_pending
+				country_event = { id = hsm_cyanolisia.60 }
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+}

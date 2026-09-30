@@ -1,19 +1,50 @@
 HSM_CYA_western_griffonia_secured = {
 	custom_trigger_tooltip = {
 		tooltip = HSM_CYA_western_griffonia_secured_tt
+		HSM_CYA_campaign_north_secured = yes
+		HSM_CYA_campaign_central_secured = yes
+		HSM_CYA_campaign_west_secured = yes
+	}
+}
+
+HSM_CYA_eastern_griffonia_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_eastern_griffonia_secured_tt
+		HSM_CYA_campaign_frontier_secured = yes
+		HSM_CYA_campaign_river_secured = yes
+		HSM_CYA_campaign_hills_secured = yes
+	}
+}
+
+# The campaign also targets the surviving Herzland principalities, not just the capital.
+# Regional boundaries follow EaW's original-core inventory, not surviving country tags.
+HSM_CYA_campaign_north_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_north_secured_tt
 		FAT = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FAW = { HSM_CYA_original_griffonian_cores_secured = yes }
 		SRS = { HSM_CYA_original_griffonian_cores_secured = yes }
 		MNC = { HSM_CYA_original_griffonian_cores_secured = yes }
 		VED = { HSM_CYA_original_griffonian_cores_secured = yes }
 		HAU = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_campaign_central_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_central_secured_tt
 		AVI = { HSM_CYA_original_griffonian_cores_secured = yes }
 		BAN = { HSM_CYA_original_griffonian_cores_secured = yes }
 		EYR = { HSM_CYA_original_griffonian_cores_secured = yes }
 		ERI = { HSM_CYA_original_griffonian_cores_secured = yes }
-		POM = { HSM_CYA_original_griffonian_cores_secured = yes }
-		BOI = { HSM_CYA_original_griffonian_cores_secured = yes }
 		LAK = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BOI = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_campaign_west_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_west_secured_tt
 		TRD = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FEZ = { HSM_CYA_original_griffonian_cores_secured = yes }
 		AET = { HSM_CYA_original_griffonian_cores_secured = yes }
@@ -24,7 +55,14 @@ HSM_CYA_western_griffonia_secured = {
 		JEB = { HSM_CYA_original_griffonian_cores_secured = yes }
 		JFT = { HSM_CYA_original_griffonian_cores_secured = yes }
 		VIN = { HSM_CYA_original_griffonian_cores_secured = yes }
+		POM = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FLO = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_campaign_south_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_south_secured_tt
 		ARA = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FRN = { HSM_CYA_original_griffonian_cores_secured = yes }
 		TAL = { HSM_CYA_original_griffonian_cores_secured = yes }
@@ -35,10 +73,24 @@ HSM_CYA_western_griffonia_secured = {
 	}
 }
 
-HSM_CYA_eastern_griffonia_secured = {
+HSM_CYA_campaign_frontier_secured = {
 	custom_trigger_tooltip = {
-		tooltip = HSM_CYA_eastern_griffonia_secured_tt
-		JRV = { HSM_CYA_original_griffonian_cores_secured = yes }
+		tooltip = HSM_CYA_campaign_frontier_secured_tt
+		HLQ = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LNS = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LSC = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LSM = { HSM_CYA_original_griffonian_cores_secured = yes }
+		LUS = { HSM_CYA_original_griffonian_cores_secured = yes }
+		GRW = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BRF = { HSM_CYA_original_griffonian_cores_secured = yes }
+		GRY = { HSM_CYA_original_griffonian_cores_secured = yes }
+		GRU = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_campaign_river_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_river_secured_tt
 		LCT = { HSM_CYA_original_griffonian_cores_secured = yes }
 		RCT = { HSM_CYA_original_griffonian_cores_secured = yes }
 		NIM = { HSM_CYA_original_griffonian_cores_secured = yes }
@@ -47,15 +99,46 @@ HSM_CYA_eastern_griffonia_secured = {
 		DEP = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FRE = { HSM_CYA_original_griffonian_cores_secured = yes }
 		DMT = { HSM_CYA_original_griffonian_cores_secured = yes }
-		HLQ = { HSM_CYA_original_griffonian_cores_secured = yes }
-		LNS = { HSM_CYA_original_griffonian_cores_secured = yes }
-		LSC = { HSM_CYA_original_griffonian_cores_secured = yes }
-		LSM = { HSM_CYA_original_griffonian_cores_secured = yes }
-		JHP = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_campaign_hills_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_campaign_hills_secured_tt
 		FBK = { HSM_CYA_original_griffonian_cores_secured = yes }
 		FIR = { HSM_CYA_original_griffonian_cores_secured = yes }
 		WAT = { HSM_CYA_original_griffonian_cores_secured = yes }
 		NCH = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+HSM_CYA_herzland_campaign_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_herzland_campaign_secured_tt
+		382 = { HSM_CYA_state_in_imperial_sphere = yes }
+		GRI = { HSM_CYA_original_griffonian_cores_secured = yes }
+		STW = { HSM_CYA_original_griffonian_cores_secured = yes }
+		FEA = { HSM_CYA_original_griffonian_cores_secured = yes }
+		PYT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		ROU = { HSM_CYA_original_griffonian_cores_secured = yes }
+		YAL = { HSM_CYA_original_griffonian_cores_secured = yes }
+		ANG = { HSM_CYA_original_griffonian_cores_secured = yes }
+		KAT = { HSM_CYA_original_griffonian_cores_secured = yes }
+		BRZ = { HSM_CYA_original_griffonian_cores_secured = yes }
+	}
+}
+
+# Check the map again at the finale; completed regional focuses are not territorial guarantees.
+HSM_CYA_griffonia_secured = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_CYA_griffonia_secured_tt
+		all_state = {
+			OR = {
+				NOT = { is_on_continent = asia }
+				impassable = yes
+				HSM_CYA_state_in_imperial_sphere = yes
+			}
+		}
 	}
 }
 
@@ -190,5 +273,43 @@ HSM_CYA_grover_in_our_custody = {
 		tooltip = HSM_CYA_grover_in_our_custody_tt
 		has_character = GRI_emperor_grover_vi
 		NOT = { has_global_flag = GRI_grover_vi_dead }
+	}
+}
+
+# Kept separate from age/custody gates: unification must not delay coronation.
+HSM_CYA_imperial_campaign_active = {
+	OR = {
+		has_completed_focus = HSM_CYA_countess_union_mandate
+		has_completed_focus = HSM_CYA_empire_after_grover
+	}
+	OR = {
+		has_country_flag = HSM_CYA_countess_dominant
+		has_country_flag = HSM_CYA_dawnclaw_dominant
+	}
+	NOT = { has_country_flag = HSM_CYA_dawnclaw_dead }
+}
+HSM_CYA_postwar_ready = {
+	HSM_CYA_imperial_campaign_active = yes
+	is_subject = no
+	has_war = no
+	OR = {
+		has_country_flag = HSM_CYA_countess_griffonia_unified
+		has_country_flag = HSM_CYA_griffonia_claimed
+	}
+	HSM_CYA_griffonia_secured = yes
+}
+# Event scope: ROOT is the invited ally; FROM is the imperial government.
+HSM_CYA_accession_offer_valid = {
+	exists = yes
+	is_subject = no
+	is_faction_leader = no
+	has_war = no
+	is_in_faction_with = FROM
+	any_owned_state = { is_on_continent = asia NOT = { impassable = yes } }
+	FROM = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		HSM_CYA_imperial_campaign_active = yes
 	}
 }

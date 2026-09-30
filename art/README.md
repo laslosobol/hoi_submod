@@ -12,7 +12,8 @@ spirit, with a consistent painted style: dark iron, antique gold, ivory, royal
 blue, restrained crimson, and transparent backgrounds. Do not treat a newly
 chosen EaW icon as a finished replacement.
 
-All 350 focus definitions use an approved Cyanolisian GFX sprite.
+All 364 focus definitions use an approved Cyanolisian GFX sprite.
+Regional reconstruction focuses can share an existing approved image where appropriate.
 All 137 HSM idea uses have approved Cyanolisian images.
 The two uses of the `HSM_CYA_grover_regency` idea intentionally share one image.
 

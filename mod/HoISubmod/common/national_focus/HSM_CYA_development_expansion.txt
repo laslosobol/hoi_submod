@@ -290,7 +290,7 @@ shared_focus = {
 	icon = GFX_HSM_CYA_crown_municipal_loans
 	prerequisite = { focus = HSM_CYA_crown_credit_authority }
 	x = 10
-	y = 6
+	y = 7
 	cost = 4
 	ai_will_do = { factor = 10 }
 	allow_branch = { has_country_flag = HSM_CYA_countess_dominant }
@@ -485,7 +485,7 @@ shared_focus = {
 	y = 7
 	cost = 5
 	ai_will_do = { factor = 10 }
-	available = { has_country_flag = HSM_CYA_empire_descendant_declared }
+	available = { has_country_flag = holds_griffon_capital owns_state = 382 }
 	completion_reward = {
 		navy_experience = 35
 		if = { limit = { has_country_flag = HSM_CYA_dynamic_modifiers_installed } custom_effect_tooltip = { IDEA = HSM_CYA_military_program_dynamic_modifier_dummy_idea localization_key = modify_idea_tt } add_to_variable = { HSM_CYA_convoy_escort_efficiency = 0.10 tooltip = convoy_escort_efficiency_tt } }

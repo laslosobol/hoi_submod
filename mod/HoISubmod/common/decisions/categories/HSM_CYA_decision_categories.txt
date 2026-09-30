@@ -1,3 +1,11 @@
+HSM_CYA_imperial_settlement = {
+	icon = generic_political_discourse
+	allowed = { original_tag = CYA }
+	visible = { HSM_CYA_imperial_campaign_active = yes }
+	visible_when_empty = yes
+	priority = 99
+}
+
 HSM_CYA_dawnclaw_hiding = {
 	icon = generic_political_discourse
 	allowed = {
