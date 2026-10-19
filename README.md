@@ -1,8 +1,34 @@
-# HoISubmod
+# Equestria at War: Expanded Stories
 
-HoI4 Equestria at War submod development workspace.
+An unofficial Hearts of Iron IV submod that expands the stories and gameplay of
+countries in Equestria at War: national focuses, political paths, events,
+decisions, national spirits, and military and economic development.
+
+**IMPORTANT: AI-ASSISTED RESEARCH PROJECT.** This is a personal exploration of
+what AI can and cannot do in game modding. Code, narrative writing, localization,
+and artwork are developed with substantial AI assistance, under the author's
+direction and review. This is an experimental alpha, not a promise of error-free
+content or an official EaW release.
+
+The current playable expansion focuses on Cyanolisia. Additional countries are
+planned; they are not advertised as already implemented. In-game localization
+is available in English and Russian. Start a new campaign when testing releases.
 
 Current release: **0.5.2**. See [PATCH_NOTES.md](PATCH_NOTES.md) for release history.
+
+Steam Workshop: [Equestria at War: Expanded Stories](https://steamcommunity.com/sharedfiles/filedetails/?id=3810937281).
+
+Source and feedback: [GitHub](https://github.com/laslosobol/hoi_submod).
+[Suggestions](https://github.com/laslosobol/hoi_submod/issues/new?title=%5BSuggestion%5D%20)
+and [bug reports](https://github.com/laslosobol/hoi_submod/issues/new?title=%5BBug%5D%20)
+are welcome. For bugs, include mod/game/EaW versions, the playset, reproduction
+steps, and relevant screenshots or logs.
+
+Workshop descriptions are maintained in `workshop/description_en.txt` and
+`workshop/description_uk.txt`; see `workshop/UPLOAD.txt` for the upload layout.
+The Workshop preview is `mod/HoISubmod/thumbnail.png`.
+The checkout name, `HoISubmod` directory and `HSM_` script IDs remain technical
+identifiers so that existing tools and references keep working.
 
 The playable mod root is:
 
@@ -16,7 +42,7 @@ Put game content under that folder, then create a local launcher descriptor from
 launcher/HoISubmod.mod.example
 ```
 
-Copy it to your Hearts of Iron IV user mod directory as `HoISubmod.mod`, update the `path` value to your local `mod/HoISubmod` folder, and enable both `Equestria at War` and this submod in the launcher. Keep EaW above this submod in the playset.
+Use it as the local `HoISubmod.mod` launcher descriptor, with `path` pointing to this checkout's `mod/HoISubmod` folder. Enable both `Equestria at War` and `Equestria at War: Expanded Stories` in the launcher, with EaW above the submod in the playset.
 
 ## Layout
 

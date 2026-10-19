@@ -1,0 +1,41 @@
+Equestria at War: Expanded Stories
+Steam Workshop publishing notes for version 0.5.2
+
+WORKSHOP IDENTITY
+https://steamcommunity.com/sharedfiles/filedetails/?id=3810937281
+remote_file_id="3810937281"
+The first upload has been completed by the author. Preserve this ID in the
+packaged descriptor and local launcher descriptor when uploading updates.
+
+UPLOAD PAYLOAD
+C:/Users/laslo/OneDrive/Desktop/EaW Expanded Stories
+
+The payload is a snapshot of mod/HoISubmod, not a second development checkout.
+It contains only common, events, gfx, history, interface, localisation,
+descriptor.mod and thumbnail.png. It excludes the EaW dependency, high-resolution
+art sources, tools, documentation, Git data and editor settings.
+
+DESCRIPTIONS
+workshop/description_en.txt and workshop/description_uk.txt contain Steam BBCode.
+Use them for the Workshop page, not as game files in the upload folder.
+The English description is the suggested default; the Ukrainian text is a
+publishing translation, not a claim of Ukrainian in-game localization.
+
+LOCAL LAUNCHER DESCRIPTORS
+launcher/HoISubmod.mod.example points to the development checkout.
+launcher/ExpandedStories-Desktop.mod.example points to the Desktop snapshot.
+Only one local copy should be registered/selected for a given upload; verify
+its path to avoid publishing an obsolete or empty folder. The templates retain
+the published Workshop ID so later uploads target the existing item.
+
+WORKSHOP PAGE
+Add Equestria at War (Workshop item 1826643372) as a Required Item on Steam.
+Keep the AI-assisted research warning prominent, and include both GitHub links
+for suggestions and bug reports. Initially keep the page hidden while testing.
+Test a subscribed Workshop copy with the development copy disabled, then make
+the page public when ready. Preserve the assigned remote_file_id for updates.
+
+UPDATES
+Git commits do not refresh this snapshot or upload to Steam. Rebuild the payload
+from the playable mod root before a later upload. The folder/file names and HSM_
+script identifiers inside the development repository remain unchanged on purpose.

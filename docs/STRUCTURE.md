@@ -1,4 +1,4 @@
-# HoI4 EaW Submod Structure
+# Expanded Stories: Mod Structure
 
 ## Descriptor Files
 
@@ -22,7 +22,11 @@ dependencies={
 }
 ```
 
-The dependency name must match EaW's launcher display name. In the launcher playset, load `Equestria at War` above `HoISubmod`.
+The dependency name must match EaW's launcher display name. In the launcher playset, load `Equestria at War` above `Equestria at War: Expanded Stories`.
+
+The internal `HoISubmod` folder and `HSM_` identifiers are retained for tooling
+and script compatibility; they are not the public title. The Workshop preview
+is `thumbnail.png` in the playable mod root, referenced by both descriptors.
 
 ## Folder Guide
 
@@ -34,7 +38,8 @@ The dependency name must match EaW's launcher display name. In the launcher play
 
 `localisation/english/` contains player-facing strings. Keep key prefixes consistent, for example `HSM_` for this submod.
 
-Create `gfx/` and `interface/` only when adding new art or sprite definitions. Current content reuses existing EaW/HoI4 assets.
+`gfx/` contains the runtime artwork, and `interface/` contains its sprite
+definitions. High-resolution source art remains outside the upload payload.
 
 Create EaW-specific folders such as `country_metadata/` and `portraits/` only when touching country presentation or portrait content.
 
