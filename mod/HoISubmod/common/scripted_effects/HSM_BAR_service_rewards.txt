@@ -1,0 +1,248 @@
+# Derived institutional capabilities, separate from the anomaly ledger.
+# Completed-focus checks recover permanent training in older saves without granting research bonuses again.
+# The caller finishes with the case ledger's force_update_dynamic_modifier.
+HSM_BAR_refresh_service_training = {
+ hidden_effect = {
+  set_variable = { HSM_BAR_service_research = 0 }
+  set_variable = { HSM_BAR_service_network = 0 }
+  set_variable = { HSM_BAR_service_own_detection = 0 }
+  set_variable = { HSM_BAR_service_capture = 0 }
+  set_variable = { HSM_BAR_service_enemy_detection = 0 }
+  set_variable = { HSM_BAR_service_defense = 0 }
+  set_variable = { HSM_BAR_service_upgrade = 0 }
+  set_variable = { HSM_BAR_service_cost = 0 }
+  set_variable = { HSM_BAR_service_outcome = 0 }
+  set_variable = { HSM_BAR_service_slots = 0 }
+  set_variable = { HSM_BAR_service_crypto = 0 }
+  set_variable = { HSM_BAR_service_decrypt_power = 0 }
+  set_variable = { HSM_BAR_service_encryption = 0 }
+  set_variable = { HSM_BAR_service_decryption = 0 }
+  if = {
+   limit = {
+    tag = BAR
+    has_country_flag = HSM_BAR_active
+    has_country_flag = HSM_BAR_directorate
+    has_country_flag = HSM_BAR_service_founded
+    has_capitulated = no
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_seal_labs has_completed_focus = HSM_BAR_dir_seal_labs } }
+    add_to_variable = { HSM_BAR_service_research = 0.01 }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_archives has_completed_focus = HSM_BAR_dir_archives } }
+    add_to_variable = { HSM_BAR_service_research = 0.02 }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_suppression_lab has_completed_focus = HSM_BAR_dir_suppression_lab } }
+    add_to_variable = { HSM_BAR_service_research = 0.01 }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_charter has_completed_focus = HSM_BAR_dir_charter } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_upgrade = -0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_names has_completed_focus = HSM_BAR_dir_names } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_own_detection = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_watchmen has_completed_focus = HSM_BAR_dir_watchmen } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_evidence has_completed_focus = HSM_BAR_dir_evidence } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_outcome = 0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_training has_completed_focus = HSM_BAR_dir_training } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_capture = -0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_register has_completed_focus = HSM_BAR_dir_register } }
+    add_to_variable = { HSM_BAR_service_research = 0.01 }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_radio has_completed_focus = HSM_BAR_dir_radio } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_crypto = 1 }
+    }
+    else = {
+     add_to_variable = { HSM_BAR_service_encryption = 1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_agency has_completed_focus = HSM_BAR_dir_agency } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_slots = 1 }
+    }
+    else = {
+     add_to_variable = { HSM_BAR_service_decryption = 1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_storage has_completed_focus = HSM_BAR_dir_storage } }
+    add_to_variable = { HSM_BAR_service_research = 0.01 }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_cost = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_foreign_mandate has_completed_focus = HSM_BAR_dir_foreign_mandate } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_slots = 1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_world has_completed_focus = HSM_BAR_dir_world } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_upgrade = -0.1 }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_equus has_completed_focus = HSM_BAR_dir_equus } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+     add_to_variable = { HSM_BAR_service_own_detection = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_griffonia has_completed_focus = HSM_BAR_dir_griffonia } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+     add_to_variable = { HSM_BAR_service_decrypt_power = 0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_north has_completed_focus = HSM_BAR_dir_north } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+     add_to_variable = { HSM_BAR_service_capture = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_riverlands has_completed_focus = HSM_BAR_dir_riverlands } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+     add_to_variable = { HSM_BAR_service_upgrade = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_zebrica has_completed_focus = HSM_BAR_dir_zebrica } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_network = 0.05 }
+     add_to_variable = { HSM_BAR_service_cost = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_liaison has_completed_focus = HSM_BAR_dir_liaison } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_own_detection = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_trafficking has_completed_focus = HSM_BAR_dir_trafficking } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_outcome = 0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_rulers has_completed_focus = HSM_BAR_dir_rulers } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_decrypt_power = 0.1 }
+    }
+    else = {
+     add_to_variable = { HSM_BAR_service_decryption = 1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_countercult has_completed_focus = HSM_BAR_dir_countercult } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_enemy_detection = 0.2 }
+     add_to_variable = { HSM_BAR_service_defense = 1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_foreign_protocol has_completed_focus = HSM_BAR_dir_foreign_protocol } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_cost = -0.05 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_commission has_completed_focus = HSM_BAR_dir_commission } }
+    add_to_variable = { HSM_BAR_service_research = 0.01 }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_coexistence has_completed_focus = HSM_BAR_dir_coexistence } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_enemy_detection = 0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_normalization has_completed_focus = HSM_BAR_dir_normalization } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_decrypt_power = 0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_quiet_watch has_completed_focus = HSM_BAR_dir_quiet_watch } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_own_detection = -0.1 }
+    }
+   }
+   if = {
+    limit = { OR = { has_country_flag = HSM_BAR_service_training_sealed_orders has_completed_focus = HSM_BAR_dir_sealed_orders } }
+    if = {
+     limit = { has_dlc = "La Resistance" }
+     add_to_variable = { HSM_BAR_service_crypto = 1 }
+    }
+    else = {
+     add_to_variable = { HSM_BAR_service_encryption = 1 }
+    }
+   }
+   if = {
+    limit = { NOT = { has_dynamic_modifier = { modifier = HSM_BAR_service_capacity } } }
+    add_dynamic_modifier = { modifier = HSM_BAR_service_capacity }
+   }
+  }
+  else = {
+   if = {
+    limit = { has_dynamic_modifier = { modifier = HSM_BAR_service_capacity } }
+    remove_dynamic_modifier = { modifier = HSM_BAR_service_capacity }
+   }
+  }
+ }
+}

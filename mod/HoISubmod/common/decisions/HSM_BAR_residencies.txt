@@ -1,0 +1,226 @@
+HSM_BAR_residencies_reports = {
+ HSM_BAR_residencies_equus = {
+  icon = generic_research
+  cost = 25
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_equus_eligible = yes }
+  available = { HSM_BAR_residencies_equus_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_equus_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_equus_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_equus_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_equus_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_griffonia = {
+  icon = generic_research
+  cost = 30
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_griffonia_eligible = yes }
+  available = { HSM_BAR_residencies_griffonia_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_griffonia_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_griffonia_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_griffonia_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_griffonia_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_north = {
+  icon = generic_research
+  cost = 30
+  days_remove = 35
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_north_eligible = yes }
+  available = { HSM_BAR_residencies_north_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_north_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_north_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_north_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_north_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_riverlands = {
+  icon = generic_research
+  cost = 25
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_riverlands_eligible = yes }
+  available = { HSM_BAR_residencies_riverlands_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_riverlands_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_riverlands_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_riverlands_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_riverlands_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_zebrica = {
+  icon = generic_research
+  cost = 35
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_zebrica_eligible = yes }
+  available = { HSM_BAR_residencies_zebrica_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_zebrica_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_zebrica_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_zebrica_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_zebrica_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_comparison = {
+  icon = generic_research
+  cost = 40
+  days_remove = 42
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_comparison_eligible = yes }
+  available = { HSM_BAR_residencies_comparison_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_comparison_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_comparison_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_comparison_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_comparison_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+}
+
+HSM_BAR_residencies_countertrade = {
+ HSM_BAR_residencies_reply = {
+  icon = generic_prepare_civil_war
+  cost = 40
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_reply_eligible = yes }
+  available = { HSM_BAR_residencies_reply_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_reply_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_reply_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_reply_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_reply_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_papers = {
+  icon = generic_prepare_civil_war
+  cost = 50
+  days_remove = 35
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_papers_eligible = yes }
+  available = { HSM_BAR_residencies_papers_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_papers_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_papers_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_papers_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_papers_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_exchange = {
+  icon = generic_prepare_civil_war
+  cost = 50
+  days_remove = 35
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_exchange_eligible = yes }
+  available = { HSM_BAR_residencies_exchange_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_exchange_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_exchange_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_exchange_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_exchange_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_aftermath = {
+  icon = generic_prepare_civil_war
+  cost = 35
+  days_remove = 28
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_aftermath_eligible = yes }
+  available = { HSM_BAR_residencies_aftermath_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_aftermath_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_aftermath_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_aftermath_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_aftermath_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_residencies_review = {
+  icon = generic_prepare_civil_war
+  cost = 25
+  days_remove = 21
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_residencies_review_eligible = yes }
+  available = { HSM_BAR_residencies_review_can_start = yes }
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_start_tt
+   hidden_effect = { HSM_BAR_residencies_review_start = yes }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_residencies_review_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_review_running } }
+  remove_effect = {
+   custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+   hidden_effect = { HSM_BAR_residencies_review_finish = yes }
+  }
+  ai_will_do = { factor = 2 }
+ }
+}
+

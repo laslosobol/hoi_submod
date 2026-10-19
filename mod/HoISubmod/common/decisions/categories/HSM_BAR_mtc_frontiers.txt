@@ -1,0 +1,5 @@
+HSM_BAR_mtc_frontiers_policy = {
+ icon = generic_political_actions
+ allowed = { original_tag = BAR }
+ visible = { HSM_BAR_mtc_frontiers_route = yes has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils }
+}

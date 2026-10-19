@@ -1,0 +1,171 @@
+# Native La Resistance operations. ROOT is BAR; FROM remains the target country.
+# Main owns every case predicate and registry mutation named HSM_BAR_operation_*.
+
+HSM_BAR_operations_recon = {
+    icon = GFX_operations_infiltrate_civilian_govt
+    map_icon = GFX_operations_infiltrate_civilian_govt_map
+    name = HSM_BAR_operations_recon
+    desc = HSM_BAR_operations_recon_desc
+    priority = 20
+    days = 45
+    network_strength = 25
+    operatives = 1
+    allowed = { original_tag = BAR has_dlc = "La Resistance" }
+    visible = { is_ai = yes HSM_BAR_operations_recon_valid = yes }
+    available = {
+        HSM_BAR_operations_recon_valid = yes
+        network_national_coverage = { target = FROM value > 0 }
+    }
+    requirements = { HSM_BAR_operations_recon_valid = yes }
+    equipment = {
+        civilian_factories = { amount = 1 days = 30 }
+    }
+    risk_chance = 0.08
+    experience = 1.5
+    phases = { HSM_BAR_operations_phase_approach = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_recon = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_return = { base = 1 } }
+    outcome_potential = {
+        ROOT = { custom_effect_tooltip = HSM_BAR_operations_recon_result_tt }
+    }
+    outcome_execute = {
+        ROOT = {
+            if = {
+                limit = { HSM_BAR_operations_recon_valid = yes }
+                HSM_BAR_operation_recon_complete = yes
+            }
+            else = {
+                country_event = { id = HSM_BAR_operations.1 }
+            }
+        }
+    }
+    ai_will_do = { base = 12 }
+}
+
+HSM_BAR_operations_archive = {
+    icon = GFX_operations_steal_blueprints
+    map_icon = GFX_operations_steal_blueprints_map
+    name = HSM_BAR_operations_archive
+    desc = HSM_BAR_operations_archive_desc
+    priority = 20
+    days = 75
+    network_strength = 40
+    operatives = 2
+    allowed = { original_tag = BAR has_dlc = "La Resistance" }
+    visible = { is_ai = yes HSM_BAR_operations_archive_valid = yes }
+    available = {
+        HSM_BAR_operations_archive_valid = yes
+        network_national_coverage = { target = FROM value > 0 }
+    }
+    requirements = { HSM_BAR_operations_archive_valid = yes }
+    equipment = {
+        civilian_factories = { amount = 2 days = 45 }
+        support_equipment = 20
+    }
+    risk_chance = 0.12
+    experience = 1.5
+    phases = { HSM_BAR_operations_phase_approach = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_archive = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_return = { base = 1 } }
+    outcome_potential = {
+        ROOT = { custom_effect_tooltip = HSM_BAR_operations_archive_result_tt }
+    }
+    outcome_execute = {
+        ROOT = {
+            if = {
+                limit = { HSM_BAR_operations_archive_valid = yes }
+                HSM_BAR_operation_archive_complete = yes
+            }
+            else = {
+                country_event = { id = HSM_BAR_operations.1 }
+            }
+        }
+    }
+    ai_will_do = { base = 8 }
+}
+
+HSM_BAR_operations_relic = {
+    icon = GFX_operations_steal_blueprints
+    map_icon = GFX_operations_steal_blueprints_map
+    name = HSM_BAR_operations_relic
+    desc = HSM_BAR_operations_relic_desc
+    priority = 20
+    days = 90
+    network_strength = 50
+    operatives = 2
+    allowed = { original_tag = BAR has_dlc = "La Resistance" }
+    visible = { is_ai = yes HSM_BAR_operations_relic_valid = yes }
+    available = {
+        HSM_BAR_operations_relic_valid = yes
+        network_national_coverage = { target = FROM value > 0 }
+    }
+    requirements = { HSM_BAR_operations_relic_valid = yes }
+    equipment = {
+        civilian_factories = { amount = 3 days = 60 }
+        support_equipment = 30
+        motorized_equipment = 15
+    }
+    risk_chance = 0.2
+    experience = 1.5
+    phases = { HSM_BAR_operations_phase_approach = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_relic = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_return = { base = 1 } }
+    outcome_potential = {
+        ROOT = { custom_effect_tooltip = HSM_BAR_operations_relic_result_tt }
+    }
+    outcome_execute = {
+        ROOT = {
+            if = {
+                limit = { HSM_BAR_operations_relic_valid = yes }
+                HSM_BAR_operation_relic_complete = yes
+            }
+            else = {
+                country_event = { id = HSM_BAR_operations.1 }
+            }
+        }
+    }
+    ai_will_do = { base = 8 }
+}
+
+HSM_BAR_operations_remains = {
+    icon = GFX_operations_steal_blueprints
+    map_icon = GFX_operations_steal_blueprints_map
+    name = HSM_BAR_operations_remains
+    desc = HSM_BAR_operations_remains_desc
+    priority = 20
+    days = 100
+    network_strength = 50
+    operatives = 2
+    allowed = { original_tag = BAR has_dlc = "La Resistance" }
+    visible = { is_ai = yes HSM_BAR_operations_remains_valid = yes }
+    available = {
+        HSM_BAR_operations_remains_valid = yes
+        network_national_coverage = { target = FROM value > 0 }
+    }
+    requirements = { HSM_BAR_operations_remains_valid = yes }
+    equipment = {
+        civilian_factories = { amount = 2 days = 60 }
+        support_equipment = 30
+        motorized_equipment = 10
+    }
+    risk_chance = 0.15
+    experience = 1.5
+    phases = { HSM_BAR_operations_phase_approach = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_remains = { base = 1 } }
+    phases = { HSM_BAR_operations_phase_return = { base = 1 } }
+    outcome_potential = {
+        ROOT = { custom_effect_tooltip = HSM_BAR_operations_remains_result_tt }
+    }
+    outcome_execute = {
+        ROOT = {
+            if = {
+                limit = { HSM_BAR_operations_remains_valid = yes }
+                HSM_BAR_operation_remains_complete = yes
+            }
+            else = {
+                country_event = { id = HSM_BAR_operations.1 }
+            }
+        }
+    }
+    ai_will_do = { base = 8 }
+}

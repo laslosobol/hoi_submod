@@ -1,0 +1,21 @@
+HSM_BAR_civic_government = {
+ icon = GFX_idea_HSM_BAR_art_republic
+ enable = { HSM_BAR_civic_available = yes has_country_flag = HSM_BAR_civic_republic_awarded }
+ remove_trigger = { NOT = { HSM_BAR_civic_available = yes } }
+ political_power_factor = HSM_BAR_civic_pp
+ stability_factor = HSM_BAR_civic_stability
+ production_speed_buildings_factor = HSM_BAR_civic_construction
+ mobilization_speed = HSM_BAR_civic_mobilization
+ resistance_target = HSM_BAR_civic_resistance
+ compliance_growth = HSM_BAR_civic_compliance
+ army_core_defence_factor = HSM_BAR_civic_core_defence
+ training_time_factor = HSM_BAR_civic_training
+ supply_consumption_factor = HSM_BAR_civic_supply
+ army_org_regain = HSM_BAR_civic_recovery
+ production_factory_efficiency_gain_factor = HSM_BAR_civic_efficiency_gain
+ industrial_capacity_factory = HSM_BAR_civic_output
+ production_factory_max_efficiency_factor = HSM_BAR_civic_max_efficiency
+ production_speed_infrastructure_factor = HSM_BAR_civic_infrastructure
+ improve_relations_maintain_cost_factor = HSM_BAR_civic_relations
+}
+

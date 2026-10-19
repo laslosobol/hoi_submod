@@ -1,0 +1,716 @@
+focus_tree = {
+ id = HSM_BAR_directorate_tree
+ country = { factor = 0 }
+ default = no
+ continuous_focus_position = { x = 1600 y = 4200 }
+ shared_focus = HSM_BAR_common_reconstruction
+ shared_focus = HSM_BAR_transition_republic
+ shared_focus = HSM_BAR_transition_councils
+ shared_focus = HSM_BAR_transition_relief
+ shared_focus = HSM_BAR_transition_survey
+ shared_focus = HSM_BAR_transition_bread
+ shared_focus = HSM_BAR_transition_patients
+ shared_focus = HSM_BAR_transition_cabinet
+ shared_focus = HSM_BAR_transition_descent
+ shared_focus = HSM_BAR_transition_commission
+ shared_focus = HSM_BAR_dir_charter
+ shared_focus = HSM_BAR_dir_names
+ shared_focus = HSM_BAR_dir_seal_labs
+ shared_focus = HSM_BAR_dir_watchmen
+ shared_focus = HSM_BAR_dir_evidence
+ shared_focus = HSM_BAR_dir_training
+ shared_focus = HSM_BAR_dir_register
+ shared_focus = HSM_BAR_dir_radio
+ shared_focus = HSM_BAR_dir_archives
+ shared_focus = HSM_BAR_dir_agency
+ shared_focus = HSM_BAR_dir_storage
+ shared_focus = HSM_BAR_dir_foreign_mandate
+}
+
+focus_tree = {
+ id = HSM_BAR_directorate_world_tree
+ country = { factor = 0 }
+ default = no
+ continuous_focus_position = { x = 1600 y = 4200 }
+ shared_focus = HSM_BAR_common_reconstruction
+ shared_focus = HSM_BAR_transition_republic
+ shared_focus = HSM_BAR_transition_councils
+ shared_focus = HSM_BAR_transition_relief
+ shared_focus = HSM_BAR_transition_survey
+ shared_focus = HSM_BAR_transition_bread
+ shared_focus = HSM_BAR_transition_patients
+ shared_focus = HSM_BAR_transition_cabinet
+ shared_focus = HSM_BAR_transition_descent
+ shared_focus = HSM_BAR_transition_commission
+ shared_focus = HSM_BAR_dir_charter
+ shared_focus = HSM_BAR_dir_names
+ shared_focus = HSM_BAR_dir_seal_labs
+ shared_focus = HSM_BAR_dir_watchmen
+ shared_focus = HSM_BAR_dir_evidence
+ shared_focus = HSM_BAR_dir_training
+ shared_focus = HSM_BAR_dir_register
+ shared_focus = HSM_BAR_dir_radio
+ shared_focus = HSM_BAR_dir_archives
+ shared_focus = HSM_BAR_dir_agency
+ shared_focus = HSM_BAR_dir_storage
+ shared_focus = HSM_BAR_dir_foreign_mandate
+ shared_focus = HSM_BAR_dir_world
+ shared_focus = HSM_BAR_dir_equus
+ shared_focus = HSM_BAR_dir_griffonia
+ shared_focus = HSM_BAR_dir_north
+ shared_focus = HSM_BAR_dir_riverlands
+ shared_focus = HSM_BAR_dir_zebrica
+ shared_focus = HSM_BAR_dir_liaison
+ shared_focus = HSM_BAR_dir_trafficking
+ shared_focus = HSM_BAR_dir_rulers
+ shared_focus = HSM_BAR_dir_countercult
+ shared_focus = HSM_BAR_dir_foreign_protocol
+ shared_focus = HSM_BAR_dir_remains
+ shared_focus = HSM_BAR_dir_commission
+ shared_focus = HSM_BAR_dir_coexistence
+ shared_focus = HSM_BAR_dir_normalization
+ shared_focus = HSM_BAR_dir_custody_law
+ shared_focus = HSM_BAR_dir_open_report
+ shared_focus = HSM_BAR_dir_quiet_watch
+ shared_focus = HSM_BAR_dir_sealed_orders
+ shared_focus = HSM_BAR_dir_suppression_lab
+ shared_focus = HSM_BAR_dir_activation
+ shared_focus = HSM_BAR_dir_aftermath
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_charter
+ icon = {
+  GFX_HSM_BAR_dir_charter = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_charter = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 6
+ cost = 4
+ available = { has_country_flag = HSM_BAR_service_founded }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_charter }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_charter_tt }
+  add_tech_bonus = { name = HSM_BAR_service_research_charter bonus = 0.5 uses = 1 category = electronics }
+  set_country_flag = HSM_BAR_service_charter country_event = { id = hsm_bar_service.1 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_names
+ icon = {
+  GFX_HSM_BAR_dir_names = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_accounts = yes
+ }
+ dynamic = yes
+ x = 5
+ y = 7
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_charter }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_names }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_names_tt }
+  country_event = { id = hsm_bar_core.2 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_seal_labs
+ icon = {
+  GFX_HSM_BAR_dir_seal_labs = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_survey = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 7
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_charter }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_seal_labs }
+  custom_effect_tooltip = HSM_BAR_service_research_labs_tt
+  add_tech_bonus = { name = HSM_BAR_service_research_seal_labs bonus = 0.5 uses = 1 category = industry }
+  set_country_flag = HSM_BAR_field_research_open HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_watchmen
+ icon = {
+  GFX_HSM_BAR_dir_watchmen = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_post = yes
+ }
+ dynamic = yes
+ x = 3
+ y = 8
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_names }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_watchmen }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_watchmen_tt }
+  set_country_flag = HSM_BAR_reporting_channels country_event = { id = hsm_bar_service.2 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_evidence
+ icon = {
+  GFX_HSM_BAR_dir_evidence = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_accounts = yes
+ }
+ dynamic = yes
+ x = 7
+ y = 8
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_names }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_evidence }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_evidence_tt }
+  add_tech_bonus = { name = HSM_BAR_service_research_evidence bonus = 0.5 uses = 1 category = electronics }
+  set_country_flag = HSM_BAR_evidence_protocol country_event = { id = hsm_bar_service.3 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_training
+ icon = {
+  GFX_HSM_BAR_dir_training = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_workshop = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 8
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_seal_labs }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_training }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_training_tt }
+  add_tech_bonus = { name = HSM_BAR_service_research_training bonus = 0.5 uses = 1 category = hospital_tech }
+  set_country_flag = HSM_BAR_retrieval_training country_event = { id = hsm_bar_service.4 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_register
+ icon = {
+  GFX_HSM_BAR_dir_register = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_survey = yes
+ }
+ dynamic = yes
+ x = 7
+ y = 9
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_evidence }
+ prerequisite = { focus = HSM_BAR_dir_training }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_register }
+  custom_effect_tooltip = HSM_BAR_service_upgrade_register_tt
+  set_country_flag = HSM_BAR_region_local_open HSM_BAR_anomalies_pulse = yes custom_effect_tooltip = HSM_BAR_archive_open_tt HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_radio
+ icon = {
+  GFX_HSM_BAR_dir_radio = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_post = yes
+ }
+ dynamic = yes
+ x = 3
+ y = 9
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_watchmen }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_radio }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_radio_tt }
+  else = { custom_effect_tooltip = HSM_BAR_service_upgrade_radio_legacy_tt }
+  add_tech_bonus = { name = HSM_BAR_radio_bonus bonus = 0.5 uses = 1 category = electronics } set_country_flag = HSM_BAR_cipher_channels HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_archives
+ icon = {
+  GFX_HSM_BAR_dir_archives = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_accounts = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 9
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_training }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_archives }
+  custom_effect_tooltip = HSM_BAR_service_research_archives_tt
+  add_tech_bonus = { name = HSM_BAR_service_research_archives bonus = 1 uses = 1 category = electronics }
+  set_country_flag = HSM_BAR_archives_open custom_effect_tooltip = HSM_BAR_unlock_recover_science_tt country_event = { id = hsm_bar_service.5 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_agency
+ icon = {
+  GFX_HSM_BAR_dir_agency = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_office = yes
+ }
+ dynamic = yes
+ x = 5
+ y = 10
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_radio }
+ prerequisite = { focus = HSM_BAR_dir_register }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_agency }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_agency_tt }
+  else = { custom_effect_tooltip = HSM_BAR_service_upgrade_agency_legacy_tt }
+  set_country_flag = HSM_BAR_intelligence_open if = { limit = { has_dlc = "La Resistance" has_intelligence_agency = no } create_intelligence_agency = { name = "Alder Survey" icon = "GFX_intelligence_agency_logo_generic_6" } } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_storage
+ icon = {
+  GFX_HSM_BAR_dir_storage = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_warehouse = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 10
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_archives }
+ prerequisite = { focus = HSM_BAR_dir_register }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_storage }
+  custom_effect_tooltip = HSM_BAR_service_research_labs_tt
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_storage_tt }
+  set_country_flag = HSM_BAR_secure_storage country_event = { id = hsm_bar_service.6 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_foreign_mandate
+ icon = {
+  GFX_HSM_BAR_dir_foreign_mandate = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_office = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 11
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_agency }
+ prerequisite = { focus = HSM_BAR_dir_storage }
+ available = { has_country_flag = HSM_BAR_land_partly_healed has_country_flag = HSM_BAR_recovered_archives }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_foreign_mandate }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_foreign_mandate_tt }
+  set_country_flag = HSM_BAR_foreign_mandate load_focus_tree = { tree = HSM_BAR_directorate_world_tree keep_completed = yes } country_event = { id = hsm_bar_core.3 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_world
+ icon = {
+  GFX_HSM_BAR_dir_world = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_office = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 13
+ cost = 4
+ available = { has_country_flag = HSM_BAR_foreign_mandate }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_world }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_world_tt }
+  add_tech_bonus = { name = HSM_BAR_service_research_world bonus = 0.5 uses = 1 category = electronics }
+  country_event = { id = hsm_bar_service.7 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_equus
+ icon = {
+  GFX_HSM_BAR_dir_equus = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_shipping = yes
+ }
+ dynamic = yes
+ x = 0
+ y = 14
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_world }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_equus }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_equus_tt }
+  set_country_flag = HSM_BAR_region_equus_open custom_effect_tooltip = HSM_BAR_unlock_equus_tt country_event = { id = hsm_bar_service.20 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_griffonia
+ icon = {
+  GFX_HSM_BAR_dir_griffonia = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_survey = yes
+ }
+ dynamic = yes
+ x = 4
+ y = 14
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_world }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_griffonia }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_griffonia_tt }
+  set_country_flag = HSM_BAR_region_griffonia_open custom_effect_tooltip = HSM_BAR_unlock_griffonia_tt country_event = { id = hsm_bar_service.21 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_north
+ icon = {
+  GFX_HSM_BAR_dir_north = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_shipping = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 14
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_world }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_north }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_north_tt }
+  set_country_flag = HSM_BAR_region_north_open custom_effect_tooltip = HSM_BAR_unlock_north_tt country_event = { id = hsm_bar_service.22 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_riverlands
+ icon = {
+  GFX_HSM_BAR_dir_riverlands = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_survey = yes
+ }
+ dynamic = yes
+ x = 12
+ y = 14
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_world }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_riverlands }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_riverlands_tt }
+  set_country_flag = HSM_BAR_region_riverlands_open custom_effect_tooltip = HSM_BAR_unlock_riverlands_tt country_event = { id = hsm_bar_service.23 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_zebrica
+ icon = {
+  GFX_HSM_BAR_dir_zebrica = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_shipping = yes
+ }
+ dynamic = yes
+ x = 16
+ y = 14
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_world }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_zebrica }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_zebrica_tt }
+  set_country_flag = HSM_BAR_region_zebrica_open custom_effect_tooltip = HSM_BAR_unlock_zebrica_tt country_event = { id = hsm_bar_service.24 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_liaison
+ icon = {
+  GFX_HSM_BAR_dir_liaison = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_post = yes
+ }
+ dynamic = yes
+ x = 3
+ y = 16
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_equus focus = HSM_BAR_dir_riverlands }
+ available = { OR = { has_country_flag = HSM_BAR_region_equus_open has_country_flag = HSM_BAR_region_riverlands_open } }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_liaison }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_liaison_tt }
+  set_country_flag = HSM_BAR_liaison_open custom_effect_tooltip = HSM_BAR_unlock_smile_tt country_event = { id = hsm_bar_service.8 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_trafficking
+ icon = {
+  GFX_HSM_BAR_dir_trafficking = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_accounts = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 16
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_griffonia focus = HSM_BAR_dir_zebrica }
+ available = { OR = { has_country_flag = HSM_BAR_region_griffonia_open has_country_flag = HSM_BAR_region_zebrica_open } }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_trafficking }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_trafficking_tt }
+  set_country_flag = HSM_BAR_cult_inquiry_open country_event = { id = hsm_bar_core.4 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_rulers
+ icon = {
+  GFX_HSM_BAR_dir_rulers = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_archives = yes
+ }
+ dynamic = yes
+ x = 13
+ y = 16
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_north focus = HSM_BAR_dir_griffonia }
+ available = { OR = { has_country_flag = HSM_BAR_region_griffonia_open has_country_flag = HSM_BAR_region_north_open } }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_rulers }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_rulers_tt }
+  else = { custom_effect_tooltip = HSM_BAR_service_upgrade_rulers_legacy_tt }
+  set_country_flag = HSM_BAR_ruler_dossiers country_event = { id = hsm_bar_service.9 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_countercult
+ icon = {
+  GFX_HSM_BAR_dir_countercult = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_post = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 17
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_trafficking }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_countercult }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_countercult_tt }
+  set_country_flag = HSM_BAR_countercult_open custom_effect_tooltip = HSM_BAR_courier_chain_tt HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_foreign_protocol
+ icon = {
+  GFX_HSM_BAR_dir_foreign_protocol = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_office = yes
+ }
+ dynamic = yes
+ x = 3
+ y = 17
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_liaison }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_foreign_protocol }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_foreign_protocol_tt }
+  set_country_flag = HSM_BAR_foreign_protocol country_event = { id = hsm_bar_service.10 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_remains
+ icon = {
+  GFX_HSM_BAR_dir_remains = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_laboratory = yes
+ }
+ dynamic = yes
+ x = 13
+ y = 17
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_rulers }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_remains }
+  add_tech_bonus = { name = HSM_BAR_service_research_remains bonus = 0.5 uses = 1 category = hospital_tech }
+  set_country_flag = HSM_BAR_forensic_mandate custom_effect_tooltip = HSM_BAR_unlock_remains_tt country_event = { id = hsm_bar_service.11 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_commission
+ icon = {
+  GFX_HSM_BAR_dir_commission = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_archives = yes
+ }
+ dynamic = yes
+ x = 8
+ y = 18
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_foreign_protocol }
+ prerequisite = { focus = HSM_BAR_dir_countercult }
+ prerequisite = { focus = HSM_BAR_dir_remains }
+ available = { HSM_BAR_case_review_ready = yes has_country_flag = HSM_BAR_cult_network_broken has_country_flag = HSM_BAR_land_healed }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_commission }
+  custom_effect_tooltip = HSM_BAR_service_upgrade_commission_tt
+  country_event = { id = hsm_bar_core.7 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_coexistence
+ icon = {
+  GFX_HSM_BAR_dir_coexistence = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_clinic = yes
+ }
+ dynamic = yes
+ x = 5
+ y = 19
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_commission }
+ mutually_exclusive = { focus = HSM_BAR_dir_normalization }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_coexistence }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_coexistence_tt }
+  HSM_BAR_adopt_coexistence = yes HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_normalization
+ icon = {
+  GFX_HSM_BAR_dir_normalization = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_laboratory = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 19
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_commission }
+ mutually_exclusive = { focus = HSM_BAR_dir_coexistence }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_normalization }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_normalization_tt }
+  HSM_BAR_adopt_normalization = yes HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_custody_law
+ icon = {
+  GFX_HSM_BAR_dir_custody_law = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_archives = yes
+ }
+ dynamic = yes
+ x = 3
+ y = 20
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_coexistence }
+ completion_reward = {
+  add_ideas = HSM_BAR_custody_charter country_event = { id = hsm_bar_core.10 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_open_report
+ icon = {
+  GFX_HSM_BAR_dir_open_report = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_clinic = yes
+ }
+ dynamic = yes
+ x = 7
+ y = 20
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_coexistence }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_open_report }
+  add_tech_bonus = { name = HSM_BAR_service_research_open_report bonus = 0.5 uses = 2 category = industry }
+  country_event = { id = hsm_bar_service.12 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_quiet_watch
+ icon = {
+  GFX_HSM_BAR_dir_quiet_watch = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_workshop = yes
+ }
+ dynamic = yes
+ x = 5
+ y = 21
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_custody_law }
+ prerequisite = { focus = HSM_BAR_dir_open_report }
+ available = { has_country_flag = HSM_BAR_project_containment_done has_country_flag = HSM_BAR_returned_findings }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_quiet_watch }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_quiet_watch_tt }
+  set_country_flag = HSM_BAR_service_settled country_event = { id = hsm_bar_core.14 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_sealed_orders
+ icon = {
+  GFX_HSM_BAR_dir_sealed_orders = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_survey = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 20
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_normalization }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_sealed_orders }
+  if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_service_upgrade_sealed_orders_tt }
+  else = { custom_effect_tooltip = HSM_BAR_service_upgrade_sealed_orders_legacy_tt }
+  country_event = { id = hsm_bar_core.11 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_suppression_lab
+ icon = {
+  GFX_HSM_BAR_dir_suppression_lab = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_laboratory = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 21
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_sealed_orders }
+ available = { HSM_BAR_suppression_knowledge_ready = yes OR = { has_country_flag = HSM_BAR_selective_suppression has_country_flag = HSM_BAR_extended_test } }
+ completion_reward = {
+  hidden_effect = { set_country_flag = HSM_BAR_service_training_suppression_lab }
+  custom_effect_tooltip = HSM_BAR_service_research_labs_tt
+  add_tech_bonus = { name = HSM_BAR_service_research_suppression_lab bonus = 1 uses = 1 category = electronics }
+  set_country_flag = HSM_BAR_suppression_authorized custom_effect_tooltip = HSM_BAR_research_not_discovery_tt HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_activation
+ icon = {
+  GFX_HSM_BAR_dir_activation = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_workshop = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 22
+ cost = 4
+ prerequisite = { focus = HSM_BAR_dir_suppression_lab }
+ available = { HSM_BAR_suppression_knowledge_ready = yes has_country_flag = HSM_BAR_project_suppression_done }
+ completion_reward = {
+  set_country_flag = HSM_BAR_suppression_live set_country_flag = { flag = HSM_BAR_suppression_test_window days = 30 } add_ideas = HSM_BAR_suppression_crisis country_event = { id = hsm_bar_core.13 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_dir_aftermath
+ icon = {
+  GFX_HSM_BAR_dir_aftermath = { HSM_BAR_show_service_identity = yes }
+  GFX_HSM_BAR_cover_archives = yes
+ }
+ dynamic = yes
+ x = 11
+ y = 23
+ cost = 5
+ prerequisite = { focus = HSM_BAR_dir_activation }
+ available = { has_country_flag = HSM_BAR_suppression_resolved }
+ completion_reward = {
+  country_event = { id = hsm_bar_core.15 days = 1 } HSM_BAR_core_refresh = yes
+ }
+}
+

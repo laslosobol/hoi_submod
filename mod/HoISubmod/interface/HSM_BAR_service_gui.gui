@@ -1,0 +1,40 @@
+guiTypes = {
+ containerWindowType = { name = "HSM_BAR_service_gui_launcher" position = { x = 0 y = 0 }
+ buttonType = { name = "HSM_BAR_service_gui_open" position = { x = 330 y = 3 } quadTextureSprite = "GFX_state_lore_button"  pdx_tooltip = "HSM_BAR_service_gui_title" clicksound = click_ok } }
+ containerWindowType = { name = "HSM_BAR_service_gui_window" position = { x = 0 y = 0 } size = { width = 1000 height = 700 } orientation = center origo = center moveable = yes click_to_front = yes clipping = no
+ background = { name = "HSM_BAR_service_gui_background" quadTextureSprite = "GFX_HSM_BAR_archive_folder" }
+ buttonType = { name = "HSM_BAR_service_gui_input_floor" position = { x = 0 y = 0 } size = { x = 1000 y = 700 } quadTextureSprite = "GFX_HSM_BAR_archive_folder" alwaystransparent = no }
+ buttonType = { name = "HSM_BAR_service_gui_input_shield" position = { x = 0 y = 0 } size = { x = 1000 y = 700 } quadTextureSprite = "GFX_HSM_BAR_archive_folder" alwaystransparent = no }
+ instantTextboxType = { name = "HSM_BAR_service_gui_title" position = { x = 24 y = 20 } font = "hoi_24header" text = "HSM_BAR_service_gui_title" maxWidth = 860 maxHeight = 30 format = left alwaystransparent = yes }
+ instantTextboxType = { name = "HSM_BAR_service_gui_subtitle" position = { x = 24 y = 60 } font = "hoi_16mbs" text = "HSM_BAR_service_gui_subtitle" maxWidth = 900 maxHeight = 32 format = left alwaystransparent = yes }
+ buttonType = { name = "HSM_BAR_service_gui_close" position = { x = 944 y = 20 } quadTextureSprite = "GFX_HSM_BAR_archive_close"  pdx_tooltip = "HSM_BAR_service_gui_close" clicksound = click_ok }
+ buttonType = { name = "HSM_BAR_service_gui_region_1" position = { x = 24 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_1" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_1" clicksound = click_ok }
+buttonType = { name = "HSM_BAR_service_gui_region_2" position = { x = 178 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_2" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_2" clicksound = click_ok }
+buttonType = { name = "HSM_BAR_service_gui_region_3" position = { x = 332 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_3" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_3" clicksound = click_ok }
+buttonType = { name = "HSM_BAR_service_gui_region_4" position = { x = 486 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_4" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_4" clicksound = click_ok }
+buttonType = { name = "HSM_BAR_service_gui_region_5" position = { x = 640 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_5" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_5" clicksound = click_ok }
+buttonType = { name = "HSM_BAR_service_gui_region_6" position = { x = 794 y = 104 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_region_6" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_region_6" clicksound = click_ok }
+
+ containerWindowType = { name = "HSM_BAR_service_gui_subject_scroll" position = { x = 24 y = 160 } size = { width = 278 height = 424 } clipping = yes verticalScrollbar = "right_vertical_slider" scroll_wheel_factor = 40 smooth_scrolling = yes autohide_scrollbars = yes
+ gridboxType = { name = "HSM_BAR_service_gui_subject_list" position = { x = 0 y = 0 } size = { width = 263 height = 424 } slotsize = { width = 263 height = 42 } max_slots_horizontal = 1 } }
+ buttonType = { name = "HSM_BAR_service_gui_queue" position = { x = 24 y = 590 } quadTextureSprite = "GFX_HSM_BAR_archive_index" buttonText = "HSM_BAR_service_gui_queue" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_queue" clicksound = click_ok }
+ buttonType = { name = "HSM_BAR_service_gui_archive" position = { x = 330 y = 634 } quadTextureSprite = "GFX_HSM_BAR_archive_tab" buttonText = "HSM_BAR_service_gui_archive" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_archive" clicksound = click_ok }
+ buttonType = { name = "HSM_BAR_service_gui_investigate" position = { x = 492 y = 634 } quadTextureSprite = "GFX_HSM_BAR_archive_edition" buttonText = "HSM_BAR_service_gui_investigate" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_investigate" clicksound = click_ok }
+ buttonType = { name = "HSM_BAR_service_gui_fielddesk" position = { x = 744 y = 634 } quadTextureSprite = "GFX_HSM_BAR_archive_edition" buttonText = "HSM_BAR_service_gui_fielddesk" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "HSM_BAR_service_gui_fielddesk" clicksound = click_ok }
+ instantTextboxType = { name = "HSM_BAR_service_gui_subject_title" position = { x = 354 y = 160 } font = "HSM_BAR_archive_heading" text = "[GetHSMBARServiceSubjectTitle]" maxWidth = 578 maxHeight = 55 format = left alwaystransparent = yes }
+ containerWindowType = { name = "HSM_BAR_service_gui_brief_scroll" position = { x = 354 y = 220 } size = { width = 590 height = 140 } clipping = yes verticalScrollbar = "right_vertical_slider" scroll_wheel_factor = 35 smooth_scrolling = yes autohide_scrollbars = yes
+ instantTextboxType = { name = "HSM_BAR_service_gui_subject_body" position = { x = 0 y = 0 } font = "HSM_BAR_archive_ink" text = "[GetHSMBARServiceSubjectBody]" maxWidth = 570 maxHeight = 1500 format = left alwaystransparent = yes } }
+ containerWindowType = { name = "HSM_BAR_service_gui_action_scroll" position = { x = 354 y = 376 } size = { width = 594 height = 240 } clipping = yes verticalScrollbar = "right_vertical_slider" scroll_wheel_factor = 72 smooth_scrolling = yes autohide_scrollbars = yes
+ gridboxType = { name = "HSM_BAR_service_gui_action_list" position = { x = 0 y = 0 } size = { width = 580 height = 240 } slotsize = { width = 580 height = 88 } max_slots_horizontal = 1 } }
+ instantTextboxType = { name = "HSM_BAR_service_gui_empty" position = { x = 354 y = 386 } font = "HSM_BAR_archive_ink" text = "HSM_BAR_service_gui_empty" maxWidth = 560 maxHeight = 64 format = left alwaystransparent = yes }
+ }
+ containerWindowType = { name = "HSM_BAR_service_gui_subject_row" size = { width = 263 height = 42 }
+ buttonType = { name = "HSM_BAR_service_gui_subject_button" position = { x = 0 y = 0 } quadTextureSprite = "GFX_HSM_BAR_archive_index" buttonText = "[GetHSMBARServiceSubjectEntry]" buttonFont = "HSM_BAR_archive_ink" pdx_tooltip = "[GetHSMBARServiceSubjectEntry]" clicksound = click_ok } }
+ containerWindowType = { name = "HSM_BAR_service_gui_action_row" size = { width = 580 height = 88 }
+ instantTextboxType = { name = "HSM_BAR_service_gui_action_title" position = { x = 0 y = 0 } font = "HSM_BAR_archive_ink" text = "[GetHSMBARServiceActionName]" maxWidth = 490 maxHeight = 38 format = left alwaystransparent = yes }
+ instantTextboxType = { name = "HSM_BAR_service_gui_action_price" position = { x = 0 y = 40 } font = "HSM_BAR_archive_ink" text = "[GetHSMBARServiceActionPrice]" maxWidth = 490 maxHeight = 20 format = left alwaystransparent = yes }
+ instantTextboxType = { name = "HSM_BAR_service_gui_action_state" position = { x = 0 y = 62 } font = "HSM_BAR_archive_ink" text = "[GetHSMBARServiceActionState]" maxWidth = 490 maxHeight = 20 format = left alwaystransparent = yes }
+ buttonType = { name = "HSM_BAR_service_gui_start" position = { x = 496 y = 4 } quadTextureSprite = "GFX_HSM_BAR_archive_next"  pdx_tooltip = "[GetHSMBARServiceActionTip]" clicksound = click_ok }
+ buttonType = { name = "HSM_BAR_service_gui_cancel" position = { x = 540 y = 4 } quadTextureSprite = "GFX_HSM_BAR_archive_close"  pdx_tooltip = "HSM_BAR_service_gui_cancel" clicksound = click_ok }
+ }
+}

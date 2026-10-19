@@ -1,0 +1,500 @@
+# New-route diplomacy. See HSM_BAR_diplomacy scripted effects for the integration contract.
+add_namespace = hsm_bar_diplomacy
+
+country_event = {
+    id = hsm_bar_diplomacy.10
+    title = HSM_BAR_dip_WIT_approach_t
+    desc = { trigger = { has_country_flag = WIT_White_Stat_Won_Flag BAR = { has_country_flag = HSM_BAR_collegium } } text = HSM_BAR_dip_WIT_white_d }
+    desc = { trigger = { NOT = { AND = { has_country_flag = WIT_White_Stat_Won_Flag BAR = { has_country_flag = HSM_BAR_collegium } } } } text = HSM_BAR_dip_WIT_claim_d }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = WIT HSM_BAR_dip_WIT_pending = yes }
+    option = {
+        name = HSM_BAR_dip_WIT_offer
+        trigger = { HSM_BAR_dip_WIT_pending = yes }
+        ai_chance = {
+            base = 50
+            modifier = { factor = 4 has_country_flag = WIT_White_Stat_Won_Flag BAR = { has_country_flag = HSM_BAR_collegium } }
+            modifier = { factor = 0.2 has_government = fascism }
+            modifier = { factor = 2 BAR = { has_country_flag = HSM_BAR_coexistence } }
+            modifier = { factor = 1.5 BAR = { has_country_flag = HSM_BAR_normalization } }
+            modifier = { factor = 0.5 BAR = { has_country_flag = HSM_BAR_directorate } }
+        }
+        if = {
+            limit = { HSM_BAR_dip_WIT_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_WIT_terms
+                country_event = { id = hsm_bar_diplomacy.11 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_WIT_demand
+        trigger = { HSM_BAR_dip_WIT_pending = yes }
+        ai_chance = { base = 50 }
+        if = {
+            limit = { HSM_BAR_dip_WIT_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_WIT_strict
+                set_country_flag = HSM_BAR_dip_WIT_terms
+                country_event = { id = hsm_bar_diplomacy.12 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_WIT_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.11
+    title = HSM_BAR_dip_WIT_terms_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_WIT_terms_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_WIT_terms_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+    option = {
+        name = HSM_BAR_dip_WIT_sign
+        trigger = { HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+        ai_chance = {
+            base = 75
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_WIT_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_WIT_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_WIT_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.12
+    title = HSM_BAR_dip_WIT_ultimatum_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_WIT_ultimatum_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_WIT_ultimatum_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+    option = {
+        name = HSM_BAR_dip_WIT_concede
+        trigger = { HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+        ai_chance = {
+            base = 35
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_WIT_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_WIT_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_WIT_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.20
+    title = HSM_BAR_dip_ZES_approach_t
+    desc = { trigger = { has_country_leader = { character = ZES_lua_ramedi } } text = HSM_BAR_dip_ZES_lua_d }
+    desc = { trigger = { has_country_leader = { character = ZES_pasarinha } } text = HSM_BAR_dip_ZES_pasarinha_d }
+    desc = { trigger = { has_country_leader = { character = ZES_yrmthu } } text = HSM_BAR_dip_ZES_yrmthu_d }
+    desc = { trigger = { has_country_leader = { character = ZES_altu_kexa } } text = HSM_BAR_dip_ZES_altu_d }
+    desc = { trigger = { NOT = { has_country_leader = { character = ZES_lua_ramedi } has_country_leader = { character = ZES_pasarinha } has_country_leader = { character = ZES_yrmthu } has_country_leader = { character = ZES_altu_kexa } } } text = HSM_BAR_dip_ZES_council_d }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = ZES HSM_BAR_dip_ZES_pending = yes }
+    option = {
+        name = HSM_BAR_dip_ZES_offer
+        trigger = { HSM_BAR_dip_ZES_pending = yes }
+        ai_chance = {
+            base = 50
+            modifier = { factor = 2 has_country_leader = { character = ZES_lua_ramedi } }
+            modifier = { factor = 1.5 has_country_leader = { character = ZES_pasarinha } }
+            modifier = { factor = 2 has_country_leader = { character = ZES_yrmthu } }
+            modifier = { factor = 0.3 has_country_leader = { character = ZES_altu_kexa } }
+            modifier = { factor = 2 BAR = { has_country_flag = HSM_BAR_coexistence } }
+            modifier = { factor = 1.5 BAR = { has_country_flag = HSM_BAR_normalization } }
+            modifier = { factor = 0.5 BAR = { has_country_flag = HSM_BAR_directorate } }
+        }
+        if = {
+            limit = { HSM_BAR_dip_ZES_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_ZES_terms
+                country_event = { id = hsm_bar_diplomacy.21 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_ZES_demand
+        trigger = { HSM_BAR_dip_ZES_pending = yes }
+        ai_chance = { base = 50 }
+        if = {
+            limit = { HSM_BAR_dip_ZES_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_ZES_strict
+                set_country_flag = HSM_BAR_dip_ZES_terms
+                country_event = { id = hsm_bar_diplomacy.22 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_ZES_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.21
+    title = HSM_BAR_dip_ZES_terms_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_ZES_terms_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_ZES_terms_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+    option = {
+        name = HSM_BAR_dip_ZES_sign
+        trigger = { HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+        ai_chance = {
+            base = 75
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_ZES_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_ZES_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_ZES_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.22
+    title = HSM_BAR_dip_ZES_ultimatum_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_ZES_ultimatum_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_ZES_ultimatum_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+    option = {
+        name = HSM_BAR_dip_ZES_concede
+        trigger = { HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+        ai_chance = {
+            base = 35
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_ZES_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_ZES_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_ZES_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.30
+    title = HSM_BAR_dip_OLV_approach_t
+    desc = { trigger = { has_government = democratic } text = HSM_BAR_dip_OLV_democratic_d }
+    desc = { trigger = { has_government = communism } text = HSM_BAR_dip_OLV_communist_d }
+    desc = { trigger = { OR = { has_government = fascism has_government = neutrality } } text = HSM_BAR_dip_OLV_crown_d }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = OLV HSM_BAR_dip_OLV_pending = yes }
+    option = {
+        name = HSM_BAR_dip_OLV_offer
+        trigger = { HSM_BAR_dip_OLV_pending = yes }
+        ai_chance = {
+            base = 50
+            modifier = { factor = 3 has_government = democratic }
+            modifier = { factor = 0.25 has_government = fascism }
+            modifier = { factor = 2 has_government = communism BAR = { has_country_flag = HSM_BAR_collegium } }
+            modifier = { factor = 2 BAR = { has_country_flag = HSM_BAR_coexistence } }
+            modifier = { factor = 1.5 BAR = { has_country_flag = HSM_BAR_normalization } }
+            modifier = { factor = 0.5 BAR = { has_country_flag = HSM_BAR_directorate } }
+        }
+        if = {
+            limit = { HSM_BAR_dip_OLV_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_OLV_terms
+                country_event = { id = hsm_bar_diplomacy.31 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_OLV_demand
+        trigger = { HSM_BAR_dip_OLV_pending = yes }
+        ai_chance = { base = 50 }
+        if = {
+            limit = { HSM_BAR_dip_OLV_pending = yes }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_OLV_strict
+                set_country_flag = HSM_BAR_dip_OLV_terms
+                country_event = { id = hsm_bar_diplomacy.32 days = 1 }
+            }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_OLV_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.31
+    title = HSM_BAR_dip_OLV_terms_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_OLV_terms_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_OLV_terms_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+    option = {
+        name = HSM_BAR_dip_OLV_sign
+        trigger = { HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+        ai_chance = {
+            base = 75
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_OLV_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_OLV_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_OLV_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.32
+    title = HSM_BAR_dip_OLV_ultimatum_t
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_collegium }
+        text = HSM_BAR_dip_OLV_ultimatum_collegium_d
+    }
+    desc = {
+        trigger = { has_country_flag = HSM_BAR_directorate }
+        text = HSM_BAR_dip_OLV_ultimatum_directorate_d
+    }
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    trigger = { tag = BAR HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+    option = {
+        name = HSM_BAR_dip_OLV_concede
+        trigger = { HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+        ai_chance = {
+            base = 35
+            modifier = { factor = 2 has_country_flag = HSM_BAR_collegium }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_coexistence }
+            modifier = { factor = 1.5 has_country_flag = HSM_BAR_normalization }
+        }
+        HSM_BAR_dip_OLV_accept = yes
+    }
+    option = {
+        name = HSM_BAR_dip_refuse
+        trigger = { HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+        ai_chance = { base = 25 modifier = { factor = 2 has_country_flag = HSM_BAR_directorate } }
+        HSM_BAR_dip_OLV_refuse = yes
+    }
+    option = {
+        name = HSM_BAR_dip_lapsed
+        trigger = { NOT = { HSM_BAR_dip_OLV_pending = yes } }
+    }
+}
+
+country_event = {
+    id = hsm_bar_diplomacy.40
+    title = HSM_BAR_dip_GRU_t
+    desc = HSM_BAR_dip_GRU_d
+    picture = GFX_event_pony_soldiers_sunset
+    is_triggered_only = yes
+    trigger = {
+        tag = BAR HSM_BAR_dip_route = yes
+        GRU = { exists = yes has_country_flag = HSM_BAR_dip_GRU_warning_pending }
+        NOT = { has_war_with = GRU }
+    }
+    option = { name = HSM_BAR_dip_GRU_resist custom_effect_tooltip = HSM_BAR_dip_GRU_tt }
+}
+country_event = {
+    id = hsm_bar_diplomacy.41
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        clr_country_flag = HSM_BAR_dip_GRU_warning_pending
+        if = {
+            limit = {
+                tag = GRU exists = yes is_subject = no
+                BAR = { exists = yes is_subject = no }
+                NOT = { has_war_with = BAR }
+                NOT = { is_in_faction_with = BAR }
+            }
+            create_wargoal = { type = take_state_focus target = BAR }
+        }
+    }
+}
+country_event = {
+    id = hsm_bar_diplomacy.81
+    title = HSM_BAR_dip_signed_t
+    desc = HSM_BAR_dip_signed_d
+    picture = GFX_event_river_coalition_summit
+    is_triggered_only = yes
+    option = { name = HSM_BAR_dip_signed }
+}
+country_event = {
+    id = hsm_bar_diplomacy.90
+    title = HSM_BAR_dip_failed_t
+    desc = HSM_BAR_dip_failed_d
+    picture = GFX_event_pony_soldiers_sunset
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            AND = { tag = WIT HSM_BAR_dip_WIT_valid = yes BAR = { has_country_flag = HSM_BAR_dip_WIT_rejected NOT = { has_country_flag = HSM_BAR_WIT_agreement } } }
+            AND = { tag = ZES HSM_BAR_dip_ZES_valid = yes BAR = { has_country_flag = HSM_BAR_dip_ZES_rejected NOT = { has_country_flag = HSM_BAR_ZES_agreement } } }
+            AND = { tag = OLV HSM_BAR_dip_OLV_valid = yes BAR = { has_country_flag = HSM_BAR_dip_OLV_rejected NOT = { has_country_flag = HSM_BAR_OLV_agreement } } }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_enforce
+        ai_chance = { base = 80 modifier = { factor = 0.25 has_war = yes } }
+        custom_effect_tooltip = HSM_BAR_dip_enforce_tt
+        if = {
+            limit = { tag = WIT HSM_BAR_dip_WIT_valid = yes BAR = { has_country_flag = HSM_BAR_dip_WIT_rejected NOT = { has_country_flag = HSM_BAR_WIT_agreement } } }
+            create_wargoal = { type = annex_everything target = BAR }
+            if = { limit = { can_declare_war_on = BAR } declare_war_on = { target = BAR type = annex_everything } }
+        }
+        if = {
+            limit = { tag = ZES HSM_BAR_dip_ZES_valid = yes BAR = { has_country_flag = HSM_BAR_dip_ZES_rejected NOT = { has_country_flag = HSM_BAR_ZES_agreement } } }
+            # Retain Kasa's native war/victory continuation if talks fail.
+            if = {
+                limit = { has_country_flag = HSM_BAR_dip_yrmthu_ready }
+                set_country_flag = ZES_yrmthu_barrad_war
+                BAR = { add_ideas = ZES_barrad_partisans }
+            }
+            if = {
+                limit = { has_country_flag = HSM_BAR_dip_altu_ready }
+                set_country_flag = ZES_altu_barrad_war
+                if = {
+                    limit = { has_country_flag = ZES_barrad_partisan_flag }
+                    BAR = { add_ideas = ZES_barrad_partisans }
+                }
+                else_if = {
+                    limit = { has_country_flag = ZES_barrad_propaganda_flag }
+                    add_ideas = ZES_barrad_propaganda
+                }
+            }
+            create_wargoal = { type = annex_everything target = BAR }
+            if = { limit = { can_declare_war_on = BAR } declare_war_on = { target = BAR type = annex_everything } }
+        }
+        if = {
+            limit = { tag = OLV HSM_BAR_dip_OLV_valid = yes BAR = { has_country_flag = HSM_BAR_dip_OLV_rejected NOT = { has_country_flag = HSM_BAR_OLV_agreement } } }
+            create_wargoal = { type = annex_everything target = BAR }
+            if = { limit = { can_declare_war_on = BAR } declare_war_on = { target = BAR type = annex_everything } }
+        }
+    }
+    option = {
+        name = HSM_BAR_dip_withdraw
+        ai_chance = { base = 20 }
+        if = {
+            limit = { tag = WIT HSM_BAR_dip_WIT_valid = yes BAR = { has_country_flag = HSM_BAR_dip_WIT_rejected } }
+            add_political_power = -50
+            remove_wargoal = { type = annex_everything target = BAR }
+            set_country_flag = HSM_BAR_dip_settled
+            BAR = {
+                clr_country_flag = HSM_BAR_dip_WIT_rejected
+                clr_country_flag = HSM_BAR_dip_WIT_escalated
+                set_country_flag = { flag = HSM_BAR_dip_WIT_cooldown days = 180 }
+            }
+            
+        }
+        if = {
+            limit = { tag = ZES HSM_BAR_dip_ZES_valid = yes BAR = { has_country_flag = HSM_BAR_dip_ZES_rejected } }
+            add_political_power = -50
+            remove_wargoal = { type = annex_everything target = BAR }
+            set_country_flag = HSM_BAR_dip_settled
+            BAR = {
+                clr_country_flag = HSM_BAR_dip_ZES_rejected
+                clr_country_flag = HSM_BAR_dip_ZES_escalated
+                set_country_flag = { flag = HSM_BAR_dip_ZES_cooldown days = 180 }
+            }
+            HSM_BAR_dip_ZES_progress = yes
+        }
+        if = {
+            limit = { tag = OLV HSM_BAR_dip_OLV_valid = yes BAR = { has_country_flag = HSM_BAR_dip_OLV_rejected } }
+            add_political_power = -50
+            remove_wargoal = { type = annex_everything target = BAR }
+            set_country_flag = HSM_BAR_dip_settled
+            BAR = {
+                clr_country_flag = HSM_BAR_dip_OLV_rejected
+                clr_country_flag = HSM_BAR_dip_OLV_escalated
+                set_country_flag = { flag = HSM_BAR_dip_OLV_cooldown days = 180 }
+            }
+            
+        }
+    }
+}

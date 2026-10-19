@@ -1,0 +1,782 @@
+# Independent Service archive. Cloth dossier, paper tabs and archival plates.
+guiTypes = {
+    containerWindowType = {
+        name = "HSM_BAR_archive_launcher"
+        position = { x = 0 y = 0 }
+
+        buttonType = {
+            name = "HSM_BAR_archive_open"
+            position = { x = 372 y = 3 }
+            quadTextureSprite = "GFX_state_lore_button"
+            pdx_tooltip = "HSM_BAR_archive_launcher_tt"
+            clicksound = click_ok
+        }
+    }
+    containerWindowType = {
+        name = "HSM_BAR_archive_window"
+        position = { x = 0 y = 0 }
+        size = { width = 1000 height = 700 }
+        orientation = center
+        origo = center
+        moveable = yes
+        click_to_front = yes
+        clipping = no
+        show_sound = menu_open_window
+        hide_sound = menu_close_window
+        background = {
+            name = "HSM_BAR_archive_background"
+            quadTextureSprite = "GFX_HSM_BAR_archive_folder"
+        }
+
+        # EaW intelligence_agency_blocker uses two buttons to capture background clicks.
+        # Static material keeps the folder unchanged on hover. Shields stay behind controls.
+        buttonType = {
+            name = "HSM_BAR_archive_input_floor"
+            position = { x = 0 y = 0 }
+            size = { x = 1000 y = 700 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_folder"
+            alwaystransparent = no
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_input_shield"
+            position = { x = 0 y = 0 }
+            size = { x = 1000 y = 700 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_folder"
+            alwaystransparent = no
+            pdx_tooltip = "HSM_BAR_archive_distribution"
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_header"
+            position = { x = 24 y = 20 }
+            font = "hoi_24header"
+            text = "HSM_BAR_archive_header"
+            maxWidth = 730
+            maxHeight = 30
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_distribution"
+            position = { x = 350 y = 650 }
+            font = "hoi_16mbs"
+            text = "HSM_BAR_archive_distribution"
+            maxWidth = 600
+            maxHeight = 40
+            format = left
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_close"
+            position = { x = 944 y = 20 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_close"
+            shortcut = "ESCAPE"
+            pdx_tooltip = "HSM_BAR_archive_close_tt"
+            clicksound = click_ok
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_operations"
+            position = { x = 789 y = 18 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_operations"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_operations_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_1"
+            position = { x = 24 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_1"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_1_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_2"
+            position = { x = 177 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_2"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_2_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_3"
+            position = { x = 330 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_3"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_3_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_4"
+            position = { x = 483 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_4"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_4_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_5"
+            position = { x = 636 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_5"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_5_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_region_6"
+            position = { x = 789 y = 64 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_region_6"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_region_6_tt"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_index"
+            position = { x = 24 y = 114 }
+            font = "hoi_18mbs"
+            text = "[GetHSMBARArchivePage]"
+            maxWidth = 268
+            maxHeight = 32
+            format = left
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_case_rock"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_rock_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_rock_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_rock_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_rock_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_titan"
+            position = { x = 24 y = 262 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_titan_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_titan_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_titan_status"
+            position = { x = 28 y = 300 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_titan_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_entity"
+            position = { x = 24 y = 354 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_entity_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_entity_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_entity_status"
+            position = { x = 28 y = 392 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_entity_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_amulet"
+            position = { x = 24 y = 446 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_amulet_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_amulet_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_amulet_status"
+            position = { x = 28 y = 484 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_amulet_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_reactor"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_reactor_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_reactor_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_reactor_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_reactor_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_crown"
+            position = { x = 24 y = 354 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_crown_crossref_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_crown_crossref_tt"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_crown_status"
+            position = { x = 28 y = 392 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_crown_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_chalice"
+            position = { x = 24 y = 262 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_chalice_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_chalice_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_chalice_status"
+            position = { x = 28 y = 300 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_chalice_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_phylactery"
+            position = { x = 24 y = 354 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_phylactery_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_phylactery_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_phylactery_status"
+            position = { x = 28 y = 392 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_phylactery_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_darkheart"
+            position = { x = 24 y = 262 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_darkheart_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_darkheart_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_darkheart_status"
+            position = { x = 28 y = 300 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_darkheart_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_grover"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_grover_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_grover_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_grover_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_grover_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_rosa"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_rosa_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_rosa_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_rosa_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_rosa_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_herald"
+            position = { x = 24 y = 262 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_herald_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_herald_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_herald_status"
+            position = { x = 28 y = 300 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_herald_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_sombra"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_sombra_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_sombra_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_sombra_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_sombra_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_echo"
+            position = { x = 24 y = 262 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_echo_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_echo_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_echo_status"
+            position = { x = 28 y = 300 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_echo_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_marsh"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_marsh_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_marsh_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_marsh_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_marsh_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_case_compass"
+            position = { x = 24 y = 354 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_compass_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_compass_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_compass_status"
+            position = { x = 28 y = 392 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_compass_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+
+
+        buttonType = {
+            name = "HSM_BAR_archive_case_plants"
+            position = { x = 24 y = 446 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_plants_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_plants_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_plants_status"
+            position = { x = 28 y = 484 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_plants_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_case_zebrica"
+            position = { x = 24 y = 170 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_index"
+            buttonText = "HSM_BAR_archive_zebrica_title"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_zebrica_title"
+            clicksound = click_ok
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_zebrica_status"
+            position = { x = 28 y = 208 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchive_zebrica_Status]"
+            maxWidth = 260
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_prev"
+            position = { x = 24 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_previous"
+            pdx_tooltip = "HSM_BAR_archive_prev_tt"
+            clicksound = click_ok
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_next"
+            position = { x = 68 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_next"
+            pdx_tooltip = "HSM_BAR_archive_next_tt"
+            clicksound = click_ok
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_index_empty"
+            position = { x = 24 y = 590 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchiveIndexNote]"
+            maxWidth = 270
+            maxHeight = 48
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_case_title"
+            position = { x = 350 y = 136 }
+            font = "HSM_BAR_archive_heading"
+            text = "[GetHSMBARArchiveTitle]"
+            maxWidth = 600
+            maxHeight = 34
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_classification"
+            position = { x = 350 y = 176 }
+            font = "HSM_BAR_archive_ink"
+            text = "[GetHSMBARArchiveClassification]"
+            maxWidth = 600
+            maxHeight = 42
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_access"
+            position = { x = 350 y = 220 }
+            font = "HSM_BAR_archive_ink"
+            text = "[GetHSMBARArchiveAccess]"
+            maxWidth = 600
+            maxHeight = 32
+            format = left
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_doc_1"
+            position = { x = 350 y = 260 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_doc_1"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_doc_1"
+            clicksound = click_ok
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_doc_2"
+            position = { x = 503 y = 260 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_doc_2"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_doc_2"
+            clicksound = click_ok
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_doc_3"
+            position = { x = 656 y = 260 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_doc_3"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_doc_3"
+            clicksound = click_ok
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_doc_4"
+            position = { x = 809 y = 260 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+            buttonText = "HSM_BAR_archive_doc_4"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_results_tt"
+            clicksound = click_ok
+        }
+
+        # Navigation and attachments stay on the cloth, away from the layered paper edges.
+        buttonType = {
+            name = "HSM_BAR_archive_doc_5"
+            position = { x = 204 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_photo"
+            pdx_tooltip = "HSM_BAR_archive_photos_tt"
+            clicksound = click_ok
+        }
+
+        # Fixed sprites with case-specific visibility avoid a stale dynamic image.
+        iconType = {
+            name = "HSM_BAR_archive_photo_rock"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_rock"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_titan"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_titan"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_entity"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_entity"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_amulet"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_amulet"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_reactor"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_reactor"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_crown"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_crown"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_chalice"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_chalice"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_darkheart"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_darkheart"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_echo"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_echo"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_marsh"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_marsh"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_compass"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_compass"
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "HSM_BAR_archive_photo_plants"
+            position = { x = 350 y = 300 }
+            spriteType = "GFX_HSM_BAR_archive_photo_plants"
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_photo_caption"
+            position = { x = 350 y = 606 }
+            font = "HSM_BAR_archive_ink"
+            text = "[GetHSMBARArchivePhotoCaption]"
+            maxWidth = 600
+            maxHeight = 32
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_copy_1"
+            position = { x = 350 y = 306 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_edition"
+            buttonText = "HSM_BAR_archive_copy_1"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_copy_1_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_copy_2"
+            position = { x = 554 y = 306 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_edition"
+            buttonText = "HSM_BAR_archive_copy_2"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_copy_2_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_copy_3"
+            position = { x = 758 y = 306 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_edition"
+            buttonText = "HSM_BAR_archive_copy_3"
+            buttonFont = "HSM_BAR_archive_ink"
+            pdx_tooltip = "HSM_BAR_archive_copy_3_tt"
+            clicksound = click_ok
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_audio_echo"
+            position = { x = 248 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_audio"
+            pdx_tooltip = "HSM_BAR_archive_audio_echo_tt"
+            clicksound = HSM_BAR_archive_audio_echo
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_audio_entity"
+            position = { x = 248 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_audio"
+            pdx_tooltip = "HSM_BAR_archive_audio_entity_tt"
+            clicksound = HSM_BAR_archive_audio_entity
+        }
+        buttonType = {
+            name = "HSM_BAR_archive_audio_reactor"
+            position = { x = 248 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_audio"
+            pdx_tooltip = "HSM_BAR_archive_audio_reactor_tt"
+            clicksound = HSM_BAR_archive_audio_reactor
+        }
+        instantTextboxType = {
+            name = "HSM_BAR_archive_document_title"
+            position = { x = 350 y = 310 }
+            font = "HSM_BAR_archive_ink"
+            text = "[GetHSMBARArchiveDocumentTitle]"
+            maxWidth = 600
+            maxHeight = 30
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_document_body"
+            position = { x = 350 y = 350 }
+            font = "HSM_BAR_archive_body"
+            text = "[GetHSMBARArchiveBody]"
+            maxWidth = 606
+            maxHeight = 274
+            format = left
+            alwaystransparent = no
+            scrollbartype = "standardtext_slider"
+        }
+
+        buttonType = {
+            name = "HSM_BAR_archive_back"
+            position = { x = 112 y = 548 }
+            quadTextureSprite = "GFX_HSM_BAR_archive_back"
+            pdx_tooltip = "HSM_BAR_archive_back_tt"
+            clicksound = click_ok
+        }
+
+        instantTextboxType = {
+            name = "HSM_BAR_archive_record_note"
+            position = { x = 24 y = 644 }
+            font = "hoi_16mbs"
+            text = "[GetHSMBARArchiveRecordNote]"
+            maxWidth = 264
+            maxHeight = 36
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}
+

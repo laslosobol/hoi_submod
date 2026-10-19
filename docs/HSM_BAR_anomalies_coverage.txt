@@ -1,0 +1,281 @@
+Barrad anomaly implementation coverage
+======================================
+Source snapshot: local EaW tree, inspected 2026-10-01. New-campaign hooks;
+historical native events from a pre-install save cannot be reconstructed safely.
+Catalog: docs/barrad-anomaly-catalog.md (51 entries, not 51 implemented cases).
+
+Implemented dossiers (13, with deliberately different physical capabilities)
+-------------------------------------------------------------------------
+O01 Crown of Control: native discovery, museum/seal/leader custody; one instance
+per recipient country's native chain, not a unique global crown. Country scope
+records survive annexation in global.HSM_BAR_case_crowns. A state-valued location
+variable follows territorial control; worn crowns follow the original bearer
+country while its ruler still has the native trait, otherwise become unlocated.
+Recon, archival investigation, extraction of museum/sealed instances, local
+securing, and a live known-instance ledger. No worn-crown extraction or kidnapping.
+Repeated debug invocations of one country's discovery do not mint extra crowns.
+
+F07 living rock, F08 Titan, P01/L06 underground consciousness, O13 ward amulet,
+F06 vegetation: local survey, individual timed investigation, and guarded
+coexistence or restricted-access disposition. The amulet remains with the local
+settlement; the entity and rock remain at their sites. The Titan is never awakened,
+reconstructed or granted as loot. Defeat and dismantling are separate facts;
+used material is not granted a second time. L06 reactor is a conditional physical
+inspection in the entity report, not another independent playable case.
+Native BAR_bird_saved confirms the recorded plant incident and amulet use.
+An earlier BAR field survey is an authored alternative discovery; without the
+native incident the vegetation dossier records monitoring, not an active attack.
+
+O03 Chalice: old object, native discovery and relocation, forensic investigation,
+physical acquisition after the transformation chain, guarded study disposition.
+O04 phylactery: created only with the completed lich transformation; separate
+from Chalice. Forensic search, acquisition and isolation, never a claimed instant
+kill of Rosa. Searching a hidden Magehold repository is explicitly authored BAR
+content. The exact hiding place is not claimed as upstream canon.
+O06 Dark Heart: creation and bodily return tracked separately; investigation,
+acquisition after its native use, guarded study. Crystal Heart is never removed.
+Relic location is a state-scoped physical record; access always tests its current
+controller, including after original-tag annexation and after loss of BAR's vault.
+Native destruction of Magehold or restoration in CRY invalidates unsecured
+caches whose survival is not established.
+
+P06 Rosa: investigated archival dossier with mutually exclusive ordinary/lich/
+vampire histories and native execution/final-rest evidence. No body retrieval.
+P07 Grover II: archival dossier, confirmed pre-resurrection bones, actual return,
+and living retirement. The confirmed bones can be recovered and examined/interred;
+the queued native experiment then cannot reuse them. No post-defeat corpse.
+P08 Herald: investigated archival dossier, Weihe transformation and canonical
+coronation disappearance. No remains and no capture of the ruling Herald.
+P10 Sombra: investigated archival dossier, actual return in both native routes,
+and uncertain physical fate on restoration. No corpse inferred from retirement,
+limbo, loss of office, tag destruction or capitulation.
+
+Nine site/artifact cases have protective or custody dispositions. Four person
+dossiers provide documentary assessments; only P07 also has the above physically
+supported remains path. These are not thirteen leader-capture missions. The other
+38 catalog entries have no playable cases or fabricated status markers here.
+The catalog is retained as the research backlog. P02-P05 are not resurrected and
+their mutually exclusive late forms are not initialized by this registry.
+
+Evidence, knowledge, access
+--------------------------
+Global HSM_BAR_case_* facts record existence, creation, transformations and
+manifestations. Native hooks never mark BAR knowledge. BAR _known/_investigated
+flags result from surveys/archives/forensics; Crown knowledge is on each origin
+record and the BAR overview. Country _surveyed records the visited jurisdiction,
+not ownership or permanent access. A case can remain known after access is lost.
+There is no cached global accessible flag. Current controller, physical evidence,
+native custody mode and project gates are tested again on operation completion.
+Expired completions set HSM_BAR_case_last_operation_expired, clear success, and
+grant neither physical items, reward, incident nor new investigation credit.
+
+Foreign decision expeditions provide a playable route without espionage DLC;
+the separate native operations owner calls the same public predicates/effects.
+Recon requires a currently located Crown/relic, confirmed pre-return bones, or
+records of an actual transformation/return/execution/final rest. Bare control of
+Yale, Magehold or the Crystal City and historical existence flags are not leads.
+Survey and archive effects grant only the cases justified by that evidence.
+A later native discovery can reopen recon in an already surveyed country.
+Location follows the current controller; a former custodian loses eligibility.
+Native wrappers and fallback target_trigger/visible/available use the same public
+target predicates. Completion rechecks those predicates before granting results.
+
+Relic/remains theft retains the native stole_gift_opinion penalty from current
+custodian to BAR, a custodian notification, and a 20 PP handling cost. The report
+identifies transport intermediaries, never the hidden network. Barrad's cabinet
+does not know the network controls it through false fronts. Local precautions
+protect residents under civilian cover, without public hearings or persecution.
+No anomaly effect reads or modifies HSM_BAR_public_trust, which belongs to the
+Collegium. No anomaly effect adds retired HSM_BAR_repressive_methods or the
+SMILE-specific HSM_BAR_smile_compromised flag. The Service has no numeric secrecy
+meter. Case progression uses concrete evidence, custody and outcome flags, with
+explicit costs and consequences; it must not reuse Collegium public trust.
+
+Public integration contracts
+----------------------------
+BAR country scope:
+  HSM_BAR_anomalies_initialize = yes (idempotent; no recurring event loop)
+  HSM_BAR_anomalies_pulse = yes (world facts only, never BAR knowledge)
+One-off fallback event hsm_bar_anomaly.0 also handles activation without an
+on_action. Main's daily country hook owns the weekly cadence and calls pulse.
+There is no recurring anomaly event. No main on_action changes by this component.
+
+Target COUNTRY scope, ROOT=BAR, FROM=the same target, e.g. FROM { predicate=yes }:
+  HSM_BAR_operation_recon_target
+  HSM_BAR_operation_archive_target
+  HSM_BAR_operation_relic_target
+  HSM_BAR_operation_remains_target
+BAR ROOT country scope with FROM retained:
+  HSM_BAR_operation_recon_complete
+  HSM_BAR_operation_archive_complete
+  HSM_BAR_operation_relic_complete
+  HSM_BAR_operation_remains_complete
+Completion status: BAR HSM_BAR_case_last_operation_success / _expired.
+No implicit research credit is granted to an expired completion.
+
+Gates read from main: HSM_BAR_active, HSM_BAR_directorate,
+HSM_BAR_field_research_open, HSM_BAR_coexistence, HSM_BAR_normalization.
+HSM_BAR_foreign_mandate gates all four foreign operations; HSM_BAR_forensic_mandate
+gates both foreign and local historical-remains recovery.
+Research gates read: HSM_BAR_project_wards_done, _containment_done, _forensics_done.
+Suppression research is not consumed: none of these sources establishes a safe
+universal magic-off procedure. Doctrine and cult campaign remain main-owned.
+
+Optional main-owner precision hook: set HSM_BAR_titan_was_dismantled in native
+barrad_esb.43.a/.b and barrad_esb.53.a/.b, when dismantling actually occurs.
+This component does NOT edit Barrad Events.txt. It already reads bar_titan_tech,
+BAR_leopold_titan_armor, bar_elemele5, and a present titanHPmax/titanHP<=0 pair.
+Those confirm dismantling or defeat conservatively; no recoverable Titan body or
+Leopold endgame form is fabricated when the more precise hook is unavailable.
+
+Exact-source overrides and provenance
+------------------------------------
+Each file below shadows the identical relative path in EaW/events. Existing IDs,
+options and original content are preserved. All insertions are enclosed by
+HSM_BAR_ANOMALY_BEGIN / HSM_BAR_ANOMALY_END comments. Removing those blocks must
+reproduce the source text exactly after line-ending/final-newline normalization
+(tested; no native script content is excluded from this comparison).
+
+events/FantasyFlavorEvents.txt:
+  fantasyflavor.14 immediate: existing Crown discovered.
+  fantasyflavor.15.a: museum; fantasyflavor.16.a: seal; .16.b: leader custody.
+  See eaw_fantasy_events_l_english.yml fantasyflavor.14/.15/.16 descriptions.
+events/Yale.txt:
+  yale.28.a: expedition brought physical bones to Gamia.
+  yale.30: native event/option guards when bones have been taken; fallback option
+  for an already open window; successful native option consumes the remains record.
+  yale.33.a: Weihe transformation. yale.130.a: retirement, NOT death.
+  yale.136.a: explicitly vanishes at coronation, no body.
+  Gamia is VICTORY_POINTS_4157 in history/states/665-Romau.txt, not YAL capital 398.
+events/DreadLeague_Events.txt (the actual DED source, not DeadEmpire.txt):
+  deadempire.5.a: Chalice found. .201.a: vampire. .202.a: lich/phylactery.
+  .29 immediate: canonical execution account, recoverable body unconfirmed.
+  .29.c: native devastation invalidates uncollected caches.
+  .54 after kill_country_leader: final rest, no physical remains established.
+  Sources country_DED_l_english.yml, including POLITICS_ROSALICH_DESC.
+events/CrystalEmpire.txt (the actual CRY source):
+  cryscr.49.a and crystalemp.16.a: Dark Heart created.
+  crysom.2.a: actual ritual return, not crysom.0's plan.
+  cryscr.22.a/.b: alternate return, without inventing an unproven Dark Heart.
+  crysom.40 immediate: retirement/restoration; physical fate and uncollected
+  Dark Heart location uncertain, never a corpse flag.
+
+Validation
+----------
+Run: pwsh -NoProfile -File tools/Test-BarradAnomalies.ps1
+Latest result: 37 passed, 0 failed (2026-10-01), with no legacy Crown-hook warning.
+The native-event compatibility audit now fails on unsupported argument blocks.
+Read-only operations suite: node tools/Test-BarradResearchOperations.cjs,
+258 behavioral assertions passed. Its registry boundary is mocked; our own suite
+also executes the actual native operation wrapper triggers against our registry.
+Focused parser and scenario tests execute the actual owned triggers/effects;
+unsupported evaluator commands fail rather than silently passing. Covers separate
+crowns, annexed origins, lost vaults, expired targets, positive physical evidence,
+resurrection invalidation, Herald vanish, Sombra no-body, Rosa no-body, and no
+registry-driven resurrection/reactor/endgame manufacture. Checks EN/RU key parity,
+UTF-8 BOM, references, unique event IDs, and exact-source changed blocks.
+This is not an HOI4 runtime. In-game save/reload, operation UI scopes, decision
+timers and event rendering require an actual game session; none is claimed here.
+
+Playtest findings and corrections (2026-10-01)
+--------------------------------------------
+Inspected the actual log, not an invented fixture error:
+C:/Users/laslo/OneDrive/Documents/Paradox Interactive/Hearts of Iron IV/logs/error.log
+Snapshot LastWriteTime: 2026-10-01 17:41:52 local; 296797 bytes.
+
+Confirmed runtime errors:
+- Lines 252-258 at 17:08:36 reject CASE/EVENT in anomaly decision source line 21,
+  then report unexpected factor and unknown later decision categories. Similar
+  PROJECT/DOCTRINE/OUTCOME errors recur for local dispositions and CASE/EVENT
+  for person reports. These are load/parser failures, not just missing tooltips.
+- Lines 514-517 and 562-565 reject the effects file near original line 41, at the
+  <= 0 shorthand, followed by invalid-trigger/parser fallout.
+- Lines 528-533 reject MODE in FantasyFlavorEvents.txt:352. The equivalent
+  .16.a/.16.b calls used the same invalid form; all three were replaced after
+  explicit authorization to edit those exact native-event hooks.
+
+Exact excerpts from the inspected log:
+  [17:08:36][no_game_date][effect.cpp:445]: Invalid effect 'CASE' in common/decisions/HSM_BAR_anomalies.txt line : 21
+  [17:08:40][no_game_date][parser.cpp:1111]: Error: unexpected token in file: "common/scripted_effects/HSM_BAR_anomalies.txt" near line: 41 ( 0 )
+  [17:08:41][no_game_date][effect.cpp:445]: Invalid effect 'MODE' in events/FantasyFlavorEvents.txt line : 352
+
+Native syntax evidence read directly from the installed game:
+C:/shit/Steam/steamapps/common/Hearts of Iron IV/common/scripted_effects/00_scripted_effects.txt
+  Header demonstrates an ordinary scripted-effect call as effect_name = yes.
+C:/shit/Steam/steamapps/common/Hearts of Iron IV/common/scripted_effects/CZE_scripted_effects.txt:442
+  meta_effect uses text and [SKODA_OPT] with an explicit parameter binding.
+C:/shit/Steam/steamapps/common/Hearts of Iron IV/documentation/effects_documentation.md:4833
+  Documents meta_effect, not dollar interpolation in ordinary scripted effects.
+C:/shit/Steam/steamapps/common/Hearts of Iron IV/documentation/triggers_documentation.md:2110
+  Documents var/value/compare and only =, >, < shorthand for check_variable.
+
+The fixture's Expand-Nodes previously invented dollar interpolation and accepted
+<=, so its green results did not establish engine validity. That evaluator has
+been removed. The owned code uses literal case flags, literal event IDs and
+effect_name = yes calls; the Titan check uses compare = less_than_or_equals.
+The syntax audit rejects old parameter calls, dollar placeholders and <=/>=
+shorthand, with negative controls demonstrating each rejection.
+
+The original effects line 41 was check_variable = { titanHP <= 0 }, not a
+different numeric trigger. The installed documentation lists only =, <, >
+shorthand for check_variable; inclusive bounds use explicit var/value/compare.
+For example, check_variable = { var = HSM_BAR_capacity value = 40
+compare = greater_than_or_equals }. The log directly proves the <= rejection;
+replacing >= is also required by the documented form, but no separate >= engine
+failure was observed in this log. This is not a claim about every numeric trigger.
+Both inclusive forms are checked below/at/above 40 in the focused fixture, and
+both unsupported shorthand forms have negative syntax tests. The original main
+pass corrected the HSM_BAR_core.txt SMILE threshold to this explicit syntax.
+That threshold was subsequently removed with the numeric secrecy mechanic;
+the syntax tests remain applicable to surviving capacity checks.
+
+All 13 timed decisions now show an explicit conditional completion preview and
+execute guarded state changes inside hidden_effect. Successful local cases set
+their concrete investigated flag, clear stale expiry, and queue reports .11-.15;
+forensic cases similarly queue .16-.18 without granting physical custody.
+Failed attempts clear success and queue runtime-only report .2; the expired-target
+text is no longer the ordinary completion preview. A failed initial survey can
+be retried. Both disposition branches and their once-only rewards are exercised
+through the actual decision definitions, including access lost/restored mid-run.
+
+The reported Living Rock/temple no-op is supported by the rejected call and
+parser cascade. The exact old tooltip rendering and engine treatment of embedded
+dollar flag names are not separately proven. No fresh engine run, timer UI,
+save/reload or clean post-fix error.log is claimed. Fully restart HOI4 to reload
+scripts, then check survey -> 21-day Living Rock -> report -> disposition,
+a loss-of-access expiry, and conditional foreign leads.
+
+Completed native-event compatibility follow-up:
+FantasyFlavorEvents.txt .15.a, .16.a, .16.b now call, respectively:
+  HSM_BAR_case_crown_custody_museum = yes
+  HSM_BAR_case_crown_custody_sealed = yes
+  HSM_BAR_case_crown_custody_leader = yes
+These concrete endpoints are implemented in the owned effects file. The shared
+HSM_BAR_case_crown_custody effect now only resets old custody/records the site.
+The compatibility regression audits every anomaly effect call in all four native
+overrides and rejects block arguments or undefined effects. The actual three
+Crown options are executed against the fixture, including their original ideology
+gates, PP/manpower/stability changes and leader trait. Tests verify exclusive
+custody, cleared stale missing flags, capital location, one registry instance on
+repeated hooks, no automatic BAR knowledge, and recon/archive/relic eligibility.
+Source-parity checks remain provenance checks, not proof of a fresh HOI4 run.
+The operations owner's invalid-outcome branch also reports via its own event
+without calling our completion effect; status flags there remain owner-managed.
+
+Files changed in this targeted pass
+----------------------------------
+mod/HoISubmod/common/scripted_triggers/HSM_BAR_anomalies.txt
+mod/HoISubmod/common/scripted_effects/HSM_BAR_anomalies.txt
+mod/HoISubmod/common/decisions/HSM_BAR_anomalies.txt
+mod/HoISubmod/events/HSM_BAR_anomalies.txt
+mod/HoISubmod/events/FantasyFlavorEvents.txt (only the three authorized Crown calls)
+mod/HoISubmod/localisation/english/HSM_BAR_anomalies_l_english.yml
+mod/HoISubmod/localisation/russian/HSM_BAR_anomalies_l_russian.yml
+docs/HSM_BAR_anomalies_coverage.txt
+tools/Test-BarradAnomalies.ps1
+
+EN/RU key parity and UTF-8 BOM retained. No commits. Apart from the three Crown
+calls authorized in the follow-up, native overrides remain read-only. Main
+core/directorate/common, diplomacy, research, native operations and main
+localization were not edited. This follow-up changes only FantasyFlavorEvents.txt,
+Test-BarradAnomalies.ps1 and this coverage document.

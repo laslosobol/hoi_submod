@@ -1,0 +1,665 @@
+defined_text = { name = GetHSMBARServiceSubjectEntry
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 1 } } localization_key = HSM_BAR_archive_rock_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 2 } } localization_key = HSM_BAR_archive_titan_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 3 } } localization_key = HSM_BAR_archive_entity_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 4 } } localization_key = HSM_BAR_archive_amulet_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 5 } } localization_key = HSM_BAR_archive_reactor_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 6 } } localization_key = HSM_BAR_archive_crown_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 7 } } localization_key = HSM_BAR_archive_chalice_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 8 } } localization_key = HSM_BAR_archive_phylactery_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 9 } } localization_key = HSM_BAR_archive_darkheart_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 10 } } localization_key = HSM_BAR_archive_grover_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 11 } } localization_key = HSM_BAR_archive_rosa_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 12 } } localization_key = HSM_BAR_archive_herald_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 13 } } localization_key = HSM_BAR_archive_sombra_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 14 } } localization_key = HSM_BAR_archive_echo_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 15 } } localization_key = HSM_BAR_archive_marsh_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 16 } } localization_key = HSM_BAR_archive_compass_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 17 } } localization_key = HSM_BAR_archive_plants_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject_entry = 18 } } localization_key = HSM_BAR_archive_zebrica_title }
+text = { localization_key = HSM_BAR_service_gui_office } }
+defined_text = { name = GetHSMBARServiceSubjectTitle
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 1 } } localization_key = HSM_BAR_archive_rock_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 2 } } localization_key = HSM_BAR_archive_titan_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 3 } } localization_key = HSM_BAR_archive_entity_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 4 } } localization_key = HSM_BAR_archive_amulet_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 5 } } localization_key = HSM_BAR_archive_reactor_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 6 } } localization_key = HSM_BAR_archive_crown_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 7 } } localization_key = HSM_BAR_archive_chalice_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 8 } } localization_key = HSM_BAR_archive_phylactery_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 9 } } localization_key = HSM_BAR_archive_darkheart_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 10 } } localization_key = HSM_BAR_archive_grover_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 11 } } localization_key = HSM_BAR_archive_rosa_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 12 } } localization_key = HSM_BAR_archive_herald_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 13 } } localization_key = HSM_BAR_archive_sombra_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 14 } } localization_key = HSM_BAR_archive_echo_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 15 } } localization_key = HSM_BAR_archive_marsh_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 16 } } localization_key = HSM_BAR_archive_compass_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 17 } } localization_key = HSM_BAR_archive_plants_title }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 18 } } localization_key = HSM_BAR_archive_zebrica_title }
+text = { localization_key = HSM_BAR_service_gui_office } }
+defined_text = { name = GetHSMBARServiceSubjectBody
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 1 } } localization_key = HSM_BAR_archive_rock_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 2 } } localization_key = HSM_BAR_archive_titan_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 3 } } localization_key = HSM_BAR_archive_entity_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 4 } } localization_key = HSM_BAR_archive_amulet_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 5 } } localization_key = HSM_BAR_archive_reactor_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 6 } } localization_key = HSM_BAR_archive_crown_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 7 } } localization_key = HSM_BAR_archive_chalice_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 8 } } localization_key = HSM_BAR_archive_phylactery_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 9 } } localization_key = HSM_BAR_archive_darkheart_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 10 } } localization_key = HSM_BAR_archive_grover_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 11 } } localization_key = HSM_BAR_archive_rosa_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 12 } } localization_key = HSM_BAR_archive_herald_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 13 } } localization_key = HSM_BAR_archive_sombra_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 14 } } localization_key = HSM_BAR_archive_echo_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 15 } } localization_key = HSM_BAR_archive_marsh_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 16 } } localization_key = HSM_BAR_archive_compass_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 17 } } localization_key = HSM_BAR_archive_plants_intake }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = 18 } } localization_key = HSM_BAR_archive_zebrica_intake }
+text = { localization_key = HSM_BAR_service_gui_office_body } }
+defined_text = { name = GetHSMBARServiceActionName
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 1 } } localization_key = HSM_BAR_case_local_survey }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } } localization_key = HSM_BAR_case_rock_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 3 } } localization_key = HSM_BAR_case_rock_protect }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 4 } } localization_key = HSM_BAR_case_rock_restrict }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } } localization_key = HSM_BAR_case_titan_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 6 } } localization_key = HSM_BAR_case_titan_protect }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 7 } } localization_key = HSM_BAR_case_titan_restrict }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } } localization_key = HSM_BAR_case_entity_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 9 } } localization_key = HSM_BAR_case_entity_protect }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 10 } } localization_key = HSM_BAR_case_entity_restrict }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } } localization_key = HSM_BAR_case_amulet_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 12 } } localization_key = HSM_BAR_case_amulet_protect }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 13 } } localization_key = HSM_BAR_case_amulet_restrict }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } } localization_key = HSM_BAR_case_plants_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 15 } } localization_key = HSM_BAR_case_plants_protect }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 16 } } localization_key = HSM_BAR_case_plants_restrict }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 17 } } localization_key = HSM_BAR_case_chalice_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 18 } } localization_key = HSM_BAR_case_chalice_secure_local }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 19 } } localization_key = HSM_BAR_case_chalice_seal }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 20 } } localization_key = HSM_BAR_case_phylactery_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 21 } } localization_key = HSM_BAR_case_phylactery_secure_local }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 22 } } localization_key = HSM_BAR_case_phylactery_seal }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 23 } } localization_key = HSM_BAR_case_darkheart_investigate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 24 } } localization_key = HSM_BAR_case_darkheart_secure_local }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 25 } } localization_key = HSM_BAR_case_darkheart_seal }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 26 } } localization_key = HSM_BAR_case_rosa_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 27 } } localization_key = HSM_BAR_case_grover_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 28 } } localization_key = HSM_BAR_case_herald_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 29 } } localization_key = HSM_BAR_case_sombra_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 30 } } localization_key = HSM_BAR_case_crown_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 31 } } localization_key = HSM_BAR_case_crown_secure_local }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 32 } } localization_key = HSM_BAR_case_grover_secure_local }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 33 } } localization_key = HSM_BAR_case_grover_inter }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 34 } } localization_key = HSM_BAR_case_occupied_archives }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 35 } } localization_key = HSM_BAR_rumor_sombra }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 36 } } localization_key = HSM_BAR_rumor_darkheart }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 37 } } localization_key = HSM_BAR_rumor_crown_equus }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 38 } } localization_key = HSM_BAR_rumor_grover }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 39 } } localization_key = HSM_BAR_rumor_herald }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 40 } } localization_key = HSM_BAR_rumor_crown_griffonia }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 41 } } localization_key = HSM_BAR_rumor_rosa }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 42 } } localization_key = HSM_BAR_rumor_chalice }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 43 } } localization_key = HSM_BAR_rumor_phylactery }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } } localization_key = HSM_BAR_rumor_echo }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } } localization_key = HSM_BAR_rumor_compass }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 46 } } localization_key = HSM_BAR_rumor_reactor }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 47 } } localization_key = HSM_BAR_rumor_marsh }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 48 } } localization_key = HSM_BAR_rumor_zebrica }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 49 } } localization_key = HSM_BAR_rumor_crown_zebrica }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 50 } } localization_key = HSM_BAR_study_rock }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 51 } } localization_key = HSM_BAR_study_rock_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 52 } } localization_key = HSM_BAR_study_titan }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 53 } } localization_key = HSM_BAR_study_titan_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 54 } } localization_key = HSM_BAR_study_entity }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 55 } } localization_key = HSM_BAR_study_entity_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 56 } } localization_key = HSM_BAR_study_amulet }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 57 } } localization_key = HSM_BAR_study_amulet_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 58 } } localization_key = HSM_BAR_study_plants }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 59 } } localization_key = HSM_BAR_study_plants_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 60 } } localization_key = HSM_BAR_study_reactor }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 61 } } localization_key = HSM_BAR_study_reactor_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 62 } } localization_key = HSM_BAR_study_crown }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 63 } } localization_key = HSM_BAR_study_crown_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 64 } } localization_key = HSM_BAR_study_chalice }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 65 } } localization_key = HSM_BAR_study_chalice_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 66 } } localization_key = HSM_BAR_study_phylactery }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 67 } } localization_key = HSM_BAR_study_phylactery_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 68 } } localization_key = HSM_BAR_study_darkheart }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 69 } } localization_key = HSM_BAR_study_darkheart_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 70 } } localization_key = HSM_BAR_study_grover }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 71 } } localization_key = HSM_BAR_study_grover_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 72 } } localization_key = HSM_BAR_study_rosa }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 73 } } localization_key = HSM_BAR_study_rosa_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 74 } } localization_key = HSM_BAR_study_herald }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 75 } } localization_key = HSM_BAR_study_herald_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 76 } } localization_key = HSM_BAR_study_sombra }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 77 } } localization_key = HSM_BAR_study_sombra_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 78 } } localization_key = HSM_BAR_study_echo }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 79 } } localization_key = HSM_BAR_study_echo_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 80 } } localization_key = HSM_BAR_study_marsh }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 81 } } localization_key = HSM_BAR_study_marsh_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 82 } } localization_key = HSM_BAR_study_compass }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 83 } } localization_key = HSM_BAR_study_compass_disposition }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 84 } } localization_key = HSM_BAR_replicate_bulletin }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 85 } } localization_key = HSM_BAR_review_retrieval_order }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 86 } } localization_key = HSM_BAR_trace_couriers }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 87 } } localization_key = HSM_BAR_watched_transfer }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 88 } } localization_key = HSM_BAR_contact_smile }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 89 } } localization_key = HSM_BAR_share_wards }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 90 } } localization_key = HSM_BAR_assist_against_sombra }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 91 } } localization_key = HSM_BAR_sombra_volunteer_mission }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 92 } } localization_key = HSM_BAR_abort_suppression }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 93 } } localization_key = HSM_BAR_residencies_equus }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 94 } } localization_key = HSM_BAR_residencies_griffonia }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 95 } } localization_key = HSM_BAR_residencies_north }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 96 } } localization_key = HSM_BAR_residencies_riverlands }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 97 } } localization_key = HSM_BAR_residencies_zebrica }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 98 } } localization_key = HSM_BAR_residencies_comparison }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 99 } } localization_key = HSM_BAR_residencies_reply }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 100 } } localization_key = HSM_BAR_residencies_papers }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 101 } } localization_key = HSM_BAR_residencies_exchange }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 102 } } localization_key = HSM_BAR_residencies_aftermath }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 103 } } localization_key = HSM_BAR_residencies_review }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 104 } } localization_key = HSM_BAR_normalization_grid_equus }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 105 } } localization_key = HSM_BAR_normalization_grid_griffonia }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 106 } } localization_key = HSM_BAR_normalization_grid_north }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 107 } } localization_key = HSM_BAR_normalization_grid_riverlands }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 108 } } localization_key = HSM_BAR_normalization_grid_zebrica }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 109 } } localization_key = HSM_BAR_normalization_activate }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 110 } } localization_key = HSM_BAR_normalization_restore }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 111 } } localization_key = HSM_BAR_normalization_press }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 112 } } localization_key = HSM_BAR_normalization_arm_without_magic }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 113 } } localization_key = HSM_BAR_recover_science }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 114 } } localization_key = HSM_BAR_reclaim_fields }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 115 } } localization_key = HSM_BAR_heal_homeland }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 116 } } localization_key = HSM_BAR_research_wards_fallback }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 117 } } localization_key = HSM_BAR_research_wards_resume }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 118 } } localization_key = HSM_BAR_research_containment_fallback }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 119 } } localization_key = HSM_BAR_research_containment_resume }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 120 } } localization_key = HSM_BAR_research_forensics_fallback }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 121 } } localization_key = HSM_BAR_research_forensics_resume }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 122 } } localization_key = HSM_BAR_research_suppression_fallback }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 123 } } localization_key = HSM_BAR_research_suppression_resume }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 124 } } localization_key = HSM_BAR_research_restore_facility }
+text = { localization_key = HSM_BAR_service_gui_none } }
+defined_text = { name = GetHSMBARServiceActionPrice
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 1 } } localization_key = HSM_BAR_service_gui_case_local_survey_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 3 } } localization_key = HSM_BAR_service_gui_case_rock_protect_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 4 } } localization_key = HSM_BAR_service_gui_case_rock_restrict_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 6 } } localization_key = HSM_BAR_service_gui_case_titan_protect_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 7 } } localization_key = HSM_BAR_service_gui_case_titan_restrict_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 9 } } localization_key = HSM_BAR_service_gui_case_entity_protect_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 10 } } localization_key = HSM_BAR_service_gui_case_entity_restrict_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 12 } } localization_key = HSM_BAR_service_gui_case_amulet_protect_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 13 } } localization_key = HSM_BAR_service_gui_case_amulet_restrict_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 15 } } localization_key = HSM_BAR_service_gui_case_plants_protect_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 16 } } localization_key = HSM_BAR_service_gui_case_plants_restrict_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 17 } } localization_key = HSM_BAR_service_gui_case_chalice_investigate_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 18 } } localization_key = HSM_BAR_service_gui_case_chalice_secure_local_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 19 } } localization_key = HSM_BAR_service_gui_case_chalice_seal_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 20 } } localization_key = HSM_BAR_service_gui_case_phylactery_investigate_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 21 } } localization_key = HSM_BAR_service_gui_case_phylactery_secure_local_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 22 } } localization_key = HSM_BAR_service_gui_case_phylactery_seal_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 23 } } localization_key = HSM_BAR_service_gui_case_darkheart_investigate_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 24 } } localization_key = HSM_BAR_service_gui_case_darkheart_secure_local_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 25 } } localization_key = HSM_BAR_service_gui_case_darkheart_seal_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 26 } } localization_key = HSM_BAR_service_gui_case_rosa_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 27 } } localization_key = HSM_BAR_service_gui_case_grover_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 28 } } localization_key = HSM_BAR_service_gui_case_herald_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 29 } } localization_key = HSM_BAR_service_gui_case_sombra_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 30 } } localization_key = HSM_BAR_service_gui_case_crown_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 31 } } localization_key = HSM_BAR_service_gui_case_crown_secure_local_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 32 } } localization_key = HSM_BAR_service_gui_case_grover_secure_local_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 33 } } localization_key = HSM_BAR_service_gui_case_grover_inter_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 34 } } localization_key = HSM_BAR_service_gui_case_occupied_archives_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 35 } } localization_key = HSM_BAR_service_gui_rumor_sombra_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 36 } } localization_key = HSM_BAR_service_gui_rumor_darkheart_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 37 } } localization_key = HSM_BAR_service_gui_rumor_crown_equus_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 38 } } localization_key = HSM_BAR_service_gui_rumor_grover_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 39 } } localization_key = HSM_BAR_service_gui_rumor_herald_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 40 } } localization_key = HSM_BAR_service_gui_rumor_crown_griffonia_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 41 } } localization_key = HSM_BAR_service_gui_rumor_rosa_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 42 } } localization_key = HSM_BAR_service_gui_rumor_chalice_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 43 } } localization_key = HSM_BAR_service_gui_rumor_phylactery_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } } localization_key = HSM_BAR_service_gui_protocol_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 46 } } localization_key = HSM_BAR_service_gui_rumor_reactor_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 47 } } localization_key = HSM_BAR_service_gui_rumor_marsh_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 48 } } localization_key = HSM_BAR_service_gui_rumor_zebrica_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 49 } } localization_key = HSM_BAR_service_gui_rumor_crown_zebrica_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 50 } } localization_key = HSM_BAR_service_gui_study_rock_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 51 } } localization_key = HSM_BAR_service_gui_study_rock_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 52 } } localization_key = HSM_BAR_service_gui_study_titan_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 53 } } localization_key = HSM_BAR_service_gui_study_titan_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 54 } } localization_key = HSM_BAR_service_gui_study_entity_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 55 } } localization_key = HSM_BAR_service_gui_study_entity_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 56 } } localization_key = HSM_BAR_service_gui_study_amulet_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 57 } } localization_key = HSM_BAR_service_gui_study_amulet_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 58 } } localization_key = HSM_BAR_service_gui_study_plants_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 59 } } localization_key = HSM_BAR_service_gui_study_plants_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 60 } } localization_key = HSM_BAR_service_gui_study_reactor_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 61 } } localization_key = HSM_BAR_service_gui_study_reactor_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 62 } } localization_key = HSM_BAR_service_gui_study_crown_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 63 } } localization_key = HSM_BAR_service_gui_study_crown_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 64 } } localization_key = HSM_BAR_service_gui_study_chalice_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 65 } } localization_key = HSM_BAR_service_gui_study_chalice_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 66 } } localization_key = HSM_BAR_service_gui_study_phylactery_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 67 } } localization_key = HSM_BAR_service_gui_study_phylactery_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 68 } } localization_key = HSM_BAR_service_gui_study_darkheart_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 69 } } localization_key = HSM_BAR_service_gui_study_darkheart_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 70 } } localization_key = HSM_BAR_service_gui_study_grover_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 71 } } localization_key = HSM_BAR_service_gui_study_grover_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 72 } } localization_key = HSM_BAR_service_gui_study_rosa_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 73 } } localization_key = HSM_BAR_service_gui_study_rosa_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 74 } } localization_key = HSM_BAR_service_gui_study_herald_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 75 } } localization_key = HSM_BAR_service_gui_study_herald_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 76 } } localization_key = HSM_BAR_service_gui_study_sombra_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 77 } } localization_key = HSM_BAR_service_gui_study_sombra_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 78 } } localization_key = HSM_BAR_service_gui_study_echo_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 79 } } localization_key = HSM_BAR_service_gui_study_echo_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 80 } } localization_key = HSM_BAR_service_gui_study_marsh_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 81 } } localization_key = HSM_BAR_service_gui_study_marsh_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 82 } } localization_key = HSM_BAR_service_gui_study_compass_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 83 } } localization_key = HSM_BAR_service_gui_study_compass_disposition_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 84 } } localization_key = HSM_BAR_service_gui_replicate_bulletin_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 85 } } localization_key = HSM_BAR_service_gui_review_retrieval_order_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 86 } } localization_key = HSM_BAR_service_gui_trace_couriers_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 87 } } localization_key = HSM_BAR_service_gui_watched_transfer_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 88 } } localization_key = HSM_BAR_service_gui_contact_smile_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 89 } } localization_key = HSM_BAR_service_gui_share_wards_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 90 } } localization_key = HSM_BAR_service_gui_assist_against_sombra_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 91 } } localization_key = HSM_BAR_service_gui_sombra_volunteer_mission_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 92 } } localization_key = HSM_BAR_service_gui_abort_suppression_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 93 } } localization_key = HSM_BAR_service_gui_residencies_equus_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 94 } } localization_key = HSM_BAR_service_gui_residencies_griffonia_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 95 } } localization_key = HSM_BAR_service_gui_residencies_north_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 96 } } localization_key = HSM_BAR_service_gui_residencies_riverlands_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 97 } } localization_key = HSM_BAR_service_gui_residencies_zebrica_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 98 } } localization_key = HSM_BAR_service_gui_residencies_comparison_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 99 } } localization_key = HSM_BAR_service_gui_residencies_reply_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 100 } } localization_key = HSM_BAR_service_gui_residencies_papers_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 101 } } localization_key = HSM_BAR_service_gui_residencies_exchange_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 102 } } localization_key = HSM_BAR_service_gui_residencies_aftermath_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 103 } } localization_key = HSM_BAR_service_gui_residencies_review_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 104 } } localization_key = HSM_BAR_service_gui_normalization_grid_equus_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 105 } } localization_key = HSM_BAR_service_gui_normalization_grid_griffonia_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 106 } } localization_key = HSM_BAR_service_gui_normalization_grid_north_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 107 } } localization_key = HSM_BAR_service_gui_normalization_grid_riverlands_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 108 } } localization_key = HSM_BAR_service_gui_normalization_grid_zebrica_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 109 } } localization_key = HSM_BAR_service_gui_normalization_activate_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 110 } } localization_key = HSM_BAR_service_gui_normalization_restore_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 111 } } localization_key = HSM_BAR_service_gui_normalization_press_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 112 } } localization_key = HSM_BAR_service_gui_normalization_arm_without_magic_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 113 } } localization_key = HSM_BAR_service_gui_recover_science_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 114 } } localization_key = HSM_BAR_service_gui_reclaim_fields_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 115 } } localization_key = HSM_BAR_service_gui_heal_homeland_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 116 } } localization_key = HSM_BAR_service_gui_research_wards_fallback_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 117 } } localization_key = HSM_BAR_service_gui_research_wards_resume_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 118 } } localization_key = HSM_BAR_service_gui_research_containment_fallback_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 119 } } localization_key = HSM_BAR_service_gui_research_containment_resume_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 120 } } localization_key = HSM_BAR_service_gui_research_forensics_fallback_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 121 } } localization_key = HSM_BAR_service_gui_research_forensics_resume_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 122 } } localization_key = HSM_BAR_service_gui_research_suppression_fallback_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 123 } } localization_key = HSM_BAR_service_gui_research_suppression_resume_price }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 124 } } localization_key = HSM_BAR_service_gui_research_restore_facility_price }
+text = { localization_key = HSM_BAR_service_gui_none } }
+defined_text = { name = GetHSMBARServiceActionTip
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 1 } } localization_key = HSM_BAR_service_gui_case_local_survey_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } } localization_key = HSM_BAR_service_gui_case_rock_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 3 } } localization_key = HSM_BAR_service_gui_case_rock_protect_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 4 } } localization_key = HSM_BAR_service_gui_case_rock_restrict_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } } localization_key = HSM_BAR_service_gui_case_titan_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 6 } } localization_key = HSM_BAR_service_gui_case_titan_protect_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 7 } } localization_key = HSM_BAR_service_gui_case_titan_restrict_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } } localization_key = HSM_BAR_service_gui_case_entity_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 9 } } localization_key = HSM_BAR_service_gui_case_entity_protect_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 10 } } localization_key = HSM_BAR_service_gui_case_entity_restrict_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } } localization_key = HSM_BAR_service_gui_case_amulet_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 12 } } localization_key = HSM_BAR_service_gui_case_amulet_protect_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 13 } } localization_key = HSM_BAR_service_gui_case_amulet_restrict_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } } localization_key = HSM_BAR_service_gui_case_plants_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 15 } } localization_key = HSM_BAR_service_gui_case_plants_protect_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 16 } } localization_key = HSM_BAR_service_gui_case_plants_restrict_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 17 } } localization_key = HSM_BAR_service_gui_case_chalice_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 18 } } localization_key = HSM_BAR_service_gui_case_chalice_secure_local_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 19 } } localization_key = HSM_BAR_service_gui_case_chalice_seal_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 20 } } localization_key = HSM_BAR_service_gui_case_phylactery_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 21 } } localization_key = HSM_BAR_service_gui_case_phylactery_secure_local_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 22 } } localization_key = HSM_BAR_service_gui_case_phylactery_seal_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 23 } } localization_key = HSM_BAR_service_gui_case_darkheart_investigate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 24 } } localization_key = HSM_BAR_service_gui_case_darkheart_secure_local_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 25 } } localization_key = HSM_BAR_service_gui_case_darkheart_seal_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 26 } } localization_key = HSM_BAR_service_gui_case_rosa_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 27 } } localization_key = HSM_BAR_service_gui_case_grover_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 28 } } localization_key = HSM_BAR_service_gui_case_herald_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 29 } } localization_key = HSM_BAR_service_gui_case_sombra_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 30 } } localization_key = HSM_BAR_service_gui_case_crown_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 31 } } localization_key = HSM_BAR_service_gui_case_crown_secure_local_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 32 } } localization_key = HSM_BAR_service_gui_case_grover_secure_local_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 33 } } localization_key = HSM_BAR_service_gui_case_grover_inter_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 34 } } localization_key = HSM_BAR_service_gui_case_occupied_archives_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 35 } } localization_key = HSM_BAR_service_gui_rumor_sombra_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 36 } } localization_key = HSM_BAR_service_gui_rumor_darkheart_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 37 } } localization_key = HSM_BAR_service_gui_rumor_crown_equus_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 38 } } localization_key = HSM_BAR_service_gui_rumor_grover_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 39 } } localization_key = HSM_BAR_service_gui_rumor_herald_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 40 } } localization_key = HSM_BAR_service_gui_rumor_crown_griffonia_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 41 } } localization_key = HSM_BAR_service_gui_rumor_rosa_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 42 } } localization_key = HSM_BAR_service_gui_rumor_chalice_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 43 } } localization_key = HSM_BAR_service_gui_rumor_phylactery_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } } localization_key = HSM_BAR_service_gui_rumor_echo_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } } localization_key = HSM_BAR_service_gui_rumor_compass_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 46 } } localization_key = HSM_BAR_service_gui_rumor_reactor_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 47 } } localization_key = HSM_BAR_service_gui_rumor_marsh_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 48 } } localization_key = HSM_BAR_service_gui_rumor_zebrica_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 49 } } localization_key = HSM_BAR_service_gui_rumor_crown_zebrica_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 50 } } localization_key = HSM_BAR_service_gui_study_rock_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 51 } } localization_key = HSM_BAR_service_gui_study_rock_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 52 } } localization_key = HSM_BAR_service_gui_study_titan_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 53 } } localization_key = HSM_BAR_service_gui_study_titan_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 54 } } localization_key = HSM_BAR_service_gui_study_entity_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 55 } } localization_key = HSM_BAR_service_gui_study_entity_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 56 } } localization_key = HSM_BAR_service_gui_study_amulet_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 57 } } localization_key = HSM_BAR_service_gui_study_amulet_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 58 } } localization_key = HSM_BAR_service_gui_study_plants_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 59 } } localization_key = HSM_BAR_service_gui_study_plants_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 60 } } localization_key = HSM_BAR_service_gui_study_reactor_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 61 } } localization_key = HSM_BAR_service_gui_study_reactor_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 62 } } localization_key = HSM_BAR_service_gui_study_crown_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 63 } } localization_key = HSM_BAR_service_gui_study_crown_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 64 } } localization_key = HSM_BAR_service_gui_study_chalice_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 65 } } localization_key = HSM_BAR_service_gui_study_chalice_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 66 } } localization_key = HSM_BAR_service_gui_study_phylactery_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 67 } } localization_key = HSM_BAR_service_gui_study_phylactery_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 68 } } localization_key = HSM_BAR_service_gui_study_darkheart_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 69 } } localization_key = HSM_BAR_service_gui_study_darkheart_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 70 } } localization_key = HSM_BAR_service_gui_study_grover_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 71 } } localization_key = HSM_BAR_service_gui_study_grover_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 72 } } localization_key = HSM_BAR_service_gui_study_rosa_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 73 } } localization_key = HSM_BAR_service_gui_study_rosa_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 74 } } localization_key = HSM_BAR_service_gui_study_herald_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 75 } } localization_key = HSM_BAR_service_gui_study_herald_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 76 } } localization_key = HSM_BAR_service_gui_study_sombra_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 77 } } localization_key = HSM_BAR_service_gui_study_sombra_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 78 } } localization_key = HSM_BAR_service_gui_study_echo_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 79 } } localization_key = HSM_BAR_service_gui_study_echo_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 80 } } localization_key = HSM_BAR_service_gui_study_marsh_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 81 } } localization_key = HSM_BAR_service_gui_study_marsh_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 82 } } localization_key = HSM_BAR_service_gui_study_compass_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 83 } } localization_key = HSM_BAR_service_gui_study_compass_disposition_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 84 } } localization_key = HSM_BAR_service_gui_replicate_bulletin_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 85 } } localization_key = HSM_BAR_service_gui_review_retrieval_order_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 86 } } localization_key = HSM_BAR_service_gui_trace_couriers_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 87 } } localization_key = HSM_BAR_service_gui_watched_transfer_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 88 } } localization_key = HSM_BAR_service_gui_contact_smile_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 89 } } localization_key = HSM_BAR_service_gui_share_wards_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 90 } } localization_key = HSM_BAR_service_gui_assist_against_sombra_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 91 } } localization_key = HSM_BAR_service_gui_sombra_volunteer_mission_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 92 } } localization_key = HSM_BAR_service_gui_abort_suppression_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 93 } } localization_key = HSM_BAR_service_gui_residencies_equus_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 94 } } localization_key = HSM_BAR_service_gui_residencies_griffonia_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 95 } } localization_key = HSM_BAR_service_gui_residencies_north_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 96 } } localization_key = HSM_BAR_service_gui_residencies_riverlands_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 97 } } localization_key = HSM_BAR_service_gui_residencies_zebrica_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 98 } } localization_key = HSM_BAR_service_gui_residencies_comparison_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 99 } } localization_key = HSM_BAR_service_gui_residencies_reply_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 100 } } localization_key = HSM_BAR_service_gui_residencies_papers_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 101 } } localization_key = HSM_BAR_service_gui_residencies_exchange_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 102 } } localization_key = HSM_BAR_service_gui_residencies_aftermath_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 103 } } localization_key = HSM_BAR_service_gui_residencies_review_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 104 } } localization_key = HSM_BAR_service_gui_normalization_grid_equus_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 105 } } localization_key = HSM_BAR_service_gui_normalization_grid_griffonia_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 106 } } localization_key = HSM_BAR_service_gui_normalization_grid_north_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 107 } } localization_key = HSM_BAR_service_gui_normalization_grid_riverlands_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 108 } } localization_key = HSM_BAR_service_gui_normalization_grid_zebrica_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 109 } } localization_key = HSM_BAR_service_gui_normalization_activate_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 110 } } localization_key = HSM_BAR_service_gui_normalization_restore_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 111 } } localization_key = HSM_BAR_service_gui_normalization_press_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 112 } } localization_key = HSM_BAR_service_gui_normalization_arm_without_magic_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 113 } } localization_key = HSM_BAR_service_gui_recover_science_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 114 } } localization_key = HSM_BAR_service_gui_reclaim_fields_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 115 } } localization_key = HSM_BAR_service_gui_heal_homeland_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 116 } } localization_key = HSM_BAR_service_gui_research_wards_fallback_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 117 } } localization_key = HSM_BAR_service_gui_research_wards_resume_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 118 } } localization_key = HSM_BAR_service_gui_research_containment_fallback_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 119 } } localization_key = HSM_BAR_service_gui_research_containment_resume_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 120 } } localization_key = HSM_BAR_service_gui_research_forensics_fallback_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 121 } } localization_key = HSM_BAR_service_gui_research_forensics_resume_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 122 } } localization_key = HSM_BAR_service_gui_research_suppression_fallback_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 123 } } localization_key = HSM_BAR_service_gui_research_suppression_resume_tooltip }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 124 } } localization_key = HSM_BAR_service_gui_research_restore_facility_tooltip }
+text = { localization_key = HSM_BAR_service_gui_none } }
+defined_text = { name = GetHSMBARServiceActionState
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 1 } has_country_flag = HSM_BAR_service_gui_case_local_survey_running } localization_key = HSM_BAR_service_gui_case_local_survey_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } has_country_flag = HSM_BAR_service_gui_case_rock_investigate_running } localization_key = HSM_BAR_service_gui_case_rock_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } has_country_flag = HSM_BAR_service_gui_case_titan_investigate_running } localization_key = HSM_BAR_service_gui_case_titan_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } has_country_flag = HSM_BAR_service_gui_case_entity_investigate_running } localization_key = HSM_BAR_service_gui_case_entity_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } has_country_flag = HSM_BAR_service_gui_case_amulet_investigate_running } localization_key = HSM_BAR_service_gui_case_amulet_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } has_country_flag = HSM_BAR_service_gui_case_plants_investigate_running } localization_key = HSM_BAR_service_gui_case_plants_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 17 } has_country_flag = HSM_BAR_service_gui_case_chalice_investigate_running } localization_key = HSM_BAR_service_gui_case_chalice_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 20 } has_country_flag = HSM_BAR_service_gui_case_phylactery_investigate_running } localization_key = HSM_BAR_service_gui_case_phylactery_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 23 } has_country_flag = HSM_BAR_service_gui_case_darkheart_investigate_running } localization_key = HSM_BAR_service_gui_case_darkheart_investigate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 35 } has_country_flag = HSM_BAR_service_gui_rumor_sombra_running } localization_key = HSM_BAR_service_gui_rumor_sombra_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 36 } has_country_flag = HSM_BAR_service_gui_rumor_darkheart_running } localization_key = HSM_BAR_service_gui_rumor_darkheart_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 37 } has_country_flag = HSM_BAR_service_gui_rumor_crown_equus_running } localization_key = HSM_BAR_service_gui_rumor_crown_equus_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 38 } has_country_flag = HSM_BAR_service_gui_rumor_grover_running } localization_key = HSM_BAR_service_gui_rumor_grover_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 39 } has_country_flag = HSM_BAR_service_gui_rumor_herald_running } localization_key = HSM_BAR_service_gui_rumor_herald_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 40 } has_country_flag = HSM_BAR_service_gui_rumor_crown_griffonia_running } localization_key = HSM_BAR_service_gui_rumor_crown_griffonia_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 41 } has_country_flag = HSM_BAR_service_gui_rumor_rosa_running } localization_key = HSM_BAR_service_gui_rumor_rosa_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 42 } has_country_flag = HSM_BAR_service_gui_rumor_chalice_running } localization_key = HSM_BAR_service_gui_rumor_chalice_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 43 } has_country_flag = HSM_BAR_service_gui_rumor_phylactery_running } localization_key = HSM_BAR_service_gui_rumor_phylactery_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } has_country_flag = HSM_BAR_service_gui_rumor_echo_running } localization_key = HSM_BAR_service_gui_rumor_echo_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } has_country_flag = HSM_BAR_service_gui_rumor_compass_running } localization_key = HSM_BAR_service_gui_rumor_compass_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 46 } has_country_flag = HSM_BAR_service_gui_rumor_reactor_running } localization_key = HSM_BAR_service_gui_rumor_reactor_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 47 } has_country_flag = HSM_BAR_service_gui_rumor_marsh_running } localization_key = HSM_BAR_service_gui_rumor_marsh_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 48 } has_country_flag = HSM_BAR_service_gui_rumor_zebrica_running } localization_key = HSM_BAR_service_gui_rumor_zebrica_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 49 } has_country_flag = HSM_BAR_service_gui_rumor_crown_zebrica_running } localization_key = HSM_BAR_service_gui_rumor_crown_zebrica_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 50 } has_country_flag = HSM_BAR_service_gui_study_rock_running } localization_key = HSM_BAR_service_gui_study_rock_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 52 } has_country_flag = HSM_BAR_service_gui_study_titan_running } localization_key = HSM_BAR_service_gui_study_titan_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 54 } has_country_flag = HSM_BAR_service_gui_study_entity_running } localization_key = HSM_BAR_service_gui_study_entity_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 56 } has_country_flag = HSM_BAR_service_gui_study_amulet_running } localization_key = HSM_BAR_service_gui_study_amulet_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 58 } has_country_flag = HSM_BAR_service_gui_study_plants_running } localization_key = HSM_BAR_service_gui_study_plants_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 60 } has_country_flag = HSM_BAR_service_gui_study_reactor_running } localization_key = HSM_BAR_service_gui_study_reactor_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 62 } has_country_flag = HSM_BAR_service_gui_study_crown_running } localization_key = HSM_BAR_service_gui_study_crown_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 64 } has_country_flag = HSM_BAR_service_gui_study_chalice_running } localization_key = HSM_BAR_service_gui_study_chalice_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 66 } has_country_flag = HSM_BAR_service_gui_study_phylactery_running } localization_key = HSM_BAR_service_gui_study_phylactery_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 68 } has_country_flag = HSM_BAR_service_gui_study_darkheart_running } localization_key = HSM_BAR_service_gui_study_darkheart_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 70 } has_country_flag = HSM_BAR_service_gui_study_grover_running } localization_key = HSM_BAR_service_gui_study_grover_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 72 } has_country_flag = HSM_BAR_service_gui_study_rosa_running } localization_key = HSM_BAR_service_gui_study_rosa_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 74 } has_country_flag = HSM_BAR_service_gui_study_herald_running } localization_key = HSM_BAR_service_gui_study_herald_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 76 } has_country_flag = HSM_BAR_service_gui_study_sombra_running } localization_key = HSM_BAR_service_gui_study_sombra_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 78 } has_country_flag = HSM_BAR_service_gui_study_echo_running } localization_key = HSM_BAR_service_gui_study_echo_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 80 } has_country_flag = HSM_BAR_service_gui_study_marsh_running } localization_key = HSM_BAR_service_gui_study_marsh_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 82 } has_country_flag = HSM_BAR_service_gui_study_compass_running } localization_key = HSM_BAR_service_gui_study_compass_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 84 } has_country_flag = HSM_BAR_service_gui_replicate_bulletin_running } localization_key = HSM_BAR_service_gui_replicate_bulletin_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 85 } has_country_flag = HSM_BAR_service_gui_review_retrieval_order_running } localization_key = HSM_BAR_service_gui_review_retrieval_order_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 86 } has_country_flag = HSM_BAR_service_gui_trace_couriers_running } localization_key = HSM_BAR_service_gui_trace_couriers_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 87 } has_country_flag = HSM_BAR_service_gui_watched_transfer_running } localization_key = HSM_BAR_service_gui_watched_transfer_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 93 } has_country_flag = HSM_BAR_service_gui_residencies_equus_running } localization_key = HSM_BAR_service_gui_residencies_equus_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 94 } has_country_flag = HSM_BAR_service_gui_residencies_griffonia_running } localization_key = HSM_BAR_service_gui_residencies_griffonia_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 95 } has_country_flag = HSM_BAR_service_gui_residencies_north_running } localization_key = HSM_BAR_service_gui_residencies_north_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 96 } has_country_flag = HSM_BAR_service_gui_residencies_riverlands_running } localization_key = HSM_BAR_service_gui_residencies_riverlands_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 97 } has_country_flag = HSM_BAR_service_gui_residencies_zebrica_running } localization_key = HSM_BAR_service_gui_residencies_zebrica_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 98 } has_country_flag = HSM_BAR_service_gui_residencies_comparison_running } localization_key = HSM_BAR_service_gui_residencies_comparison_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 99 } has_country_flag = HSM_BAR_service_gui_residencies_reply_running } localization_key = HSM_BAR_service_gui_residencies_reply_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 100 } has_country_flag = HSM_BAR_service_gui_residencies_papers_running } localization_key = HSM_BAR_service_gui_residencies_papers_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 101 } has_country_flag = HSM_BAR_service_gui_residencies_exchange_running } localization_key = HSM_BAR_service_gui_residencies_exchange_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 102 } has_country_flag = HSM_BAR_service_gui_residencies_aftermath_running } localization_key = HSM_BAR_service_gui_residencies_aftermath_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 103 } has_country_flag = HSM_BAR_service_gui_residencies_review_running } localization_key = HSM_BAR_service_gui_residencies_review_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 104 } has_country_flag = HSM_BAR_service_gui_normalization_grid_equus_running } localization_key = HSM_BAR_service_gui_normalization_grid_equus_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 105 } has_country_flag = HSM_BAR_service_gui_normalization_grid_griffonia_running } localization_key = HSM_BAR_service_gui_normalization_grid_griffonia_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 106 } has_country_flag = HSM_BAR_service_gui_normalization_grid_north_running } localization_key = HSM_BAR_service_gui_normalization_grid_north_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 107 } has_country_flag = HSM_BAR_service_gui_normalization_grid_riverlands_running } localization_key = HSM_BAR_service_gui_normalization_grid_riverlands_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 108 } has_country_flag = HSM_BAR_service_gui_normalization_grid_zebrica_running } localization_key = HSM_BAR_service_gui_normalization_grid_zebrica_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 109 } has_country_flag = HSM_BAR_service_gui_normalization_activate_running } localization_key = HSM_BAR_service_gui_normalization_activate_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 110 } has_country_flag = HSM_BAR_service_gui_normalization_restore_running } localization_key = HSM_BAR_service_gui_normalization_restore_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 111 } has_country_flag = HSM_BAR_service_gui_normalization_press_running } localization_key = HSM_BAR_service_gui_normalization_press_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 112 } has_country_flag = HSM_BAR_service_gui_normalization_arm_without_magic_running } localization_key = HSM_BAR_service_gui_normalization_arm_without_magic_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 113 } has_country_flag = HSM_BAR_service_gui_recover_science_running } localization_key = HSM_BAR_service_gui_recover_science_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 114 } has_country_flag = HSM_BAR_service_gui_reclaim_fields_running } localization_key = HSM_BAR_service_gui_reclaim_fields_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 115 } has_country_flag = HSM_BAR_service_gui_heal_homeland_running } localization_key = HSM_BAR_service_gui_heal_homeland_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 116 } has_country_flag = HSM_BAR_service_gui_research_wards_fallback_running } localization_key = HSM_BAR_service_gui_research_wards_fallback_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 118 } has_country_flag = HSM_BAR_service_gui_research_containment_fallback_running } localization_key = HSM_BAR_service_gui_research_containment_fallback_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 120 } has_country_flag = HSM_BAR_service_gui_research_forensics_fallback_running } localization_key = HSM_BAR_service_gui_research_forensics_fallback_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 122 } has_country_flag = HSM_BAR_service_gui_research_suppression_fallback_running } localization_key = HSM_BAR_service_gui_research_suppression_fallback_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 124 } has_country_flag = HSM_BAR_service_gui_research_restore_facility_running } localization_key = HSM_BAR_service_gui_research_restore_facility_remaining }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } } localization_key = HSM_BAR_investigation_rock_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } } localization_key = HSM_BAR_investigation_titan_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } } localization_key = HSM_BAR_investigation_entity_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } } localization_key = HSM_BAR_investigation_amulet_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } } localization_key = HSM_BAR_investigation_plants_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } } localization_key = HSM_BAR_investigation_echo_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } } localization_key = HSM_BAR_investigation_compass_status }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 1 } HSM_BAR_service_gui_case_local_survey_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 2 } HSM_BAR_service_gui_case_rock_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 3 } HSM_BAR_service_gui_case_rock_protect_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 4 } HSM_BAR_service_gui_case_rock_restrict_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 5 } HSM_BAR_service_gui_case_titan_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 6 } HSM_BAR_service_gui_case_titan_protect_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 7 } HSM_BAR_service_gui_case_titan_restrict_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 8 } HSM_BAR_service_gui_case_entity_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 9 } HSM_BAR_service_gui_case_entity_protect_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 10 } HSM_BAR_service_gui_case_entity_restrict_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 11 } HSM_BAR_service_gui_case_amulet_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 12 } HSM_BAR_service_gui_case_amulet_protect_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 13 } HSM_BAR_service_gui_case_amulet_restrict_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 14 } HSM_BAR_service_gui_case_plants_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 15 } HSM_BAR_service_gui_case_plants_protect_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 16 } HSM_BAR_service_gui_case_plants_restrict_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 17 } HSM_BAR_service_gui_case_chalice_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 18 } HSM_BAR_service_gui_case_chalice_secure_local_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 19 } HSM_BAR_service_gui_case_chalice_seal_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 20 } HSM_BAR_service_gui_case_phylactery_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 21 } HSM_BAR_service_gui_case_phylactery_secure_local_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 22 } HSM_BAR_service_gui_case_phylactery_seal_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 23 } HSM_BAR_service_gui_case_darkheart_investigate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 24 } HSM_BAR_service_gui_case_darkheart_secure_local_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 25 } HSM_BAR_service_gui_case_darkheart_seal_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 26 } HSM_BAR_service_gui_case_rosa_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 27 } HSM_BAR_service_gui_case_grover_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 28 } HSM_BAR_service_gui_case_herald_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 29 } HSM_BAR_service_gui_case_sombra_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 30 } HSM_BAR_service_gui_case_crown_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 31 } HSM_BAR_service_gui_case_crown_secure_local_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 32 } HSM_BAR_service_gui_case_grover_secure_local_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 33 } HSM_BAR_service_gui_case_grover_inter_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 34 } HSM_BAR_service_gui_case_occupied_archives_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 35 } HSM_BAR_service_gui_rumor_sombra_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 36 } HSM_BAR_service_gui_rumor_darkheart_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 37 } HSM_BAR_service_gui_rumor_crown_equus_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 38 } HSM_BAR_service_gui_rumor_grover_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 39 } HSM_BAR_service_gui_rumor_herald_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 40 } HSM_BAR_service_gui_rumor_crown_griffonia_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 41 } HSM_BAR_service_gui_rumor_rosa_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 42 } HSM_BAR_service_gui_rumor_chalice_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 43 } HSM_BAR_service_gui_rumor_phylactery_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 44 } HSM_BAR_service_gui_rumor_echo_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 45 } HSM_BAR_service_gui_rumor_compass_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 46 } HSM_BAR_service_gui_rumor_reactor_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 47 } HSM_BAR_service_gui_rumor_marsh_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 48 } HSM_BAR_service_gui_rumor_zebrica_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 49 } HSM_BAR_service_gui_rumor_crown_zebrica_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 50 } HSM_BAR_service_gui_study_rock_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 51 } HSM_BAR_service_gui_study_rock_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 52 } HSM_BAR_service_gui_study_titan_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 53 } HSM_BAR_service_gui_study_titan_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 54 } HSM_BAR_service_gui_study_entity_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 55 } HSM_BAR_service_gui_study_entity_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 56 } HSM_BAR_service_gui_study_amulet_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 57 } HSM_BAR_service_gui_study_amulet_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 58 } HSM_BAR_service_gui_study_plants_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 59 } HSM_BAR_service_gui_study_plants_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 60 } HSM_BAR_service_gui_study_reactor_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 61 } HSM_BAR_service_gui_study_reactor_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 62 } HSM_BAR_service_gui_study_crown_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 63 } HSM_BAR_service_gui_study_crown_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 64 } HSM_BAR_service_gui_study_chalice_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 65 } HSM_BAR_service_gui_study_chalice_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 66 } HSM_BAR_service_gui_study_phylactery_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 67 } HSM_BAR_service_gui_study_phylactery_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 68 } HSM_BAR_service_gui_study_darkheart_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 69 } HSM_BAR_service_gui_study_darkheart_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 70 } HSM_BAR_service_gui_study_grover_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 71 } HSM_BAR_service_gui_study_grover_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 72 } HSM_BAR_service_gui_study_rosa_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 73 } HSM_BAR_service_gui_study_rosa_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 74 } HSM_BAR_service_gui_study_herald_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 75 } HSM_BAR_service_gui_study_herald_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 76 } HSM_BAR_service_gui_study_sombra_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 77 } HSM_BAR_service_gui_study_sombra_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 78 } HSM_BAR_service_gui_study_echo_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 79 } HSM_BAR_service_gui_study_echo_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 80 } HSM_BAR_service_gui_study_marsh_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 81 } HSM_BAR_service_gui_study_marsh_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 82 } HSM_BAR_service_gui_study_compass_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 83 } HSM_BAR_service_gui_study_compass_disposition_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 84 } HSM_BAR_service_gui_replicate_bulletin_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 85 } HSM_BAR_service_gui_review_retrieval_order_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 86 } HSM_BAR_service_gui_trace_couriers_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 87 } HSM_BAR_service_gui_watched_transfer_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 88 } HSM_BAR_service_gui_contact_smile_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 89 } HSM_BAR_service_gui_share_wards_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 90 } HSM_BAR_service_gui_assist_against_sombra_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 91 } HSM_BAR_service_gui_sombra_volunteer_mission_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 92 } HSM_BAR_service_gui_abort_suppression_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 93 } HSM_BAR_service_gui_residencies_equus_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 94 } HSM_BAR_service_gui_residencies_griffonia_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 95 } HSM_BAR_service_gui_residencies_north_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 96 } HSM_BAR_service_gui_residencies_riverlands_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 97 } HSM_BAR_service_gui_residencies_zebrica_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 98 } HSM_BAR_service_gui_residencies_comparison_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 99 } HSM_BAR_service_gui_residencies_reply_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 100 } HSM_BAR_service_gui_residencies_papers_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 101 } HSM_BAR_service_gui_residencies_exchange_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 102 } HSM_BAR_service_gui_residencies_aftermath_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 103 } HSM_BAR_service_gui_residencies_review_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 104 } HSM_BAR_service_gui_normalization_grid_equus_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 105 } HSM_BAR_service_gui_normalization_grid_griffonia_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 106 } HSM_BAR_service_gui_normalization_grid_north_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 107 } HSM_BAR_service_gui_normalization_grid_riverlands_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 108 } HSM_BAR_service_gui_normalization_grid_zebrica_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 109 } HSM_BAR_service_gui_normalization_activate_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 110 } HSM_BAR_service_gui_normalization_restore_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 111 } HSM_BAR_service_gui_normalization_press_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 112 } HSM_BAR_service_gui_normalization_arm_without_magic_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 113 } HSM_BAR_service_gui_recover_science_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 114 } HSM_BAR_service_gui_reclaim_fields_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 115 } HSM_BAR_service_gui_heal_homeland_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 116 } HSM_BAR_service_gui_research_wards_fallback_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 117 } HSM_BAR_service_gui_research_wards_resume_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 118 } HSM_BAR_service_gui_research_containment_fallback_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 119 } HSM_BAR_service_gui_research_containment_resume_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 120 } HSM_BAR_service_gui_research_forensics_fallback_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 121 } HSM_BAR_service_gui_research_forensics_resume_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 122 } HSM_BAR_service_gui_research_suppression_fallback_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 123 } HSM_BAR_service_gui_research_suppression_resume_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { trigger = { check_variable = { HSM_BAR_service_gui_entry = 124 } HSM_BAR_service_gui_research_restore_facility_can_start = yes } localization_key = HSM_BAR_service_gui_ready }
+text = { localization_key = HSM_BAR_service_gui_locked } }
+defined_text = { name = GetHSMBARServiceRowSkin
+text = { trigger = { check_variable = { HSM_BAR_service_gui_subject = HSM_BAR_service_gui_subject_entry } } localization_key = GFX_HSM_BAR_archive_index_selected }
+text = { localization_key = GFX_HSM_BAR_archive_index } }
+defined_text = { name = GetHSMBARServiceRegion1
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 1 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARServiceRegion2
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 2 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARServiceRegion3
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 3 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARServiceRegion4
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 4 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARServiceRegion5
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 5 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARServiceRegion6
+text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 6 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+text = { localization_key = GFX_HSM_BAR_archive_tab } }

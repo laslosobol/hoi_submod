@@ -1,0 +1,42 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_tank"
+        texturefile = "gfx/interface/ideas/idea_generic_tank_manufacturer_1.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_heavy"
+        texturefile = "gfx/interface/ideas/idea_generic_tank_manufacturer_2.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_guns"
+        texturefile = "gfx/interface/ideas/idea_generic_infantry_equipment_manufacturer_1.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_magic"
+        texturefile = "gfx/interface/ideas/idea_generic_electronics_concern_2.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_industry"
+        texturefile = "gfx/interface/ideas/idea_generic_industrial_concern_1.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_refinery"
+        texturefile = "gfx/interface/ideas/idea_generic_refining_concern_1.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_light"
+        texturefile = "gfx/interface/ideas/idea_generic_air_manufacturer_1.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_cas"
+        texturefile = "gfx/interface/ideas/idea_generic_air_manufacturer_2.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_medium"
+        texturefile = "gfx/interface/ideas/idea_generic_air_manufacturer_3.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_HSM_BAR_staff_shipyard"
+        texturefile = "gfx/interface/ideas/idea_generic_naval_manufacturer_2.dds"
+    }
+}

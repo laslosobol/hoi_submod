@@ -1,0 +1,32 @@
+# Opening-only deep-link normalization; never changes evidence, access or custody.
+# Call after setting archive_open, archive_region and archive_case.
+HSM_BAR_archive_refresh = {
+ if = {
+  limit = { HSM_BAR_archive_actor = yes }
+  if = {
+   limit = { NOT = { HSM_BAR_archive_region_available = yes } }
+   set_variable = { HSM_BAR_archive_region = 1 }
+   clear_variable = HSM_BAR_archive_case
+  }
+  set_variable = { HSM_BAR_archive_page = 1 }
+  if = {
+   limit = {
+    check_variable = { HSM_BAR_archive_region = 1 }
+    OR = {
+     check_variable = { HSM_BAR_archive_case = 5 }
+     check_variable = { HSM_BAR_archive_case = 14 }
+     check_variable = { HSM_BAR_archive_case = 16 }
+     check_variable = { HSM_BAR_archive_case = 17 }
+    }
+   }
+   set_variable = { HSM_BAR_archive_page = 2 }
+  }
+  if = {
+   limit = { NOT = { HSM_BAR_archive_selection_available = yes } }
+   clear_variable = HSM_BAR_archive_case
+   set_variable = { HSM_BAR_archive_page = 1 }
+  }
+  set_variable = { HSM_BAR_archive_document = 1 }
+  clear_variable = HSM_BAR_archive_copy
+ }
+}

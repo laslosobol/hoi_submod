@@ -1,0 +1,43 @@
+HSM_BAR_development_route = {
+ tag = BAR
+ has_country_flag = HSM_BAR_active
+ OR = { has_country_flag = HSM_BAR_collegium has_country_flag = HSM_BAR_directorate }
+}
+HSM_BAR_development_access = {
+ HSM_BAR_development_route = yes
+ has_capitulated = no
+ owns_state = 624
+ controls_state = 624
+}
+HSM_BAR_development_industry_needed = {
+ OR = {
+  has_idea = communal_society
+  has_tribal_society = yes
+  has_agrarian_society = yes
+  has_pre_industrial_society = yes
+  has_outdated_industry = yes
+ }
+}
+HSM_BAR_development_science_needed = {
+ OR = { has_idea = poor_science_base has_idea = better_science_base has_idea = big_science_base }
+}
+HSM_BAR_development_living_standards_eligible = {
+ HSM_BAR_development_access = yes
+ has_completed_focus = HSM_BAR_land_register
+ has_poverty = yes
+}
+HSM_BAR_development_school_network_eligible = {
+ HSM_BAR_development_access = yes
+ has_completed_focus = HSM_BAR_village_schools
+ has_illiteracy = yes
+}
+HSM_BAR_development_industrial_program_eligible = {
+ HSM_BAR_development_access = yes
+ has_completed_focus = HSM_BAR_power_grid
+ HSM_BAR_development_industry_needed = yes
+}
+HSM_BAR_development_research_grants_eligible = {
+ HSM_BAR_development_access = yes
+ has_completed_focus = HSM_BAR_civil_laboratories
+ HSM_BAR_development_science_needed = yes
+}

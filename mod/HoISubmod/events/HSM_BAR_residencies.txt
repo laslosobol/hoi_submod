@@ -1,0 +1,215 @@
+add_namespace = HSM_BAR_residencies
+country_event = {
+ id = HSM_BAR_residencies.1
+ title = HSM_BAR_residencies.1.t
+ desc = HSM_BAR_residencies.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_equus_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.1.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_equus_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_equus_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.1.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_equus_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_equus_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.2
+ title = HSM_BAR_residencies.2.t
+ desc = HSM_BAR_residencies.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_griffonia_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.2.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_griffonia_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_griffonia_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.2.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_griffonia_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_griffonia_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.3
+ title = HSM_BAR_residencies.3.t
+ desc = HSM_BAR_residencies.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_north_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.3.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_north_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_north_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.3.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_north_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_north_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.4
+ title = HSM_BAR_residencies.4.t
+ desc = HSM_BAR_residencies.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_riverlands_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.4.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_riverlands_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_riverlands_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.4.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_riverlands_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_riverlands_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.5
+ title = HSM_BAR_residencies.5.t
+ desc = HSM_BAR_residencies.5.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_zebrica_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.5.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_zebrica_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_zebrica_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.5.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_zebrica_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_zebrica_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.6
+ title = HSM_BAR_residencies.6.t
+ desc = { trigger = { has_country_flag = HSM_BAR_residencies_zebrica_listeners } text = HSM_BAR_residencies.6.listeners }
+ desc = { trigger = { has_country_flag = HSM_BAR_residencies_zebrica_broker } text = HSM_BAR_residencies.6.broker }
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_comparison_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.6.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_comparison_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_comparison_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.6.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_comparison_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_comparison_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.7
+ title = HSM_BAR_residencies.7.t
+ desc = { trigger = { has_country_flag = HSM_BAR_cult_channel_retained } text = HSM_BAR_residencies.7.retained }
+ desc = { trigger = { NOT = { has_country_flag = HSM_BAR_cult_channel_retained } } text = HSM_BAR_residencies.7.closed }
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_contact_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.7.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_contact_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_contact_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.7.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_contact_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_contact_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.8
+ title = HSM_BAR_residencies.8.t
+ desc = { trigger = { OR = { has_country_flag = HSM_BAR_residencies_griffonia_method AND = { has_country_flag = HSM_BAR_residencies_comparison_done has_country_flag = HSM_BAR_residencies_zebrica_broker } } } text = HSM_BAR_residencies.8.linked }
+ desc = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_residencies_griffonia_method AND = { has_country_flag = HSM_BAR_residencies_comparison_done has_country_flag = HSM_BAR_residencies_zebrica_broker } } } } text = HSM_BAR_residencies.8.independent }
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_exchange_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.8.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_exchange_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_exchange_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.8.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_exchange_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_exchange_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.9
+ title = HSM_BAR_residencies.9.t
+ desc = { trigger = { has_country_flag = HSM_BAR_cult_channel_retained has_country_flag = HSM_BAR_residencies_contact_follow } text = HSM_BAR_residencies.9.exposed }
+ desc = { trigger = { NOT = { AND = { has_country_flag = HSM_BAR_cult_channel_retained has_country_flag = HSM_BAR_residencies_contact_follow } } } text = HSM_BAR_residencies.9.protected }
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_aftermath_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.9.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_aftermath_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_aftermath_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.9.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_aftermath_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_aftermath_choose_b = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_residencies.10
+ title = HSM_BAR_residencies.10.t
+ desc = HSM_BAR_residencies.10.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_residencies_review_can_answer = yes }
+ option = {
+  name = HSM_BAR_residencies.10.a
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_review_tooltip_a = yes
+  hidden_effect = { HSM_BAR_residencies_review_choose_a = yes }
+ }
+ option = {
+  name = HSM_BAR_residencies.10.b
+  ai_chance = { factor = 50 }
+  HSM_BAR_residencies_review_tooltip_b = yes
+  hidden_effect = { HSM_BAR_residencies_review_choose_b = yes }
+ }
+}
+

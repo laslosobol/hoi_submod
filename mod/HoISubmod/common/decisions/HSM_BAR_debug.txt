@@ -1,0 +1,52 @@
+# Use EaW's existing debug category; never reset a live submod route.
+debug_decisions = {
+    HSM_BAR_debug_friendship_ending = {
+        icon = GFX_decision_book
+        allowed = { original_tag = BAR }
+        visible = {
+            tag = BAR
+            is_ai = no
+            is_debug = yes
+            has_capitulated = no
+            has_country_flag = { flag = barrad_endgame value = 0 }
+            NOT = {
+                has_country_flag = HSM_BAR_active
+                has_country_flag = BAR_end_of_pentarchy
+                has_country_flag = HSM_BAR_debug_friendship_requested
+            }
+        }
+        available = {
+            tag = BAR
+            is_ai = no
+            is_debug = yes
+            has_capitulated = no
+            has_country_flag = { flag = barrad_endgame value = 0 }
+            NOT = {
+                has_country_flag = HSM_BAR_active
+                has_country_flag = BAR_end_of_pentarchy
+                has_country_flag = HSM_BAR_debug_friendship_requested
+            }
+        }
+        cost = 0
+        fire_only_once = yes
+        complete_effect = {
+            if = {
+                limit = {
+                    tag = BAR
+                    is_ai = no
+                    is_debug = yes
+                    has_capitulated = no
+                    has_country_flag = { flag = barrad_endgame value = 0 }
+                    NOT = {
+                        has_country_flag = HSM_BAR_active
+                        has_country_flag = BAR_end_of_pentarchy
+                        has_country_flag = HSM_BAR_debug_friendship_requested
+                    }
+                }
+                set_country_flag = HSM_BAR_debug_friendship_requested
+                country_event = { id = barrad_end.2 }
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+}

@@ -1,0 +1,153 @@
+add_namespace = hsm_bar_republic
+
+country_event = {
+ id = hsm_bar_republic.1
+ title = hsm_bar_republic.1.t
+ desc = hsm_bar_republic.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_1_done } }
+ option = {
+  name = hsm_bar_republic.1.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_1_done } } set_country_flag = HSM_BAR_republic_event_1_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.2
+ title = hsm_bar_republic.2.t
+ desc = hsm_bar_republic.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_2_done } }
+ option = {
+  name = hsm_bar_republic.2.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_2_done } } set_country_flag = HSM_BAR_republic_event_2_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.3
+ title = hsm_bar_republic.3.t
+ desc = hsm_bar_republic.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_3_done } }
+ option = {
+  name = hsm_bar_republic.3.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_3_done } } set_country_flag = HSM_BAR_republic_event_3_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.4
+ title = hsm_bar_republic.4.t
+ desc = hsm_bar_republic.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes has_country_flag = HSM_BAR_first_descent_returned NOT = { has_country_flag = HSM_BAR_republic_event_4_done } }
+ option = {
+  name = hsm_bar_republic.4.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes has_country_flag = HSM_BAR_first_descent_returned NOT = { has_country_flag = HSM_BAR_republic_event_4_done } } set_country_flag = HSM_BAR_republic_event_4_done set_country_flag = HSM_BAR_first_rescue add_political_power = -15 set_country_flag = HSM_BAR_first_incident_resolved }
+ }
+ option = {
+  name = hsm_bar_republic.4.b
+  ai_chance = { factor = 30 }
+  if = { limit = { HSM_BAR_republic_actor = yes has_country_flag = HSM_BAR_first_descent_returned NOT = { has_country_flag = HSM_BAR_republic_event_4_done } } set_country_flag = HSM_BAR_republic_event_4_done set_country_flag = HSM_BAR_first_exposure add_manpower = -100 add_stability = -0.02 set_country_flag = HSM_BAR_first_incident_resolved }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.5
+ title = hsm_bar_republic.5.t
+ desc = hsm_bar_republic.5.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_republic_event_5_done } }
+ option = {
+  name = hsm_bar_republic.5.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_republic_event_5_done } } set_country_flag = HSM_BAR_republic_event_5_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.6
+ title = hsm_bar_republic.6.t
+ desc = hsm_bar_republic.6.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_6_done } }
+ option = {
+  name = hsm_bar_republic.6.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_6_done } } set_country_flag = HSM_BAR_republic_event_6_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.7
+ title = hsm_bar_republic.7.t
+ desc = hsm_bar_republic.7.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_7_done } }
+ option = {
+  name = hsm_bar_republic.7.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_7_done } } set_country_flag = HSM_BAR_republic_event_7_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.8
+ title = hsm_bar_republic.8.t
+ desc = hsm_bar_republic.8.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_8_done } }
+ option = {
+  name = hsm_bar_republic.8.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_8_done } } set_country_flag = HSM_BAR_republic_event_8_done  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.9
+ title = hsm_bar_republic.9.t
+ desc = hsm_bar_republic.9.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_9_done } }
+ option = {
+  name = hsm_bar_republic.9.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_9_done } } set_country_flag = HSM_BAR_republic_event_9_done set_country_flag = HSM_BAR_restitution_review add_political_power = -20 add_stability = 0.03 }
+ }
+ option = {
+  name = hsm_bar_republic.9.b
+  ai_chance = { factor = 30 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_9_done } } set_country_flag = HSM_BAR_republic_event_9_done set_country_flag = HSM_BAR_emergency_titles add_political_power = 25 add_stability = -0.01 }
+ }
+}
+
+country_event = {
+ id = hsm_bar_republic.10
+ title = hsm_bar_republic.10.t
+ desc = hsm_bar_republic.10.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_10_done } }
+ option = {
+  name = hsm_bar_republic.10.a
+  ai_chance = { factor = 70 }
+  if = { limit = { HSM_BAR_republic_actor = yes NOT = { has_country_flag = HSM_BAR_republic_event_10_done } } set_country_flag = HSM_BAR_republic_event_10_done set_country_flag = HSM_BAR_patient_protected }
+ }
+}
+
+

@@ -1,0 +1,258 @@
+# Independent shared root: include explicitly in BOTH Collegium trees; no external prerequisite.
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers
+ icon = GFX_HSM_BAR_cover_charter
+ x = 60
+ y = 0
+ cost = 4
+ 
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office }
+   set_country_flag = HSM_BAR_diplomacy_open
+   add_tech_bonus = { name = HSM_BAR_mtc_frontiers bonus = 0.5 uses = 1 category = recon_tech }
+   country_event = { id = hsm_bar_mtc_frontiers.1 }
+  }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_supply
+ icon = GFX_HSM_BAR_cover_warehouse
+ x = 56
+ y = 2
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office } add_tech_bonus = { name = HSM_BAR_mtc_frontiers_supply bonus = 0.5 uses = 1 category = support_tech } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_staff
+ icon = GFX_HSM_BAR_art_guard
+ x = 56
+ y = 4
+ cost = 4
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_supply }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office } army_experience = 25 }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_ZES_hearing
+ icon = GFX_HSM_BAR_art_kasa
+ x = 54
+ y = 6
+ cost = 4
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_staff }
+ bypass = {
+  HSM_BAR_mtc_frontiers_route = yes
+  has_completed_focus = HSM_BAR_mtc_frontiers_staff
+  has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued
+  NOT = { ZES = { exists = yes } }
+ }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  ZES = { exists = yes } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  ZES = { exists = yes } }
+   add_tech_bonus = { name = HSM_BAR_mtc_frontiers_ZES_hearing bonus = 0.5 uses = 1 category = logistics_tech }
+   country_event = { id = hsm_bar_mtc_frontiers.7 }
+  }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_ZES_mandate
+ icon = GFX_HSM_BAR_art_kasa
+ x = 54
+ y = 8
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_ZES_hearing }
+ bypass = {
+  HSM_BAR_mtc_frontiers_route = yes
+  has_completed_focus = HSM_BAR_mtc_frontiers_staff
+  has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued
+  NOT = { ZES = { exists = yes } }
+ }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  HSM_BAR_mtc_frontiers_ZES_can_authorize = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 0 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  HSM_BAR_mtc_frontiers_ZES_can_authorize = yes }
+   HSM_BAR_mtc_frontiers_ZES_authorize = yes
+   custom_effect_tooltip = HSM_BAR_mtc_frontiers_ZES_mandate_tt
+  }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_OLV_hearing
+ icon = GFX_HSM_BAR_art_deer
+ x = 58
+ y = 6
+ cost = 4
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_staff }
+ bypass = {
+  HSM_BAR_mtc_frontiers_route = yes
+  has_completed_focus = HSM_BAR_mtc_frontiers_staff
+  has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued
+  NOT = { OLV = { exists = yes } }
+ }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  OLV = { exists = yes } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  OLV = { exists = yes } }
+   add_tech_bonus = { name = HSM_BAR_mtc_frontiers_OLV_hearing bonus = 0.5 uses = 1 category = logistics_tech }
+   country_event = { id = hsm_bar_mtc_frontiers.8 }
+  }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_OLV_mandate
+ icon = GFX_HSM_BAR_art_deer
+ x = 58
+ y = 8
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_OLV_hearing }
+ bypass = {
+  HSM_BAR_mtc_frontiers_route = yes
+  has_completed_focus = HSM_BAR_mtc_frontiers_staff
+  has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued
+  NOT = { OLV = { exists = yes } }
+ }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  HSM_BAR_mtc_frontiers_OLV_can_authorize = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 0 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  HSM_BAR_mtc_frontiers_OLV_can_authorize = yes }
+   HSM_BAR_mtc_frontiers_OLV_authorize = yes
+   custom_effect_tooltip = HSM_BAR_mtc_frontiers_OLV_mandate_tt
+  }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_WIT_line
+ icon = GFX_HSM_BAR_art_wittenland
+ x = 64
+ y = 2
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office } add_tech_bonus = { name = HSM_BAR_mtc_frontiers_WIT_line bonus = 0.5 uses = 1 category = engineers_tech } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_WIT_armistice
+ icon = GFX_HSM_BAR_art_wittenland
+ x = 64
+ y = 4
+ cost = 4
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_WIT_line }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no } country_event = { id = hsm_bar_mtc_frontiers.5 } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_WIT_councils
+ icon = GFX_HSM_BAR_art_representation
+ x = 64
+ y = 6
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_WIT_armistice }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no } custom_effect_tooltip = HSM_BAR_mtc_frontiers_WIT_councils_tt }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_mtc_frontiers_WIT_charter
+ icon = GFX_HSM_BAR_art_registry
+ x = 64
+ y = 8
+ cost = 5
+ prerequisite = { focus = HSM_BAR_mtc_frontiers_WIT_councils }
+ available = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { HSM_BAR_mtc_frontiers_access = yes
+  has_completed_focus = HSM_BAR_civic_foreign_office
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+ has_war = no } custom_effect_tooltip = HSM_BAR_mtc_frontiers_WIT_charter_tt }
+ }
+}

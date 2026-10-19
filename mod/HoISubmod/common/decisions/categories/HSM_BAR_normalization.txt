@@ -1,0 +1,27 @@
+HSM_BAR_normalization_network = {
+    icon = generic_research
+    allowed = { tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes
+        has_country_flag = HSM_BAR_global_authorized
+        HSM_BAR_normalization_actor = yes
+        NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+    }
+}
+HSM_BAR_normalization_crisis = {
+    icon = generic_prepare_civil_war
+    visible = { HSM_BAR_service_legacy_visible = yes
+        has_global_flag = HSM_BAR_world_breached
+        NOT = { tag = NML }
+        OR = {
+            HSM_BAR_normalization_responder = yes
+            has_war_with = NML
+        }
+        NOT = { has_global_flag = HSM_BAR_world_normalization_victory }
+        NOT = {
+            AND = {
+                has_global_flag = HSM_BAR_world_barriers_restored
+                has_global_flag = HSM_BAR_world_incursions_defeated
+            }
+        }
+    }
+}

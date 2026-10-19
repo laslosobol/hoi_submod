@@ -1,0 +1,16 @@
+HSM_BAR_residencies_methods = {
+ icon = GFX_idea_HSM_BAR_dir_world
+ enable = { HSM_BAR_residencies_actor = yes }
+ remove_trigger = { NOT = { HSM_BAR_residencies_actor = yes } }
+ attrition = HSM_BAR_residencies_attrition
+ recon_factor = HSM_BAR_residencies_recon
+ dig_in_speed_factor = HSM_BAR_residencies_dig_in
+ supply_consumption_factor = HSM_BAR_residencies_supply
+ intel_network_gain_factor = HSM_BAR_residencies_network
+ own_operative_capture_chance_factor = HSM_BAR_residencies_capture
+ operation_cost = HSM_BAR_residencies_cost
+ operation_outcome = HSM_BAR_residencies_outcome
+ intelligence_agency_defense = HSM_BAR_residencies_defence
+ political_power_gain = HSM_BAR_residencies_upkeep
+}
+

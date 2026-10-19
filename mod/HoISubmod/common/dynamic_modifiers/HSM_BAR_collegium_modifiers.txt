@@ -1,0 +1,9 @@
+HSM_BAR_collegium_services = {
+ icon = GFX_idea_HSM_BAR_art_hospital
+ enable = { HSM_BAR_collegium_active = yes }
+ stability_factor = HSM_BAR_collegium_stability
+ research_speed_factor = HSM_BAR_collegium_research
+ production_speed_industrial_complex_factor = HSM_BAR_collegium_construction
+ supply_consumption_factor = HSM_BAR_collegium_supply
+ army_org_regain = HSM_BAR_collegium_recovery
+}

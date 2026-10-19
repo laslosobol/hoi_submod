@@ -1,0 +1,65 @@
+defined_text = {
+    name = GetHSMBARStafftankName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_tank_company }
+    text = { localization_key = HSM_BAR_staff_tank_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffheavyName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_heavy_company }
+    text = { localization_key = HSM_BAR_staff_heavy_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffartyName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_arty_company }
+    text = { localization_key = HSM_BAR_staff_arty_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffgunsName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_guns_company }
+    text = { localization_key = HSM_BAR_staff_guns_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffmagicName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_magic_company }
+    text = { localization_key = HSM_BAR_staff_magic_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffindustryName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_industry_company }
+    text = { localization_key = HSM_BAR_staff_industry_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffrefineryName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_refinery_company }
+    text = { localization_key = HSM_BAR_staff_refinery_native }
+}
+
+defined_text = {
+    name = GetHSMBARStafflightName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_light_company }
+    text = { localization_key = HSM_BAR_staff_light_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffcasName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_cas_company }
+    text = { localization_key = HSM_BAR_staff_cas_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffmediumName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_medium_company }
+    text = { localization_key = HSM_BAR_staff_medium_native }
+}
+
+defined_text = {
+    name = GetHSMBARStaffshipyardName
+    text = { trigger = { BAR = { HSM_BAR_staff_new_paths = yes } } localization_key = HSM_BAR_staff_shipyard_company }
+    text = { localization_key = HSM_BAR_staff_shipyard_native }
+}

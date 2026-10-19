@@ -1,0 +1,302 @@
+# Barrad projects extend EaW's existing magical specialization and institution.
+# allowed is evaluated at startup and accepts only tag/original_tag/DLC checks.
+
+HSM_BAR_research_clinic = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_clinic_can_start = yes } }
+    resource_cost = { resources = { crystals = 2 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 30
+    breakthrough_cost = { specialization_magical = 1 }
+    ai_will_do = { base = 3 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_clinic_consent has_country_flag = HSM_BAR_research_clinic_expedience } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_clinic_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_clinic_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_clinic_consent_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_clinic_choose_consent = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_clinic_expedience_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_clinic_choose_expedience = yes }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_research_grid = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_magitech_depot_org
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_grid_eligible = yes } }
+    resource_cost = { resources = { crystals = 2 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 37.5
+    breakthrough_cost = { specialization_magical = 1 }
+    ai_will_do = { base = 3 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_grid_distributed has_country_flag = HSM_BAR_research_grid_central } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_grid_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_grid_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_grid_distributed_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_grid_choose_distributed = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_grid_central_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_grid_choose_central = yes }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_research_wards = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_encryption_keys
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_wards_eligible = yes } }
+    resource_cost = { resources = { crystals = 2 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 30
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 8 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_wards_personal has_country_flag = HSM_BAR_research_wards_monitoring } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_wards_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_wards_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_wards_personal_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_wards_choose_personal = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_wards_monitoring_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_wards_choose_monitoring = yes }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_research_containment = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_interceptability_studies
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_containment_eligible = yes } }
+    resource_cost = { resources = { crystals = 2 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 37.5
+    breakthrough_cost = { specialization_magical = 1 }
+    ai_will_do = { base = 3 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_containment_layered has_country_flag = HSM_BAR_research_containment_sealed } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_containment_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_containment_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_containment_layered_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_containment_choose_layered = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_containment_sealed_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_containment_choose_sealed = yes }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_research_forensics = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_forensics_eligible = yes } }
+    resource_cost = { resources = { crystals = 2 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 37.5
+    breakthrough_cost = { specialization_magical = 1 }
+    ai_will_do = { base = 3 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_forensics_reviewed has_country_flag = HSM_BAR_research_forensics_classified } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_forensics_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_forensics_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_forensics_reviewed_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_forensics_choose_reviewed = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_forensics_classified_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_forensics_choose_classified = yes }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_research_suppression = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_interceptability_studies
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_institute_open
+        }
+    }
+    available = { FROM = { HSM_BAR_research_suppression_eligible = yes } }
+    resource_cost = { resources = { crystals = 3 steel = 2 } }
+    complexity = sp_complexity.small
+    prototype_time = 45
+    breakthrough_cost = { specialization_magical = 2 }
+    ai_will_do = { base = 3 }
+    empty_reward_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            FROM = { NOT = { OR = { has_country_flag = HSM_BAR_research_suppression_reversible has_country_flag = HSM_BAR_research_suppression_permanent } } }
+        }
+    }
+    project_output = {
+        country_effects = { HSM_BAR_research_suppression_complete = yes }
+    }
+    unique_prototype_rewards = {
+        HSM_BAR_research_suppression_choice = {
+            fire_only_once = yes
+            threshold = { min = 0 max = 100 }
+            weight = { base = 1000 }
+            option = {
+                token = HSM_BAR_research_suppression_reversible_choice
+                default = yes
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_suppression_choose_reversible = yes }
+                }
+            }
+            option = {
+                token = HSM_BAR_research_suppression_permanent_choice
+                iteration_output = {
+                    country_effects = { HSM_BAR_research_suppression_choose_permanent = yes }
+                }
+            }
+        }
+    }
+}

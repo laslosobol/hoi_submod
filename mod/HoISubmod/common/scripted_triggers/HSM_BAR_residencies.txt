@@ -1,0 +1,307 @@
+HSM_BAR_residencies_actor = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_actor_tt
+  tag = BAR
+  original_tag = BAR
+  exists = yes
+  has_country_flag = HSM_BAR_active
+  has_country_flag = HSM_BAR_directorate
+  has_country_flag = HSM_BAR_service_founded
+  NOT = { has_country_flag = HSM_BAR_collegium }
+  has_capitulated = no
+  is_subject = no
+  owns_state = 624
+  controls_state = 624
+ }
+}
+HSM_BAR_residencies_equus_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_equus_access_tt
+  has_country_flag = HSM_BAR_region_equus_open
+
+  has_country_flag = HSM_BAR_story_20_done
+  NOT = { has_country_flag = HSM_BAR_residencies_equus_done }
+ }
+}
+HSM_BAR_residencies_equus_can_start = {
+ HSM_BAR_residencies_equus_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_equus_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_equus_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_equus_pending }
+ }
+}
+
+HSM_BAR_residencies_griffonia_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_griffonia_access_tt
+  has_country_flag = HSM_BAR_region_griffonia_open
+
+  has_country_flag = HSM_BAR_story_21_done
+  NOT = { has_country_flag = HSM_BAR_residencies_griffonia_done }
+ }
+}
+HSM_BAR_residencies_griffonia_can_start = {
+ HSM_BAR_residencies_griffonia_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_griffonia_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_griffonia_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_griffonia_pending }
+ }
+}
+
+HSM_BAR_residencies_north_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_north_access_tt
+  has_country_flag = HSM_BAR_region_north_open
+
+  has_country_flag = HSM_BAR_story_22_done
+  NOT = { has_country_flag = HSM_BAR_residencies_north_done }
+ }
+}
+HSM_BAR_residencies_north_can_start = {
+ HSM_BAR_residencies_north_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_north_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_north_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_north_pending }
+ }
+}
+
+HSM_BAR_residencies_riverlands_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_riverlands_access_tt
+  has_country_flag = HSM_BAR_region_riverlands_open
+
+  has_country_flag = HSM_BAR_story_23_done
+  NOT = { has_country_flag = HSM_BAR_residencies_riverlands_done }
+ }
+}
+HSM_BAR_residencies_riverlands_can_start = {
+ HSM_BAR_residencies_riverlands_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_riverlands_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_riverlands_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_riverlands_pending }
+ }
+}
+
+HSM_BAR_residencies_zebrica_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_zebrica_access_tt
+  has_country_flag = HSM_BAR_region_zebrica_open
+
+  has_country_flag = HSM_BAR_story_24_done
+  NOT = { has_country_flag = HSM_BAR_residencies_zebrica_done }
+ }
+}
+HSM_BAR_residencies_zebrica_can_start = {
+ HSM_BAR_residencies_zebrica_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_zebrica_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_zebrica_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_zebrica_pending }
+ }
+}
+
+HSM_BAR_residencies_comparison_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_comparison_access_tt
+  has_country_flag = HSM_BAR_region_zebrica_open
+
+  has_country_flag = HSM_BAR_residencies_zebrica_done
+  NOT = { has_country_flag = HSM_BAR_residencies_comparison_done }
+ }
+}
+HSM_BAR_residencies_comparison_can_start = {
+ HSM_BAR_residencies_comparison_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_comparison_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_comparison_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_comparison_pending }
+ }
+}
+
+HSM_BAR_residencies_reply_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_reply_access_tt
+  has_country_flag = HSM_BAR_residencies_started
+
+  has_country_flag = HSM_BAR_cult_channel_retained
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_done }
+ }
+}
+HSM_BAR_residencies_reply_can_start = {
+ HSM_BAR_residencies_reply_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_reply_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_pending }
+ }
+}
+
+HSM_BAR_residencies_papers_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_papers_access_tt
+  has_country_flag = HSM_BAR_residencies_started
+
+  NOT = { has_country_flag = HSM_BAR_cult_channel_retained }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_done }
+ }
+}
+HSM_BAR_residencies_papers_can_start = {
+ HSM_BAR_residencies_papers_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_papers_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_pending }
+ }
+}
+
+HSM_BAR_residencies_exchange_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_exchange_access_tt
+  has_country_flag = HSM_BAR_residencies_started
+
+  has_country_flag = HSM_BAR_residencies_contact_done
+  NOT = { has_country_flag = HSM_BAR_residencies_exchange_done }
+ }
+}
+HSM_BAR_residencies_exchange_can_start = {
+ HSM_BAR_residencies_exchange_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_exchange_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_exchange_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_exchange_pending }
+  NOT = { has_country_flag = HSM_BAR_residencies_contact_cooldown }
+ }
+}
+
+HSM_BAR_residencies_aftermath_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_aftermath_access_tt
+  has_country_flag = HSM_BAR_residencies_started
+
+  has_country_flag = HSM_BAR_residencies_exchange_done
+  NOT = { has_country_flag = HSM_BAR_residencies_aftermath_done }
+ }
+}
+HSM_BAR_residencies_aftermath_can_start = {
+ HSM_BAR_residencies_aftermath_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_aftermath_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_aftermath_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_aftermath_pending }
+  NOT = { has_country_flag = HSM_BAR_residencies_exchange_cooldown }
+ }
+}
+
+HSM_BAR_residencies_review_eligible = {
+ HSM_BAR_residencies_actor = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_review_access_tt
+  has_country_flag = HSM_BAR_residencies_started
+
+  has_country_flag = HSM_BAR_residencies_aftermath_done
+ }
+}
+HSM_BAR_residencies_review_can_start = {
+ HSM_BAR_residencies_review_eligible = yes
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_residencies_no_pending_tt
+  NOT = { has_country_flag = HSM_BAR_residencies_review_running }
+  NOT = { has_country_flag = HSM_BAR_residencies_review_ready }
+  NOT = { has_country_flag = HSM_BAR_residencies_review_pending }
+  NOT = { has_country_flag = HSM_BAR_residencies_review_cooldown }
+ }
+}
+HSM_BAR_residencies_equus_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_equus_ready
+ has_country_flag = HSM_BAR_residencies_equus_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_equus_done }
+}
+
+HSM_BAR_residencies_griffonia_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_griffonia_ready
+ has_country_flag = HSM_BAR_residencies_griffonia_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_griffonia_done }
+}
+
+HSM_BAR_residencies_north_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_north_ready
+ has_country_flag = HSM_BAR_residencies_north_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_north_done }
+}
+
+HSM_BAR_residencies_riverlands_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_riverlands_ready
+ has_country_flag = HSM_BAR_residencies_riverlands_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_riverlands_done }
+}
+
+HSM_BAR_residencies_zebrica_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_zebrica_ready
+ has_country_flag = HSM_BAR_residencies_zebrica_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_zebrica_done }
+}
+
+HSM_BAR_residencies_comparison_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_comparison_ready
+ has_country_flag = HSM_BAR_residencies_comparison_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_comparison_done }
+}
+
+HSM_BAR_residencies_contact_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_contact_ready
+ has_country_flag = HSM_BAR_residencies_contact_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_contact_done }
+}
+
+HSM_BAR_residencies_exchange_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_exchange_ready
+ has_country_flag = HSM_BAR_residencies_exchange_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_exchange_done }
+}
+
+HSM_BAR_residencies_aftermath_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_aftermath_ready
+ has_country_flag = HSM_BAR_residencies_aftermath_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_aftermath_done }
+}
+
+HSM_BAR_residencies_review_can_answer = {
+ HSM_BAR_residencies_actor = yes
+ has_country_flag = HSM_BAR_residencies_review_ready
+ has_country_flag = HSM_BAR_residencies_review_pending
+ NOT = { has_country_flag = HSM_BAR_residencies_review_done }
+}
+

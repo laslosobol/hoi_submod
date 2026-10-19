@@ -1,0 +1,5 @@
+HSM_BAR_fielddesk_missions = {
+ icon = generic_prepare_civil_war
+ allowed = { original_tag = BAR }
+ visible = { always = no }
+}

@@ -1,0 +1,49 @@
+HSM_BAR_found_service = {
+ if = {
+  limit = {
+   HSM_BAR_republic_field_access = yes
+   has_country_flag = HSM_BAR_records_decoded
+   has_country_flag = HSM_BAR_first_incident_resolved
+   NOT = { has_country_flag = HSM_BAR_service_founded }
+  }
+  set_country_flag = HSM_BAR_service_founded
+  clr_country_flag = HSM_BAR_republic_transition
+  HSM_BAR_initialize_service = yes
+  add_ideas = HSM_BAR_provisional_watch
+  add_dynamic_modifier = { modifier = HSM_BAR_service_capacity }
+  set_country_flag = HSM_BAR_field_research_open
+  set_country_flag = HSM_BAR_region_local_open
+  # The first expedition supplies a lead, not a completed study.
+  set_country_flag = HSM_BAR_case_rock_known
+  HSM_BAR_core_refresh = yes
+  load_focus_tree = { tree = HSM_BAR_directorate_tree keep_completed = yes }
+  country_event = { id = hsm_bar_republic.5 days = 1 }
+  country_event = { id = hsm_bar_core.1 days = 7 }
+ }
+}
+HSM_BAR_reclaim_first_fields = {
+ if = {
+  limit = { HSM_BAR_local_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_partly_healed } }
+  set_country_flag = HSM_BAR_land_partly_healed
+  624 = {
+   remove_province_modifier = { static_modifiers = { barrad_climate barrad_climate2 barrad_climate3 } province = { all_provinces = yes } }
+   add_province_modifier = { static_modifiers = { HSM_BAR_recovering_soil } province = { all_provinces = yes } }
+  }
+  add_stability = 0.03
+  country_event = { id = hsm_bar_republic.6 days = 1 }
+ }
+}
+HSM_BAR_reclaim_homeland = {
+ if = {
+  limit = { HSM_BAR_final_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_healed } }
+  set_country_flag = HSM_BAR_land_healed
+  every_owned_state = {
+   limit = { is_controlled_by = ROOT OR = { state = 624 state = 625 state = 626 } }
+   remove_province_modifier = { static_modifiers = { barrad_climate barrad_climate2 barrad_climate3 HSM_BAR_recovering_soil } province = { all_provinces = yes } }
+   clr_state_flag = BAR_climate
+   set_state_flag = HSM_BAR_land_restored
+  }
+  country_event = { id = hsm_bar_republic.7 days = 1 }
+ }
+}
+

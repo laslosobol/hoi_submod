@@ -1,0 +1,5 @@
+HSM_BAR_fielddesk_assignment = {
+ icon = GFX_idea_HSM_BAR_dir_agency
+ enable = { has_country_flag = HSM_BAR_fielddesk_running }
+ civilian_factory_use = HSM_BAR_fielddesk_factories
+}

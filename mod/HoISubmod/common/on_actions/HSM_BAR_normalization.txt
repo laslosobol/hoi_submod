@@ -1,0 +1,22 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = { has_global_flag = HSM_BAR_world_normalization_started }
+                HSM_BAR_normalization_world_tick = yes
+            }
+        }
+    }
+    on_release_as_free = { effect = { ROOT = { HSM_BAR_normalization_sync = yes } } }
+    on_release_as_puppet = { effect = { ROOT = { HSM_BAR_normalization_sync = yes } } }
+    on_liberate = { effect = { ROOT = { HSM_BAR_normalization_sync = yes } } }
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = { ROOT = { tag = NML } has_global_flag = HSM_BAR_world_breached }
+                set_global_flag = HSM_BAR_world_incursions_defeated
+            }
+        }
+    }
+    # No BAR-specific cleanup: destruction of the author does not undo the act.
+}

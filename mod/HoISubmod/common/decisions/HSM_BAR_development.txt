@@ -1,0 +1,126 @@
+HSM_BAR_development = {
+ HSM_BAR_development_living_standards = {
+  icon = generic_construction
+  cost = 50
+  days_remove = 120
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_development_route = yes has_completed_focus = HSM_BAR_land_register has_poverty = yes }
+  available = { HSM_BAR_development_living_standards_eligible = yes }
+  complete_effect = {
+   hidden_effect = {
+    if = { limit = { HSM_BAR_development_living_standards_eligible = yes } set_country_flag = HSM_BAR_development_living_standards_running }
+   }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_development_living_standards_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_development_living_standards_running } }
+  remove_effect = {
+   if = {
+    limit = { HSM_BAR_development_living_standards_eligible = yes }
+    effect_tooltip = { decrease_poverty = yes }
+   }
+   else = { custom_effect_tooltip = HSM_BAR_development_interrupted_tt }
+   hidden_effect = {
+    if = {
+     limit = { HSM_BAR_development_living_standards_eligible = yes has_country_flag = HSM_BAR_development_living_standards_running }
+     decrease_poverty = yes
+    }
+    clr_country_flag = HSM_BAR_development_living_standards_running
+   }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_development_school_network = {
+  icon = generic_research
+  cost = 50
+  days_remove = 120
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_development_route = yes has_completed_focus = HSM_BAR_village_schools has_illiteracy = yes }
+  available = { HSM_BAR_development_school_network_eligible = yes }
+  complete_effect = {
+   hidden_effect = {
+    if = { limit = { HSM_BAR_development_school_network_eligible = yes } set_country_flag = HSM_BAR_development_school_network_running }
+   }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_development_school_network_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_development_school_network_running } }
+  remove_effect = {
+   if = {
+    limit = { HSM_BAR_development_school_network_eligible = yes }
+    effect_tooltip = { decrease_illiteracy = yes }
+   }
+   else = { custom_effect_tooltip = HSM_BAR_development_interrupted_tt }
+   hidden_effect = {
+    if = {
+     limit = { HSM_BAR_development_school_network_eligible = yes has_country_flag = HSM_BAR_development_school_network_running }
+     decrease_illiteracy = yes
+    }
+    clr_country_flag = HSM_BAR_development_school_network_running
+   }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_development_industrial_program = {
+  icon = generic_construction
+  cost = 75
+  days_remove = 180
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_development_route = yes has_completed_focus = HSM_BAR_power_grid HSM_BAR_development_industry_needed = yes }
+  available = { HSM_BAR_development_industrial_program_eligible = yes }
+  complete_effect = {
+   hidden_effect = {
+    if = { limit = { HSM_BAR_development_industrial_program_eligible = yes } set_country_flag = HSM_BAR_development_industrial_program_running }
+   }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_development_industrial_program_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_development_industrial_program_running } }
+  remove_effect = {
+   if = {
+    limit = { HSM_BAR_development_industrial_program_eligible = yes }
+    effect_tooltip = { increase_society_development = yes }
+   }
+   else = { custom_effect_tooltip = HSM_BAR_development_interrupted_tt }
+   hidden_effect = {
+    if = {
+     limit = { HSM_BAR_development_industrial_program_eligible = yes has_country_flag = HSM_BAR_development_industrial_program_running }
+     increase_society_development = yes
+    }
+    clr_country_flag = HSM_BAR_development_industrial_program_running
+   }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_development_research_grants = {
+  icon = generic_research
+  cost = 75
+  days_remove = 180
+  days_re_enable = 1
+  fire_only_once = no
+  visible = { HSM_BAR_development_route = yes has_completed_focus = HSM_BAR_civil_laboratories HSM_BAR_development_science_needed = yes }
+  available = { HSM_BAR_development_research_grants_eligible = yes }
+  complete_effect = {
+   hidden_effect = {
+    if = { limit = { HSM_BAR_development_research_grants_eligible = yes } set_country_flag = HSM_BAR_development_research_grants_running }
+   }
+  }
+  cancel_trigger = { NOT = { HSM_BAR_development_research_grants_eligible = yes } }
+  cancel_effect = { hidden_effect = { clr_country_flag = HSM_BAR_development_research_grants_running } }
+  remove_effect = {
+   if = {
+    limit = { HSM_BAR_development_research_grants_eligible = yes }
+    effect_tooltip = { increase_science_base = yes }
+   }
+   else = { custom_effect_tooltip = HSM_BAR_development_interrupted_tt }
+   hidden_effect = {
+    if = {
+     limit = { HSM_BAR_development_research_grants_eligible = yes has_country_flag = HSM_BAR_development_research_grants_running }
+     increase_science_base = yes
+    }
+    clr_country_flag = HSM_BAR_development_research_grants_running
+   }
+  }
+  ai_will_do = { factor = 10 }
+ }
+}

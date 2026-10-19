@@ -1,0 +1,749 @@
+HSM_BAR_anomalies = {
+    HSM_BAR_case_local_survey = {
+        icon = generic_prepare_civil_war
+        cost = 25
+        days_remove = 14
+        visible = { NOT = { has_country_flag = HSM_BAR_case_local_surveyed } }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_local_survey_result_tt
+            hidden_effect = {
+                HSM_BAR_case_local_survey = yes
+            }
+        }
+        ai_will_do = { factor = 3 }
+    }
+    HSM_BAR_case_rock_investigate = {
+        icon = generic_political_discourse
+        cost = 25
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_rock_known
+            NOT = { has_country_flag = HSM_BAR_case_rock_investigated }
+        }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_rock_investigate_result_tt
+            hidden_effect = {
+                HSM_BAR_case_investigate_rock = yes
+            }
+        }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_case_rock_protect = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_rock_investigated
+            NOT = { has_country_flag = HSM_BAR_case_rock_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_rock_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        complete_effect = { HSM_BAR_case_dispose_rock_protect = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_rock_restrict = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_rock_investigated
+            NOT = { has_country_flag = HSM_BAR_case_rock_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_rock_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        complete_effect = { HSM_BAR_case_dispose_rock_restrict = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_titan_investigate = {
+        icon = generic_political_discourse
+        cost = 25
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_titan_known
+            NOT = { has_country_flag = HSM_BAR_case_titan_investigated }
+        }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_titan_investigate_result_tt
+            hidden_effect = {
+                HSM_BAR_case_investigate_titan = yes
+            }
+        }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_case_titan_protect = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_titan_investigated
+            NOT = { has_country_flag = HSM_BAR_case_titan_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_titan_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        complete_effect = { HSM_BAR_case_dispose_titan_protect = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_titan_restrict = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_titan_investigated
+            NOT = { has_country_flag = HSM_BAR_case_titan_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_titan_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        complete_effect = { HSM_BAR_case_dispose_titan_restrict = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_entity_investigate = {
+        icon = generic_political_discourse
+        cost = 25
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_entity_known
+            NOT = { has_country_flag = HSM_BAR_case_entity_investigated }
+        }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_entity_investigate_result_tt
+            hidden_effect = {
+                HSM_BAR_case_investigate_entity = yes
+            }
+        }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_case_entity_protect = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_entity_investigated
+            NOT = { has_country_flag = HSM_BAR_case_entity_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_entity_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        complete_effect = { HSM_BAR_case_dispose_entity_protect = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_entity_restrict = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_entity_investigated
+            NOT = { has_country_flag = HSM_BAR_case_entity_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_entity_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        complete_effect = { HSM_BAR_case_dispose_entity_restrict = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_amulet_investigate = {
+        icon = generic_political_discourse
+        cost = 25
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_amulet_known
+            NOT = { has_country_flag = HSM_BAR_case_amulet_investigated }
+        }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_amulet_investigate_result_tt
+            hidden_effect = {
+                HSM_BAR_case_investigate_amulet = yes
+            }
+        }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_case_amulet_protect = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_amulet_investigated
+            NOT = { has_country_flag = HSM_BAR_case_amulet_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_amulet_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        complete_effect = { HSM_BAR_case_dispose_amulet_protect = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_amulet_restrict = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_amulet_investigated
+            NOT = { has_country_flag = HSM_BAR_case_amulet_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_amulet_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        complete_effect = { HSM_BAR_case_dispose_amulet_restrict = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_plants_investigate = {
+        icon = generic_political_discourse
+        cost = 25
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_plants_known
+            NOT = { has_country_flag = HSM_BAR_case_plants_investigated }
+        }
+        available = { HSM_BAR_case_local_access = yes }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_plants_investigate_result_tt
+            hidden_effect = {
+                HSM_BAR_case_investigate_plants = yes
+            }
+        }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_case_plants_protect = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_plants_investigated
+            NOT = { has_country_flag = HSM_BAR_case_plants_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_plants_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        complete_effect = { HSM_BAR_case_dispose_plants_protect = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_plants_restrict = {
+        icon = generic_political_discourse
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_plants_investigated
+            NOT = { has_country_flag = HSM_BAR_case_plants_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_plants_done
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        complete_effect = { HSM_BAR_case_dispose_plants_restrict = yes }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_recon_expedition = {
+        icon = generic_prepare_civil_war
+        cost = 20
+        days_remove = 14
+        days_re_enable = 7
+        target_trigger = { FROM = { HSM_BAR_operation_recon_target = yes } }
+        target_root_trigger = { HSM_BAR_case_enabled = yes NOT = { has_dlc = "La Resistance" } }
+        visible = { NOT = { has_dlc = "La Resistance" } FROM = { HSM_BAR_operation_recon_target = yes } }
+        available = { FROM = { HSM_BAR_operation_recon_target = yes } }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_recon_expedition_result_tt
+            hidden_effect = {
+                HSM_BAR_operation_recon_complete = yes
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_archive_expedition = {
+        icon = generic_prepare_civil_war
+        cost = 30
+        days_remove = 21
+        days_re_enable = 7
+        target_trigger = { FROM = { HSM_BAR_operation_archive_target = yes } }
+        target_root_trigger = { HSM_BAR_case_enabled = yes NOT = { has_dlc = "La Resistance" } }
+        visible = { NOT = { has_dlc = "La Resistance" } FROM = { HSM_BAR_operation_archive_target = yes } }
+        available = { FROM = { HSM_BAR_operation_archive_target = yes } }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_archive_expedition_result_tt
+            hidden_effect = {
+                HSM_BAR_operation_archive_complete = yes
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_relic_expedition = {
+        icon = generic_prepare_civil_war
+        cost = 60
+        days_remove = 30
+        days_re_enable = 7
+        target_trigger = { FROM = { HSM_BAR_operation_relic_target = yes } }
+        target_root_trigger = { HSM_BAR_case_enabled = yes NOT = { has_dlc = "La Resistance" } }
+        visible = { NOT = { has_dlc = "La Resistance" } FROM = { HSM_BAR_operation_relic_target = yes } }
+        available = { FROM = { HSM_BAR_operation_relic_target = yes } }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_relic_expedition_result_tt
+            hidden_effect = {
+                HSM_BAR_operation_relic_complete = yes
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_remains_expedition = {
+        icon = generic_prepare_civil_war
+        cost = 60
+        days_remove = 21
+        days_re_enable = 7
+        target_trigger = { FROM = { HSM_BAR_operation_remains_target = yes } }
+        target_root_trigger = { HSM_BAR_case_enabled = yes NOT = { has_dlc = "La Resistance" } }
+        visible = { NOT = { has_dlc = "La Resistance" } FROM = { HSM_BAR_operation_remains_target = yes } }
+        available = { FROM = { HSM_BAR_operation_remains_target = yes } }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_remains_expedition_result_tt
+            hidden_effect = {
+                HSM_BAR_operation_remains_complete = yes
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_chalice_investigate = {
+        icon = generic_political_discourse
+        cost = 35
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_chalice_known
+            has_global_flag = HSM_BAR_case_chalice_found
+            NOT = { has_country_flag = HSM_BAR_case_chalice_investigated }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_magehold_archives
+            has_country_flag = HSM_BAR_project_forensics_done
+            has_global_flag = HSM_BAR_case_chalice_found
+        }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_chalice_investigate_result_tt
+            hidden_effect = {
+                clr_country_flag = HSM_BAR_case_last_operation_success
+                if = {
+                    limit = {
+                        HSM_BAR_case_enabled = yes
+                        has_country_flag = HSM_BAR_case_magehold_archives
+                        has_country_flag = HSM_BAR_project_forensics_done
+                        has_global_flag = HSM_BAR_case_chalice_found
+                        NOT = { has_country_flag = HSM_BAR_case_chalice_investigated }
+                    }
+                    set_country_flag = HSM_BAR_case_chalice_investigated
+                    HSM_BAR_case_success = yes
+                    country_event = { id = hsm_bar_anomaly.16 }
+                }
+                else = { HSM_BAR_case_failed = yes }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_chalice_secure_local = {
+        icon = generic_prepare_civil_war
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_chalice_investigated
+            NOT = { has_global_flag = HSM_BAR_case_chalice_secured }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_global_flag = HSM_BAR_case_chalice_found
+            var:global.HSM_BAR_case_chalice_site = { is_controlled_by = ROOT }
+            OR = { has_global_flag = HSM_BAR_case_rosa_vampire has_global_flag = HSM_BAR_case_rosa_lich has_global_flag = HSM_BAR_case_rosa_executed }
+        }
+        complete_effect = {
+            set_global_flag = HSM_BAR_case_chalice_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_chalice_site = THIS } }
+            custom_effect_tooltip = HSM_BAR_case_relic_tt
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_chalice_seal = {
+        icon = generic_political_discourse
+        cost = 20
+        visible = {
+            has_country_flag = HSM_BAR_case_chalice_investigated
+            NOT = { has_country_flag = HSM_BAR_case_chalice_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_chalice_done
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_global_flag = HSM_BAR_case_chalice_secured
+            var:global.HSM_BAR_case_chalice_site = { is_controlled_by = ROOT }
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    HSM_BAR_case_enabled = yes
+                    has_country_flag = HSM_BAR_study_chalice_done
+                    has_country_flag = HSM_BAR_project_wards_done
+                    has_global_flag = HSM_BAR_case_chalice_secured
+                    NOT = { has_country_flag = HSM_BAR_case_chalice_closed }
+                    var:global.HSM_BAR_case_chalice_site = { is_controlled_by = ROOT }
+                }
+                set_country_flag = HSM_BAR_case_chalice_closed
+                add_to_variable = { HSM_BAR_case_completed = 1 }
+                HSM_BAR_outcome_chalice_sealed = yes
+                custom_effect_tooltip = HSM_BAR_case_chalice_seal_tt
+            }
+            else = { HSM_BAR_case_failed = yes }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_phylactery_investigate = {
+        icon = generic_political_discourse
+        cost = 35
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_phylactery_known
+            has_global_flag = HSM_BAR_case_phylactery_created
+            NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+            NOT = { has_country_flag = HSM_BAR_case_phylactery_investigated }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_magehold_archives
+            has_country_flag = HSM_BAR_project_forensics_done
+            has_global_flag = HSM_BAR_case_phylactery_created
+            NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+        }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_phylactery_investigate_result_tt
+            hidden_effect = {
+                clr_country_flag = HSM_BAR_case_last_operation_success
+                if = {
+                    limit = {
+                        HSM_BAR_case_enabled = yes
+                        has_country_flag = HSM_BAR_case_magehold_archives
+                        has_country_flag = HSM_BAR_project_forensics_done
+                        has_global_flag = HSM_BAR_case_phylactery_created
+                        NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+                        NOT = { has_country_flag = HSM_BAR_case_phylactery_investigated }
+                    }
+                    set_country_flag = HSM_BAR_case_phylactery_investigated
+                    HSM_BAR_case_success = yes
+                    country_event = { id = hsm_bar_anomaly.17 }
+                }
+                else = { HSM_BAR_case_failed = yes }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_phylactery_secure_local = {
+        icon = generic_prepare_civil_war
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_phylactery_investigated
+            NOT = { has_global_flag = HSM_BAR_case_phylactery_secured }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_global_flag = HSM_BAR_case_phylactery_created
+            NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+            var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = ROOT }
+            
+        }
+        complete_effect = {
+            set_global_flag = HSM_BAR_case_phylactery_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_phylactery_site = THIS } }
+            custom_effect_tooltip = HSM_BAR_case_relic_tt
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_phylactery_seal = {
+        icon = generic_political_discourse
+        cost = 20
+        visible = {
+            has_country_flag = HSM_BAR_case_phylactery_investigated
+            NOT = { has_country_flag = HSM_BAR_case_phylactery_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_phylactery_done
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_global_flag = HSM_BAR_case_phylactery_secured
+            var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = ROOT }
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    HSM_BAR_case_enabled = yes
+                    has_country_flag = HSM_BAR_study_phylactery_done
+                    has_country_flag = HSM_BAR_project_wards_done
+                    has_global_flag = HSM_BAR_case_phylactery_secured
+                    NOT = { has_country_flag = HSM_BAR_case_phylactery_closed }
+                    var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = ROOT }
+                }
+                set_country_flag = HSM_BAR_case_phylactery_closed
+                add_to_variable = { HSM_BAR_case_completed = 1 }
+                HSM_BAR_outcome_phylactery_sealed = yes
+                custom_effect_tooltip = HSM_BAR_case_phylactery_seal_tt
+            }
+            else = { HSM_BAR_case_failed = yes }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_darkheart_investigate = {
+        icon = generic_political_discourse
+        cost = 35
+        days_remove = 21
+        visible = {
+            has_country_flag = HSM_BAR_case_darkheart_known
+            has_global_flag = HSM_BAR_case_darkheart_created
+            NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+            NOT = { has_country_flag = HSM_BAR_case_darkheart_investigated }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_crystal_archives
+            has_country_flag = HSM_BAR_project_forensics_done
+            has_global_flag = HSM_BAR_case_darkheart_created
+            NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+        }
+        remove_effect = {
+            custom_effect_tooltip = HSM_BAR_case_darkheart_investigate_result_tt
+            hidden_effect = {
+                clr_country_flag = HSM_BAR_case_last_operation_success
+                if = {
+                    limit = {
+                        HSM_BAR_case_enabled = yes
+                        has_country_flag = HSM_BAR_case_crystal_archives
+                        has_country_flag = HSM_BAR_project_forensics_done
+                        has_global_flag = HSM_BAR_case_darkheart_created
+                        NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+                        NOT = { has_country_flag = HSM_BAR_case_darkheart_investigated }
+                    }
+                    set_country_flag = HSM_BAR_case_darkheart_investigated
+                    HSM_BAR_case_success = yes
+                    country_event = { id = hsm_bar_anomaly.18 }
+                }
+                else = { HSM_BAR_case_failed = yes }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_darkheart_secure_local = {
+        icon = generic_prepare_civil_war
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_darkheart_investigated
+            NOT = { has_global_flag = HSM_BAR_case_darkheart_secured }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            has_global_flag = HSM_BAR_case_darkheart_created
+            NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+            var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = ROOT }
+            has_global_flag = HSM_BAR_case_sombra_returned
+        }
+        complete_effect = {
+            set_global_flag = HSM_BAR_case_darkheart_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_darkheart_site = THIS } }
+            custom_effect_tooltip = HSM_BAR_case_relic_tt
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_darkheart_seal = {
+        icon = generic_political_discourse
+        cost = 20
+        visible = {
+            has_country_flag = HSM_BAR_case_darkheart_investigated
+            NOT = { has_country_flag = HSM_BAR_case_darkheart_closed }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_darkheart_done
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_wards_done
+            has_global_flag = HSM_BAR_case_darkheart_secured
+            var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = ROOT }
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    HSM_BAR_case_enabled = yes
+                    has_country_flag = HSM_BAR_study_darkheart_done
+                    has_country_flag = HSM_BAR_project_wards_done
+                    has_global_flag = HSM_BAR_case_darkheart_secured
+                    NOT = { has_country_flag = HSM_BAR_case_darkheart_closed }
+                    var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = ROOT }
+                }
+                set_country_flag = HSM_BAR_case_darkheart_closed
+                add_to_variable = { HSM_BAR_case_completed = 1 }
+                HSM_BAR_outcome_darkheart_sealed = yes
+                custom_effect_tooltip = HSM_BAR_case_darkheart_seal_tt
+            }
+            else = { HSM_BAR_case_failed = yes }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_rosa_review = {
+        icon = generic_political_discourse
+        cost = 10
+        days_re_enable = 30
+        visible = { has_country_flag = HSM_BAR_case_rosa_known }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done }
+        complete_effect = {
+            if = { limit = { NOT = { has_country_flag = HSM_BAR_case_rosa_closed } } HSM_BAR_case_archive_rosa = yes }
+            else = { country_event = { id = hsm_bar_anomaly.20 } }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_grover_review = {
+        icon = generic_political_discourse
+        cost = 10
+        days_re_enable = 30
+        visible = { has_country_flag = HSM_BAR_case_grover_known }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done }
+        complete_effect = {
+            if = { limit = { NOT = { has_country_flag = HSM_BAR_case_grover_closed } } HSM_BAR_case_archive_grover = yes }
+            else = { country_event = { id = hsm_bar_anomaly.21 } }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_herald_review = {
+        icon = generic_political_discourse
+        cost = 10
+        days_re_enable = 30
+        visible = { has_country_flag = HSM_BAR_case_herald_known }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done }
+        complete_effect = {
+            if = { limit = { NOT = { has_country_flag = HSM_BAR_case_herald_closed } } HSM_BAR_case_archive_herald = yes }
+            else = { country_event = { id = hsm_bar_anomaly.22 } }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_sombra_review = {
+        icon = generic_political_discourse
+        cost = 10
+        days_re_enable = 30
+        visible = { has_country_flag = HSM_BAR_case_sombra_known }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done }
+        complete_effect = {
+            if = { limit = { NOT = { has_country_flag = HSM_BAR_case_sombra_closed } } HSM_BAR_case_archive_sombra = yes }
+            else = { country_event = { id = hsm_bar_anomaly.23 } }
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_crown_review = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = { has_country_flag = HSM_BAR_case_crown_known }
+        available = { HSM_BAR_case_enabled = yes }
+        complete_effect = { country_event = { id = hsm_bar_anomaly.24 } }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_crown_secure_local = {
+        icon = generic_prepare_civil_war
+        cost = 35
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_project_containment_done
+            any_of_scopes = {
+                array = global.HSM_BAR_case_crowns
+                has_country_flag = HSM_BAR_case_crown_investigated
+                NOT = { has_country_flag = HSM_BAR_case_crown_secured has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_leader }
+                OR = { has_country_flag = HSM_BAR_case_crown_museum has_country_flag = HSM_BAR_case_crown_sealed }
+                var:HSM_BAR_case_crown_site = { is_controlled_by = ROOT }
+            }
+        }
+        visible = { has_country_flag = HSM_BAR_case_crown_known }
+        complete_effect = {
+            for_each_scope_loop = {
+                array = global.HSM_BAR_case_crowns
+                if = {
+                    limit = {
+                        has_country_flag = HSM_BAR_case_crown_investigated
+                        NOT = { has_country_flag = HSM_BAR_case_crown_secured has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_leader }
+                        OR = { has_country_flag = HSM_BAR_case_crown_museum has_country_flag = HSM_BAR_case_crown_sealed }
+                        var:HSM_BAR_case_crown_site = { is_controlled_by = ROOT }
+                    }
+                    HSM_BAR_case_take_crown = yes
+                }
+            }
+            custom_effect_tooltip = HSM_BAR_case_relic_tt
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_grover_secure_local = {
+        icon = generic_prepare_civil_war
+        cost = 35
+        visible = {
+            has_country_flag = HSM_BAR_case_grover_investigated
+            NOT = { has_global_flag = HSM_BAR_case_grover_bones_removed }
+        }
+        available = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_forensic_mandate
+            has_country_flag = HSM_BAR_project_forensics_done
+            HSM_BAR_case_grover_recoverable = yes
+        }
+        complete_effect = {
+            set_global_flag = HSM_BAR_case_grover_bones_removed
+            set_global_flag = HSM_BAR_case_grover_bones_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_grover_site = THIS } }
+            custom_effect_tooltip = HSM_BAR_case_remains_tt
+        }
+        ai_will_do = { factor = 0 }
+    }
+    HSM_BAR_case_grover_inter = {
+        icon = generic_political_discourse
+        cost = 20
+        visible = {
+            has_global_flag = HSM_BAR_case_grover_bones_secured
+            NOT = { has_country_flag = HSM_BAR_case_grover_interred }
+        }
+        available = {
+            has_country_flag = HSM_BAR_study_grover_done
+            HSM_BAR_case_enabled = yes
+            var:global.HSM_BAR_case_grover_site = { is_controlled_by = ROOT }
+        }
+        complete_effect = {
+            set_country_flag = HSM_BAR_case_grover_interred
+            add_stability = 0.01
+            custom_effect_tooltip = HSM_BAR_case_grover_interred_tt
+        }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_case_occupied_archives = {
+        icon = generic_political_discourse
+        cost = 25
+        days_re_enable = 7
+        available = {
+            HSM_BAR_case_enabled = yes
+            HSM_BAR_case_archive_pending = yes
+        }
+        complete_effect = {
+            country_event = { id = hsm_bar_anomaly.4 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

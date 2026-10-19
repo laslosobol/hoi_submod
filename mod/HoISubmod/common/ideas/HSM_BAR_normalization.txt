@@ -1,0 +1,63 @@
+ideas = {
+    country = {
+        HSM_BAR_normalization_magic_failure = {
+            picture = HSM_BAR_art_rift
+            allowed = { always = no }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            # EaW magical_eq.txt. instant updates existing equipment, not only
+            # newly researched models (same form as native SOL_pb_magic_idea).
+            equipment_bonus = {
+                magical_equipment = {
+                    instant = yes
+                    soft_attack = -0.40
+                    hard_attack = -0.40
+                    defense = -0.25
+                    breakthrough = -0.25
+                }
+                magical_artillery_equipment = {
+                    instant = yes
+                    soft_attack = -0.40
+                    hard_attack = -0.40
+                    breakthrough = -0.25
+                }
+                magical_tank_equipment = {
+                    instant = yes
+                    soft_attack = -0.40
+                    hard_attack = -0.40
+                    armor_value = -0.25
+                    breakthrough = -0.25
+                }
+            }
+        }
+        HSM_BAR_normalization_steel_defence = {
+            picture = HSM_BAR_art_artillery
+            allowed = { always = no }
+            removal_cost = -1
+            equipment_bonus = {
+                infantry_equipment = {
+                    instant = yes
+                    defense = 0.10
+                    soft_attack = 0.10
+                }
+                artillery_equipment = {
+                    instant = yes
+                    soft_attack = 0.10
+                }
+            }
+            modifier = {
+                industrial_capacity_factory = -0.08
+                political_power_gain = -0.15
+            }
+        }
+        HSM_BAR_normalization_beyond = {
+            picture = HSM_BAR_art_beyond
+            allowed = { always = no }
+            removal_cost = -1
+            modifier = {
+                supply_consumption_factor = -0.50
+                army_org_factor = 0.15
+            }
+        }
+    }
+}

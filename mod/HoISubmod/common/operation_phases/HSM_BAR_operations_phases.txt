@@ -1,0 +1,54 @@
+HSM_BAR_operations_phase_approach = {
+    name = HSM_BAR_operations_phase_approach
+    desc = HSM_BAR_operations_phase_approach_desc
+    outcome = HSM_BAR_operations_phase_approach_outcome
+    picture = "GFX_phase_infiltration_diplomatic"
+    icon = "GFX_phase_infiltration_diplomatic_small"
+    requirements = { }
+}
+
+HSM_BAR_operations_phase_recon = {
+    name = HSM_BAR_operations_phase_recon
+    desc = HSM_BAR_operations_phase_recon_desc
+    outcome = HSM_BAR_operations_phase_recon_outcome
+    picture = "GFX_phase_infiltrate_military_bribe"
+    icon = "GFX_phase_infiltrate_military_bribe_small"
+    requirements = { }
+}
+
+HSM_BAR_operations_phase_archive = {
+    name = HSM_BAR_operations_phase_archive
+    desc = HSM_BAR_operations_phase_archive_desc
+    outcome = HSM_BAR_operations_phase_archive_outcome
+    picture = "GFX_phase_steal_blueprints_middle_manager"
+    icon = "GFX_phase_steal_blueprints_middle_manager_small"
+    requirements = { }
+}
+
+HSM_BAR_operations_phase_relic = {
+    name = HSM_BAR_operations_phase_relic
+    desc = HSM_BAR_operations_phase_relic_desc
+    outcome = HSM_BAR_operations_phase_relic_outcome
+    picture = "GFX_phase_steal_blueprints_steal_prototype"
+    icon = "GFX_phase_steal_blueprints_steal_prototype_small"
+    requirements = { }
+}
+
+HSM_BAR_operations_phase_remains = {
+    name = HSM_BAR_operations_phase_remains
+    desc = HSM_BAR_operations_phase_remains_desc
+    outcome = HSM_BAR_operations_phase_remains_outcome
+    picture = "GFX_phase_steal_blueprints_steal_prototype"
+    icon = "GFX_phase_steal_blueprints_steal_prototype_small"
+    requirements = { }
+}
+
+HSM_BAR_operations_phase_return = {
+    name = HSM_BAR_operations_phase_return
+    desc = HSM_BAR_operations_phase_return_desc
+    outcome = HSM_BAR_operations_phase_return_outcome
+    outcome_extra = HSM_BAR_operations_phase_return_failed
+    picture = "GFX_phase_exfiltration_border"
+    icon = "GFX_phase_exfiltration_border_small"
+    requirements = { }
+}

@@ -1,0 +1,551 @@
+add_namespace = HSM_BAR_collegium
+
+country_event = {
+ id = HSM_BAR_collegium.1
+ title = HSM_BAR_collegium.1.t
+ desc = HSM_BAR_collegium.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.1.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_petitioners
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.1.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_public_hearings
+  add_political_power = 25
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.2
+ title = HSM_BAR_collegium.2.t
+ desc = HSM_BAR_collegium.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.2.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_private_testimony set_country_flag = HSM_BAR_collegium_testimony_settled
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.2.b
+  ai_chance = { factor = 35 }
+   add_political_power = 15 set_country_flag = HSM_BAR_collegium_public_testimony set_country_flag = HSM_BAR_collegium_testimony_settled
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.3
+ title = HSM_BAR_collegium.3.t
+ desc = HSM_BAR_collegium.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.3.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_silver_public
+  add_tech_bonus = { name = HSM_BAR_collegium.3.a bonus = 0.5 uses = 2 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.3.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_silver_lab
+  add_tech_bonus = { name = HSM_BAR_collegium.3.b bonus = 0.5 uses = 1 category = magical_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.4
+ title = HSM_BAR_collegium.4.t
+ desc = HSM_BAR_collegium.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.4.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_ordinary_care set_country_flag = HSM_BAR_collegium_patient_rights
+  add_tech_bonus = { name = HSM_BAR_collegium.4.a bonus = 0.5 uses = 2 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.4.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_patient_advocates set_country_flag = HSM_BAR_collegium_patient_rights
+  add_tech_bonus = { name = HSM_BAR_collegium.4.b bonus = 0.75 uses = 1 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.5
+ title = HSM_BAR_collegium.5.t
+ desc = HSM_BAR_collegium.5.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.5.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_lay_witnesses set_country_flag = HSM_BAR_collegium_consent
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.5.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_review_panel set_country_flag = HSM_BAR_collegium_consent
+  add_tech_bonus = { name = HSM_BAR_collegium.5.b bonus = 0.5 uses = 1 category = magical_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.6
+ title = HSM_BAR_collegium.6.t
+ desc = HSM_BAR_collegium.6.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.6.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_accessible_lessons
+  add_tech_bonus = { name = HSM_BAR_collegium.6.a bonus = 0.5 uses = 2 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.6.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_teaching_assistants
+  add_tech_bonus = { name = HSM_BAR_collegium.6.b bonus = 0.75 uses = 1 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.7
+ title = HSM_BAR_collegium.7.t
+ desc = HSM_BAR_collegium.7.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.7.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_clinic_access
+  custom_effect_tooltip = HSM_BAR_collegium_access_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.7.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_clinic_followup
+  custom_effect_tooltip = HSM_BAR_collegium_followup_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.8
+ title = HSM_BAR_collegium.8.t
+ desc = HSM_BAR_collegium.8.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.8.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_grid_households
+  custom_effect_tooltip = HSM_BAR_collegium_households_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.8.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_grid_workshops
+  custom_effect_tooltip = HSM_BAR_collegium_workshop_hours_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.9
+ title = HSM_BAR_collegium.9.t
+ desc = HSM_BAR_collegium.9.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.9.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_refugee_settlement set_country_flag = HSM_BAR_collegium_refugee_policy
+  custom_effect_tooltip = HSM_BAR_collegium_settlement_unlocked_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.9.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_refugee_transit set_country_flag = HSM_BAR_collegium_refugee_policy
+  custom_effect_tooltip = HSM_BAR_collegium_travel_unlocked_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.10
+ title = HSM_BAR_collegium.10.t
+ desc = HSM_BAR_collegium.10.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.10.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_report_answered set_country_flag = HSM_BAR_collegium_compensation
+  add_political_power = -30
+  add_stability = 0.02
+  set_country_flag = { flag = HSM_BAR_collegium_trial_pause days = 30 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.10.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_report_answered set_country_flag = HSM_BAR_collegium_supervised_reform
+  add_political_power = -50
+  add_tech_bonus = { name = HSM_BAR_collegium.10.b bonus = 0.5 uses = 1 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.11
+ title = HSM_BAR_collegium.11.t
+ desc = HSM_BAR_collegium.11.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.11.a
+  ai_chance = { factor = 65 }
+   add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.11.b
+  ai_chance = { factor = 35 }
+   add_tech_bonus = { name = HSM_BAR_collegium.11.b bonus = 0.5 uses = 1 category = industry }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.12
+ title = HSM_BAR_collegium.12.t
+ desc = HSM_BAR_collegium.12.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.12.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_lifetime_followup
+  add_tech_bonus = { name = HSM_BAR_collegium.12.a bonus = 0.75 uses = 2 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.12.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_regional_medicine
+  add_tech_bonus = { name = HSM_BAR_collegium.12.b bonus = 1 uses = 1 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.13
+ title = HSM_BAR_collegium.13.t
+ desc = HSM_BAR_collegium.13.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.13.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_open_bodycraft
+  add_tech_bonus = { name = HSM_BAR_collegium.13.a bonus = 0.5 uses = 2 category = industry }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.13.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_licensed_bodycraft
+  add_tech_bonus = { name = HSM_BAR_collegium.13.b bonus = 0.75 uses = 1 category = logistics_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.14
+ title = HSM_BAR_collegium.14.t
+ desc = HSM_BAR_collegium.14.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.14.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_ritual_stops
+  add_tech_bonus = { name = HSM_BAR_collegium.14.a bonus = 0.75 uses = 1 category = magical_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.14.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_ritual_review
+  add_tech_bonus = { name = HSM_BAR_collegium.14.b bonus = 0.5 uses = 2 category = magical_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.15
+ title = HSM_BAR_collegium.15.t
+ desc = HSM_BAR_collegium.15.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.15.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_evening_classes
+  add_tech_bonus = { name = HSM_BAR_collegium.15.a bonus = 0.5 uses = 2 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.15.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_independent_teachers
+  add_tech_bonus = { name = HSM_BAR_collegium.15.b bonus = 0.75 uses = 1 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.16
+ title = HSM_BAR_collegium.16.t
+ desc = HSM_BAR_collegium.16.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.16.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_assembly_heard
+  set_country_flag = { flag = HSM_BAR_collegium_charter_deliberation days = 21 }
+  add_stability = 0.03
+  custom_effect_tooltip = HSM_BAR_collegium_charter_deliberation_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.16.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_assembly_heard
+  add_political_power = 25
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.17
+ title = HSM_BAR_collegium.17.t
+ desc = { trigger = { has_country_flag = HSM_BAR_collegium_open_charter } text = HSM_BAR_collegium.17.open }
+ desc = { trigger = { has_country_flag = HSM_BAR_collegium_republic_charter } text = HSM_BAR_collegium.17.republic }
+ desc = { trigger = { has_country_flag = HSM_BAR_collegium_tutelage_charter } text = HSM_BAR_collegium.17.tutelage }
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.17.a
+  ai_chance = { factor = 65 }
+  trigger = { has_country_flag = HSM_BAR_collegium_open_charter }
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.17.b
+  ai_chance = { factor = 35 }
+  trigger = { has_country_flag = HSM_BAR_collegium_republic_charter }
+  add_political_power = 35
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.17.c
+  ai_chance = { factor = 35 }
+  trigger = { has_country_flag = HSM_BAR_collegium_tutelage_charter }
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.18
+ title = HSM_BAR_collegium.18.t
+ desc = HSM_BAR_collegium.18.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.18.a
+  ai_chance = { factor = 65 }
+   custom_effect_tooltip = HSM_BAR_collegium_civil_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.19
+ title = HSM_BAR_collegium.19.t
+ desc = HSM_BAR_collegium.19.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.19.a
+  ai_chance = { factor = 65 }
+   add_tech_bonus = { name = HSM_BAR_collegium.19.a bonus = 0.75 uses = 2 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.19.b
+  ai_chance = { factor = 35 }
+   add_tech_bonus = { name = HSM_BAR_collegium.19.b bonus = 0.75 uses = 2 category = magical_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.20
+ title = HSM_BAR_collegium.20.t
+ desc = HSM_BAR_collegium.20.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.20.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_emergency_mandate
+  set_country_flag = { flag = HSM_BAR_collegium_mandate_deliberation days = 21 }
+  custom_effect_tooltip = HSM_BAR_collegium_mandate_deliberation_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.20.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_standing_emergency
+  custom_effect_tooltip = HSM_BAR_collegium_standing_services_tt
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.21
+ title = HSM_BAR_collegium.21.t
+ desc = HSM_BAR_collegium.21.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.21.a
+  ai_chance = { factor = 65 }
+   set_country_flag = { flag = HSM_BAR_collegium_trial_pause days = 60 }
+  add_stability = 0.03
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.21.b
+  ai_chance = { factor = 35 }
+   add_political_power = -45
+  add_tech_bonus = { name = HSM_BAR_collegium.21.b bonus = 0.75 uses = 1 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.22
+ title = HSM_BAR_collegium.22.t
+ desc = HSM_BAR_collegium.22.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.22.a
+  ai_chance = { factor = 65 }
+   add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.22.b
+  ai_chance = { factor = 35 }
+   add_tech_bonus = { name = HSM_BAR_collegium.22.b bonus = 0.75 uses = 1 category = industry }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.23
+ title = HSM_BAR_collegium.23.t
+ desc = HSM_BAR_collegium.23.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.23.a
+  ai_chance = { factor = 65 }
+   set_country_flag = HSM_BAR_collegium_ward_releases
+  add_stability = 0.02
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.23.b
+  ai_chance = { factor = 35 }
+   set_country_flag = HSM_BAR_collegium_ward_stewards
+  add_tech_bonus = { name = HSM_BAR_collegium.23.b bonus = 0.5 uses = 1 category = logistics_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_collegium.24
+ title = HSM_BAR_collegium.24.t
+ desc = HSM_BAR_collegium.24.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_collegium_active = yes }
+ option = {
+  name = HSM_BAR_collegium.24.a
+  ai_chance = { factor = 65 }
+   add_stability = 0.03
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+ option = {
+  name = HSM_BAR_collegium.24.b
+  ai_chance = { factor = 35 }
+   add_tech_bonus = { name = HSM_BAR_collegium.24.b bonus = 0.5 uses = 1 category = electronics }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}

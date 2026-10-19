@@ -1,0 +1,508 @@
+# Public entry point: HSM_BAR_begin_global_normalization = yes, COUNTRY/BAR.
+# Invoked ONLY by the timed activation decision after its completion guard.
+# Ending hooks (GLOBAL flags):
+# HSM_BAR_world_barriers_restored / HSM_BAR_world_normalization_victory.
+# World phases and once-only guards intentionally survive BAR's dissolution.
+# Native references: effects_documentation.md create_unit / transfer_state /
+# division_template; triggers_documentation.md has_global_flag (days).
+# Equipment limitation: EaW magical_eq.txt provides 3 dedicated archetypes.
+# No supported per-module conditional combat modifier was found. Modular air,
+# naval and ordinary tank chassis are NOT indiscriminately debuffed.
+
+HSM_BAR_normalization_complete_equus = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_equus_open
+            has_country_flag = HSM_BAR_norm_grid_equus_working
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_equus_done }
+        }
+        set_country_flag = HSM_BAR_norm_grid_equus_done
+        country_event = { id = hsm_bar_normalization.11 }
+    }
+    clr_country_flag = HSM_BAR_norm_grid_equus_working
+}
+
+HSM_BAR_normalization_complete_griffonia = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_griffonia_open
+            has_country_flag = HSM_BAR_norm_grid_griffonia_working
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_griffonia_done }
+        }
+        set_country_flag = HSM_BAR_norm_grid_griffonia_done
+        country_event = { id = hsm_bar_normalization.12 }
+    }
+    clr_country_flag = HSM_BAR_norm_grid_griffonia_working
+}
+
+HSM_BAR_normalization_complete_north = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_north_open
+            has_country_flag = HSM_BAR_norm_grid_north_working
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_north_done }
+        }
+        set_country_flag = HSM_BAR_norm_grid_north_done
+        country_event = { id = hsm_bar_normalization.13 }
+    }
+    clr_country_flag = HSM_BAR_norm_grid_north_working
+}
+
+HSM_BAR_normalization_complete_riverlands = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_riverlands_open
+            has_country_flag = HSM_BAR_norm_grid_riverlands_working
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_riverlands_done }
+        }
+        set_country_flag = HSM_BAR_norm_grid_riverlands_done
+        country_event = { id = hsm_bar_normalization.14 }
+    }
+    clr_country_flag = HSM_BAR_norm_grid_riverlands_working
+}
+
+HSM_BAR_normalization_complete_zebrica = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_zebrica_open
+            has_country_flag = HSM_BAR_norm_grid_zebrica_working
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_zebrica_done }
+        }
+        set_country_flag = HSM_BAR_norm_grid_zebrica_done
+        country_event = { id = hsm_bar_normalization.15 }
+    }
+    clr_country_flag = HSM_BAR_norm_grid_zebrica_working
+}
+
+# Per-country reconciliation, also called on release and daily. No BAR exception.
+HSM_BAR_normalization_sync = {
+    if = {
+        limit = { has_global_flag = HSM_BAR_world_magic_suppressed exists = yes }
+        if = {
+            limit = { NOT = { has_idea = HSM_BAR_normalization_magic_failure } }
+            add_ideas = HSM_BAR_normalization_magic_failure
+        }
+    }
+    else = {
+        if = {
+            limit = { has_idea = HSM_BAR_normalization_magic_failure }
+            remove_ideas = HSM_BAR_normalization_magic_failure
+        }
+    }
+    if = {
+        limit = {
+            has_idea = HSM_BAR_normalization_steel_defence
+            OR = {
+                has_global_flag = HSM_BAR_world_incursions_defeated
+                NOT = { has_global_flag = HSM_BAR_world_breached }
+            }
+        }
+        remove_ideas = HSM_BAR_normalization_steel_defence
+    }
+    if = {
+        limit = {
+            tag = NML
+            has_global_flag = HSM_BAR_world_incursions_defeated
+            has_idea = HSM_BAR_normalization_beyond
+        }
+        remove_ideas = HSM_BAR_normalization_beyond
+    }
+}
+
+HSM_BAR_begin_global_normalization = {
+    if = {
+        limit = {
+            HSM_BAR_global_network_ready = yes
+            has_country_flag = HSM_BAR_norm_activation_working
+        }
+        set_global_flag = HSM_BAR_world_normalization_started
+        set_global_flag = HSM_BAR_world_magic_suppressed
+        # One finite existing-country pass, never a war/production loop.
+        every_country = { HSM_BAR_normalization_sync = yes }
+        add_stability = 0.05
+        country_event = { id = hsm_bar_normalization.1 }
+        news_event = { id = hsm_bar_normalization.101 }
+    }
+    clr_country_flag = HSM_BAR_norm_activation_working
+}
+
+# Initial invasion: at most one of THREE explicit sites. The selected owner is
+# retained before transfer_state, so NML cannot declare war on itself.
+HSM_BAR_normalization_open_breach = {
+    if = {
+        limit = {
+            has_global_flag = HSM_BAR_world_barriers_failing
+            NOT = { has_global_flag = HSM_BAR_world_breached }
+            NOT = { NML = { exists = yes } }
+        }
+        if = {
+            limit = {
+                NOT = { has_global_flag = HSM_BAR_world_breached }
+                625 = {
+                    HSM_BAR_normalization_breach_site = yes
+                    owner = {
+                        has_full_control_of_state = 625
+                        any_owned_state = {
+                            NOT = { state = 625 }
+                            is_fully_controlled_by = OWNER
+                        }
+                    }
+                }
+            }
+            625 = {
+                save_global_event_target_as = HSM_BAR_norm_breach
+                owner = {
+                    save_global_event_target_as = HSM_BAR_norm_victim
+                    if = {
+                        limit = { num_divisions > 39 }
+                        set_global_flag = HSM_BAR_world_large_breach
+                    }
+                }
+            }
+            set_global_flag = HSM_BAR_world_breached
+            625 = { add_core_of = NML }
+            NML = {
+                transfer_state = 625
+                set_capital = { state = 625 }
+                HSM_BAR_normalization_prepare_invader = yes
+                declare_war_on = { target = event_target:HSM_BAR_norm_victim type = annex_everything }
+            }
+            HSM_BAR_normalization_first_wave = yes
+            event_target:HSM_BAR_norm_victim = { country_event = { id = hsm_bar_normalization.3 } }
+            news_event = { id = hsm_bar_normalization.103 }
+        }
+        if = {
+            limit = {
+                NOT = { has_global_flag = HSM_BAR_world_breached }
+                102 = {
+                    HSM_BAR_normalization_breach_site = yes
+                    owner = {
+                        has_full_control_of_state = 102
+                        any_owned_state = {
+                            NOT = { state = 102 }
+                            is_fully_controlled_by = OWNER
+                        }
+                    }
+                }
+            }
+            102 = {
+                save_global_event_target_as = HSM_BAR_norm_breach
+                owner = {
+                    save_global_event_target_as = HSM_BAR_norm_victim
+                    if = {
+                        limit = { num_divisions > 39 }
+                        set_global_flag = HSM_BAR_world_large_breach
+                    }
+                }
+            }
+            set_global_flag = HSM_BAR_world_breached
+            102 = { add_core_of = NML }
+            NML = {
+                transfer_state = 102
+                set_capital = { state = 102 }
+                HSM_BAR_normalization_prepare_invader = yes
+                declare_war_on = { target = event_target:HSM_BAR_norm_victim type = annex_everything }
+            }
+            HSM_BAR_normalization_first_wave = yes
+            event_target:HSM_BAR_norm_victim = { country_event = { id = hsm_bar_normalization.3 } }
+            news_event = { id = hsm_bar_normalization.103 }
+        }
+        if = {
+            limit = {
+                NOT = { has_global_flag = HSM_BAR_world_breached }
+                558 = {
+                    HSM_BAR_normalization_breach_site = yes
+                    owner = {
+                        has_full_control_of_state = 558
+                        any_owned_state = {
+                            NOT = { state = 558 }
+                            is_fully_controlled_by = OWNER
+                        }
+                    }
+                }
+            }
+            558 = {
+                save_global_event_target_as = HSM_BAR_norm_breach
+                owner = {
+                    save_global_event_target_as = HSM_BAR_norm_victim
+                    if = {
+                        limit = { num_divisions > 39 }
+                        set_global_flag = HSM_BAR_world_large_breach
+                    }
+                }
+            }
+            set_global_flag = HSM_BAR_world_breached
+            558 = { add_core_of = NML }
+            NML = {
+                transfer_state = 558
+                set_capital = { state = 558 }
+                HSM_BAR_normalization_prepare_invader = yes
+                declare_war_on = { target = event_target:HSM_BAR_norm_victim type = annex_everything }
+            }
+            HSM_BAR_normalization_first_wave = yes
+            event_target:HSM_BAR_norm_victim = { country_event = { id = hsm_bar_normalization.3 } }
+            news_event = { id = hsm_bar_normalization.103 }
+        }
+    }
+}
+
+HSM_BAR_normalization_prepare_invader = {
+    if = {
+        limit = { tag = NML NOT = { has_country_flag = HSM_BAR_norm_invader_initialized } }
+        set_country_flag = HSM_BAR_norm_invader_initialized
+        set_popularities = { fascism = 100 }
+        set_politics = { ruling_party = fascism elections_allowed = no }
+        set_rule = { can_join_factions = no can_create_factions = no can_puppet = no }
+        set_country_flag = join_factions_set
+        set_country_flag = has_custom_advisors
+        set_stability = 1
+        set_war_support = 1
+        set_technology = {
+            melee_weapons = 1
+            melee_weapons1 = 1
+            infantry_weapons = 1
+            infantry_weapons2 = 1
+            improved_infantry_weapons = 1
+            pre_gw_artillery = 1
+            gw_artillery = 1
+            tech_support = 1
+            tech_engineers = 1
+            tech_recon = 1
+        }
+        actually_fix_weapon_techs = yes
+        load_oob = HSM_BAR_normalization
+        # One reserve grant. Native production/training is not a scripted wave.
+        add_manpower = 100000
+        add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 14000 producer = NML }
+        add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 480 producer = NML }
+        add_equipment_to_stockpile = { type = support_equipment_1 amount = 600 producer = NML }
+        add_ideas = HSM_BAR_normalization_beyond
+        add_ai_strategy = { type = conquer id = event_target:HSM_BAR_norm_victim value = 200 }
+    }
+}
+
+HSM_BAR_normalization_first_wave = {
+    if = {
+        limit = {
+            NOT = { has_global_flag = HSM_BAR_world_wave_one }
+            HSM_BAR_normalization_aperture_open = yes
+        }
+        set_global_flag = HSM_BAR_world_wave_one
+        event_target:HSM_BAR_norm_breach = {
+            if = {
+                limit = { has_global_flag = HSM_BAR_world_large_breach }
+                create_unit = {
+                    division = "division_template = \"The First Footfalls\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                    owner = NML
+                    count = 4
+                }
+                create_unit = {
+                    division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                    owner = NML
+                    count = 2
+                }
+            }
+            else = {
+                create_unit = {
+                    division = "division_template = \"The First Footfalls\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                    owner = NML
+                    count = 3
+                }
+                create_unit = {
+                    division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                    owner = NML
+                    count = 1
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_normalization_wave_two = {
+    if = {
+        limit = {
+            has_global_flag = { flag = HSM_BAR_world_breached days > 27 }
+            NOT = { has_global_flag = HSM_BAR_world_wave_two }
+            NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+            NOT = { has_global_flag = HSM_BAR_world_barriers_restored }
+        }
+        # Consumed even if the aperture has closed; it never moves or reopens.
+        set_global_flag = HSM_BAR_world_wave_two
+        if = {
+            limit = {
+                HSM_BAR_normalization_aperture_open = yes
+            }
+            event_target:HSM_BAR_norm_breach = {
+                if = {
+                    limit = { has_global_flag = HSM_BAR_world_large_breach }
+                    create_unit = {
+                        division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                        owner = NML
+                        count = 2
+                    }
+                }
+                else = {
+                    create_unit = {
+                        division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                        owner = NML
+                        count = 1
+                    }
+                }
+                create_unit = {
+                    division = "division_template = \"The Weight Behind\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                    owner = NML
+                    count = 1
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_normalization_wave_three = {
+    if = {
+        limit = {
+            has_global_flag = { flag = HSM_BAR_world_breached days > 55 }
+            NOT = { has_global_flag = HSM_BAR_world_wave_three }
+            NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+            NOT = { has_global_flag = HSM_BAR_world_barriers_restored }
+        }
+        # A contained beachhead receives holders; expansion brings siege units.
+        set_global_flag = HSM_BAR_world_wave_three
+        if = {
+            limit = {
+                HSM_BAR_normalization_aperture_open = yes
+            }
+            event_target:HSM_BAR_norm_breach = {
+                if = {
+                    limit = { NML = { num_of_controlled_states > 1 } }
+                    if = {
+                        limit = { has_global_flag = HSM_BAR_world_large_breach }
+                        create_unit = {
+                            division = "division_template = \"The Weight Behind\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                            owner = NML
+                            count = 3
+                        }
+                    }
+                    else = {
+                        create_unit = {
+                            division = "division_template = \"The Weight Behind\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                            owner = NML
+                            count = 2
+                        }
+                    }
+                }
+                else = {
+                    if = {
+                        limit = { has_global_flag = HSM_BAR_world_large_breach }
+                        create_unit = {
+                            division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                            owner = NML
+                            count = 3
+                        }
+                    }
+                    else = {
+                        create_unit = {
+                            division = "division_template = \"The Hollow Line\" start_experience_factor = 0.35 start_equipment_factor = 1"
+                            owner = NML
+                            count = 2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+HSM_BAR_restore_world_barriers = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_choice_open = yes
+            has_country_flag = HSM_BAR_norm_restoration_working
+        }
+        set_global_flag = HSM_BAR_world_barriers_restored
+        clr_global_flag = HSM_BAR_world_magic_suppressed
+        # Does NOT transfer land, disband units, end wars or erase the invader.
+        every_country = { HSM_BAR_normalization_sync = yes }
+        country_event = { id = hsm_bar_normalization.4 }
+        news_event = { id = hsm_bar_normalization.104 }
+    }
+    clr_country_flag = HSM_BAR_norm_restoration_working
+}
+
+HSM_BAR_press_world_normalization = {
+    if = {
+        limit = {
+            HSM_BAR_normalization_choice_open = yes
+            has_country_flag = HSM_BAR_norm_escalation_working
+        }
+        set_global_flag = HSM_BAR_world_press_normalization
+        if = {
+            limit = { NOT = { has_global_flag = HSM_BAR_world_incursions_defeated } }
+            add_ideas = HSM_BAR_normalization_steel_defence
+        }
+        country_event = { id = hsm_bar_normalization.5 }
+    }
+    clr_country_flag = HSM_BAR_norm_escalation_working
+}
+
+# Country on_daily runs for every extant country. Global phase guards ensure
+# only one transition; no queued event is relied upon for gameplay progression.
+HSM_BAR_normalization_world_tick = {
+    HSM_BAR_normalization_sync = yes
+    if = {
+        limit = {
+            has_global_flag = { flag = HSM_BAR_world_normalization_started days > 20 }
+            NOT = { has_global_flag = HSM_BAR_world_barriers_failing }
+        }
+        set_global_flag = HSM_BAR_world_barriers_failing
+        if = { limit = { BAR = { exists = yes } } BAR = { country_event = { id = hsm_bar_normalization.2 } } }
+        news_event = { id = hsm_bar_normalization.102 }
+    }
+    if = {
+        limit = {
+            has_global_flag = { flag = HSM_BAR_world_normalization_started days > 41 }
+            NOT = { has_global_flag = HSM_BAR_world_breached }
+        }
+        HSM_BAR_normalization_open_breach = yes
+    }
+    if = {
+        limit = {
+            has_global_flag = HSM_BAR_world_breached
+            NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+            NOT = { HSM_BAR_normalization_hostile_alive = yes }
+        }
+        set_global_flag = HSM_BAR_world_incursions_defeated
+        news_event = { id = hsm_bar_normalization.106 }
+    }
+    if = {
+        limit = {
+            has_global_flag = HSM_BAR_world_breached
+            NOT = { has_global_flag = HSM_BAR_world_aperture_closed }
+            NOT = { event_target:HSM_BAR_norm_breach = { is_fully_controlled_by = NML } }
+        }
+        set_global_flag = HSM_BAR_world_aperture_closed
+    }
+    HSM_BAR_normalization_wave_two = yes
+    HSM_BAR_normalization_wave_three = yes
+    if = {
+        limit = {
+            has_global_flag = HSM_BAR_world_press_normalization
+            has_global_flag = HSM_BAR_world_incursions_defeated
+            NOT = { has_global_flag = HSM_BAR_world_normalization_victory }
+        }
+        set_global_flag = HSM_BAR_world_normalization_victory
+        news_event = { id = hsm_bar_normalization.105 }
+    }
+    # Run again after a transition so the current country immediately cleans up.
+    HSM_BAR_normalization_sync = yes
+}

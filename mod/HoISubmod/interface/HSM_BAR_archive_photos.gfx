@@ -1,0 +1,50 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_rock"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_rock.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_titan"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_titan.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_entity"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_entity.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_amulet"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_amulet.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_reactor"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_reactor.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_crown"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_crown.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_chalice"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_chalice.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_darkheart"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_darkheart.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_echo"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_echo.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_marsh"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_marsh.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_compass"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_compass.tga"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_plants"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_plants.tga"
+    }
+}

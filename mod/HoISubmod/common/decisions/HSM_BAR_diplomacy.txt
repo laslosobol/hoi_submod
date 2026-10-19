@@ -1,0 +1,125 @@
+HSM_BAR_diplomacy = {
+
+    HSM_BAR_dip_WIT_envoy = {
+        icon = generic_civil_support
+        visible = {
+            HSM_BAR_dip_route = yes
+            has_country_flag = HSM_BAR_diplomacy_open
+            NOT = { has_country_flag = HSM_BAR_WIT_agreement }
+        }
+        available = {
+            HSM_BAR_dip_WIT_valid = yes
+            NOT = { has_country_flag = HSM_BAR_dip_WIT_pending }
+            NOT = { has_country_flag = HSM_BAR_dip_WIT_rejected }
+            NOT = { has_country_flag = HSM_BAR_dip_WIT_cooldown }
+        }
+        cost = 25
+        ai_will_do = { factor = 5 }
+        complete_effect = { WIT = { HSM_BAR_dip_WIT_challenge = yes } }
+    }
+    HSM_BAR_dip_WIT_deadline = {
+        icon = generic_intelligence_operation
+        activation = { HSM_BAR_dip_WIT_pending = yes }
+        visible = { HSM_BAR_dip_WIT_pending = yes }
+        is_good = no
+        days_mission_timeout = 45
+        cancel_trigger = { NOT = { HSM_BAR_dip_WIT_pending = yes } }
+        timeout_effect = { HSM_BAR_dip_WIT_refuse = yes }
+    }
+    HSM_BAR_dip_WIT_renounce = {
+        icon = generic_prepare_civil_war
+        visible = { HSM_BAR_dip_route = yes has_country_flag = HSM_BAR_WIT_agreement }
+        available = { HSM_BAR_dip_WIT_valid = yes }
+        cost = 50
+        ai_will_do = { factor = 0 }
+        complete_effect = {
+            clr_country_flag = HSM_BAR_WIT_agreement
+            remove_opinion_modifier = { target = WIT modifier = HSM_BAR_dip_treaty }
+            WIT = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+            diplomatic_relation = { country = WIT relation = non_aggression_pact active = no }
+            WIT = { HSM_BAR_dip_WIT_challenge = yes }
+        }
+    }
+
+    HSM_BAR_dip_ZES_envoy = {
+        icon = generic_civil_support
+        visible = {
+            HSM_BAR_dip_route = yes
+            has_country_flag = HSM_BAR_diplomacy_open
+            NOT = { has_country_flag = HSM_BAR_ZES_agreement }
+        }
+        available = {
+            HSM_BAR_dip_ZES_valid = yes
+            NOT = { has_country_flag = HSM_BAR_dip_ZES_pending }
+            NOT = { has_country_flag = HSM_BAR_dip_ZES_rejected }
+            NOT = { has_country_flag = HSM_BAR_dip_ZES_cooldown }
+        }
+        cost = 25
+        ai_will_do = { factor = 5 }
+        complete_effect = { ZES = { HSM_BAR_dip_ZES_challenge = yes } }
+    }
+    HSM_BAR_dip_ZES_deadline = {
+        icon = generic_intelligence_operation
+        activation = { HSM_BAR_dip_ZES_pending = yes }
+        visible = { HSM_BAR_dip_ZES_pending = yes }
+        is_good = no
+        days_mission_timeout = 45
+        cancel_trigger = { NOT = { HSM_BAR_dip_ZES_pending = yes } }
+        timeout_effect = { HSM_BAR_dip_ZES_refuse = yes }
+    }
+    HSM_BAR_dip_ZES_renounce = {
+        icon = generic_prepare_civil_war
+        visible = { HSM_BAR_dip_route = yes has_country_flag = HSM_BAR_ZES_agreement }
+        available = { HSM_BAR_dip_ZES_valid = yes }
+        cost = 50
+        ai_will_do = { factor = 0 }
+        complete_effect = {
+            clr_country_flag = HSM_BAR_ZES_agreement
+            remove_opinion_modifier = { target = ZES modifier = HSM_BAR_dip_treaty }
+            ZES = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+            diplomatic_relation = { country = ZES relation = non_aggression_pact active = no }
+            ZES = { HSM_BAR_dip_ZES_challenge = yes }
+        }
+    }
+
+    HSM_BAR_dip_OLV_envoy = {
+        icon = generic_civil_support
+        visible = {
+            HSM_BAR_dip_route = yes
+            has_country_flag = HSM_BAR_diplomacy_open
+            NOT = { has_country_flag = HSM_BAR_OLV_agreement }
+        }
+        available = {
+            HSM_BAR_dip_OLV_valid = yes
+            NOT = { has_country_flag = HSM_BAR_dip_OLV_pending }
+            NOT = { has_country_flag = HSM_BAR_dip_OLV_rejected }
+            NOT = { has_country_flag = HSM_BAR_dip_OLV_cooldown }
+        }
+        cost = 25
+        ai_will_do = { factor = 5 }
+        complete_effect = { OLV = { HSM_BAR_dip_OLV_challenge = yes } }
+    }
+    HSM_BAR_dip_OLV_deadline = {
+        icon = generic_intelligence_operation
+        activation = { HSM_BAR_dip_OLV_pending = yes }
+        visible = { HSM_BAR_dip_OLV_pending = yes }
+        is_good = no
+        days_mission_timeout = 45
+        cancel_trigger = { NOT = { HSM_BAR_dip_OLV_pending = yes } }
+        timeout_effect = { HSM_BAR_dip_OLV_refuse = yes }
+    }
+    HSM_BAR_dip_OLV_renounce = {
+        icon = generic_prepare_civil_war
+        visible = { HSM_BAR_dip_route = yes has_country_flag = HSM_BAR_OLV_agreement }
+        available = { HSM_BAR_dip_OLV_valid = yes }
+        cost = 50
+        ai_will_do = { factor = 0 }
+        complete_effect = {
+            clr_country_flag = HSM_BAR_OLV_agreement
+            remove_opinion_modifier = { target = OLV modifier = HSM_BAR_dip_treaty }
+            OLV = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+            diplomatic_relation = { country = OLV relation = non_aggression_pact active = no }
+            OLV = { HSM_BAR_dip_OLV_challenge = yes }
+        }
+    }
+}

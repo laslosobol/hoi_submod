@@ -1,0 +1,130 @@
+ideas = {
+    country = {
+        HSM_BAR_research_clinic_consent_idea = {
+            picture = HSM_BAR_art_hospital
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                weekly_manpower = 100
+                research_speed_factor = 0.01
+            }
+        }
+        HSM_BAR_research_clinic_expedience_idea = {
+            picture = HSM_BAR_art_last_minute
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                weekly_manpower = 200
+                army_org_regain = 0.06
+            }
+        }
+        HSM_BAR_research_grid_distributed_idea = {
+            picture = HSM_BAR_art_grid
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                production_speed_buildings_factor = 0.06
+                industrial_capacity_factory = 0.02
+            }
+        }
+        HSM_BAR_research_grid_central_idea = {
+            picture = HSM_BAR_art_manufactory
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.08
+                supply_consumption_factor = -0.03
+                consumer_goods_factor = 0.03
+            }
+        }
+        HSM_BAR_research_wards_personal_idea = {
+            picture = HSM_BAR_art_ward
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                army_org_regain = 0.04
+                drift_defence_factor = 0.15
+            }
+        }
+        HSM_BAR_research_wards_monitoring_idea = {
+            picture = HSM_BAR_art_chorus
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                decryption_power_factor = 0.1
+                planning_speed = 0.05
+            }
+        }
+        HSM_BAR_research_containment_layered_idea = {
+            picture = HSM_BAR_dir_storage
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.03
+                encryption = 1
+                consumer_goods_factor = 0.02
+            }
+        }
+        HSM_BAR_research_containment_sealed_idea = {
+            picture = HSM_BAR_dir_seal_labs
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                encryption = 2
+                research_speed_factor = -0.02
+                consumer_goods_factor = 0.02
+            }
+        }
+        HSM_BAR_research_forensics_reviewed_idea = {
+            picture = HSM_BAR_art_peer_review
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.04
+                civilian_intel_factor = 0.1
+            }
+        }
+        HSM_BAR_research_forensics_classified_idea = {
+            picture = HSM_BAR_dir_remains
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                decryption_power_factor = 0.15
+                army_intel_factor = 0.1
+            }
+        }
+        HSM_BAR_research_suppression_reversible_idea = {
+            picture = HSM_BAR_art_ritual_brake
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                supply_consumption_factor = -0.05
+                army_org_regain = 0.06
+                consumer_goods_factor = 0.02
+            }
+        }
+        HSM_BAR_research_suppression_permanent_idea = {
+            picture = HSM_BAR_dir_activation
+            allowed = { original_tag = BAR }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+            modifier = {
+                supply_consumption_factor = -0.05
+                industrial_capacity_factory = 0.08
+                research_speed_factor = -0.04
+                weekly_manpower = -50
+            }
+        }
+    }
+}

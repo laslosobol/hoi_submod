@@ -1,0 +1,4 @@
+on_actions = {
+    on_startup = { effect = { BAR = { HSM_BAR_staff_refresh = yes } } }
+    on_daily_BAR = { effect = { HSM_BAR_staff_refresh = yes } }
+}

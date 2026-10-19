@@ -1,0 +1,76 @@
+on_actions = {
+ # Native ROOT = declaring country; FROM = direct target. Never infer aggression from on_war.
+ on_declare_war = { effect = {
+  if = {
+   limit = { tag = WIT FROM = { tag = BAR } }
+   BAR = {
+    HSM_BAR_mtc_frontiers_clear_war = yes
+    if = { limit = { HSM_BAR_mtc_frontiers_sovereign = yes }
+     set_country_flag = { flag = HSM_BAR_mtc_frontiers_direct_declaration days = 1 }
+     set_country_flag = HSM_BAR_mtc_frontiers_WIT_attacked_history
+     every_state = {
+      limit = { HSM_BAR_mtc_frontiers_WIT_state = yes }
+      clr_state_flag = HSM_BAR_mtc_frontiers_held_before_war
+      if = { limit = { is_owned_by = BAR } set_state_flag = HSM_BAR_mtc_frontiers_held_before_war }
+     }
+    }
+   }
+  }
+  if = { limit = { tag = BAR FROM = { tag = WIT } } HSM_BAR_mtc_frontiers_clear_war = yes }
+ } }
+ # Fired after on_declare_war; includes proxy wars, hence the direct-declaration token.
+ on_war_relation_added = { effect = {
+  if = { limit = { tag = WIT FROM = { tag = BAR } }
+   BAR = {
+    clr_country_flag = HSM_BAR_mtc_frontiers_conference
+    clr_country_flag = HSM_BAR_mtc_frontiers_defending
+    if = {
+     limit = { HSM_BAR_mtc_frontiers_sovereign = yes has_country_flag = HSM_BAR_mtc_frontiers_direct_declaration }
+     set_country_flag = HSM_BAR_mtc_frontiers_defending
+    }
+    clr_country_flag = HSM_BAR_mtc_frontiers_direct_declaration
+   }
+  }
+  if = { limit = { tag = BAR FROM = { tag = WIT } } HSM_BAR_mtc_frontiers_clear_war = yes }
+ } }
+ # Defeat irreversibly invalidates this war's candidacy, even if BAR is later liberated.
+ on_capitulation_immediate = { effect = {
+  if = { limit = { tag = BAR } HSM_BAR_mtc_frontiers_clear_war = yes }
+ } }
+ # Installed _documentation.md: ROOT winner, FROM loser, all winner/loser pairs.
+ on_peaceconference_started = { effect = {
+  if = {
+   limit = {
+    tag = BAR FROM = { tag = WIT }
+    HSM_BAR_mtc_frontiers_sovereign = yes
+    has_country_flag = HSM_BAR_mtc_frontiers_defending
+   }
+   set_country_flag = HSM_BAR_mtc_frontiers_conference
+  }
+  if = { limit = { FROM = { tag = BAR } } BAR = { HSM_BAR_mtc_frontiers_clear_war = yes } }
+ } }
+ on_peaceconference_ended = { effect = {
+  if = { limit = { tag = BAR FROM = { tag = WIT } }
+   if = {
+    limit = {
+     HSM_BAR_mtc_frontiers_sovereign = yes
+     has_country_flag = HSM_BAR_mtc_frontiers_defending
+     has_country_flag = HSM_BAR_mtc_frontiers_conference
+     NOT = { has_war_with = WIT }
+    }
+    set_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+    every_state = {
+     limit = {
+      HSM_BAR_mtc_frontiers_WIT_state = yes is_owned_by = BAR is_controlled_by = BAR
+      NOT = { has_state_flag = HSM_BAR_mtc_frontiers_held_before_war }
+     }
+     set_state_flag = HSM_BAR_mtc_frontiers_settlement
+    }
+    country_event = { id = hsm_bar_mtc_frontiers.4 }
+   }
+   HSM_BAR_mtc_frontiers_clear_war = yes
+  }
+  if = { limit = { FROM = { tag = BAR } } BAR = { HSM_BAR_mtc_frontiers_clear_war = yes } }
+ } }
+ on_daily_BAR = { effect = { BAR = { HSM_BAR_mtc_frontiers_maintain = yes } } }
+}

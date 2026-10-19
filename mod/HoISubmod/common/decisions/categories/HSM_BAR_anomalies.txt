@@ -1,0 +1,7 @@
+HSM_BAR_anomalies = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_local_open }
+    visible_when_empty = yes
+    priority = 80
+}

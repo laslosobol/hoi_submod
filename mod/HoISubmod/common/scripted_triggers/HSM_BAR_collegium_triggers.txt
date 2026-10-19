@@ -1,0 +1,72 @@
+HSM_BAR_collegium_active = {
+ original_tag = BAR
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_collegium
+}
+HSM_BAR_collegium_focus_access = {
+ tag = BAR
+ HSM_BAR_collegium_active = yes
+ NOT = { has_country_flag = HSM_BAR_directorate }
+ has_capitulated = no
+ is_subject = no
+ owns_state = 624
+ controls_state = 624
+}
+HSM_BAR_collegium_ready = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_collegium_ready
+  has_country_flag = HSM_BAR_collegium_independent_archive
+  has_country_flag = HSM_BAR_collegium_inspectors
+  has_country_flag = HSM_BAR_collegium_public_budget
+  has_country_flag = HSM_BAR_clinic_program
+  has_country_flag = HSM_BAR_collegium_school_open
+ }
+}
+HSM_BAR_collegium_clinic_ready = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_collegium_clinic_ready
+  OR = {
+   has_country_flag = HSM_BAR_project_clinic_done
+   AND = {
+    has_country_flag = HSM_BAR_clinic_program
+    has_country_flag = HSM_BAR_collegium_patient_rights
+    has_country_flag = HSM_BAR_collegium_inspectors
+    has_completed_focus = HSM_BAR_collegium_life
+   }
+  }
+ }
+}
+HSM_BAR_collegium_grid_ready = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_collegium_grid_ready
+  OR = {
+   has_country_flag = HSM_BAR_project_grid_done
+   AND = {
+    has_country_flag = HSM_BAR_grid_program
+    has_country_flag = HSM_BAR_collegium_public_budget
+    has_country_flag = HSM_BAR_collegium_school_open
+   }
+  }
+ }
+}
+HSM_BAR_collegium_wards_ready = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_collegium_wards_ready
+  OR = {
+   has_country_flag = HSM_BAR_project_wards_done
+   AND = {
+    has_country_flag = HSM_BAR_wards_program
+    has_country_flag = HSM_BAR_collegium_consent
+    has_country_flag = HSM_BAR_collegium_inspectors
+   }
+  }
+ }
+}
+HSM_BAR_collegium_war_allocation_ready = {
+ HSM_BAR_collegium_focus_access = yes
+ has_war = yes
+ has_country_flag = HSM_BAR_collegium_defence_protocol
+ NOT = { has_country_flag = HSM_BAR_collegium_wartime }
+ NOT = { has_country_flag = HSM_BAR_collegium_mandate_deliberation }
+ OR = { has_country_flag = HSM_BAR_collegium_emergency_mandate has_country_flag = HSM_BAR_collegium_standing_emergency }
+}

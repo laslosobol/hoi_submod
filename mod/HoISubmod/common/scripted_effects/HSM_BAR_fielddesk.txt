@@ -1,0 +1,315 @@
+# BAR owns all persistent presentation/order variables. Foreign countries hold no desk state.
+HSM_BAR_fielddesk_clear_available = {
+ clr_country_flag = HSM_BAR_fielddesk_recon_available
+ clr_country_flag = HSM_BAR_fielddesk_archive_available
+ clr_country_flag = HSM_BAR_fielddesk_relic_available
+ clr_country_flag = HSM_BAR_fielddesk_remains_available
+}
+HSM_BAR_fielddesk_rows = {
+ if = { limit = { NOT = { has_variable = HSM_BAR_fielddesk_offset } } set_variable = { HSM_BAR_fielddesk_offset = 0 } }
+ # Native short-form check_variable supports <, > and =; NOT < includes equality.
+ if = { limit = { NOT = { check_variable = { HSM_BAR_fielddesk_offset < HSM_BAR_fielddesk_targets^num } } } set_variable = { HSM_BAR_fielddesk_offset = 0 } }
+ set_temp_variable = { HSM_BAR_fielddesk_row_index = HSM_BAR_fielddesk_offset }
+ clear_variable = HSM_BAR_fielddesk_row_1
+ if = {
+  limit = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_row_index } }
+  set_variable = { HSM_BAR_fielddesk_row_1 = HSM_BAR_fielddesk_targets^HSM_BAR_fielddesk_row_index }
+ }
+ add_to_temp_variable = { HSM_BAR_fielddesk_row_index = 1 }
+ clear_variable = HSM_BAR_fielddesk_row_2
+ if = {
+  limit = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_row_index } }
+  set_variable = { HSM_BAR_fielddesk_row_2 = HSM_BAR_fielddesk_targets^HSM_BAR_fielddesk_row_index }
+ }
+ add_to_temp_variable = { HSM_BAR_fielddesk_row_index = 1 }
+ clear_variable = HSM_BAR_fielddesk_row_3
+ if = {
+  limit = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_row_index } }
+  set_variable = { HSM_BAR_fielddesk_row_3 = HSM_BAR_fielddesk_targets^HSM_BAR_fielddesk_row_index }
+ }
+ add_to_temp_variable = { HSM_BAR_fielddesk_row_index = 1 }
+ clear_variable = HSM_BAR_fielddesk_row_4
+ if = {
+  limit = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_row_index } }
+  set_variable = { HSM_BAR_fielddesk_row_4 = HSM_BAR_fielddesk_targets^HSM_BAR_fielddesk_row_index }
+ }
+ add_to_temp_variable = { HSM_BAR_fielddesk_row_index = 1 }
+ set_variable = { HSM_BAR_fielddesk_next_offset = HSM_BAR_fielddesk_offset }
+ add_to_variable = { HSM_BAR_fielddesk_next_offset = 4 }
+}
+HSM_BAR_fielddesk_refresh_selection = {
+ HSM_BAR_fielddesk_clear_available = yes
+ if = {
+  limit = { HSM_BAR_fielddesk_actor = yes has_variable = HSM_BAR_fielddesk_selected var:HSM_BAR_fielddesk_selected = { exists = yes has_capitulated = no } }
+  var:HSM_BAR_fielddesk_selected = { country_event = { id = HSM_BAR_fielddesk.3 } }
+ }
+}
+HSM_BAR_fielddesk_refresh = {
+ set_country_flag = HSM_BAR_fielddesk_initialized
+ clear_array = HSM_BAR_fielddesk_targets
+ HSM_BAR_fielddesk_clear_available = yes
+ if = {
+  limit = { HSM_BAR_fielddesk_actor = yes }
+  every_country = {
+   limit = { HSM_BAR_fielddesk_candidate = yes }
+   country_event = { id = HSM_BAR_fielddesk.1 }
+  }
+  HSM_BAR_fielddesk_refresh_selection = yes
+ }
+ HSM_BAR_fielddesk_rows = yes
+}
+HSM_BAR_fielddesk_close = {
+ clear_variable = HSM_BAR_fielddesk_open
+ set_variable = { HSM_BAR_service_gui_open = 1 }
+ HSM_BAR_service_gui_refresh = yes
+}
+HSM_BAR_fielddesk_release = {
+ remove_mission = HSM_BAR_fielddesk_recon_mission
+ remove_mission = HSM_BAR_fielddesk_archive_mission
+ remove_mission = HSM_BAR_fielddesk_relic_mission
+ remove_mission = HSM_BAR_fielddesk_remains_mission
+ clr_country_flag = HSM_BAR_fielddesk_running
+ clr_country_flag = HSM_BAR_fielddesk_finish_requested
+ clear_variable = HSM_BAR_fielddesk_order_target
+ clear_variable = HSM_BAR_fielddesk_order_region
+ clear_variable = HSM_BAR_fielddesk_order_kind
+ clear_variable = HSM_BAR_fielddesk_paid
+ clear_variable = HSM_BAR_fielddesk_factories
+ remove_dynamic_modifier = { modifier = HSM_BAR_fielddesk_assignment }
+ force_update_dynamic_modifier = yes
+}
+HSM_BAR_fielddesk_cancel = {
+ if = {
+  limit = { has_country_flag = HSM_BAR_fielddesk_running }
+  if = { limit = { check_variable = { HSM_BAR_fielddesk_paid > 0 } } add_political_power = var:HSM_BAR_fielddesk_paid }
+  set_variable = { HSM_BAR_fielddesk_result = 3 }
+ }
+ HSM_BAR_fielddesk_release = yes
+}
+HSM_BAR_fielddesk_probe = {
+ if = {
+  limit = { HSM_BAR_fielddesk_target_survives = yes }
+  var:HSM_BAR_fielddesk_order_target = { country_event = { id = HSM_BAR_fielddesk.5 } }
+ }
+ else_if = {
+  limit = { has_country_flag = HSM_BAR_fielddesk_running }
+  HSM_BAR_fielddesk_cancel = yes
+ }
+}
+HSM_BAR_fielddesk_pulse = {
+ # A recipient that disappeared before its relay cannot strand the request lock.
+ if = {
+  limit = {
+   has_variable = HSM_BAR_fielddesk_request_kind
+   OR = {
+    HSM_BAR_fielddesk_actor = no
+    NOT = { var:HSM_BAR_fielddesk_request_target = { exists = yes has_capitulated = no } }
+   }
+  }
+  clear_variable = HSM_BAR_fielddesk_request_kind
+  clear_variable = HSM_BAR_fielddesk_request_target
+  clear_variable = HSM_BAR_fielddesk_request_region
+  set_variable = { HSM_BAR_fielddesk_result = 4 }
+ }
+ if = { limit = { has_country_flag = HSM_BAR_fielddesk_running } HSM_BAR_fielddesk_probe = yes }
+ if = {
+  limit = { has_variable = HSM_BAR_fielddesk_open }
+  if = { limit = { HSM_BAR_fielddesk_window_available = yes } HSM_BAR_fielddesk_refresh = yes }
+  else = { HSM_BAR_fielddesk_teardown = yes }
+ }
+}
+HSM_BAR_fielddesk_teardown = {
+ HSM_BAR_fielddesk_cancel = yes
+ clr_country_flag = HSM_BAR_fielddesk_initialized
+ clear_variable = HSM_BAR_fielddesk_open
+ clear_variable = HSM_BAR_fielddesk_request_kind
+ clear_variable = HSM_BAR_fielddesk_request_target
+ clear_variable = HSM_BAR_fielddesk_request_region
+ HSM_BAR_fielddesk_clear_available = yes
+ clear_array = HSM_BAR_fielddesk_targets
+ clear_variable = HSM_BAR_fielddesk_row_1
+ clear_variable = HSM_BAR_fielddesk_row_2
+ clear_variable = HSM_BAR_fielddesk_row_3
+ clear_variable = HSM_BAR_fielddesk_row_4
+}
+
+HSM_BAR_fielddesk_recon_request = {
+ if = {
+  limit = { HSM_BAR_fielddesk_recon_can_click = yes }
+  set_variable = { HSM_BAR_fielddesk_request_kind = 1 }
+  set_variable = { HSM_BAR_fielddesk_request_target = HSM_BAR_fielddesk_selected }
+  set_variable = { HSM_BAR_fielddesk_request_region = HSM_BAR_service_gui_region }
+  set_variable = { HSM_BAR_fielddesk_result = 4 }
+  var:HSM_BAR_fielddesk_request_target = { country_event = { id = HSM_BAR_fielddesk.10 } }
+ }
+}
+# Called only by the BAR receiver with the real FROM.
+HSM_BAR_fielddesk_recon_start = {
+ if = {
+  limit = {
+   NOT = { has_country_flag = HSM_BAR_fielddesk_running }
+   HSM_BAR_fielddesk_recon_bridge_valid = yes
+   HSM_BAR_fielddesk_recon_resources = yes
+  }
+  set_variable = { HSM_BAR_fielddesk_order_target = FROM }
+  set_variable = { HSM_BAR_fielddesk_order_region = HSM_BAR_fielddesk_request_region }
+  set_variable = { HSM_BAR_fielddesk_order_kind = 1 }
+  set_variable = { HSM_BAR_fielddesk_paid = 20 }
+  set_variable = { HSM_BAR_fielddesk_factories = 1 }
+  clr_country_flag = HSM_BAR_fielddesk_running
+  set_country_flag = HSM_BAR_fielddesk_running
+  clr_country_flag = HSM_BAR_fielddesk_finish_requested
+  add_political_power = -20
+  activate_mission = HSM_BAR_fielddesk_recon_mission
+  add_dynamic_modifier = { modifier = HSM_BAR_fielddesk_assignment }
+  force_update_dynamic_modifier = yes
+  set_variable = { HSM_BAR_fielddesk_result = 1 }
+ }
+}
+HSM_BAR_fielddesk_recon_timeout = {
+ if = {
+  limit = {
+   has_country_flag = HSM_BAR_fielddesk_running
+   check_variable = { HSM_BAR_fielddesk_order_kind = 1 }
+   NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 14 } }
+  }
+  set_country_flag = HSM_BAR_fielddesk_finish_requested
+  HSM_BAR_fielddesk_probe = yes
+ }
+}
+
+HSM_BAR_fielddesk_archive_request = {
+ if = {
+  limit = { HSM_BAR_fielddesk_archive_can_click = yes }
+  set_variable = { HSM_BAR_fielddesk_request_kind = 2 }
+  set_variable = { HSM_BAR_fielddesk_request_target = HSM_BAR_fielddesk_selected }
+  set_variable = { HSM_BAR_fielddesk_request_region = HSM_BAR_service_gui_region }
+  set_variable = { HSM_BAR_fielddesk_result = 4 }
+  var:HSM_BAR_fielddesk_request_target = { country_event = { id = HSM_BAR_fielddesk.10 } }
+ }
+}
+# Called only by the BAR receiver with the real FROM.
+HSM_BAR_fielddesk_archive_start = {
+ if = {
+  limit = {
+   NOT = { has_country_flag = HSM_BAR_fielddesk_running }
+   HSM_BAR_fielddesk_archive_bridge_valid = yes
+   HSM_BAR_fielddesk_archive_resources = yes
+  }
+  set_variable = { HSM_BAR_fielddesk_order_target = FROM }
+  set_variable = { HSM_BAR_fielddesk_order_region = HSM_BAR_fielddesk_request_region }
+  set_variable = { HSM_BAR_fielddesk_order_kind = 2 }
+  set_variable = { HSM_BAR_fielddesk_paid = 30 }
+  set_variable = { HSM_BAR_fielddesk_factories = 2 }
+  clr_country_flag = HSM_BAR_fielddesk_running
+  set_country_flag = HSM_BAR_fielddesk_running
+  clr_country_flag = HSM_BAR_fielddesk_finish_requested
+  add_political_power = -30
+  activate_mission = HSM_BAR_fielddesk_archive_mission
+  add_dynamic_modifier = { modifier = HSM_BAR_fielddesk_assignment }
+  force_update_dynamic_modifier = yes
+  set_variable = { HSM_BAR_fielddesk_result = 1 }
+ }
+}
+HSM_BAR_fielddesk_archive_timeout = {
+ if = {
+  limit = {
+   has_country_flag = HSM_BAR_fielddesk_running
+   check_variable = { HSM_BAR_fielddesk_order_kind = 2 }
+   NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 21 } }
+  }
+  set_country_flag = HSM_BAR_fielddesk_finish_requested
+  HSM_BAR_fielddesk_probe = yes
+ }
+}
+
+HSM_BAR_fielddesk_relic_request = {
+ if = {
+  limit = { HSM_BAR_fielddesk_relic_can_click = yes }
+  set_variable = { HSM_BAR_fielddesk_request_kind = 3 }
+  set_variable = { HSM_BAR_fielddesk_request_target = HSM_BAR_fielddesk_selected }
+  set_variable = { HSM_BAR_fielddesk_request_region = HSM_BAR_service_gui_region }
+  set_variable = { HSM_BAR_fielddesk_result = 4 }
+  var:HSM_BAR_fielddesk_request_target = { country_event = { id = HSM_BAR_fielddesk.10 } }
+ }
+}
+# Called only by the BAR receiver with the real FROM.
+HSM_BAR_fielddesk_relic_start = {
+ if = {
+  limit = {
+   NOT = { has_country_flag = HSM_BAR_fielddesk_running }
+   HSM_BAR_fielddesk_relic_bridge_valid = yes
+   HSM_BAR_fielddesk_relic_resources = yes
+  }
+  set_variable = { HSM_BAR_fielddesk_order_target = FROM }
+  set_variable = { HSM_BAR_fielddesk_order_region = HSM_BAR_fielddesk_request_region }
+  set_variable = { HSM_BAR_fielddesk_order_kind = 3 }
+  set_variable = { HSM_BAR_fielddesk_paid = 60 }
+  set_variable = { HSM_BAR_fielddesk_factories = 3 }
+  clr_country_flag = HSM_BAR_fielddesk_running
+  set_country_flag = HSM_BAR_fielddesk_running
+  clr_country_flag = HSM_BAR_fielddesk_finish_requested
+  add_political_power = -60
+  activate_mission = HSM_BAR_fielddesk_relic_mission
+  add_dynamic_modifier = { modifier = HSM_BAR_fielddesk_assignment }
+  force_update_dynamic_modifier = yes
+  set_variable = { HSM_BAR_fielddesk_result = 1 }
+ }
+}
+HSM_BAR_fielddesk_relic_timeout = {
+ if = {
+  limit = {
+   has_country_flag = HSM_BAR_fielddesk_running
+   check_variable = { HSM_BAR_fielddesk_order_kind = 3 }
+   NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 30 } }
+  }
+  set_country_flag = HSM_BAR_fielddesk_finish_requested
+  HSM_BAR_fielddesk_probe = yes
+ }
+}
+
+HSM_BAR_fielddesk_remains_request = {
+ if = {
+  limit = { HSM_BAR_fielddesk_remains_can_click = yes }
+  set_variable = { HSM_BAR_fielddesk_request_kind = 4 }
+  set_variable = { HSM_BAR_fielddesk_request_target = HSM_BAR_fielddesk_selected }
+  set_variable = { HSM_BAR_fielddesk_request_region = HSM_BAR_service_gui_region }
+  set_variable = { HSM_BAR_fielddesk_result = 4 }
+  var:HSM_BAR_fielddesk_request_target = { country_event = { id = HSM_BAR_fielddesk.10 } }
+ }
+}
+# Called only by the BAR receiver with the real FROM.
+HSM_BAR_fielddesk_remains_start = {
+ if = {
+  limit = {
+   NOT = { has_country_flag = HSM_BAR_fielddesk_running }
+   HSM_BAR_fielddesk_remains_bridge_valid = yes
+   HSM_BAR_fielddesk_remains_resources = yes
+  }
+  set_variable = { HSM_BAR_fielddesk_order_target = FROM }
+  set_variable = { HSM_BAR_fielddesk_order_region = HSM_BAR_fielddesk_request_region }
+  set_variable = { HSM_BAR_fielddesk_order_kind = 4 }
+  set_variable = { HSM_BAR_fielddesk_paid = 60 }
+  set_variable = { HSM_BAR_fielddesk_factories = 2 }
+  clr_country_flag = HSM_BAR_fielddesk_running
+  set_country_flag = HSM_BAR_fielddesk_running
+  clr_country_flag = HSM_BAR_fielddesk_finish_requested
+  add_political_power = -60
+  activate_mission = HSM_BAR_fielddesk_remains_mission
+  add_dynamic_modifier = { modifier = HSM_BAR_fielddesk_assignment }
+  force_update_dynamic_modifier = yes
+  set_variable = { HSM_BAR_fielddesk_result = 1 }
+ }
+}
+HSM_BAR_fielddesk_remains_timeout = {
+ if = {
+  limit = {
+   has_country_flag = HSM_BAR_fielddesk_running
+   check_variable = { HSM_BAR_fielddesk_order_kind = 4 }
+   NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 21 } }
+  }
+  set_country_flag = HSM_BAR_fielddesk_finish_requested
+  HSM_BAR_fielddesk_probe = yes
+ }
+}
+

@@ -1,0 +1,81 @@
+add_namespace = hsm_bar_smile
+country_event = {
+ id = hsm_bar_smile.1
+ title = hsm_bar_smile.1.t
+ desc = hsm_bar_smile.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = {
+  tag = EQS
+  has_government = democratic
+  NOT = { has_war_with = BAR }
+  BAR = { exists = yes HSM_BAR_smile_contact_relevant = yes has_country_flag = HSM_BAR_smile_request_pending NOT = { has_country_flag = HSM_BAR_smile_compromised } }
+ }
+ option = {
+  name = hsm_bar_smile.1.a
+  ai_chance = { factor = 70 modifier = { factor = 0.25 BAR = { has_country_flag = HSM_BAR_normalization } } }
+  if = {
+   limit = {
+    has_government = democratic
+    NOT = { has_war_with = BAR }
+    BAR = { exists = yes HSM_BAR_smile_contact_relevant = yes has_country_flag = HSM_BAR_smile_request_pending NOT = { has_country_flag = HSM_BAR_smile_compromised } }
+   }
+   set_country_flag = HSM_BAR_smile_partner
+   BAR = { set_country_flag = HSM_BAR_smile_partner clr_country_flag = HSM_BAR_smile_request_pending country_event = { id = hsm_bar_smile.2 days = 1 } }
+  }
+ }
+ option = {
+  name = hsm_bar_smile.1.b
+  ai_chance = { factor = 30 }
+  BAR = { clr_country_flag = HSM_BAR_smile_request_pending country_event = { id = hsm_bar_smile.4 days = 1 } }
+ }
+}
+country_event = {
+ id = hsm_bar_smile.2
+ title = hsm_bar_smile.2.t
+ desc = hsm_bar_smile.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_smile_partner }
+ option = { name = hsm_bar_smile.2.a if = { limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_smile_partner } add_political_power = 15 } }
+}
+country_event = {
+ id = hsm_bar_smile.3
+ title = hsm_bar_smile.3.t
+ desc = hsm_bar_smile.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_smile_partner has_country_flag = HSM_BAR_project_wards_done }
+ option = {
+  name = hsm_bar_smile.3.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_active
+    has_country_flag = HSM_BAR_smile_partner
+    has_country_flag = HSM_BAR_project_wards_done
+    NOT = { has_country_flag = HSM_BAR_smile_compromised }
+    NOT = { has_war_with = EQS }
+    EQS = { exists = yes has_government = democratic }
+   }
+   set_country_flag = HSM_BAR_wards_shared
+
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_smile.3.b
+  ai_chance = { factor = 20 }
+  # A summary does not unlock operational bonuses; a later decision may revisit it.
+  if = { limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_smile_partner } add_political_power = 10 }
+ }
+}
+country_event = {
+ id = hsm_bar_smile.4
+ title = hsm_bar_smile.4.t
+ desc = hsm_bar_smile.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_directorate }
+ option = { name = hsm_bar_smile.4.a if = { limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate } add_political_power = 15 } }
+}

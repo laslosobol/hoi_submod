@@ -1,0 +1,168 @@
+# Presentation-only selections. These read archive variables and never modify case progress.
+defined_text = {
+    name = GetHSMBARArchiveRegion1Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 1 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveRegion2Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 2 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveRegion3Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 3 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveRegion4Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 4 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveRegion5Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 5 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveRegion6Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_region = 6 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+
+defined_text = {
+    name = GetHSMBARArchiveCaserockSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 1 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasetitanSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 2 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaseentitySkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 3 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaseamuletSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 4 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasereactorSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 5 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasecrownSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 6 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasechaliceSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 7 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasephylacterySkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 8 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasedarkheartSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 9 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasegroverSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 10 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaserosaSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 11 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaseheraldSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 12 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasesombraSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 13 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaseechoSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 14 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasemarshSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 15 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasecompassSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 16 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCaseplantsSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 17 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveCasezebricaSkin
+    text = { trigger = { check_variable = { HSM_BAR_archive_case = 18 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+    name = GetHSMBARArchiveDoc1Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_document = 1 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+defined_text = {
+    name = GetHSMBARArchiveDoc2Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_document = 2 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+defined_text = {
+    name = GetHSMBARArchiveDoc3Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_document = 3 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+defined_text = {
+    name = GetHSMBARArchiveDoc4Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_document = 4 } } localization_key = GFX_HSM_BAR_archive_tab_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_tab }
+}
+defined_text = {
+    name = GetHSMBARArchiveDoc5Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_document = 5 } } localization_key = GFX_HSM_BAR_archive_photo_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_photo }
+}
+defined_text = {
+    name = GetHSMBARArchiveCopy1Skin
+    text = { trigger = { NOT = { OR = { check_variable = { HSM_BAR_archive_copy = 2 } check_variable = { HSM_BAR_archive_copy = 3 } } } } localization_key = GFX_HSM_BAR_archive_edition_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_edition }
+}
+defined_text = {
+    name = GetHSMBARArchiveCopy2Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_copy = 2 } } localization_key = GFX_HSM_BAR_archive_edition_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_edition }
+}
+defined_text = {
+    name = GetHSMBARArchiveCopy3Skin
+    text = { trigger = { check_variable = { HSM_BAR_archive_copy = 3 } } localization_key = GFX_HSM_BAR_archive_edition_selected }
+    text = { localization_key = GFX_HSM_BAR_archive_edition }
+}
+

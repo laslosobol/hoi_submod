@@ -1,0 +1,39 @@
+# Public trigger: BAR scope, exactly one of the two new routes.
+HSM_BAR_dip_route = {
+    tag = BAR
+    has_country_flag = HSM_BAR_active
+    OR = {
+        AND = { has_country_flag = HSM_BAR_collegium NOT = { has_country_flag = HSM_BAR_directorate } }
+        AND = { has_country_flag = HSM_BAR_directorate NOT = { has_country_flag = HSM_BAR_collegium } }
+    }
+}
+
+# Safe in any country scope, including queued events and expired native timers.
+HSM_BAR_dip_WIT_valid = {
+    BAR = { HSM_BAR_dip_route = yes exists = yes is_subject = no NOT = { has_war_with = WIT } }
+    WIT = { exists = yes is_subject = no }
+}
+HSM_BAR_dip_WIT_pending = {
+    HSM_BAR_dip_WIT_valid = yes
+    BAR = { has_country_flag = HSM_BAR_dip_WIT_pending }
+}
+
+# Safe in any country scope, including queued events and expired native timers.
+HSM_BAR_dip_ZES_valid = {
+    BAR = { HSM_BAR_dip_route = yes exists = yes is_subject = no NOT = { has_war_with = ZES } }
+    ZES = { exists = yes is_subject = no }
+}
+HSM_BAR_dip_ZES_pending = {
+    HSM_BAR_dip_ZES_valid = yes
+    BAR = { has_country_flag = HSM_BAR_dip_ZES_pending }
+}
+
+# Safe in any country scope, including queued events and expired native timers.
+HSM_BAR_dip_OLV_valid = {
+    BAR = { HSM_BAR_dip_route = yes exists = yes is_subject = no NOT = { has_war_with = OLV } }
+    OLV = { exists = yes is_subject = no }
+}
+HSM_BAR_dip_OLV_pending = {
+    HSM_BAR_dip_OLV_valid = yes
+    BAR = { has_country_flag = HSM_BAR_dip_OLV_pending }
+}

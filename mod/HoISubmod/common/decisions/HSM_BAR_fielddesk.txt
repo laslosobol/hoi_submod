@@ -1,0 +1,63 @@
+HSM_BAR_fielddesk_missions = {
+ HSM_BAR_fielddesk_recon_mission = {
+  icon = generic_prepare_civil_war
+  allowed = { original_tag = BAR }
+  visible = { always = no }
+  activation = { always = no }
+  available = { always = no }
+  is_good = yes
+  days_mission_timeout = 14
+  cancel_trigger = { HSM_BAR_fielddesk_target_survives = no }
+  cancel_effect = {
+   if = { limit = { HSM_BAR_fielddesk_target_survives = no } HSM_BAR_fielddesk_cancel = yes }
+  }
+  timeout_effect = { HSM_BAR_fielddesk_recon_timeout = yes }
+  ai_will_do = { factor = 0 }
+ }
+ HSM_BAR_fielddesk_archive_mission = {
+  icon = generic_prepare_civil_war
+  allowed = { original_tag = BAR }
+  visible = { always = no }
+  activation = { always = no }
+  available = { always = no }
+  is_good = yes
+  days_mission_timeout = 21
+  cancel_trigger = { HSM_BAR_fielddesk_target_survives = no }
+  cancel_effect = {
+   if = { limit = { HSM_BAR_fielddesk_target_survives = no } HSM_BAR_fielddesk_cancel = yes }
+  }
+  timeout_effect = { HSM_BAR_fielddesk_archive_timeout = yes }
+  ai_will_do = { factor = 0 }
+ }
+ HSM_BAR_fielddesk_relic_mission = {
+  icon = generic_prepare_civil_war
+  allowed = { original_tag = BAR }
+  visible = { always = no }
+  activation = { always = no }
+  available = { always = no }
+  is_good = yes
+  days_mission_timeout = 30
+  cancel_trigger = { HSM_BAR_fielddesk_target_survives = no }
+  cancel_effect = {
+   if = { limit = { HSM_BAR_fielddesk_target_survives = no } HSM_BAR_fielddesk_cancel = yes }
+  }
+  timeout_effect = { HSM_BAR_fielddesk_relic_timeout = yes }
+  ai_will_do = { factor = 0 }
+ }
+ HSM_BAR_fielddesk_remains_mission = {
+  icon = generic_prepare_civil_war
+  allowed = { original_tag = BAR }
+  visible = { always = no }
+  activation = { always = no }
+  available = { always = no }
+  is_good = yes
+  days_mission_timeout = 21
+  cancel_trigger = { HSM_BAR_fielddesk_target_survives = no }
+  cancel_effect = {
+   if = { limit = { HSM_BAR_fielddesk_target_survives = no } HSM_BAR_fielddesk_cancel = yes }
+  }
+  timeout_effect = { HSM_BAR_fielddesk_remains_timeout = yes }
+  ai_will_do = { factor = 0 }
+ }
+}
+

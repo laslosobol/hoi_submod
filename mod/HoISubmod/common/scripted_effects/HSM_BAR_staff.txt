@@ -1,0 +1,65 @@
+# Presentation only: never recruit, revive, hire or alter an advisor role.
+HSM_BAR_staff_refresh = {
+    if = {
+        limit = { HSM_BAR_staff_new_paths = yes NOT = { has_country_flag = HSM_BAR_staff_portraits_applied } }
+        if = { limit = { has_character = BAR_leofric_stearcstan }
+            set_portraits = { character = BAR_leofric_stearcstan army = { small = "GFX_portrait_pony_generic_land_3_small" } }
+        }
+        if = { limit = { has_character = BAR_beorhtsige_sigespere }
+            set_portraits = { character = BAR_beorhtsige_sigespere army = { small = "GFX_portrait_pony_generic_land_5_small" } }
+        }
+        if = { limit = { has_character = BAR_ceadda_sigeweald }
+            set_portraits = { character = BAR_ceadda_sigeweald army = { small = "GFX_portrait_pony_generic_land_4_small" } }
+        }
+        if = { limit = { has_character = BAR_godric_hereweald }
+            set_portraits = { character = BAR_godric_hereweald army = { small = "GFX_portrait_pony_generic_land_6_small" } }
+        }
+        if = { limit = { has_character = BAR_wigmund_sunnespere }
+            set_portraits = { character = BAR_wigmund_sunnespere army = { small = "GFX_portrait_pony_generic_land_7_small" } }
+        }
+        if = { limit = { has_character = BAR_stithulf_frostdun }
+            set_portraits = { character = BAR_stithulf_frostdun army = { small = "GFX_portrait_pony_generic_land_8_small" } }
+        }
+        if = { limit = { has_character = BAR_hrothgar_fiscford }
+            set_portraits = { character = BAR_hrothgar_fiscford army = { small = "GFX_portrait_pony_generic_navy_1_small" } }
+        }
+        if = { limit = { has_character = BAR_wilfrith_faegerwell }
+            set_portraits = { character = BAR_wilfrith_faegerwell army = { small = "GFX_portrait_pony_generic_navy_4_small" } }
+        }
+        if = { limit = { has_character = BAR_cyneweard_stangaet }
+            set_portraits = { character = BAR_cyneweard_stangaet army = { small = "GFX_portrait_pony_generic_land_10_small" } }
+        }
+        set_country_flag = HSM_BAR_staff_portraits_applied
+    }
+    else_if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_staff_portraits_applied NOT = { HSM_BAR_staff_new_paths = yes } }
+        if = { limit = { has_character = BAR_leofric_stearcstan }
+            set_portraits = { character = BAR_leofric_stearcstan army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_beorhtsige_sigespere }
+            set_portraits = { character = BAR_beorhtsige_sigespere army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_ceadda_sigeweald }
+            set_portraits = { character = BAR_ceadda_sigeweald army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_godric_hereweald }
+            set_portraits = { character = BAR_godric_hereweald army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_wigmund_sunnespere }
+            set_portraits = { character = BAR_wigmund_sunnespere army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_stithulf_frostdun }
+            set_portraits = { character = BAR_stithulf_frostdun army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_hrothgar_fiscford }
+            set_portraits = { character = BAR_hrothgar_fiscford army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_wilfrith_faegerwell }
+            set_portraits = { character = BAR_wilfrith_faegerwell army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        if = { limit = { has_character = BAR_cyneweard_stangaet }
+            set_portraits = { character = BAR_cyneweard_stangaet army = { small = "GFX_idea_unknown_advisor" } }
+        }
+        clr_country_flag = HSM_BAR_staff_portraits_applied
+    }
+}

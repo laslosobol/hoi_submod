@@ -1,0 +1,29 @@
+HSM_BAR_republic_actor = {
+ tag = BAR
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_directorate
+ has_capitulated = no
+}
+HSM_BAR_republic_field_access = {
+ HSM_BAR_republic_actor = yes
+ owns_state = 624
+ controls_state = 624
+}
+HSM_BAR_local_reclamation_ready = {
+ HSM_BAR_republic_field_access = yes
+ has_country_flag = HSM_BAR_service_founded
+ has_country_flag = HSM_BAR_study_rock_done
+ has_country_flag = HSM_BAR_study_plants_done
+ OR = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict }
+ OR = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict }
+}
+HSM_BAR_final_reclamation_ready = {
+ HSM_BAR_local_reclamation_ready = yes
+ has_country_flag = HSM_BAR_land_partly_healed
+ has_country_flag = HSM_BAR_foreign_mandate
+ has_country_flag = HSM_BAR_study_marsh_done
+ has_country_flag = HSM_BAR_study_amulet_done
+ has_country_flag = HSM_BAR_project_wards_done
+ OR = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved }
+}
+

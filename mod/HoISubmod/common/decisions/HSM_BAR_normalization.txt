@@ -1,0 +1,229 @@
+HSM_BAR_normalization_network = {
+    HSM_BAR_normalization_grid_equus = {
+        icon = generic_research
+        cost = 50
+        days_remove = 35
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_region_equus_open
+            NOT = { has_country_flag = HSM_BAR_norm_grid_equus_done }
+        }
+        available = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_equus_open
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_equus_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_grid_equus_working }
+        remove_effect = { HSM_BAR_normalization_complete_equus = yes }
+        cancel_trigger = {
+            OR = {
+                NOT = { HSM_BAR_normalization_actor = yes }
+                NOT = { has_country_flag = HSM_BAR_region_equus_open }
+                has_global_flag = HSM_BAR_world_normalization_started
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_grid_equus_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_grid_griffonia = {
+        icon = generic_research
+        cost = 50
+        days_remove = 35
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_region_griffonia_open
+            NOT = { has_country_flag = HSM_BAR_norm_grid_griffonia_done }
+        }
+        available = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_griffonia_open
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_griffonia_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_grid_griffonia_working }
+        remove_effect = { HSM_BAR_normalization_complete_griffonia = yes }
+        cancel_trigger = {
+            OR = {
+                NOT = { HSM_BAR_normalization_actor = yes }
+                NOT = { has_country_flag = HSM_BAR_region_griffonia_open }
+                has_global_flag = HSM_BAR_world_normalization_started
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_grid_griffonia_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_grid_north = {
+        icon = generic_research
+        cost = 50
+        days_remove = 35
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_region_north_open
+            NOT = { has_country_flag = HSM_BAR_norm_grid_north_done }
+        }
+        available = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_north_open
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_north_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_grid_north_working }
+        remove_effect = { HSM_BAR_normalization_complete_north = yes }
+        cancel_trigger = {
+            OR = {
+                NOT = { HSM_BAR_normalization_actor = yes }
+                NOT = { has_country_flag = HSM_BAR_region_north_open }
+                has_global_flag = HSM_BAR_world_normalization_started
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_grid_north_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_grid_riverlands = {
+        icon = generic_research
+        cost = 50
+        days_remove = 35
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_region_riverlands_open
+            NOT = { has_country_flag = HSM_BAR_norm_grid_riverlands_done }
+        }
+        available = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_riverlands_open
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_riverlands_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_grid_riverlands_working }
+        remove_effect = { HSM_BAR_normalization_complete_riverlands = yes }
+        cancel_trigger = {
+            OR = {
+                NOT = { HSM_BAR_normalization_actor = yes }
+                NOT = { has_country_flag = HSM_BAR_region_riverlands_open }
+                has_global_flag = HSM_BAR_world_normalization_started
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_grid_riverlands_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_grid_zebrica = {
+        icon = generic_research
+        cost = 50
+        days_remove = 35
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_region_zebrica_open
+            NOT = { has_country_flag = HSM_BAR_norm_grid_zebrica_done }
+        }
+        available = {
+            HSM_BAR_normalization_actor = yes
+            has_country_flag = HSM_BAR_region_zebrica_open
+            NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+            NOT = { has_country_flag = HSM_BAR_norm_grid_zebrica_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_grid_zebrica_working }
+        remove_effect = { HSM_BAR_normalization_complete_zebrica = yes }
+        cancel_trigger = {
+            OR = {
+                NOT = { HSM_BAR_normalization_actor = yes }
+                NOT = { has_country_flag = HSM_BAR_region_zebrica_open }
+                has_global_flag = HSM_BAR_world_normalization_started
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_grid_zebrica_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_activate = {
+        icon = generic_research
+        cost = 100
+        days_remove = 14
+        fire_only_once = no
+        available = {
+            HSM_BAR_global_network_ready = yes
+            NOT = { has_country_flag = HSM_BAR_norm_activation_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_activation_working }
+        remove_effect = { HSM_BAR_begin_global_normalization = yes }
+        cancel_trigger = { NOT = { HSM_BAR_global_network_ready = yes } }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_activation_working }
+        ai_will_do = { factor = 1 }
+    }
+}
+HSM_BAR_normalization_crisis = {
+    HSM_BAR_normalization_restore = {
+        icon = generic_research
+        cost = 100
+        days_remove = 35
+        fire_only_once = no
+        visible = { HSM_BAR_normalization_choice_open = yes }
+        available = {
+            HSM_BAR_normalization_choice_open = yes
+            NOT = { has_country_flag = HSM_BAR_norm_restoration_working }
+            NOT = { has_country_flag = HSM_BAR_norm_escalation_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_restoration_working }
+        remove_effect = { HSM_BAR_restore_world_barriers = yes }
+        cancel_trigger = { NOT = { HSM_BAR_normalization_choice_open = yes } }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_restoration_working }
+        ai_will_do = { factor = 3 }
+    }
+    HSM_BAR_normalization_press = {
+        icon = generic_army_support
+        cost = 150
+        days_remove = 28
+        fire_only_once = no
+        visible = { HSM_BAR_normalization_choice_open = yes }
+        available = {
+            HSM_BAR_normalization_choice_open = yes
+            NOT = { has_country_flag = HSM_BAR_norm_restoration_working }
+            NOT = { has_country_flag = HSM_BAR_norm_escalation_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_escalation_working }
+        remove_effect = { HSM_BAR_press_world_normalization = yes }
+        cancel_trigger = { NOT = { HSM_BAR_normalization_choice_open = yes } }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_escalation_working }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_normalization_arm_without_magic = {
+        icon = generic_army_support
+        cost = 50
+        days_remove = 21
+        fire_only_once = no
+        visible = {
+            has_global_flag = HSM_BAR_world_breached
+            NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+            NOT = { has_idea = HSM_BAR_normalization_steel_defence }
+        }
+        available = {
+            has_war_with = NML
+            has_capitulated = no
+            NOT = { tag = NML }
+            NOT = { has_country_flag = HSM_BAR_norm_rearm_working }
+        }
+        complete_effect = { set_country_flag = HSM_BAR_norm_rearm_working }
+        remove_effect = {
+            if = {
+                limit = {
+                    has_country_flag = HSM_BAR_norm_rearm_working
+                    has_war_with = NML
+                    has_capitulated = no
+                    NOT = { tag = NML }
+                    NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+                    NOT = { has_idea = HSM_BAR_normalization_steel_defence }
+                }
+                add_ideas = HSM_BAR_normalization_steel_defence
+            }
+            clr_country_flag = HSM_BAR_norm_rearm_working
+        }
+        cancel_trigger = {
+            OR = {
+                has_capitulated = yes
+                NOT = { has_war_with = NML }
+                has_global_flag = HSM_BAR_world_incursions_defeated
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_norm_rearm_working }
+        ai_will_do = { factor = 3 }
+    }
+}

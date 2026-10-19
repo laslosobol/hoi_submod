@@ -1,0 +1,6 @@
+HSM_BAR_diplomacy = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_dip_route = yes }
+    priority = 95
+}

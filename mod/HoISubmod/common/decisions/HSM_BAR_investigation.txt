@@ -1,0 +1,242 @@
+HSM_BAR_investigation_timers = { HSM_BAR_investigation_rock_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_rock_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_rock_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_rock_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_rock_1_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_rock_live = yes }
+ clr_country_flag = HSM_BAR_investigation_rock_1_running clr_country_flag = HSM_BAR_investigation_rock_running set_country_flag = HSM_BAR_investigation_rock_1_reported
+ custom_effect_tooltip = HSM_BAR_case_rock_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_rock = yes }
+ } else = { HSM_BAR_investigation_rock_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_rock_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_rock_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_rock_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_rock_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_rock_2_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_rock_live = yes }
+ clr_country_flag = HSM_BAR_investigation_rock_2_running clr_country_flag = HSM_BAR_investigation_rock_running set_country_flag = HSM_BAR_investigation_rock_2_reported
+ 
+ } else = { HSM_BAR_investigation_rock_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_rock_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_rock_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_rock_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_rock_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_rock_3_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_rock_live = yes }
+ clr_country_flag = HSM_BAR_investigation_rock_3_running clr_country_flag = HSM_BAR_investigation_rock_running set_country_flag = HSM_BAR_investigation_rock_3_reported
+ custom_effect_tooltip = HSM_BAR_case_rock_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_rock = yes }
+ } else = { HSM_BAR_investigation_rock_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_titan_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_titan_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_titan_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_titan_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_titan_1_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_titan_live = yes }
+ clr_country_flag = HSM_BAR_investigation_titan_1_running clr_country_flag = HSM_BAR_investigation_titan_running set_country_flag = HSM_BAR_investigation_titan_1_reported
+ 
+ } else = { HSM_BAR_investigation_titan_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_titan_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_titan_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_titan_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_titan_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_titan_2_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_titan_live = yes }
+ clr_country_flag = HSM_BAR_investigation_titan_2_running clr_country_flag = HSM_BAR_investigation_titan_running set_country_flag = HSM_BAR_investigation_titan_2_reported
+ custom_effect_tooltip = HSM_BAR_case_titan_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_titan = yes }
+ } else = { HSM_BAR_investigation_titan_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_titan_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_titan_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_titan_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_titan_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_titan_3_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_titan_live = yes }
+ clr_country_flag = HSM_BAR_investigation_titan_3_running clr_country_flag = HSM_BAR_investigation_titan_running set_country_flag = HSM_BAR_investigation_titan_3_reported
+ custom_effect_tooltip = HSM_BAR_case_titan_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_titan = yes }
+ } else = { HSM_BAR_investigation_titan_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_entity_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_entity_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_entity_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_entity_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_entity_1_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_entity_live = yes }
+ clr_country_flag = HSM_BAR_investigation_entity_1_running clr_country_flag = HSM_BAR_investigation_entity_running set_country_flag = HSM_BAR_investigation_entity_1_reported
+ custom_effect_tooltip = HSM_BAR_case_entity_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_entity = yes }
+ } else = { HSM_BAR_investigation_entity_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_entity_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_entity_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_entity_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_entity_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_entity_2_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_entity_live = yes }
+ clr_country_flag = HSM_BAR_investigation_entity_2_running clr_country_flag = HSM_BAR_investigation_entity_running set_country_flag = HSM_BAR_investigation_entity_2_reported
+ custom_effect_tooltip = HSM_BAR_case_entity_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_entity = yes }
+ } else = { HSM_BAR_investigation_entity_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_entity_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_entity_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_entity_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_entity_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_entity_3_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_entity_live = yes }
+ clr_country_flag = HSM_BAR_investigation_entity_3_running clr_country_flag = HSM_BAR_investigation_entity_running set_country_flag = HSM_BAR_investigation_entity_3_reported
+ 
+ } else = { HSM_BAR_investigation_entity_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_amulet_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_amulet_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_amulet_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_amulet_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_amulet_1_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_amulet_live = yes }
+ clr_country_flag = HSM_BAR_investigation_amulet_1_running clr_country_flag = HSM_BAR_investigation_amulet_running set_country_flag = HSM_BAR_investigation_amulet_1_reported
+ custom_effect_tooltip = HSM_BAR_case_amulet_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_amulet = yes }
+ } else = { HSM_BAR_investigation_amulet_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_amulet_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_amulet_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_amulet_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_amulet_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_amulet_2_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_amulet_live = yes }
+ clr_country_flag = HSM_BAR_investigation_amulet_2_running clr_country_flag = HSM_BAR_investigation_amulet_running set_country_flag = HSM_BAR_investigation_amulet_2_reported
+ 
+ } else = { HSM_BAR_investigation_amulet_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_amulet_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_amulet_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_amulet_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_amulet_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_amulet_3_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_amulet_live = yes }
+ clr_country_flag = HSM_BAR_investigation_amulet_3_running clr_country_flag = HSM_BAR_investigation_amulet_running set_country_flag = HSM_BAR_investigation_amulet_3_reported
+ custom_effect_tooltip = HSM_BAR_case_amulet_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_amulet = yes }
+ } else = { HSM_BAR_investigation_amulet_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_plants_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_plants_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_plants_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_plants_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_plants_1_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_plants_live = yes }
+ clr_country_flag = HSM_BAR_investigation_plants_1_running clr_country_flag = HSM_BAR_investigation_plants_running set_country_flag = HSM_BAR_investigation_plants_1_reported
+ custom_effect_tooltip = HSM_BAR_case_plants_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_plants = yes }
+ } else = { HSM_BAR_investigation_plants_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_plants_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_plants_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_plants_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_plants_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_plants_2_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_plants_live = yes }
+ clr_country_flag = HSM_BAR_investigation_plants_2_running clr_country_flag = HSM_BAR_investigation_plants_running set_country_flag = HSM_BAR_investigation_plants_2_reported
+ custom_effect_tooltip = HSM_BAR_case_plants_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_plants = yes }
+ } else = { HSM_BAR_investigation_plants_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_plants_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_plants_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_plants_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_plants_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_plants_3_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_plants_live = yes }
+ clr_country_flag = HSM_BAR_investigation_plants_3_running clr_country_flag = HSM_BAR_investigation_plants_running set_country_flag = HSM_BAR_investigation_plants_3_reported
+ 
+ } else = { HSM_BAR_investigation_plants_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_echo_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_echo_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_echo_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_echo_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_echo_1_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_echo_live = yes }
+ clr_country_flag = HSM_BAR_investigation_echo_1_running clr_country_flag = HSM_BAR_investigation_echo_running set_country_flag = HSM_BAR_investigation_echo_1_reported
+ 
+ } else = { HSM_BAR_investigation_echo_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_echo_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_echo_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_echo_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_echo_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_echo_2_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_echo_live = yes }
+ clr_country_flag = HSM_BAR_investigation_echo_2_running clr_country_flag = HSM_BAR_investigation_echo_running set_country_flag = HSM_BAR_investigation_echo_2_reported
+ HSM_BAR_cases_echo_rumor_complete = yes
+ } else = { HSM_BAR_investigation_echo_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_echo_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_echo_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_echo_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_echo_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_echo_3_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_echo_live = yes }
+ clr_country_flag = HSM_BAR_investigation_echo_3_running clr_country_flag = HSM_BAR_investigation_echo_running set_country_flag = HSM_BAR_investigation_echo_3_reported
+ HSM_BAR_cases_echo_rumor_complete = yes
+ } else = { HSM_BAR_investigation_echo_3_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_compass_1_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_compass_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_compass_1_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_compass_1_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_compass_1_running days < 14 } } }
+ if = { limit = { HSM_BAR_investigation_compass_live = yes }
+ clr_country_flag = HSM_BAR_investigation_compass_1_running clr_country_flag = HSM_BAR_investigation_compass_running set_country_flag = HSM_BAR_investigation_compass_1_reported
+ HSM_BAR_cases_compass_rumor_complete = yes
+ } else = { HSM_BAR_investigation_compass_1_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_compass_2_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_compass_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_compass_2_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_compass_2_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_compass_2_running days < 28 } } }
+ if = { limit = { HSM_BAR_investigation_compass_live = yes }
+ clr_country_flag = HSM_BAR_investigation_compass_2_running clr_country_flag = HSM_BAR_investigation_compass_running set_country_flag = HSM_BAR_investigation_compass_2_reported
+ HSM_BAR_cases_compass_rumor_complete = yes
+ } else = { HSM_BAR_investigation_compass_2_cancel = yes }
+ } } }
+ }
+HSM_BAR_investigation_compass_3_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { HSM_BAR_investigation_compass_live = no }
+ cancel_effect = { hidden_effect = { HSM_BAR_investigation_compass_3_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_investigation_compass_3_running NOT = { has_country_flag = { flag = HSM_BAR_investigation_compass_3_running days < 21 } } }
+ if = { limit = { HSM_BAR_investigation_compass_live = yes }
+ clr_country_flag = HSM_BAR_investigation_compass_3_running clr_country_flag = HSM_BAR_investigation_compass_running set_country_flag = HSM_BAR_investigation_compass_3_reported
+ 
+ } else = { HSM_BAR_investigation_compass_3_cancel = yes }
+ } } }
+ }
+ }

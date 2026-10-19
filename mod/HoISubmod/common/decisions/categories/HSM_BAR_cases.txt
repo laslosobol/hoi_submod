@@ -1,0 +1,49 @@
+HSM_BAR_cases_studies = {
+    icon = generic_research
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_institute_open }
+    visible_when_empty = no
+    priority = 76
+}
+HSM_BAR_cases_equus = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_equus_open }
+    visible_when_empty = yes
+    priority = 79
+}
+HSM_BAR_cases_griffonia = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_griffonia_open }
+    visible_when_empty = yes
+    priority = 79
+}
+HSM_BAR_cases_north = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_north_open }
+    visible_when_empty = yes
+    priority = 79
+}
+HSM_BAR_cases_local = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_local_open }
+    visible_when_empty = yes
+    priority = 79
+}
+HSM_BAR_cases_riverlands = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_riverlands_open }
+    visible_when_empty = yes
+    priority = 79
+}
+HSM_BAR_cases_zebrica = {
+    icon = generic_political_discourse
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_region_zebrica_open }
+    visible_when_empty = yes
+    priority = 79
+}

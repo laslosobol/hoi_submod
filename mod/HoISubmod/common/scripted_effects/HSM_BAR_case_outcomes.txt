@@ -1,0 +1,356 @@
+# Country scope, safe after dissolution. Never calls core_refresh.
+# Silent recalculation; case choices own their visible contribution tooltips.
+# Terminal disposition replaces the study policy; history and custody are untouched.
+HSM_BAR_refresh_case_outcomes = {
+ hidden_effect = {
+     set_variable = { HSM_BAR_outcome_infra = 0 }
+     set_variable = { HSM_BAR_outcome_supply = 0 }
+     set_variable = { HSM_BAR_outcome_dig = 0 }
+     set_variable = { HSM_BAR_outcome_pp = 0 }
+     set_variable = { HSM_BAR_outcome_factory = 0 }
+     set_variable = { HSM_BAR_outcome_efficiency = 0 }
+     set_variable = { HSM_BAR_outcome_research = 0 }
+     set_variable = { HSM_BAR_outcome_stability = 0 }
+     set_variable = { HSM_BAR_outcome_defence = 0 }
+     set_variable = { HSM_BAR_outcome_build = 0 }
+     set_variable = { HSM_BAR_outcome_resources = 0 }
+     set_variable = { HSM_BAR_outcome_recovery = 0 }
+     set_variable = { HSM_BAR_outcome_reinforce = 0 }
+     set_variable = { HSM_BAR_outcome_decrypt = 0 }
+     set_variable = { HSM_BAR_outcome_recon = 0 }
+     set_variable = { HSM_BAR_outcome_planning = 0 }
+     if = {
+         limit = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_rock_done HSM_BAR_cases_rock_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_rock_protect }
+                 add_to_variable = { HSM_BAR_outcome_infra = 0.02 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_case_rock_restrict }
+                 add_to_variable = { HSM_BAR_outcome_dig = 1 }
+                 add_to_variable = { HSM_BAR_outcome_build = -0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_rock_applied }
+                 add_to_variable = { HSM_BAR_outcome_infra = 0.04 }
+                 add_to_variable = { HSM_BAR_outcome_supply = 0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_rock_reserved }
+                 add_to_variable = { HSM_BAR_outcome_dig = 1 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.01 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_titan_done HSM_BAR_cases_titan_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_titan_protect }
+                 add_to_variable = { HSM_BAR_outcome_efficiency = 0.02 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_case_titan_restrict }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_factory = -0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_titan_applied }
+                 add_to_variable = { HSM_BAR_outcome_factory = 0.025 }
+                 add_to_variable = { HSM_BAR_outcome_efficiency = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_titan_reserved }
+                 add_to_variable = { HSM_BAR_outcome_efficiency = 0.015 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_entity_done HSM_BAR_cases_entity_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_entity_protect }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.025 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_case_entity_restrict }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_research = -0.005 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_entity_applied }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_entity_reserved }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.005 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.015 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_amulet_done HSM_BAR_cases_amulet_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_amulet_protect }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.02 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_case_amulet_restrict }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.005 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_amulet_applied }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_amulet_reserved }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_build = -0.005 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_plants_done HSM_BAR_cases_plants_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_plants_protect }
+                 add_to_variable = { HSM_BAR_outcome_resources = 0.03 }
+                 add_to_variable = { HSM_BAR_outcome_supply = -0.01 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_case_plants_restrict }
+                 add_to_variable = { HSM_BAR_outcome_recovery = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_resources = -0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_plants_applied }
+                 add_to_variable = { HSM_BAR_outcome_resources = 0.025 }
+                 add_to_variable = { HSM_BAR_outcome_recovery = -0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_plants_reserved }
+                 add_to_variable = { HSM_BAR_outcome_recovery = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_resources = -0.01 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_reactor_done HSM_BAR_cases_reactor_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_study_reactor_applied }
+                 add_to_variable = { HSM_BAR_outcome_factory = 0.035 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_reactor_reserved }
+                 add_to_variable = { HSM_BAR_outcome_factory = -0.01 }
+                 add_to_variable = { HSM_BAR_outcome_efficiency = 0.025 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_crown_done HSM_BAR_cases_crown_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_study_crown_applied }
+                 add_to_variable = { HSM_BAR_outcome_reinforce = 0.005 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_crown_reserved }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.01 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_chalice_done HSM_BAR_cases_chalice_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_chalice_closed }
+                 add_to_variable = { HSM_BAR_outcome_supply = -0.01 }
+                 add_to_variable = { HSM_BAR_outcome_research = -0.002 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_chalice_applied }
+                 add_to_variable = { HSM_BAR_outcome_recovery = 0.025 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.025 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_chalice_reserved }
+                 add_to_variable = { HSM_BAR_outcome_supply = -0.01 }
+                 add_to_variable = { HSM_BAR_outcome_research = -0.002 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_phylactery_done HSM_BAR_cases_phylactery_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_phylactery_closed }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_factory = -0.005 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_phylactery_applied }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_phylactery_reserved }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_factory = -0.005 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_darkheart_done HSM_BAR_cases_darkheart_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_darkheart_closed }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.005 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_darkheart_applied }
+                 add_to_variable = { HSM_BAR_outcome_decrypt = 0.05 }
+                 add_to_variable = { HSM_BAR_outcome_stability = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_darkheart_reserved }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.005 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_grover_done HSM_BAR_cases_grover_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_grover_closed }
+                 add_to_variable = { HSM_BAR_outcome_recon = 0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_grover_applied }
+                 add_to_variable = { HSM_BAR_outcome_recon = 0.02 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_grover_reserved }
+                 add_to_variable = { HSM_BAR_outcome_planning = 0.015 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_rosa_done HSM_BAR_cases_rosa_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_rosa_closed }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.007 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_rosa_applied }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.007 }
+                 add_to_variable = { HSM_BAR_outcome_pp = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_rosa_reserved }
+                 add_to_variable = { HSM_BAR_outcome_decrypt = 0.015 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_herald_done HSM_BAR_cases_herald_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_herald_closed }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_herald_applied }
+                 add_to_variable = { HSM_BAR_outcome_research = 0.01 }
+                 add_to_variable = { HSM_BAR_outcome_efficiency = -0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_herald_reserved }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.005 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_sombra_done HSM_BAR_cases_sombra_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_case_sombra_closed }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.015 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_sombra_applied }
+                 add_to_variable = { HSM_BAR_outcome_defence = 0.015 }
+                 add_to_variable = { HSM_BAR_outcome_supply = 0.01 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_sombra_reserved }
+                 add_to_variable = { HSM_BAR_outcome_stability = 0.01 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_echo_done HSM_BAR_cases_echo_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_study_echo_applied }
+                 add_to_variable = { HSM_BAR_outcome_infra = 0.03 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_echo_reserved }
+                 add_to_variable = { HSM_BAR_outcome_dig = 1 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_marsh_done HSM_BAR_cases_marsh_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_study_marsh_applied }
+                 add_to_variable = { HSM_BAR_outcome_supply = -0.02 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_marsh_reserved }
+                 add_to_variable = { HSM_BAR_outcome_recovery = 0.01 }
+             }
+         }
+         if = {
+             limit = { has_country_flag = HSM_BAR_study_compass_done HSM_BAR_cases_compass_access = yes }
+             if = {
+                 limit = { has_country_flag = HSM_BAR_study_compass_applied }
+                 add_to_variable = { HSM_BAR_outcome_recon = 0.03 }
+             }
+             else_if = {
+                 limit = { has_country_flag = HSM_BAR_study_compass_reserved }
+                 add_to_variable = { HSM_BAR_outcome_planning = 0.02 }
+             }
+         }
+         if = {
+             limit = { NOT = { has_dynamic_modifier = HSM_BAR_anomalous_research } }
+             add_dynamic_modifier = { modifier = HSM_BAR_anomalous_research }
+         }
+     }
+     else = {
+         if = {
+             limit = { has_dynamic_modifier = HSM_BAR_anomalous_research }
+             remove_dynamic_modifier = { modifier = HSM_BAR_anomalous_research }
+         }
+     }
+     force_update_dynamic_modifier = yes
+ }
+}
+
+# Call only after the existing guarded seal callback has set case_chalice_closed.
+HSM_BAR_outcome_chalice_sealed = {
+    if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no has_country_flag = HSM_BAR_study_chalice_done has_country_flag = HSM_BAR_case_chalice_closed HSM_BAR_cases_chalice_access = yes }
+        set_country_flag = HSM_BAR_disposition_chalice_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+    }
+}
+
+# Call only after the existing guarded seal callback has set case_phylactery_closed.
+HSM_BAR_outcome_phylactery_sealed = {
+    if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no has_country_flag = HSM_BAR_study_phylactery_done has_country_flag = HSM_BAR_case_phylactery_closed HSM_BAR_cases_phylactery_access = yes }
+        set_country_flag = HSM_BAR_disposition_phylactery_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+    }
+}
+
+# Call only after the existing guarded seal callback has set case_darkheart_closed.
+HSM_BAR_outcome_darkheart_sealed = {
+    if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no has_country_flag = HSM_BAR_study_darkheart_done has_country_flag = HSM_BAR_case_darkheart_closed HSM_BAR_cases_darkheart_access = yes }
+        set_country_flag = HSM_BAR_disposition_darkheart_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+    }
+}

@@ -1,0 +1,83 @@
+# Read-only regional indexes. Historical records remain readable after branch or specimen access loss.
+# Crown is a shared cross-reference, not evidence of regional location or custody.
+# Generic Crown history never unlocks an unopened regional branch.
+HSM_BAR_archive_actor = {
+ tag = BAR
+ is_ai = no
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_directorate
+ has_country_flag = HSM_BAR_service_founded
+ has_country_flag = HSM_BAR_region_local_open
+ has_variable = HSM_BAR_archive_open
+}
+HSM_BAR_archive_history_rock = { OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+HSM_BAR_archive_history_titan = { OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+HSM_BAR_archive_history_entity = { OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+HSM_BAR_archive_history_amulet = { OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+HSM_BAR_archive_history_reactor = { OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+HSM_BAR_archive_history_crown = { OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } }
+HSM_BAR_archive_history_chalice = { OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } }
+HSM_BAR_archive_history_phylactery = { OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } }
+HSM_BAR_archive_history_darkheart = { OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } }
+HSM_BAR_archive_history_grover = { OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } }
+HSM_BAR_archive_history_rosa = { OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } }
+HSM_BAR_archive_history_herald = { OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } }
+HSM_BAR_archive_history_sombra = { OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } }
+HSM_BAR_archive_history_echo = { OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+HSM_BAR_archive_history_marsh = { OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+HSM_BAR_archive_history_compass = { OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+HSM_BAR_archive_history_plants = { OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+HSM_BAR_archive_history_zebrica = { has_country_flag = HSM_BAR_case_zebrica_known }
+HSM_BAR_archive_region_local_available = { OR = { has_country_flag = HSM_BAR_region_local_open HSM_BAR_archive_history_rock = yes HSM_BAR_archive_history_titan = yes HSM_BAR_archive_history_entity = yes HSM_BAR_archive_history_amulet = yes HSM_BAR_archive_history_reactor = yes HSM_BAR_archive_history_echo = yes HSM_BAR_archive_history_compass = yes HSM_BAR_archive_history_plants = yes } }
+HSM_BAR_archive_region_equus_available = { OR = { has_country_flag = HSM_BAR_region_equus_open HSM_BAR_archive_history_sombra = yes HSM_BAR_archive_history_darkheart = yes } }
+HSM_BAR_archive_region_griffonia_available = { OR = { has_country_flag = HSM_BAR_region_griffonia_open HSM_BAR_archive_history_grover = yes HSM_BAR_archive_history_herald = yes } }
+HSM_BAR_archive_region_north_available = { OR = { has_country_flag = HSM_BAR_region_north_open HSM_BAR_archive_history_rosa = yes HSM_BAR_archive_history_chalice = yes HSM_BAR_archive_history_phylactery = yes } }
+HSM_BAR_archive_region_riverlands_available = { OR = { has_country_flag = HSM_BAR_region_riverlands_open HSM_BAR_archive_history_marsh = yes } }
+HSM_BAR_archive_region_zebrica_available = { OR = { has_country_flag = HSM_BAR_region_zebrica_open HSM_BAR_archive_history_zebrica = yes } }
+HSM_BAR_archive_case_rock_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_rock = yes }
+HSM_BAR_archive_case_titan_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_titan = yes }
+HSM_BAR_archive_case_entity_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_entity = yes }
+HSM_BAR_archive_case_amulet_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_amulet = yes }
+HSM_BAR_archive_case_reactor_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } HSM_BAR_archive_history_reactor = yes }
+HSM_BAR_archive_case_crown_listed = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_available = yes OR = { check_variable = { HSM_BAR_archive_region = 2 } check_variable = { HSM_BAR_archive_region = 3 } check_variable = { HSM_BAR_archive_region = 6 } } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_crown = yes }
+HSM_BAR_archive_case_chalice_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 4 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_chalice = yes }
+HSM_BAR_archive_case_phylactery_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 4 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_phylactery = yes }
+HSM_BAR_archive_case_darkheart_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 2 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_darkheart = yes }
+HSM_BAR_archive_case_grover_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 3 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_grover = yes }
+HSM_BAR_archive_case_rosa_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 4 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_rosa = yes }
+HSM_BAR_archive_case_herald_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 3 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_herald = yes }
+HSM_BAR_archive_case_sombra_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 2 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_sombra = yes }
+HSM_BAR_archive_case_echo_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } HSM_BAR_archive_history_echo = yes }
+HSM_BAR_archive_case_marsh_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 5 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_marsh = yes }
+HSM_BAR_archive_case_compass_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } HSM_BAR_archive_history_compass = yes }
+HSM_BAR_archive_case_plants_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } HSM_BAR_archive_history_plants = yes }
+HSM_BAR_archive_case_zebrica_listed = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 6 } check_variable = { HSM_BAR_archive_page = 1 } HSM_BAR_archive_history_zebrica = yes }
+HSM_BAR_archive_operations_available = { HSM_BAR_archive_actor = yes HSM_BAR_service_gui_available = yes HSM_BAR_archive_region_available = yes }
+HSM_BAR_archive_selection_available = { OR = {
+ AND = { check_variable = { HSM_BAR_archive_case = 1 } HSM_BAR_archive_case_rock_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 2 } HSM_BAR_archive_case_titan_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 3 } HSM_BAR_archive_case_entity_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 4 } HSM_BAR_archive_case_amulet_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 5 } HSM_BAR_archive_case_reactor_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 6 } HSM_BAR_archive_case_crown_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 7 } HSM_BAR_archive_case_chalice_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 8 } HSM_BAR_archive_case_phylactery_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 9 } HSM_BAR_archive_case_darkheart_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 10 } HSM_BAR_archive_case_grover_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 11 } HSM_BAR_archive_case_rosa_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 12 } HSM_BAR_archive_case_herald_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 13 } HSM_BAR_archive_case_sombra_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 14 } HSM_BAR_archive_case_echo_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 15 } HSM_BAR_archive_case_marsh_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 16 } HSM_BAR_archive_case_compass_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 17 } HSM_BAR_archive_case_plants_listed = yes }
+ AND = { check_variable = { HSM_BAR_archive_case = 18 } HSM_BAR_archive_case_zebrica_listed = yes }
+} }
+HSM_BAR_archive_region_available = { OR = {
+ AND = { check_variable = { HSM_BAR_archive_region = 1 } HSM_BAR_archive_region_local_available = yes }
+ AND = { check_variable = { HSM_BAR_archive_region = 2 } HSM_BAR_archive_region_equus_available = yes }
+ AND = { check_variable = { HSM_BAR_archive_region = 3 } HSM_BAR_archive_region_griffonia_available = yes }
+ AND = { check_variable = { HSM_BAR_archive_region = 4 } HSM_BAR_archive_region_north_available = yes }
+ AND = { check_variable = { HSM_BAR_archive_region = 5 } HSM_BAR_archive_region_riverlands_available = yes }
+ AND = { check_variable = { HSM_BAR_archive_region = 6 } HSM_BAR_archive_region_zebrica_available = yes }
+} }

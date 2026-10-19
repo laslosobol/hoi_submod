@@ -1,0 +1,9 @@
+HSM_BAR_research_category = {
+    icon = generic_research
+    allowed = { original_tag = BAR }
+    visible = { HSM_BAR_service_legacy_visible = yes
+        tag = BAR
+        has_country_flag = HSM_BAR_active
+        has_country_flag = HSM_BAR_institute_open
+    }
+}

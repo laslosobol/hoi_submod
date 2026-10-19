@@ -1,0 +1,118 @@
+focus_tree = {
+ id = HSM_BAR_republic_tree
+ country = { factor = 0 }
+ default = no
+ continuous_focus_position = { x = 1600 y = 2600 }
+ shared_focus = HSM_BAR_common_reconstruction
+ shared_focus = HSM_BAR_transition_republic
+ shared_focus = HSM_BAR_transition_councils
+ shared_focus = HSM_BAR_transition_relief
+ shared_focus = HSM_BAR_transition_survey
+ shared_focus = HSM_BAR_transition_bread
+ shared_focus = HSM_BAR_transition_patients
+ shared_focus = HSM_BAR_transition_cabinet
+ shared_focus = HSM_BAR_transition_descent
+ shared_focus = HSM_BAR_transition_commission
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_republic
+ icon = GFX_HSM_BAR_cover_charter
+ x = 8
+ y = 0
+ cost = 4
+ available = { has_completed_focus = HSM_BAR_common_reconstruction }
+ 
+ completion_reward = { add_political_power = 25 country_event = { id = hsm_bar_republic.9 days = 1 } }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_councils
+ icon = GFX_HSM_BAR_cover_accounts
+ x = 4
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_republic }
+ 
+ completion_reward = { add_stability = 0.03 set_country_flag = HSM_BAR_village_councils }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_relief
+ icon = GFX_HSM_BAR_cover_clinic
+ x = 8
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_republic }
+ 
+ completion_reward = { add_war_support = 0.03 set_country_flag = HSM_BAR_relief_houses }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_survey
+ icon = GFX_HSM_BAR_cover_survey
+ x = 12
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_republic }
+ 
+ completion_reward = { set_country_flag = HSM_BAR_public_survey_open custom_effect_tooltip = HSM_BAR_unlock_public_survey_tt }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_bread
+ icon = GFX_HSM_BAR_cover_workshop
+ x = 4
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_councils }
+ 
+ completion_reward = { add_stability = 0.02 add_political_power = 35 }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_patients
+ icon = GFX_HSM_BAR_cover_clinic
+ x = 8
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_relief }
+ 
+ completion_reward = { country_event = { id = hsm_bar_republic.10 days = 1 } }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_cabinet
+ icon = GFX_HSM_BAR_dir_archives
+ x = 12
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_survey }
+ available = { has_country_flag = HSM_BAR_survey_recorded }
+ completion_reward = { set_country_flag = HSM_BAR_cabinet_open custom_effect_tooltip = HSM_BAR_unlock_decode_records_tt }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_descent
+ icon = GFX_HSM_BAR_dir_seal_labs
+ x = 12
+ y = 3
+ cost = 4
+ prerequisite = { focus = HSM_BAR_transition_cabinet }
+ available = { has_country_flag = HSM_BAR_records_decoded }
+ completion_reward = { set_country_flag = HSM_BAR_first_descent_open custom_effect_tooltip = HSM_BAR_unlock_first_descent_tt }
+}
+
+shared_focus = {
+ id = HSM_BAR_transition_commission
+ icon = GFX_HSM_BAR_dir_commission
+ x = 8
+ y = 4
+ cost = 5
+ prerequisite = { focus = HSM_BAR_transition_bread }
+ prerequisite = { focus = HSM_BAR_transition_patients }
+ prerequisite = { focus = HSM_BAR_transition_descent }
+ available = { has_country_flag = HSM_BAR_first_incident_resolved owns_state = 624 controls_state = 624 }
+ completion_reward = { HSM_BAR_found_service = yes }
+}
+

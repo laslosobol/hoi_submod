@@ -1,0 +1,444 @@
+HSM_BAR_cases_studies = {
+    HSM_BAR_study_rock = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_rock_known
+            NOT = { has_country_flag = HSM_BAR_study_rock_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_rock_retry }
+        }
+        available = { HSM_BAR_cases_rock_eligible = yes }
+        remove_effect = { HSM_BAR_cases_rock_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_rock_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_rock_done
+            NOT = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.1 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_titan = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_titan_known
+            NOT = { has_country_flag = HSM_BAR_study_titan_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_titan_retry }
+        }
+        available = { HSM_BAR_cases_titan_eligible = yes }
+        remove_effect = { HSM_BAR_cases_titan_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_titan_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_titan_done
+            NOT = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.2 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_entity = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_entity_known
+            NOT = { has_country_flag = HSM_BAR_study_entity_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_entity_retry }
+        }
+        available = { HSM_BAR_cases_entity_eligible = yes }
+        remove_effect = { HSM_BAR_cases_entity_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_entity_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_entity_done
+            NOT = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.3 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_amulet = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_amulet_known
+            NOT = { has_country_flag = HSM_BAR_study_amulet_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_amulet_retry }
+        }
+        available = { HSM_BAR_cases_amulet_eligible = yes }
+        remove_effect = { HSM_BAR_cases_amulet_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_amulet_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_amulet_done
+            NOT = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.4 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_plants = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_plants_known
+            NOT = { has_country_flag = HSM_BAR_study_plants_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_plants_retry }
+        }
+        available = { HSM_BAR_cases_plants_eligible = yes }
+        remove_effect = { HSM_BAR_cases_plants_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_plants_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_plants_done
+            NOT = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.5 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_reactor = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_reactor_known
+            NOT = { has_country_flag = HSM_BAR_study_reactor_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_reactor_retry }
+        }
+        available = { HSM_BAR_cases_reactor_eligible = yes }
+        remove_effect = { HSM_BAR_cases_reactor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_reactor_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_reactor_done
+            NOT = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.6 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_crown = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_crown_known
+            NOT = { has_country_flag = HSM_BAR_study_crown_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_crown_retry }
+        }
+        available = { HSM_BAR_cases_crown_eligible = yes }
+        remove_effect = { HSM_BAR_cases_crown_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_crown_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_crown_done
+            NOT = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.7 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_chalice = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_chalice_known
+            NOT = { has_country_flag = HSM_BAR_study_chalice_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_chalice_retry }
+        }
+        available = { HSM_BAR_cases_chalice_eligible = yes }
+        remove_effect = { HSM_BAR_cases_chalice_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_chalice_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_chalice_done
+            NOT = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved has_country_flag = HSM_BAR_case_chalice_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.8 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_phylactery = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_phylactery_known
+            NOT = { has_country_flag = HSM_BAR_study_phylactery_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_phylactery_retry }
+        }
+        available = { HSM_BAR_cases_phylactery_eligible = yes }
+        remove_effect = { HSM_BAR_cases_phylactery_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_phylactery_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_phylactery_done
+            NOT = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved has_country_flag = HSM_BAR_case_phylactery_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.9 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_darkheart = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_darkheart_known
+            NOT = { has_country_flag = HSM_BAR_study_darkheart_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_darkheart_retry }
+        }
+        available = { HSM_BAR_cases_darkheart_eligible = yes }
+        remove_effect = { HSM_BAR_cases_darkheart_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_darkheart_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_darkheart_done
+            NOT = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved has_country_flag = HSM_BAR_case_darkheart_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.10 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_grover = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_grover_known
+            NOT = { has_country_flag = HSM_BAR_study_grover_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_grover_retry }
+        }
+        available = { HSM_BAR_cases_grover_eligible = yes }
+        remove_effect = { HSM_BAR_cases_grover_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_grover_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_grover_done
+            NOT = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved has_country_flag = HSM_BAR_case_grover_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.11 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_rosa = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_rosa_known
+            NOT = { has_country_flag = HSM_BAR_study_rosa_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_rosa_retry }
+        }
+        available = { HSM_BAR_cases_rosa_eligible = yes }
+        remove_effect = { HSM_BAR_cases_rosa_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_rosa_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_rosa_done
+            NOT = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved has_country_flag = HSM_BAR_case_rosa_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.12 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_herald = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_herald_known
+            NOT = { has_country_flag = HSM_BAR_study_herald_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_herald_retry }
+        }
+        available = { HSM_BAR_cases_herald_eligible = yes }
+        remove_effect = { HSM_BAR_cases_herald_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_herald_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_herald_done
+            NOT = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved has_country_flag = HSM_BAR_case_herald_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.13 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_sombra = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_sombra_known
+            NOT = { has_country_flag = HSM_BAR_study_sombra_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_sombra_retry }
+        }
+        available = { HSM_BAR_cases_sombra_eligible = yes }
+        remove_effect = { HSM_BAR_cases_sombra_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_sombra_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_sombra_done
+            NOT = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved has_country_flag = HSM_BAR_case_sombra_closed }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.14 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_echo = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_echo_known
+            NOT = { has_country_flag = HSM_BAR_study_echo_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_echo_retry }
+        }
+        available = { HSM_BAR_cases_echo_eligible = yes }
+        remove_effect = { HSM_BAR_cases_echo_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_echo_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_echo_done
+            NOT = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.15 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_marsh = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_marsh_known
+            NOT = { has_country_flag = HSM_BAR_study_marsh_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_marsh_retry }
+        }
+        available = { HSM_BAR_cases_marsh_eligible = yes }
+        remove_effect = { HSM_BAR_cases_marsh_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_marsh_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_marsh_done
+            NOT = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.16 } }
+        ai_will_do = { factor = 1 }
+    }
+    HSM_BAR_study_compass = {
+        icon = generic_research
+        cost = 35
+        days_remove = 60
+        fire_only_once = no
+        visible = {
+            has_country_flag = HSM_BAR_case_compass_known
+            NOT = { has_country_flag = HSM_BAR_study_compass_done }
+            OR = { NOT = { has_dlc = "Gotterdammerung" } has_country_flag = HSM_BAR_study_compass_retry }
+        }
+        available = { HSM_BAR_cases_compass_eligible = yes }
+        remove_effect = { HSM_BAR_cases_compass_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_study_compass_disposition = {
+        icon = generic_political_discourse
+        cost = 0
+        days_re_enable = 7
+        visible = {
+            has_country_flag = HSM_BAR_study_compass_done
+            NOT = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved }
+        }
+        available = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded }
+        complete_effect = { country_event = { id = hsm_bar_cases.17 } }
+        ai_will_do = { factor = 1 }
+    }
+}

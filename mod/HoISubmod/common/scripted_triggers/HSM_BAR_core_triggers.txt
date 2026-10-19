@@ -1,0 +1,20 @@
+HSM_BAR_sombra_cooperation = {
+ tag = BAR
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded
+ has_country_flag = HSM_BAR_smile_partner
+ has_country_flag = HSM_BAR_wards_shared
+ NOT = { has_country_flag = HSM_BAR_smile_compromised }
+ NOT = { has_war_with = EQS }
+ EQS = { exists = yes has_government = democratic has_war_with = CRY }
+ CRY = { exists = yes has_country_leader = { character = CRY_sombra ruling_only = yes } }
+}
+HSM_BAR_smile_contact_relevant = {
+ tag = BAR
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded
+ has_country_flag = HSM_BAR_liaison_open
+ CRY = { exists = yes has_country_leader = { character = CRY_sombra ruling_only = yes } }
+ EQS = { exists = yes has_government = democratic }
+ NOT = { has_war_with = EQS }
+}

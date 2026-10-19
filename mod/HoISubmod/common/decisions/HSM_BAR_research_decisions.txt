@@ -1,0 +1,336 @@
+HSM_BAR_research_category = {
+    HSM_BAR_research_clinic_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_clinic_done }
+            has_country_flag = HSM_BAR_collegium
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_clinic_can_start = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_clinic_ready }
+        }
+        cost = 60
+        days_remove = 120
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_clinic_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_clinic_eligible = yes
+                }
+                HSM_BAR_research_clinic_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_clinic_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_clinic_ready
+            NOT = { has_country_flag = HSM_BAR_project_clinic_done }
+        }
+        available = {
+            HSM_BAR_research_clinic_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_clinic_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_clinic_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_grid_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_grid_done }
+            has_country_flag = HSM_BAR_collegium
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_grid_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_grid_ready }
+        }
+        cost = 75
+        days_remove = 150
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_grid_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_grid_eligible = yes
+                }
+                HSM_BAR_research_grid_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_grid_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_grid_ready
+            NOT = { has_country_flag = HSM_BAR_project_grid_done }
+        }
+        available = {
+            HSM_BAR_research_grid_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_grid_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_grid_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_wards_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_wards_done }
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_wards_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_wards_ready }
+        }
+        cost = 60
+        days_remove = 120
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_wards_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_wards_eligible = yes
+                }
+                HSM_BAR_research_wards_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_wards_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_wards_ready
+            NOT = { has_country_flag = HSM_BAR_project_wards_done }
+        }
+        available = {
+            HSM_BAR_research_wards_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_wards_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_wards_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_containment_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_containment_done }
+            has_country_flag = HSM_BAR_directorate
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_containment_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_containment_ready }
+        }
+        cost = 80
+        days_remove = 150
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_containment_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_containment_eligible = yes
+                }
+                HSM_BAR_research_containment_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_containment_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_containment_ready
+            NOT = { has_country_flag = HSM_BAR_project_containment_done }
+        }
+        available = {
+            HSM_BAR_research_containment_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_containment_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_containment_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_forensics_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_forensics_done }
+            has_country_flag = HSM_BAR_directorate
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_forensics_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_forensics_ready }
+        }
+        cost = 75
+        days_remove = 150
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_forensics_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_forensics_eligible = yes
+                }
+                HSM_BAR_research_forensics_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_forensics_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_forensics_ready
+            NOT = { has_country_flag = HSM_BAR_project_forensics_done }
+        }
+        available = {
+            HSM_BAR_research_forensics_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_forensics_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_forensics_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_suppression_fallback = {
+        icon = generic_research
+        visible = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            NOT = { has_country_flag = HSM_BAR_project_suppression_done }
+            has_country_flag = HSM_BAR_directorate
+        }
+        available = {
+            NOT = { has_dlc = "Gotterdammerung" }
+            HSM_BAR_research_suppression_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_fallback_busy }
+            num_of_civilian_factories_available_for_projects > 0
+            NOT = { has_country_flag = HSM_BAR_research_suppression_ready }
+        }
+        cost = 100
+        days_remove = 180
+        modifier = { civilian_factory_use = 1 }
+        complete_effect = { set_country_flag = HSM_BAR_research_fallback_busy }
+        cancel_trigger = {
+            OR = {
+                has_dlc = "Gotterdammerung"
+                NOT = { HSM_BAR_research_suppression_eligible = yes }
+            }
+        }
+        cancel_effect = { clr_country_flag = HSM_BAR_research_fallback_busy }
+        remove_effect = {
+            clr_country_flag = HSM_BAR_research_fallback_busy
+            if = {
+                limit = {
+                    NOT = { has_dlc = "Gotterdammerung" }
+                    HSM_BAR_research_suppression_eligible = yes
+                }
+                HSM_BAR_research_suppression_complete = yes
+            }
+        }
+        ai_will_do = { base = 3 }
+    }
+    HSM_BAR_research_suppression_resume = {
+        icon = generic_research
+        visible = {
+            has_country_flag = HSM_BAR_research_suppression_ready
+            NOT = { has_country_flag = HSM_BAR_project_suppression_done }
+        }
+        available = {
+            HSM_BAR_research_suppression_eligible = yes
+            NOT = { has_country_flag = HSM_BAR_research_suppression_choice_pending }
+        }
+        cost = 0
+        complete_effect = { HSM_BAR_research_suppression_resolve = yes }
+        ai_will_do = { base = 10 }
+    }
+    HSM_BAR_research_restore_facility = {
+        icon = generic_research
+        visible = {
+            has_dlc = "Gotterdammerung"
+            NOT = { HSM_BAR_research_has_facility = yes }
+        }
+        available = {
+            HSM_BAR_research_actor = yes
+            num_of_civilian_factories_available_for_projects > 0
+            any_owned_state = {
+                is_fully_controlled_by = PREV
+                can_build_facility_here = yes
+                is_demilitarized_zone = no
+            }
+        }
+        cost = 35
+        days_remove = 60
+        modifier = { civilian_factory_use = 1 }
+        remove_effect = {
+            if = {
+                limit = {
+                    has_dlc = "Gotterdammerung"
+                    HSM_BAR_research_actor = yes
+                }
+                HSM_BAR_establish_institute = yes
+            }
+        }
+        ai_will_do = { base = 10 }
+    }
+}

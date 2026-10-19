@@ -1,0 +1,20 @@
+HSM_BAR_service_capacity = {
+ icon = GFX_idea_HSM_BAR_dir_agency
+ enable = { tag = BAR has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_service_founded has_capitulated = no }
+ remove_trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_service_founded has_capitulated = no } } }
+ research_speed_factor = HSM_BAR_service_research
+ civilian_factory_use = HSM_BAR_service_gui_factories
+ intel_network_gain_factor = HSM_BAR_service_network
+ own_operative_detection_chance_factor = HSM_BAR_service_own_detection
+ own_operative_capture_chance_factor = HSM_BAR_service_capture
+ enemy_operative_detection_chance_factor = HSM_BAR_service_enemy_detection
+ intelligence_agency_defense = HSM_BAR_service_defense
+ agency_upgrade_time = HSM_BAR_service_upgrade
+ operation_cost = HSM_BAR_service_cost
+ operation_outcome = HSM_BAR_service_outcome
+ operative_slot = HSM_BAR_service_slots
+ crypto_strength = HSM_BAR_service_crypto
+ decryption_power_factor = HSM_BAR_service_decrypt_power
+ encryption = HSM_BAR_service_encryption
+ decryption = HSM_BAR_service_decryption
+}

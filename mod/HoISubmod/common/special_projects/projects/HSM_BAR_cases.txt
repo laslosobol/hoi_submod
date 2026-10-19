@@ -1,0 +1,356 @@
+HSM_BAR_project_case_rock = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_rock_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_rock_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_rock_complete = yes } }
+}
+
+HSM_BAR_project_case_titan = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_titan_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_titan_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_titan_complete = yes } }
+}
+
+HSM_BAR_project_case_entity = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_entity_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_entity_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_entity_complete = yes } }
+}
+
+HSM_BAR_project_case_amulet = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_amulet_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_amulet_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_amulet_complete = yes } }
+}
+
+HSM_BAR_project_case_plants = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_plants_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_plants_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_plants_complete = yes } }
+}
+
+HSM_BAR_project_case_reactor = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_reactor_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_reactor_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_reactor_complete = yes } }
+}
+
+HSM_BAR_project_case_crown = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_crown_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_crown_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_crown_complete = yes } }
+}
+
+HSM_BAR_project_case_chalice = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_chalice_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_chalice_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_chalice_complete = yes } }
+}
+
+HSM_BAR_project_case_phylactery = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_phylactery_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_phylactery_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_phylactery_complete = yes } }
+}
+
+HSM_BAR_project_case_darkheart = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_darkheart_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_darkheart_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_darkheart_complete = yes } }
+}
+
+HSM_BAR_project_case_grover = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_grover_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_grover_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_grover_complete = yes } }
+}
+
+HSM_BAR_project_case_rosa = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_rosa_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_rosa_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_rosa_complete = yes } }
+}
+
+HSM_BAR_project_case_herald = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_herald_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_herald_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_herald_complete = yes } }
+}
+
+HSM_BAR_project_case_sombra = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_sombra_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_sombra_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_sombra_complete = yes } }
+}
+
+HSM_BAR_project_case_echo = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_echo_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_echo_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_echo_complete = yes } }
+}
+
+HSM_BAR_project_case_marsh = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_marsh_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_marsh_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_marsh_complete = yes } }
+}
+
+HSM_BAR_project_case_compass = {
+    specialization = specialization_magical
+    icon = GFX_sp_magical_thaumaturgical_diagnoses
+    project_tags = { sp_tag_magical }
+    allowed = { original_tag = BAR has_dlc = "Gotterdammerung" }
+    visible = {
+        FROM = { HSM_BAR_service_legacy_visible = yes
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_institute_open
+            has_country_flag = HSM_BAR_case_compass_known
+        }
+    }
+    available = { FROM = { HSM_BAR_cases_compass_eligible = yes } }
+    resource_cost = { resources = { crystals = 1 steel = 1 } }
+    complexity = sp_complexity.small
+    prototype_time = 15
+    breakthrough_cost = { specialization_magical = 0 }
+    ai_will_do = { base = 5 }
+    project_output = { country_effects = { HSM_BAR_cases_compass_complete = yes } }
+}

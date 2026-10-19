@@ -1,0 +1,549 @@
+# Public setup effect: country scope, called by the common institute focus.
+# The facility check can be retried after liberation; bootstrap grants happen only once.
+HSM_BAR_establish_institute = {
+    if = {
+        limit = {
+            tag = BAR
+            has_country_flag = HSM_BAR_active
+        }
+        set_country_flag = HSM_BAR_institute_open
+        set_technology = { tech_magical_facilities = 1 popup = no }
+        if = {
+            limit = { has_dlc = "Gotterdammerung" }
+            if = {
+                limit = { NOT = { HSM_BAR_research_has_facility = yes } }
+                if = {
+                    limit = {
+                        capital_scope = {
+                            is_owned_by = PREV
+                            is_fully_controlled_by = PREV
+                            can_build_facility_here = yes
+                            is_demilitarized_zone = no
+                        }
+                    }
+                    capital_scope = {
+                        construct_building_in_random_province = { magical_facility = 1 }
+                    }
+                }
+                else = {
+                    random_owned_controlled_state = {
+                        limit = {
+                            is_fully_controlled_by = PREV
+                            can_build_facility_here = yes
+                            is_demilitarized_zone = no
+                        }
+                        construct_building_in_random_province = { magical_facility = 1 }
+                    }
+                }
+            }
+            if = {
+                limit = { NOT = { has_country_flag = HSM_BAR_research_bootstrap_granted } }
+                set_country_flag = HSM_BAR_research_bootstrap_granted
+                add_breakthrough_points = { specialization = specialization_magical value = 2 }
+                generate_scientist_character = {
+                    skills = { specialization_magical = 2 }
+                }
+                custom_effect_tooltip = HSM_BAR_research_scientist_tt
+            }
+        }
+        custom_effect_tooltip = HSM_BAR_research_institute_tt
+    }
+}
+
+# Clinical Thaumaturgy: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_clinic_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_clinic_done } }
+        set_country_flag = HSM_BAR_research_clinic_ready
+        HSM_BAR_research_clinic_resolve = yes
+    }
+}
+
+HSM_BAR_research_clinic_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_clinic_eligible = yes
+            has_country_flag = HSM_BAR_research_clinic_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_clinic_consent has_country_flag = HSM_BAR_research_clinic_expedience } }
+            HSM_BAR_research_clinic_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_clinic_choice_pending } }
+            set_country_flag = HSM_BAR_research_clinic_choice_pending
+            country_event = { id = HSM_BAR_research.1 }
+        }
+    }
+}
+
+HSM_BAR_research_clinic_choose_consent = {
+    if = {
+        limit = {
+            HSM_BAR_research_clinic_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_clinic_consent has_country_flag = HSM_BAR_research_clinic_expedience } }
+        }
+        set_country_flag = HSM_BAR_research_clinic_consent
+        custom_effect_tooltip = HSM_BAR_research_clinic_consent_tt
+    }
+}
+
+HSM_BAR_research_clinic_choose_expedience = {
+    if = {
+        limit = {
+            HSM_BAR_research_clinic_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_clinic_consent has_country_flag = HSM_BAR_research_clinic_expedience } }
+        }
+        set_country_flag = HSM_BAR_research_clinic_expedience
+        custom_effect_tooltip = HSM_BAR_research_clinic_expedience_tt
+    }
+}
+
+HSM_BAR_research_clinic_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_clinic_eligible = yes
+            has_country_flag = HSM_BAR_research_clinic_ready
+            OR = { has_country_flag = HSM_BAR_research_clinic_consent has_country_flag = HSM_BAR_research_clinic_expedience }
+        }
+        set_country_flag = HSM_BAR_project_clinic_done
+        clr_country_flag = HSM_BAR_research_clinic_ready
+        clr_country_flag = HSM_BAR_research_clinic_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_clinic_bonus
+            bonus = 0.5
+            uses = 1
+            category = hospital_tech
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_clinic_consent }
+            add_political_power = -25
+            add_stability = 0.03
+            add_timed_idea = { idea = HSM_BAR_research_clinic_consent_idea days = 540 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_clinic_expedience }
+            add_political_power = -10
+            add_stability = -0.04
+            add_timed_idea = { idea = HSM_BAR_research_clinic_expedience_idea days = 365 }
+        }
+    }
+}
+
+# Civic Thaumic Grid: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_grid_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_grid_done } }
+        set_country_flag = HSM_BAR_research_grid_ready
+        HSM_BAR_research_grid_resolve = yes
+    }
+}
+
+HSM_BAR_research_grid_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_grid_eligible = yes
+            has_country_flag = HSM_BAR_research_grid_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_grid_distributed has_country_flag = HSM_BAR_research_grid_central } }
+            HSM_BAR_research_grid_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_grid_choice_pending } }
+            set_country_flag = HSM_BAR_research_grid_choice_pending
+            country_event = { id = HSM_BAR_research.2 }
+        }
+    }
+}
+
+HSM_BAR_research_grid_choose_distributed = {
+    if = {
+        limit = {
+            HSM_BAR_research_grid_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_grid_distributed has_country_flag = HSM_BAR_research_grid_central } }
+        }
+        set_country_flag = HSM_BAR_research_grid_distributed
+        custom_effect_tooltip = HSM_BAR_research_grid_distributed_tt
+    }
+}
+
+HSM_BAR_research_grid_choose_central = {
+    if = {
+        limit = {
+            HSM_BAR_research_grid_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_grid_distributed has_country_flag = HSM_BAR_research_grid_central } }
+        }
+        set_country_flag = HSM_BAR_research_grid_central
+        custom_effect_tooltip = HSM_BAR_research_grid_central_tt
+    }
+}
+
+HSM_BAR_research_grid_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_grid_eligible = yes
+            has_country_flag = HSM_BAR_research_grid_ready
+            OR = { has_country_flag = HSM_BAR_research_grid_distributed has_country_flag = HSM_BAR_research_grid_central }
+        }
+        set_country_flag = HSM_BAR_project_grid_done
+        clr_country_flag = HSM_BAR_research_grid_ready
+        clr_country_flag = HSM_BAR_research_grid_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_grid_bonus
+            bonus = 0.5
+            uses = 1
+            category = industry
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_grid_distributed }
+            add_political_power = -35
+            add_stability = 0.02
+            add_timed_idea = { idea = HSM_BAR_research_grid_distributed_idea days = 730 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_grid_central }
+            add_political_power = -20
+            add_stability = -0.02
+            add_timed_idea = { idea = HSM_BAR_research_grid_central_idea days = 730 }
+        }
+    }
+}
+
+# Anti-Domination Wards: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_wards_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_wards_done } }
+        set_country_flag = HSM_BAR_research_wards_ready
+        HSM_BAR_research_wards_resolve = yes
+    }
+}
+
+HSM_BAR_research_wards_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_wards_eligible = yes
+            has_country_flag = HSM_BAR_research_wards_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_wards_personal has_country_flag = HSM_BAR_research_wards_monitoring } }
+            HSM_BAR_research_wards_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_wards_choice_pending } }
+            set_country_flag = HSM_BAR_research_wards_choice_pending
+            country_event = { id = HSM_BAR_research.3 }
+        }
+    }
+}
+
+HSM_BAR_research_wards_choose_personal = {
+    if = {
+        limit = {
+            HSM_BAR_research_wards_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_wards_personal has_country_flag = HSM_BAR_research_wards_monitoring } }
+        }
+        set_country_flag = HSM_BAR_research_wards_personal
+        custom_effect_tooltip = HSM_BAR_research_wards_personal_tt
+    }
+}
+
+HSM_BAR_research_wards_choose_monitoring = {
+    if = {
+        limit = {
+            HSM_BAR_research_wards_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_wards_personal has_country_flag = HSM_BAR_research_wards_monitoring } }
+        }
+        set_country_flag = HSM_BAR_research_wards_monitoring
+        custom_effect_tooltip = HSM_BAR_research_wards_monitoring_tt
+    }
+}
+
+HSM_BAR_research_wards_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_wards_eligible = yes
+            has_country_flag = HSM_BAR_research_wards_ready
+            OR = { has_country_flag = HSM_BAR_research_wards_personal has_country_flag = HSM_BAR_research_wards_monitoring }
+        }
+        set_country_flag = HSM_BAR_project_wards_done
+        clr_country_flag = HSM_BAR_research_wards_ready
+        clr_country_flag = HSM_BAR_research_wards_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_wards_bonus
+            bonus = 0.5
+            uses = 1
+            category = race_tech
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_wards_personal }
+            add_political_power = -25
+            if = {
+                limit = { has_country_flag = HSM_BAR_directorate }
+
+                HSM_BAR_core_refresh = yes
+            }
+            else_if = {
+                limit = { has_country_flag = HSM_BAR_collegium }
+                add_stability = 0.03
+            }
+            add_timed_idea = { idea = HSM_BAR_research_wards_personal_idea days = 540 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_wards_monitoring }
+            add_political_power = -15
+            if = {
+                limit = { has_country_flag = HSM_BAR_directorate }
+
+                HSM_BAR_core_refresh = yes
+            }
+            else_if = {
+                limit = { has_country_flag = HSM_BAR_collegium }
+                add_stability = -0.03
+            }
+            add_timed_idea = { idea = HSM_BAR_research_wards_monitoring_idea days = 540 }
+        }
+    }
+}
+
+# Layered Anomaly Containment: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_containment_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_containment_done } }
+        set_country_flag = HSM_BAR_research_containment_ready
+        HSM_BAR_research_containment_resolve = yes
+    }
+}
+
+HSM_BAR_research_containment_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_containment_eligible = yes
+            has_country_flag = HSM_BAR_research_containment_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_containment_layered has_country_flag = HSM_BAR_research_containment_sealed } }
+            HSM_BAR_research_containment_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_containment_choice_pending } }
+            set_country_flag = HSM_BAR_research_containment_choice_pending
+            country_event = { id = HSM_BAR_research.4 }
+        }
+    }
+}
+
+HSM_BAR_research_containment_choose_layered = {
+    if = {
+        limit = {
+            HSM_BAR_research_containment_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_containment_layered has_country_flag = HSM_BAR_research_containment_sealed } }
+        }
+        set_country_flag = HSM_BAR_research_containment_layered
+        custom_effect_tooltip = HSM_BAR_research_containment_layered_tt
+    }
+}
+
+HSM_BAR_research_containment_choose_sealed = {
+    if = {
+        limit = {
+            HSM_BAR_research_containment_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_containment_layered has_country_flag = HSM_BAR_research_containment_sealed } }
+        }
+        set_country_flag = HSM_BAR_research_containment_sealed
+        custom_effect_tooltip = HSM_BAR_research_containment_sealed_tt
+    }
+}
+
+HSM_BAR_research_containment_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_containment_eligible = yes
+            has_country_flag = HSM_BAR_research_containment_ready
+            OR = { has_country_flag = HSM_BAR_research_containment_layered has_country_flag = HSM_BAR_research_containment_sealed }
+        }
+        set_country_flag = HSM_BAR_project_containment_done
+        clr_country_flag = HSM_BAR_research_containment_ready
+        clr_country_flag = HSM_BAR_research_containment_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_containment_bonus
+            bonus = 0.5
+            uses = 1
+            category = electronics
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_containment_layered }
+            add_political_power = -35
+            add_timed_idea = { idea = HSM_BAR_research_containment_layered_idea days = 540 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_containment_sealed }
+            add_political_power = -20
+
+            HSM_BAR_core_refresh = yes
+            add_timed_idea = { idea = HSM_BAR_research_containment_sealed_idea days = 730 }
+        }
+    }
+}
+
+# Residual Magical Forensics: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_forensics_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_forensics_done } }
+        set_country_flag = HSM_BAR_research_forensics_ready
+        HSM_BAR_research_forensics_resolve = yes
+    }
+}
+
+HSM_BAR_research_forensics_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_forensics_eligible = yes
+            has_country_flag = HSM_BAR_research_forensics_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_forensics_reviewed has_country_flag = HSM_BAR_research_forensics_classified } }
+            HSM_BAR_research_forensics_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_forensics_choice_pending } }
+            set_country_flag = HSM_BAR_research_forensics_choice_pending
+            country_event = { id = HSM_BAR_research.5 }
+        }
+    }
+}
+
+HSM_BAR_research_forensics_choose_reviewed = {
+    if = {
+        limit = {
+            HSM_BAR_research_forensics_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_forensics_reviewed has_country_flag = HSM_BAR_research_forensics_classified } }
+        }
+        set_country_flag = HSM_BAR_research_forensics_reviewed
+        custom_effect_tooltip = HSM_BAR_research_forensics_reviewed_tt
+    }
+}
+
+HSM_BAR_research_forensics_choose_classified = {
+    if = {
+        limit = {
+            HSM_BAR_research_forensics_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_forensics_reviewed has_country_flag = HSM_BAR_research_forensics_classified } }
+        }
+        set_country_flag = HSM_BAR_research_forensics_classified
+        custom_effect_tooltip = HSM_BAR_research_forensics_classified_tt
+    }
+}
+
+HSM_BAR_research_forensics_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_forensics_eligible = yes
+            has_country_flag = HSM_BAR_research_forensics_ready
+            OR = { has_country_flag = HSM_BAR_research_forensics_reviewed has_country_flag = HSM_BAR_research_forensics_classified }
+        }
+        set_country_flag = HSM_BAR_project_forensics_done
+        clr_country_flag = HSM_BAR_research_forensics_ready
+        clr_country_flag = HSM_BAR_research_forensics_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_forensics_bonus
+            bonus = 0.5
+            uses = 1
+            category = electronics
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_forensics_reviewed }
+            add_political_power = -35
+
+            add_timed_idea = { idea = HSM_BAR_research_forensics_reviewed_idea days = 540 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_forensics_classified }
+            add_political_power = -20
+
+            add_timed_idea = { idea = HSM_BAR_research_forensics_classified_idea days = 540 }
+        }
+        HSM_BAR_core_refresh = yes
+    }
+}
+
+# Thaumic Suppression Apparatus: ready is proof of completed native research or a paid fallback term.
+HSM_BAR_research_suppression_complete = {
+    if = {
+        limit = { tag = BAR NOT = { has_country_flag = HSM_BAR_project_suppression_done } }
+        set_country_flag = HSM_BAR_research_suppression_ready
+        HSM_BAR_research_suppression_resolve = yes
+    }
+}
+
+HSM_BAR_research_suppression_resolve = {
+    if = {
+        limit = {
+            HSM_BAR_research_suppression_eligible = yes
+            has_country_flag = HSM_BAR_research_suppression_ready
+        }
+        if = {
+            limit = { OR = { has_country_flag = HSM_BAR_research_suppression_reversible has_country_flag = HSM_BAR_research_suppression_permanent } }
+            HSM_BAR_research_suppression_finish = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_research_suppression_choice_pending } }
+            set_country_flag = HSM_BAR_research_suppression_choice_pending
+            country_event = { id = HSM_BAR_research.6 }
+        }
+    }
+}
+
+HSM_BAR_research_suppression_choose_reversible = {
+    if = {
+        limit = {
+            HSM_BAR_research_suppression_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_suppression_reversible has_country_flag = HSM_BAR_research_suppression_permanent } }
+        }
+        set_country_flag = HSM_BAR_research_suppression_reversible
+        custom_effect_tooltip = HSM_BAR_research_suppression_reversible_tt
+    }
+}
+
+HSM_BAR_research_suppression_choose_permanent = {
+    if = {
+        limit = {
+            HSM_BAR_research_suppression_eligible = yes
+            NOT = { OR = { has_country_flag = HSM_BAR_research_suppression_reversible has_country_flag = HSM_BAR_research_suppression_permanent } }
+        }
+        set_country_flag = HSM_BAR_research_suppression_permanent
+        custom_effect_tooltip = HSM_BAR_research_suppression_permanent_tt
+    }
+}
+
+HSM_BAR_research_suppression_finish = {
+    if = {
+        limit = {
+            HSM_BAR_research_suppression_eligible = yes
+            has_country_flag = HSM_BAR_research_suppression_ready
+            OR = { has_country_flag = HSM_BAR_research_suppression_reversible has_country_flag = HSM_BAR_research_suppression_permanent }
+        }
+        set_country_flag = HSM_BAR_project_suppression_done
+        clr_country_flag = HSM_BAR_research_suppression_ready
+        clr_country_flag = HSM_BAR_research_suppression_choice_pending
+        add_tech_bonus = {
+            name = HSM_BAR_research_suppression_bonus
+            bonus = 0.5
+            uses = 1
+            category = race_tech
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_research_suppression_reversible }
+            add_political_power = -40
+
+            add_timed_idea = { idea = HSM_BAR_research_suppression_reversible_idea days = 540 }
+        }
+        else_if = {
+            limit = { has_country_flag = HSM_BAR_research_suppression_permanent }
+            add_political_power = -50
+
+            add_timed_idea = { idea = HSM_BAR_research_suppression_permanent_idea days = 730 }
+        }
+        HSM_BAR_core_refresh = yes
+    }
+}

@@ -1,0 +1,84 @@
+# Country scope. Main owns route entry, dissolution and the pulse hook.
+HSM_BAR_collegium_initialize = {
+ if = {
+  limit = { HSM_BAR_collegium_active = yes NOT = { has_country_flag = HSM_BAR_collegium_initialized } }
+  set_country_flag = HSM_BAR_collegium_initialized
+  add_ideas = HSM_BAR_collegium_provisional
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  add_dynamic_modifier = { modifier = HSM_BAR_collegium_services }
+ }
+}
+# These variables are modifier outputs, never thresholds, balances or spendable points.
+# Each contribution names completed work; refresh always rebuilds from those facts.
+HSM_BAR_collegium_refresh = {
+ hidden_effect = {
+  set_variable = { HSM_BAR_collegium_stability = 0 }
+  set_variable = { HSM_BAR_collegium_research = 0 }
+  set_variable = { HSM_BAR_collegium_construction = 0 }
+  set_variable = { HSM_BAR_collegium_supply = 0 }
+  set_variable = { HSM_BAR_collegium_recovery = 0 }
+  if = {
+   limit = { HSM_BAR_collegium_active = yes has_country_flag = HSM_BAR_collegium_initialized }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_independent_archive } add_to_variable = { HSM_BAR_collegium_stability = 0.03 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_inspectors } add_to_variable = { HSM_BAR_collegium_stability = 0.03 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_clinic_access } add_to_variable = { HSM_BAR_collegium_stability = 0.04 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_clinic_followup } add_to_variable = { HSM_BAR_collegium_research = 0.02 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_school_open } add_to_variable = { HSM_BAR_collegium_research = 0.03 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_research_board } add_to_variable = { HSM_BAR_collegium_research = 0.02 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_peer_review } add_to_variable = { HSM_BAR_collegium_research = 0.03 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_cohort_trained } add_to_variable = { HSM_BAR_collegium_research = 0.03 } }
+   if = { limit = { has_country_flag = HSM_BAR_collegium_grid_workshops } add_to_variable = { HSM_BAR_collegium_research = 0.02 } }
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_wartime has_war = yes has_country_flag = HSM_BAR_collegium_defence_protocol }
+    set_variable = { HSM_BAR_collegium_supply = -0.08 }
+    set_variable = { HSM_BAR_collegium_recovery = 0.08 }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_reserve_equipped } add_to_variable = { HSM_BAR_collegium_supply = -0.05 } }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_clinic_rounds_done } add_to_variable = { HSM_BAR_collegium_recovery = 0.05 } }
+    if = { limit = { NOT = { has_country_flag = HSM_BAR_collegium_emergency_mandate } } add_to_variable = { HSM_BAR_collegium_stability = -0.02 } }
+   }
+   else = {
+    if = { limit = { has_country_flag = HSM_BAR_grid_program } add_to_variable = { HSM_BAR_collegium_construction = 0.05 } }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_grid_households } add_to_variable = { HSM_BAR_collegium_construction = 0.05 } }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_civil_reserve } add_to_variable = { HSM_BAR_collegium_construction = 0.05 } }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_workshops_equipped } add_to_variable = { HSM_BAR_collegium_construction = 0.05 } }
+    if = { limit = { has_country_flag = HSM_BAR_collegium_fields_repaired } add_to_variable = { HSM_BAR_collegium_construction = 0.05 } }
+   }
+  }
+  force_update_dynamic_modifier = yes
+ }
+}
+# No periodic upkeep. Peace returns staff and instruments once, without repeatable rewards.
+HSM_BAR_collegium_pulse = {
+ if = {
+  limit = { HSM_BAR_collegium_active = yes has_country_flag = HSM_BAR_collegium_initialized }
+  if = {
+   limit = { has_country_flag = HSM_BAR_collegium_wartime has_war = no }
+   clr_country_flag = HSM_BAR_collegium_wartime
+   if = {
+    limit = { NOT = { has_country_flag = HSM_BAR_collegium_return_reported } }
+    set_country_flag = HSM_BAR_collegium_return_reported
+    country_event = { id = HSM_BAR_collegium.18 days = 1 }
+   }
+  }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+HSM_BAR_collegium_remove_constitution = {
+ remove_ideas = HSM_BAR_collegium_provisional
+ remove_ideas = HSM_BAR_collegium_open_spirit
+ remove_ideas = HSM_BAR_collegium_republic_spirit
+ remove_ideas = HSM_BAR_collegium_tutelage_spirit
+}
+# Optional synchronous dissolution hook. Refund only personnel whose new assignment is recorded.
+HSM_BAR_collegium_cancel_programs = {
+ if = { limit = { has_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned } add_manpower = 200 clr_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned }
+ clr_country_flag = HSM_BAR_collegium_train_cohort_pending
+ clr_country_flag = HSM_BAR_collegium_equip_workshops_pending
+ clr_country_flag = HSM_BAR_collegium_clinic_rounds_pending
+ if = { limit = { has_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned } add_manpower = 100 clr_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned }
+ clr_country_flag = HSM_BAR_collegium_repair_fields_pending
+ clr_country_flag = HSM_BAR_collegium_settlement_houses_pending
+ clr_country_flag = HSM_BAR_collegium_onward_travel_pending
+ clr_country_flag = HSM_BAR_collegium_seek_mandate_pending
+ clr_country_flag = HSM_BAR_collegium_maintain_reserve_pending
+}

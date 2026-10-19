@@ -1,0 +1,521 @@
+add_namespace = hsm_bar_cases
+
+country_event = {
+    id = hsm_bar_cases.1
+    title = hsm_bar_cases.1.t
+    desc = hsm_bar_cases.1.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_rock_done }
+    option = {
+        name = hsm_bar_cases.1.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_rock_access = yes
+            NOT = { has_political_power < 15 }
+            NOT = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_rock_apply_tt
+        hidden_effect = { HSM_BAR_cases_rock_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.1.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict } }
+        custom_effect_tooltip = HSM_BAR_outcome_rock_reserve_tt
+        hidden_effect = { HSM_BAR_cases_rock_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.2
+    title = hsm_bar_cases.2.t
+    desc = hsm_bar_cases.2.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_titan_done }
+    option = {
+        name = hsm_bar_cases.2.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_titan_access = yes
+            NOT = { has_political_power < 20 }
+            NOT = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_titan_apply_tt
+        hidden_effect = { HSM_BAR_cases_titan_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.2.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict } }
+        custom_effect_tooltip = HSM_BAR_outcome_titan_reserve_tt
+        hidden_effect = { HSM_BAR_cases_titan_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.3
+    title = hsm_bar_cases.3.t
+    desc = hsm_bar_cases.3.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_entity_done }
+    option = {
+        name = hsm_bar_cases.3.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_entity_access = yes
+            NOT = { has_political_power < 25 }
+            NOT = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_entity_apply_tt
+        hidden_effect = { HSM_BAR_cases_entity_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.3.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict } }
+        custom_effect_tooltip = HSM_BAR_outcome_entity_reserve_tt
+        hidden_effect = { HSM_BAR_cases_entity_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.4
+    title = hsm_bar_cases.4.t
+    desc = hsm_bar_cases.4.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_amulet_done }
+    option = {
+        name = hsm_bar_cases.4.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_amulet_access = yes
+            NOT = { has_political_power < 15 }
+            NOT = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_amulet_apply_tt
+        hidden_effect = { HSM_BAR_cases_amulet_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.4.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict } }
+        custom_effect_tooltip = HSM_BAR_outcome_amulet_reserve_tt
+        hidden_effect = { HSM_BAR_cases_amulet_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.5
+    title = hsm_bar_cases.5.t
+    desc = hsm_bar_cases.5.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_plants_done }
+    option = {
+        name = hsm_bar_cases.5.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_plants_access = yes
+            NOT = { has_political_power < 15 }
+            NOT = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_plants_apply_tt
+        hidden_effect = { HSM_BAR_cases_plants_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.5.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict } }
+        custom_effect_tooltip = HSM_BAR_outcome_plants_reserve_tt
+        hidden_effect = { HSM_BAR_cases_plants_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.6
+    title = hsm_bar_cases.6.t
+    desc = hsm_bar_cases.6.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_reactor_done }
+    option = {
+        name = hsm_bar_cases.6.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_reactor_access = yes
+            NOT = { has_political_power < 30 }
+            NOT = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved  }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_reactor_apply_tt
+        hidden_effect = { HSM_BAR_cases_reactor_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.6.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved  } }
+        custom_effect_tooltip = HSM_BAR_outcome_reactor_reserve_tt
+        hidden_effect = { HSM_BAR_cases_reactor_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.7
+    title = hsm_bar_cases.7.t
+    desc = hsm_bar_cases.7.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_crown_done }
+    option = {
+        name = hsm_bar_cases.7.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_crown_access = yes
+            NOT = { has_political_power < 25 }
+            NOT = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved  }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_crown_apply_tt
+        hidden_effect = { HSM_BAR_cases_crown_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.7.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved  } }
+        custom_effect_tooltip = HSM_BAR_outcome_crown_reserve_tt
+        hidden_effect = { HSM_BAR_cases_crown_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.8
+    title = hsm_bar_cases.8.t
+    desc = hsm_bar_cases.8.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_chalice_done }
+    option = {
+        name = hsm_bar_cases.8.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_chalice_access = yes
+            NOT = { has_political_power < 20 }
+            NOT = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved has_country_flag = HSM_BAR_case_chalice_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_chalice_apply_tt
+        hidden_effect = { HSM_BAR_cases_chalice_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.8.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved has_country_flag = HSM_BAR_case_chalice_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_chalice_reserve_tt
+        hidden_effect = { HSM_BAR_cases_chalice_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.9
+    title = hsm_bar_cases.9.t
+    desc = hsm_bar_cases.9.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_phylactery_done }
+    option = {
+        name = hsm_bar_cases.9.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_phylactery_access = yes
+            NOT = { has_political_power < 25 }
+            NOT = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved has_country_flag = HSM_BAR_case_phylactery_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_phylactery_apply_tt
+        hidden_effect = { HSM_BAR_cases_phylactery_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.9.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved has_country_flag = HSM_BAR_case_phylactery_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_phylactery_reserve_tt
+        hidden_effect = { HSM_BAR_cases_phylactery_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.10
+    title = hsm_bar_cases.10.t
+    desc = hsm_bar_cases.10.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_darkheart_done }
+    option = {
+        name = hsm_bar_cases.10.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_darkheart_access = yes
+            NOT = { has_political_power < 30 }
+            NOT = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved has_country_flag = HSM_BAR_case_darkheart_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_darkheart_apply_tt
+        hidden_effect = { HSM_BAR_cases_darkheart_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.10.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved has_country_flag = HSM_BAR_case_darkheart_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_darkheart_reserve_tt
+        hidden_effect = { HSM_BAR_cases_darkheart_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.11
+    title = hsm_bar_cases.11.t
+    desc = hsm_bar_cases.11.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_grover_done }
+    option = {
+        name = hsm_bar_cases.11.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_grover_access = yes
+            NOT = { has_political_power < 15 }
+            NOT = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved has_country_flag = HSM_BAR_case_grover_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_grover_apply_tt
+        hidden_effect = { HSM_BAR_cases_grover_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.11.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved has_country_flag = HSM_BAR_case_grover_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_grover_reserve_tt
+        hidden_effect = { HSM_BAR_cases_grover_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.12
+    title = hsm_bar_cases.12.t
+    desc = hsm_bar_cases.12.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_rosa_done }
+    option = {
+        name = hsm_bar_cases.12.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_rosa_access = yes
+            NOT = { has_political_power < 15 }
+            NOT = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved has_country_flag = HSM_BAR_case_rosa_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_rosa_apply_tt
+        hidden_effect = { HSM_BAR_cases_rosa_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.12.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved has_country_flag = HSM_BAR_case_rosa_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_rosa_reserve_tt
+        hidden_effect = { HSM_BAR_cases_rosa_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.13
+    title = hsm_bar_cases.13.t
+    desc = hsm_bar_cases.13.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_herald_done }
+    option = {
+        name = hsm_bar_cases.13.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_herald_access = yes
+            NOT = { has_political_power < 20 }
+            NOT = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved has_country_flag = HSM_BAR_case_herald_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_herald_apply_tt
+        hidden_effect = { HSM_BAR_cases_herald_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.13.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved has_country_flag = HSM_BAR_case_herald_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_herald_reserve_tt
+        hidden_effect = { HSM_BAR_cases_herald_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.14
+    title = hsm_bar_cases.14.t
+    desc = hsm_bar_cases.14.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_sombra_done }
+    option = {
+        name = hsm_bar_cases.14.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_sombra_access = yes
+            NOT = { has_political_power < 20 }
+            NOT = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved has_country_flag = HSM_BAR_case_sombra_closed }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_sombra_apply_tt
+        hidden_effect = { HSM_BAR_cases_sombra_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.14.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved has_country_flag = HSM_BAR_case_sombra_closed } }
+        custom_effect_tooltip = HSM_BAR_outcome_sombra_reserve_tt
+        hidden_effect = { HSM_BAR_cases_sombra_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.15
+    title = hsm_bar_cases.15.t
+    desc = hsm_bar_cases.15.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_echo_done }
+    option = {
+        name = hsm_bar_cases.15.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_echo_access = yes
+            NOT = { has_political_power < 10 }
+            NOT = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved  }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_echo_apply_tt
+        hidden_effect = { HSM_BAR_cases_echo_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.15.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved  } }
+        custom_effect_tooltip = HSM_BAR_outcome_echo_reserve_tt
+        hidden_effect = { HSM_BAR_cases_echo_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.16
+    title = hsm_bar_cases.16.t
+    desc = hsm_bar_cases.16.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_marsh_done }
+    option = {
+        name = hsm_bar_cases.16.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_marsh_access = yes
+            NOT = { has_political_power < 10 }
+            NOT = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved  }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_marsh_apply_tt
+        hidden_effect = { HSM_BAR_cases_marsh_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.16.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved  } }
+        custom_effect_tooltip = HSM_BAR_outcome_marsh_reserve_tt
+        hidden_effect = { HSM_BAR_cases_marsh_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.17
+    title = hsm_bar_cases.17.t
+    desc = hsm_bar_cases.17.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_study_compass_done }
+    option = {
+        name = hsm_bar_cases.17.a
+        trigger = {
+            HSM_BAR_cases_actor = yes
+            has_country_flag = HSM_BAR_service_founded
+            HSM_BAR_cases_compass_access = yes
+            NOT = { has_political_power < 10 }
+            NOT = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved  }
+        }
+        custom_effect_tooltip = HSM_BAR_outcome_compass_apply_tt
+        hidden_effect = { HSM_BAR_cases_compass_apply = yes }
+        ai_chance = { factor = 60 }
+    }
+    option = {
+        name = hsm_bar_cases.17.b
+        trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved  } }
+        custom_effect_tooltip = HSM_BAR_outcome_compass_reserve_tt
+        hidden_effect = { HSM_BAR_cases_compass_reserve = yes }
+        ai_chance = { factor = 40 }
+    }
+    option = { name = HSM_BAR_cases_later ai_chance = { factor = 0 } }
+}
+
+country_event = {
+    id = hsm_bar_cases.30
+    title = hsm_bar_cases.30.t
+    desc = hsm_bar_cases.30.d
+    picture = GFX_report_event_generic_research_lab
+    is_triggered_only = yes
+    trigger = { HSM_BAR_case_enabled = yes has_country_flag = HSM_BAR_case_zebrica_inconclusive }
+    option = { name = hsm_bar_cases.30.a }
+}

@@ -1,0 +1,135 @@
+add_namespace = hsm_bar_mtc_frontiers
+country_event = {
+ id = hsm_bar_mtc_frontiers.7
+ title = HSM_BAR_mtc_frontiers_ZES_hearing_t
+ desc = HSM_BAR_mtc_frontiers_ZES_hearing_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_access = yes ZES = { exists = yes } }
+ option = {
+  name = HSM_BAR_mtc_frontiers_envoy
+  trigger = {
+   HSM_BAR_mtc_frontiers_access = yes
+   HSM_BAR_dip_ZES_valid = yes
+   NOT = {
+    has_country_flag = HSM_BAR_ZES_agreement
+    has_country_flag = HSM_BAR_dip_ZES_pending
+    has_country_flag = HSM_BAR_dip_ZES_cooldown
+    has_country_flag = HSM_BAR_dip_ZES_rejected
+   }
+  }
+  if = {
+   limit = {
+    HSM_BAR_mtc_frontiers_access = yes HSM_BAR_dip_ZES_valid = yes
+    NOT = {
+     has_country_flag = HSM_BAR_ZES_agreement
+     has_country_flag = HSM_BAR_dip_ZES_pending
+     has_country_flag = HSM_BAR_dip_ZES_cooldown
+     has_country_flag = HSM_BAR_dip_ZES_rejected
+    }
+   }
+   ZES = { HSM_BAR_dip_ZES_challenge = yes }
+  }
+ }
+ option = {
+  name = HSM_BAR_mtc_frontiers_report_noted
+ }
+}
+
+country_event = {
+ id = hsm_bar_mtc_frontiers.8
+ title = HSM_BAR_mtc_frontiers_OLV_hearing_t
+ desc = HSM_BAR_mtc_frontiers_OLV_hearing_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_access = yes OLV = { exists = yes } }
+ option = {
+  name = HSM_BAR_mtc_frontiers_envoy
+  trigger = {
+   HSM_BAR_mtc_frontiers_access = yes
+   HSM_BAR_dip_OLV_valid = yes
+   NOT = {
+    has_country_flag = HSM_BAR_OLV_agreement
+    has_country_flag = HSM_BAR_dip_OLV_pending
+    has_country_flag = HSM_BAR_dip_OLV_cooldown
+    has_country_flag = HSM_BAR_dip_OLV_rejected
+   }
+  }
+  if = {
+   limit = {
+    HSM_BAR_mtc_frontiers_access = yes HSM_BAR_dip_OLV_valid = yes
+    NOT = {
+     has_country_flag = HSM_BAR_OLV_agreement
+     has_country_flag = HSM_BAR_dip_OLV_pending
+     has_country_flag = HSM_BAR_dip_OLV_cooldown
+     has_country_flag = HSM_BAR_dip_OLV_rejected
+    }
+   }
+   OLV = { HSM_BAR_dip_OLV_challenge = yes }
+  }
+ }
+ option = {
+  name = HSM_BAR_mtc_frontiers_report_noted
+ }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.1
+ title = HSM_BAR_mtc_frontiers_assembly_t
+ desc = HSM_BAR_mtc_frontiers_assembly_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_access = yes }
+ option = { name = HSM_BAR_mtc_frontiers_assembly_a }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.2
+ title = HSM_BAR_mtc_frontiers_ZES_vote_t
+ desc = HSM_BAR_mtc_frontiers_ZES_vote_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_route = yes has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal }
+ option = { name = HSM_BAR_mtc_frontiers_mandate_noted }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.3
+ title = HSM_BAR_mtc_frontiers_OLV_vote_t
+ desc = HSM_BAR_mtc_frontiers_OLV_vote_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_route = yes has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal }
+ option = { name = HSM_BAR_mtc_frontiers_mandate_noted }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.4
+ title = HSM_BAR_mtc_frontiers_peace_t
+ desc = HSM_BAR_mtc_frontiers_peace_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_route = yes has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory }
+ option = { name = HSM_BAR_mtc_frontiers_peace_a }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.5
+ title = HSM_BAR_mtc_frontiers_family_t
+ desc = {
+  trigger = { has_character = BAR_silver_star has_country_flag = barrad_silver_star_alive }
+  text = HSM_BAR_mtc_frontiers_family_d
+ }
+ desc = {
+  trigger = { NOT = { AND = { has_character = BAR_silver_star has_country_flag = barrad_silver_star_alive } } }
+  text = HSM_BAR_mtc_frontiers_delegation_d
+ }
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_access = yes has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory has_war = no }
+ option = { name = HSM_BAR_mtc_frontiers_family_a }
+}
+country_event = {
+ id = hsm_bar_mtc_frontiers.6
+ title = HSM_BAR_mtc_frontiers_citizens_t
+ desc = HSM_BAR_mtc_frontiers_citizens_d
+ picture = GFX_event_river_coalition_summit
+ is_triggered_only = yes
+ trigger = { HSM_BAR_mtc_frontiers_route = yes has_country_flag = HSM_BAR_mtc_frontiers_citizenship_report }
+ option = { name = HSM_BAR_mtc_frontiers_citizens_a }
+}

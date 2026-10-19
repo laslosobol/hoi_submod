@@ -1,0 +1,152 @@
+HSM_BAR_cases_equus = {
+    HSM_BAR_rumor_sombra = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_sombra_rumor } any_country = { HSM_BAR_case_sombra_lead = yes } }
+        available = { HSM_BAR_cases_sombra_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_sombra_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_darkheart = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_darkheart_rumor } any_country = { HSM_BAR_case_darkheart_lead = yes } }
+        available = { HSM_BAR_cases_darkheart_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_darkheart_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_crown_equus = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { HSM_BAR_cases_crown_equus_rumor_available = yes }
+        available = { HSM_BAR_cases_crown_equus_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_crown_equus_rumor_complete = yes }
+        ai_will_do = { factor = 1 }
+    }
+}
+
+HSM_BAR_cases_griffonia = {
+    HSM_BAR_rumor_grover = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_grover_rumor } any_country = { HSM_BAR_case_grover_lead = yes } }
+        available = { HSM_BAR_cases_grover_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_grover_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_herald = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_herald_rumor } any_country = { HSM_BAR_case_herald_lead = yes } }
+        available = { HSM_BAR_cases_herald_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_herald_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_crown_griffonia = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { HSM_BAR_cases_crown_griffonia_rumor_available = yes }
+        available = { HSM_BAR_cases_crown_griffonia_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_crown_griffonia_rumor_complete = yes }
+        ai_will_do = { factor = 1 }
+    }
+}
+
+HSM_BAR_cases_north = {
+    HSM_BAR_rumor_rosa = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_rosa_rumor } any_country = { HSM_BAR_case_rosa_lead = yes } }
+        available = { HSM_BAR_cases_rosa_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_rosa_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_chalice = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_chalice_rumor } any_country = { HSM_BAR_case_chalice_lead = yes } }
+        available = { HSM_BAR_cases_chalice_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_chalice_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_phylactery = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_phylactery_rumor } any_country = { HSM_BAR_case_phylactery_lead = yes } }
+        available = { HSM_BAR_cases_phylactery_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_phylactery_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+}
+
+HSM_BAR_cases_local = {
+    HSM_BAR_rumor_echo = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_echo_rumor }  }
+        available = { HSM_BAR_cases_echo_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_echo_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_compass = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_compass_rumor }  }
+        available = { HSM_BAR_cases_compass_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_compass_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_reactor = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_reactor_rumor } 624 = { nuclear_reactor > 0 } }
+        available = { HSM_BAR_cases_reactor_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_reactor_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+}
+
+HSM_BAR_cases_riverlands = {
+    HSM_BAR_rumor_marsh = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_marsh_rumor }  }
+        available = { HSM_BAR_cases_marsh_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_marsh_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+}
+
+HSM_BAR_cases_zebrica = {
+    HSM_BAR_rumor_zebrica = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { NOT = { has_country_flag = HSM_BAR_case_zebrica_rumor }  }
+        available = { HSM_BAR_cases_zebrica_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_zebrica_rumor_complete = yes }
+        ai_will_do = { factor = 2 }
+    }
+    HSM_BAR_rumor_crown_zebrica = {
+        icon = generic_political_discourse
+        cost = 20
+        days_remove = 21
+        visible = { HSM_BAR_cases_crown_zebrica_rumor_available = yes }
+        available = { HSM_BAR_cases_crown_zebrica_rumor_available = yes }
+        remove_effect = { HSM_BAR_cases_crown_zebrica_rumor_complete = yes }
+        ai_will_do = { factor = 1 }
+    }
+}

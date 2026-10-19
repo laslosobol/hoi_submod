@@ -1,0 +1,765 @@
+# Registry facts are independent of BAR's knowledge. Public completions retain FROM.
+# Native hook provenance and complete case coverage: HSM_BAR_anomalies_coverage.txt.
+HSM_BAR_anomalies_initialize = {
+    if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_active }
+        if = {
+            limit = { NOT = { has_country_flag = HSM_BAR_case_initialized } }
+            set_country_flag = HSM_BAR_case_initialized
+            set_global_flag = HSM_BAR_case_rock_exists
+            set_global_flag = HSM_BAR_case_titan_exists
+            set_global_flag = HSM_BAR_case_entity_exists
+            set_global_flag = HSM_BAR_case_amulet_exists
+            set_global_flag = HSM_BAR_case_chalice_exists
+            set_global_flag = HSM_BAR_case_rosa_exists
+            set_global_flag = HSM_BAR_case_sombra_historical
+        }
+        HSM_BAR_anomalies_pulse = yes
+    }
+}
+HSM_BAR_anomalies_pulse = {
+    if = {
+        limit = { tag = BAR has_country_flag = HSM_BAR_active }
+        # Native facts only. No known/investigated flags are granted here.
+        if = {
+            limit = {
+                OR = {
+                    has_country_flag = HSM_BAR_titan_was_dismantled
+                    has_country_flag = bar_titan_tech
+                    has_idea = BAR_leopold_titan_armor
+                }
+            }
+            set_global_flag = HSM_BAR_case_titan_dismantled
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_country_flag = bar_elemele5
+                    AND = {
+                        has_variable = titanHPmax
+                        has_variable = titanHP
+                        check_variable = { var = titanHP value = 0 compare = less_than_or_equals }
+                    }
+                }
+            }
+            set_global_flag = HSM_BAR_case_titan_defeated
+        }
+        if = {
+            limit = { has_country_flag = BAR_bird_saved }
+            set_global_flag = HSM_BAR_case_plants_manifested
+            set_global_flag = HSM_BAR_case_amulet_demonstrated
+        }
+        if = {
+            limit = { 624 = { nuclear_reactor > 0 } }
+            set_global_flag = HSM_BAR_case_reactor_built
+        }
+        for_each_scope_loop = {
+            array = global.HSM_BAR_case_crowns
+            if = {
+                limit = { has_country_flag = HSM_BAR_case_crown_leader }
+                if = {
+                    limit = { exists = yes has_country_leader_with_trait = crown_of_mind_control }
+                    HSM_BAR_case_crown_record_site = yes
+                }
+                else = {
+                    set_country_flag = HSM_BAR_case_crown_missing
+                    clr_country_flag = HSM_BAR_case_crown_leader
+                }
+            }
+        }
+    }
+}
+HSM_BAR_case_crown_record_site = {
+    capital_scope = {
+        PREV = { set_variable = { HSM_BAR_case_crown_site = PREV } }
+    }
+}
+HSM_BAR_case_crown_found = {
+    if = {
+        limit = { NOT = { has_country_flag = HSM_BAR_case_crown_exists } }
+        set_country_flag = HSM_BAR_case_crown_exists
+        add_to_array = { global.HSM_BAR_case_crowns = THIS }
+        HSM_BAR_case_crown_record_site = yes
+    }
+}
+HSM_BAR_case_crown_custody = {
+    HSM_BAR_case_crown_found = yes
+    clr_country_flag = HSM_BAR_case_crown_museum
+    clr_country_flag = HSM_BAR_case_crown_sealed
+    clr_country_flag = HSM_BAR_case_crown_leader
+    clr_country_flag = HSM_BAR_case_crown_missing
+    HSM_BAR_case_crown_record_site = yes
+}
+HSM_BAR_case_crown_custody_museum = {
+    HSM_BAR_case_crown_custody = yes
+    set_country_flag = HSM_BAR_case_crown_museum
+}
+HSM_BAR_case_crown_custody_sealed = {
+    HSM_BAR_case_crown_custody = yes
+    set_country_flag = HSM_BAR_case_crown_sealed
+}
+HSM_BAR_case_crown_custody_leader = {
+    HSM_BAR_case_crown_custody = yes
+    set_country_flag = HSM_BAR_case_crown_leader
+}
+HSM_BAR_case_chalice_found = {
+    if = {
+        limit = { NOT = { has_global_flag = HSM_BAR_case_chalice_found } }
+        set_global_flag = HSM_BAR_case_chalice_exists
+        set_global_flag = HSM_BAR_case_chalice_found
+        set_variable = { global.HSM_BAR_case_chalice_site = 415 }
+    }
+}
+HSM_BAR_case_rosa_lich = {
+    set_global_flag = HSM_BAR_case_rosa_lich
+    clr_global_flag = HSM_BAR_case_rosa_vampire
+    if = {
+        limit = { NOT = { has_global_flag = HSM_BAR_case_phylactery_created } }
+        set_global_flag = HSM_BAR_case_phylactery_created
+        set_variable = { global.HSM_BAR_case_phylactery_site = 415 }
+    }
+}
+HSM_BAR_case_rosa_vampire = {
+    set_global_flag = HSM_BAR_case_rosa_vampire
+    clr_global_flag = HSM_BAR_case_rosa_lich
+}
+# Execution is confirmed in deadempire.29, recoverable remains are not.
+HSM_BAR_case_rosa_executed = {
+    set_global_flag = HSM_BAR_case_rosa_executed
+    set_global_flag = HSM_BAR_case_rosa_no_body
+}
+HSM_BAR_case_rosa_final_rest = {
+    set_global_flag = HSM_BAR_case_rosa_final_rest
+    set_global_flag = HSM_BAR_case_rosa_no_body
+}
+HSM_BAR_case_magehold_destroyed = {
+    set_global_flag = HSM_BAR_case_magehold_destroyed
+    # Destroyed city does not prove an intact relic survived there.
+    if = {
+        limit = { NOT = { has_global_flag = HSM_BAR_case_chalice_secured } }
+        clr_global_flag = HSM_BAR_case_chalice_found
+    }
+    if = {
+        limit = { NOT = { has_global_flag = HSM_BAR_case_phylactery_secured } }
+        set_global_flag = HSM_BAR_case_phylactery_unlocated
+    }
+}
+HSM_BAR_case_grover_bones_found = {
+    if = {
+        limit = {
+            NOT = {
+                has_global_flag = HSM_BAR_case_grover_returned
+                has_global_flag = HSM_BAR_case_grover_bones_removed
+            }
+        }
+        set_global_flag = HSM_BAR_case_grover_bones_confirmed
+        set_variable = { global.HSM_BAR_case_grover_site = 665 }
+    }
+}
+HSM_BAR_case_grover_returned = {
+    set_global_flag = HSM_BAR_case_grover_returned
+    clr_global_flag = HSM_BAR_case_grover_bones_confirmed
+}
+# yale.130 describes retirement in furnished living quarters, not death.
+HSM_BAR_case_grover_retired = {
+    set_global_flag = HSM_BAR_case_grover_retired
+    clr_global_flag = HSM_BAR_case_grover_bones_confirmed
+}
+HSM_BAR_case_herald_transformed = {
+    set_global_flag = HSM_BAR_case_herald_transformed
+}
+HSM_BAR_case_herald_vanished = {
+    set_global_flag = HSM_BAR_case_herald_vanished
+    set_global_flag = HSM_BAR_case_herald_no_body
+}
+HSM_BAR_case_darkheart_created = {
+    if = {
+        limit = { NOT = { has_global_flag = HSM_BAR_case_darkheart_created } }
+        set_global_flag = HSM_BAR_case_darkheart_created
+        set_variable = { global.HSM_BAR_case_darkheart_site = 344 }
+    }
+}
+HSM_BAR_case_sombra_returned = {
+    HSM_BAR_case_darkheart_created = yes
+    set_global_flag = HSM_BAR_case_sombra_returned
+}
+HSM_BAR_case_sombra_removed = {
+    if = {
+        limit = { has_global_flag = HSM_BAR_case_sombra_returned }
+        set_global_flag = HSM_BAR_case_sombra_removed
+        set_global_flag = HSM_BAR_case_sombra_no_body
+        if = {
+            limit = { NOT = { has_global_flag = HSM_BAR_case_darkheart_secured } }
+            set_global_flag = HSM_BAR_case_darkheart_unlocated
+        }
+    }
+}
+HSM_BAR_case_failed = {
+    hidden_effect = {
+        clr_country_flag = HSM_BAR_case_last_operation_success
+        set_country_flag = HSM_BAR_case_last_operation_expired
+        country_event = { id = hsm_bar_anomaly.2 }
+    }
+}
+HSM_BAR_case_success = {
+    clr_country_flag = HSM_BAR_case_last_operation_expired
+    set_country_flag = HSM_BAR_case_last_operation_success
+}
+# Survey grants evidence only through an explicit BAR action.
+HSM_BAR_case_survey_target = {
+    FROM = { set_country_flag = HSM_BAR_case_surveyed }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_grover_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_grover_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_herald_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_herald_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_rosa_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_rosa_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_chalice_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_chalice_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_phylactery_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_phylactery_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_darkheart_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_darkheart_known
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_sombra_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_sombra_known
+    }
+    for_each_scope_loop = {
+        array = global.HSM_BAR_case_crowns
+        if = {
+            limit = { HSM_BAR_case_crown_at_target = yes has_country_flag = HSM_BAR_case_crown_rumor }
+            set_country_flag = HSM_BAR_case_crown_known
+            ROOT = { set_country_flag = HSM_BAR_case_crown_known }
+        }
+    }
+}
+HSM_BAR_operation_recon_complete = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = { FROM = { HSM_BAR_operation_recon_target = yes } }
+        HSM_BAR_case_survey_target = yes
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_survey_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+# Surviving records follow evidenced cases and current territorial custody.
+HSM_BAR_case_read_archives = {
+    if = {
+        limit = { FROM = { HSM_BAR_cases_grover_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_grover_known
+        set_country_flag = HSM_BAR_case_yale_archives
+        set_country_flag = HSM_BAR_case_grover_investigated
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_herald_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_herald_known
+        set_country_flag = HSM_BAR_case_yale_archives
+        set_country_flag = HSM_BAR_case_herald_investigated
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_rosa_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_rosa_known
+        set_country_flag = HSM_BAR_case_magehold_archives
+        set_country_flag = HSM_BAR_case_rosa_investigated
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_chalice_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_chalice_known
+        set_country_flag = HSM_BAR_case_magehold_archives
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_phylactery_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_phylactery_known
+        set_country_flag = HSM_BAR_case_magehold_archives
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_darkheart_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_darkheart_known
+        set_country_flag = HSM_BAR_case_crystal_archives
+    }
+    if = {
+        limit = { FROM = { HSM_BAR_cases_sombra_lead_open = yes } }
+        set_country_flag = HSM_BAR_case_sombra_known
+        set_country_flag = HSM_BAR_case_crystal_archives
+        set_country_flag = HSM_BAR_case_sombra_investigated
+    }
+    for_each_scope_loop = {
+        array = global.HSM_BAR_case_crowns
+        if = {
+            limit = {
+                HSM_BAR_case_crown_at_target = yes
+                has_country_flag = HSM_BAR_case_crown_rumor
+                has_country_flag = HSM_BAR_case_crown_known
+            }
+            set_country_flag = HSM_BAR_case_crown_investigated
+            # BAR's archive records knowledge; the instance retains all custody state.
+            ROOT = { set_country_flag = HSM_BAR_case_crown_investigated }
+        }
+    }
+}
+HSM_BAR_operation_archive_complete = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = { FROM = { HSM_BAR_operation_archive_target = yes } }
+        HSM_BAR_case_read_archives = yes
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_archives_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+# Called from BAR; FROM remains the current territorial custodian, not origin tag.
+HSM_BAR_case_incident = {
+    FROM = {
+        add_opinion_modifier = { target = ROOT modifier = stole_gift_opinion }
+        country_event = { id = hsm_bar_anomaly.3 }
+    }
+    add_political_power = -20
+    custom_effect_tooltip = HSM_BAR_case_incident_tt
+}
+HSM_BAR_case_take_crown = {
+    clr_country_flag = HSM_BAR_case_crown_museum
+    set_country_flag = HSM_BAR_case_crown_sealed
+    set_country_flag = HSM_BAR_case_crown_secured
+    # The record remains on its origin country; only physical custody changes.
+    BAR = {
+        capital_scope = {
+            PREV.PREV = { set_variable = { HSM_BAR_case_crown_site = PREV } }
+        }
+    }
+}
+HSM_BAR_operation_relic_complete = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = { FROM = { HSM_BAR_operation_relic_target = yes } }
+        # Each qualifying instance is transferred once. No people are transferred.
+        for_each_scope_loop = {
+            array = global.HSM_BAR_case_crowns
+            if = {
+                limit = { HSM_BAR_case_crown_extractable = yes }
+                HSM_BAR_case_take_crown = yes
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = HSM_BAR_case_chalice_investigated
+                has_global_flag = HSM_BAR_case_chalice_found
+                    OR = { has_global_flag = HSM_BAR_case_rosa_vampire has_global_flag = HSM_BAR_case_rosa_lich has_global_flag = HSM_BAR_case_rosa_executed }
+                FROM = { var:global.HSM_BAR_case_chalice_site = { is_controlled_by = PREV } }
+            }
+            set_global_flag = HSM_BAR_case_chalice_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_chalice_site = THIS } }
+        }
+        if = {
+            limit = {
+                has_country_flag = HSM_BAR_case_phylactery_investigated
+                has_global_flag = HSM_BAR_case_phylactery_created
+                    NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+                FROM = { var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = PREV } }
+            }
+            set_global_flag = HSM_BAR_case_phylactery_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_phylactery_site = THIS } }
+        }
+        if = {
+            limit = {
+                has_country_flag = HSM_BAR_case_darkheart_investigated
+                has_global_flag = HSM_BAR_case_darkheart_created
+                    has_global_flag = HSM_BAR_case_sombra_returned
+                    NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+                FROM = { var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = PREV } }
+            }
+            set_global_flag = HSM_BAR_case_darkheart_secured
+            capital_scope = { set_variable = { global.HSM_BAR_case_darkheart_site = THIS } }
+        }
+        HSM_BAR_case_incident = yes
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_relic_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_operation_remains_complete = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = { FROM = { HSM_BAR_operation_remains_target = yes } }
+        set_global_flag = HSM_BAR_case_grover_bones_removed
+        set_global_flag = HSM_BAR_case_grover_bones_secured
+        capital_scope = { set_variable = { global.HSM_BAR_case_grover_site = THIS } }
+        HSM_BAR_case_incident = yes
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_remains_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_local_survey = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = { HSM_BAR_case_local_access = yes }
+        set_country_flag = HSM_BAR_case_local_surveyed
+        set_country_flag = HSM_BAR_case_rock_known
+        set_country_flag = HSM_BAR_case_titan_known
+        set_country_flag = HSM_BAR_case_entity_known
+        set_country_flag = HSM_BAR_case_amulet_known
+        # New BAR fieldwork observes vegetation; it does not manufacture a crisis.
+        set_country_flag = HSM_BAR_case_plants_known
+        HSM_BAR_anomalies_pulse = yes
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.10 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_investigate_rock = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_rock_known
+            NOT = { has_country_flag = HSM_BAR_case_rock_investigated }
+        }
+        set_country_flag = HSM_BAR_case_rock_investigated
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.11 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_rock_protect = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_rock_investigated
+            has_country_flag = HSM_BAR_study_rock_done
+            NOT = { has_country_flag = HSM_BAR_case_rock_closed }
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        set_country_flag = HSM_BAR_case_rock_closed
+        set_country_flag = HSM_BAR_case_rock_protect
+        set_country_flag = HSM_BAR_disposition_rock_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_rock_protect_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_rock_restrict = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_rock_investigated
+            has_country_flag = HSM_BAR_study_rock_done
+            NOT = { has_country_flag = HSM_BAR_case_rock_closed }
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        set_country_flag = HSM_BAR_case_rock_closed
+        set_country_flag = HSM_BAR_case_rock_restrict
+        set_country_flag = HSM_BAR_disposition_rock_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_rock_restrict_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_investigate_titan = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_titan_known
+            NOT = { has_country_flag = HSM_BAR_case_titan_investigated }
+        }
+        set_country_flag = HSM_BAR_case_titan_investigated
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.12 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_titan_protect = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_titan_investigated
+            has_country_flag = HSM_BAR_study_titan_done
+            NOT = { has_country_flag = HSM_BAR_case_titan_closed }
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        set_country_flag = HSM_BAR_case_titan_closed
+        set_country_flag = HSM_BAR_case_titan_protect
+        set_country_flag = HSM_BAR_disposition_titan_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_titan_protect_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_titan_restrict = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_titan_investigated
+            has_country_flag = HSM_BAR_study_titan_done
+            NOT = { has_country_flag = HSM_BAR_case_titan_closed }
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        set_country_flag = HSM_BAR_case_titan_closed
+        set_country_flag = HSM_BAR_case_titan_restrict
+        set_country_flag = HSM_BAR_disposition_titan_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_titan_restrict_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_investigate_entity = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_entity_known
+            NOT = { has_country_flag = HSM_BAR_case_entity_investigated }
+        }
+        set_country_flag = HSM_BAR_case_entity_investigated
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.13 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_entity_protect = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_entity_investigated
+            has_country_flag = HSM_BAR_study_entity_done
+            NOT = { has_country_flag = HSM_BAR_case_entity_closed }
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        set_country_flag = HSM_BAR_case_entity_closed
+        set_country_flag = HSM_BAR_case_entity_protect
+        set_country_flag = HSM_BAR_disposition_entity_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_entity_protect_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_entity_restrict = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_entity_investigated
+            has_country_flag = HSM_BAR_study_entity_done
+            NOT = { has_country_flag = HSM_BAR_case_entity_closed }
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        set_country_flag = HSM_BAR_case_entity_closed
+        set_country_flag = HSM_BAR_case_entity_restrict
+        set_country_flag = HSM_BAR_disposition_entity_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_entity_restrict_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_investigate_amulet = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_amulet_known
+            NOT = { has_country_flag = HSM_BAR_case_amulet_investigated }
+        }
+        set_country_flag = HSM_BAR_case_amulet_investigated
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.14 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_amulet_protect = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_amulet_investigated
+            has_country_flag = HSM_BAR_study_amulet_done
+            NOT = { has_country_flag = HSM_BAR_case_amulet_closed }
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        set_country_flag = HSM_BAR_case_amulet_closed
+        set_country_flag = HSM_BAR_case_amulet_protect
+        set_country_flag = HSM_BAR_disposition_amulet_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_amulet_protect_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_amulet_restrict = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_amulet_investigated
+            has_country_flag = HSM_BAR_study_amulet_done
+            NOT = { has_country_flag = HSM_BAR_case_amulet_closed }
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        set_country_flag = HSM_BAR_case_amulet_closed
+        set_country_flag = HSM_BAR_case_amulet_restrict
+        set_country_flag = HSM_BAR_disposition_amulet_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_amulet_restrict_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_investigate_plants = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_plants_known
+            NOT = { has_country_flag = HSM_BAR_case_plants_investigated }
+        }
+        set_country_flag = HSM_BAR_case_plants_investigated
+        HSM_BAR_case_success = yes
+        country_event = { id = hsm_bar_anomaly.15 }
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_plants_protect = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_plants_investigated
+            has_country_flag = HSM_BAR_study_plants_done
+            NOT = { has_country_flag = HSM_BAR_case_plants_closed }
+            has_country_flag = HSM_BAR_project_wards_done
+            has_country_flag = HSM_BAR_coexistence
+        }
+        set_country_flag = HSM_BAR_case_plants_closed
+        set_country_flag = HSM_BAR_case_plants_protect
+        set_country_flag = HSM_BAR_disposition_plants_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_plants_protect_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_dispose_plants_restrict = {
+    clr_country_flag = HSM_BAR_case_last_operation_success
+    if = {
+        limit = {
+            HSM_BAR_case_local_access = yes
+            has_country_flag = HSM_BAR_case_plants_investigated
+            has_country_flag = HSM_BAR_study_plants_done
+            NOT = { has_country_flag = HSM_BAR_case_plants_closed }
+            has_country_flag = HSM_BAR_project_containment_done
+            has_country_flag = HSM_BAR_normalization
+        }
+        set_country_flag = HSM_BAR_case_plants_closed
+        set_country_flag = HSM_BAR_case_plants_restrict
+        set_country_flag = HSM_BAR_disposition_plants_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        HSM_BAR_case_success = yes
+        custom_effect_tooltip = HSM_BAR_case_plants_restrict_tt
+    }
+    else = { HSM_BAR_case_failed = yes }
+}
+HSM_BAR_case_archive_rosa = {
+    if = {
+        limit = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_rosa_investigated
+            has_country_flag = HSM_BAR_study_rosa_done
+            NOT = { has_country_flag = HSM_BAR_case_rosa_closed }
+        }
+        set_country_flag = HSM_BAR_case_rosa_closed
+        set_country_flag = HSM_BAR_disposition_rosa_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        custom_effect_tooltip = HSM_BAR_outcome_rosa_reviewed_tt
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        country_event = { id = hsm_bar_anomaly.20 }
+    }
+}
+HSM_BAR_case_archive_grover = {
+    if = {
+        limit = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_grover_investigated
+            has_country_flag = HSM_BAR_study_grover_done
+            NOT = { has_country_flag = HSM_BAR_case_grover_closed }
+        }
+        set_country_flag = HSM_BAR_case_grover_closed
+        set_country_flag = HSM_BAR_disposition_grover_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        custom_effect_tooltip = HSM_BAR_outcome_grover_reviewed_tt
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        country_event = { id = hsm_bar_anomaly.21 }
+    }
+}
+HSM_BAR_case_archive_herald = {
+    if = {
+        limit = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_herald_investigated
+            has_country_flag = HSM_BAR_study_herald_done
+            NOT = { has_country_flag = HSM_BAR_case_herald_closed }
+        }
+        set_country_flag = HSM_BAR_case_herald_closed
+        set_country_flag = HSM_BAR_disposition_herald_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        custom_effect_tooltip = HSM_BAR_outcome_herald_reviewed_tt
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        country_event = { id = hsm_bar_anomaly.22 }
+    }
+}
+HSM_BAR_case_archive_sombra = {
+    if = {
+        limit = {
+            HSM_BAR_case_enabled = yes
+            has_country_flag = HSM_BAR_case_sombra_investigated
+            has_country_flag = HSM_BAR_study_sombra_done
+            NOT = { has_country_flag = HSM_BAR_case_sombra_closed }
+        }
+        set_country_flag = HSM_BAR_case_sombra_closed
+        set_country_flag = HSM_BAR_disposition_sombra_recorded
+        HSM_BAR_refresh_case_outcomes = yes
+        custom_effect_tooltip = HSM_BAR_outcome_sombra_reviewed_tt
+        add_to_variable = { HSM_BAR_case_completed = 1 }
+        country_event = { id = hsm_bar_anomaly.23 }
+    }
+}

@@ -1,0 +1,698 @@
+# player_context is the local player's country, never a selected foreign country.
+# EaW patterns: eaw_bar_scripetd_guis.txt; eaw_welcome_screen.txt.
+# No dirty cache: research flags may change while this window is open.
+# Unlock contract (all country flags on BAR):
+# HSM_BAR_service_founded + HSM_BAR_region_local_open gate launcher and window.
+# A Republic on formation day has no Service archive.
+# HSM_BAR_case_<case>_known -> intake; _investigated -> field report;
+# Foreign _rumor flags on BAR also release intake, never field/study/custody.
+# HSM_BAR_study_<case>_done -> reviewed study. Later stages imply earlier access.
+# The Zebrica lead has known/inconclusive/closed flags only; no study is invented.
+# Only archive presentation and the explicit Service-window handoff variables are written here.
+scripted_gui = {
+    HSM_BAR_archive_launcher = {
+        context_type = player_context
+        parent_window_token = politics_tab
+        window_name = "HSM_BAR_archive_launcher"
+        visible = {
+            tag = BAR
+            is_ai = no
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_directorate
+            has_country_flag = HSM_BAR_service_founded
+            has_country_flag = HSM_BAR_region_local_open
+        }
+        effects = {
+            HSM_BAR_archive_open_click = {
+                set_variable = { HSM_BAR_archive_open = 1 }
+                set_variable = { HSM_BAR_archive_region = 1 }
+                set_variable = { HSM_BAR_archive_page = 1 }
+                clear_variable = HSM_BAR_service_gui_open
+                clear_variable = HSM_BAR_fielddesk_open
+                clear_variable = HSM_BAR_investigation_open
+                clear_variable = HSM_BAR_archive_case
+                clear_variable = HSM_BAR_archive_document
+                clear_variable = HSM_BAR_archive_copy
+            }
+        }
+    }
+    HSM_BAR_archive_window = {
+        context_type = player_context
+        window_name = "HSM_BAR_archive_window"
+        visible = {
+            tag = BAR
+            is_ai = no
+            has_country_flag = HSM_BAR_active
+            has_country_flag = HSM_BAR_directorate
+            has_country_flag = HSM_BAR_service_founded
+            has_country_flag = HSM_BAR_region_local_open
+            has_variable = HSM_BAR_archive_open
+        }
+        properties = {
+            HSM_BAR_archive_region_1 = { image = "[GetHSMBARArchiveRegion1Skin]" }
+            HSM_BAR_archive_region_2 = { image = "[GetHSMBARArchiveRegion2Skin]" }
+            HSM_BAR_archive_region_3 = { image = "[GetHSMBARArchiveRegion3Skin]" }
+            HSM_BAR_archive_region_4 = { image = "[GetHSMBARArchiveRegion4Skin]" }
+            HSM_BAR_archive_region_5 = { image = "[GetHSMBARArchiveRegion5Skin]" }
+            HSM_BAR_archive_region_6 = { image = "[GetHSMBARArchiveRegion6Skin]" }
+            HSM_BAR_archive_copy_1 = { image = "[GetHSMBARArchiveCopy1Skin]" }
+            HSM_BAR_archive_copy_2 = { image = "[GetHSMBARArchiveCopy2Skin]" }
+            HSM_BAR_archive_copy_3 = { image = "[GetHSMBARArchiveCopy3Skin]" }
+            HSM_BAR_archive_case_rock = { image = "[GetHSMBARArchiveCaserockSkin]" }
+            HSM_BAR_archive_case_titan = { image = "[GetHSMBARArchiveCasetitanSkin]" }
+            HSM_BAR_archive_case_entity = { image = "[GetHSMBARArchiveCaseentitySkin]" }
+            HSM_BAR_archive_case_amulet = { image = "[GetHSMBARArchiveCaseamuletSkin]" }
+            HSM_BAR_archive_case_reactor = { image = "[GetHSMBARArchiveCasereactorSkin]" }
+            HSM_BAR_archive_case_crown = { image = "[GetHSMBARArchiveCasecrownSkin]" }
+            HSM_BAR_archive_case_chalice = { image = "[GetHSMBARArchiveCasechaliceSkin]" }
+            HSM_BAR_archive_case_phylactery = { image = "[GetHSMBARArchiveCasephylacterySkin]" }
+            HSM_BAR_archive_case_darkheart = { image = "[GetHSMBARArchiveCasedarkheartSkin]" }
+            HSM_BAR_archive_case_grover = { image = "[GetHSMBARArchiveCasegroverSkin]" }
+            HSM_BAR_archive_case_rosa = { image = "[GetHSMBARArchiveCaserosaSkin]" }
+            HSM_BAR_archive_case_herald = { image = "[GetHSMBARArchiveCaseheraldSkin]" }
+            HSM_BAR_archive_case_sombra = { image = "[GetHSMBARArchiveCasesombraSkin]" }
+            HSM_BAR_archive_case_echo = { image = "[GetHSMBARArchiveCaseechoSkin]" }
+            HSM_BAR_archive_case_marsh = { image = "[GetHSMBARArchiveCasemarshSkin]" }
+            HSM_BAR_archive_case_compass = { image = "[GetHSMBARArchiveCasecompassSkin]" }
+            HSM_BAR_archive_case_plants = { image = "[GetHSMBARArchiveCaseplantsSkin]" }
+            HSM_BAR_archive_case_zebrica = { image = "[GetHSMBARArchiveCasezebricaSkin]" }
+            HSM_BAR_archive_doc_1 = { image = "[GetHSMBARArchiveDoc1Skin]" }
+            HSM_BAR_archive_doc_2 = { image = "[GetHSMBARArchiveDoc2Skin]" }
+            HSM_BAR_archive_doc_3 = { image = "[GetHSMBARArchiveDoc3Skin]" }
+            HSM_BAR_archive_doc_4 = { image = "[GetHSMBARArchiveDoc4Skin]" }
+            HSM_BAR_archive_doc_5 = { image = "[GetHSMBARArchiveDoc5Skin]" }
+        }
+        triggers = {
+            HSM_BAR_archive_region_1_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_local_available = yes }
+            HSM_BAR_archive_region_2_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_equus_available = yes }
+            HSM_BAR_archive_region_3_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_griffonia_available = yes }
+            HSM_BAR_archive_region_4_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_north_available = yes }
+            HSM_BAR_archive_region_5_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_riverlands_available = yes }
+            HSM_BAR_archive_region_6_click_enabled = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_zebrica_available = yes }
+            HSM_BAR_archive_operations_click_enabled = { HSM_BAR_archive_operations_available = yes }
+            HSM_BAR_archive_copy_1_visible = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_copy_1_click_enabled = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_copy_2_visible = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_copy_2_click_enabled = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_copy_3_visible = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_copy_3_click_enabled = { HSM_BAR_archive_copies_available = yes }
+            HSM_BAR_archive_audio_echo_visible = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } check_variable = { HSM_BAR_archive_document = 2 } }
+            HSM_BAR_archive_audio_echo_click_enabled = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } check_variable = { HSM_BAR_archive_document = 2 } }
+            HSM_BAR_archive_audio_entity_visible = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } check_variable = { HSM_BAR_archive_document = 2 } }
+            HSM_BAR_archive_audio_entity_click_enabled = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } check_variable = { HSM_BAR_archive_document = 2 } }
+            HSM_BAR_archive_audio_reactor_visible = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } check_variable = { HSM_BAR_archive_document = 2 } }
+            HSM_BAR_archive_audio_reactor_click_enabled = { HSM_BAR_archive_copies_available = yes HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } check_variable = { HSM_BAR_archive_document = 2 } }
+            # Historical attachments do not require continuing physical access.
+            # The three secured bench specimens require a completed study.
+            HSM_BAR_archive_doc_5_visible = {
+                tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                }
+            }
+            HSM_BAR_archive_doc_5_click_enabled = {
+                tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                }
+            }
+            HSM_BAR_archive_photo_caption_visible = {
+                check_variable = { HSM_BAR_archive_document = 5 } tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                }
+            }
+            HSM_BAR_archive_photo_rock_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+            HSM_BAR_archive_photo_titan_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+            HSM_BAR_archive_photo_entity_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+            HSM_BAR_archive_photo_amulet_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+            HSM_BAR_archive_photo_reactor_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+            HSM_BAR_archive_photo_crown_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+            HSM_BAR_archive_photo_chalice_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+            HSM_BAR_archive_photo_darkheart_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+            HSM_BAR_archive_photo_echo_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+            HSM_BAR_archive_photo_marsh_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+            HSM_BAR_archive_photo_compass_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+            HSM_BAR_archive_photo_plants_visible = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open check_variable = { HSM_BAR_archive_document = 5 } HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+            # Text keeps its original scroll area; it is replaced only by a released plate.
+            HSM_BAR_archive_document_title_visible = {
+                NOT = { HSM_BAR_archive_copies_available = yes }
+                NOT = { AND = { check_variable = { HSM_BAR_archive_document = 5 } tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                } } }
+            }
+            HSM_BAR_archive_document_body_visible = {
+                NOT = { AND = { check_variable = { HSM_BAR_archive_document = 5 } tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                } } }
+            }
+            HSM_BAR_archive_prev_click_enabled = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } }
+            HSM_BAR_archive_next_click_enabled = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } }
+            HSM_BAR_archive_back_click_enabled = { has_variable = HSM_BAR_archive_case }
+            HSM_BAR_archive_case_rock_visible = { HSM_BAR_archive_case_rock_listed = yes }
+            HSM_BAR_archive_case_rock_status_visible = { HSM_BAR_archive_case_rock_listed = yes }
+            HSM_BAR_archive_case_titan_visible = { HSM_BAR_archive_case_titan_listed = yes }
+            HSM_BAR_archive_case_titan_status_visible = { HSM_BAR_archive_case_titan_listed = yes }
+            HSM_BAR_archive_case_entity_visible = { HSM_BAR_archive_case_entity_listed = yes }
+            HSM_BAR_archive_case_entity_status_visible = { HSM_BAR_archive_case_entity_listed = yes }
+            HSM_BAR_archive_case_amulet_visible = { HSM_BAR_archive_case_amulet_listed = yes }
+            HSM_BAR_archive_case_amulet_status_visible = { HSM_BAR_archive_case_amulet_listed = yes }
+            HSM_BAR_archive_case_reactor_visible = { HSM_BAR_archive_case_reactor_listed = yes }
+            HSM_BAR_archive_case_reactor_status_visible = { HSM_BAR_archive_case_reactor_listed = yes }
+            HSM_BAR_archive_case_crown_visible = { HSM_BAR_archive_case_crown_listed = yes }
+            HSM_BAR_archive_case_crown_status_visible = { HSM_BAR_archive_case_crown_listed = yes }
+            HSM_BAR_archive_case_chalice_visible = { HSM_BAR_archive_case_chalice_listed = yes }
+            HSM_BAR_archive_case_chalice_status_visible = { HSM_BAR_archive_case_chalice_listed = yes }
+            HSM_BAR_archive_case_phylactery_visible = { HSM_BAR_archive_case_phylactery_listed = yes }
+            HSM_BAR_archive_case_phylactery_status_visible = { HSM_BAR_archive_case_phylactery_listed = yes }
+            HSM_BAR_archive_case_darkheart_visible = { HSM_BAR_archive_case_darkheart_listed = yes }
+            HSM_BAR_archive_case_darkheart_status_visible = { HSM_BAR_archive_case_darkheart_listed = yes }
+            HSM_BAR_archive_case_grover_visible = { HSM_BAR_archive_case_grover_listed = yes }
+            HSM_BAR_archive_case_grover_status_visible = { HSM_BAR_archive_case_grover_listed = yes }
+            HSM_BAR_archive_case_rosa_visible = { HSM_BAR_archive_case_rosa_listed = yes }
+            HSM_BAR_archive_case_rosa_status_visible = { HSM_BAR_archive_case_rosa_listed = yes }
+            HSM_BAR_archive_case_herald_visible = { HSM_BAR_archive_case_herald_listed = yes }
+            HSM_BAR_archive_case_herald_status_visible = { HSM_BAR_archive_case_herald_listed = yes }
+            HSM_BAR_archive_case_sombra_visible = { HSM_BAR_archive_case_sombra_listed = yes }
+            HSM_BAR_archive_case_sombra_status_visible = { HSM_BAR_archive_case_sombra_listed = yes }
+            HSM_BAR_archive_case_echo_visible = { HSM_BAR_archive_case_echo_listed = yes }
+            HSM_BAR_archive_case_echo_status_visible = { HSM_BAR_archive_case_echo_listed = yes }
+            HSM_BAR_archive_case_marsh_visible = { HSM_BAR_archive_case_marsh_listed = yes }
+            HSM_BAR_archive_case_marsh_status_visible = { HSM_BAR_archive_case_marsh_listed = yes }
+            HSM_BAR_archive_case_compass_visible = { HSM_BAR_archive_case_compass_listed = yes }
+            HSM_BAR_archive_case_compass_status_visible = { HSM_BAR_archive_case_compass_listed = yes }
+            HSM_BAR_archive_case_plants_visible = { HSM_BAR_archive_case_plants_listed = yes }
+            HSM_BAR_archive_case_plants_status_visible = { HSM_BAR_archive_case_plants_listed = yes }
+            HSM_BAR_archive_case_zebrica_visible = { HSM_BAR_archive_case_zebrica_listed = yes }
+            HSM_BAR_archive_case_zebrica_status_visible = { HSM_BAR_archive_case_zebrica_listed = yes }
+            HSM_BAR_archive_doc_4_visible = { OR = { AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } } AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } } AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } } AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } } AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } } AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } } AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } } AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } } AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } } AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } } AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } } AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } } AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } } AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } } AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } } AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } } AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } } AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known } } }
+            HSM_BAR_archive_doc_4_click_enabled = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open OR = { AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } } AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } } AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } } AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } } AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } } AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } } AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } } AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } } AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } } AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } } AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } } AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } } AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } } AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } } AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } } AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } } AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } } AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known } } }
+            HSM_BAR_archive_doc_1_visible = { has_variable = HSM_BAR_archive_case }
+            HSM_BAR_archive_doc_1_click_enabled = {
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } }
+                    AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } }
+                    AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } }
+                    AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } }
+                    AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } }
+                    AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                    AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known }
+                }
+            }
+            HSM_BAR_archive_doc_2_visible = { has_variable = HSM_BAR_archive_case }
+            HSM_BAR_archive_doc_2_click_enabled = {
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } }
+                    AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } }
+                    AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } }
+                    AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } }
+                    AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } }
+                    AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                    AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known has_country_flag = HSM_BAR_case_zebrica_inconclusive }
+                }
+            }
+            HSM_BAR_archive_doc_3_visible = { has_variable = HSM_BAR_archive_case }
+            HSM_BAR_archive_doc_3_click_enabled = {
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } has_country_flag = HSM_BAR_study_rock_done }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } has_country_flag = HSM_BAR_study_titan_done }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } has_country_flag = HSM_BAR_study_entity_done }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } has_country_flag = HSM_BAR_study_amulet_done }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } has_country_flag = HSM_BAR_study_reactor_done }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } has_country_flag = HSM_BAR_study_phylactery_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } has_country_flag = HSM_BAR_study_grover_done }
+                    AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } has_country_flag = HSM_BAR_study_rosa_done }
+                    AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } has_country_flag = HSM_BAR_study_herald_done }
+                    AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } has_country_flag = HSM_BAR_study_sombra_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } has_country_flag = HSM_BAR_study_echo_done }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } has_country_flag = HSM_BAR_study_marsh_done }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } has_country_flag = HSM_BAR_study_compass_done }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } has_country_flag = HSM_BAR_study_plants_done }
+                }
+            }
+        }
+        effects = {
+            HSM_BAR_archive_doc_5_click = {
+                if = {
+                    limit = {
+                        tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open has_variable = HSM_BAR_archive_open
+                OR = {
+                    AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                    AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                    AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                    AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                    AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                    AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                    AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                    AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                    AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                    AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                    AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                }
+                    }
+                    set_variable = { HSM_BAR_archive_document = 5 }
+                }
+            }
+            HSM_BAR_archive_doc_4_click = {
+                if = {
+                    limit = { tag = BAR is_ai = no has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_region_local_open OR = { AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } } AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } } AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } } AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } } AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } } AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } } AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } } AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } } AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } } AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } } AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } } AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } } AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } } AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } } AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } } AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } } AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } } AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known } } }
+                    set_variable = { HSM_BAR_archive_document = 4 }
+                }
+            }
+            HSM_BAR_archive_copy_1_click = {
+                if = {
+                    limit = { HSM_BAR_archive_copies_available = yes }
+                    set_variable = { HSM_BAR_archive_copy = 1 }
+                }
+            }
+            HSM_BAR_archive_copy_2_click = {
+                if = {
+                    limit = { HSM_BAR_archive_copies_available = yes }
+                    set_variable = { HSM_BAR_archive_copy = 2 }
+                }
+            }
+            HSM_BAR_archive_copy_3_click = {
+                if = {
+                    limit = { HSM_BAR_archive_copies_available = yes }
+                    set_variable = { HSM_BAR_archive_copy = 3 }
+                }
+            }
+            HSM_BAR_archive_region_1_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_local_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 1 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_region_2_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_equus_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 2 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_region_3_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_griffonia_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 3 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_region_4_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_north_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 4 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_region_5_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_riverlands_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 5 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_region_6_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes HSM_BAR_archive_region_zebrica_available = yes }
+                    set_variable = { HSM_BAR_archive_region = 6 }
+                    set_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_operations_click = {
+                if = {
+                    limit = { HSM_BAR_archive_operations_available = yes }
+                    clear_variable = HSM_BAR_fielddesk_open
+                    clear_variable = HSM_BAR_investigation_open
+                    set_variable = { HSM_BAR_service_gui_region = HSM_BAR_archive_region }
+                    set_variable = { HSM_BAR_service_gui_open = 1 }
+                    HSM_BAR_service_gui_refresh = yes
+                    clear_variable = HSM_BAR_archive_open
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_audio_echo_click = { }
+            HSM_BAR_archive_audio_entity_click = { }
+            HSM_BAR_archive_audio_reactor_click = { }
+            HSM_BAR_archive_close_click = {
+                clear_variable = HSM_BAR_archive_open
+                clear_variable = HSM_BAR_archive_region
+                clear_variable = HSM_BAR_archive_case
+                clear_variable = HSM_BAR_archive_document
+                clear_variable = HSM_BAR_archive_copy
+                clear_variable = HSM_BAR_archive_page
+            }
+            HSM_BAR_archive_back_click = {
+                clear_variable = HSM_BAR_archive_case
+                clear_variable = HSM_BAR_archive_document
+                clear_variable = HSM_BAR_archive_copy
+            }
+            HSM_BAR_archive_prev_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 2 } }
+                    subtract_from_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_next_click = {
+                if = {
+                    limit = { HSM_BAR_archive_actor = yes check_variable = { HSM_BAR_archive_region = 1 } check_variable = { HSM_BAR_archive_page = 1 } }
+                    add_to_variable = { HSM_BAR_archive_page = 1 }
+                    clear_variable = HSM_BAR_archive_case
+                    clear_variable = HSM_BAR_archive_document
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_rock_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_rock_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 1 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_titan_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_titan_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 2 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_entity_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_entity_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 3 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_amulet_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_amulet_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 4 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_reactor_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_reactor_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 5 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_crown_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_crown_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 6 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_chalice_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_chalice_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 7 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_phylactery_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_phylactery_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 8 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_darkheart_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_darkheart_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 9 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_grover_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_grover_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 10 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_rosa_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_rosa_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 11 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_herald_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_herald_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 12 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_sombra_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_sombra_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 13 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_echo_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_echo_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 14 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_marsh_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_marsh_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 15 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_compass_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_compass_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 16 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_plants_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_plants_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 17 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_case_zebrica_click = {
+                if = {
+                    limit = { HSM_BAR_archive_case_zebrica_listed = yes }
+                    set_variable = { HSM_BAR_archive_case = 18 }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                    clear_variable = HSM_BAR_archive_copy
+                }
+            }
+            HSM_BAR_archive_doc_1_click = {
+                if = {
+                    limit = {
+                        OR = {
+                            AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_known has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                            AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_known has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                            AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_known has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                            AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_known has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                            AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_known has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                            AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_rumor has_country_flag = HSM_BAR_case_crown_known has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } }
+                            AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_rumor has_country_flag = HSM_BAR_case_chalice_known has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } }
+                            AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_rumor has_country_flag = HSM_BAR_case_phylactery_known has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } }
+                            AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_rumor has_country_flag = HSM_BAR_case_darkheart_known has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } }
+                            AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_rumor has_country_flag = HSM_BAR_case_grover_known has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } }
+                            AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_rumor has_country_flag = HSM_BAR_case_rosa_known has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } }
+                            AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_rumor has_country_flag = HSM_BAR_case_herald_known has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } }
+                            AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_rumor has_country_flag = HSM_BAR_case_sombra_known has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } }
+                            AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_known has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                            AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_known has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                            AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_known has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_known has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                    AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known }
+                        }
+                    }
+                    set_variable = { HSM_BAR_archive_document = 1 }
+                }
+            }
+            HSM_BAR_archive_doc_2_click = {
+                if = {
+                    limit = {
+                        OR = {
+                            AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } OR = { has_country_flag = HSM_BAR_case_rock_investigated has_country_flag = HSM_BAR_study_rock_done } }
+                            AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } OR = { has_country_flag = HSM_BAR_case_titan_investigated has_country_flag = HSM_BAR_study_titan_done } }
+                            AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } OR = { has_country_flag = HSM_BAR_case_entity_investigated has_country_flag = HSM_BAR_study_entity_done } }
+                            AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } OR = { has_country_flag = HSM_BAR_case_amulet_investigated has_country_flag = HSM_BAR_study_amulet_done } }
+                            AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } OR = { has_country_flag = HSM_BAR_case_reactor_investigated has_country_flag = HSM_BAR_study_reactor_done } }
+                            AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } OR = { has_country_flag = HSM_BAR_case_crown_investigated has_country_flag = HSM_BAR_study_crown_done } }
+                            AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } OR = { has_country_flag = HSM_BAR_case_chalice_investigated has_country_flag = HSM_BAR_study_chalice_done } }
+                            AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } OR = { has_country_flag = HSM_BAR_case_phylactery_investigated has_country_flag = HSM_BAR_study_phylactery_done } }
+                            AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } OR = { has_country_flag = HSM_BAR_case_darkheart_investigated has_country_flag = HSM_BAR_study_darkheart_done } }
+                            AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } OR = { has_country_flag = HSM_BAR_case_grover_investigated has_country_flag = HSM_BAR_study_grover_done } }
+                            AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } OR = { has_country_flag = HSM_BAR_case_rosa_investigated has_country_flag = HSM_BAR_study_rosa_done } }
+                            AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } OR = { has_country_flag = HSM_BAR_case_herald_investigated has_country_flag = HSM_BAR_study_herald_done } }
+                            AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } OR = { has_country_flag = HSM_BAR_case_sombra_investigated has_country_flag = HSM_BAR_study_sombra_done } }
+                            AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } OR = { has_country_flag = HSM_BAR_case_echo_investigated has_country_flag = HSM_BAR_study_echo_done } }
+                            AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } OR = { has_country_flag = HSM_BAR_case_marsh_investigated has_country_flag = HSM_BAR_study_marsh_done } }
+                            AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } OR = { has_country_flag = HSM_BAR_case_compass_investigated has_country_flag = HSM_BAR_study_compass_done } }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } OR = { has_country_flag = HSM_BAR_case_plants_investigated has_country_flag = HSM_BAR_study_plants_done } }
+                    AND = { HSM_BAR_archive_case_zebrica_listed = yes check_variable = { HSM_BAR_archive_case = 18 } has_country_flag = HSM_BAR_case_zebrica_known has_country_flag = HSM_BAR_case_zebrica_inconclusive }
+                        }
+                    }
+                    set_variable = { HSM_BAR_archive_document = 2 }
+                }
+            }
+            HSM_BAR_archive_doc_3_click = {
+                if = {
+                    limit = {
+                        OR = {
+                            AND = { HSM_BAR_archive_case_rock_listed = yes check_variable = { HSM_BAR_archive_case = 1 } has_country_flag = HSM_BAR_study_rock_done }
+                            AND = { HSM_BAR_archive_case_titan_listed = yes check_variable = { HSM_BAR_archive_case = 2 } has_country_flag = HSM_BAR_study_titan_done }
+                            AND = { HSM_BAR_archive_case_entity_listed = yes check_variable = { HSM_BAR_archive_case = 3 } has_country_flag = HSM_BAR_study_entity_done }
+                            AND = { HSM_BAR_archive_case_amulet_listed = yes check_variable = { HSM_BAR_archive_case = 4 } has_country_flag = HSM_BAR_study_amulet_done }
+                            AND = { HSM_BAR_archive_case_reactor_listed = yes check_variable = { HSM_BAR_archive_case = 5 } has_country_flag = HSM_BAR_study_reactor_done }
+                            AND = { HSM_BAR_archive_case_crown_listed = yes check_variable = { HSM_BAR_archive_case = 6 } has_country_flag = HSM_BAR_study_crown_done }
+                            AND = { HSM_BAR_archive_case_chalice_listed = yes check_variable = { HSM_BAR_archive_case = 7 } has_country_flag = HSM_BAR_study_chalice_done }
+                            AND = { HSM_BAR_archive_case_phylactery_listed = yes check_variable = { HSM_BAR_archive_case = 8 } has_country_flag = HSM_BAR_study_phylactery_done }
+                            AND = { HSM_BAR_archive_case_darkheart_listed = yes check_variable = { HSM_BAR_archive_case = 9 } has_country_flag = HSM_BAR_study_darkheart_done }
+                            AND = { HSM_BAR_archive_case_grover_listed = yes check_variable = { HSM_BAR_archive_case = 10 } has_country_flag = HSM_BAR_study_grover_done }
+                            AND = { HSM_BAR_archive_case_rosa_listed = yes check_variable = { HSM_BAR_archive_case = 11 } has_country_flag = HSM_BAR_study_rosa_done }
+                            AND = { HSM_BAR_archive_case_herald_listed = yes check_variable = { HSM_BAR_archive_case = 12 } has_country_flag = HSM_BAR_study_herald_done }
+                            AND = { HSM_BAR_archive_case_sombra_listed = yes check_variable = { HSM_BAR_archive_case = 13 } has_country_flag = HSM_BAR_study_sombra_done }
+                            AND = { HSM_BAR_archive_case_echo_listed = yes check_variable = { HSM_BAR_archive_case = 14 } has_country_flag = HSM_BAR_study_echo_done }
+                            AND = { HSM_BAR_archive_case_marsh_listed = yes check_variable = { HSM_BAR_archive_case = 15 } has_country_flag = HSM_BAR_study_marsh_done }
+                            AND = { HSM_BAR_archive_case_compass_listed = yes check_variable = { HSM_BAR_archive_case = 16 } has_country_flag = HSM_BAR_study_compass_done }
+                    AND = { HSM_BAR_archive_case_plants_listed = yes check_variable = { HSM_BAR_archive_case = 17 } has_country_flag = HSM_BAR_study_plants_done }
+                        }
+                    }
+                    set_variable = { HSM_BAR_archive_document = 3 }
+                }
+            }
+        }
+    }
+}
+

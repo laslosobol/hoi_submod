@@ -1,0 +1,548 @@
+[
+  {
+    "id": "rock",
+    "subject": 1,
+    "documents": [
+      {
+        "title": { "en": "Mason's statement / physician's extract", "ru": "Показание каменщика / выписка врача" },
+        "fragments": [
+          { "en": "No fragment accompanied the statement. The witness declined to recover his tools.", "ru": "Обломка при показании нет. Свидетель отказался возвращаться за инструментами." },
+          { "en": "The witness described the cut closing after the stone yielded to his chisel. He did not describe a fall of loose rubble.", "ru": "Свидетель описал, как след зубила затянулся после того, как камень подался. Обвала рыхлого щебня он не описывал." },
+          { "en": "Krzemien retained his final question: would the Republic require him to finish the excavation?", "ru": "Кшемень сохранила последний вопрос: заставит ли Республика закончить раскопки?" }
+        ]
+      },
+      {
+        "title": { "en": "Works office / preliminary incident slip", "ru": "Хозяйственная часть / предварительная запись" },
+        "fragments": [
+          { "en": "The temple plan is enclosed. The witness's identifying details travel under £HSM_BAR_redact_short£.", "ru": "План храма приложен. Данные свидетеля передаются под номером £HSM_BAR_redact_short£." },
+          { "en": "No inspection signature stands beneath the request to reopen the passage.", "ru": "Под просьбой вновь открыть проход нет подписи осмотревшего его специалиста." },
+          { "en": "The draft enters 'settling at the tool's point of contact'. That location was supplied by the clerk, not by an inspection.", "ru": "В черновике стоит «осадка в месте касания инструмента». Место указал писарь, а не проводивший осмотр специалист." }
+        ]
+      }
+    ],
+    "pair": [2, 3],
+    "hypothesis": {
+      "en": "The draft turns a witness's account into a measured location that nobody measured. Olcha requests separate marks for the point of pressure and any subsequent movement, with an untouched stretch of wall in view. A closing cut, loose settling and movement elsewhere would leave different records. The old opening is sufficient; no new passage is authorised.",
+      "ru": "Черновик превратил показание в точное указание места, которого никто не измерял. Ольха требует отдельно отмечать место нажима и последующее движение, оставляя в поле наблюдения нетронутый участок. Затягивание скола, осыпание и смещение рядом дадут разные записи. Прежнего отверстия достаточно; новый проход вскрывать нельзя."
+    },
+    "mismatch": {
+      "en": "These passages help establish how the complaint reached the office, but do not test its explanation. The useful discrepancy concerns what the witness saw and what the draft claims was measured. Wrona will not send a crew back merely to confirm a clerk's choice of words.",
+      "ru": "Эти строки помогают проследить путь жалобы, но не проверить предложенное объяснение. Существенное расхождение касается увиденного свидетелем и того, что черновик выдаёт за результат замера. Врона не отправит группу обратно лишь ради подтверждения формулировки писаря."
+    },
+    "methods": [
+      {
+        "id": "marks",
+        "title": { "en": "Paired survey marks", "ru": "Парные отметки" },
+        "brief": {
+          "en": "Hire a survey crew for a short, supervised visit. Mark the existing cut and the adjoining face separately. Apply limited pressure with a handled probe while a second observer records both marks; stop at the first displacement.",
+          "ru": "Нанять обмерную группу для короткого выезда под наблюдением. Раздельно отметить прежний скол и соседний участок. Ограниченно нажать щупом с рукоятью; второй наблюдатель следит за обеими отметками. При первом смещении остановиться."
+        },
+        "report": {
+          "en": "WRONA / marked sheet enclosed\nPressure was applied at the old cut. The second observer recorded movement beneath the neighbouring mark, not beneath the probe. The untouched reference remained legible. Loose grains were lifted from the existing cut into a labelled envelope; no passage was opened.\nThe works copy again arrived with only one mark. Wrona returned it unsigned. Both marks now accompany the field inventory. This establishes a displacement to investigate, not a useful building material.",
+          "ru": "ВРОНА / размеченный лист приложен\nНажим произведён у старого скола. Второй наблюдатель отметил движение под соседней меткой, не под щупом. Нетронутая контрольная отметка осталась различимой. Отделившиеся крупинки из прежнего скола помещены в подписанный конверт; проход не вскрывали.\nХозяйственная копия снова пришла с одной меткой. Врона вернула её без подписи. Теперь к полевой описи приложены обе. Установлено смещение, которое следует исследовать, а не пригодность камня для строительства."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "watch",
+        "title": { "en": "An undisturbed watch", "ru": "Наблюдение без вмешательства" },
+        "brief": {
+          "en": "Keep the passage closed and photograph the face at regular intervals without touching it. A small watch can establish whether displacement occurs without excavation, but cannot compare pressure with movement.",
+          "ru": "Оставить проход закрытым и снимать поверхность через равные промежутки, не касаясь её. Небольшой пост проверит движение без раскопок, но не сможет сопоставить нажим со смещением."
+        },
+        "report": {
+          "en": "WATCH LOG / no contact made\nThe fixed photographs show no measurable change during the watch. That excludes continuous settling over the observed interval; it says nothing about what happened under the mason's chisel. His account began with contact, which this watch deliberately omitted.\nThe reference photographs are retained. Another visit requires a marked pressure trial and the surveyor's attendance; extending an unchanged watch would not answer the remaining question. No clearance to reopen the passage has been signed.",
+          "ru": "ЖУРНАЛ ПОСТА / касания не было\nСнимки с неподвижной точки не показывают измеримого изменения за время наблюдения. Это исключает непрерывную осадку в данном промежутке, но ничего не говорит о случившемся под зубилом. Показание каменщика начиналось с касания, которое здесь намеренно исключили.\nКонтрольные снимки сохранены. Для следующего выезда нужны размеченный опыт с нажимом и присутствие обмерщика; продление прежнего наблюдения не ответит на оставшийся вопрос. Разрешение открыть проход не подписано."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      },
+      {
+        "id": "trace",
+        "title": { "en": "Remote contact record", "ru": "Дистанционная запись касания" },
+        "brief": {
+          "en": "Fit a borrowed mechanical recorder to a handled probe and photograph the marked face from the entrance. Calibration and repeated reference exposures take longer, but reduce the time observers spend beside the cut.",
+          "ru": "Соединить щуп с одолженным механическим самописцем, а размеченную поверхность снимать от входа. Калибровка и контрольные снимки потребуют времени, зато наблюдателям не придётся долго стоять у скола."
+        },
+        "report": {
+          "en": "OLCHA / contact trace and plates\nThe recorder fixes contact at one mark; successive plates place the displacement beneath its neighbour. An empty probe stroke produced no corresponding change. The apparatus was withdrawn after the limited trial.\nWrona collected only grains already loose in the old cut. Their envelope carries the plate references, including the apparently uneventful control. No new opening was made. The field survey retains two locations where the office draft supplied one; whether detached material behaves similarly remains a laboratory question.",
+          "ru": "ОЛЬХА / лента касания и снимки\nСамописец отмечает касание у одной метки; последовательные снимки показывают смещение под соседней. Холостой ход щупа такого изменения не дал. После ограниченной пробы прибор убрали.\nВрона собрала лишь крупинки, уже отделившиеся в старом сколе. На конверте стоят номера снимков, включая внешне пустой контрольный. Нового отверстия не делали. Полевой обмер сохраняет два места там, где черновик указывал одно; поведение отделённого материала предстоит проверить в лаборатории."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      }
+    ]
+  },
+  {
+    "id": "titan",
+    "subject": 2,
+    "documents": [
+      {
+        "title": { "en": "Excavation ledger / loose leaf", "ru": "Журнал раскопок / отдельный лист" },
+        "fragments": [
+          { "en": "Rope, oil and three lamps precede the entry for the construct. Replacement rope follows it.", "ru": "Перед записью о конструкте стоят канат, масло и три лампы. После неё записана замена каната." },
+          { "en": "No surviving entry records the casting of the old body. The earlier builder's name remains absent.", "ru": "Сохранившиеся записи не упоминают отливку старого корпуса. Имя прежнего создателя отсутствует." },
+          { "en": "Olcha's note: Leopold found the machine. A later alteration cannot serve as the original drawing of an excavated joint.", "ru": "Пометка Ольхи: Леопольд нашёл машину. Поздняя переделка не может служить исходным чертежом найденного сочленения." }
+        ]
+      },
+      {
+        "title": { "en": "Workshop / proposed clean reconstruction", "ru": "Мастерская / проект сводного чертежа" },
+        "fragments": [
+          { "en": "The drafter has extended a dimension from Leopold's correction across every joint. Earlier lines are to be erased as duplicates.", "ru": "Чертёжник перенёс размер из поправки Леопольда на все сочленения. Старые линии предлагается стереть как повторные." },
+          { "en": "Several leaves were cut close to the binding. Neither the clean copy nor its covering note identifies what they contained.", "ru": "Несколько листов вырезано у переплёта. Ни чистовик, ни сопроводительная записка не сообщают их содержания." },
+          { "en": "Krzemien asks whether the drawings might help lift a fallen roof. She has not requested the machine's restoration.", "ru": "Кшемень спрашивает, помогут ли чертежи поднять обвалившуюся крышу. Восстановления самой машины она не просила." }
+        ]
+      }
+    ],
+    "pair": [3, 1],
+    "hypothesis": {
+      "en": "The clean drawing assumes continuity where the excavation record requires a distinction. Compare joints and notation before combining dimensions: a correction may describe Leopold's addition rather than the older mechanism beneath it. Preserve the sequence and the missing leaves. Nothing here warrants naming the first builder or assembling a complete Titan.",
+      "ru": "Чистовик предполагает единство там, где журнал раскопок требует различать слои. Прежде чем сводить размеры, нужно сравнить сочленения и обозначения: поправка может описывать добавление Леопольда, а не древний механизм под ним. Последовательность и пропуски следует сохранить. Оснований назвать первого создателя или собрать целого Титана здесь нет."
+    },
+    "mismatch": {
+      "en": "Missing pages and supply purchases establish an incomplete excavation record, but do not validate any reconstructed dimension. The disputed step is the transfer of a later correction onto older parts. A convincing silhouette would still leave that step untested.",
+      "ru": "Пропавшие листы и закупки показывают неполноту журнала раскопок, но не подтверждают восстановленные размеры. Спорный шаг состоит в переносе поздней поправки на старые части. Убедительный силуэт машины не заменит проверки этого шага."
+    },
+    "methods": [
+      {
+        "id": "model",
+        "title": { "en": "A model of the clean drawing", "ru": "Модель по сводному чертежу" },
+        "brief": {
+          "en": "Build a small inert model from the proposed clean sheet. This tests whether the drafter's joints fit together, without moving the excavated sections. It relies on the very dimensional conversion under dispute.",
+          "ru": "Собрать небольшую неподвижную модель по предложенному чистовику. Она проверит совместимость начерченных узлов без перемещения найденных частей, но будет опираться на спорный пересчёт размеров."
+        },
+        "report": {
+          "en": "WORKSHOP RETURN / model retained\nThe joints fit only where the drafter supplied spacers absent from the surviving sheets. Removing those additions prevents the model from closing. This exposes an assumption in the clean reconstruction, not a defect demonstrated in the original machine.\nThe model is labelled with its added parts and kept for comparison. A renewed assignment must inspect the underlying measurements or establish the order of the drawings. More work on the same silhouette would merely conceal the missing evidence more neatly.",
+          "ru": "ОТВЕТ МАСТЕРСКОЙ / модель сохранена\nУзлы сходятся лишь там, где чертёжник добавил прокладки, отсутствующие на уцелевших листах. Без добавлений модель не замыкается. Обнаружено допущение в сводной реконструкции, а не доказанный изъян исходной машины.\nДобавленные части подписаны; модель оставлена для сравнения. Новое задание должно проверить исходные замеры либо установить порядок чертежей. Дальнейшая работа над тем же силуэтом лишь аккуратнее скроет недостающие сведения."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      },
+      {
+        "id": "survey",
+        "title": { "en": "Survey the surviving joints", "ru": "Обмер сохранившихся сочленений" },
+        "brief": {
+          "en": "Bring surveyors and a lifting-safety specialist to the accessible remains. Measure external joints without powering or assembling them; match each measurement to its own drawing, retaining altered and unaltered sections separately.",
+          "ru": "Отправить к доступным остаткам обмерщиков и специалиста по подъёмным работам. Измерить наружные сочленения без запуска и сборки; сопоставить каждый размер с его чертежом, не смешивая переделанные и исходные части."
+        },
+        "report": {
+          "en": "TECHNICAL INVENTORY / survey supplement\nThe older joints do not match Leopold's later notation. A second system of measurement accounts for dimensions that the clean copy had treated as damaged figures. Each accessible section now has its own drawing reference and condition record.\nPhotographs of dismantled and intact sections remain separate. Nothing has been powered or reassembled. The missing leaves still prevent a complete reconstruction, but the surviving dimensions can be submitted for a limited load model. The inventory names Leopold as the later modifier, not the first builder.",
+          "ru": "ТЕХНИЧЕСКАЯ ОПИСЬ / приложение к обмеру\nСтарые сочленения не соответствуют поздним обозначениям Леопольда. Вторая система мер объясняет размеры, которые чистовик счёл испорченными цифрами. Каждой доступной части теперь соответствуют ссылка на чертёж и запись о состоянии.\nСнимки разобранных и целых участков хранятся раздельно. Ничего не запускали и не собирали. Пропавшие листы всё ещё не позволяют восстановить машину целиком, но уцелевшие размеры можно передать для ограниченного расчёта нагрузки. Леопольд указан автором переделок, не первым создателем."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "sequence",
+        "title": { "en": "Recover the drawing sequence", "ru": "Восстановить порядок чертежей" },
+        "brief": {
+          "en": "Collate bindings, corrections and excavation photographs, then make a limited site check of external dimensions. Work from the separate sheets rather than the clean reconstruction. Archive work saves hired lifting equipment but takes longer.",
+          "ru": "Сопоставить переплёты, поправки и снимки раскопок, затем выборочно проверить наружные размеры на месте. Работать с отдельными листами, не со сводным чертежом. Архивная работа сократит наём подъёмного оборудования, но займёт больше времени."
+        },
+        "report": {
+          "en": "OLCHA / ordered drawing register\nLeopold's corrections form a later layer. The underlying joint drawings use a different measure; a limited check against accessible sections supports keeping both systems rather than averaging them. Cut pages remain gaps in the register, not reconstructed leaves.\nWrona attached separate condition photographs to each surviving stage. The inventory is adequate for a load-model proposal using the recorded dimensions. It supplies neither an intact Titan nor the name of whoever made its oldest parts.",
+          "ru": "ОЛЬХА / упорядоченная опись чертежей\nПоправки Леопольда образуют поздний слой. Исходные чертежи сочленений используют иную меру; выборочная проверка доступных частей подтверждает необходимость сохранить обе системы, а не усреднять их. Вырезанные страницы остались пропусками, не восстановленными листами.\nВрона приложила к каждому уцелевшему этапу отдельные снимки состояния. Опись пригодна для предложения расчёта нагрузки по записанным размерам. Ни целого Титана, ни имени создателя его древнейших частей она не даёт."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      }
+    ]
+  },
+  {
+    "id": "entity",
+    "subject": 3,
+    "documents": [
+      {
+        "title": { "en": "Witness sheet / retained wording", "ru": "Лист свидетельницы / исходные слова" },
+        "fragments": [
+          { "en": "She said 'more than one', gave no number, then wrote the same word at different sizes. She would not read it aloud.", "ru": "Она сказала «не один», числа не назвала, затем написала одно слово буквами разного размера. Читать вслух отказалась." },
+          { "en": "Krzemien permits another interview only with her agreement. The refusal to speak must remain in the record.", "ru": "Кшемень разрешает новую беседу лишь с её согласия. Отказ говорить должен остаться в записи." },
+          { "en": "The interpreter's rendering is enclosed separately. The speaker's identity is not established by a religious heading.", "ru": "Толкование переводчика приложено отдельно. Религиозный заголовок не устанавливает личность говорившего." }
+        ]
+      },
+      {
+        "title": { "en": "Dispatch index / unsigned entry", "ru": "Указатель донесений / неподписанная запись" },
+        "fragments": [
+          { "en": "The handwritten sheet is listed under £HSM_BAR_redact_short£. It has not been transcribed into the index.", "ru": "Рукописный лист указан под номером £HSM_BAR_redact_short£. В указатель его не переписывали." },
+          { "en": "The entry assigns one speaker because there is one witness statement. No listening record supports that count.", "ru": "В запись внесён один говоривший, поскольку показание одно. Журнала прослушивания, подтверждающего такой подсчёт, нет." },
+          { "en": "A blank line requests the interval between a call and a reply. The interview supplied no measured interval.", "ru": "Пустая строка требует промежуток между обращением и ответом. В беседе измеренной задержки не получено." }
+        ]
+      }
+    ],
+    "pair": [1, 2],
+    "hypothesis": {
+      "en": "The index has counted statements instead of speakers. Neither handwriting nor overlapping speech supplies a reliable number. Olcha proposes independent station logs: record a controlled signal, the interval and the response separately, without completing one observer's account from the other's. Stop if the response changes. No name, bargain or source of power is established by hearing something answer.",
+      "ru": "Указатель посчитал показания вместо говоривших. Ни почерк, ни наложение речи не дают надёжного числа. Ольха предлагает независимые журналы постов: отдельно записывать контрольный сигнал, промежуток и ответ, не дополняя одного наблюдателя за другого. При изменении ответа прекратить опыт. Услышанный ответ ещё не устанавливает имени, соглашения или источника энергии."
+    },
+    "mismatch": {
+      "en": "These passages concern the handling of testimony, not the number or nature of those heard below. An omitted name is not evidence of a particular being. The immediate question is whether the dispatch has substituted the number of documents for something the witness expressly could not count.",
+      "ru": "Эти строки касаются обращения с показанием, а не числа или природы услышанных внизу. Изъятое имя не доказывает присутствия определённого существа. Сначала нужно проверить, не подменил ли указатель числом документов то, чего свидетельница прямо не смогла сосчитать."
+    },
+    "methods": [
+      {
+        "id": "stations",
+        "title": { "en": "Independent listening stations", "ru": "Независимые посты прослушивания" },
+        "brief": {
+          "en": "Equip two teams at separate shaft approaches with synchronised clocks. One operator gives a short agreed series; both teams seal their own logs before comparison. Olcha supervises withdrawal if the response changes. No descent or renewed witness exposure.",
+          "ru": "Оснастить две группы у подходов к разным шахтам сверенными часами. Один оператор подаёт короткую условленную серию; группы запечатывают записи до сравнения. Ольха следит за отходом при изменении ответа. Без спуска и повторного воздействия на свидетельницу."
+        },
+        "report": {
+          "en": "WRONA / two covers, no combined transcript\nThe independent logs describe the same early responses. After the third signal the response changed; Olcha ordered both teams away. Neither log supplies a dependable count of speakers. The signal sequence is retained, its last wording held under £HSM_BAR_redact_long£.\nTiming entries were preserved rather than forced into a single delay. They await comparison with an ordinary acoustic control. An older Pentarchy transcript breaks in a comparable place. The field file records a contact and a withdrawal, not an identified being under our control.",
+          "ru": "ВРОНА / две обложки, без общей стенограммы\nНезависимые журналы одинаково описывают первые ответы. После третьего сигнала ответ изменился; Ольха приказал обеим группам отойти. Надёжного числа говоривших нет ни в одной записи. Порядок сигналов сохранён, содержание последнего хранится под £HSM_BAR_redact_long£.\nЗамеры времени не сводили насильно к одной задержке. Их предстоит сравнить с обычным акустическим контролем. Старая стенограмма Пентархии обрывается сходным образом. Полевое дело фиксирует контакт и отход, а не установленное существо под нашим контролем."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "intervals",
+        "title": { "en": "Separate signal and response", "ru": "Разделить сигнал и ответ" },
+        "brief": {
+          "en": "Prepare a short sequence with unequal pauses, testing the recorders away from the workings first. Repeat only the agreed sequence at two guarded listening positions. Keep the operator's timing sheet separate from the listeners' descriptions; withdraw on a changed response.",
+          "ru": "Подготовить короткую серию с неравными паузами, сперва проверив запись вдали от выработок. У двух охраняемых постов провести только согласованную серию. Лист времени оператора хранить отдельно от описаний слушателей; при перемене ответа отойти."
+        },
+        "report": {
+          "en": "OLCHA / three sheets to be kept separate\nThe operator's sheet distinguishes the imposed pauses from what the listeners recorded. Their first descriptions agree. The third signal brought a changed response and the trial ended on Olcha's order, not at its planned hour.\nThe records do not justify a fixed count or a fixed-delay explanation. Comparison with ordinary returning sound remains required. Wrona found a comparable interruption in the old Pentarchy papers and attached its reference without supplying the missing words. No extraction apparatus was brought below.",
+          "ru": "ОЛЬХА / три листа хранить раздельно\nЛист оператора отличает заданные паузы от записанного слушателями. Первые описания совпадают. На третий сигнал ответ изменился, и опыт закончился по приказу Ольхи, не в назначенный час.\nЗаписи не обосновывают ни точного числа, ни объяснения постоянной задержкой. Сравнение с обычным возвращающимся звуком ещё необходимо. Врона нашла сходный обрыв в старых бумагах Пентархии и приложила ссылку, не восстанавливая пропущенных слов. Аппаратуры для отбора энергии вниз не доставляли."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      },
+      {
+        "id": "listening",
+        "title": { "en": "Listen without addressing it", "ru": "Слушать без обращения" },
+        "brief": {
+          "en": "Leave a guarded recording post at the upper approach without sending signals. This avoids initiating contact and may establish when overlapping sounds occur. It cannot by itself show whether any sound answers an observer.",
+          "ru": "Оставить охраняемый пост записи у верхнего подхода, не подавая сигналов. Так можно установить время наложения звуков без начала контакта. Само наблюдение не покажет, отвечает ли какой-либо звук наблюдателю."
+        },
+        "report": {
+          "en": "PASSIVE WATCH / timing sheet retained\nThe recording contains overlapping sounds, but no agreed call against which to test a reply. Two transcribers divide the same passage differently; neither can certify a number of speakers. The disagreement is attached, not settled by choosing the neater transcript.\nThe watch identifies material requiring controlled comparison. A further assignment needs a signal record and independent listeners, with a withdrawal rule. Replaying this reel until a familiar name appears would not supply the missing control.",
+          "ru": "ПАССИВНЫЙ ПОСТ / лист времени сохранён\nВ записи есть наложение звуков, но нет условленного обращения, с которым можно проверить ответ. Два расшифровщика по-разному делят один отрывок; ни один не удостоверяет числа говоривших. Расхождение приложено, а не устранено выбором более аккуратной стенограммы.\nНаблюдение выделило материал для контрольного сравнения. Новому выезду нужны запись сигнала, независимые слушатели и правило отхода. Прослушивание ленты до появления знакомого имени не заменит отсутствующего контроля."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      }
+    ]
+  },
+  {
+    "id": "amulet",
+    "subject": 4,
+    "documents": [
+      {
+        "title": { "en": "Settlement letter / enclosed account", "ru": "Письмо поселения / приложенный рассказ" },
+        "fragments": [
+          { "en": "They ask for the survey stakes to be moved, not the protection. Janosik bought the amulet before the plants came.", "ru": "Жители просят перенести межевые колья, не защиту. Яношик купил амулет до появления растений." },
+          { "en": "The remembered event concerns plants turning away at the settlement edge. The writer names no other repelled danger.", "ru": "Вспоминают, как растения отступали у края поселения. Другой отражённой угрозы автор не называет." },
+          { "en": "The address is £HSM_BAR_redact_long£. The appeal ends: 'Do not take away the thing that kept us alive.'", "ru": "Адрес: £HSM_BAR_redact_long£. Просьба заканчивается словами: «Не забирайте то, благодаря чему мы остались живы»." }
+        ]
+      },
+      {
+        "title": { "en": "Trader's promise / collected versions", "ru": "Обещание торговца / собранные версии" },
+        "fragments": [
+          { "en": "Three tellings preserve different explanations of the purchase. None is a signed account by the trader himself.", "ru": "Три пересказа по-разному объясняют покупку. Ни один не подписан самим торговцем." },
+          { "en": "Olcha has requested the exact words. One witness will speak only to the doctor; that condition is retained.", "ru": "Ольха запросил точные слова. Один свидетель согласен говорить лишь с врачом; это условие сохранено." },
+          { "en": "One version promises protection 'against everything born below Barrad'. It lists no observation beyond the plants.", "ru": "Одна версия обещает защиту «от всего рождённого под Баррадом». Наблюдений помимо растений она не приводит." }
+        ]
+      }
+    ],
+    "pair": [2, 3],
+    "hypothesis": {
+      "en": "The promise covers more than the remembered event. Map where protection was actually observed and what encountered it, keeping the trader's broader claim separate. Compare accounts against fixed landmarks without moving the amulet or introducing a threat. The village's survival is a reason to preserve its defence, not a licence to test it to destruction.",
+      "ru": "Обещание шире запомнившегося события. Нужно нанести на план места наблюдаемой защиты и то, от чего она защищала, отделив общее заверение торговца. Сопоставить рассказы с постоянными ориентирами, не трогая амулет и не приводя угрозу. Выживание деревни требует сохранить её защиту, а не испытывать её до разрушения."
+    },
+    "mismatch": {
+      "en": "The purchase and the residents' refusal establish why removal is unacceptable. They do not establish the ward's reach. The comparison must distinguish a witnessed protective effect from a promise about dangers nobody in these passages encountered.",
+      "ru": "Покупка и отказ жителей объясняют недопустимость изъятия, но не устанавливают границ защиты. Нужно отделить наблюдавшееся защитное действие от обещания о тех угрозах, с которыми в этих записях никто не сталкивался."
+    },
+    "methods": [
+      {
+        "id": "boundary",
+        "title": { "en": "Observe the boundary in place", "ru": "Обследовать границу на месте" },
+        "brief": {
+          "en": "Hire surveyors to record the existing plant margin and settlement landmarks with residents present. Compare observation points inside and outside the reported line without bringing plants across it. Leave both amulet and stakes undisturbed.",
+          "ru": "Нанять обмерщиков для записи существующей границы растений и ориентиров поселения при жителях. Сравнить точки по обе стороны предполагаемой линии, ничего через неё не перенося. Не трогать ни амулет, ни колья."
+        },
+        "report": {
+          "en": "WRONA / boundary sheet\nThe observations can be placed against the settlement edge. Residents agree on where the plants turned away; claims about other threats remain separate and inconsistent. The survey keeps the recorded line distinct from the trader's broader promise.\nNo test creature or hostile material was introduced. No requisition for the amulet exists. Readings and statements, not the settlement's defence, accompany the field report. Olcha's request for the trader's exact words remains open.",
+          "ru": "ВРОНА / лист границы\nНаблюдения удалось привязать к краю поселения. Жители сходятся в том, где отступали растения; рассказы об иных угрозах оставлены отдельно и расходятся. На плане записанная линия отделена от общего обещания торговца.\nНи подопытных существ, ни опасного материала не вводили. Распоряжения об изъятии амулета нет. В полевое дело поступили замеры и показания, не защита поселения. Запрос Ольхи о точных словах торговца остаётся открытым."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "promise",
+        "title": { "en": "Trace the trader's promise", "ru": "Проследить обещание торговца" },
+        "brief": {
+          "en": "Send a clerk and interpreter to compare the three purchase accounts without entering the protected margin. Record who heard the trader directly and who repeated another telling. This tests the promise's transmission, not the boundary itself.",
+          "ru": "Отправить писаря и переводчика для сравнения трёх рассказов о покупке, не заходя на защищённую межу. Записать, кто слышал торговца, а кто пересказывал. Это проверит передачу обещания, не саму границу."
+        },
+        "report": {
+          "en": "CORRESPONDENCE REVIEW / no boundary readings\nThe broadest version cannot be tied to an independent observation beyond the plants. Differences in wording remain on the comparison sheet; the witness who will speak only to the doctor has not been pressed to waive that condition.\nThis narrows what may honestly be quoted as testimony. It does not locate the ward or measure its limits. A new visit must fund a boundary survey or a landmark-based reconstruction with the residents. The amulet has neither been collected nor declared ineffective.",
+          "ru": "СВЕРКА ПЕРЕПИСКИ / без замеров границы\nСамую широкую версию не удалось связать с самостоятельным наблюдением помимо растений. Различия формулировок оставлены в таблице; свидетеля, согласного говорить лишь с врачом, не принуждали отказаться от этого условия.\nУточнено, что допустимо цитировать как показание. Место действия защиты и её пределы не измерены. Новый выезд требует оплаты обмера либо восстановления границы по ориентирам вместе с жителями. Амулет не изъят и не объявлен бесполезным."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      },
+      {
+        "id": "landmarks",
+        "title": { "en": "Reconstruct the old boundary", "ru": "Восстановить прежнюю границу" },
+        "brief": {
+          "en": "Let residents mark the earliest plant encounters on separate copies of the settlement plan. Check their landmarks in a slow circuit with a small team, adding current readings without provoking the ward. Preserve disagreements about anything other than plants.",
+          "ru": "Попросить жителей отметить первые встречи с растениями на отдельных копиях плана. Небольшой группой неторопливо проверить ориентиры на месте, добавив текущие замеры без испытания защиты нападением. Сохранить разногласия о прочих угрозах."
+        },
+        "report": {
+          "en": "KRZEMIEN / plans returned to their owners\nIndependent recollections converge on the settlement edge for the plants, even where their explanations of the purchase differ. The landmarks were checked on foot and current readings attached. No similar agreement supports the promise against everything below Barrad.\nThe record is sufficient for the boundary file, with disputed accounts still visible. The amulet stayed where its keepers placed it. A later comparative study may use these measurements; it may not borrow the settlement's protection as a specimen.",
+          "ru": "КШЕМЕНЬ / планы возвращены владельцам\nНезависимые воспоминания о растениях сходятся у края поселения, даже когда объяснения покупки расходятся. Ориентиры проверены обходом, текущие замеры приложены. Подобного согласия насчёт защиты от всего под Баррадом нет.\nМатериал достаточен для дела о границе; спорные показания не скрыты. Амулет остался на месте, выбранном хранителями. Последующее сравнительное исследование может использовать замеры, но не забирать защиту поселения в качестве образца."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      }
+    ]
+  },
+  {
+    "id": "plants",
+    "subject": 17,
+    "documents": [
+      {
+        "title": { "en": "Infirmary / three separate admissions", "ru": "Лазарет / три отдельных приёма" },
+        "fragments": [
+          { "en": "Different leaves accompanied the three accounts. Each patient used the same local name for the growth.", "ru": "К трём рассказам приложены разные листья. Все пациенты называли заросли одним местным именем." },
+          { "en": "Two patients reported touching the plants. Their samples remain with their own statements.", "ru": "Двое пациентов сообщили о касании растений. Образцы оставлены при соответствующих показаниях." },
+          { "en": "The third patient burned a bundle collected by someone else. The record does not say that this patient touched a living plant.", "ru": "Третий пациент сжёг связку, собранную другим. В записи не сказано, что он касался живого растения." }
+        ]
+      },
+      {
+        "title": { "en": "Clearing crew / draft health return", "ru": "Расчистная бригада / черновик сводки" },
+        "fragments": [
+          { "en": "The map records injury sites. A shared plant name has been copied across several separate marks.", "ru": "Карта отмечает места поражений. Общее название растений переписано у нескольких отдельных меток." },
+          { "en": "The summary files all three admissions as contact injuries. Its single heading has replaced the separate exposure accounts.", "ru": "Сводка относит все три обращения к поражениям от касания. Один заголовок заменил отдельные записи об обстоятельствах." },
+          { "en": "An older boundary note is attached under BR-004. No instruction to burn the margins accompanies it.", "ru": "Старая запись о границе приложена под БР-004. Указания выжечь межи при ней нет." }
+        ]
+      }
+    ],
+    "pair": [3, 2],
+    "hypothesis": {
+      "en": "The summary merges contact with exposure to burning material, while the shared name may cover different plants. Reconstruct who encountered what, by which route and at which location. Keep ash apart from leaves and each specimen beside its own account. No additional exposure of a patient is needed to correct a classification that the records already call into question.",
+      "ru": "Сводка смешивает касание с воздействием горящего материала; общее имя может обозначать разные растения. Нужно установить, кто с чем столкнулся, каким способом и где. Золу хранить отдельно от листьев, каждый образец при своём рассказе. Для исправления спорной классификации не требуется повторно подвергать пациентов воздействию."
+    },
+    "mismatch": {
+      "en": "A common name or a nearby protective boundary does not establish how these patients were harmed. The comparison must preserve the distinction that the health return erased. Otherwise a remedy for skin contact could be sent to someone whose exposure was through smoke.",
+      "ru": "Общее имя или соседняя защитная граница не устанавливают, как пострадали эти пациенты. Сравнение должно сохранить различие, стёртое сводкой. Иначе средство для кожи могут назначить тому, кто подвергся воздействию дыма."
+    },
+    "methods": [
+      {
+        "id": "transects",
+        "title": { "en": "Separate collection routes", "ru": "Раздельные маршруты сбора" },
+        "brief": {
+          "en": "A botanist and guarded field team retrace the reported sites with protective equipment. Bag each specimen by location and exposure account, keeping burned material separate. Compare survey marks with the clearing route before approaching unfamiliar growth.",
+          "ru": "Ботаник и охраняемая полевая группа с защитным снаряжением пройдут указанные места. Каждый образец упаковать по месту и обстоятельствам; обожжённый материал отдельно. Перед подходом к неизвестным зарослям сверять метки с маршрутом расчистки."
+        },
+        "report": {
+          "en": "HERBARIUM / route labels retained\nThe collection no longer treats the local name as a species. Familiar irritants were separated from specimens whose responses remain unexplained; burned material has its own container and source account. No volunteer was exposed.\nAt one stretch the survey marks ceased to agree with the workers' route. Wrona halted clearing there and retained both maps. The field inventory now supports separate study of contact, smoke and transport. Olcha's request for the missing growing-schedule leaf remains unanswered.",
+          "ru": "ГЕРБАРИЙ / маршрутные ярлыки сохранены\nМестное имя больше не принимается за название вида. Знакомые раздражающие растения отделены от образцов с необъяснёнными реакциями; обожжённому материалу выделены свой контейнер и исходное показание. Добровольцев воздействию не подвергали.\nНа одном участке метки перестали совпадать с маршрутом рабочих. Врона остановила там расчистку и сохранила обе карты. Полевая опись позволяет раздельно изучать касание, дым и перевозку. Запрос Ольхи о пропущенном листе графика выращивания остаётся без ответа."
+        },
+        "days": 21,
+        "cost": 30,
+        "qualifies": true
+      },
+      {
+        "id": "provenance",
+        "title": { "en": "Follow each sample home", "ru": "Проследить происхождение образцов" },
+        "brief": {
+          "en": "Begin with the infirmary samples and visit their collectors separately. Reconstruct the gathering and burning routes, then obtain small reference specimens without repeating the injuries. A slower two-person inquiry trades hired field capacity for careful provenance.",
+          "ru": "Начать с образцов лазарета и отдельно опросить собиравших их. Восстановить пути сбора и сжигания, затем взять небольшие контрольные образцы, не повторяя поражений. Медленная работа пары сотрудников сократит наём полевой группы ради тщательной проверки происхождения."
+        },
+        "report": {
+          "en": "KRZEMIEN / admission slips and collection map\nThe burned bundle has a different collection history from the two contact samples. Keeping those histories separate reveals ordinary irritants among material that the clearing return had treated as one threat. Other specimens remain unexplained and isolated.\nThe reconstructed route also fails to match part of the survey. Wrona halted clearing on that section pending correction. Separate labels and containers now accompany the field herbarium; no new burning trial or deliberate skin exposure was performed.",
+          "ru": "КШЕМЕНЬ / приёмные листы и карта сбора\nУ сожжённой связки и двух образцов, связанных с касанием, разная история сбора. Её разделение выявило обычные раздражающие растения среди материала, который сводка считала одной угрозой. Иные образцы остаются необъяснёнными и изолированными.\nВосстановленный маршрут также не совпал с частью обмера. Врона остановила расчистку этого участка до исправления. Полевой гербарий снабжён раздельными ярлыками и контейнерами; новых опытов со сжиганием и намеренным касанием не проводили."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      },
+      {
+        "id": "leaves",
+        "title": { "en": "Sort the leaves first", "ru": "Сначала разобрать листья" },
+        "brief": {
+          "en": "Ask a visiting botanist to sort the infirmary collection by visible structure without leaving the laboratory. Preserve all original labels. This can expose misleading names, but the burned bundle cannot be reconstructed from intact leaves alone.",
+          "ru": "Попросить приезжего ботаника разобрать коллекцию лазарета по внешнему строению, не выходя из лаборатории. Сохранить исходные ярлыки. Так можно проверить названия, но сожжённую связку нельзя восстановить по одним целым листьям."
+        },
+        "report": {
+          "en": "BOTANICAL SORT / exposure unresolved\nThe shared village name covers visibly different material. The sorted trays correct that much. They cannot show which component of the burned bundle reached the third patient, nor connect an intact leaf to a smoke exposure merely because their labels match.\nThe collection is retained in separate trays. Completion requires the collectors' accounts and the gathering sites, with burned material traced independently. The next assignment pays for that missing fieldwork, not for another rearrangement of the same leaves.",
+          "ru": "БОТАНИЧЕСКИЙ РАЗБОР / воздействие не установлено\nОбщее деревенское имя покрывает внешне разный материал. Разложенные лотки исправляют эту ошибку. Но они не показывают, какой компонент сожжённой связки воздействовал на третьего пациента; совпадение ярлыков не связывает целый лист с поражением дымом.\nКоллекция сохранена раздельно. Для завершения нужны рассказы собиравших и места сбора, с отдельной проверкой обожжённого материала. Следующее задание оплачивает недостающую полевую работу, не новую перекладку тех же листьев."
+        },
+        "days": 14,
+        "cost": 20,
+        "qualifies": false
+      }
+    ]
+  },
+  {
+    "id": "echo",
+    "subject": 14,
+    "documents": [
+      {
+        "title": { "en": "Foreman's statement / first copy", "ru": "Показание бригадира / первый экземпляр" },
+        "fragments": [
+          { "en": "He reports that nobody was working below the marked landing. This is a work roster, not a shaft inspection.", "ru": "По его словам, ниже отмеченной площадки никто не работал. Это сведения о смене, не результат осмотра шахты." },
+          { "en": "He calls the delayed sound an answer and remembers words different from the worker's. Their estimates of the delay agree.", "ru": "Он называет запоздавший звук ответом и помнит иные слова, чем рабочий. В оценке задержки они сходятся." },
+          { "en": "His request concerns the next shift. The ventilation plan is still being sought.", "ru": "Его просьба касается следующей смены. План вентиляции ещё разыскивают." }
+        ]
+      },
+      {
+        "title": { "en": "Worker's statement / medical copy", "ru": "Показание рабочего / медицинская копия" },
+        "fragments": [
+          { "en": "He heard his own words return after the interval described by the foreman. He does not remember a different reply.", "ru": "Он услышал собственные слова спустя промежуток, указанный бригадиром. Иного ответа не помнит." },
+          { "en": "The plan ends at a wall the workers describe as hollow. The statement contains no view of what lies behind it.", "ru": "План заканчивается у стены, которую рабочие считают полой. Свидетель не видел, что находится за ней." },
+          { "en": "Krzemien retained the refusal of another shift. Name and employment reference: £HSM_BAR_redact_long£.", "ru": "Кшемень сохранила отказ от следующей смены. Имя и запись о найме: £HSM_BAR_redact_long£." }
+        ]
+      }
+    ],
+    "pair": [2, 1],
+    "hypothesis": {
+      "en": "The witnesses agree about timing while disagreeing about meaning. Replace speech with a recognisable nonverbal signal, then record both delay and direction from safe positions. A sound returning by an unrecorded route could be mistaken for an answer; that remains a hypothesis until the route is surveyed. No descent beyond the checked landing is authorised.",
+      "ru": "Свидетели сходятся во времени, но расходятся в смысле. Нужно заменить речь узнаваемым неречевым сигналом и записать задержку вместе с направлением из безопасных точек. Звук, вернувшийся неизвестным путём, могли принять за ответ; пока путь не обследован, это лишь предположение. Спуск ниже проверенной площадки не разрешён."
+    },
+    "mismatch": {
+      "en": "An empty work roster and an unfinished plan leave open where sound could travel; they do not establish another speaker. The stronger comparison is between two incompatible descriptions of words with the same reported delay. Test what can be repeated without asking either witness to supply a better memory.",
+      "ru": "Пустая сменная ведомость и неполный план оставляют неизвестным путь звука, но не доказывают другого говорившего. Существеннее сравнить несовпадающие описания слов при одинаковой задержке. Проверять следует воспроизводимое, не требуя от свидетелей более удобного воспоминания."
+    },
+    "methods": [
+      {
+        "id": "testimony",
+        "title": { "en": "Revisit the spoken accounts", "ru": "Вернуться к показаниям" },
+        "brief": {
+          "en": "Interview the workers separately, with consent, and compare their earliest accounts with later tellings. This may establish how 'answer' entered the record. It will not measure the shaft's acoustic path.",
+          "ru": "С согласия рабочих опросить их отдельно и сравнить ранние показания с поздними пересказами. Так можно понять, откуда в записи появился «ответ», но не измерить акустический путь шахты."
+        },
+        "report": {
+          "en": "INTERVIEW REVIEW / originals retained\nThe original accounts still agree more closely on delay than on words. Later tellings borrow one another's phrasing and therefore cannot count as fresh corroboration. Neither witness has been asked to return below.\nThis distinguishes repeated testimony from independent evidence, but leaves the sound itself untested. A new field assignment must supply a controlled signal and positions marked on the ventilation plan. The interviews will accompany it; asking the same question again would not replace the survey.",
+          "ru": "СВЕРКА БЕСЕД / оригиналы сохранены\nПервоначальные показания по-прежнему ближе во времени задержки, чем в словах. Поздние пересказы заимствуют выражения друг у друга и не считаются новым подтверждением. Ни одного свидетеля не просили вернуться вниз.\nПовторение показаний отделено от независимого свидетельства, но сам звук не проверен. Новому выезду нужны контрольный сигнал и точки на плане вентиляции. Беседы приложат к нему; ещё один одинаковый вопрос не заменит обмера."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      },
+      {
+        "id": "whistle",
+        "title": { "en": "Whistle and direction survey", "ru": "Свисток и обмер направлений" },
+        "brief": {
+          "en": "Hire an acoustic survey team. Use a whistle instead of a question and compare its return from the landing and the checked side passage. Inspect the route in stages; move no observer into an unchecked opening.",
+          "ru": "Нанять акустическую обмерную группу. Заменить вопрос свистком и сравнить возврат звука с площадки и проверенного бокового хода. Обследовать путь поэтапно; в непроверенный проём наблюдателей не отправлять."
+        },
+        "report": {
+          "en": "ACOUSTIC SHEET / route corrected\nThe whistle returned after the interval described by the workers. In the checked side passage it arrived from behind. Following the measured direction revealed a chamber missing from the plan, without requiring anyone to descend the open shaft.\nWrona marked the return route and retained the old drawing beneath it. The field report provides a repeatable acoustic comparison; final closure still belongs with the full measurements. Krzemien has left the shaft rail on the repair list.",
+          "ru": "АКУСТИЧЕСКИЙ ЛИСТ / трасса исправлена\nСвисток вернулся через промежуток, описанный рабочими. В проверенном боковом ходе он пришёл сзади. Проверка измеренного направления выявила камеру, отсутствовавшую на плане, без спуска людей в открытую шахту.\nВрона отметила обратный путь и оставила под исправлением прежний чертёж. Полевой отчёт даёт воспроизводимое акустическое сравнение; окончательное закрытие требует полных замеров. Кшемень оставила ограду шахты в перечне ремонта."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "recorders",
+        "title": { "en": "Map the return with recorders", "ru": "Проследить возврат по записям" },
+        "brief": {
+          "en": "Borrow recording equipment for a longer staged survey. Time a whistle at the source and at checked listening positions, then compare direction without relying on remembered words. Inspect newly indicated passages before relocating equipment.",
+          "ru": "Одолжить записывающую аппаратуру для длительного поэтапного обмера. Засекать свисток у источника и на проверенных постах, сравнивая направление без воспоминаний о словах. Перед переносом аппаратуры осматривать указанные звуком ходы."
+        },
+        "report": {
+          "en": "RECORDING REGISTER / matched signals\nThe timed whistle provides the same delayed return at the landing and a rearward arrival in the side passage. Repeated comparisons trace a route through a chamber absent from the old drawing. No independent spoken answer was recorded during the trials.\nThe corrected route and unedited control recordings accompany the field file. Their value is the repeatable path, not a verdict about every voice reported in Barrad. The missing chamber belongs to this ventilation survey; the open shaft remains a fall hazard.",
+          "ru": "РЕЕСТР ЗАПИСЕЙ / сопоставленные сигналы\nСвисток с отметкой времени даёт ту же задержку на площадке и приходит сзади в боковом ходе. Повторные сравнения прослеживают путь через камеру, отсутствовавшую на старом чертеже. Самостоятельного речевого ответа в этих пробах не записано.\nИсправленная трасса и неразрезанные контрольные записи приложены к делу. Их ценность в воспроизводимом пути, не в приговоре всем голосам Баррада. Пропущенная камера относится к этому вентиляционному обмеру; открытая шахта остаётся местом опасного падения."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      }
+    ]
+  },
+  {
+    "id": "compass",
+    "subject": 16,
+    "documents": [
+      {
+        "title": { "en": "Purchase offer / two route sketches", "ru": "Предложение о покупке / два маршрута" },
+        "fragments": [
+          { "en": "The seller says the needle finds a buried sanctuary. The quoted inscription is absent from his sketch of the instrument.", "ru": "Продавец утверждает, что стрелка ищет погребённое святилище. Цитируемой надписи на рисунке прибора нет." },
+          { "en": "The builder is entered as unknown. The merchant's identity is held under £HSM_BAR_redact_long£.", "ru": "Мастер указан как неизвестный. Имя торговца хранится под £HSM_BAR_redact_long£." },
+          { "en": "The two drawn routes approach from different directions but both end at the seller's packing shed.", "ru": "Два нарисованных маршрута подходят с разных направлений, но оба заканчиваются у склада продавца." }
+        ]
+      },
+      {
+        "title": { "en": "Demonstration terms / Wrona's copy", "ru": "Условия показа / экземпляр Вроны" },
+        "fragments": [
+          { "en": "Olcha requires a control instrument the seller has never handled. No comparison has yet been witnessed.", "ru": "Ольха требует контрольный прибор, которого продавец не касался. Сравнения при наблюдателях ещё не было." },
+          { "en": "The seller's proposed demonstration keeps his instrument in its own case and straps. He offers no uncased route trial.", "ru": "Предложенный показ сохраняет прибор в его футляре и ремнях. Проверки маршрута без футляра продавец не предлагает." },
+          { "en": "Wrona asks for the case and instrument together. Neither the sanctuary nor the inscription has been authenticated.", "ru": "Врона запрашивает футляр вместе с прибором. Ни святилище, ни надпись не подтверждены." }
+        ]
+      }
+    ],
+    "pair": [3, 2],
+    "hypothesis": {
+      "en": "The routes change, but the destination and the seller's transport arrangement remain. Separate instrument, case, carrier and direction before attributing the deviation to a sanctuary. Exchange one element at a time without telling the carrier which is under test. The offer may be mistaken or deceptive; neither possibility identifies the physical cause in advance.",
+      "ru": "Маршруты меняются, но цель и предложенный продавцом способ переноски остаются. Прежде чем приписывать отклонение святилищу, нужно разделить прибор, футляр, носильщика и направление. Менять по одному условию, не сообщая носильщику, что проверяют. Предложение может быть ошибочным или обманным; ни то ни другое заранее не устанавливает физической причины."
+    },
+    "mismatch": {
+      "en": "An undocumented inscription weakens the sales story but cannot explain a turning needle. The useful relationship joins the repeated destination to conditions the seller keeps unchanged. Test those conditions before treating an uncertain history as either proof of a relic or proof of fraud.",
+      "ru": "Неподтверждённая надпись ослабляет рассказ продавца, но не объясняет поворот стрелки. Полезная связь соединяет повторяющуюся цель с условиями, которые продавец сохраняет неизменными. Проверить нужно их, не превращая сомнительную историю ни в доказательство реликвии, ни в доказательство обмана."
+    },
+    "methods": [
+      {
+        "id": "routes",
+        "title": { "en": "Blind route exchange", "ru": "Слепая смена приборов" },
+        "brief": {
+          "en": "Hire a second survey team and exchange the offered compass with Olcha's control without telling the carrier. Repeat the route with and without the case, keeping direction and carrier recorded separately. Retain all fittings for later examination.",
+          "ru": "Нанять вторую обмерную группу и незаметно для носильщика менять предложенный компас на контрольный. Повторить путь с футляром и без него, отдельно записывая направление и носильщика. Всю фурнитуру оставить для дальнейшего осмотра."
+        },
+        "report": {
+          "en": "SURVEY SECTION / exchange sheet sealed\nThe deviation followed the packing case across the exchanges. It did not follow the carrier or the direction of travel. Leaving the case behind removed the alleged route. Wrona retained a fastener from its lining in a separate envelope for examination.\nThe seller requested another demonstration using his own straps; the request was refused. The field record identifies the assembly that requires testing, not a sanctuary. The final material examination must account for the fastener before the file is closed.",
+          "ru": "ЗЕМЛЕМЕРНАЯ СЕКЦИЯ / лист замен запечатан\nПри заменах отклонение следовало за футляром, не за носильщиком или направлением пути. Когда футляр оставили, предполагаемый маршрут исчез. Врона сохранила застёжку из подкладки в отдельном конверте для осмотра.\nПродавец попросил ещё один показ со своими ремнями; просьба отклонена. Полевая запись определяет требующий проверки узел, не святилище. До закрытия дела исследование материала должно объяснить роль застёжки."
+        },
+        "days": 14,
+        "cost": 35,
+        "qualifies": true
+      },
+      {
+        "id": "rotation",
+        "title": { "en": "Stationary comparison, then a route", "ru": "Стендовое сравнение и обход" },
+        "brief": {
+          "en": "Use the survey workshop to rotate the case around two fixed compasses, changing one fitting at a time. Then verify the resulting suspicion on a short blind route. Borrowed instruments reduce hire costs but require a longer booking.",
+          "ru": "В землемерной мастерской поворачивать футляр вокруг двух неподвижных компасов, меняя по одной детали. Затем проверить возникшее предположение коротким слепым обходом. Одолженные приборы сократят наём, но потребуют более долгого ожидания."
+        },
+        "report": {
+          "en": "WORKSHOP AND ROUTE / linked records\nWith the compasses fixed, changing the case's position changed the deviation. The subsequent blind exchange on the route reproduced the dependence on the case rather than on its bearer. Without the case the promised direction vanished.\nA lining fastener is held separately with the test order. Its physical properties remain for laboratory examination; the workshop has not certified the merchant's inscription or intent. Wrona filed the stationary measurements beside the route sheet so that neither can be mistaken for a journey to a hidden sanctuary.",
+          "ru": "МАСТЕРСКАЯ И ОБХОД / связанные записи\nПри неподвижных компасах перемещение футляра меняло отклонение. Последующая слепая замена на маршруте повторила зависимость от футляра, не от носильщика. Без футляра обещанное направление исчезло.\nЗастёжка из подкладки хранится отдельно с порядком проб. Её физические свойства предстоит исследовать в лаборатории; мастерская не удостоверяет ни надписи торговца, ни его намерений. Врона подшила стендовые замеры рядом с маршрутным листом, чтобы ни один не приняли за путешествие к тайному святилищу."
+        },
+        "days": 28,
+        "cost": 25,
+        "qualifies": true
+      },
+      {
+        "id": "origin",
+        "title": { "en": "Check the claimed provenance", "ru": "Проверить заявленное происхождение" },
+        "brief": {
+          "en": "Compare the seller's drawings and purchase account with surviving workshop catalogues. Request a traceable copy of the claimed inscription. This tests the pedigree offered with the compass, not its behaviour in the field.",
+          "ru": "Сравнить рисунки продавца и рассказ о покупке с уцелевшими каталогами мастерских. Запросить проверяемую копию заявленной надписи. Это проверит предлагаемую историю компаса, не его поведение на местности."
+        },
+        "report": {
+          "en": "PROVENANCE REVIEW / attribution withheld\nNo traceable copy of the quoted inscription accompanies the instrument's history. The supplied papers do not establish a builder or a sanctuary. That absence leaves the sale unverified; it does not explain why the needle deviates, nor prove that no deviation occurs.\nThe correspondence is retained. A renewed assignment needs the instrument, its case and an independent control on the same trial. Further catalogue work cannot substitute for that comparison, and no ancient-language attribution has been entered.",
+          "ru": "ПРОВЕРКА ПРОИСХОЖДЕНИЯ / атрибуция отложена\nВ истории прибора нет проверяемой копии цитируемой надписи. Представленные бумаги не устанавливают ни мастера, ни святилища. Покупка остаётся неподтверждённой; отсутствие записи не объясняет отклонения стрелки и не доказывает, что его нет.\nПереписка сохранена. Новому заданию нужны прибор, его футляр и независимый контроль в одной пробе. Дальнейший поиск по каталогам не заменит сравнения; надпись ни к одному древнему языку не отнесена."
+        },
+        "days": 21,
+        "cost": 20,
+        "qualifies": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+scripted_gui = {
+ HSM_BAR_fielddesk_window = {
+  context_type = player_context
+  window_name = "HSM_BAR_fielddesk_window"
+  visible = { HSM_BAR_fielddesk_window_available = yes check_variable = { HSM_BAR_fielddesk_open = 1 } }
+  properties = {
+   HSM_BAR_fielddesk_target_1 = { image = "[GetHSMBARFielddeskRow1Skin]" }
+   HSM_BAR_fielddesk_target_2 = { image = "[GetHSMBARFielddeskRow2Skin]" }
+   HSM_BAR_fielddesk_target_3 = { image = "[GetHSMBARFielddeskRow3Skin]" }
+   HSM_BAR_fielddesk_target_4 = { image = "[GetHSMBARFielddeskRow4Skin]" }
+  }
+  triggers = {
+   HSM_BAR_fielddesk_empty_visible = { check_variable = { HSM_BAR_fielddesk_targets^num = 0 } }
+   HSM_BAR_fielddesk_previous_click_enabled = { check_variable = { HSM_BAR_fielddesk_offset > 0 } }
+   HSM_BAR_fielddesk_next_click_enabled = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_next_offset } }
+   HSM_BAR_fielddesk_cancel_click_enabled = { has_country_flag = HSM_BAR_fielddesk_running }
+   HSM_BAR_fielddesk_target_1_visible = { has_variable = HSM_BAR_fielddesk_row_1 }
+   HSM_BAR_fielddesk_target_1_label_visible = { has_variable = HSM_BAR_fielddesk_row_1 }
+   HSM_BAR_fielddesk_target_1_click_enabled = { has_variable = HSM_BAR_fielddesk_row_1 }
+   HSM_BAR_fielddesk_target_2_visible = { has_variable = HSM_BAR_fielddesk_row_2 }
+   HSM_BAR_fielddesk_target_2_label_visible = { has_variable = HSM_BAR_fielddesk_row_2 }
+   HSM_BAR_fielddesk_target_2_click_enabled = { has_variable = HSM_BAR_fielddesk_row_2 }
+   HSM_BAR_fielddesk_target_3_visible = { has_variable = HSM_BAR_fielddesk_row_3 }
+   HSM_BAR_fielddesk_target_3_label_visible = { has_variable = HSM_BAR_fielddesk_row_3 }
+   HSM_BAR_fielddesk_target_3_click_enabled = { has_variable = HSM_BAR_fielddesk_row_3 }
+   HSM_BAR_fielddesk_target_4_visible = { has_variable = HSM_BAR_fielddesk_row_4 }
+   HSM_BAR_fielddesk_target_4_label_visible = { has_variable = HSM_BAR_fielddesk_row_4 }
+   HSM_BAR_fielddesk_target_4_click_enabled = { has_variable = HSM_BAR_fielddesk_row_4 }
+   HSM_BAR_fielddesk_recon_click_enabled = { HSM_BAR_fielddesk_recon_can_click = yes }
+   HSM_BAR_fielddesk_archive_click_enabled = { HSM_BAR_fielddesk_archive_can_click = yes }
+   HSM_BAR_fielddesk_relic_click_enabled = { HSM_BAR_fielddesk_relic_can_click = yes }
+   HSM_BAR_fielddesk_remains_click_enabled = { HSM_BAR_fielddesk_remains_can_click = yes }
+  }
+  effects = {
+   HSM_BAR_fielddesk_close_click = { HSM_BAR_fielddesk_close = yes }
+   HSM_BAR_fielddesk_back_click = { HSM_BAR_fielddesk_close = yes }
+   HSM_BAR_fielddesk_cancel_click = { HSM_BAR_fielddesk_cancel = yes HSM_BAR_fielddesk_refresh_selection = yes }
+   HSM_BAR_fielddesk_previous_click = { if = { limit = { check_variable = { HSM_BAR_fielddesk_offset > 0 } } subtract_from_variable = { HSM_BAR_fielddesk_offset = 4 } HSM_BAR_fielddesk_rows = yes } }
+   HSM_BAR_fielddesk_next_click = { if = { limit = { check_variable = { HSM_BAR_fielddesk_targets^num > HSM_BAR_fielddesk_next_offset } } add_to_variable = { HSM_BAR_fielddesk_offset = 4 } HSM_BAR_fielddesk_rows = yes } }
+   HSM_BAR_fielddesk_target_1_click = {
+    if = {
+     limit = { has_variable = HSM_BAR_fielddesk_row_1 }
+     set_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_1 }
+     HSM_BAR_fielddesk_refresh_selection = yes
+    }
+   }
+   HSM_BAR_fielddesk_target_2_click = {
+    if = {
+     limit = { has_variable = HSM_BAR_fielddesk_row_2 }
+     set_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_2 }
+     HSM_BAR_fielddesk_refresh_selection = yes
+    }
+   }
+   HSM_BAR_fielddesk_target_3_click = {
+    if = {
+     limit = { has_variable = HSM_BAR_fielddesk_row_3 }
+     set_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_3 }
+     HSM_BAR_fielddesk_refresh_selection = yes
+    }
+   }
+   HSM_BAR_fielddesk_target_4_click = {
+    if = {
+     limit = { has_variable = HSM_BAR_fielddesk_row_4 }
+     set_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_4 }
+     HSM_BAR_fielddesk_refresh_selection = yes
+    }
+   }
+   HSM_BAR_fielddesk_recon_click = { HSM_BAR_fielddesk_recon_request = yes }
+   HSM_BAR_fielddesk_archive_click = { HSM_BAR_fielddesk_archive_request = yes }
+   HSM_BAR_fielddesk_relic_click = { HSM_BAR_fielddesk_relic_request = yes }
+   HSM_BAR_fielddesk_remains_click = { HSM_BAR_fielddesk_remains_request = yes }
+  }
+ }
+}
+

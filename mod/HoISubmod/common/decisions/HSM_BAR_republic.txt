@@ -1,0 +1,75 @@
+HSM_BAR_republic_recovery = {
+ HSM_BAR_public_survey = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_public_survey_open NOT = { has_country_flag = HSM_BAR_survey_recorded } }
+  available = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_public_survey_open }
+  cost = 25
+  days_remove = 21
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_public_survey_open } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_public_survey_open NOT = { has_country_flag = HSM_BAR_survey_recorded } } set_country_flag = HSM_BAR_survey_recorded country_event = { id = hsm_bar_republic.2 days = 1 } }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_decode_records = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_cabinet_open has_country_flag = HSM_BAR_survey_recorded NOT = { has_country_flag = HSM_BAR_records_decoded } }
+  available = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_cabinet_open has_country_flag = HSM_BAR_survey_recorded }
+  cost = 30
+  days_remove = 28
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_cabinet_open has_country_flag = HSM_BAR_survey_recorded } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_cabinet_open has_country_flag = HSM_BAR_survey_recorded NOT = { has_country_flag = HSM_BAR_records_decoded } } set_country_flag = HSM_BAR_records_decoded country_event = { id = hsm_bar_republic.3 days = 1 } }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_first_descent = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_first_descent_open has_country_flag = HSM_BAR_records_decoded NOT = { has_country_flag = HSM_BAR_first_descent_returned } }
+  available = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_first_descent_open has_country_flag = HSM_BAR_records_decoded }
+  cost = 25
+  days_remove = 21
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_first_descent_open has_country_flag = HSM_BAR_records_decoded } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_first_descent_open has_country_flag = HSM_BAR_records_decoded NOT = { has_country_flag = HSM_BAR_first_descent_returned } } set_country_flag = HSM_BAR_first_descent_returned country_event = { id = hsm_bar_republic.4 days = 1 } }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_recover_science = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_archives_open has_country_flag = HSM_BAR_records_decoded NOT = { has_country_flag = HSM_BAR_recovered_archives } }
+  available = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_archives_open has_country_flag = HSM_BAR_records_decoded }
+  cost = 45
+  days_remove = 45
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_archives_open has_country_flag = HSM_BAR_records_decoded } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_archives_open has_country_flag = HSM_BAR_records_decoded NOT = { has_country_flag = HSM_BAR_recovered_archives } } set_country_flag = HSM_BAR_recovered_archives country_event = { id = hsm_bar_republic.8 days = 1 } }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_reclaim_fields = {
+  icon = generic_research
+  visible = { HSM_BAR_local_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_partly_healed } }
+  available = { HSM_BAR_republic_field_access = yes HSM_BAR_local_reclamation_ready = yes }
+  cost = 45
+  days_remove = 45
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes HSM_BAR_local_reclamation_ready = yes } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes HSM_BAR_local_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_partly_healed } } HSM_BAR_reclaim_first_fields = yes }
+  }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_BAR_heal_homeland = {
+  icon = generic_research
+  visible = { HSM_BAR_final_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_healed } }
+  available = { HSM_BAR_republic_field_access = yes HSM_BAR_final_reclamation_ready = yes }
+  cost = 75
+  days_remove = 75
+  cancel_trigger = { NOT = { AND = { HSM_BAR_republic_field_access = yes HSM_BAR_final_reclamation_ready = yes } } }
+  remove_effect = {
+   if = { limit = { HSM_BAR_republic_field_access = yes HSM_BAR_final_reclamation_ready = yes NOT = { has_country_flag = HSM_BAR_land_healed } } HSM_BAR_reclaim_homeland = yes }
+  }
+  ai_will_do = { factor = 10 }
+ }
+}
+

@@ -1,0 +1,14 @@
+# Focus icon presentation only: this is a single-player (SP) approximation,
+# NOT per-viewer secrecy in multiplayer (MP). If BAR is human-controlled, all
+# viewers receive the internal icon. Never use this helper for gameplay access.
+# The installed engine documents is_ai as a country AI-control check; EaW's
+# DEL_AF.txt demonstrates conditional icons with dynamic = yes, not viewer scope.
+# Text is separate: [Player.GetHSMBAR_*] selectors use tag = BAR. Scope.Player
+# is documented in documentation/loc_objects_documentation.md; native focus
+# caching and simultaneous MP rendering still require an in-engine check.
+HSM_BAR_show_service_identity = {
+    BAR = {
+        is_ai = no
+        has_country_flag = HSM_BAR_directorate
+    }
+}

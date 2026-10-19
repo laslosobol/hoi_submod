@@ -1,0 +1,260 @@
+# Public operation predicates: current scope = target country, ROOT = BAR.
+# FROM is the same target, including when evaluating nested crown instances.
+HSM_BAR_case_enabled = {
+    tag = BAR
+    has_country_flag = HSM_BAR_active
+    has_country_flag = HSM_BAR_directorate
+    has_country_flag = HSM_BAR_service_founded
+    has_country_flag = HSM_BAR_field_research_open
+    has_capitulated = no
+}
+
+HSM_BAR_case_local_access = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_local_open
+    controls_state = 624
+}
+
+HSM_BAR_case_titan_spent = {
+    OR = {
+        has_country_flag = HSM_BAR_titan_was_dismantled
+        has_country_flag = bar_titan_tech
+        has_country_flag = bar_elemele5
+        has_idea = BAR_leopold_titan_armor
+        has_global_flag = HSM_BAR_case_titan_dismantled
+        has_global_flag = HSM_BAR_case_titan_defeated
+    }
+}
+
+HSM_BAR_case_target_live = {
+    ROOT = {
+        HSM_BAR_case_enabled = yes
+        has_country_flag = HSM_BAR_foreign_mandate
+    }
+    exists = yes
+    has_capitulated = no
+    NOT = { tag = ROOT }
+}
+
+# A museum/seal stays at its recorded physical site even if its original country
+# disappears. A worn crown is never an extraction target. No leader kidnapping.
+HSM_BAR_case_crown_at_target = {
+    has_country_flag = HSM_BAR_case_crown_exists
+    NOT = { has_country_flag = HSM_BAR_case_crown_missing }
+    has_variable = HSM_BAR_case_crown_site
+    var:HSM_BAR_case_crown_site = { is_controlled_by = FROM }
+}
+HSM_BAR_case_crown_extractable = {
+    HSM_BAR_case_crown_at_target = yes
+    has_country_flag = HSM_BAR_case_crown_known
+    has_country_flag = HSM_BAR_case_crown_investigated
+    OR = {
+        has_country_flag = HSM_BAR_case_crown_museum
+        has_country_flag = HSM_BAR_case_crown_sealed
+    }
+    NOT = { has_country_flag = HSM_BAR_case_crown_leader }
+}
+
+# Current evidence in the target's territory; future native plots are not leads.
+HSM_BAR_case_grover_lead = {
+    OR = {
+        AND = {
+            has_global_flag = HSM_BAR_case_grover_bones_confirmed
+            NOT = { has_global_flag = HSM_BAR_case_grover_returned has_global_flag = HSM_BAR_case_grover_bones_removed }
+            var:global.HSM_BAR_case_grover_site = { is_controlled_by = PREV }
+        }
+        AND = {
+            OR = { has_global_flag = HSM_BAR_case_grover_returned has_global_flag = HSM_BAR_case_grover_retired }
+            OR = { controls_state = 398 controls_state = 665 }
+        }
+    }
+}
+HSM_BAR_case_herald_lead = {
+    OR = { has_global_flag = HSM_BAR_case_herald_transformed has_global_flag = HSM_BAR_case_herald_vanished }
+    controls_state = 398
+}
+HSM_BAR_case_rosa_lead = {
+    OR = {
+        has_global_flag = HSM_BAR_case_rosa_lich
+        has_global_flag = HSM_BAR_case_rosa_vampire
+        has_global_flag = HSM_BAR_case_rosa_executed
+        has_global_flag = HSM_BAR_case_rosa_final_rest
+    }
+    controls_state = 415
+}
+HSM_BAR_case_chalice_lead = {
+    has_global_flag = HSM_BAR_case_chalice_found
+    var:global.HSM_BAR_case_chalice_site = { is_controlled_by = PREV }
+}
+HSM_BAR_case_phylactery_lead = {
+    has_global_flag = HSM_BAR_case_phylactery_created
+    NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+    var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = PREV }
+}
+HSM_BAR_case_darkheart_lead = {
+    has_global_flag = HSM_BAR_case_darkheart_created
+    NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+    var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = PREV }
+}
+HSM_BAR_case_sombra_lead = {
+    OR = { has_global_flag = HSM_BAR_case_sombra_returned has_global_flag = HSM_BAR_case_sombra_removed }
+    controls_state = 344
+}
+HSM_BAR_case_current_lead = {
+    OR = {
+        HSM_BAR_cases_grover_lead_open = yes
+        HSM_BAR_cases_herald_lead_open = yes
+        HSM_BAR_cases_rosa_lead_open = yes
+        HSM_BAR_cases_chalice_lead_open = yes
+        HSM_BAR_cases_phylactery_lead_open = yes
+        HSM_BAR_cases_darkheart_lead_open = yes
+        HSM_BAR_cases_sombra_lead_open = yes
+        any_of_scopes = {
+            array = global.HSM_BAR_case_crowns
+            HSM_BAR_case_crown_at_target = yes
+            has_country_flag = HSM_BAR_case_crown_rumor
+        }
+    }
+}
+HSM_BAR_operation_recon_target = {
+    HSM_BAR_case_target_live = yes
+    HSM_BAR_case_current_lead = yes
+    OR = {
+        NOT = { has_country_flag = HSM_BAR_case_surveyed }
+        AND = {
+            HSM_BAR_cases_grover_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_grover_known } }
+        }
+        AND = {
+            HSM_BAR_cases_herald_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_herald_known } }
+        }
+        AND = {
+            HSM_BAR_cases_rosa_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_rosa_known } }
+        }
+        AND = {
+            HSM_BAR_cases_chalice_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_chalice_known } }
+        }
+        AND = {
+            HSM_BAR_cases_phylactery_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_phylactery_known } }
+        }
+        AND = {
+            HSM_BAR_cases_darkheart_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_darkheart_known } }
+        }
+        AND = {
+            HSM_BAR_cases_sombra_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_sombra_known } }
+        }
+        any_of_scopes = {
+            array = global.HSM_BAR_case_crowns
+            HSM_BAR_case_crown_at_target = yes
+            has_country_flag = HSM_BAR_case_crown_rumor
+            NOT = { has_country_flag = HSM_BAR_case_crown_known }
+        }
+    }
+}
+# Also used by the controlled-territory decision, with FROM = BAR.
+HSM_BAR_case_archive_pending = {
+    OR = {
+        AND = {
+            HSM_BAR_cases_grover_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_grover_investigated } }
+        }
+        AND = {
+            HSM_BAR_cases_herald_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_herald_investigated } }
+        }
+        AND = {
+            HSM_BAR_cases_rosa_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_rosa_investigated } }
+        }
+        AND = {
+            HSM_BAR_cases_sombra_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_sombra_investigated } }
+        }
+        AND = {
+            HSM_BAR_cases_chalice_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_magehold_archives } }
+        }
+        AND = {
+            HSM_BAR_cases_phylactery_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_magehold_archives } }
+        }
+        AND = {
+            HSM_BAR_cases_darkheart_lead_open = yes
+            ROOT = { NOT = { has_country_flag = HSM_BAR_case_crystal_archives } }
+        }
+        any_of_scopes = {
+            array = global.HSM_BAR_case_crowns
+            HSM_BAR_case_crown_at_target = yes
+            has_country_flag = HSM_BAR_case_crown_rumor
+            NOT = { has_country_flag = HSM_BAR_case_crown_investigated }
+        }
+    }
+}
+HSM_BAR_operation_archive_target = {
+    HSM_BAR_case_target_live = yes
+    has_country_flag = HSM_BAR_case_surveyed
+    HSM_BAR_case_archive_pending = yes
+}
+HSM_BAR_operation_relic_target = {
+    HSM_BAR_case_target_live = yes
+    ROOT = { has_country_flag = HSM_BAR_project_containment_done }
+    OR = {
+        any_of_scopes = {
+            array = global.HSM_BAR_case_crowns
+            HSM_BAR_case_crown_extractable = yes
+            has_country_flag = HSM_BAR_case_crown_rumor
+        }
+        AND = {
+            HSM_BAR_cases_chalice_lead_open = yes
+            ROOT = { has_country_flag = HSM_BAR_case_chalice_investigated }
+            has_global_flag = HSM_BAR_case_chalice_found
+            OR = {
+                has_global_flag = HSM_BAR_case_rosa_vampire
+                has_global_flag = HSM_BAR_case_rosa_lich
+                has_global_flag = HSM_BAR_case_rosa_executed
+            }
+            var:global.HSM_BAR_case_chalice_site = { is_controlled_by = PREV }
+        }
+        AND = {
+            HSM_BAR_cases_phylactery_lead_open = yes
+            ROOT = { has_country_flag = HSM_BAR_case_phylactery_investigated }
+            has_global_flag = HSM_BAR_case_phylactery_created
+            NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+            var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = PREV }
+        }
+        AND = {
+            HSM_BAR_cases_darkheart_lead_open = yes
+            ROOT = { has_country_flag = HSM_BAR_case_darkheart_investigated }
+            has_global_flag = HSM_BAR_case_darkheart_created
+            has_global_flag = HSM_BAR_case_sombra_returned
+            NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+            var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = PREV }
+        }
+    }
+}
+HSM_BAR_case_grover_recoverable = {
+    has_global_flag = HSM_BAR_case_grover_bones_confirmed
+    NOT = {
+        has_global_flag = HSM_BAR_case_grover_returned
+        has_global_flag = HSM_BAR_case_grover_bones_removed
+    }
+    NOT = { YAL = { has_country_flag = YAL_grover_resurrected } }
+    NOT = { any_country = { has_country_leader = { character = YAL_emperor_grover_ii ruling_only = yes } } }
+    var:global.HSM_BAR_case_grover_site = { is_controlled_by = PREV }
+}
+HSM_BAR_operation_remains_target = {
+    HSM_BAR_case_target_live = yes
+    ROOT = {
+        has_country_flag = HSM_BAR_forensic_mandate
+        has_country_flag = HSM_BAR_project_forensics_done
+        has_country_flag = HSM_BAR_case_grover_investigated
+    }
+    HSM_BAR_cases_grover_lead_open = yes
+    HSM_BAR_case_grover_recoverable = yes
+}

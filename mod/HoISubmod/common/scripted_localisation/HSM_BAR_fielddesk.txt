@@ -1,0 +1,83 @@
+defined_text = {
+ name = GetHSMBARFielddeskRegion
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 1 } } localization_key = HSM_BAR_fielddesk_region_local }
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 2 } } localization_key = HSM_BAR_fielddesk_region_equus }
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 3 } } localization_key = HSM_BAR_fielddesk_region_griffonia }
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 4 } } localization_key = HSM_BAR_fielddesk_region_north }
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 5 } } localization_key = HSM_BAR_fielddesk_region_riverlands }
+ text = { trigger = { check_variable = { HSM_BAR_service_gui_region = 6 } } localization_key = HSM_BAR_fielddesk_region_zebrica }
+ text = { localization_key = HSM_BAR_fielddesk_region_local }
+}
+defined_text = {
+ name = GetHSMBARFielddeskSelected
+ text = { trigger = { has_variable = HSM_BAR_fielddesk_selected } localization_key = HSM_BAR_fielddesk_selected }
+ text = { localization_key = HSM_BAR_fielddesk_no_target }
+}
+defined_text = {
+ name = GetHSMBARFielddeskAssignment
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running check_variable = { HSM_BAR_fielddesk_order_kind = 1 } } localization_key = HSM_BAR_fielddesk_recon_running }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running check_variable = { HSM_BAR_fielddesk_order_kind = 2 } } localization_key = HSM_BAR_fielddesk_archive_running }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running check_variable = { HSM_BAR_fielddesk_order_kind = 3 } } localization_key = HSM_BAR_fielddesk_relic_running }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running check_variable = { HSM_BAR_fielddesk_order_kind = 4 } } localization_key = HSM_BAR_fielddesk_remains_running }
+ text = { trigger = { check_variable = { HSM_BAR_fielddesk_result = 2 } } localization_key = HSM_BAR_fielddesk_success }
+ text = { trigger = { check_variable = { HSM_BAR_fielddesk_result = 3 } } localization_key = HSM_BAR_fielddesk_cancelled }
+ text = { trigger = { check_variable = { HSM_BAR_fielddesk_result = 4 } } localization_key = HSM_BAR_fielddesk_rejected }
+ text = { localization_key = HSM_BAR_fielddesk_idle }
+}
+defined_text = {
+ name = GetHSMBARFielddeskreconStatus
+ text = { trigger = { HSM_BAR_fielddesk_actor = no } localization_key = HSM_BAR_fielddesk_mandate_required }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running } localization_key = HSM_BAR_fielddesk_busy }
+ text = { trigger = { NOT = { has_variable = HSM_BAR_fielddesk_selected } } localization_key = HSM_BAR_fielddesk_no_target }
+ text = { trigger = { NOT = { has_country_flag = HSM_BAR_fielddesk_recon_available } } localization_key = HSM_BAR_fielddesk_recon_locked }
+ text = { trigger = { HSM_BAR_fielddesk_recon_resources = no } localization_key = HSM_BAR_fielddesk_resources_required }
+ text = { localization_key = HSM_BAR_fielddesk_ready }
+}
+defined_text = {
+ name = GetHSMBARFielddeskarchiveStatus
+ text = { trigger = { HSM_BAR_fielddesk_actor = no } localization_key = HSM_BAR_fielddesk_mandate_required }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running } localization_key = HSM_BAR_fielddesk_busy }
+ text = { trigger = { NOT = { has_variable = HSM_BAR_fielddesk_selected } } localization_key = HSM_BAR_fielddesk_no_target }
+ text = { trigger = { NOT = { has_country_flag = HSM_BAR_fielddesk_archive_available } } localization_key = HSM_BAR_fielddesk_archive_locked }
+ text = { trigger = { HSM_BAR_fielddesk_archive_resources = no } localization_key = HSM_BAR_fielddesk_resources_required }
+ text = { localization_key = HSM_BAR_fielddesk_ready }
+}
+defined_text = {
+ name = GetHSMBARFielddeskrelicStatus
+ text = { trigger = { HSM_BAR_fielddesk_actor = no } localization_key = HSM_BAR_fielddesk_mandate_required }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running } localization_key = HSM_BAR_fielddesk_busy }
+ text = { trigger = { NOT = { has_variable = HSM_BAR_fielddesk_selected } } localization_key = HSM_BAR_fielddesk_no_target }
+ text = { trigger = { NOT = { has_country_flag = HSM_BAR_fielddesk_relic_available } } localization_key = HSM_BAR_fielddesk_relic_locked }
+ text = { trigger = { HSM_BAR_fielddesk_relic_resources = no } localization_key = HSM_BAR_fielddesk_resources_required }
+ text = { localization_key = HSM_BAR_fielddesk_ready }
+}
+defined_text = {
+ name = GetHSMBARFielddeskremainsStatus
+ text = { trigger = { HSM_BAR_fielddesk_actor = no } localization_key = HSM_BAR_fielddesk_mandate_required }
+ text = { trigger = { has_country_flag = HSM_BAR_fielddesk_running } localization_key = HSM_BAR_fielddesk_busy }
+ text = { trigger = { NOT = { has_variable = HSM_BAR_fielddesk_selected } } localization_key = HSM_BAR_fielddesk_no_target }
+ text = { trigger = { NOT = { has_country_flag = HSM_BAR_fielddesk_remains_available } } localization_key = HSM_BAR_fielddesk_remains_locked }
+ text = { trigger = { HSM_BAR_fielddesk_remains_resources = no } localization_key = HSM_BAR_fielddesk_resources_required }
+ text = { localization_key = HSM_BAR_fielddesk_ready }
+}
+defined_text = {
+ name = GetHSMBARFielddeskRow1Skin
+ text = { trigger = { has_variable = HSM_BAR_fielddesk_selected check_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_1 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+ text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+ name = GetHSMBARFielddeskRow2Skin
+ text = { trigger = { has_variable = HSM_BAR_fielddesk_selected check_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_2 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+ text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+ name = GetHSMBARFielddeskRow3Skin
+ text = { trigger = { has_variable = HSM_BAR_fielddesk_selected check_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_3 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+ text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+defined_text = {
+ name = GetHSMBARFielddeskRow4Skin
+ text = { trigger = { has_variable = HSM_BAR_fielddesk_selected check_variable = { HSM_BAR_fielddesk_selected = HSM_BAR_fielddesk_row_4 } } localization_key = GFX_HSM_BAR_archive_index_selected }
+ text = { localization_key = GFX_HSM_BAR_archive_index }
+}
+

@@ -1,0 +1,341 @@
+# Text is evaluated in the documented Player localization scope, not the focus owner's AI scope.
+defined_text = {
+ name = GetHSMBAR_charter
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_charter_internal }
+ text = { localization_key = HSM_BAR_dir_charter_cover }
+}
+defined_text = {
+ name = GetHSMBAR_charter_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_charter_internal_desc }
+ text = { localization_key = HSM_BAR_dir_charter_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_names
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_names_internal }
+ text = { localization_key = HSM_BAR_dir_names_cover }
+}
+defined_text = {
+ name = GetHSMBAR_names_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_names_internal_desc }
+ text = { localization_key = HSM_BAR_dir_names_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_seal_labs
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_seal_labs_internal }
+ text = { localization_key = HSM_BAR_dir_seal_labs_cover }
+}
+defined_text = {
+ name = GetHSMBAR_seal_labs_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_seal_labs_internal_desc }
+ text = { localization_key = HSM_BAR_dir_seal_labs_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_watchmen
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_watchmen_internal }
+ text = { localization_key = HSM_BAR_dir_watchmen_cover }
+}
+defined_text = {
+ name = GetHSMBAR_watchmen_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_watchmen_internal_desc }
+ text = { localization_key = HSM_BAR_dir_watchmen_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_evidence
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_evidence_internal }
+ text = { localization_key = HSM_BAR_dir_evidence_cover }
+}
+defined_text = {
+ name = GetHSMBAR_evidence_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_evidence_internal_desc }
+ text = { localization_key = HSM_BAR_dir_evidence_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_training
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_training_internal }
+ text = { localization_key = HSM_BAR_dir_training_cover }
+}
+defined_text = {
+ name = GetHSMBAR_training_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_training_internal_desc }
+ text = { localization_key = HSM_BAR_dir_training_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_register
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_register_internal }
+ text = { localization_key = HSM_BAR_dir_register_cover }
+}
+defined_text = {
+ name = GetHSMBAR_register_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_register_internal_desc }
+ text = { localization_key = HSM_BAR_dir_register_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_radio
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_radio_internal }
+ text = { localization_key = HSM_BAR_dir_radio_cover }
+}
+defined_text = {
+ name = GetHSMBAR_radio_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_radio_internal_desc }
+ text = { localization_key = HSM_BAR_dir_radio_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_archives
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_archives_internal }
+ text = { localization_key = HSM_BAR_dir_archives_cover }
+}
+defined_text = {
+ name = GetHSMBAR_archives_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_archives_internal_desc }
+ text = { localization_key = HSM_BAR_dir_archives_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_agency
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_agency_internal }
+ text = { localization_key = HSM_BAR_dir_agency_cover }
+}
+defined_text = {
+ name = GetHSMBAR_agency_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_agency_internal_desc }
+ text = { localization_key = HSM_BAR_dir_agency_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_storage
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_storage_internal }
+ text = { localization_key = HSM_BAR_dir_storage_cover }
+}
+defined_text = {
+ name = GetHSMBAR_storage_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_storage_internal_desc }
+ text = { localization_key = HSM_BAR_dir_storage_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_foreign_mandate
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_foreign_mandate_internal }
+ text = { localization_key = HSM_BAR_dir_foreign_mandate_cover }
+}
+defined_text = {
+ name = GetHSMBAR_foreign_mandate_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_foreign_mandate_internal_desc }
+ text = { localization_key = HSM_BAR_dir_foreign_mandate_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_world
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_world_internal }
+ text = { localization_key = HSM_BAR_dir_world_cover }
+}
+defined_text = {
+ name = GetHSMBAR_world_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_world_internal_desc }
+ text = { localization_key = HSM_BAR_dir_world_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_equus
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_equus_internal }
+ text = { localization_key = HSM_BAR_dir_equus_cover }
+}
+defined_text = {
+ name = GetHSMBAR_equus_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_equus_internal_desc }
+ text = { localization_key = HSM_BAR_dir_equus_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_griffonia
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_griffonia_internal }
+ text = { localization_key = HSM_BAR_dir_griffonia_cover }
+}
+defined_text = {
+ name = GetHSMBAR_griffonia_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_griffonia_internal_desc }
+ text = { localization_key = HSM_BAR_dir_griffonia_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_north
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_north_internal }
+ text = { localization_key = HSM_BAR_dir_north_cover }
+}
+defined_text = {
+ name = GetHSMBAR_north_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_north_internal_desc }
+ text = { localization_key = HSM_BAR_dir_north_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_riverlands
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_riverlands_internal }
+ text = { localization_key = HSM_BAR_dir_riverlands_cover }
+}
+defined_text = {
+ name = GetHSMBAR_riverlands_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_riverlands_internal_desc }
+ text = { localization_key = HSM_BAR_dir_riverlands_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_zebrica
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_zebrica_internal }
+ text = { localization_key = HSM_BAR_dir_zebrica_cover }
+}
+defined_text = {
+ name = GetHSMBAR_zebrica_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_zebrica_internal_desc }
+ text = { localization_key = HSM_BAR_dir_zebrica_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_liaison
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_liaison_internal }
+ text = { localization_key = HSM_BAR_dir_liaison_cover }
+}
+defined_text = {
+ name = GetHSMBAR_liaison_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_liaison_internal_desc }
+ text = { localization_key = HSM_BAR_dir_liaison_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_trafficking
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_trafficking_internal }
+ text = { localization_key = HSM_BAR_dir_trafficking_cover }
+}
+defined_text = {
+ name = GetHSMBAR_trafficking_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_trafficking_internal_desc }
+ text = { localization_key = HSM_BAR_dir_trafficking_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_rulers
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_rulers_internal }
+ text = { localization_key = HSM_BAR_dir_rulers_cover }
+}
+defined_text = {
+ name = GetHSMBAR_rulers_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_rulers_internal_desc }
+ text = { localization_key = HSM_BAR_dir_rulers_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_countercult
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_countercult_internal }
+ text = { localization_key = HSM_BAR_dir_countercult_cover }
+}
+defined_text = {
+ name = GetHSMBAR_countercult_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_countercult_internal_desc }
+ text = { localization_key = HSM_BAR_dir_countercult_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_foreign_protocol
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_foreign_protocol_internal }
+ text = { localization_key = HSM_BAR_dir_foreign_protocol_cover }
+}
+defined_text = {
+ name = GetHSMBAR_foreign_protocol_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_foreign_protocol_internal_desc }
+ text = { localization_key = HSM_BAR_dir_foreign_protocol_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_remains
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_remains_internal }
+ text = { localization_key = HSM_BAR_dir_remains_cover }
+}
+defined_text = {
+ name = GetHSMBAR_remains_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_remains_internal_desc }
+ text = { localization_key = HSM_BAR_dir_remains_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_commission
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_commission_internal }
+ text = { localization_key = HSM_BAR_dir_commission_cover }
+}
+defined_text = {
+ name = GetHSMBAR_commission_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_commission_internal_desc }
+ text = { localization_key = HSM_BAR_dir_commission_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_coexistence
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_coexistence_internal }
+ text = { localization_key = HSM_BAR_dir_coexistence_cover }
+}
+defined_text = {
+ name = GetHSMBAR_coexistence_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_coexistence_internal_desc }
+ text = { localization_key = HSM_BAR_dir_coexistence_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_normalization
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_normalization_internal }
+ text = { localization_key = HSM_BAR_dir_normalization_cover }
+}
+defined_text = {
+ name = GetHSMBAR_normalization_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_normalization_internal_desc }
+ text = { localization_key = HSM_BAR_dir_normalization_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_custody_law
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_custody_law_internal }
+ text = { localization_key = HSM_BAR_dir_custody_law_cover }
+}
+defined_text = {
+ name = GetHSMBAR_custody_law_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_custody_law_internal_desc }
+ text = { localization_key = HSM_BAR_dir_custody_law_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_open_report
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_open_report_internal }
+ text = { localization_key = HSM_BAR_dir_open_report_cover }
+}
+defined_text = {
+ name = GetHSMBAR_open_report_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_open_report_internal_desc }
+ text = { localization_key = HSM_BAR_dir_open_report_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_quiet_watch
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_quiet_watch_internal }
+ text = { localization_key = HSM_BAR_dir_quiet_watch_cover }
+}
+defined_text = {
+ name = GetHSMBAR_quiet_watch_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_quiet_watch_internal_desc }
+ text = { localization_key = HSM_BAR_dir_quiet_watch_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_sealed_orders
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_sealed_orders_internal }
+ text = { localization_key = HSM_BAR_dir_sealed_orders_cover }
+}
+defined_text = {
+ name = GetHSMBAR_sealed_orders_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_sealed_orders_internal_desc }
+ text = { localization_key = HSM_BAR_dir_sealed_orders_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_suppression_lab
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_suppression_lab_internal }
+ text = { localization_key = HSM_BAR_dir_suppression_lab_cover }
+}
+defined_text = {
+ name = GetHSMBAR_suppression_lab_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_suppression_lab_internal_desc }
+ text = { localization_key = HSM_BAR_dir_suppression_lab_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_activation
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_activation_internal }
+ text = { localization_key = HSM_BAR_dir_activation_cover }
+}
+defined_text = {
+ name = GetHSMBAR_activation_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_activation_internal_desc }
+ text = { localization_key = HSM_BAR_dir_activation_cover_desc }
+}
+defined_text = {
+ name = GetHSMBAR_aftermath
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_aftermath_internal }
+ text = { localization_key = HSM_BAR_dir_aftermath_cover }
+}
+defined_text = {
+ name = GetHSMBAR_aftermath_desc
+ text = { trigger = { tag = BAR } localization_key = HSM_BAR_dir_aftermath_internal_desc }
+ text = { localization_key = HSM_BAR_dir_aftermath_cover_desc }
+}

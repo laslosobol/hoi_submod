@@ -1,0 +1,32 @@
+# The first reconstruction focus replaces EaW's missing-history defaults once.
+# Never call from entry, refresh or pulse: subsequent development must survive.
+HSM_BAR_social_survey_assess = {
+ if = {
+  limit = {
+   HSM_BAR_development_access = yes
+   NOT = { has_country_flag = HSM_BAR_social_survey_assessed }
+  }
+  set_country_flag = HSM_BAR_social_survey_assessed
+  custom_effect_tooltip = HSM_BAR_social_survey_tt
+  # Native Barrad's barrad_ccamb.6 uses these same two tiers. Worse tiers stay.
+  if = {
+   limit = { NOT = { has_idea = poverty has_idea = poverty1 } }
+   remove_ideas = no_poverty
+   remove_ideas = poverty5
+   remove_ideas = poverty4
+   remove_ideas = poverty3
+   remove_ideas = poverty2
+   remove_ideas = dummy_idea_poverty
+   add_ideas = poverty1
+  }
+  if = {
+   limit = { NOT = { has_idea = lack_of_scientists has_idea = lack_of_scientists1 } }
+   remove_ideas = no_lack_of_scientists
+   remove_ideas = lack_of_scientists3
+   remove_ideas = lack_of_scientists2
+   remove_ideas = dummy_idea_literacy
+   add_ideas = lack_of_scientists1
+  }
+  country_event = { id = hsm_bar_social_survey.1 days = 1 }
+ }
+}

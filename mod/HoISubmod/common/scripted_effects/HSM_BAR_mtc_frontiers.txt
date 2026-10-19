@@ -1,0 +1,159 @@
+# Public hooks run in BAR scope. Teardown preserves completed history and cores.
+HSM_BAR_mtc_frontiers_clear_war = {
+ clr_country_flag = HSM_BAR_mtc_frontiers_direct_declaration
+ clr_country_flag = HSM_BAR_mtc_frontiers_defending
+ clr_country_flag = HSM_BAR_mtc_frontiers_conference
+}
+# Called by the mandate reward; do not require the completing focus to be marked completed yet.
+HSM_BAR_mtc_frontiers_ZES_authorize = {
+ if = {
+  limit = { HSM_BAR_mtc_frontiers_ZES_can_authorize = yes }
+  set_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued
+  create_wargoal = { type = annex_everything target = ZES expire = 180 }
+  set_country_flag = { flag = HSM_BAR_mtc_frontiers_ZES_goal days = 180 }
+  country_event = { id = hsm_bar_mtc_frontiers.2 }
+ }
+}
+HSM_BAR_mtc_frontiers_OLV_authorize = {
+ if = {
+  limit = { HSM_BAR_mtc_frontiers_OLV_can_authorize = yes }
+  set_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued
+  create_wargoal = { type = annex_everything target = OLV expire = 180 }
+  set_country_flag = { flag = HSM_BAR_mtc_frontiers_OLV_goal days = 180 }
+  country_event = { id = hsm_bar_mtc_frontiers.3 }
+ }
+}
+# Preserve surviving legacy evidence before maintenance or dissolution clears it.
+HSM_BAR_mtc_frontiers_record_mandates = {
+ if = { limit = { tag = BAR original_tag = BAR }
+  if = {
+   limit = {
+    NOT = { has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued }
+    OR = {
+     has_country_flag = HSM_BAR_mtc_frontiers_ZES_vote
+     has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal
+     AND = { has_completed_focus = HSM_BAR_mtc_frontiers_ZES_mandate has_wargoal_against = ZES }
+     AND = {
+      HSM_BAR_mtc_frontiers_route = yes
+      NOT = { ZES = { exists = yes } }
+      OR = {
+       has_completed_focus = HSM_BAR_mtc_frontiers_staff
+       has_completed_focus = HSM_BAR_mtc_frontiers_ZES_hearing
+       has_completed_focus = HSM_BAR_mtc_frontiers_ZES_mandate
+      }
+     }
+    }
+   }
+   set_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued
+  }
+  if = {
+   limit = {
+    NOT = { has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued }
+    OR = {
+     has_country_flag = HSM_BAR_mtc_frontiers_OLV_vote
+     has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal
+     AND = { has_completed_focus = HSM_BAR_mtc_frontiers_OLV_mandate has_wargoal_against = OLV }
+     AND = {
+      HSM_BAR_mtc_frontiers_route = yes
+      NOT = { OLV = { exists = yes } }
+      OR = {
+       has_completed_focus = HSM_BAR_mtc_frontiers_staff
+       has_completed_focus = HSM_BAR_mtc_frontiers_OLV_hearing
+       has_completed_focus = HSM_BAR_mtc_frontiers_OLV_mandate
+      }
+     }
+    }
+   }
+   set_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued
+  }
+ }
+}
+HSM_BAR_mtc_frontiers_maintain = {
+ if = { limit = { tag = BAR }
+  if = { limit = { NOT = { HSM_BAR_mtc_frontiers_sovereign = yes } } HSM_BAR_mtc_frontiers_teardown = yes }
+  else = {
+   HSM_BAR_mtc_frontiers_record_mandates = yes
+   if = { limit = { NOT = { has_war_with = WIT } } HSM_BAR_mtc_frontiers_clear_war = yes }
+   if = {
+    limit = { has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal NOT = { HSM_BAR_mtc_frontiers_ZES_target = yes } }
+    remove_wargoal = { type = annex_everything target = ZES }
+    clr_country_flag = HSM_BAR_mtc_frontiers_ZES_goal
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal NOT = { HSM_BAR_mtc_frontiers_OLV_target = yes } }
+    remove_wargoal = { type = annex_everything target = OLV }
+    clr_country_flag = HSM_BAR_mtc_frontiers_OLV_goal
+   }
+   # Recover old completed focuses only while their normal mandate guards pass.
+   if = {
+    limit = { has_completed_focus = HSM_BAR_mtc_frontiers_ZES_mandate HSM_BAR_mtc_frontiers_ZES_can_authorize = yes }
+    HSM_BAR_mtc_frontiers_ZES_authorize = yes
+   }
+   if = {
+    limit = { has_completed_focus = HSM_BAR_mtc_frontiers_OLV_mandate HSM_BAR_mtc_frontiers_OLV_can_authorize = yes }
+    HSM_BAR_mtc_frontiers_OLV_authorize = yes
+   }
+  }
+ }
+}
+HSM_BAR_mtc_frontiers_teardown = {
+ HSM_BAR_mtc_frontiers_record_mandates = yes
+ HSM_BAR_mtc_frontiers_clear_war = yes
+ clr_country_flag = HSM_BAR_mtc_frontiers_ZES_vote
+ if = { limit = { has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal } remove_wargoal = { type = annex_everything target = ZES } }
+ clr_country_flag = HSM_BAR_mtc_frontiers_ZES_goal
+ clr_country_flag = HSM_BAR_mtc_frontiers_OLV_vote
+ if = { limit = { has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal } remove_wargoal = { type = annex_everything target = OLV } }
+ clr_country_flag = HSM_BAR_mtc_frontiers_OLV_goal
+ 614 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_614
+ 614 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_614
+ 615 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_615
+ 615 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_615
+ 616 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_616
+ 616 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_616
+ 617 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_617
+ 617 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_617
+ 627 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_627
+ 627 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_627
+ 628 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_628
+ 628 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_628
+ 629 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+ remove_decision = HSM_BAR_mtc_frontiers_registry_629
+ 629 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+ remove_decision = HSM_BAR_mtc_frontiers_citizenship_629
+}
+# State-scope completions; forced removal cannot bypass elapsed time or requirements.
+HSM_BAR_mtc_frontiers_finish_registry = {
+ if = {
+  limit = { HSM_BAR_mtc_frontiers_registry = yes has_state_flag = { flag = HSM_BAR_mtc_frontiers_registry_running days > 59 } }
+  set_state_flag = HSM_BAR_mtc_frontiers_registered
+  add_compliance = 10
+ }
+ clr_state_flag = HSM_BAR_mtc_frontiers_registry_running
+}
+HSM_BAR_mtc_frontiers_finish_citizenship = {
+ if = {
+  limit = { HSM_BAR_mtc_frontiers_citizenship = yes has_state_flag = { flag = HSM_BAR_mtc_frontiers_citizenship_running days > 119 } }
+  add_core_of = BAR
+  set_state_flag = HSM_BAR_mtc_frontiers_integrated
+  BAR = {
+   if = { limit = { NOT = { has_country_flag = HSM_BAR_mtc_frontiers_citizenship_report } }
+    set_country_flag = HSM_BAR_mtc_frontiers_citizenship_report
+    country_event = { id = hsm_bar_mtc_frontiers.6 }
+   }
+  }
+ }
+ clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running
+}

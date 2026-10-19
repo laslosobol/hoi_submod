@@ -1,0 +1,7 @@
+# Country scope; the presentation belongs only to the two expansion routes.
+HSM_BAR_staff_new_paths = {
+    tag = BAR
+    original_tag = BAR
+    has_country_flag = HSM_BAR_active
+    OR = { has_country_flag = HSM_BAR_collegium has_country_flag = HSM_BAR_directorate }
+}

@@ -1,0 +1,118 @@
+HSM_BAR_service_affairs = {
+ HSM_BAR_replicate_bulletin = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_replication_pending NOT = { has_country_flag = HSM_BAR_returned_findings } }
+  available = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded HSM_BAR_case_review_ready = yes }
+  cost = 35
+  days_remove = 35
+  cancel_trigger = { OR = { NOT = { has_country_flag = HSM_BAR_active } NOT = { has_country_flag = HSM_BAR_directorate } NOT = { has_country_flag = HSM_BAR_service_founded } } }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_replication_pending NOT = { has_country_flag = HSM_BAR_story_15_done } }
+    country_event = { id = hsm_bar_service.15 days = 1 }
+   }
+  }
+  ai_will_do = { factor = 4 }
+ }
+ HSM_BAR_review_retrieval_order = {
+  icon = generic_political_discourse
+  visible = { has_country_flag = HSM_BAR_delivery_priority has_country_flag = HSM_BAR_porter_returned }
+  available = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded }
+  cost = 35
+  days_remove = 21
+  cancel_trigger = { OR = { NOT = { has_country_flag = HSM_BAR_active } NOT = { has_country_flag = HSM_BAR_directorate } NOT = { has_country_flag = HSM_BAR_service_founded } } }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_delivery_priority }
+    clr_country_flag = HSM_BAR_delivery_priority
+    set_country_flag = HSM_BAR_withdrawal_right
+    remove_ideas = HSM_BAR_expedited_retrieval
+    add_ideas = HSM_BAR_careful_retrieval
+    HSM_BAR_core_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_trace_couriers = {
+  icon = generic_prepare_civil_war
+  visible = { has_country_flag = HSM_BAR_cult_leads NOT = { has_country_flag = HSM_BAR_couriers_traced } }
+  available = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_country_flag = HSM_BAR_countercult_open }
+  cost = 50
+  days_remove = 30
+  fire_only_once = yes
+  cancel_trigger = { NOT = { has_country_flag = HSM_BAR_active } }
+  remove_effect = { if = { limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded } set_country_flag = HSM_BAR_couriers_traced country_event = { id = hsm_bar_core.5 days = 1 } } }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_watched_transfer = {
+  icon = generic_prepare_civil_war
+  visible = { OR = { has_country_flag = HSM_BAR_cult_sting has_country_flag = HSM_BAR_cult_intercept } NOT = { has_country_flag = HSM_BAR_cult_network_broken } }
+  available = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded }
+  cost = 35
+  days_remove = 21
+  fire_only_once = yes
+  cancel_trigger = { NOT = { has_country_flag = HSM_BAR_active } }
+  remove_effect = { if = { limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded } country_event = { id = hsm_bar_core.6 days = 1 } } }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_contact_smile = {
+  icon = generic_political_discourse
+  visible = { HSM_BAR_smile_contact_relevant = yes NOT = { has_country_flag = HSM_BAR_smile_partner } }
+  available = {
+   HSM_BAR_smile_contact_relevant = yes
+   NOT = { has_country_flag = HSM_BAR_smile_compromised }
+   NOT = { has_country_flag = HSM_BAR_smile_contact_cooldown }
+   NOT = { has_war_with = EQS }
+   EQS = { exists = yes has_government = democratic }
+  }
+  cost = 50
+  complete_effect = {
+   custom_effect_tooltip = HSM_BAR_contact_smile_tt
+   set_country_flag = { flag = HSM_BAR_smile_contact_cooldown days = 180 }
+   set_country_flag = { flag = HSM_BAR_smile_request_pending days = 30 }
+   EQS = { country_event = { id = hsm_bar_smile.1 days = 3 } }
+  }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_share_wards = {
+  icon = generic_research
+  visible = { has_country_flag = HSM_BAR_smile_partner NOT = { has_country_flag = HSM_BAR_wards_shared } }
+  available = { has_country_flag = HSM_BAR_project_wards_done NOT = { has_war_with = EQS } }
+  cost = 35
+  days_re_enable = 60
+  complete_effect = { country_event = { id = hsm_bar_smile.3 days = 1 } }
+  ai_will_do = { factor = 2 }
+ }
+ HSM_BAR_assist_against_sombra = {
+  icon = generic_army_support
+  visible = { has_country_flag = HSM_BAR_smile_partner }
+  available = { HSM_BAR_sombra_cooperation = yes NOT = { EQS = { has_idea = HSM_BAR_anti_sombra } } }
+  cost = 50
+  complete_effect = { EQS = { add_ideas = HSM_BAR_anti_sombra } }
+  ai_will_do = { factor = 3 }
+ }
+ HSM_BAR_sombra_volunteer_mission = {
+  icon = generic_army_support
+  visible = { has_country_flag = HSM_BAR_smile_partner }
+  available = { HSM_BAR_sombra_cooperation = yes has_war = no NOT = { has_idea = HSM_BAR_sombra_volunteers } }
+  cost = 50
+  days_re_enable = 180
+  complete_effect = { add_timed_idea = { idea = HSM_BAR_sombra_volunteers days = 90 } custom_effect_tooltip = HSM_BAR_volunteer_window_tt }
+  ai_will_do = { factor = 1 }
+ }
+ HSM_BAR_abort_suppression = {
+  icon = generic_political_discourse
+  visible = { has_country_flag = HSM_BAR_suppression_live NOT = { has_country_flag = HSM_BAR_suppression_resolved } }
+  available = { has_country_flag = HSM_BAR_suppression_test_window }
+  cost = 75
+  fire_only_once = yes
+  complete_effect = {
+   set_country_flag = HSM_BAR_suppression_resolved
+   set_country_flag = HSM_BAR_suppression_aborted
+   clr_country_flag = HSM_BAR_suppression_live
+   remove_ideas = HSM_BAR_suppression_crisis
+   HSM_BAR_core_refresh = yes
+  }
+  ai_will_do = { factor = 1 modifier = { factor = 3 has_country_flag = HSM_BAR_selective_suppression } }
+ }
+}

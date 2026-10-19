@@ -1,0 +1,13 @@
+# Research eligibility only: never restore the Pentarchy's alive markers or bodies.
+# The four visible branches retain their normal costs, paths and exclusive choices.
+HSM_BAR_recovered_science_access = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_recovered_science_access_tt
+        tag = BAR
+        original_tag = BAR
+        has_country_flag = HSM_BAR_active
+        has_country_flag = HSM_BAR_directorate
+        has_country_flag = HSM_BAR_service_founded
+        has_country_flag = HSM_BAR_recovered_archives
+    }
+}

@@ -1,0 +1,170 @@
+# This crisis is authored fiction for Expanded Stories, not an EaW canon claim.
+# Narrative events are presentation only. State transitions happen in guarded
+# effects/on_actions, so an unread/dismissed event cannot halt the world clock.
+add_namespace = hsm_bar_normalization
+
+country_event = {
+    id = hsm_bar_normalization.1
+    title = hsm_bar_normalization.1.t
+    desc = hsm_bar_normalization.1.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.1.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.2
+    title = hsm_bar_normalization.2.t
+    desc = hsm_bar_normalization.2.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.2.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.3
+    title = hsm_bar_normalization.3.t
+    desc = hsm_bar_normalization.3.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.3.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.4
+    title = hsm_bar_normalization.4.t
+    desc = hsm_bar_normalization.4.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.4.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.5
+    title = hsm_bar_normalization.5.t
+    desc = hsm_bar_normalization.5.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.5.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.11
+    title = hsm_bar_normalization.11.t
+    desc = hsm_bar_normalization.11.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.11.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.12
+    title = hsm_bar_normalization.12.t
+    desc = hsm_bar_normalization.12.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.12.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.13
+    title = hsm_bar_normalization.13.t
+    desc = hsm_bar_normalization.13.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.13.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.14
+    title = hsm_bar_normalization.14.t
+    desc = hsm_bar_normalization.14.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.14.a }
+}
+
+country_event = {
+    id = hsm_bar_normalization.15
+    title = hsm_bar_normalization.15.t
+    desc = hsm_bar_normalization.15.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.15.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.101
+    title = hsm_bar_normalization.101.t
+    desc = hsm_bar_normalization.101.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.101.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.102
+    title = hsm_bar_normalization.102.t
+    desc = hsm_bar_normalization.102.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.102.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.103
+    title = hsm_bar_normalization.103.t
+    desc = hsm_bar_normalization.103.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.103.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.104
+    title = hsm_bar_normalization.104.t
+    desc = hsm_bar_normalization.104.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.104.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.105
+    title = hsm_bar_normalization.105.t
+    desc = hsm_bar_normalization.105.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.105.a }
+}
+
+news_event = {
+    id = hsm_bar_normalization.106
+    title = hsm_bar_normalization.106.t
+    desc = hsm_bar_normalization.106.d
+    picture = GFX_news_event_generic_read_write
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { name = hsm_bar_normalization.106.a }
+}

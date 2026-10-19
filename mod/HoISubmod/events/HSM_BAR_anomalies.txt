@@ -1,0 +1,188 @@
+add_namespace = hsm_bar_anomaly
+
+# One-off fallback only. Main owns the periodic pulse cadence.
+country_event = {
+    id = hsm_bar_anomaly.0
+    hidden = yes
+    fire_only_once = yes
+    trigger = { tag = BAR has_country_flag = HSM_BAR_active NOT = { has_country_flag = HSM_BAR_case_initialized } }
+    mean_time_to_happen = { days = 1 }
+    immediate = { HSM_BAR_anomalies_initialize = yes }
+}
+# Failure feedback is emitted only when a completion actually expires.
+country_event = {
+    id = hsm_bar_anomaly.2
+    title = hsm_bar_anomaly.2.t
+    desc = hsm_bar_anomaly.2.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.16
+    title = hsm_bar_anomaly.16.t
+    desc = hsm_bar_anomaly.16.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.17
+    title = hsm_bar_anomaly.17.t
+    desc = hsm_bar_anomaly.17.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.18
+    title = hsm_bar_anomaly.18.t
+    desc = hsm_bar_anomaly.18.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.3
+    title = hsm_bar_anomaly.3.t
+    desc = hsm_bar_anomaly.3.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.3.a }
+}
+country_event = {
+    id = hsm_bar_anomaly.4
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = { HSM_BAR_case_enabled = yes HSM_BAR_case_archive_pending = yes }
+            HSM_BAR_case_survey_target = yes
+            HSM_BAR_case_read_archives = yes
+        }
+    }
+}
+country_event = {
+    id = hsm_bar_anomaly.10
+    title = hsm_bar_anomaly.10.t
+    desc = hsm_bar_anomaly.10.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.11
+    title = hsm_bar_anomaly.11.t
+    desc = hsm_bar_anomaly.11.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.12
+    title = hsm_bar_anomaly.12.t
+    desc = { trigger = { HSM_BAR_case_titan_spent = yes } text = hsm_bar_anomaly.12.spent }
+    desc = { trigger = { NOT = { HSM_BAR_case_titan_spent = yes } } text = hsm_bar_anomaly.12.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.13
+    title = hsm_bar_anomaly.13.t
+    desc = { trigger = { 624 = { nuclear_reactor > 0 } } text = hsm_bar_anomaly.13.reactor }
+    desc = { trigger = { NOT = { 624 = { nuclear_reactor > 0 } } } text = hsm_bar_anomaly.13.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.14
+    title = hsm_bar_anomaly.14.t
+    desc = hsm_bar_anomaly.14.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.15
+    title = hsm_bar_anomaly.15.t
+    desc = { trigger = { has_global_flag = HSM_BAR_case_plants_manifested } text = hsm_bar_anomaly.15.manifested }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_plants_manifested } } text = hsm_bar_anomaly.15.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.20
+    title = hsm_bar_anomaly.20.t
+    desc = { trigger = { OR = { has_global_flag = HSM_BAR_case_rosa_executed has_global_flag = HSM_BAR_case_rosa_final_rest } } text = hsm_bar_anomaly.20.dead }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_rosa_executed has_global_flag = HSM_BAR_case_rosa_final_rest } has_global_flag = HSM_BAR_case_rosa_lich } text = hsm_bar_anomaly.20.lich }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_rosa_executed has_global_flag = HSM_BAR_case_rosa_final_rest has_global_flag = HSM_BAR_case_rosa_lich } has_global_flag = HSM_BAR_case_rosa_vampire } text = hsm_bar_anomaly.20.vampire }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_rosa_executed has_global_flag = HSM_BAR_case_rosa_final_rest has_global_flag = HSM_BAR_case_rosa_lich has_global_flag = HSM_BAR_case_rosa_vampire } } text = hsm_bar_anomaly.20.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.21
+    title = hsm_bar_anomaly.21.t
+    desc = { trigger = { has_global_flag = HSM_BAR_case_grover_retired } text = hsm_bar_anomaly.21.retired }
+    desc = { trigger = { has_global_flag = HSM_BAR_case_grover_returned NOT = { has_global_flag = HSM_BAR_case_grover_retired } } text = hsm_bar_anomaly.21.returned }
+    desc = { trigger = { has_global_flag = HSM_BAR_case_grover_bones_removed NOT = { has_global_flag = HSM_BAR_case_grover_returned } } text = hsm_bar_anomaly.21.secured }
+    desc = { trigger = { has_global_flag = HSM_BAR_case_grover_bones_confirmed NOT = { has_global_flag = HSM_BAR_case_grover_returned has_global_flag = HSM_BAR_case_grover_bones_removed } } text = hsm_bar_anomaly.21.bones }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_grover_bones_confirmed has_global_flag = HSM_BAR_case_grover_returned has_global_flag = HSM_BAR_case_grover_bones_removed } } text = hsm_bar_anomaly.21.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.22
+    title = hsm_bar_anomaly.22.t
+    desc = { trigger = { has_global_flag = HSM_BAR_case_herald_vanished } text = hsm_bar_anomaly.22.vanished }
+    desc = { trigger = { has_global_flag = HSM_BAR_case_herald_transformed NOT = { has_global_flag = HSM_BAR_case_herald_vanished } } text = hsm_bar_anomaly.22.transformed }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_herald_transformed has_global_flag = HSM_BAR_case_herald_vanished } } text = hsm_bar_anomaly.22.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.23
+    title = hsm_bar_anomaly.23.t
+    desc = { trigger = { has_global_flag = HSM_BAR_case_sombra_removed } text = hsm_bar_anomaly.23.removed }
+    desc = { trigger = { has_global_flag = HSM_BAR_case_sombra_returned NOT = { has_global_flag = HSM_BAR_case_sombra_removed } } text = hsm_bar_anomaly.23.returned }
+    desc = { trigger = { NOT = { has_global_flag = HSM_BAR_case_sombra_returned has_global_flag = HSM_BAR_case_sombra_removed } } text = hsm_bar_anomaly.23.d }
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = hsm_bar_anomaly.file_report }
+}
+country_event = {
+    id = hsm_bar_anomaly.24
+    title = hsm_bar_anomaly.24.t
+    desc = hsm_bar_anomaly.24.d
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    immediate = {
+        HSM_BAR_anomalies_pulse = yes
+        set_variable = { HSM_BAR_case_crown_museum_count = 0 }
+        set_variable = { HSM_BAR_case_crown_sealed_count = 0 }
+        set_variable = { HSM_BAR_case_crown_leader_count = 0 }
+        set_variable = { HSM_BAR_case_crown_missing_count = 0 }
+        set_variable = { HSM_BAR_case_crown_vault_count = 0 }
+        for_each_scope_loop = {
+            array = global.HSM_BAR_case_crowns
+            if = {
+                limit = { has_country_flag = HSM_BAR_case_crown_known }
+                if = { limit = { has_country_flag = HSM_BAR_case_crown_museum } ROOT = { add_to_variable = { HSM_BAR_case_crown_museum_count = 1 } } }
+                if = { limit = { has_country_flag = HSM_BAR_case_crown_sealed } ROOT = { add_to_variable = { HSM_BAR_case_crown_sealed_count = 1 } } }
+                if = { limit = { has_country_flag = HSM_BAR_case_crown_leader } ROOT = { add_to_variable = { HSM_BAR_case_crown_leader_count = 1 } } }
+                if = { limit = { has_country_flag = HSM_BAR_case_crown_missing } ROOT = { add_to_variable = { HSM_BAR_case_crown_missing_count = 1 } } }
+                if = {
+                    limit = { has_country_flag = HSM_BAR_case_crown_secured var:HSM_BAR_case_crown_site = { is_controlled_by = ROOT } }
+                    ROOT = { add_to_variable = { HSM_BAR_case_crown_vault_count = 1 } }
+                }
+            }
+        }
+    }
+    option = { name = hsm_bar_anomaly.file_report }
+}

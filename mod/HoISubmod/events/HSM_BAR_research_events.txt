@@ -1,0 +1,241 @@
+add_namespace = HSM_BAR_research
+
+country_event = {
+    id = HSM_BAR_research.1
+    title = HSM_BAR_research_clinic_choice
+    desc = HSM_BAR_research_clinic_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_clinic_consent_choice
+        trigger = {
+            HSM_BAR_research_clinic_eligible = yes
+            has_country_flag = HSM_BAR_research_clinic_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_clinic_choose_consent = yes
+        HSM_BAR_research_clinic_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_clinic_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_clinic_expedience_choice
+        trigger = {
+            HSM_BAR_research_clinic_eligible = yes
+            has_country_flag = HSM_BAR_research_clinic_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_clinic_choose_expedience = yes
+        HSM_BAR_research_clinic_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_clinic_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_clinic_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_clinic_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_clinic_choice_pending
+    }
+}
+
+country_event = {
+    id = HSM_BAR_research.2
+    title = HSM_BAR_research_grid_choice
+    desc = HSM_BAR_research_grid_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_grid_distributed_choice
+        trigger = {
+            HSM_BAR_research_grid_eligible = yes
+            has_country_flag = HSM_BAR_research_grid_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_grid_choose_distributed = yes
+        HSM_BAR_research_grid_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_grid_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_grid_central_choice
+        trigger = {
+            HSM_BAR_research_grid_eligible = yes
+            has_country_flag = HSM_BAR_research_grid_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_grid_choose_central = yes
+        HSM_BAR_research_grid_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_grid_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_grid_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_grid_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_grid_choice_pending
+    }
+}
+
+country_event = {
+    id = HSM_BAR_research.3
+    title = HSM_BAR_research_wards_choice
+    desc = HSM_BAR_research_wards_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_wards_personal_choice
+        trigger = {
+            HSM_BAR_research_wards_eligible = yes
+            has_country_flag = HSM_BAR_research_wards_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_wards_choose_personal = yes
+        HSM_BAR_research_wards_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_wards_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_wards_monitoring_choice
+        trigger = {
+            HSM_BAR_research_wards_eligible = yes
+            has_country_flag = HSM_BAR_research_wards_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_wards_choose_monitoring = yes
+        HSM_BAR_research_wards_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_wards_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_wards_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_wards_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_wards_choice_pending
+    }
+}
+
+country_event = {
+    id = HSM_BAR_research.4
+    title = HSM_BAR_research_containment_choice
+    desc = HSM_BAR_research_containment_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_containment_layered_choice
+        trigger = {
+            HSM_BAR_research_containment_eligible = yes
+            has_country_flag = HSM_BAR_research_containment_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_containment_choose_layered = yes
+        HSM_BAR_research_containment_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_containment_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_containment_sealed_choice
+        trigger = {
+            HSM_BAR_research_containment_eligible = yes
+            has_country_flag = HSM_BAR_research_containment_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_containment_choose_sealed = yes
+        HSM_BAR_research_containment_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_containment_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_containment_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_containment_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_containment_choice_pending
+    }
+}
+
+country_event = {
+    id = HSM_BAR_research.5
+    title = HSM_BAR_research_forensics_choice
+    desc = HSM_BAR_research_forensics_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_forensics_reviewed_choice
+        trigger = {
+            HSM_BAR_research_forensics_eligible = yes
+            has_country_flag = HSM_BAR_research_forensics_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_forensics_choose_reviewed = yes
+        HSM_BAR_research_forensics_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_forensics_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_forensics_classified_choice
+        trigger = {
+            HSM_BAR_research_forensics_eligible = yes
+            has_country_flag = HSM_BAR_research_forensics_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_forensics_choose_classified = yes
+        HSM_BAR_research_forensics_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_forensics_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_forensics_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_forensics_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_forensics_choice_pending
+    }
+}
+
+country_event = {
+    id = HSM_BAR_research.6
+    title = HSM_BAR_research_suppression_choice
+    desc = HSM_BAR_research_suppression_choice_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = {
+        name = HSM_BAR_research_suppression_reversible_choice
+        trigger = {
+            HSM_BAR_research_suppression_eligible = yes
+            has_country_flag = HSM_BAR_research_suppression_ready
+        }
+        ai_chance = { factor = 70 }
+        HSM_BAR_research_suppression_choose_reversible = yes
+        HSM_BAR_research_suppression_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_suppression_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suppression_permanent_choice
+        trigger = {
+            HSM_BAR_research_suppression_eligible = yes
+            has_country_flag = HSM_BAR_research_suppression_ready
+        }
+        ai_chance = { factor = 30 }
+        HSM_BAR_research_suppression_choose_permanent = yes
+        HSM_BAR_research_suppression_finish = yes
+        hidden_effect = { clr_country_flag = HSM_BAR_research_suppression_choice_pending }
+    }
+    option = {
+        name = HSM_BAR_research_suspend
+        trigger = {
+            OR = {
+                NOT = { HSM_BAR_research_suppression_eligible = yes }
+                NOT = { has_country_flag = HSM_BAR_research_suppression_ready }
+            }
+        }
+        clr_country_flag = HSM_BAR_research_suppression_choice_pending
+    }
+}

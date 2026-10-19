@@ -1,0 +1,282 @@
+HSM_BAR_mtc_frontiers_policy = {
+ HSM_BAR_mtc_frontiers_registry_614 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   614 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 614 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 614 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    614 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 614 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 614 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 614 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_614 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   614 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 614 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 614 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    614 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 614 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 614 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 614 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_615 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   615 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 615 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 615 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    615 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 615 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 615 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 615 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_615 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   615 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 615 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 615 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    615 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 615 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 615 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 615 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_616 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   616 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 616 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 616 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    616 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 616 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 616 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 616 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_616 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   616 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 616 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 616 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    616 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 616 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 616 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 616 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_617 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   617 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 617 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 617 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    617 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 617 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 617 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 617 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_617 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   617 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 617 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 617 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    617 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 617 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 617 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 617 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_627 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   627 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 627 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 627 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    627 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 627 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 627 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 627 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_627 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   627 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 627 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 627 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    627 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 627 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 627 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 627 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_628 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   628 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 628 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 628 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    628 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 628 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 628 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 628 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_628 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   628 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 628 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 628 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    628 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 628 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 628 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 628 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+ HSM_BAR_mtc_frontiers_registry_629 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+   629 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered } }
+  }
+  available = { 629 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+  cost = 50
+  days_remove = 60
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 629 = { HSM_BAR_mtc_frontiers_registry = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } }
+    629 = { set_state_flag = HSM_BAR_mtc_frontiers_registry_running }
+   }
+  }
+  cancel_trigger = { 629 = { OR = { NOT = { HSM_BAR_mtc_frontiers_registry = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registry_running } } } }
+  cancel_effect = { 629 = { clr_state_flag = HSM_BAR_mtc_frontiers_registry_running } }
+  remove_effect = { 629 = { HSM_BAR_mtc_frontiers_finish_registry = yes } }
+ }
+ HSM_BAR_mtc_frontiers_citizenship_629 = {
+  icon = generic_civil_support
+  visible = {
+   HSM_BAR_mtc_frontiers_route = yes
+   has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter
+   629 = { has_state_flag = HSM_BAR_mtc_frontiers_settlement is_owned_by = BAR NOT = { is_core_of = BAR } }
+  }
+  available = { 629 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+  cost = 100
+  days_remove = 120
+  ai_will_do = { factor = 2 }
+  complete_effect = {
+   if = { limit = { 629 = { HSM_BAR_mtc_frontiers_citizenship = yes NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } }
+    629 = { set_state_flag = HSM_BAR_mtc_frontiers_citizenship_running }
+   }
+  }
+  cancel_trigger = { 629 = { OR = { NOT = { HSM_BAR_mtc_frontiers_citizenship = yes } NOT = { has_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } } } }
+  cancel_effect = { 629 = { clr_state_flag = HSM_BAR_mtc_frontiers_citizenship_running } }
+  remove_effect = { 629 = { HSM_BAR_mtc_frontiers_finish_citizenship = yes } }
+ }
+}

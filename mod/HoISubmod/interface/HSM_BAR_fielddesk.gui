@@ -1,0 +1,381 @@
+# Existing archive folder, fonts and controls only. Native extent: 1000 x 700.
+guiTypes = {
+ containerWindowType = {
+  name = "HSM_BAR_fielddesk_window"
+  position = { x = 0 y = 0 }
+  size = { width = 1000 height = 700 }
+  orientation = center
+  origo = center
+  moveable = yes
+  click_to_front = yes
+  clipping = no
+  show_sound = menu_open_window
+  hide_sound = menu_close_window
+  background = { name = "HSM_BAR_fielddesk_background" quadTextureSprite = "GFX_HSM_BAR_archive_folder" }
+  buttonType = { name = "HSM_BAR_fielddesk_input_floor" position = { x = 0 y = 0 } size = { x = 1000 y = 700 } quadTextureSprite = "GFX_HSM_BAR_archive_folder" alwaystransparent = no }
+  buttonType = { name = "HSM_BAR_fielddesk_input_shield" position = { x = 0 y = 0 } size = { x = 1000 y = 700 } quadTextureSprite = "GFX_HSM_BAR_archive_folder" alwaystransparent = no }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_title"
+   position = { x = 24 y = 20 }
+   font = "hoi_24header"
+   text = "HSM_BAR_fielddesk_title"
+   maxWidth = 900
+   maxHeight = 32
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_subtitle"
+   position = { x = 24 y = 60 }
+   font = "hoi_16mbs"
+   text = "[GetHSMBARFielddeskRegion]"
+   maxWidth = 900
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_close"
+   position = { x = 944 y = 20 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_close"
+   pdx_tooltip = "HSM_BAR_fielddesk_back_tt"
+   clicksound = click_ok
+   shortcut = "ESCAPE"
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_index"
+   position = { x = 24 y = 116 }
+   font = "hoi_18mbs"
+   text = "HSM_BAR_fielddesk_index"
+   maxWidth = 264
+   maxHeight = 40
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_empty"
+   position = { x = 24 y = 176 }
+   font = "hoi_16mbs"
+   text = "HSM_BAR_fielddesk_empty"
+   maxWidth = 264
+   maxHeight = 150
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_target_1"
+   position = { x = 24 y = 170 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_index"
+   pdx_tooltip = "HSM_BAR_fielddesk_target_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_target_1_label"
+   position = { x = 30 y = 171 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_row_1_label"
+   maxWidth = 249
+   maxHeight = 32
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_target_2"
+   position = { x = 24 y = 262 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_index"
+   pdx_tooltip = "HSM_BAR_fielddesk_target_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_target_2_label"
+   position = { x = 30 y = 263 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_row_2_label"
+   maxWidth = 249
+   maxHeight = 32
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_target_3"
+   position = { x = 24 y = 354 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_index"
+   pdx_tooltip = "HSM_BAR_fielddesk_target_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_target_3_label"
+   position = { x = 30 y = 355 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_row_3_label"
+   maxWidth = 249
+   maxHeight = 32
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_target_4"
+   position = { x = 24 y = 446 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_index"
+   pdx_tooltip = "HSM_BAR_fielddesk_target_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_target_4_label"
+   position = { x = 30 y = 447 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_row_4_label"
+   maxWidth = 249
+   maxHeight = 32
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_previous"
+   position = { x = 24 y = 568 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_previous"
+   pdx_tooltip = "HSM_BAR_fielddesk_previous_tt"
+   clicksound = click_ok
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_next"
+   position = { x = 252 y = 568 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_next"
+   pdx_tooltip = "HSM_BAR_fielddesk_next_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_count"
+   position = { x = 74 y = 576 }
+   font = "hoi_16mbs"
+   text = "HSM_BAR_fielddesk_count"
+   maxWidth = 170
+   maxHeight = 26
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_back"
+   position = { x = 24 y = 636 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_back"
+   pdx_tooltip = "HSM_BAR_fielddesk_back_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_back_label"
+   position = { x = 70 y = 645 }
+   font = "hoi_16mbs"
+   text = "HSM_BAR_fielddesk_back"
+   maxWidth = 220
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_target_heading"
+   position = { x = 344 y = 126 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_target_heading"
+   maxWidth = 604
+   maxHeight = 30
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_selected"
+   position = { x = 344 y = 158 }
+   font = "HSM_BAR_archive_heading"
+   text = "[GetHSMBARFielddeskSelected]"
+   maxWidth = 604
+   maxHeight = 44
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_recon_title"
+   position = { x = 344 y = 218 }
+   font = "HSM_BAR_archive_heading"
+   text = "HSM_BAR_fielddesk_recon_title"
+   maxWidth = 448
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_recon"
+   position = { x = 810 y = 218 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+   buttonText = "HSM_BAR_fielddesk_dispatch"
+   buttonFont = "HSM_BAR_archive_ink"
+   pdx_tooltip = "HSM_BAR_fielddesk_recon_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_recon_cost"
+   position = { x = 344 y = 249 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_recon_cost"
+   maxWidth = 604
+   maxHeight = 22
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_recon_status"
+   position = { x = 344 y = 272 }
+   font = "HSM_BAR_archive_ink"
+   text = "[GetHSMBARFielddeskreconStatus]"
+   maxWidth = 604
+   maxHeight = 23
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_archive_title"
+   position = { x = 344 y = 302 }
+   font = "HSM_BAR_archive_heading"
+   text = "HSM_BAR_fielddesk_archive_title"
+   maxWidth = 448
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_archive"
+   position = { x = 810 y = 302 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+   buttonText = "HSM_BAR_fielddesk_dispatch"
+   buttonFont = "HSM_BAR_archive_ink"
+   pdx_tooltip = "HSM_BAR_fielddesk_archive_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_archive_cost"
+   position = { x = 344 y = 333 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_archive_cost"
+   maxWidth = 604
+   maxHeight = 22
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_archive_status"
+   position = { x = 344 y = 356 }
+   font = "HSM_BAR_archive_ink"
+   text = "[GetHSMBARFielddeskarchiveStatus]"
+   maxWidth = 604
+   maxHeight = 23
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_relic_title"
+   position = { x = 344 y = 386 }
+   font = "HSM_BAR_archive_heading"
+   text = "HSM_BAR_fielddesk_relic_title"
+   maxWidth = 448
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_relic"
+   position = { x = 810 y = 386 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+   buttonText = "HSM_BAR_fielddesk_dispatch"
+   buttonFont = "HSM_BAR_archive_ink"
+   pdx_tooltip = "HSM_BAR_fielddesk_relic_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_relic_cost"
+   position = { x = 344 y = 417 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_relic_cost"
+   maxWidth = 604
+   maxHeight = 22
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_relic_status"
+   position = { x = 344 y = 440 }
+   font = "HSM_BAR_archive_ink"
+   text = "[GetHSMBARFielddeskrelicStatus]"
+   maxWidth = 604
+   maxHeight = 23
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_remains_title"
+   position = { x = 344 y = 470 }
+   font = "HSM_BAR_archive_heading"
+   text = "HSM_BAR_fielddesk_remains_title"
+   maxWidth = 448
+   maxHeight = 28
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_remains"
+   position = { x = 810 y = 470 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+   buttonText = "HSM_BAR_fielddesk_dispatch"
+   buttonFont = "HSM_BAR_archive_ink"
+   pdx_tooltip = "HSM_BAR_fielddesk_remains_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_remains_cost"
+   position = { x = 344 y = 501 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_remains_cost"
+   maxWidth = 604
+   maxHeight = 22
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_remains_status"
+   position = { x = 344 y = 524 }
+   font = "HSM_BAR_archive_ink"
+   text = "[GetHSMBARFielddeskremainsStatus]"
+   maxWidth = 604
+   maxHeight = 23
+   format = left
+   alwaystransparent = yes
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_assignment"
+   position = { x = 344 y = 573 }
+   font = "HSM_BAR_archive_ink"
+   text = "[GetHSMBARFielddeskAssignment]"
+   maxWidth = 604
+   maxHeight = 58
+   format = left
+   alwaystransparent = yes
+  }
+  buttonType = {
+   name = "HSM_BAR_fielddesk_cancel"
+   position = { x = 810 y = 640 }
+   quadTextureSprite = "GFX_HSM_BAR_archive_tab"
+   buttonText = "HSM_BAR_fielddesk_cancel"
+   buttonFont = "HSM_BAR_archive_ink"
+   pdx_tooltip = "HSM_BAR_fielddesk_cancel_tt"
+   clicksound = click_ok
+  }
+  instantTextboxType = {
+   name = "HSM_BAR_fielddesk_footer"
+   position = { x = 344 y = 642 }
+   font = "HSM_BAR_archive_ink"
+   text = "HSM_BAR_fielddesk_footer"
+   maxWidth = 452
+   maxHeight = 36
+   format = left
+   alwaystransparent = yes
+  }
+ }
+}
+

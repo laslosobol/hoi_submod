@@ -1,0 +1,6 @@
+HSM_BAR_development = {
+ icon = GFX_decision_category_generic_industry
+ allowed = { original_tag = BAR }
+ visible = { HSM_BAR_development_route = yes }
+ priority = 85
+}

@@ -1,0 +1,764 @@
+# A single marker reads the original ending, including existing saves. No reward here.
+HSM_BAR_residencies_begin = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_actor = yes
+   has_country_flag = HSM_BAR_core_6_done
+   has_country_flag = HSM_BAR_cult_network_broken
+   NOT = { has_country_flag = HSM_BAR_residencies_started }
+  }
+  set_country_flag = HSM_BAR_residencies_started
+ }
+}
+HSM_BAR_residencies_clear_values = {
+ set_variable = { HSM_BAR_residencies_attrition = 0 }
+ set_variable = { HSM_BAR_residencies_recon = 0 }
+ set_variable = { HSM_BAR_residencies_dig_in = 0 }
+ set_variable = { HSM_BAR_residencies_supply = 0 }
+ set_variable = { HSM_BAR_residencies_network = 0 }
+ set_variable = { HSM_BAR_residencies_capture = 0 }
+ set_variable = { HSM_BAR_residencies_cost = 0 }
+ set_variable = { HSM_BAR_residencies_outcome = 0 }
+ set_variable = { HSM_BAR_residencies_defence = 0 }
+ set_variable = { HSM_BAR_residencies_upkeep = 0 }
+}
+HSM_BAR_residencies_teardown = {
+ remove_dynamic_modifier = { modifier = HSM_BAR_residencies_methods }
+ HSM_BAR_residencies_clear_values = yes
+ clr_country_flag = HSM_BAR_residencies_equus_running
+ clr_country_flag = HSM_BAR_residencies_griffonia_running
+ clr_country_flag = HSM_BAR_residencies_north_running
+ clr_country_flag = HSM_BAR_residencies_riverlands_running
+ clr_country_flag = HSM_BAR_residencies_zebrica_running
+ clr_country_flag = HSM_BAR_residencies_comparison_running
+ clr_country_flag = HSM_BAR_residencies_reply_running
+ clr_country_flag = HSM_BAR_residencies_papers_running
+ clr_country_flag = HSM_BAR_residencies_exchange_running
+ clr_country_flag = HSM_BAR_residencies_aftermath_running
+ clr_country_flag = HSM_BAR_residencies_review_running
+ clr_country_flag = HSM_BAR_residencies_equus_pending
+ clr_country_flag = HSM_BAR_residencies_griffonia_pending
+ clr_country_flag = HSM_BAR_residencies_north_pending
+ clr_country_flag = HSM_BAR_residencies_riverlands_pending
+ clr_country_flag = HSM_BAR_residencies_zebrica_pending
+ clr_country_flag = HSM_BAR_residencies_comparison_pending
+ clr_country_flag = HSM_BAR_residencies_contact_pending
+ clr_country_flag = HSM_BAR_residencies_exchange_pending
+ clr_country_flag = HSM_BAR_residencies_aftermath_pending
+ clr_country_flag = HSM_BAR_residencies_review_pending
+}
+HSM_BAR_residencies_refresh = {
+ hidden_effect = {
+  HSM_BAR_residencies_clear_values = yes
+  if = {
+   limit = { HSM_BAR_residencies_actor = yes }
+   if = { limit = { has_country_flag = HSM_BAR_residencies_equus_method } add_to_variable = { HSM_BAR_residencies_attrition = -0.01 } }
+   if = {
+    limit = { has_country_flag = HSM_BAR_residencies_griffonia_method }
+    if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_cost = -0.03 } }
+    else = { add_to_variable = { HSM_BAR_residencies_recon = 0.005 } }
+   }
+   if = { limit = { has_country_flag = HSM_BAR_residencies_north_method } add_to_variable = { HSM_BAR_residencies_recon = 0.01 } }
+   if = { limit = { has_country_flag = HSM_BAR_residencies_riverlands_method } add_to_variable = { HSM_BAR_residencies_dig_in = 0.05 } }
+   if = {
+    limit = { has_country_flag = HSM_BAR_residencies_comparison_method }
+    if = { limit = { has_country_flag = HSM_BAR_residencies_zebrica_listeners } add_to_variable = { HSM_BAR_residencies_supply = -0.02 } }
+    else = {
+     if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_outcome = 0.03 } }
+     else = { add_to_variable = { HSM_BAR_residencies_recon = 0.01 } }
+    }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_residencies_aftermath_done }
+    if = {
+     limit = { has_country_flag = HSM_BAR_residencies_watch }
+     add_to_variable = { HSM_BAR_residencies_upkeep = -0.03 }
+     if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_network = 0.05 } add_to_variable = { HSM_BAR_residencies_outcome = 0.05 } }
+     else = { add_to_variable = { HSM_BAR_residencies_recon = 0.02 } }
+    }
+    else = {
+     add_to_variable = { HSM_BAR_residencies_supply = -0.01 }
+     if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_defence = 1 } }
+     else = { add_to_variable = { HSM_BAR_residencies_recon = 0.01 } }
+    }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_residencies_contact_done }
+    if = {
+     limit = { has_country_flag = HSM_BAR_residencies_contact_follow }
+     if = {
+      limit = { has_dlc = "La Resistance" }
+      if = { limit = { has_country_flag = HSM_BAR_cult_channel_retained } add_to_variable = { HSM_BAR_residencies_network = 0.05 } add_to_variable = { HSM_BAR_residencies_capture = 0.05 } }
+      else = { add_to_variable = { HSM_BAR_residencies_network = 0.025 } }
+     }
+     else = { add_to_variable = { HSM_BAR_residencies_recon = 0.01 } }
+    }
+    else = {
+     if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_defence = 1 } }
+     else = { add_to_variable = { HSM_BAR_residencies_recon = 0.005 } }
+    }
+    if = {
+     limit = { has_country_flag = HSM_BAR_residencies_exchange_done }
+     if = {
+      limit = { has_country_flag = HSM_BAR_residencies_exchange_follow }
+      add_to_variable = { HSM_BAR_residencies_upkeep = -0.02 }
+      if = { limit = { has_dlc = "La Resistance" } add_to_variable = { HSM_BAR_residencies_outcome = 0.05 } }
+      else = { add_to_variable = { HSM_BAR_residencies_recon = 0.005 } }
+     }
+     else = { add_to_variable = { HSM_BAR_residencies_supply = -0.01 } }
+    }
+   }
+   if = {
+    limit = {
+     OR = {
+      has_country_flag = HSM_BAR_residencies_equus_method has_country_flag = HSM_BAR_residencies_griffonia_method
+      has_country_flag = HSM_BAR_residencies_north_method has_country_flag = HSM_BAR_residencies_riverlands_method
+      has_country_flag = HSM_BAR_residencies_comparison_method has_country_flag = HSM_BAR_residencies_contact_done
+     }
+    }
+    if = { limit = { NOT = { has_dynamic_modifier = HSM_BAR_residencies_methods } } add_dynamic_modifier = { modifier = HSM_BAR_residencies_methods } }
+    force_update_dynamic_modifier = yes
+   }
+  }
+  else = { HSM_BAR_residencies_teardown = yes }
+ }
+}
+HSM_BAR_residencies_pulse = {
+ HSM_BAR_residencies_begin = yes
+ HSM_BAR_residencies_refresh = yes
+ if = {
+  limit = { HSM_BAR_residencies_actor = yes }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_equus_ready NOT = { has_country_flag = HSM_BAR_residencies_equus_pending } NOT = { has_country_flag = HSM_BAR_residencies_equus_done } }
+   set_country_flag = HSM_BAR_residencies_equus_pending
+   country_event = { id = HSM_BAR_residencies.1 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_griffonia_ready NOT = { has_country_flag = HSM_BAR_residencies_griffonia_pending } NOT = { has_country_flag = HSM_BAR_residencies_griffonia_done } }
+   set_country_flag = HSM_BAR_residencies_griffonia_pending
+   country_event = { id = HSM_BAR_residencies.2 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_north_ready NOT = { has_country_flag = HSM_BAR_residencies_north_pending } NOT = { has_country_flag = HSM_BAR_residencies_north_done } }
+   set_country_flag = HSM_BAR_residencies_north_pending
+   country_event = { id = HSM_BAR_residencies.3 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_riverlands_ready NOT = { has_country_flag = HSM_BAR_residencies_riverlands_pending } NOT = { has_country_flag = HSM_BAR_residencies_riverlands_done } }
+   set_country_flag = HSM_BAR_residencies_riverlands_pending
+   country_event = { id = HSM_BAR_residencies.4 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_zebrica_ready NOT = { has_country_flag = HSM_BAR_residencies_zebrica_pending } NOT = { has_country_flag = HSM_BAR_residencies_zebrica_done } }
+   set_country_flag = HSM_BAR_residencies_zebrica_pending
+   country_event = { id = HSM_BAR_residencies.5 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_comparison_ready NOT = { has_country_flag = HSM_BAR_residencies_comparison_pending } NOT = { has_country_flag = HSM_BAR_residencies_comparison_done } }
+   set_country_flag = HSM_BAR_residencies_comparison_pending
+   country_event = { id = HSM_BAR_residencies.6 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_contact_ready NOT = { has_country_flag = HSM_BAR_residencies_contact_pending } NOT = { has_country_flag = HSM_BAR_residencies_contact_done } }
+   set_country_flag = HSM_BAR_residencies_contact_pending
+   country_event = { id = HSM_BAR_residencies.7 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_exchange_ready NOT = { has_country_flag = HSM_BAR_residencies_exchange_pending } NOT = { has_country_flag = HSM_BAR_residencies_exchange_done } }
+   set_country_flag = HSM_BAR_residencies_exchange_pending
+   country_event = { id = HSM_BAR_residencies.8 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_aftermath_ready NOT = { has_country_flag = HSM_BAR_residencies_aftermath_pending } NOT = { has_country_flag = HSM_BAR_residencies_aftermath_done } }
+   set_country_flag = HSM_BAR_residencies_aftermath_pending
+   country_event = { id = HSM_BAR_residencies.9 }
+  }
+  if = {
+   limit = { has_country_flag = HSM_BAR_residencies_review_ready NOT = { has_country_flag = HSM_BAR_residencies_review_pending } NOT = { has_country_flag = HSM_BAR_residencies_review_done } }
+   set_country_flag = HSM_BAR_residencies_review_pending
+   country_event = { id = HSM_BAR_residencies.10 }
+  }
+ }
+}
+HSM_BAR_residencies_equus_start = {
+ if = {
+  limit = { HSM_BAR_residencies_equus_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_equus_running
+ }
+}
+HSM_BAR_residencies_equus_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_equus_eligible = yes
+   has_country_flag = HSM_BAR_residencies_equus_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_equus_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_equus_running
+  set_country_flag = HSM_BAR_residencies_equus_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_equus_running }
+}
+
+HSM_BAR_residencies_griffonia_start = {
+ if = {
+  limit = { HSM_BAR_residencies_griffonia_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_griffonia_running
+ }
+}
+HSM_BAR_residencies_griffonia_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_griffonia_eligible = yes
+   has_country_flag = HSM_BAR_residencies_griffonia_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_griffonia_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_griffonia_running
+  set_country_flag = HSM_BAR_residencies_griffonia_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_griffonia_running }
+}
+
+HSM_BAR_residencies_north_start = {
+ if = {
+  limit = { HSM_BAR_residencies_north_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_north_running
+ }
+}
+HSM_BAR_residencies_north_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_north_eligible = yes
+   has_country_flag = HSM_BAR_residencies_north_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_north_running days < 35 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_north_running
+  set_country_flag = HSM_BAR_residencies_north_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_north_running }
+}
+
+HSM_BAR_residencies_riverlands_start = {
+ if = {
+  limit = { HSM_BAR_residencies_riverlands_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_riverlands_running
+ }
+}
+HSM_BAR_residencies_riverlands_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_riverlands_eligible = yes
+   has_country_flag = HSM_BAR_residencies_riverlands_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_riverlands_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_riverlands_running
+  set_country_flag = HSM_BAR_residencies_riverlands_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_riverlands_running }
+}
+
+HSM_BAR_residencies_zebrica_start = {
+ if = {
+  limit = { HSM_BAR_residencies_zebrica_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_zebrica_running
+ }
+}
+HSM_BAR_residencies_zebrica_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_zebrica_eligible = yes
+   has_country_flag = HSM_BAR_residencies_zebrica_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_zebrica_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_zebrica_running
+  set_country_flag = HSM_BAR_residencies_zebrica_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_zebrica_running }
+}
+
+HSM_BAR_residencies_comparison_start = {
+ if = {
+  limit = { HSM_BAR_residencies_comparison_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_comparison_running
+ }
+}
+HSM_BAR_residencies_comparison_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_comparison_eligible = yes
+   has_country_flag = HSM_BAR_residencies_comparison_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_comparison_running days < 42 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_comparison_running
+  set_country_flag = HSM_BAR_residencies_comparison_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_comparison_running }
+}
+
+HSM_BAR_residencies_reply_start = {
+ if = {
+  limit = { HSM_BAR_residencies_reply_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_reply_running
+ }
+}
+HSM_BAR_residencies_reply_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_reply_eligible = yes
+   has_country_flag = HSM_BAR_residencies_reply_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_reply_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_reply_running
+  set_country_flag = HSM_BAR_residencies_contact_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_reply_running }
+}
+
+HSM_BAR_residencies_papers_start = {
+ if = {
+  limit = { HSM_BAR_residencies_papers_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_papers_running
+ }
+}
+HSM_BAR_residencies_papers_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_papers_eligible = yes
+   has_country_flag = HSM_BAR_residencies_papers_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_papers_running days < 35 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_papers_running
+  set_country_flag = HSM_BAR_residencies_contact_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_papers_running }
+}
+
+HSM_BAR_residencies_exchange_start = {
+ if = {
+  limit = { HSM_BAR_residencies_exchange_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_exchange_running
+ }
+}
+HSM_BAR_residencies_exchange_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_exchange_eligible = yes
+   has_country_flag = HSM_BAR_residencies_exchange_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_exchange_running days < 35 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_exchange_running
+  set_country_flag = HSM_BAR_residencies_exchange_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_exchange_running }
+}
+
+HSM_BAR_residencies_aftermath_start = {
+ if = {
+  limit = { HSM_BAR_residencies_aftermath_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_aftermath_running
+ }
+}
+HSM_BAR_residencies_aftermath_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_aftermath_eligible = yes
+   has_country_flag = HSM_BAR_residencies_aftermath_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_aftermath_running days < 28 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_aftermath_running
+  set_country_flag = HSM_BAR_residencies_aftermath_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_aftermath_running }
+}
+
+HSM_BAR_residencies_review_start = {
+ if = {
+  limit = { HSM_BAR_residencies_review_can_start = yes }
+  set_country_flag = HSM_BAR_residencies_initialized
+  set_country_flag = HSM_BAR_residencies_review_running
+  clr_country_flag = HSM_BAR_residencies_review_done
+  set_country_flag = { flag = HSM_BAR_residencies_review_cooldown days = 180 }
+ }
+}
+HSM_BAR_residencies_review_finish = {
+ if = {
+  limit = {
+   HSM_BAR_residencies_review_eligible = yes
+   has_country_flag = HSM_BAR_residencies_review_running
+   NOT = { has_country_flag = { flag = HSM_BAR_residencies_review_running days < 21 } }
+  }
+  clr_country_flag = HSM_BAR_residencies_review_running
+  set_country_flag = HSM_BAR_residencies_review_ready
+  HSM_BAR_residencies_pulse = yes
+ }
+ else = { clr_country_flag = HSM_BAR_residencies_review_running }
+}
+
+HSM_BAR_residencies_equus_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_equus_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_equus_done
+  clr_country_flag = HSM_BAR_residencies_equus_ready
+  clr_country_flag = HSM_BAR_residencies_equus_pending
+  add_tech_bonus = { name = HSM_BAR_residencies_clinical_exchange bonus = 0.5 uses = 1 category = hospital_tech }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_equus_pending } }
+}
+
+HSM_BAR_residencies_equus_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_equus_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_equus_done
+  clr_country_flag = HSM_BAR_residencies_equus_ready
+  clr_country_flag = HSM_BAR_residencies_equus_pending
+  set_country_flag = HSM_BAR_residencies_equus_method
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_equus_pending } }
+}
+
+HSM_BAR_residencies_griffonia_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_griffonia_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_griffonia_done
+  clr_country_flag = HSM_BAR_residencies_griffonia_ready
+  clr_country_flag = HSM_BAR_residencies_griffonia_pending
+  add_tech_bonus = { name = HSM_BAR_residencies_materials_exchange bonus = 0.5 uses = 1 category = industry }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_griffonia_pending } }
+}
+
+HSM_BAR_residencies_griffonia_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_griffonia_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_griffonia_done
+  clr_country_flag = HSM_BAR_residencies_griffonia_ready
+  clr_country_flag = HSM_BAR_residencies_griffonia_pending
+  set_country_flag = HSM_BAR_residencies_griffonia_method
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_griffonia_pending } }
+}
+
+HSM_BAR_residencies_north_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_north_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_north_done
+  clr_country_flag = HSM_BAR_residencies_north_ready
+  clr_country_flag = HSM_BAR_residencies_north_pending
+  add_tech_bonus = { name = HSM_BAR_residencies_optics_exchange bonus = 0.5 uses = 1 category = electronics }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_north_pending } }
+}
+
+HSM_BAR_residencies_north_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_north_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_north_done
+  clr_country_flag = HSM_BAR_residencies_north_ready
+  clr_country_flag = HSM_BAR_residencies_north_pending
+  set_country_flag = HSM_BAR_residencies_north_method
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_north_pending } }
+}
+
+HSM_BAR_residencies_riverlands_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_riverlands_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_riverlands_done
+  clr_country_flag = HSM_BAR_residencies_riverlands_ready
+  clr_country_flag = HSM_BAR_residencies_riverlands_pending
+  add_tech_bonus = { name = HSM_BAR_residencies_survey_exchange bonus = 0.5 uses = 1 category = logistics_tech }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_riverlands_pending } }
+}
+
+HSM_BAR_residencies_riverlands_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_riverlands_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_riverlands_done
+  clr_country_flag = HSM_BAR_residencies_riverlands_ready
+  clr_country_flag = HSM_BAR_residencies_riverlands_pending
+  set_country_flag = HSM_BAR_residencies_riverlands_method
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_riverlands_pending } }
+}
+
+HSM_BAR_residencies_zebrica_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_zebrica_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_zebrica_done
+  clr_country_flag = HSM_BAR_residencies_zebrica_ready
+  clr_country_flag = HSM_BAR_residencies_zebrica_pending
+  set_country_flag = HSM_BAR_residencies_zebrica_listeners
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_zebrica_pending } }
+}
+
+HSM_BAR_residencies_zebrica_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_zebrica_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_zebrica_done
+  clr_country_flag = HSM_BAR_residencies_zebrica_ready
+  clr_country_flag = HSM_BAR_residencies_zebrica_pending
+  set_country_flag = HSM_BAR_residencies_zebrica_broker
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_zebrica_pending } }
+}
+
+HSM_BAR_residencies_comparison_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_comparison_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_comparison_done
+  clr_country_flag = HSM_BAR_residencies_comparison_ready
+  clr_country_flag = HSM_BAR_residencies_comparison_pending
+  if = { limit = { has_country_flag = HSM_BAR_residencies_zebrica_listeners } add_tech_bonus = { name = HSM_BAR_residencies_route_exchange bonus = 0.5 uses = 1 category = logistics_tech } } else = { add_tech_bonus = { name = HSM_BAR_residencies_translation_exchange bonus = 0.5 uses = 1 category = electronics } }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_comparison_pending } }
+}
+
+HSM_BAR_residencies_comparison_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_comparison_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_comparison_done
+  clr_country_flag = HSM_BAR_residencies_comparison_ready
+  clr_country_flag = HSM_BAR_residencies_comparison_pending
+  set_country_flag = HSM_BAR_residencies_comparison_method
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_comparison_pending } }
+}
+
+HSM_BAR_residencies_contact_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_contact_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_contact_done
+  clr_country_flag = HSM_BAR_residencies_contact_ready
+  clr_country_flag = HSM_BAR_residencies_contact_pending
+  clr_country_flag = HSM_BAR_residencies_contact_follow
+  set_country_flag = { flag = HSM_BAR_residencies_contact_cooldown days = 30 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_contact_pending } }
+}
+
+HSM_BAR_residencies_contact_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_contact_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_contact_done
+  clr_country_flag = HSM_BAR_residencies_contact_ready
+  clr_country_flag = HSM_BAR_residencies_contact_pending
+  set_country_flag = HSM_BAR_residencies_contact_follow
+  set_country_flag = { flag = HSM_BAR_residencies_contact_cooldown days = 30 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_contact_pending } }
+}
+
+HSM_BAR_residencies_exchange_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_exchange_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_exchange_done
+  clr_country_flag = HSM_BAR_residencies_exchange_ready
+  clr_country_flag = HSM_BAR_residencies_exchange_pending
+  clr_country_flag = HSM_BAR_residencies_exchange_follow
+  set_country_flag = { flag = HSM_BAR_residencies_exchange_cooldown days = 60 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_exchange_pending } }
+}
+
+HSM_BAR_residencies_exchange_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_exchange_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_exchange_done
+  clr_country_flag = HSM_BAR_residencies_exchange_ready
+  clr_country_flag = HSM_BAR_residencies_exchange_pending
+  set_country_flag = HSM_BAR_residencies_exchange_follow
+  set_country_flag = { flag = HSM_BAR_residencies_exchange_cooldown days = 60 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_exchange_pending } }
+}
+
+HSM_BAR_residencies_aftermath_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_aftermath_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_aftermath_done
+  clr_country_flag = HSM_BAR_residencies_aftermath_ready
+  clr_country_flag = HSM_BAR_residencies_aftermath_pending
+  clr_country_flag = HSM_BAR_residencies_watch
+  set_country_flag = { flag = HSM_BAR_residencies_review_cooldown days = 180 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_aftermath_pending } }
+}
+
+HSM_BAR_residencies_aftermath_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_aftermath_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_aftermath_done
+  clr_country_flag = HSM_BAR_residencies_aftermath_ready
+  clr_country_flag = HSM_BAR_residencies_aftermath_pending
+  set_country_flag = HSM_BAR_residencies_watch
+  set_country_flag = { flag = HSM_BAR_residencies_review_cooldown days = 180 }
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_aftermath_pending } }
+}
+
+HSM_BAR_residencies_review_choose_a = {
+ if = {
+  limit = { HSM_BAR_residencies_review_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_review_done
+  clr_country_flag = HSM_BAR_residencies_review_ready
+  clr_country_flag = HSM_BAR_residencies_review_pending
+  clr_country_flag = HSM_BAR_residencies_watch
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_review_pending } }
+}
+
+HSM_BAR_residencies_review_choose_b = {
+ if = {
+  limit = { HSM_BAR_residencies_review_can_answer = yes }
+  set_country_flag = HSM_BAR_residencies_review_done
+  clr_country_flag = HSM_BAR_residencies_review_ready
+  clr_country_flag = HSM_BAR_residencies_review_pending
+  set_country_flag = HSM_BAR_residencies_watch
+  HSM_BAR_residencies_refresh = yes
+ }
+ else = { if = { limit = { NOT = { HSM_BAR_residencies_actor = yes } } clr_country_flag = HSM_BAR_residencies_review_pending } }
+}
+
+HSM_BAR_residencies_equus_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_equus_a_tt
+}
+
+HSM_BAR_residencies_equus_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_equus_b_tt
+}
+
+HSM_BAR_residencies_griffonia_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_griffonia_a_tt
+}
+
+HSM_BAR_residencies_griffonia_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_griffonia_b_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_griffonia_b_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_griffonia_b_legacy_tt }
+}
+
+HSM_BAR_residencies_north_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_north_a_tt
+}
+
+HSM_BAR_residencies_north_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_north_b_tt
+}
+
+HSM_BAR_residencies_riverlands_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_riverlands_a_tt
+}
+
+HSM_BAR_residencies_riverlands_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_riverlands_b_tt
+}
+
+HSM_BAR_residencies_zebrica_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_zebrica_a_tt
+}
+
+HSM_BAR_residencies_zebrica_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_zebrica_b_tt
+}
+
+HSM_BAR_residencies_comparison_tooltip_a = {
+ if = { limit = { has_country_flag = HSM_BAR_residencies_zebrica_listeners } custom_effect_tooltip = HSM_BAR_residencies_comparison_a_log_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_comparison_a_ele_tt }
+}
+
+HSM_BAR_residencies_comparison_tooltip_b = {
+ if = { limit = { has_country_flag = HSM_BAR_residencies_zebrica_listeners } custom_effect_tooltip = HSM_BAR_residencies_comparison_b_local_tt }
+ else_if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_comparison_b_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_comparison_b_legacy_tt }
+}
+
+HSM_BAR_residencies_contact_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_contact_a_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_contact_a_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_contact_a_legacy_tt }
+}
+
+HSM_BAR_residencies_contact_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_contact_b_tt
+ if = {
+  limit = { has_dlc = "La Resistance" }
+  if = { limit = { has_country_flag = HSM_BAR_cult_channel_retained } custom_effect_tooltip = HSM_BAR_residencies_contact_b_retained_tt }
+  else = { custom_effect_tooltip = HSM_BAR_residencies_contact_b_closed_tt }
+ }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_contact_b_legacy_tt }
+}
+
+HSM_BAR_residencies_exchange_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_exchange_a_tt
+}
+
+HSM_BAR_residencies_exchange_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_exchange_b_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_exchange_b_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_exchange_b_legacy_tt }
+}
+
+HSM_BAR_residencies_aftermath_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_aftermath_a_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_aftermath_a_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_aftermath_a_legacy_tt }
+}
+
+HSM_BAR_residencies_aftermath_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_aftermath_b_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_aftermath_b_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_aftermath_b_legacy_tt }
+}
+
+HSM_BAR_residencies_review_tooltip_a = {
+ custom_effect_tooltip = HSM_BAR_residencies_review_a_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_review_a_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_review_a_legacy_tt }
+}
+
+HSM_BAR_residencies_review_tooltip_b = {
+ custom_effect_tooltip = HSM_BAR_residencies_review_b_tt
+ if = { limit = { has_dlc = "La Resistance" } custom_effect_tooltip = HSM_BAR_residencies_review_b_lar_tt }
+ else = { custom_effect_tooltip = HSM_BAR_residencies_review_b_legacy_tt }
+}
+

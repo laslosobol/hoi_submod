@@ -1,0 +1,31 @@
+add_namespace = hsm_bar_development
+
+country_event = {
+ id = hsm_bar_development.1
+ title = hsm_bar_development.1.t
+ desc = hsm_bar_development.1.d
+ picture = GFX_report_event_generic_research_lab
+ is_triggered_only = yes
+ trigger = {
+  HSM_BAR_development_route = yes
+  has_completed_focus = HSM_BAR_polytechnic
+  NOT = { has_country_flag = HSM_BAR_development_scene_1 }
+ }
+ immediate = { set_country_flag = HSM_BAR_development_scene_1 }
+ option = { name = hsm_bar_development.1.a }
+}
+
+country_event = {
+ id = hsm_bar_development.2
+ title = hsm_bar_development.2.t
+ desc = hsm_bar_development.2.d
+ picture = GFX_report_event_generic_research_lab
+ is_triggered_only = yes
+ trigger = {
+  HSM_BAR_development_route = yes
+  has_completed_focus = HSM_BAR_research_council
+  NOT = { has_country_flag = HSM_BAR_development_scene_2 }
+ }
+ immediate = { set_country_flag = HSM_BAR_development_scene_2 }
+ option = { name = hsm_bar_development.2.a }
+}

@@ -1,0 +1,4 @@
+on_actions = {
+ on_daily_BAR = { effect = { HSM_BAR_civic_pulse = yes } }
+}
+

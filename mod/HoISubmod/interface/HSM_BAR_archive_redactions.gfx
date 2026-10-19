@@ -1,0 +1,36 @@
+# Inline text icons use the native pound-sign syntax, not missing font glyphs.
+bitmapfonts = {
+    bitmapfont = {
+        name = "HSM_BAR_archive_body"
+        fontfiles = {
+            "gfx/fonts/hoi_18"
+            "gfx/fonts/hoi_18_cryllic"
+        }
+        color = 0xff23302a
+        textcolors = {
+            G = { 34 103 58 }
+            R = { 151 43 43 }
+            Y = { 114 81 20 }
+            H = { 114 81 20 }
+            T = { 35 48 42 }
+            g = { 77 85 77 }
+        }
+    }
+}
+spriteTypes = {
+    spriteType = {
+        name = "GFX_HSM_BAR_redact_short"
+        texturefile = "gfx/interface/HSM_BAR/archive/redact_short.tga"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_redact_long"
+        texturefile = "gfx/interface/HSM_BAR/archive/redact_long.tga"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_redact_cut"
+        texturefile = "gfx/interface/HSM_BAR/archive/redact_cut.tga"
+        legacy_lazy_load = no
+    }
+}

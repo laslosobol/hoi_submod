@@ -1,0 +1,7 @@
+HSM_BAR_republic_recovery = {
+ icon = GFX_decision_category_generic_industry
+ allowed = { original_tag = BAR }
+ visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_republic_actor = yes }
+ priority = 90
+}
+

@@ -1,0 +1,102 @@
+# Additive integration contract. The local pilot remains owned by core.
+# core15.b sets HSM_BAR_global_authorized; no local focus starts this crisis.
+HSM_BAR_normalization_actor = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_normalization_actor_tt
+        tag = BAR
+        exists = yes
+        has_capitulated = no
+        is_subject = no
+        has_country_flag = HSM_BAR_active
+        has_country_flag = HSM_BAR_directorate
+        has_country_flag = HSM_BAR_service_founded
+        has_country_flag = HSM_BAR_normalization
+        has_country_flag = HSM_BAR_global_authorized
+        has_country_flag = HSM_BAR_project_suppression_done
+        HSM_BAR_suppression_knowledge_ready = yes
+        NOT = { has_country_flag = HSM_BAR_coexistence }
+    }
+}
+
+HSM_BAR_global_network_ready = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_global_network_ready_tt
+        HSM_BAR_normalization_actor = yes
+        controls_state = 624
+        has_country_flag = HSM_BAR_region_equus_open
+        has_country_flag = HSM_BAR_region_griffonia_open
+        has_country_flag = HSM_BAR_region_north_open
+        has_country_flag = HSM_BAR_region_riverlands_open
+        has_country_flag = HSM_BAR_region_zebrica_open
+        has_country_flag = HSM_BAR_norm_grid_equus_done
+        has_country_flag = HSM_BAR_norm_grid_griffonia_done
+        has_country_flag = HSM_BAR_norm_grid_north_done
+        has_country_flag = HSM_BAR_norm_grid_riverlands_done
+        has_country_flag = HSM_BAR_norm_grid_zebrica_done
+        NOT = { has_global_flag = HSM_BAR_world_normalization_started }
+    }
+}
+
+# After institutional collapse, the controller of the central installation can
+# shut it down. The world clock is never tied to BAR or a pending country event.
+HSM_BAR_normalization_responder = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_normalization_responder_tt
+        exists = yes
+        has_capitulated = no
+        NOT = { tag = NML }
+        OR = {
+            HSM_BAR_normalization_actor = yes
+            AND = {
+                controls_state = 624
+                NOT = { BAR = { HSM_BAR_normalization_actor = yes } }
+            }
+        }
+    }
+}
+
+HSM_BAR_normalization_choice_open = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_normalization_choice_open_tt
+        HSM_BAR_normalization_responder = yes
+        has_global_flag = HSM_BAR_world_breached
+        NOT = {
+            has_global_flag = HSM_BAR_world_barriers_restored
+            has_global_flag = HSM_BAR_world_press_normalization
+        }
+    }
+}
+
+HSM_BAR_normalization_hostile_alive = {
+    NML = {
+        exists = yes
+        has_capitulated = no
+        is_subject = no
+        num_of_controlled_states > 0
+    }
+}
+
+# The first loss of full aperture control closes this route permanently.
+HSM_BAR_normalization_aperture_open = {
+    has_global_flag = HSM_BAR_world_breached
+    NOT = {
+        has_global_flag = HSM_BAR_world_aperture_closed
+        has_global_flag = HSM_BAR_world_incursions_defeated
+        has_global_flag = HSM_BAR_world_barriers_restored
+    }
+    HSM_BAR_normalization_hostile_alive = yes
+    event_target:HSM_BAR_norm_breach = { is_fully_controlled_by = NML }
+}
+
+# No seizure of an occupied capital, a subject's land or a country's last state.
+# Each candidate also verifies its present owner's control in the effect.
+HSM_BAR_normalization_breach_site = {
+    is_capital = no
+    owner = {
+        exists = yes
+        has_capitulated = no
+        is_subject = no
+        num_of_controlled_states > 1
+        NOT = { tag = NML }
+    }
+}

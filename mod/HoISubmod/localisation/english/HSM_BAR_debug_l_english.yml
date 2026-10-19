@@ -1,0 +1,3 @@
+﻿l_english:
+ HSM_BAR_debug_friendship_ending:0 "DEBUG: Trigger the friendship ending"
+ HSM_BAR_debug_friendship_ending_desc:0 "Playtest shortcut: immediately opens the existing friendship-ending event and its choice between the Collegium and the Republic leading to the Service. Skips the normal relationship and focus requirements. Requires the game to be launched with -debug; available only to the Barrad player before an ending. No political power cost. Use a separate test save."

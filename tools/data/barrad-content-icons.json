@@ -1,0 +1,61 @@
+{
+  "focuses": {
+    "common": {
+      "public_works": "art_bridge", "land_register": "art_field", "village_schools": "art_lesson",
+      "food_cooperatives": "art_field", "teacher_training": "art_teacher", "neighbour_conference": "cover_charter",
+      "clean_water": "art_water", "technical_school": "art_precision", "border_watch": "art_guard",
+      "machine_tools": "art_precision", "workers_housing": "art_housing", "industrial_standards": "art_inspection",
+      "precision_industry": "art_manufactory", "extension_schools": "art_teacher", "national_grid": "art_grid",
+      "scholarships": "art_lesson", "reconstruction_accounts": "cover_accounts"
+    },
+    "collegium": {
+      "oath": "cover_charter", "names": "art_memorial", "silver": "art_mortal_life", "leopold": "art_prosthesis",
+      "asinti": "art_ritual_brake", "viira": "art_chorus", "records": "cover_archives", "life": "art_mortal_life",
+      "clinic": "art_hospital", "wards": "art_ward", "school": "art_lesson", "grid": "art_grid", "land": "art_field",
+      "refugees": "art_refugees", "oversight": "art_inspection", "budget": "art_budget", "report": "cover_archives",
+      "future": "cover_charter", "future_root": "art_collegium", "longevity": "art_mortal_life",
+      "bodycraft": "art_prosthesis", "ethics": "art_ritual_brake", "teachers": "art_teacher",
+      "civil_reserve": "art_grid", "war_reserve": "art_hospital", "peer_review": "art_peer_review",
+      "memorial": "art_memorial", "assembly": "art_assembly", "open": "art_collegium", "republic": "art_republic",
+      "tutelage": "art_tutelage", "lasting": "art_friendship", "students": "art_teacher",
+      "applied_chorus": "art_chorus", "applied_manufactory": "art_manufactory", "applied_last_minute": "art_last_minute",
+      "applied_contact": "art_contact"
+    },
+    "civic": {
+      "republic": "art_republic", "municipalities": "art_representation", "registry": "art_registry",
+      "courts": "art_scales", "civil_service": "cover_office", "accounts": "art_budget", "cabinet": "art_assembly",
+      "defence": "art_guard", "procurement": "art_manufactory", "foreign_office": "cover_charter",
+      "appeals": "art_scales", "local_works": "art_bridge", "inspectors": "art_inspection",
+      "territorial_representation": "art_representation", "equal_services": "art_hospital", "ordinary_state": "art_republic"
+    },
+    "mtc_frontiers": {
+      "": "cover_charter", "supply": "cover_warehouse", "staff": "art_guard", "ZES_hearing": "art_kasa",
+      "ZES_mandate": "art_kasa", "OLV_hearing": "art_deer", "OLV_mandate": "art_deer", "WIT_line": "art_wittenland",
+      "WIT_armistice": "art_wittenland", "WIT_councils": "art_representation", "WIT_charter": "art_registry"
+    }
+  },
+  "ideas": {
+    "HSM_BAR_provisional_watch": "dir_watchmen", "HSM_BAR_accountable_service": "dir_custody_law",
+    "HSM_BAR_normalization_service": "dir_normalization", "HSM_BAR_public_defence": "art_guard",
+    "HSM_BAR_reconstruction_contract": "art_bridge", "HSM_BAR_custody_charter": "dir_custody_law",
+    "HSM_BAR_suppression_crisis": "art_rift", "HSM_BAR_anti_sombra": "art_ward",
+    "HSM_BAR_sombra_volunteers": "art_guard", "HSM_BAR_displaced_families": "art_refugees",
+    "HSM_BAR_careful_retrieval": "dir_training", "HSM_BAR_expedited_retrieval": "dir_evidence",
+    "HSM_BAR_applied_findings": "art_anomalies",
+    "HSM_BAR_collegium_provisional": "art_collegium", "HSM_BAR_collegium_open_spirit": "art_collegium",
+    "HSM_BAR_collegium_republic_spirit": "art_republic", "HSM_BAR_collegium_tutelage_spirit": "art_tutelage",
+    "HSM_BAR_normalization_magic_failure": "art_rift", "HSM_BAR_normalization_steel_defence": "art_artillery",
+    "HSM_BAR_normalization_beyond": "art_beyond",
+    "HSM_BAR_research_clinic_consent_idea": "art_hospital", "HSM_BAR_research_clinic_expedience_idea": "art_last_minute",
+    "HSM_BAR_research_grid_distributed_idea": "art_grid", "HSM_BAR_research_grid_central_idea": "art_manufactory",
+    "HSM_BAR_research_wards_personal_idea": "art_ward", "HSM_BAR_research_wards_monitoring_idea": "art_chorus",
+    "HSM_BAR_research_containment_layered_idea": "dir_storage", "HSM_BAR_research_containment_sealed_idea": "dir_seal_labs",
+    "HSM_BAR_research_forensics_reviewed_idea": "art_peer_review", "HSM_BAR_research_forensics_classified_idea": "dir_remains",
+    "HSM_BAR_research_suppression_reversible_idea": "art_ritual_brake", "HSM_BAR_research_suppression_permanent_idea": "dir_activation"
+  },
+  "modifiers": {
+    "HSM_BAR_anomalous_research": "art_anomalies", "HSM_BAR_civic_government": "art_republic",
+    "HSM_BAR_collegium_services": "art_hospital", "HSM_BAR_service_capacity": "dir_agency",
+    "HSM_BAR_mtk_research": "art_collegium", "HSM_BAR_residencies_methods": "dir_world"
+  }
+}

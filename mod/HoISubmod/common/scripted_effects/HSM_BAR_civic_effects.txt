@@ -1,0 +1,447 @@
+# Derived statistics only. Historical focus and policy flags survive suspension.
+HSM_BAR_civic_clear_values = {
+ set_variable = { HSM_BAR_civic_pp = 0 }
+ set_variable = { HSM_BAR_civic_stability = 0 }
+ set_variable = { HSM_BAR_civic_construction = 0 }
+ set_variable = { HSM_BAR_civic_mobilization = 0 }
+ set_variable = { HSM_BAR_civic_resistance = 0 }
+ set_variable = { HSM_BAR_civic_compliance = 0 }
+ set_variable = { HSM_BAR_civic_core_defence = 0 }
+ set_variable = { HSM_BAR_civic_training = 0 }
+ set_variable = { HSM_BAR_civic_supply = 0 }
+ set_variable = { HSM_BAR_civic_recovery = 0 }
+ set_variable = { HSM_BAR_civic_efficiency_gain = 0 }
+ set_variable = { HSM_BAR_civic_output = 0 }
+ set_variable = { HSM_BAR_civic_max_efficiency = 0 }
+ set_variable = { HSM_BAR_civic_infrastructure = 0 }
+ set_variable = { HSM_BAR_civic_relations = 0 }
+}
+HSM_BAR_civic_teardown = {
+ remove_dynamic_modifier = { modifier = HSM_BAR_civic_government }
+ HSM_BAR_civic_clear_values = yes
+ clr_country_flag = HSM_BAR_civic_municipalities_pending
+ clr_country_flag = HSM_BAR_civic_courts_pending
+ clr_country_flag = HSM_BAR_civic_defence_pending
+ clr_country_flag = HSM_BAR_civic_procurement_pending
+ clr_country_flag = HSM_BAR_civic_territorial_representation_pending
+}
+HSM_BAR_civic_refresh = {
+ hidden_effect = {
+  HSM_BAR_civic_clear_values = yes
+  if = {
+   limit = { HSM_BAR_civic_available = yes has_country_flag = HSM_BAR_civic_republic_awarded }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_registry_awarded }
+    add_to_variable = { HSM_BAR_civic_mobilization = 0.1 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_civil_service_awarded }
+    add_to_variable = { HSM_BAR_civic_pp = 0.08 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_accounts_awarded }
+    add_to_variable = { HSM_BAR_civic_pp = 0.05 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_cabinet_awarded }
+    add_to_variable = { HSM_BAR_civic_pp = 0.05 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_foreign_office_awarded }
+    add_to_variable = { HSM_BAR_civic_relations = -0.1 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_appeals_awarded }
+    # Native resistance_target is a fraction: -0.02 displays as -2%, not -200%.
+    add_to_variable = { HSM_BAR_civic_resistance = -0.02 }
+    add_to_variable = { HSM_BAR_civic_stability = 0.03 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_local_works_awarded }
+    add_to_variable = { HSM_BAR_civic_infrastructure = 0.1 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_inspectors_awarded }
+    add_to_variable = { HSM_BAR_civic_pp = 0.05 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_equal_services_awarded }
+    add_to_variable = { HSM_BAR_civic_compliance = 0.02 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_ordinary_state_awarded }
+    add_to_variable = { HSM_BAR_civic_stability = 0.05 }
+    add_to_variable = { HSM_BAR_civic_pp = 0.05 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_local_mandates has_country_flag = HSM_BAR_civic_municipalities_settled }
+    add_to_variable = { HSM_BAR_civic_construction = 0.05 }
+    add_to_variable = { HSM_BAR_civic_pp = -0.03 }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_civic_district_mandates has_country_flag = HSM_BAR_civic_municipalities_settled }
+    add_to_variable = { HSM_BAR_civic_pp = 0.05 }
+    add_to_variable = { HSM_BAR_civic_stability = -0.02 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_circuit_courts has_country_flag = HSM_BAR_civic_courts_settled }
+    add_to_variable = { HSM_BAR_civic_resistance = -0.05 }
+    add_to_variable = { HSM_BAR_civic_pp = -0.02 }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_civic_permanent_bench has_country_flag = HSM_BAR_civic_courts_settled }
+    add_to_variable = { HSM_BAR_civic_stability = 0.04 }
+    add_to_variable = { HSM_BAR_civic_compliance = -0.02 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_local_reserve has_country_flag = HSM_BAR_civic_defence_settled }
+    add_to_variable = { HSM_BAR_civic_core_defence = 0.10 }
+    add_to_variable = { HSM_BAR_civic_training = 0.03 }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_civic_central_depots has_country_flag = HSM_BAR_civic_defence_settled }
+    add_to_variable = { HSM_BAR_civic_supply = -0.08 }
+    add_to_variable = { HSM_BAR_civic_recovery = 0.05 }
+    add_to_variable = { HSM_BAR_civic_pp = -0.03 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_open_tenders has_country_flag = HSM_BAR_civic_procurement_settled }
+    add_to_variable = { HSM_BAR_civic_construction = 0.07 }
+    add_to_variable = { HSM_BAR_civic_efficiency_gain = -0.03 }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_civic_framework_orders has_country_flag = HSM_BAR_civic_procurement_settled }
+    add_to_variable = { HSM_BAR_civic_output = 0.08 }
+    add_to_variable = { HSM_BAR_civic_supply = -0.05 }
+    add_to_variable = { HSM_BAR_civic_max_efficiency = -0.02 }
+   }
+   if = {
+    limit = { has_country_flag = HSM_BAR_civic_local_statutes has_country_flag = HSM_BAR_civic_territorial_representation_settled }
+    add_to_variable = { HSM_BAR_civic_compliance = 0.04 }
+    add_to_variable = { HSM_BAR_civic_pp = -0.03 }
+   }
+   else_if = {
+    limit = { has_country_flag = HSM_BAR_civic_equal_franchise has_country_flag = HSM_BAR_civic_territorial_representation_settled }
+    add_to_variable = { HSM_BAR_civic_stability = 0.03 }
+    add_to_variable = { HSM_BAR_civic_resistance = -0.03 }
+    add_to_variable = { HSM_BAR_civic_output = -0.01 }
+   }
+   if = {
+    limit = { NOT = { has_dynamic_modifier = HSM_BAR_civic_government } }
+    add_dynamic_modifier = { modifier = HSM_BAR_civic_government }
+   }
+   force_update_dynamic_modifier = yes
+  }
+  else = { HSM_BAR_civic_teardown = yes }
+ }
+}
+# Events are immediate. A suspended event is reissued after access returns.
+HSM_BAR_civic_pulse = {
+ HSM_BAR_civic_refresh = yes
+ if = {
+  limit = { HSM_BAR_civic_available = yes }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_civic_municipalities_awarded
+    NOT = { has_country_flag = HSM_BAR_civic_municipalities_settled }
+    NOT = { has_country_flag = HSM_BAR_civic_municipalities_pending }
+   }
+   set_country_flag = HSM_BAR_civic_municipalities_pending
+   country_event = { id = HSM_BAR_civic.1 }
+  }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_civic_courts_awarded
+    NOT = { has_country_flag = HSM_BAR_civic_courts_settled }
+    NOT = { has_country_flag = HSM_BAR_civic_courts_pending }
+   }
+   set_country_flag = HSM_BAR_civic_courts_pending
+   country_event = { id = HSM_BAR_civic.2 }
+  }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_civic_defence_awarded
+    NOT = { has_country_flag = HSM_BAR_civic_defence_settled }
+    NOT = { has_country_flag = HSM_BAR_civic_defence_pending }
+   }
+   set_country_flag = HSM_BAR_civic_defence_pending
+   country_event = { id = HSM_BAR_civic.3 }
+  }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_civic_procurement_awarded
+    NOT = { has_country_flag = HSM_BAR_civic_procurement_settled }
+    NOT = { has_country_flag = HSM_BAR_civic_procurement_pending }
+   }
+   set_country_flag = HSM_BAR_civic_procurement_pending
+   country_event = { id = HSM_BAR_civic.4 }
+  }
+  if = {
+   limit = {
+    has_country_flag = HSM_BAR_civic_territorial_representation_awarded
+    NOT = { has_country_flag = HSM_BAR_civic_territorial_representation_settled }
+    NOT = { has_country_flag = HSM_BAR_civic_territorial_representation_pending }
+   }
+   set_country_flag = HSM_BAR_civic_territorial_representation_pending
+   country_event = { id = HSM_BAR_civic.5 }
+  }
+ }
+}
+HSM_BAR_civic_finish_republic = {
+ if = {
+  limit = { HSM_BAR_civic_can_republic = yes NOT = { has_country_flag = HSM_BAR_civic_republic_awarded } }
+  set_country_flag = HSM_BAR_civic_republic_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_municipalities = {
+ if = {
+  limit = { HSM_BAR_civic_can_municipalities = yes NOT = { has_country_flag = HSM_BAR_civic_municipalities_awarded } }
+  set_country_flag = HSM_BAR_civic_municipalities_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_registry = {
+ if = {
+  limit = { HSM_BAR_civic_can_registry = yes NOT = { has_country_flag = HSM_BAR_civic_registry_awarded } }
+  set_country_flag = HSM_BAR_civic_registry_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_courts = {
+ if = {
+  limit = { HSM_BAR_civic_can_courts = yes NOT = { has_country_flag = HSM_BAR_civic_courts_awarded } }
+  set_country_flag = HSM_BAR_civic_courts_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_civil_service = {
+ if = {
+  limit = { HSM_BAR_civic_can_civil_service = yes NOT = { has_country_flag = HSM_BAR_civic_civil_service_awarded } }
+  set_country_flag = HSM_BAR_civic_civil_service_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_accounts = {
+ if = {
+  limit = { HSM_BAR_civic_can_accounts = yes NOT = { has_country_flag = HSM_BAR_civic_accounts_awarded } }
+  set_country_flag = HSM_BAR_civic_accounts_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_cabinet = {
+ if = {
+  limit = { HSM_BAR_civic_can_cabinet = yes NOT = { has_country_flag = HSM_BAR_civic_cabinet_awarded } }
+  set_country_flag = HSM_BAR_civic_cabinet_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_defence = {
+ if = {
+  limit = { HSM_BAR_civic_can_defence = yes NOT = { has_country_flag = HSM_BAR_civic_defence_awarded } }
+  set_country_flag = HSM_BAR_civic_defence_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_procurement = {
+ if = {
+  limit = { HSM_BAR_civic_can_procurement = yes NOT = { has_country_flag = HSM_BAR_civic_procurement_awarded } }
+  set_country_flag = HSM_BAR_civic_procurement_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_foreign_office = {
+ if = {
+  limit = { HSM_BAR_civic_can_foreign_office = yes NOT = { has_country_flag = HSM_BAR_civic_foreign_office_awarded } }
+  set_country_flag = HSM_BAR_civic_foreign_office_awarded
+  set_country_flag = HSM_BAR_diplomacy_open
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_appeals = {
+ if = {
+  limit = { HSM_BAR_civic_can_appeals = yes NOT = { has_country_flag = HSM_BAR_civic_appeals_awarded } }
+  set_country_flag = HSM_BAR_civic_appeals_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_local_works = {
+ if = {
+  limit = { HSM_BAR_civic_can_local_works = yes NOT = { has_country_flag = HSM_BAR_civic_local_works_awarded } }
+  set_country_flag = HSM_BAR_civic_local_works_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_inspectors = {
+ if = {
+  limit = { HSM_BAR_civic_can_inspectors = yes NOT = { has_country_flag = HSM_BAR_civic_inspectors_awarded } }
+  set_country_flag = HSM_BAR_civic_inspectors_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_territorial_representation = {
+ if = {
+  limit = { HSM_BAR_civic_can_territorial_representation = yes NOT = { has_country_flag = HSM_BAR_civic_territorial_representation_awarded } }
+  set_country_flag = HSM_BAR_civic_territorial_representation_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_equal_services = {
+ if = {
+  limit = { HSM_BAR_civic_can_equal_services = yes NOT = { has_country_flag = HSM_BAR_civic_equal_services_awarded } }
+  set_country_flag = HSM_BAR_civic_equal_services_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+
+HSM_BAR_civic_finish_ordinary_state = {
+ if = {
+  limit = { HSM_BAR_civic_can_ordinary_state = yes NOT = { has_country_flag = HSM_BAR_civic_ordinary_state_awarded } }
+  set_country_flag = HSM_BAR_civic_ordinary_state_awarded
+  HSM_BAR_civic_pulse = yes
+ }
+}
+HSM_BAR_civic_choose_local_mandates = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_municipalities = yes }
+  set_country_flag = HSM_BAR_civic_local_mandates
+  set_country_flag = HSM_BAR_civic_municipalities_settled
+  clr_country_flag = HSM_BAR_civic_municipalities_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_municipalities_pending }
+ }
+}
+
+HSM_BAR_civic_choose_district_mandates = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_municipalities = yes }
+  set_country_flag = HSM_BAR_civic_district_mandates
+  set_country_flag = HSM_BAR_civic_municipalities_settled
+  clr_country_flag = HSM_BAR_civic_municipalities_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_municipalities_pending }
+ }
+}
+
+HSM_BAR_civic_choose_circuit_courts = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_courts = yes }
+  set_country_flag = HSM_BAR_civic_circuit_courts
+  set_country_flag = HSM_BAR_civic_courts_settled
+  clr_country_flag = HSM_BAR_civic_courts_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_courts_pending }
+ }
+}
+
+HSM_BAR_civic_choose_permanent_bench = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_courts = yes }
+  set_country_flag = HSM_BAR_civic_permanent_bench
+  set_country_flag = HSM_BAR_civic_courts_settled
+  clr_country_flag = HSM_BAR_civic_courts_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_courts_pending }
+ }
+}
+
+HSM_BAR_civic_choose_local_reserve = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_defence = yes }
+  set_country_flag = HSM_BAR_civic_local_reserve
+  set_country_flag = HSM_BAR_civic_defence_settled
+  clr_country_flag = HSM_BAR_civic_defence_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_defence_pending }
+ }
+}
+
+HSM_BAR_civic_choose_central_depots = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_defence = yes }
+  set_country_flag = HSM_BAR_civic_central_depots
+  set_country_flag = HSM_BAR_civic_defence_settled
+  clr_country_flag = HSM_BAR_civic_defence_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_defence_pending }
+ }
+}
+
+HSM_BAR_civic_choose_open_tenders = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_procurement = yes }
+  set_country_flag = HSM_BAR_civic_open_tenders
+  set_country_flag = HSM_BAR_civic_procurement_settled
+  clr_country_flag = HSM_BAR_civic_procurement_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_procurement_pending }
+ }
+}
+
+HSM_BAR_civic_choose_framework_orders = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_procurement = yes }
+  set_country_flag = HSM_BAR_civic_framework_orders
+  set_country_flag = HSM_BAR_civic_procurement_settled
+  clr_country_flag = HSM_BAR_civic_procurement_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_procurement_pending }
+ }
+}
+
+HSM_BAR_civic_choose_local_statutes = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_territorial_representation = yes }
+  set_country_flag = HSM_BAR_civic_local_statutes
+  set_country_flag = HSM_BAR_civic_territorial_representation_settled
+  clr_country_flag = HSM_BAR_civic_territorial_representation_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_territorial_representation_pending }
+ }
+}
+
+HSM_BAR_civic_choose_equal_franchise = {
+ if = {
+  limit = { HSM_BAR_civic_can_answer_territorial_representation = yes }
+  set_country_flag = HSM_BAR_civic_equal_franchise
+  set_country_flag = HSM_BAR_civic_territorial_representation_settled
+  clr_country_flag = HSM_BAR_civic_territorial_representation_pending
+  HSM_BAR_civic_refresh = yes
+ }
+ else = {
+  if = { limit = { NOT = { HSM_BAR_civic_available = yes } } clr_country_flag = HSM_BAR_civic_territorial_representation_pending }
+ }
+}
+

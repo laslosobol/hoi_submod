@@ -1,0 +1,20 @@
+HSM_BAR_anomalous_research = {
+    icon = GFX_idea_HSM_BAR_art_anomalies
+    enable = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no }
+    production_speed_infrastructure_factor = HSM_BAR_outcome_infra
+    supply_consumption_factor = HSM_BAR_outcome_supply
+    max_dig_in = HSM_BAR_outcome_dig
+    political_power_gain = HSM_BAR_outcome_pp
+    industrial_capacity_factory = HSM_BAR_outcome_factory
+    production_factory_efficiency_gain_factor = HSM_BAR_outcome_efficiency
+    research_speed_factor = HSM_BAR_outcome_research
+    stability_factor = HSM_BAR_outcome_stability
+    army_defence_factor = HSM_BAR_outcome_defence
+    production_speed_buildings_factor = HSM_BAR_outcome_build
+    local_resources_factor = HSM_BAR_outcome_resources
+    army_org_regain = HSM_BAR_outcome_recovery
+    land_reinforce_rate = HSM_BAR_outcome_reinforce
+    decryption_power_factor = HSM_BAR_outcome_decrypt
+    recon_factor = HSM_BAR_outcome_recon
+    planning_speed = HSM_BAR_outcome_planning
+}

@@ -1,0 +1,14 @@
+ideas = {
+ country = {
+  HSM_BAR_provisional_watch = { picture = HSM_BAR_dir_watchmen removal_cost = -1 allowed = { original_tag = BAR } modifier = { political_power_gain = -0.10 research_speed_factor = -0.05 } }
+  HSM_BAR_accountable_service = { picture = HSM_BAR_dir_custody_law removal_cost = -1 allowed = { original_tag = BAR } modifier = { political_power_gain = 0.08 encryption = 1 } }
+  HSM_BAR_normalization_service = { picture = HSM_BAR_dir_normalization removal_cost = -1 allowed = { original_tag = BAR } modifier = { research_speed_factor = 0.05 political_power_gain = 0.10 encryption = 1 } }
+  HSM_BAR_public_defence = { picture = HSM_BAR_art_guard removal_cost = -1 allowed = { original_tag = BAR } modifier = { army_defence_factor = 0.05 mobilization_speed = 0.10 } }
+  HSM_BAR_reconstruction_contract = { picture = HSM_BAR_art_bridge removal_cost = -1 allowed = { original_tag = BAR } modifier = { production_speed_industrial_complex_factor = 0.10 production_speed_infrastructure_factor = 0.10 } }
+  HSM_BAR_custody_charter = { picture = HSM_BAR_dir_custody_law removal_cost = -1 allowed = { original_tag = BAR } modifier = { political_power_gain = -0.10 encryption = 1 } }
+  HSM_BAR_suppression_crisis = { picture = HSM_BAR_art_rift removal_cost = -1 allowed = { original_tag = BAR } modifier = { research_speed_factor = -0.10 production_factory_max_efficiency_factor = -0.10 production_speed_industrial_complex_factor = -0.10 } }
+  HSM_BAR_anti_sombra = { picture = HSM_BAR_art_ward removal_cost = -1 allowed = { original_tag = EQS } targeted_modifier = { tag = CRY attack_bonus_against = 0.08 defense_bonus_against = 0.10 } }
+  HSM_BAR_sombra_volunteers = { picture = HSM_BAR_art_guard removal_cost = -1 allowed = { original_tag = BAR } rule = { can_send_volunteers = yes } modifier = { send_volunteers_tension = -1 send_volunteer_divisions_required = -1 send_volunteer_size = 2 } }
+  HSM_BAR_displaced_families = { picture = HSM_BAR_art_refugees removal_cost = -1 allowed = { original_tag = BAR } modifier = { stability_factor = -0.05 political_power_gain = -0.10 } }
+ }
+}

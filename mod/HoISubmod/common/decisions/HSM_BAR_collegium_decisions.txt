@@ -1,0 +1,363 @@
+HSM_BAR_collegium_programs = {
+ HSM_BAR_collegium_train_cohort = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_research
+  cost = 15
+  days_remove = 35
+  visible = { has_country_flag = HSM_BAR_collegium_school_open NOT = { has_country_flag = HSM_BAR_collegium_cohort_trained } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_school_open
+   NOT = { has_country_flag = HSM_BAR_collegium_cohort_trained }
+   has_manpower > 199 NOT = { has_country_flag = HSM_BAR_collegium_train_cohort_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_school_open
+     NOT = { has_country_flag = HSM_BAR_collegium_cohort_trained }
+     has_manpower > 199 NOT = { has_country_flag = HSM_BAR_collegium_train_cohort_pending } }
+    set_country_flag = HSM_BAR_collegium_train_cohort_pending
+    add_manpower = -200
+    set_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   if = { limit = { has_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned } add_manpower = 200 clr_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned }
+   clr_country_flag = HSM_BAR_collegium_train_cohort_pending
+  }
+  remove_effect = {
+   if = { limit = { has_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned } add_manpower = 200 clr_country_flag = HSM_BAR_collegium_train_cohort_staff_assigned }
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_train_cohort_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_school_open
+     NOT = { has_country_flag = HSM_BAR_collegium_cohort_trained } }
+    set_country_flag = HSM_BAR_collegium_cohort_trained
+    custom_effect_tooltip = HSM_BAR_collegium_cohort_services_tt
+    add_tech_bonus = { name = HSM_BAR_collegium_train_cohort bonus = 0.5 uses = 1 category = electronics }
+   }
+   clr_country_flag = HSM_BAR_collegium_train_cohort_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_equip_workshops = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_industry
+  cost = 20
+  days_remove = 35
+  modifier = { civilian_factory_use = 1 }
+  visible = { has_country_flag = HSM_BAR_grid_program NOT = { has_country_flag = HSM_BAR_collegium_workshops_equipped } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_grid_program
+   NOT = { has_country_flag = HSM_BAR_collegium_workshops_equipped }
+   num_of_civilian_factories_available_for_projects > 0
+   has_equipment = { support_equipment > 24 } NOT = { has_country_flag = HSM_BAR_collegium_equip_workshops_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_grid_program
+     NOT = { has_country_flag = HSM_BAR_collegium_workshops_equipped }
+     has_equipment = { support_equipment > 24 } NOT = { has_country_flag = HSM_BAR_collegium_equip_workshops_pending } }
+    set_country_flag = HSM_BAR_collegium_equip_workshops_pending
+    add_equipment_to_stockpile = { type = support_equipment amount = -25 }
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_equip_workshops_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_equip_workshops_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_grid_program
+     NOT = { has_country_flag = HSM_BAR_collegium_workshops_equipped } }
+    set_country_flag = HSM_BAR_collegium_workshops_equipped
+    custom_effect_tooltip = HSM_BAR_collegium_workshops_services_tt
+   }
+   clr_country_flag = HSM_BAR_collegium_equip_workshops_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_clinic_rounds = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_research
+  cost = 15
+  days_remove = 35
+  visible = { has_country_flag = HSM_BAR_clinic_program NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_done } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_clinic_program
+   NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_done }
+   has_equipment = { support_equipment > 24 } NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_clinic_program
+     NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_done }
+     has_equipment = { support_equipment > 24 } NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_pending } }
+    set_country_flag = HSM_BAR_collegium_clinic_rounds_pending
+    add_equipment_to_stockpile = { type = support_equipment amount = -25 }
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_clinic_rounds_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_clinic_rounds_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_clinic_program
+     NOT = { has_country_flag = HSM_BAR_collegium_clinic_rounds_done } }
+    set_country_flag = HSM_BAR_collegium_clinic_rounds_done
+    custom_effect_tooltip = HSM_BAR_collegium_rounds_services_tt
+    add_tech_bonus = { name = HSM_BAR_collegium_clinic_rounds bonus = 0.5 uses = 1 category = hospital_tech }
+   }
+   clr_country_flag = HSM_BAR_collegium_clinic_rounds_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_repair_fields = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_industry
+  cost = 30
+  days_remove = 42
+  modifier = { civilian_factory_use = 1 }
+  visible = { has_country_flag = HSM_BAR_collegium_land_program NOT = { has_country_flag = HSM_BAR_collegium_fields_repaired } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_land_program
+   NOT = { has_country_flag = HSM_BAR_collegium_fields_repaired }
+   num_of_civilian_factories_available_for_projects > 0
+   has_manpower > 99 NOT = { has_country_flag = HSM_BAR_collegium_repair_fields_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_land_program
+     NOT = { has_country_flag = HSM_BAR_collegium_fields_repaired }
+     has_manpower > 99 NOT = { has_country_flag = HSM_BAR_collegium_repair_fields_pending } }
+    set_country_flag = HSM_BAR_collegium_repair_fields_pending
+    add_manpower = -100
+    set_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   if = { limit = { has_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned } add_manpower = 100 clr_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned }
+   clr_country_flag = HSM_BAR_collegium_repair_fields_pending
+  }
+  remove_effect = {
+   if = { limit = { has_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned } add_manpower = 100 clr_country_flag = HSM_BAR_collegium_repair_fields_staff_assigned }
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_repair_fields_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_land_program
+     NOT = { has_country_flag = HSM_BAR_collegium_fields_repaired } }
+    set_country_flag = HSM_BAR_collegium_fields_repaired
+    custom_effect_tooltip = HSM_BAR_collegium_fields_services_tt
+    country_event = { id = HSM_BAR_collegium.22 days = 1 }
+   }
+   clr_country_flag = HSM_BAR_collegium_repair_fields_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_settlement_houses = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_industry
+  cost = 40
+  days_remove = 35
+  modifier = { civilian_factory_use = 1 }
+  visible = { has_country_flag = HSM_BAR_collegium_refugee_settlement NOT = { has_country_flag = HSM_BAR_collegium_houses_ready } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_refugee_settlement
+   NOT = { has_country_flag = HSM_BAR_collegium_houses_ready }
+   num_of_civilian_factories_available_for_projects > 0 NOT = { has_country_flag = HSM_BAR_collegium_settlement_houses_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_refugee_settlement
+     NOT = { has_country_flag = HSM_BAR_collegium_houses_ready }
+     NOT = { has_country_flag = HSM_BAR_collegium_settlement_houses_pending } }
+    set_country_flag = HSM_BAR_collegium_settlement_houses_pending
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_settlement_houses_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_settlement_houses_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_refugee_settlement
+     NOT = { has_country_flag = HSM_BAR_collegium_houses_ready } }
+    set_country_flag = HSM_BAR_collegium_houses_ready
+    add_manpower = 500
+   }
+   clr_country_flag = HSM_BAR_collegium_settlement_houses_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_onward_travel = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_political_discourse
+  cost = 20
+  days_remove = 21
+  visible = { has_country_flag = HSM_BAR_collegium_refugee_transit NOT = { has_country_flag = HSM_BAR_collegium_tickets_honoured } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_refugee_transit
+   NOT = { has_country_flag = HSM_BAR_collegium_tickets_honoured }
+   has_equipment = { support_equipment > 19 } NOT = { has_country_flag = HSM_BAR_collegium_onward_travel_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_refugee_transit
+     NOT = { has_country_flag = HSM_BAR_collegium_tickets_honoured }
+     has_equipment = { support_equipment > 19 } NOT = { has_country_flag = HSM_BAR_collegium_onward_travel_pending } }
+    set_country_flag = HSM_BAR_collegium_onward_travel_pending
+    add_equipment_to_stockpile = { type = support_equipment amount = -20 }
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_onward_travel_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_onward_travel_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_refugee_transit
+     NOT = { has_country_flag = HSM_BAR_collegium_tickets_honoured } }
+    set_country_flag = HSM_BAR_collegium_tickets_honoured
+    add_stability = 0.03
+   }
+   clr_country_flag = HSM_BAR_collegium_onward_travel_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_seek_mandate = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_political_discourse
+  cost = 0
+  days_remove = 21
+  visible = { has_country_flag = HSM_BAR_collegium_standing_emergency NOT = { has_country_flag = HSM_BAR_collegium_emergency_mandate } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_standing_emergency
+   NOT = { has_country_flag = HSM_BAR_collegium_emergency_mandate } NOT = { has_country_flag = HSM_BAR_collegium_seek_mandate_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_standing_emergency
+     NOT = { has_country_flag = HSM_BAR_collegium_emergency_mandate } NOT = { has_country_flag = HSM_BAR_collegium_seek_mandate_pending } }
+    set_country_flag = HSM_BAR_collegium_seek_mandate_pending
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_seek_mandate_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_seek_mandate_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_standing_emergency
+     NOT = { has_country_flag = HSM_BAR_collegium_emergency_mandate } }
+    set_country_flag = HSM_BAR_collegium_emergency_mandate
+    custom_effect_tooltip = HSM_BAR_collegium_mandate_services_tt
+   }
+   clr_country_flag = HSM_BAR_collegium_seek_mandate_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_maintain_reserve = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_research
+  cost = 15
+  days_remove = 35
+  visible = { has_country_flag = HSM_BAR_collegium_civil_reserve NOT = { has_country_flag = HSM_BAR_collegium_reserve_equipped } }
+  available = { HSM_BAR_collegium_focus_access = yes
+   has_country_flag = HSM_BAR_collegium_civil_reserve
+   NOT = { has_country_flag = HSM_BAR_collegium_reserve_equipped }
+   has_equipment = { support_equipment > 49 } NOT = { has_country_flag = HSM_BAR_collegium_maintain_reserve_pending } }
+  complete_effect = {
+   if = {
+    limit = { HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_civil_reserve
+     NOT = { has_country_flag = HSM_BAR_collegium_reserve_equipped }
+     has_equipment = { support_equipment > 49 } NOT = { has_country_flag = HSM_BAR_collegium_maintain_reserve_pending } }
+    set_country_flag = HSM_BAR_collegium_maintain_reserve_pending
+    add_equipment_to_stockpile = { type = support_equipment amount = -50 }
+    
+   }
+  }
+  cancel_trigger = { HSM_BAR_collegium_focus_access = no }
+  cancel_effect = {
+   clr_country_flag = HSM_BAR_collegium_maintain_reserve_pending
+  }
+  remove_effect = {
+   if = {
+    limit = { has_country_flag = HSM_BAR_collegium_maintain_reserve_pending HSM_BAR_collegium_focus_access = yes
+     has_country_flag = HSM_BAR_collegium_civil_reserve
+     NOT = { has_country_flag = HSM_BAR_collegium_reserve_equipped } }
+    set_country_flag = HSM_BAR_collegium_reserve_equipped
+    custom_effect_tooltip = HSM_BAR_collegium_equipment_services_tt
+   }
+   clr_country_flag = HSM_BAR_collegium_maintain_reserve_pending
+   hidden_effect = { HSM_BAR_collegium_refresh = yes }
+  }
+ }
+ HSM_BAR_collegium_review_complaint = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_political_discourse
+  cost = 0
+  fire_only_once = yes
+  visible = { has_country_flag = HSM_BAR_collegium_report_answered }
+  available = { HSM_BAR_collegium_focus_access = yes }
+  complete_effect = {
+   if = { limit = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_report_answered NOT = { has_country_flag = HSM_BAR_collegium_complaint_heard } }
+    set_country_flag = HSM_BAR_collegium_complaint_heard
+    country_event = { id = HSM_BAR_collegium.21 days = 1 }
+   }
+  }
+ }
+ HSM_BAR_collegium_war_allocation = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_prepare_civil_war
+  cost = 0
+  days_re_enable = 30
+  visible = { has_country_flag = HSM_BAR_collegium_defence_protocol NOT = { has_country_flag = HSM_BAR_collegium_wartime } }
+  available = { HSM_BAR_collegium_war_allocation_ready = yes }
+  complete_effect = {
+   if = { limit = { HSM_BAR_collegium_war_allocation_ready = yes }
+    set_country_flag = HSM_BAR_collegium_wartime
+    custom_effect_tooltip = HSM_BAR_collegium_war_services_tt
+    hidden_effect = { HSM_BAR_collegium_refresh = yes }
+   }
+  }
+ }
+ HSM_BAR_collegium_civil_allocation = {
+  allowed = { original_tag = BAR }
+  ai_will_do = { factor = 5 }
+  icon = generic_industry
+  cost = 0
+  days_re_enable = 30
+  visible = { has_country_flag = HSM_BAR_collegium_wartime }
+  available = { HSM_BAR_collegium_focus_access = yes }
+  complete_effect = {
+   if = { limit = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_wartime }
+    clr_country_flag = HSM_BAR_collegium_wartime
+    custom_effect_tooltip = HSM_BAR_collegium_civil_services_tt
+    hidden_effect = { HSM_BAR_collegium_refresh = yes }
+   }
+  }
+ }
+}

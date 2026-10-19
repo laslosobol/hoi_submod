@@ -1,0 +1,187 @@
+# No delayed events. Timers belong to native hidden missions.
+# EaW Celestial_State.txt daring_adventure.100 -> .101 and ChangelingHarmony.txt
+# thoraxian.4 -> .5 demonstrate the recipient relay: receiver ROOT, sender FROM.
+# A direct BAR-scoped effect inside a foreign event would leave ROOT foreign.
+add_namespace = HSM_BAR_fielddesk
+
+country_event = {
+ id = HSM_BAR_fielddesk.1
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { exists = yes NOT = { tag = BAR } FROM = { tag = BAR } }
+   BAR = { country_event = { id = HSM_BAR_fielddesk.2 } }
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.3
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { exists = yes NOT = { tag = BAR } FROM = { tag = BAR } }
+   BAR = { country_event = { id = HSM_BAR_fielddesk.4 } }
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.5
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { exists = yes NOT = { tag = BAR } FROM = { tag = BAR } }
+   BAR = { country_event = { id = HSM_BAR_fielddesk.6 } }
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.10
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { exists = yes NOT = { tag = BAR } FROM = { tag = BAR } }
+   BAR = { country_event = { id = HSM_BAR_fielddesk.11 } }
+  }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_fielddesk.2
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { HSM_BAR_fielddesk_actor = yes }
+   set_variable = { HSM_BAR_fielddesk_check_region = HSM_BAR_service_gui_region }
+   if = {
+    limit = { HSM_BAR_fielddesk_bridge_region = yes NOT = { is_in_array = { array = HSM_BAR_fielddesk_targets value = FROM } } }
+    add_to_array = { HSM_BAR_fielddesk_targets = FROM }
+    HSM_BAR_fielddesk_rows = yes
+   }
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.4
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = { HSM_BAR_fielddesk_actor = yes has_variable = HSM_BAR_fielddesk_selected FROM = { tag = var:BAR.HSM_BAR_fielddesk_selected } }
+   set_variable = { HSM_BAR_fielddesk_check_region = HSM_BAR_service_gui_region }
+   HSM_BAR_fielddesk_clear_available = yes
+   if = { limit = { HSM_BAR_fielddesk_recon_bridge_valid = yes } set_country_flag = HSM_BAR_fielddesk_recon_available }
+   if = { limit = { HSM_BAR_fielddesk_archive_bridge_valid = yes } set_country_flag = HSM_BAR_fielddesk_archive_available }
+   if = { limit = { HSM_BAR_fielddesk_relic_bridge_valid = yes } set_country_flag = HSM_BAR_fielddesk_relic_available }
+   if = { limit = { HSM_BAR_fielddesk_remains_bridge_valid = yes } set_country_flag = HSM_BAR_fielddesk_remains_available }
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.11
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = {
+    tag = BAR has_variable = HSM_BAR_fielddesk_request_kind
+    has_variable = HSM_BAR_fielddesk_request_target
+    FROM = { tag = var:BAR.HSM_BAR_fielddesk_request_target }
+   }
+   set_variable = { HSM_BAR_fielddesk_check_region = HSM_BAR_fielddesk_request_region }
+   if = { limit = { check_variable = { HSM_BAR_fielddesk_request_kind = 1 } } HSM_BAR_fielddesk_recon_start = yes }
+   if = { limit = { check_variable = { HSM_BAR_fielddesk_request_kind = 2 } } HSM_BAR_fielddesk_archive_start = yes }
+   if = { limit = { check_variable = { HSM_BAR_fielddesk_request_kind = 3 } } HSM_BAR_fielddesk_relic_start = yes }
+   if = { limit = { check_variable = { HSM_BAR_fielddesk_request_kind = 4 } } HSM_BAR_fielddesk_remains_start = yes }
+   clear_variable = HSM_BAR_fielddesk_request_kind
+   clear_variable = HSM_BAR_fielddesk_request_target
+   clear_variable = HSM_BAR_fielddesk_request_region
+   HSM_BAR_fielddesk_refresh_selection = yes
+  }
+ }
+}
+country_event = {
+ id = HSM_BAR_fielddesk.6
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  if = {
+   limit = {
+    tag = BAR has_country_flag = HSM_BAR_fielddesk_running
+    has_variable = HSM_BAR_fielddesk_order_target
+    FROM = { tag = var:BAR.HSM_BAR_fielddesk_order_target }
+   }
+   set_variable = { HSM_BAR_fielddesk_check_region = HSM_BAR_fielddesk_order_region }
+   if = {
+    limit = { check_variable = { HSM_BAR_fielddesk_order_kind = 1 } }
+    if = { limit = { HSM_BAR_fielddesk_recon_bridge_valid = no } HSM_BAR_fielddesk_cancel = yes }
+    else_if = {
+     limit = {
+      has_country_flag = HSM_BAR_fielddesk_finish_requested
+      NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 14 } }
+     }
+     # Consume payment and the replay guard before entering the authoritative registry.
+     clr_country_flag = HSM_BAR_fielddesk_running
+     clear_variable = HSM_BAR_fielddesk_paid
+     HSM_BAR_operation_recon_complete = yes
+     HSM_BAR_fielddesk_release = yes
+     set_variable = { HSM_BAR_fielddesk_result = 2 }
+    }
+   }
+   else_if = {
+    limit = { check_variable = { HSM_BAR_fielddesk_order_kind = 2 } }
+    if = { limit = { HSM_BAR_fielddesk_archive_bridge_valid = no } HSM_BAR_fielddesk_cancel = yes }
+    else_if = {
+     limit = {
+      has_country_flag = HSM_BAR_fielddesk_finish_requested
+      NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 21 } }
+     }
+     # Consume payment and the replay guard before entering the authoritative registry.
+     clr_country_flag = HSM_BAR_fielddesk_running
+     clear_variable = HSM_BAR_fielddesk_paid
+     HSM_BAR_operation_archive_complete = yes
+     HSM_BAR_fielddesk_release = yes
+     set_variable = { HSM_BAR_fielddesk_result = 2 }
+    }
+   }
+   else_if = {
+    limit = { check_variable = { HSM_BAR_fielddesk_order_kind = 3 } }
+    if = { limit = { HSM_BAR_fielddesk_relic_bridge_valid = no } HSM_BAR_fielddesk_cancel = yes }
+    else_if = {
+     limit = {
+      has_country_flag = HSM_BAR_fielddesk_finish_requested
+      NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 30 } }
+     }
+     # Consume payment and the replay guard before entering the authoritative registry.
+     clr_country_flag = HSM_BAR_fielddesk_running
+     clear_variable = HSM_BAR_fielddesk_paid
+     HSM_BAR_operation_relic_complete = yes
+     HSM_BAR_fielddesk_release = yes
+     set_variable = { HSM_BAR_fielddesk_result = 2 }
+    }
+   }
+   else_if = {
+    limit = { check_variable = { HSM_BAR_fielddesk_order_kind = 4 } }
+    if = { limit = { HSM_BAR_fielddesk_remains_bridge_valid = no } HSM_BAR_fielddesk_cancel = yes }
+    else_if = {
+     limit = {
+      has_country_flag = HSM_BAR_fielddesk_finish_requested
+      NOT = { has_country_flag = { flag = HSM_BAR_fielddesk_running days < 21 } }
+     }
+     # Consume payment and the replay guard before entering the authoritative registry.
+     clr_country_flag = HSM_BAR_fielddesk_running
+     clear_variable = HSM_BAR_fielddesk_paid
+     HSM_BAR_operation_remains_complete = yes
+     HSM_BAR_fielddesk_release = yes
+     set_variable = { HSM_BAR_fielddesk_result = 2 }
+    }
+   }
+   else = { HSM_BAR_fielddesk_cancel = yes }
+  }
+ }
+}
+

@@ -1,0 +1,106 @@
+add_namespace = HSM_BAR_civic
+country_event = {
+ id = HSM_BAR_civic.1
+ title = HSM_BAR_civic.1.t
+ desc = HSM_BAR_civic.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_civic_can_answer_municipalities = yes }
+ option = {
+  name = HSM_BAR_civic.1.a
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_local_mandates_tt
+  hidden_effect = { HSM_BAR_civic_choose_local_mandates = yes }
+ }
+ option = {
+  name = HSM_BAR_civic.1.b
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_district_mandates_tt
+  hidden_effect = { HSM_BAR_civic_choose_district_mandates = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_civic.2
+ title = HSM_BAR_civic.2.t
+ desc = HSM_BAR_civic.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_civic_can_answer_courts = yes }
+ option = {
+  name = HSM_BAR_civic.2.a
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_circuit_courts_tt
+  hidden_effect = { HSM_BAR_civic_choose_circuit_courts = yes }
+ }
+ option = {
+  name = HSM_BAR_civic.2.b
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_permanent_bench_tt
+  hidden_effect = { HSM_BAR_civic_choose_permanent_bench = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_civic.3
+ title = HSM_BAR_civic.3.t
+ desc = HSM_BAR_civic.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_civic_can_answer_defence = yes }
+ option = {
+  name = HSM_BAR_civic.3.a
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_local_reserve_tt
+  hidden_effect = { HSM_BAR_civic_choose_local_reserve = yes }
+ }
+ option = {
+  name = HSM_BAR_civic.3.b
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_central_depots_tt
+  hidden_effect = { HSM_BAR_civic_choose_central_depots = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_civic.4
+ title = HSM_BAR_civic.4.t
+ desc = HSM_BAR_civic.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_civic_can_answer_procurement = yes }
+ option = {
+  name = HSM_BAR_civic.4.a
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_open_tenders_tt
+  hidden_effect = { HSM_BAR_civic_choose_open_tenders = yes }
+ }
+ option = {
+  name = HSM_BAR_civic.4.b
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_framework_orders_tt
+  hidden_effect = { HSM_BAR_civic_choose_framework_orders = yes }
+ }
+}
+
+country_event = {
+ id = HSM_BAR_civic.5
+ title = HSM_BAR_civic.5.t
+ desc = HSM_BAR_civic.5.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { HSM_BAR_civic_can_answer_territorial_representation = yes }
+ option = {
+  name = HSM_BAR_civic.5.a
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_local_statutes_tt
+  hidden_effect = { HSM_BAR_civic_choose_local_statutes = yes }
+ }
+ option = {
+  name = HSM_BAR_civic.5.b
+  ai_chance = { factor = 50 }
+  custom_effect_tooltip = HSM_BAR_civic_equal_franchise_tt
+  hidden_effect = { HSM_BAR_civic_choose_equal_franchise = yes }
+ }
+}
+

@@ -1,0 +1,401 @@
+# Civil reconstruction survives both routes and every subsequent tree transition.
+# Social advances use EaW's native tiers; anomaly evidence and land healing remain separate.
+shared_focus = {
+ id = HSM_BAR_common_reconstruction
+ icon = GFX_HSM_BAR_cover_accounts
+ x = 26
+ y = 0
+ cost = 4
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  HSM_BAR_social_survey_assess = yes
+  add_political_power = 50
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_public_works
+ icon = GFX_HSM_BAR_art_bridge
+ x = 22
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_common_reconstruction }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_ideas = HSM_BAR_reconstruction_contract
+  decrease_poverty = yes
+  HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_land_register
+ icon = GFX_HSM_BAR_art_field
+ x = 26
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_common_reconstruction }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_stability = 0.05
+  decrease_poverty = yes
+  custom_effect_tooltip = HSM_BAR_unlock_living_standards_tt
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_village_schools
+ icon = GFX_HSM_BAR_art_lesson
+ x = 30
+ y = 1
+ cost = 4
+ prerequisite = { focus = HSM_BAR_common_reconstruction }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_illiteracy = yes
+  add_political_power = 25
+  custom_effect_tooltip = HSM_BAR_unlock_school_network_tt
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_workshops
+ icon = GFX_HSM_BAR_cover_workshop
+ x = 22
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_public_works }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  624 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_food_cooperatives
+ icon = GFX_HSM_BAR_art_field
+ x = 26
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_land_register }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_poverty = yes
+  add_stability = 0.02
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_teacher_training
+ icon = GFX_HSM_BAR_art_teacher
+ x = 30
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_village_schools }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_illiteracy = yes
+  add_tech_bonus = { name = HSM_BAR_teacher_training bonus = 0.5 uses = 1 category = electronics }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_neighbour_conference
+ icon = GFX_HSM_BAR_cover_charter
+ x = 34
+ y = 2
+ cost = 4
+ prerequisite = { focus = HSM_BAR_land_register }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  set_country_flag = HSM_BAR_diplomacy_open
+  add_political_power = 25
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_power_grid
+ icon = GFX_HSM_BAR_cover_workshop
+ x = 22
+ y = 3
+ cost = 5
+ prerequisite = { focus = HSM_BAR_workshops }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  increase_society_development = yes
+  custom_effect_tooltip = HSM_BAR_unlock_industrial_program_tt
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_clean_water
+ icon = GFX_HSM_BAR_art_water
+ x = 26
+ y = 3
+ cost = 4
+ prerequisite = { focus = HSM_BAR_food_cooperatives }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_stability = 0.03
+  624 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_technical_school
+ icon = GFX_HSM_BAR_art_precision
+ x = 30
+ y = 3
+ cost = 4
+ prerequisite = { focus = HSM_BAR_teacher_training }
+ prerequisite = { focus = HSM_BAR_workshops }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+  HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_border_watch
+ icon = GFX_HSM_BAR_art_guard
+ x = 34
+ y = 3
+ cost = 4
+ prerequisite = { focus = HSM_BAR_neighbour_conference }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  army_experience = 15
+  add_ideas = HSM_BAR_public_defence
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_machine_tools
+ icon = GFX_HSM_BAR_art_precision
+ x = 22
+ y = 4
+ cost = 4
+ prerequisite = { focus = HSM_BAR_power_grid }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_tech_bonus = { name = HSM_BAR_machine_tools bonus = 0.5 uses = 2 category = industry }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_workers_housing
+ icon = GFX_HSM_BAR_art_housing
+ x = 26
+ y = 4
+ cost = 4
+ prerequisite = { focus = HSM_BAR_clean_water }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_poverty = yes
+  add_stability = 0.02
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_magical_institute
+ icon = GFX_HSM_BAR_cover_laboratory
+ x = 30
+ y = 4
+ cost = 5
+ prerequisite = { focus = HSM_BAR_technical_school }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  HSM_BAR_establish_institute = yes
+  increase_science_base = yes
+  HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_defence_stores
+ icon = GFX_HSM_BAR_cover_warehouse
+ x = 34
+ y = 4
+ cost = 4
+ prerequisite = { focus = HSM_BAR_border_watch }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  624 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_industrial_standards
+ icon = GFX_HSM_BAR_art_inspection
+ x = 22
+ y = 5
+ cost = 5
+ prerequisite = { focus = HSM_BAR_machine_tools }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  increase_society_development = yes
+  add_tech_bonus = { name = HSM_BAR_industrial_standards bonus = 0.5 uses = 1 category = industry }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_regional_markets
+ icon = GFX_HSM_BAR_cover_shipping
+ x = 26
+ y = 5
+ cost = 4
+ prerequisite = { focus = HSM_BAR_workers_housing }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_poverty = yes
+  add_political_power = 35
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_polytechnic
+ icon = GFX_HSM_BAR_cover_laboratory
+ x = 30
+ y = 5
+ cost = 5
+ prerequisite = { focus = HSM_BAR_magical_institute }
+ prerequisite = { focus = HSM_BAR_machine_tools }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+  country_event = { id = hsm_bar_development.1 days = 1 }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_precision_industry
+ icon = GFX_HSM_BAR_art_manufactory
+ x = 22
+ y = 6
+ cost = 5
+ prerequisite = { focus = HSM_BAR_industrial_standards }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  624 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+  add_tech_bonus = { name = HSM_BAR_precision_industry bonus = 0.5 uses = 1 category = industry }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_extension_schools
+ icon = GFX_HSM_BAR_art_teacher
+ x = 26
+ y = 6
+ cost = 4
+ prerequisite = { focus = HSM_BAR_regional_markets }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_illiteracy = yes
+  HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civil_laboratories
+ icon = GFX_HSM_BAR_cover_laboratory
+ x = 30
+ y = 6
+ cost = 5
+ prerequisite = { focus = HSM_BAR_polytechnic }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  increase_science_base = yes
+  custom_effect_tooltip = HSM_BAR_unlock_research_grants_tt
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_national_grid
+ icon = GFX_HSM_BAR_art_grid
+ x = 22
+ y = 7
+ cost = 5
+ prerequisite = { focus = HSM_BAR_precision_industry }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  increase_society_development = yes
+  add_tech_bonus = { name = HSM_BAR_national_grid bonus = 0.5 uses = 1 category = electronics }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_social_insurance
+ icon = GFX_HSM_BAR_cover_clinic
+ x = 26
+ y = 7
+ cost = 5
+ prerequisite = { focus = HSM_BAR_extension_schools }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_poverty = yes
+  add_stability = 0.03
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_scholarships
+ icon = GFX_HSM_BAR_art_lesson
+ x = 30
+ y = 7
+ cost = 4
+ prerequisite = { focus = HSM_BAR_civil_laboratories }
+ prerequisite = { focus = HSM_BAR_extension_schools }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  decrease_illiteracy = yes
+  add_tech_bonus = { name = HSM_BAR_scholarships bonus = 0.5 uses = 1 category = electronics }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_reconstruction_accounts
+ icon = GFX_HSM_BAR_cover_accounts
+ x = 26
+ y = 8
+ cost = 4
+ prerequisite = { focus = HSM_BAR_national_grid }
+ prerequisite = { focus = HSM_BAR_social_insurance }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_stability = 0.05
+  HSM_BAR_core_refresh = yes
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_research_council
+ icon = GFX_HSM_BAR_cover_archives
+ x = 30
+ y = 8
+ cost = 5
+ prerequisite = { focus = HSM_BAR_scholarships }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+  add_tech_bonus = { name = HSM_BAR_research_council bonus = 0.5 uses = 1 category = electronics }
+  country_event = { id = hsm_bar_development.2 days = 1 }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_developed_republic
+ icon = GFX_HSM_BAR_cover_charter
+ x = 26
+ y = 9
+ cost = 5
+ prerequisite = { focus = HSM_BAR_reconstruction_accounts }
+ prerequisite = { focus = HSM_BAR_research_council }
+ available = { HSM_BAR_development_access = yes }
+ completion_reward = {
+  add_stability = 0.03
+  add_tech_bonus = { name = HSM_BAR_developed_republic bonus = 0.5 uses = 1 category = industry }
+  add_tech_bonus = { name = HSM_BAR_developed_republic bonus = 0.5 uses = 1 category = electronics }
+ }
+}
+

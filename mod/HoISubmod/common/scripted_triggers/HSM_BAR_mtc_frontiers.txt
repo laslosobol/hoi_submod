@@ -1,0 +1,99 @@
+# Country scope unless explicitly marked otherwise.
+HSM_BAR_mtc_frontiers_route = {
+ tag = BAR
+ original_tag = BAR
+ exists = yes
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_collegium
+ NOT = { has_country_flag = HSM_BAR_directorate }
+}
+HSM_BAR_mtc_frontiers_sovereign = {
+ HSM_BAR_mtc_frontiers_route = yes
+ is_subject = no
+ has_capitulated = no
+}
+HSM_BAR_mtc_frontiers_access = {
+ HSM_BAR_mtc_frontiers_sovereign = yes
+ owns_state = 624
+ controls_state = 624
+}
+# A friendly relation in either direction (50+) excludes an offensive mandate.
+HSM_BAR_mtc_frontiers_ZES_target = {
+ HSM_BAR_mtc_frontiers_access = yes
+ has_completed_focus = HSM_BAR_civic_foreign_office
+ ZES = { exists = yes is_subject = no has_capitulated = no NOT = { has_opinion = { target = BAR value > 49 } has_guaranteed = BAR } }
+ is_neighbor_of = ZES
+ NOT = {
+  has_war_with = ZES
+  is_in_faction_with = ZES
+  has_non_aggression_pact_with = ZES
+  has_guaranteed = ZES
+  has_country_flag = HSM_BAR_ZES_agreement
+  has_country_flag = HSM_BAR_dip_ZES_pending
+  has_opinion = { target = ZES value > 49 }
+ }
+}
+HSM_BAR_mtc_frontiers_ZES_can_authorize = {
+ HSM_BAR_mtc_frontiers_ZES_target = yes
+ has_completed_focus = HSM_BAR_mtc_frontiers_ZES_hearing
+ NOT = {
+  has_wargoal_against = ZES
+  has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal
+  has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal_issued
+ }
+}
+HSM_BAR_mtc_frontiers_OLV_target = {
+ HSM_BAR_mtc_frontiers_access = yes
+ has_completed_focus = HSM_BAR_civic_foreign_office
+ OLV = { exists = yes is_subject = no has_capitulated = no NOT = { has_opinion = { target = BAR value > 49 } has_guaranteed = BAR } }
+ is_neighbor_of = OLV
+ NOT = {
+  has_war_with = OLV
+  is_in_faction_with = OLV
+  has_non_aggression_pact_with = OLV
+  has_guaranteed = OLV
+  has_country_flag = HSM_BAR_OLV_agreement
+  has_country_flag = HSM_BAR_dip_OLV_pending
+  has_opinion = { target = OLV value > 49 }
+ }
+}
+HSM_BAR_mtc_frontiers_OLV_can_authorize = {
+ HSM_BAR_mtc_frontiers_OLV_target = yes
+ has_completed_focus = HSM_BAR_mtc_frontiers_OLV_hearing
+ NOT = {
+  has_wargoal_against = OLV
+  has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal
+  has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal_issued
+ }
+}
+# State IDs are fixed to EaW's starting Wittenland, never any future WIT core.
+HSM_BAR_mtc_frontiers_WIT_state = {
+ OR = { state = 614 state = 615 state = 616 state = 617 state = 627 state = 628 state = 629 }
+}
+# State scope; permission is recorded only on provinces won in the defensive settlement.
+HSM_BAR_mtc_frontiers_province = {
+ HSM_BAR_mtc_frontiers_WIT_state = yes
+ has_state_flag = HSM_BAR_mtc_frontiers_settlement
+ is_owned_by = BAR
+ is_controlled_by = BAR
+ NOT = { is_core_of = BAR }
+ BAR = {
+  HSM_BAR_mtc_frontiers_access = yes
+  has_war = no
+  has_country_flag = HSM_BAR_mtc_frontiers_WIT_victory
+  has_completed_focus = HSM_BAR_mtc_frontiers_WIT_councils
+ }
+}
+HSM_BAR_mtc_frontiers_registry = {
+ HSM_BAR_mtc_frontiers_province = yes
+ NOT = { compliance < 25 }
+ NOT = { resistance > 35 }
+ NOT = { has_state_flag = HSM_BAR_mtc_frontiers_registered }
+}
+HSM_BAR_mtc_frontiers_citizenship = {
+ HSM_BAR_mtc_frontiers_province = yes
+ BAR = { has_completed_focus = HSM_BAR_mtc_frontiers_WIT_charter }
+ has_state_flag = HSM_BAR_mtc_frontiers_registered
+ NOT = { compliance < 60 }
+ NOT = { resistance > 10 }
+}

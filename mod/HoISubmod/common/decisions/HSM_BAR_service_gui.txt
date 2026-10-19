@@ -1,0 +1,1034 @@
+HSM_BAR_service_gui_timers = {
+HSM_BAR_service_gui_case_local_survey_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_local_survey_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_local_survey_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_local_survey_running days < 14 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_local_survey_result_tt
+hidden_effect = { HSM_BAR_case_local_survey = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_local_survey_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_rock_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_rock_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_rock_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_rock_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_rock_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_rock = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_rock_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_titan_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_titan_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_titan_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_titan_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_titan_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_titan = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_titan_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_entity_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_entity_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_entity_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_entity_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_entity_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_entity = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_entity_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_amulet_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_amulet_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_amulet_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_amulet_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_amulet_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_amulet = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_amulet_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_plants_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_plants_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_plants_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_plants_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_plants_investigate_result_tt
+hidden_effect = { HSM_BAR_case_investigate_plants = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_plants_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_chalice_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_chalice_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_chalice_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_chalice_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_chalice_investigate_result_tt
+hidden_effect = { clr_country_flag = HSM_BAR_case_last_operation_success
+if = { limit = { HSM_BAR_case_enabled = yes
+has_country_flag = HSM_BAR_case_magehold_archives
+has_country_flag = HSM_BAR_project_forensics_done
+has_global_flag = HSM_BAR_case_chalice_found
+NOT = { has_country_flag = HSM_BAR_case_chalice_investigated } }
+set_country_flag = HSM_BAR_case_chalice_investigated
+HSM_BAR_case_success = yes
+country_event = { id = hsm_bar_anomaly.16 } }
+else = { HSM_BAR_case_failed = yes } } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_chalice_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_phylactery_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_phylactery_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_phylactery_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_phylactery_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_phylactery_investigate_result_tt
+hidden_effect = { clr_country_flag = HSM_BAR_case_last_operation_success
+if = { limit = { HSM_BAR_case_enabled = yes
+has_country_flag = HSM_BAR_case_magehold_archives
+has_country_flag = HSM_BAR_project_forensics_done
+has_global_flag = HSM_BAR_case_phylactery_created
+NOT = { has_global_flag = HSM_BAR_case_phylactery_unlocated }
+NOT = { has_country_flag = HSM_BAR_case_phylactery_investigated } }
+set_country_flag = HSM_BAR_case_phylactery_investigated
+HSM_BAR_case_success = yes
+country_event = { id = hsm_bar_anomaly.17 } }
+else = { HSM_BAR_case_failed = yes } } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_phylactery_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_case_darkheart_investigate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_case_darkheart_investigate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_case_darkheart_investigate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_case_darkheart_investigate_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ custom_effect_tooltip = HSM_BAR_case_darkheart_investigate_result_tt
+hidden_effect = { clr_country_flag = HSM_BAR_case_last_operation_success
+if = { limit = { HSM_BAR_case_enabled = yes
+has_country_flag = HSM_BAR_case_crystal_archives
+has_country_flag = HSM_BAR_project_forensics_done
+has_global_flag = HSM_BAR_case_darkheart_created
+NOT = { has_global_flag = HSM_BAR_case_darkheart_unlocated }
+NOT = { has_country_flag = HSM_BAR_case_darkheart_investigated } }
+set_country_flag = HSM_BAR_case_darkheart_investigated
+HSM_BAR_case_success = yes
+country_event = { id = hsm_bar_anomaly.18 } }
+else = { HSM_BAR_case_failed = yes } } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_case_darkheart_investigate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_sombra_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_sombra_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_sombra_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_sombra_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_sombra_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_sombra_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_darkheart_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_darkheart_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_darkheart_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_darkheart_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_darkheart_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_darkheart_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_crown_equus_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_crown_equus_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_crown_equus_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_crown_equus_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_crown_equus_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_crown_equus_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_grover_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_grover_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_grover_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_grover_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_grover_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_grover_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_herald_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_herald_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_herald_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_herald_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_herald_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_herald_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_crown_griffonia_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_crown_griffonia_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_crown_griffonia_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_crown_griffonia_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_crown_griffonia_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_crown_griffonia_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_rosa_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_rosa_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_rosa_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_rosa_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_rosa_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_rosa_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_chalice_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_chalice_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_chalice_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_chalice_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_chalice_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_chalice_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_phylactery_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_phylactery_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_phylactery_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_phylactery_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_phylactery_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_phylactery_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_echo_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_echo_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_echo_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_echo_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_echo_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_echo_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_compass_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_compass_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_compass_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_compass_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_compass_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_compass_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_reactor_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_reactor_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_reactor_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_reactor_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_reactor_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_reactor_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_marsh_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_marsh_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_marsh_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_marsh_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_marsh_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_marsh_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_zebrica_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_zebrica_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_zebrica_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_zebrica_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_zebrica_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_zebrica_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_rumor_crown_zebrica_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_rumor_crown_zebrica_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_rumor_crown_zebrica_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_rumor_crown_zebrica_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_crown_zebrica_rumor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_rumor_crown_zebrica_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_rock_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_rock_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_rock_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_rock_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_rock_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_rock_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_titan_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_titan_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_titan_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_titan_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_titan_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_titan_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_entity_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_entity_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_entity_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_entity_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_entity_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_entity_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_amulet_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_amulet_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_amulet_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_amulet_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_amulet_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_amulet_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_plants_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_plants_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_plants_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_plants_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_plants_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_plants_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_reactor_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_reactor_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_reactor_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_reactor_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_reactor_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_reactor_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_crown_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_crown_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_crown_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_crown_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_crown_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_crown_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_chalice_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_chalice_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_chalice_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_chalice_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_chalice_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_chalice_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_phylactery_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_phylactery_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_phylactery_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_phylactery_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_phylactery_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_phylactery_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_darkheart_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_darkheart_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_darkheart_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_darkheart_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_darkheart_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_darkheart_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_grover_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_grover_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_grover_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_grover_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_grover_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_grover_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_rosa_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_rosa_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_rosa_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_rosa_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_rosa_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_rosa_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_herald_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_herald_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_herald_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_herald_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_herald_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_herald_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_sombra_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_sombra_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_sombra_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_sombra_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_sombra_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_sombra_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_echo_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_echo_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_echo_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_echo_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_echo_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_echo_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_marsh_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_marsh_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_marsh_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_marsh_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_marsh_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_marsh_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_study_compass_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_study_compass_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_study_compass_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_study_compass_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ HSM_BAR_cases_compass_complete = yes 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_study_compass_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_replicate_bulletin_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { has_country_flag = HSM_BAR_active }
+NOT = { has_country_flag = HSM_BAR_directorate }
+NOT = { has_country_flag = HSM_BAR_service_founded } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_replicate_bulletin_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_replicate_bulletin_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_replicate_bulletin_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { has_country_flag = HSM_BAR_active }
+NOT = { has_country_flag = HSM_BAR_directorate }
+NOT = { has_country_flag = HSM_BAR_service_founded } } } } }
+ if = { limit = { has_country_flag = HSM_BAR_active
+has_country_flag = HSM_BAR_directorate
+has_country_flag = HSM_BAR_service_founded
+has_country_flag = HSM_BAR_replication_pending
+NOT = { has_country_flag = HSM_BAR_story_15_done } }
+country_event = { id = hsm_bar_service.15
+days = 1 } } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_replicate_bulletin_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_review_retrieval_order_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { has_country_flag = HSM_BAR_active }
+NOT = { has_country_flag = HSM_BAR_directorate }
+NOT = { has_country_flag = HSM_BAR_service_founded } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_review_retrieval_order_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_review_retrieval_order_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_review_retrieval_order_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { has_country_flag = HSM_BAR_active }
+NOT = { has_country_flag = HSM_BAR_directorate }
+NOT = { has_country_flag = HSM_BAR_service_founded } } } } }
+ if = { limit = { has_country_flag = HSM_BAR_active
+has_country_flag = HSM_BAR_directorate
+has_country_flag = HSM_BAR_service_founded
+has_country_flag = HSM_BAR_delivery_priority }
+clr_country_flag = HSM_BAR_delivery_priority
+set_country_flag = HSM_BAR_withdrawal_right
+remove_ideas = HSM_BAR_expedited_retrieval
+add_ideas = HSM_BAR_careful_retrieval
+HSM_BAR_core_refresh = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_review_retrieval_order_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_trace_couriers_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 30 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { has_country_flag = HSM_BAR_active } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_trace_couriers_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_trace_couriers_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_trace_couriers_running days < 30 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { has_country_flag = HSM_BAR_active } } } }
+ if = { limit = { has_country_flag = HSM_BAR_active
+has_country_flag = HSM_BAR_directorate
+has_country_flag = HSM_BAR_service_founded }
+set_country_flag = HSM_BAR_couriers_traced
+country_event = { id = hsm_bar_core.5
+days = 1 } } set_country_flag = HSM_BAR_service_gui_trace_couriers_done
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_trace_couriers_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_watched_transfer_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { has_country_flag = HSM_BAR_active } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_watched_transfer_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_watched_transfer_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_watched_transfer_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { has_country_flag = HSM_BAR_active } } } }
+ if = { limit = { has_country_flag = HSM_BAR_active
+has_country_flag = HSM_BAR_directorate
+has_country_flag = HSM_BAR_service_founded }
+country_event = { id = hsm_bar_core.6
+days = 1 } } set_country_flag = HSM_BAR_service_gui_watched_transfer_done
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_watched_transfer_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_equus_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_equus_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_equus_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_equus_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_equus_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_equus_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_equus_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_equus_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_equus_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_equus_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_griffonia_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_griffonia_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_griffonia_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_griffonia_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_griffonia_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_griffonia_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_griffonia_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_griffonia_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_griffonia_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_griffonia_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_north_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_north_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_north_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_north_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_north_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_north_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_north_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_north_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_north_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_north_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_riverlands_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_riverlands_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_riverlands_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_riverlands_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_riverlands_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_riverlands_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_riverlands_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_riverlands_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_riverlands_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_riverlands_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_zebrica_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_zebrica_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_zebrica_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_zebrica_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_zebrica_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_zebrica_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_zebrica_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_zebrica_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_zebrica_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_zebrica_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_comparison_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 42 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_comparison_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_comparison_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_comparison_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_comparison_running days < 42 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_comparison_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_comparison_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_comparison_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_comparison_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_comparison_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_reply_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_reply_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_reply_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_reply_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_reply_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_reply_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_reply_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_reply_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_reply_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_reply_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_papers_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_papers_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_papers_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_papers_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_papers_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_papers_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_papers_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_papers_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_papers_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_papers_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_exchange_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_exchange_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_exchange_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_exchange_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_exchange_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_exchange_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_exchange_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_exchange_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_exchange_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_exchange_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_aftermath_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_aftermath_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_aftermath_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_aftermath_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_aftermath_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_aftermath_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_aftermath_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_aftermath_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_aftermath_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_aftermath_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_residencies_review_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_residencies_review_eligible = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_residencies_review_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_residencies_review_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_residencies_review_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_residencies_review_eligible = yes } } } }
+ custom_effect_tooltip = HSM_BAR_residencies_finish_tt
+hidden_effect = { HSM_BAR_residencies_review_finish = yes } 
+ } else = { hidden_effect = { clr_country_flag = HSM_BAR_residencies_review_running } }
+ clr_country_flag = HSM_BAR_service_gui_residencies_review_running
+set_country_flag = { flag = HSM_BAR_service_gui_residencies_review_cooldown days = 1 } HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_grid_equus_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_equus_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_grid_equus_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_grid_equus_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_grid_equus_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_equus_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ HSM_BAR_normalization_complete_equus = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_grid_equus_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_grid_equus_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_grid_griffonia_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_griffonia_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_grid_griffonia_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_grid_griffonia_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_grid_griffonia_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_griffonia_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ HSM_BAR_normalization_complete_griffonia = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_grid_griffonia_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_grid_griffonia_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_grid_north_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_north_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_grid_north_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_grid_north_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_grid_north_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_north_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ HSM_BAR_normalization_complete_north = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_grid_north_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_grid_north_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_grid_riverlands_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_riverlands_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_grid_riverlands_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_grid_riverlands_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_grid_riverlands_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_riverlands_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ HSM_BAR_normalization_complete_riverlands = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_grid_riverlands_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_grid_riverlands_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_grid_zebrica_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_zebrica_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_grid_zebrica_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_grid_zebrica_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_grid_zebrica_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { NOT = { HSM_BAR_normalization_actor = yes }
+NOT = { has_country_flag = HSM_BAR_region_zebrica_open }
+has_global_flag = HSM_BAR_world_normalization_started } } } }
+ HSM_BAR_normalization_complete_zebrica = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_grid_zebrica_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_grid_zebrica_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_activate_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 14 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_global_network_ready = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_activate_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_activate_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_activate_running days < 14 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_global_network_ready = yes } } } }
+ HSM_BAR_begin_global_normalization = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_activation_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_activate_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_restore_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 35 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_normalization_choice_open = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_restore_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_restore_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_restore_running days < 35 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_normalization_choice_open = yes } } } }
+ HSM_BAR_restore_world_barriers = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_restoration_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_restore_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_press_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 28 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { HSM_BAR_normalization_choice_open = yes } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_press_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_press_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_press_running days < 28 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { HSM_BAR_normalization_choice_open = yes } } } }
+ HSM_BAR_press_world_normalization = yes 
+ } else = { clr_country_flag = HSM_BAR_norm_escalation_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_press_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_normalization_arm_without_magic_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 21 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { has_capitulated = yes
+NOT = { has_war_with = NML }
+has_global_flag = HSM_BAR_world_incursions_defeated } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_normalization_arm_without_magic_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_normalization_arm_without_magic_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_normalization_arm_without_magic_running days < 21 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { has_capitulated = yes
+NOT = { has_war_with = NML }
+has_global_flag = HSM_BAR_world_incursions_defeated } } } }
+ if = { limit = { has_country_flag = HSM_BAR_norm_rearm_working
+has_war_with = NML
+has_capitulated = no
+NOT = { tag = NML }
+NOT = { has_global_flag = HSM_BAR_world_incursions_defeated }
+NOT = { has_idea = HSM_BAR_normalization_steel_defence } }
+add_ideas = HSM_BAR_normalization_steel_defence }
+clr_country_flag = HSM_BAR_norm_rearm_working 
+ } else = { clr_country_flag = HSM_BAR_norm_rearm_working }
+ clr_country_flag = HSM_BAR_service_gui_normalization_arm_without_magic_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_recover_science_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 45 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+has_country_flag = HSM_BAR_service_founded
+has_country_flag = HSM_BAR_archives_open
+has_country_flag = HSM_BAR_records_decoded } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_recover_science_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_recover_science_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_recover_science_running days < 45 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+has_country_flag = HSM_BAR_service_founded
+has_country_flag = HSM_BAR_archives_open
+has_country_flag = HSM_BAR_records_decoded } } } } }
+ if = { limit = { HSM_BAR_republic_field_access = yes
+has_country_flag = HSM_BAR_service_founded
+has_country_flag = HSM_BAR_archives_open
+has_country_flag = HSM_BAR_records_decoded
+NOT = { has_country_flag = HSM_BAR_recovered_archives } }
+set_country_flag = HSM_BAR_recovered_archives
+country_event = { id = hsm_bar_republic.8
+days = 1 } } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_recover_science_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_reclaim_fields_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 45 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+HSM_BAR_local_reclamation_ready = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_reclaim_fields_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_reclaim_fields_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_reclaim_fields_running days < 45 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+HSM_BAR_local_reclamation_ready = yes } } } } }
+ if = { limit = { HSM_BAR_republic_field_access = yes
+HSM_BAR_local_reclamation_ready = yes
+NOT = { has_country_flag = HSM_BAR_land_partly_healed } }
+HSM_BAR_reclaim_first_fields = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_reclaim_fields_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_heal_homeland_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 75 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+HSM_BAR_final_reclamation_ready = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_heal_homeland_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_heal_homeland_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_heal_homeland_running days < 75 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { NOT = { AND = { HSM_BAR_republic_field_access = yes
+HSM_BAR_final_reclamation_ready = yes } } } } }
+ if = { limit = { HSM_BAR_republic_field_access = yes
+HSM_BAR_final_reclamation_ready = yes
+NOT = { has_country_flag = HSM_BAR_land_healed } }
+HSM_BAR_reclaim_homeland = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_heal_homeland_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_research_wards_fallback_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 120 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { always = no
+NOT = { HSM_BAR_research_wards_eligible = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_research_wards_fallback_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_research_wards_fallback_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_research_wards_fallback_running days < 120 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { always = no
+NOT = { HSM_BAR_research_wards_eligible = yes } } } } }
+ clr_country_flag = HSM_BAR_research_fallback_busy
+if = { limit = { NOT = { always = no }
+HSM_BAR_research_wards_eligible = yes }
+HSM_BAR_research_wards_complete = yes } 
+ } else = { clr_country_flag = HSM_BAR_research_fallback_busy }
+ clr_country_flag = HSM_BAR_service_gui_research_wards_fallback_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_research_containment_fallback_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 150 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { always = no
+NOT = { HSM_BAR_research_containment_eligible = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_research_containment_fallback_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_research_containment_fallback_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_research_containment_fallback_running days < 150 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { always = no
+NOT = { HSM_BAR_research_containment_eligible = yes } } } } }
+ clr_country_flag = HSM_BAR_research_fallback_busy
+if = { limit = { NOT = { always = no }
+HSM_BAR_research_containment_eligible = yes }
+HSM_BAR_research_containment_complete = yes } 
+ } else = { clr_country_flag = HSM_BAR_research_fallback_busy }
+ clr_country_flag = HSM_BAR_service_gui_research_containment_fallback_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_research_forensics_fallback_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 150 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { always = no
+NOT = { HSM_BAR_research_forensics_eligible = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_research_forensics_fallback_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_research_forensics_fallback_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_research_forensics_fallback_running days < 150 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { always = no
+NOT = { HSM_BAR_research_forensics_eligible = yes } } } } }
+ clr_country_flag = HSM_BAR_research_fallback_busy
+if = { limit = { NOT = { always = no }
+HSM_BAR_research_forensics_eligible = yes }
+HSM_BAR_research_forensics_complete = yes } 
+ } else = { clr_country_flag = HSM_BAR_research_fallback_busy }
+ clr_country_flag = HSM_BAR_service_gui_research_forensics_fallback_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_research_suppression_fallback_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 180 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no AND = { OR = { always = no
+NOT = { HSM_BAR_research_suppression_eligible = yes } } } } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_research_suppression_fallback_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_research_suppression_fallback_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_research_suppression_fallback_running days < 180 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes NOT = { AND = { OR = { always = no
+NOT = { HSM_BAR_research_suppression_eligible = yes } } } } }
+ clr_country_flag = HSM_BAR_research_fallback_busy
+if = { limit = { NOT = { always = no }
+HSM_BAR_research_suppression_eligible = yes }
+HSM_BAR_research_suppression_complete = yes } 
+ } else = { clr_country_flag = HSM_BAR_research_fallback_busy }
+ clr_country_flag = HSM_BAR_service_gui_research_suppression_fallback_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+HSM_BAR_service_gui_research_restore_facility_mission = { allowed = { original_tag = BAR } visible = { always = no } activation = { always = no } available = { always = no }
+ days_mission_timeout = 60 is_good = no
+ cancel_trigger = { OR = { HSM_BAR_service_gui_actor = no  } }
+ cancel_effect = { hidden_effect = { HSM_BAR_service_gui_research_restore_facility_cancel = yes } }
+ timeout_effect = { hidden_effect = { if = { limit = { has_country_flag = HSM_BAR_service_gui_research_restore_facility_running NOT = { has_country_flag = { flag = HSM_BAR_service_gui_research_restore_facility_running days < 60 } } }
+ if = { limit = { HSM_BAR_service_gui_actor = yes  }
+ if = { limit = { has_dlc = Gotterdammerung
+HSM_BAR_research_actor = yes }
+HSM_BAR_establish_institute = yes } 
+ } else = {  }
+ clr_country_flag = HSM_BAR_service_gui_research_restore_facility_running
+ HSM_BAR_service_gui_refresh_factories = yes
+ } } }
+ }
+}

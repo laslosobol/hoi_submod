@@ -1,0 +1,10 @@
+add_namespace = HSM_BAR_operations
+
+country_event = {
+    id = HSM_BAR_operations.1
+    title = HSM_BAR_operations_invalid_title
+    desc = HSM_BAR_operations_invalid_desc
+    picture = GFX_event_gothic_interior
+    is_triggered_only = yes
+    option = { name = HSM_BAR_operations_invalid_option }
+}

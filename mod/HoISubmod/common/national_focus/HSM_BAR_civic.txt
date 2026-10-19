@@ -1,0 +1,278 @@
+# Shared root must be included explicitly in both Collegium trees.
+shared_focus = {
+ id = HSM_BAR_civic_republic
+ icon = GFX_HSM_BAR_art_republic
+ x = 44
+ y = 0
+ cost = 4
+ ai_will_do = { factor = 10 }
+
+ available = { HSM_BAR_civic_can_republic = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_republic_tt
+  hidden_effect = { HSM_BAR_civic_finish_republic = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_municipalities
+ icon = GFX_HSM_BAR_art_representation
+ x = 40
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_republic }
+ available = { HSM_BAR_civic_can_municipalities = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_municipalities_tt
+  hidden_effect = { HSM_BAR_civic_finish_municipalities = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_registry
+ icon = GFX_HSM_BAR_art_registry
+ x = 44
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_republic }
+ available = { HSM_BAR_civic_can_registry = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_registry_tt
+  hidden_effect = { HSM_BAR_civic_finish_registry = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_courts
+ icon = GFX_HSM_BAR_art_scales
+ x = 48
+ y = 1
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_republic }
+ available = { HSM_BAR_civic_can_courts = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_courts_tt
+  hidden_effect = { HSM_BAR_civic_finish_courts = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_civil_service
+ icon = GFX_HSM_BAR_cover_office
+ x = 40
+ y = 2
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_municipalities }
+ available = { HSM_BAR_civic_can_civil_service = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_civil_service_tt
+  hidden_effect = { HSM_BAR_civic_finish_civil_service = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_accounts
+ icon = GFX_HSM_BAR_art_budget
+ x = 44
+ y = 2
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_registry }
+ available = { HSM_BAR_civic_can_accounts = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_accounts_tt
+  hidden_effect = { HSM_BAR_civic_finish_accounts = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_cabinet
+ icon = GFX_HSM_BAR_art_assembly
+ x = 44
+ y = 3
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_civil_service }
+ prerequisite = { focus = HSM_BAR_civic_accounts }
+ prerequisite = { focus = HSM_BAR_civic_courts }
+ available = { HSM_BAR_civic_can_cabinet = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_cabinet_tt
+  hidden_effect = { HSM_BAR_civic_finish_cabinet = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_defence
+ icon = GFX_HSM_BAR_art_guard
+ x = 40
+ y = 4
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_cabinet }
+ available = { HSM_BAR_civic_can_defence = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_defence_tt
+  hidden_effect = { HSM_BAR_civic_finish_defence = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_procurement
+ icon = GFX_HSM_BAR_art_manufactory
+ x = 44
+ y = 4
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_cabinet }
+ available = { HSM_BAR_civic_can_procurement = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_procurement_tt
+  hidden_effect = { HSM_BAR_civic_finish_procurement = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_foreign_office
+ icon = GFX_HSM_BAR_cover_charter
+ x = 48
+ y = 4
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_cabinet }
+ available = { HSM_BAR_civic_can_foreign_office = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_foreign_office_tt
+  hidden_effect = { HSM_BAR_civic_finish_foreign_office = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_appeals
+ icon = GFX_HSM_BAR_art_scales
+ x = 40
+ y = 5
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_defence }
+ available = { HSM_BAR_civic_can_appeals = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_appeals_tt
+  hidden_effect = { HSM_BAR_civic_finish_appeals = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_local_works
+ icon = GFX_HSM_BAR_art_bridge
+ x = 44
+ y = 5
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_procurement }
+ available = { HSM_BAR_civic_can_local_works = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_local_works_tt
+  hidden_effect = { HSM_BAR_civic_finish_local_works = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_inspectors
+ icon = GFX_HSM_BAR_art_inspection
+ x = 48
+ y = 5
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_foreign_office }
+ prerequisite = { focus = HSM_BAR_civic_procurement }
+ available = { HSM_BAR_civic_can_inspectors = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_inspectors_tt
+  hidden_effect = { HSM_BAR_civic_finish_inspectors = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_territorial_representation
+ icon = GFX_HSM_BAR_art_representation
+ x = 44
+ y = 6
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_appeals }
+ prerequisite = { focus = HSM_BAR_civic_local_works }
+ prerequisite = { focus = HSM_BAR_civic_inspectors }
+ available = { HSM_BAR_civic_can_territorial_representation = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_territorial_representation_tt
+  hidden_effect = { HSM_BAR_civic_finish_territorial_representation = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_equal_services
+ icon = GFX_HSM_BAR_art_hospital
+ x = 44
+ y = 7
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_territorial_representation }
+ available = { HSM_BAR_civic_can_equal_services = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_equal_services_tt
+  hidden_effect = { HSM_BAR_civic_finish_equal_services = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_civic_ordinary_state
+ icon = GFX_HSM_BAR_art_republic
+ x = 44
+ y = 8
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_civic_equal_services }
+ available = { HSM_BAR_civic_can_ordinary_state = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ completion_reward = {
+  custom_effect_tooltip = HSM_BAR_civic_ordinary_state_tt
+  hidden_effect = { HSM_BAR_civic_finish_ordinary_state = yes }
+ }
+}
+

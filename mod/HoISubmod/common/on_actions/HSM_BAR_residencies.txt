@@ -1,0 +1,5 @@
+on_actions = {
+ on_daily_BAR = { effect = { HSM_BAR_residencies_pulse = yes } }
+ on_capitulation = { effect = { ROOT = { if = { limit = { tag = BAR } HSM_BAR_residencies_teardown = yes } } } }
+}
+

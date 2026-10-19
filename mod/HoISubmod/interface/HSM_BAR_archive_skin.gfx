@@ -1,0 +1,124 @@
+# Folder material and paper controls. Button states use the native engine shader.
+bitmapfonts = {
+    bitmapfont = {
+        name = "HSM_BAR_archive_ink"
+        fontfiles = { "gfx/fonts/hoi4_typewriter16" "gfx/fonts/hoi_16typewriter" "gfx/fonts/hoi_16typewriter_cryllic" }
+        color = 0xff23302a
+        textcolors = {
+            G = { 34 103 58 }
+            R = { 151 43 43 }
+            Y = { 114 81 20 }
+            H = { 114 81 20 }
+            T = { 35 48 42 }
+            g = { 77 85 77 }
+        }
+    }
+    bitmapfont = {
+        name = "HSM_BAR_archive_heading"
+        fontfiles = { "gfx/fonts/hoi4_typewriter22" "gfx/fonts/hoi_22typewriter" "gfx/fonts/hoi_22typewriter_cryllic" }
+        color = 0xff23302a
+        textcolors = {
+            G = { 34 103 58 }
+            R = { 151 43 43 }
+            Y = { 114 81 20 }
+            H = { 114 81 20 }
+            T = { 35 48 42 }
+            g = { 77 85 77 }
+        }
+    }
+}
+spriteTypes = {
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_edition"
+        texturefile = "gfx/interface/HSM_BAR/archive/edition.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_edition_selected"
+        texturefile = "gfx/interface/HSM_BAR/archive/edition_selected.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_audio"
+        texturefile = "gfx/interface/HSM_BAR/archive/audio.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_folder"
+        texturefile = "gfx/interface/HSM_BAR/archive/folder.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/static_button.lua"
+        legacy_lazy_load = no
+    }
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_index"
+        texturefile = "gfx/interface/HSM_BAR/archive/index.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_index_selected"
+        texturefile = "gfx/interface/HSM_BAR/archive/index_selected.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_tab"
+        texturefile = "gfx/interface/HSM_BAR/archive/tab.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    textSpriteType = {
+        name = "GFX_HSM_BAR_archive_tab_selected"
+        texturefile = "gfx/interface/HSM_BAR/archive/tab_selected.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_previous"
+        texturefile = "gfx/interface/HSM_BAR/archive/previous.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_next"
+        texturefile = "gfx/interface/HSM_BAR/archive/next.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_back"
+        texturefile = "gfx/interface/HSM_BAR/archive/back.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_close"
+        texturefile = "gfx/interface/HSM_BAR/archive/close.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_HSM_BAR_archive_photo_selected"
+        texturefile = "gfx/interface/HSM_BAR/archive/photo_selected.tga"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+        legacy_lazy_load = no
+    }
+}
+

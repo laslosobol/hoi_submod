@@ -1,4 +1,10 @@
-# Cyanolisia art sources
+# Expanded Stories art sources
+
+The current country artwork covers Cyanolisia. The general Workshop cover is
+`art/source/EaW_Expanded_Stories_thumbnail.png`; its opaque 512x512 PNG export is
+`mod/HoISubmod/thumbnail.png`. The built-in generation prompt and detail-correction
+prompt are recorded in `art/workshop-thumbnail-prompt.txt`. This cover is not a
+focus or spirit asset and does not change either icon manifest.
 
 The PNGs in `art/source` are the generated high-resolution sources. The game
 loads the TGA exports under `mod/HoISubmod/gfx`. The images were generated
@@ -321,3 +327,19 @@ Example export:
 pwsh -NoProfile -File tools/Convert-ToHoi4Tga.ps1 -Source art/source/evi_governorate_codes.png -Destination mod/HoISubmod/gfx/interface/goals/HSM_CYA_evi_governorate_codes.tga -Width 99 -Height 86
 pwsh -NoProfile -File tools/Convert-ToHoi4Tga.ps1 -Source art/source/cya_imperial_legitimacy.png -Destination mod/HoISubmod/gfx/interface/ideas/cya_imperial_legitimacy.tga -Width 64 -Height 64
 ```
+
+## Barrad Collegium Menu
+
+The Collegium has a separate [four-faculty menu skin](barrad-collegium-menu.md): four
+generated laboratory folios and 19 deterministic control textures. Its documents have
+no Service-style censorship. Source art, regeneration commands and static preview
+limitations are recorded in that page.
+
+## Barrad Service Icons
+
+The Service uses its own [art brief](barrad-service-art-brief.md) and
+[inventory](../docs/barrad-icon-manifest.md): 34 internal focus icons plus 11
+deliberately shared civilian cover motifs. PNG sources retain transparency;
+runtime exports are 99x86 TGAs with standard and shine sprites. This set does
+not change Cyanolisia's review statuses or approval hashes. Run
+`pwsh -NoProfile -File tools/Test-BarradArt.ps1` to check its registered assets.

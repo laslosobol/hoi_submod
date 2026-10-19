@@ -1,0 +1,170 @@
+# Country scope; this public branch is independent of the College's second stage.
+HSM_BAR_civic_available = {
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_available_tt
+  tag = BAR
+  original_tag = BAR
+  exists = yes
+  has_country_flag = HSM_BAR_active
+  has_country_flag = HSM_BAR_collegium
+  NOT = { has_country_flag = HSM_BAR_directorate }
+  has_completed_focus = HSM_BAR_collegium_oath
+  has_capitulated = no
+  is_subject = no
+  owns_state = 624
+  controls_state = 624
+ }
+}
+HSM_BAR_civic_can_republic = {
+ HSM_BAR_civic_available = yes
+
+
+}
+
+HSM_BAR_civic_can_municipalities = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_republic
+
+}
+
+HSM_BAR_civic_can_registry = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_republic
+
+}
+
+HSM_BAR_civic_can_courts = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_republic
+
+}
+
+HSM_BAR_civic_can_civil_service = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_municipalities
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_municipalities_settled_tt
+  has_country_flag = HSM_BAR_civic_municipalities_settled
+ }
+}
+
+HSM_BAR_civic_can_accounts = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_registry
+
+}
+
+HSM_BAR_civic_can_cabinet = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_civil_service
+ has_completed_focus = HSM_BAR_civic_accounts
+ has_completed_focus = HSM_BAR_civic_courts
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_courts_settled_tt
+  has_country_flag = HSM_BAR_civic_courts_settled
+ }
+}
+
+HSM_BAR_civic_can_defence = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_cabinet
+
+}
+
+HSM_BAR_civic_can_procurement = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_cabinet
+
+}
+
+HSM_BAR_civic_can_foreign_office = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_cabinet
+
+}
+
+HSM_BAR_civic_can_appeals = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_defence
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_defence_settled_tt
+  has_country_flag = HSM_BAR_civic_defence_settled
+ }
+}
+
+HSM_BAR_civic_can_local_works = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_procurement
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_procurement_settled_tt
+  has_country_flag = HSM_BAR_civic_procurement_settled
+ }
+}
+
+HSM_BAR_civic_can_inspectors = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_foreign_office
+ has_completed_focus = HSM_BAR_civic_procurement
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_procurement_settled_tt
+  has_country_flag = HSM_BAR_civic_procurement_settled
+ }
+}
+
+HSM_BAR_civic_can_territorial_representation = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_appeals
+ has_completed_focus = HSM_BAR_civic_local_works
+ has_completed_focus = HSM_BAR_civic_inspectors
+
+}
+
+HSM_BAR_civic_can_equal_services = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_territorial_representation
+ custom_trigger_tooltip = {
+  tooltip = HSM_BAR_civic_territorial_representation_settled_tt
+  has_country_flag = HSM_BAR_civic_territorial_representation_settled
+ }
+}
+
+HSM_BAR_civic_can_ordinary_state = {
+ HSM_BAR_civic_available = yes
+ has_completed_focus = HSM_BAR_civic_equal_services
+
+}
+HSM_BAR_civic_can_answer_municipalities = {
+ HSM_BAR_civic_available = yes
+ has_country_flag = HSM_BAR_civic_municipalities_awarded
+ has_country_flag = HSM_BAR_civic_municipalities_pending
+ NOT = { has_country_flag = HSM_BAR_civic_municipalities_settled }
+}
+
+HSM_BAR_civic_can_answer_courts = {
+ HSM_BAR_civic_available = yes
+ has_country_flag = HSM_BAR_civic_courts_awarded
+ has_country_flag = HSM_BAR_civic_courts_pending
+ NOT = { has_country_flag = HSM_BAR_civic_courts_settled }
+}
+
+HSM_BAR_civic_can_answer_defence = {
+ HSM_BAR_civic_available = yes
+ has_country_flag = HSM_BAR_civic_defence_awarded
+ has_country_flag = HSM_BAR_civic_defence_pending
+ NOT = { has_country_flag = HSM_BAR_civic_defence_settled }
+}
+
+HSM_BAR_civic_can_answer_procurement = {
+ HSM_BAR_civic_available = yes
+ has_country_flag = HSM_BAR_civic_procurement_awarded
+ has_country_flag = HSM_BAR_civic_procurement_pending
+ NOT = { has_country_flag = HSM_BAR_civic_procurement_settled }
+}
+
+HSM_BAR_civic_can_answer_territorial_representation = {
+ HSM_BAR_civic_available = yes
+ has_country_flag = HSM_BAR_civic_territorial_representation_awarded
+ has_country_flag = HSM_BAR_civic_territorial_representation_pending
+ NOT = { has_country_flag = HSM_BAR_civic_territorial_representation_settled }
+}
+

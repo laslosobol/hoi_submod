@@ -1,0 +1,383 @@
+# Integration contract (all public maintenance effects run in BAR scope):
+# HSM_BAR_dip_initialize: safe to call on route entry or after neighbour_conference.
+# HSM_BAR_dip_daily_pulse: call from the main daily hook; never ends a war.
+# No on_action owned here. Proactive decisions require HSM_BAR_diplomacy_open.
+# Incoming challenges do not require the conference. Agreement flags live on BAR.
+# TAG_challenge, ZES_progress and GRU_warning run in the named neighbour.
+# TAG_accept/refuse/escalate and public maintenance effects run in BAR.
+# Native countdowns are never removed/reset. Rejection waits for their remove_effect.
+# WIT settlement is a sovereignty concession, never mechanical puppet status.
+# Upstream IDs modified:
+# WIT_save_barrad, WIT_barrad_ultimatum, WIT_reclaim_barrad, WIT_liberate_barrad;
+# WIT_fate_of_barrad, WIT_barrad_question, WIT_integrate_barrad (bypass);
+# WIT_grand_griffking_canal (peaceful access).
+# ZES_to_north, ZES_noblest_cause; ZES_emergency_aid, ZES_secure_mountain_holds,
+# ZES_cleanse_monsters, ZES_establish_havens, ZES_hang_them (peace bypass);
+# ZES_barrad_comission (no conquest reward following a negotiated settlement).
+# Decisions: ZES_diplomacy_barrad_attack, OLV_coqnuer_BAR, GRU_claims.
+# Events/Wittenland.txt: wittenland.65, .80, .81, .82 only.
+# Namespace allocation: 10-12 WIT, 20-22 ZES, 30-32 OLV, 40-41 GRU, 81/90 notices.
+# No change to Barrad Events.txt or native puppet/release on_actions.
+
+HSM_BAR_dip_initialize = {
+    if = {
+        limit = { HSM_BAR_dip_route = yes }
+        set_country_flag = HSM_BAR_dip_initialized
+        HSM_BAR_dip_daily_pulse = yes
+        # A route change during mobilisation must not wait for the conference.
+        if = {
+            limit = { WIT = { has_wargoal_against = BAR } }
+            WIT = { HSM_BAR_dip_WIT_challenge = yes }
+        }
+        if = {
+            limit = { ZES = { OR = { has_decision = ZES_diplomacy_barrad_attack has_wargoal_against = BAR } } }
+            ZES = { HSM_BAR_dip_ZES_challenge = yes }
+        }
+        if = {
+            limit = { OLV = { OR = { has_decision = OLV_coqnuer_BAR has_wargoal_against = BAR } } }
+            OLV = { HSM_BAR_dip_OLV_challenge = yes }
+        }
+    }
+}
+
+# This historical settlement marker only opens Kasa's subsequent domestic tree.
+# It does not assert conquest, add cores, or award occupation resources.
+HSM_BAR_dip_ZES_progress = {
+    if = {
+        limit = { tag = ZES has_country_flag = HSM_BAR_dip_settled }
+        if = {
+            limit = {
+                OR = { has_country_flag = HSM_BAR_dip_yrmthu_ready has_completed_focus = ZES_to_north }
+                has_focus_tree = ZES_yrmthu_tree
+            }
+            load_focus_tree = { tree = ZES_post_barrad_yrmthu_tree keep_completed = yes }
+        }
+        if = {
+            limit = {
+                OR = { has_country_flag = HSM_BAR_dip_altu_ready has_completed_focus = ZES_noblest_cause }
+                has_focus_tree = ZES_altu_kexa_tree
+            }
+            load_focus_tree = { tree = ZES_post_barrad_altu_kexa_tree keep_completed = yes }
+        }
+    }
+}
+
+HSM_BAR_dip_WIT_challenge = {
+    if = {
+        limit = { tag = WIT HSM_BAR_dip_WIT_valid = yes }
+        if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_WIT_agreement } }
+            set_country_flag = HSM_BAR_dip_settled
+
+        }
+        else_if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_dip_WIT_rejected } }
+            BAR = { HSM_BAR_dip_WIT_escalate = yes }
+        }
+        else_if = {
+            limit = {
+                BAR = {
+                    NOT = { has_country_flag = HSM_BAR_dip_WIT_pending }
+                    NOT = { has_country_flag = HSM_BAR_dip_WIT_cooldown }
+                }
+            }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_WIT_pending
+                clr_country_flag = HSM_BAR_dip_WIT_strict
+                clr_country_flag = HSM_BAR_dip_WIT_terms
+
+            }
+            country_event = { id = hsm_bar_diplomacy.10 days = 1 }
+        }
+    }
+}
+HSM_BAR_dip_WIT_accept = {
+    if = {
+        limit = { HSM_BAR_dip_WIT_pending = yes has_country_flag = HSM_BAR_dip_WIT_terms }
+        if = {
+            limit = { has_country_flag = HSM_BAR_dip_WIT_strict }
+            add_political_power = -75
+            add_stability = -0.03
+            set_country_flag = HSM_BAR_dip_WIT_concessions
+        }
+        else = { add_political_power = -35 }
+        set_country_flag = HSM_BAR_WIT_agreement
+        clr_country_flag = HSM_BAR_dip_WIT_pending
+        clr_country_flag = HSM_BAR_dip_WIT_terms
+        clr_country_flag = HSM_BAR_dip_WIT_rejected
+        clr_country_flag = HSM_BAR_dip_WIT_escalated
+        add_opinion_modifier = { target = WIT modifier = HSM_BAR_dip_treaty }
+        diplomatic_relation = { country = WIT relation = non_aggression_pact active = yes }
+        WIT = {
+            set_country_flag = HSM_BAR_dip_settled
+            remove_wargoal = { type = annex_everything target = BAR }
+            add_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty }
+
+            country_event = { id = hsm_bar_diplomacy.81 days = 1 }
+        }
+        custom_effect_tooltip = HSM_BAR_dip_WIT_agreement_tt
+    }
+}
+HSM_BAR_dip_WIT_refuse = {
+    if = {
+        limit = { HSM_BAR_dip_WIT_pending = yes }
+        clr_country_flag = HSM_BAR_dip_WIT_pending
+        clr_country_flag = HSM_BAR_dip_WIT_terms
+        set_country_flag = HSM_BAR_dip_WIT_rejected
+        custom_effect_tooltip = HSM_BAR_dip_refusal_tt
+        HSM_BAR_dip_WIT_escalate = yes
+    }
+}
+HSM_BAR_dip_WIT_escalate = {
+    if = {
+        limit = {
+            HSM_BAR_dip_WIT_valid = yes
+            has_country_flag = HSM_BAR_dip_WIT_rejected
+            NOT = { has_country_flag = HSM_BAR_dip_WIT_timer }
+            NOT = { has_country_flag = HSM_BAR_dip_WIT_escalated }
+            NOT = { has_country_flag = HSM_BAR_WIT_agreement }
+        }
+        set_country_flag = HSM_BAR_dip_WIT_escalated
+        WIT = { country_event = { id = hsm_bar_diplomacy.90 days = 1 } }
+    }
+}
+
+HSM_BAR_dip_ZES_challenge = {
+    if = {
+        limit = { tag = ZES HSM_BAR_dip_ZES_valid = yes }
+        if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_ZES_agreement } }
+            set_country_flag = HSM_BAR_dip_settled
+            HSM_BAR_dip_ZES_progress = yes
+        }
+        else_if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_dip_ZES_rejected } }
+            BAR = { HSM_BAR_dip_ZES_escalate = yes }
+        }
+        else_if = {
+            limit = {
+                BAR = {
+                    NOT = { has_country_flag = HSM_BAR_dip_ZES_pending }
+                    NOT = { has_country_flag = HSM_BAR_dip_ZES_cooldown }
+                }
+            }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_ZES_pending
+                clr_country_flag = HSM_BAR_dip_ZES_strict
+                clr_country_flag = HSM_BAR_dip_ZES_terms
+                if = {
+                    limit = {
+                        ZES = { has_decision = ZES_diplomacy_barrad_attack }
+                        NOT = { has_country_flag = HSM_BAR_dip_ZES_timer_elapsed }
+                    }
+                    set_country_flag = HSM_BAR_dip_ZES_timer
+                }
+            }
+            country_event = { id = hsm_bar_diplomacy.20 days = 1 }
+        }
+    }
+}
+HSM_BAR_dip_ZES_accept = {
+    if = {
+        limit = { HSM_BAR_dip_ZES_pending = yes has_country_flag = HSM_BAR_dip_ZES_terms }
+        if = {
+            limit = { has_country_flag = HSM_BAR_dip_ZES_strict }
+            add_political_power = -75
+            add_stability = -0.03
+            set_country_flag = HSM_BAR_dip_ZES_concessions
+        }
+        else = { add_political_power = -35 }
+        set_country_flag = HSM_BAR_ZES_agreement
+        if = { limit = { has_country_flag = HSM_BAR_mtc_frontiers_ZES_goal } HSM_BAR_mtc_frontiers_maintain = yes }
+        clr_country_flag = HSM_BAR_dip_ZES_pending
+        clr_country_flag = HSM_BAR_dip_ZES_terms
+        clr_country_flag = HSM_BAR_dip_ZES_rejected
+        clr_country_flag = HSM_BAR_dip_ZES_escalated
+        add_opinion_modifier = { target = ZES modifier = HSM_BAR_dip_treaty }
+        diplomatic_relation = { country = ZES relation = non_aggression_pact active = yes }
+        ZES = {
+            set_country_flag = HSM_BAR_dip_settled
+            remove_wargoal = { type = annex_everything target = BAR }
+            add_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty }
+            HSM_BAR_dip_ZES_progress = yes
+            country_event = { id = hsm_bar_diplomacy.81 days = 1 }
+        }
+        custom_effect_tooltip = HSM_BAR_dip_ZES_agreement_tt
+    }
+}
+HSM_BAR_dip_ZES_refuse = {
+    if = {
+        limit = { HSM_BAR_dip_ZES_pending = yes }
+        clr_country_flag = HSM_BAR_dip_ZES_pending
+        clr_country_flag = HSM_BAR_dip_ZES_terms
+        set_country_flag = HSM_BAR_dip_ZES_rejected
+        custom_effect_tooltip = HSM_BAR_dip_refusal_tt
+        HSM_BAR_dip_ZES_escalate = yes
+    }
+}
+HSM_BAR_dip_ZES_escalate = {
+    if = {
+        limit = {
+            HSM_BAR_dip_ZES_valid = yes
+            has_country_flag = HSM_BAR_dip_ZES_rejected
+            NOT = { has_country_flag = HSM_BAR_dip_ZES_timer }
+            NOT = { has_country_flag = HSM_BAR_dip_ZES_escalated }
+            NOT = { has_country_flag = HSM_BAR_ZES_agreement }
+        }
+        set_country_flag = HSM_BAR_dip_ZES_escalated
+        ZES = { country_event = { id = hsm_bar_diplomacy.90 days = 1 } }
+    }
+}
+
+HSM_BAR_dip_OLV_challenge = {
+    if = {
+        limit = { tag = OLV HSM_BAR_dip_OLV_valid = yes }
+        if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_OLV_agreement } }
+            set_country_flag = HSM_BAR_dip_settled
+
+        }
+        else_if = {
+            limit = { BAR = { has_country_flag = HSM_BAR_dip_OLV_rejected } }
+            BAR = { HSM_BAR_dip_OLV_escalate = yes }
+        }
+        else_if = {
+            limit = {
+                BAR = {
+                    NOT = { has_country_flag = HSM_BAR_dip_OLV_pending }
+                    NOT = { has_country_flag = HSM_BAR_dip_OLV_cooldown }
+                }
+            }
+            BAR = {
+                set_country_flag = HSM_BAR_dip_OLV_pending
+                clr_country_flag = HSM_BAR_dip_OLV_strict
+                clr_country_flag = HSM_BAR_dip_OLV_terms
+                if = {
+                    limit = {
+                        OLV = { has_decision = OLV_coqnuer_BAR }
+                        NOT = { has_country_flag = HSM_BAR_dip_OLV_timer_elapsed }
+                    }
+                    set_country_flag = HSM_BAR_dip_OLV_timer
+                }
+            }
+            country_event = { id = hsm_bar_diplomacy.30 days = 1 }
+        }
+    }
+}
+HSM_BAR_dip_OLV_accept = {
+    if = {
+        limit = { HSM_BAR_dip_OLV_pending = yes has_country_flag = HSM_BAR_dip_OLV_terms }
+        if = {
+            limit = { has_country_flag = HSM_BAR_dip_OLV_strict }
+            add_political_power = -75
+            add_stability = -0.03
+            set_country_flag = HSM_BAR_dip_OLV_concessions
+        }
+        else = { add_political_power = -35 }
+        set_country_flag = HSM_BAR_OLV_agreement
+        if = { limit = { has_country_flag = HSM_BAR_mtc_frontiers_OLV_goal } HSM_BAR_mtc_frontiers_maintain = yes }
+        clr_country_flag = HSM_BAR_dip_OLV_pending
+        clr_country_flag = HSM_BAR_dip_OLV_terms
+        clr_country_flag = HSM_BAR_dip_OLV_rejected
+        clr_country_flag = HSM_BAR_dip_OLV_escalated
+        add_opinion_modifier = { target = OLV modifier = HSM_BAR_dip_treaty }
+        diplomatic_relation = { country = OLV relation = non_aggression_pact active = yes }
+        OLV = {
+            set_country_flag = HSM_BAR_dip_settled
+            remove_wargoal = { type = annex_everything target = BAR }
+            add_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty }
+
+            country_event = { id = hsm_bar_diplomacy.81 days = 1 }
+        }
+        custom_effect_tooltip = HSM_BAR_dip_OLV_agreement_tt
+    }
+}
+HSM_BAR_dip_OLV_refuse = {
+    if = {
+        limit = { HSM_BAR_dip_OLV_pending = yes }
+        clr_country_flag = HSM_BAR_dip_OLV_pending
+        clr_country_flag = HSM_BAR_dip_OLV_terms
+        set_country_flag = HSM_BAR_dip_OLV_rejected
+        custom_effect_tooltip = HSM_BAR_dip_refusal_tt
+        HSM_BAR_dip_OLV_escalate = yes
+    }
+}
+HSM_BAR_dip_OLV_escalate = {
+    if = {
+        limit = {
+            HSM_BAR_dip_OLV_valid = yes
+            has_country_flag = HSM_BAR_dip_OLV_rejected
+            NOT = { has_country_flag = HSM_BAR_dip_OLV_timer }
+            NOT = { has_country_flag = HSM_BAR_dip_OLV_escalated }
+            NOT = { has_country_flag = HSM_BAR_OLV_agreement }
+        }
+        set_country_flag = HSM_BAR_dip_OLV_escalated
+        OLV = { country_event = { id = hsm_bar_diplomacy.90 days = 1 } }
+    }
+}
+HSM_BAR_dip_daily_pulse = {
+    if = {
+        limit = { tag = BAR }
+
+        if = {
+            limit = { NOT = { HSM_BAR_dip_WIT_valid = yes } }
+            clr_country_flag = HSM_BAR_dip_WIT_pending
+            clr_country_flag = HSM_BAR_dip_WIT_terms
+            clr_country_flag = HSM_BAR_dip_WIT_rejected
+            clr_country_flag = HSM_BAR_dip_WIT_escalated
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_WIT_agreement has_war_with = WIT }
+            clr_country_flag = HSM_BAR_WIT_agreement
+            remove_opinion_modifier = { target = WIT modifier = HSM_BAR_dip_treaty }
+            WIT = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+        }
+
+        if = {
+            limit = { NOT = { HSM_BAR_dip_ZES_valid = yes } }
+            clr_country_flag = HSM_BAR_dip_ZES_pending
+            clr_country_flag = HSM_BAR_dip_ZES_terms
+            clr_country_flag = HSM_BAR_dip_ZES_rejected
+            clr_country_flag = HSM_BAR_dip_ZES_escalated
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_ZES_agreement has_war_with = ZES }
+            clr_country_flag = HSM_BAR_ZES_agreement
+            remove_opinion_modifier = { target = ZES modifier = HSM_BAR_dip_treaty }
+            ZES = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+        }
+
+        if = {
+            limit = { NOT = { HSM_BAR_dip_OLV_valid = yes } }
+            clr_country_flag = HSM_BAR_dip_OLV_pending
+            clr_country_flag = HSM_BAR_dip_OLV_terms
+            clr_country_flag = HSM_BAR_dip_OLV_rejected
+            clr_country_flag = HSM_BAR_dip_OLV_escalated
+        }
+        if = {
+            limit = { has_country_flag = HSM_BAR_OLV_agreement has_war_with = OLV }
+            clr_country_flag = HSM_BAR_OLV_agreement
+            remove_opinion_modifier = { target = OLV modifier = HSM_BAR_dip_treaty }
+            OLV = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+        }
+        ZES = { HSM_BAR_dip_ZES_progress = yes }
+    }
+}
+
+# Northern crusaders still seek conquest. A new government earns a warning,
+# not automatic exemption. Preserve the native take_state_focus war goal.
+HSM_BAR_dip_GRU_warning = {
+    if = {
+        limit = {
+            tag = GRU
+            exists = yes
+            is_subject = no
+            BAR = { HSM_BAR_dip_route = yes is_subject = no NOT = { has_war_with = GRU } }
+            NOT = { has_country_flag = HSM_BAR_dip_GRU_warning_pending }
+            NOT = { has_wargoal_against = BAR }
+        }
+        set_country_flag = HSM_BAR_dip_GRU_warning_pending
+        BAR = { country_event = { id = hsm_bar_diplomacy.40 days = 1 } }
+        country_event = { id = hsm_bar_diplomacy.41 days = 15 }
+    }
+}

@@ -1,0 +1,20 @@
+# Numbered military report labels, not canonical names of the intruders.
+# Native template name groups also cover any divisions trained by the AI.
+HSM_BAR_NML_FORWARD = {
+    name = "The First Footfalls"
+    for_countries = { NML }
+    division_types = { infantry }
+    fallback_name = "%d. Forward Contact"
+}
+HSM_BAR_NML_LINE = {
+    name = "The Hollow Line"
+    for_countries = { NML }
+    division_types = { infantry }
+    fallback_name = "%d. Holding Contact"
+}
+HSM_BAR_NML_SIEGE = {
+    name = "The Weight Behind"
+    for_countries = { NML }
+    division_types = { infantry artillery_brigade }
+    fallback_name = "%d. Siege Contact"
+}

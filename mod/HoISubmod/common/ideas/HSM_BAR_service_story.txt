@@ -1,0 +1,7 @@
+ideas = {
+ country = {
+  HSM_BAR_careful_retrieval = { picture = HSM_BAR_dir_training removal_cost = -1 allowed = { original_tag = BAR } modifier = { supply_consumption_factor = -0.03 political_power_gain = -0.05 } }
+  HSM_BAR_expedited_retrieval = { picture = HSM_BAR_dir_evidence removal_cost = -1 allowed = { original_tag = BAR } modifier = { research_speed_factor = 0.02 supply_consumption_factor = 0.03 political_power_gain = -0.03 } }
+  HSM_BAR_applied_findings = { picture = HSM_BAR_art_anomalies removal_cost = -1 allowed = { original_tag = BAR } modifier = { production_speed_infrastructure_factor = 0.05 production_factory_efficiency_gain_factor = 0.02 } }
+ }
+}

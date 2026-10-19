@@ -1,0 +1,60 @@
+HSM_BAR_operations_actor = {
+    tag = BAR
+    has_country_flag = HSM_BAR_active
+    has_country_flag = HSM_BAR_directorate
+    has_country_flag = HSM_BAR_field_research_open
+    has_dlc = "La Resistance"
+    has_intelligence_agency = yes
+    has_capitulated = no
+    has_civil_war = no
+}
+
+HSM_BAR_operations_recon_valid = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_operations_recon_valid_tt
+        HSM_BAR_operations_actor = yes
+        FROM = {
+            exists = yes
+            NOT = { tag = ROOT }
+            HSM_BAR_operation_recon_target = yes
+        }
+    }
+}
+
+HSM_BAR_operations_archive_valid = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_operations_archive_valid_tt
+        HSM_BAR_operations_actor = yes
+        FROM = {
+            exists = yes
+            NOT = { tag = ROOT }
+            HSM_BAR_operation_archive_target = yes
+        }
+    }
+}
+
+HSM_BAR_operations_relic_valid = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_operations_relic_valid_tt
+        HSM_BAR_operations_actor = yes
+        has_country_flag = HSM_BAR_project_containment_done
+        FROM = {
+            exists = yes
+            NOT = { tag = ROOT }
+            HSM_BAR_operation_relic_target = yes
+        }
+    }
+}
+
+HSM_BAR_operations_remains_valid = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_operations_remains_valid_tt
+        HSM_BAR_operations_actor = yes
+        has_country_flag = HSM_BAR_project_forensics_done
+        FROM = {
+            exists = yes
+            NOT = { tag = ROOT }
+            HSM_BAR_operation_remains_target = yes
+        }
+    }
+}

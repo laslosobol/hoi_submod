@@ -1,0 +1,142 @@
+# Country predicates. Only *_bridge_* helpers require ROOT = BAR, FROM = target.
+HSM_BAR_fielddesk_actor = {
+ tag = BAR
+ is_ai = no
+ HSM_BAR_case_enabled = yes
+ has_country_flag = HSM_BAR_foreign_mandate
+ has_civil_war = no
+}
+HSM_BAR_fielddesk_window_available = {
+ tag = BAR is_ai = no
+ has_country_flag = HSM_BAR_active
+ has_country_flag = HSM_BAR_directorate
+ has_country_flag = HSM_BAR_service_founded
+}
+# Presentation region uses actual case leads and the crown's current physical site.
+# Each BAR receiver copies its region into check_region before checking predicates.
+HSM_BAR_fielddesk_bridge_region = {
+ FROM = {
+  HSM_BAR_case_target_live = yes
+  OR = {
+   AND = {
+    ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 2 } }
+    OR = { HSM_BAR_cases_sombra_lead_open = yes HSM_BAR_cases_darkheart_lead_open = yes }
+   }
+   AND = {
+    ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 3 } }
+    OR = { HSM_BAR_cases_grover_lead_open = yes HSM_BAR_cases_herald_lead_open = yes }
+   }
+   AND = {
+    ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 4 } }
+    OR = { HSM_BAR_cases_rosa_lead_open = yes HSM_BAR_cases_chalice_lead_open = yes HSM_BAR_cases_phylactery_lead_open = yes }
+   }
+   any_of_scopes = {
+    array = global.HSM_BAR_case_crowns
+    HSM_BAR_case_crown_at_target = yes
+    has_country_flag = HSM_BAR_case_crown_rumor
+    OR = {
+     AND = { ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 2 } has_country_flag = HSM_BAR_region_equus_open } var:HSM_BAR_case_crown_site = { is_on_continent = europe } }
+     AND = { ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 3 } has_country_flag = HSM_BAR_region_griffonia_open } var:HSM_BAR_case_crown_site = { is_on_continent = asia } }
+     AND = { ROOT = { check_variable = { HSM_BAR_fielddesk_check_region = 6 } has_country_flag = HSM_BAR_region_zebrica_open } var:HSM_BAR_case_crown_site = { is_on_continent = africa } }
+    }
+   }
+  }
+ }
+}
+# Cheap shortlist before the relay. Crown PREV.PREV is the current territorial controller candidate.
+HSM_BAR_fielddesk_candidate = {
+ exists = yes has_capitulated = no NOT = { tag = ROOT }
+ OR = {
+  HSM_BAR_cases_grover_lead_open = yes HSM_BAR_cases_herald_lead_open = yes
+  HSM_BAR_cases_rosa_lead_open = yes HSM_BAR_cases_chalice_lead_open = yes
+  HSM_BAR_cases_phylactery_lead_open = yes HSM_BAR_cases_darkheart_lead_open = yes
+  HSM_BAR_cases_sombra_lead_open = yes
+  any_of_scopes = {
+   array = global.HSM_BAR_case_crowns
+   has_country_flag = HSM_BAR_case_crown_exists
+   has_country_flag = HSM_BAR_case_crown_rumor
+   NOT = { has_country_flag = HSM_BAR_case_crown_missing }
+   has_variable = HSM_BAR_case_crown_site
+   var:HSM_BAR_case_crown_site = { is_controlled_by = PREV.PREV }
+  }
+ }
+}
+HSM_BAR_fielddesk_idle = {
+ HSM_BAR_fielddesk_actor = yes
+ NOT = { has_country_flag = HSM_BAR_fielddesk_running has_variable = HSM_BAR_fielddesk_request_kind }
+}
+HSM_BAR_fielddesk_selection_survives = {
+ has_variable = HSM_BAR_fielddesk_selected
+ var:HSM_BAR_fielddesk_selected = { exists = yes has_capitulated = no NOT = { tag = BAR } }
+}
+HSM_BAR_fielddesk_target_survives = {
+ HSM_BAR_fielddesk_actor = yes
+ has_country_flag = HSM_BAR_fielddesk_running
+ has_variable = HSM_BAR_fielddesk_order_target
+ var:HSM_BAR_fielddesk_order_target = { exists = yes has_capitulated = no NOT = { tag = BAR } }
+}
+
+HSM_BAR_fielddesk_recon_resources = {
+ NOT = { has_political_power < 20 }
+ num_of_civilian_factories_available_for_projects > 0
+}
+HSM_BAR_fielddesk_recon_can_click = {
+ HSM_BAR_fielddesk_idle = yes
+ HSM_BAR_fielddesk_selection_survives = yes
+ has_country_flag = HSM_BAR_fielddesk_recon_available
+ HSM_BAR_fielddesk_recon_resources = yes
+}
+HSM_BAR_fielddesk_recon_bridge_valid = {
+ HSM_BAR_fielddesk_actor = yes
+ HSM_BAR_fielddesk_bridge_region = yes
+ FROM = { HSM_BAR_operation_recon_target = yes }
+}
+
+HSM_BAR_fielddesk_archive_resources = {
+ NOT = { has_political_power < 30 }
+ num_of_civilian_factories_available_for_projects > 1
+}
+HSM_BAR_fielddesk_archive_can_click = {
+ HSM_BAR_fielddesk_idle = yes
+ HSM_BAR_fielddesk_selection_survives = yes
+ has_country_flag = HSM_BAR_fielddesk_archive_available
+ HSM_BAR_fielddesk_archive_resources = yes
+}
+HSM_BAR_fielddesk_archive_bridge_valid = {
+ HSM_BAR_fielddesk_actor = yes
+ HSM_BAR_fielddesk_bridge_region = yes
+ FROM = { HSM_BAR_operation_archive_target = yes }
+}
+
+HSM_BAR_fielddesk_relic_resources = {
+ NOT = { has_political_power < 60 }
+ num_of_civilian_factories_available_for_projects > 2
+}
+HSM_BAR_fielddesk_relic_can_click = {
+ HSM_BAR_fielddesk_idle = yes
+ HSM_BAR_fielddesk_selection_survives = yes
+ has_country_flag = HSM_BAR_fielddesk_relic_available
+ HSM_BAR_fielddesk_relic_resources = yes
+}
+HSM_BAR_fielddesk_relic_bridge_valid = {
+ HSM_BAR_fielddesk_actor = yes
+ HSM_BAR_fielddesk_bridge_region = yes
+ FROM = { HSM_BAR_operation_relic_target = yes }
+}
+
+HSM_BAR_fielddesk_remains_resources = {
+ NOT = { has_political_power < 60 }
+ num_of_civilian_factories_available_for_projects > 1
+}
+HSM_BAR_fielddesk_remains_can_click = {
+ HSM_BAR_fielddesk_idle = yes
+ HSM_BAR_fielddesk_selection_survives = yes
+ has_country_flag = HSM_BAR_fielddesk_remains_available
+ HSM_BAR_fielddesk_remains_resources = yes
+}
+HSM_BAR_fielddesk_remains_bridge_valid = {
+ HSM_BAR_fielddesk_actor = yes
+ HSM_BAR_fielddesk_bridge_region = yes
+ FROM = { HSM_BAR_operation_remains_target = yes }
+}
+

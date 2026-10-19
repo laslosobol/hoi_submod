@@ -1,0 +1,321 @@
+defined_text = { name = GetHSMBARInvestigationStatus_rock
+text = { trigger = { has_country_flag = HSM_BAR_investigation_rock_1_running } localization_key = HSM_BAR_investigation_rock_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_rock_2_running } localization_key = HSM_BAR_investigation_rock_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_rock_3_running } localization_key = HSM_BAR_investigation_rock_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_rock_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_rock_1_reported has_country_flag = HSM_BAR_investigation_rock_2_reported has_country_flag = HSM_BAR_investigation_rock_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_rock_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_titan
+text = { trigger = { has_country_flag = HSM_BAR_investigation_titan_1_running } localization_key = HSM_BAR_investigation_titan_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_titan_2_running } localization_key = HSM_BAR_investigation_titan_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_titan_3_running } localization_key = HSM_BAR_investigation_titan_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_titan_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_titan_1_reported has_country_flag = HSM_BAR_investigation_titan_2_reported has_country_flag = HSM_BAR_investigation_titan_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_titan_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_entity
+text = { trigger = { has_country_flag = HSM_BAR_investigation_entity_1_running } localization_key = HSM_BAR_investigation_entity_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_entity_2_running } localization_key = HSM_BAR_investigation_entity_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_entity_3_running } localization_key = HSM_BAR_investigation_entity_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_entity_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_entity_1_reported has_country_flag = HSM_BAR_investigation_entity_2_reported has_country_flag = HSM_BAR_investigation_entity_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_entity_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_amulet
+text = { trigger = { has_country_flag = HSM_BAR_investigation_amulet_1_running } localization_key = HSM_BAR_investigation_amulet_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_amulet_2_running } localization_key = HSM_BAR_investigation_amulet_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_amulet_3_running } localization_key = HSM_BAR_investigation_amulet_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_amulet_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_amulet_1_reported has_country_flag = HSM_BAR_investigation_amulet_2_reported has_country_flag = HSM_BAR_investigation_amulet_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_amulet_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_plants
+text = { trigger = { has_country_flag = HSM_BAR_investigation_plants_1_running } localization_key = HSM_BAR_investigation_plants_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_plants_2_running } localization_key = HSM_BAR_investigation_plants_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_plants_3_running } localization_key = HSM_BAR_investigation_plants_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_plants_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_plants_1_reported has_country_flag = HSM_BAR_investigation_plants_2_reported has_country_flag = HSM_BAR_investigation_plants_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_plants_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_echo
+text = { trigger = { has_country_flag = HSM_BAR_investigation_echo_1_running } localization_key = HSM_BAR_investigation_echo_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_echo_2_running } localization_key = HSM_BAR_investigation_echo_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_echo_3_running } localization_key = HSM_BAR_investigation_echo_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_echo_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_echo_1_reported has_country_flag = HSM_BAR_investigation_echo_2_reported has_country_flag = HSM_BAR_investigation_echo_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_echo_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus_compass
+text = { trigger = { has_country_flag = HSM_BAR_investigation_compass_1_running } localization_key = HSM_BAR_investigation_compass_1_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_compass_2_running } localization_key = HSM_BAR_investigation_compass_2_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_compass_3_running } localization_key = HSM_BAR_investigation_compass_3_remaining }
+text = { trigger = { has_country_flag = HSM_BAR_case_compass_investigated } localization_key = HSM_BAR_investigation_row_accepted }
+text = { trigger = { OR = { has_country_flag = HSM_BAR_investigation_compass_1_reported has_country_flag = HSM_BAR_investigation_compass_2_reported has_country_flag = HSM_BAR_investigation_compass_3_reported } } localization_key = HSM_BAR_investigation_row_limited }
+text = { trigger = { has_country_flag = HSM_BAR_investigation_compass_matched } localization_key = HSM_BAR_investigation_row_ready } text = { localization_key = HSM_BAR_investigation_row_pending } }
+defined_text = { name = GetHSMBARInvestigationTitle
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_archive_rock_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_archive_titan_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_archive_entity_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_archive_amulet_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_archive_plants_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_archive_echo_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_archive_compass_title } text = { localization_key = HSM_BAR_investigation_title } }
+defined_text = { name = GetHSMBARInvestigationHypothesis
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_rock_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_titan_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_entity_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_amulet_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_plants_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_echo_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_feedback = 2 } } localization_key = HSM_BAR_investigation_compass_mismatch }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_matched } localization_key = HSM_BAR_investigation_rock_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_matched } localization_key = HSM_BAR_investigation_titan_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_matched } localization_key = HSM_BAR_investigation_entity_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_matched } localization_key = HSM_BAR_investigation_amulet_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_matched } localization_key = HSM_BAR_investigation_plants_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_matched } localization_key = HSM_BAR_investigation_echo_hypothesis }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_matched } localization_key = HSM_BAR_investigation_compass_hypothesis } text = { localization_key = HSM_BAR_investigation_pending } }
+defined_text = { name = GetHSMBARInvestigationStatus
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_1_running } localization_key = HSM_BAR_investigation_rock_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_2_running } localization_key = HSM_BAR_investigation_rock_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_3_running } localization_key = HSM_BAR_investigation_rock_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_1_running } localization_key = HSM_BAR_investigation_titan_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_2_running } localization_key = HSM_BAR_investigation_titan_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_3_running } localization_key = HSM_BAR_investigation_titan_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_1_running } localization_key = HSM_BAR_investigation_entity_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_2_running } localization_key = HSM_BAR_investigation_entity_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_3_running } localization_key = HSM_BAR_investigation_entity_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_1_running } localization_key = HSM_BAR_investigation_amulet_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_2_running } localization_key = HSM_BAR_investigation_amulet_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_3_running } localization_key = HSM_BAR_investigation_amulet_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_1_running } localization_key = HSM_BAR_investigation_plants_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_2_running } localization_key = HSM_BAR_investigation_plants_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_3_running } localization_key = HSM_BAR_investigation_plants_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_1_running } localization_key = HSM_BAR_investigation_echo_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_2_running } localization_key = HSM_BAR_investigation_echo_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_3_running } localization_key = HSM_BAR_investigation_echo_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_1_running } localization_key = HSM_BAR_investigation_compass_1_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_2_running } localization_key = HSM_BAR_investigation_compass_2_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_3_running } localization_key = HSM_BAR_investigation_compass_3_remaining }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_case_rock_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_case_titan_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_case_entity_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_case_amulet_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_case_plants_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_case_echo_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_case_compass_investigated } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_cancelled } localization_key = HSM_BAR_investigation_cancelled }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } OR = { has_country_flag = HSM_BAR_investigation_rock_1_reported has_country_flag = HSM_BAR_investigation_rock_2_reported has_country_flag = HSM_BAR_investigation_rock_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } OR = { has_country_flag = HSM_BAR_investigation_titan_1_reported has_country_flag = HSM_BAR_investigation_titan_2_reported has_country_flag = HSM_BAR_investigation_titan_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } OR = { has_country_flag = HSM_BAR_investigation_entity_1_reported has_country_flag = HSM_BAR_investigation_entity_2_reported has_country_flag = HSM_BAR_investigation_entity_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } OR = { has_country_flag = HSM_BAR_investigation_amulet_1_reported has_country_flag = HSM_BAR_investigation_amulet_2_reported has_country_flag = HSM_BAR_investigation_amulet_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } OR = { has_country_flag = HSM_BAR_investigation_plants_1_reported has_country_flag = HSM_BAR_investigation_plants_2_reported has_country_flag = HSM_BAR_investigation_plants_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } OR = { has_country_flag = HSM_BAR_investigation_echo_1_reported has_country_flag = HSM_BAR_investigation_echo_2_reported has_country_flag = HSM_BAR_investigation_echo_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } OR = { has_country_flag = HSM_BAR_investigation_compass_1_reported has_country_flag = HSM_BAR_investigation_compass_2_reported has_country_flag = HSM_BAR_investigation_compass_3_reported } } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_investigation_rock_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_investigation_titan_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_investigation_entity_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_investigation_amulet_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_investigation_plants_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_investigation_echo_matched } localization_key = HSM_BAR_investigation_ready }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_investigation_compass_matched } localization_key = HSM_BAR_investigation_ready } text = { localization_key = HSM_BAR_investigation_locked } }
+defined_text = { name = GetHSMBARInvestigationReport
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_rock_1_reported } localization_key = HSM_BAR_investigation_rock_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_rock_2_reported } localization_key = HSM_BAR_investigation_rock_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_rock_3_reported } localization_key = HSM_BAR_investigation_rock_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_titan_1_reported } localization_key = HSM_BAR_investigation_titan_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_titan_2_reported } localization_key = HSM_BAR_investigation_titan_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_titan_3_reported } localization_key = HSM_BAR_investigation_titan_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_entity_1_reported } localization_key = HSM_BAR_investigation_entity_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_entity_2_reported } localization_key = HSM_BAR_investigation_entity_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_entity_3_reported } localization_key = HSM_BAR_investigation_entity_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_amulet_1_reported } localization_key = HSM_BAR_investigation_amulet_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_amulet_2_reported } localization_key = HSM_BAR_investigation_amulet_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_amulet_3_reported } localization_key = HSM_BAR_investigation_amulet_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_plants_1_reported } localization_key = HSM_BAR_investigation_plants_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_plants_2_reported } localization_key = HSM_BAR_investigation_plants_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_plants_3_reported } localization_key = HSM_BAR_investigation_plants_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_echo_1_reported } localization_key = HSM_BAR_investigation_echo_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_echo_2_reported } localization_key = HSM_BAR_investigation_echo_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_echo_3_reported } localization_key = HSM_BAR_investigation_echo_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_compass_1_reported } localization_key = HSM_BAR_investigation_compass_1_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_compass_2_reported } localization_key = HSM_BAR_investigation_compass_2_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_compass_3_reported } localization_key = HSM_BAR_investigation_compass_3_report }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } has_country_flag = HSM_BAR_case_rock_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } has_country_flag = HSM_BAR_case_titan_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } has_country_flag = HSM_BAR_case_entity_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } has_country_flag = HSM_BAR_case_amulet_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } has_country_flag = HSM_BAR_case_plants_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } has_country_flag = HSM_BAR_case_echo_investigated } localization_key = HSM_BAR_investigation_existing }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } has_country_flag = HSM_BAR_case_compass_investigated } localization_key = HSM_BAR_investigation_existing } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationReportResult
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_rock_1_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_rock_2_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_rock_3_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_titan_1_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_titan_2_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_titan_3_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_entity_1_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_entity_2_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_entity_3_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_amulet_1_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_amulet_2_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_amulet_3_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_plants_1_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_plants_2_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_plants_3_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_echo_1_reported } localization_key = HSM_BAR_investigation_limited }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_echo_2_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_echo_3_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 1 } has_country_flag = HSM_BAR_investigation_compass_1_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 2 } has_country_flag = HSM_BAR_investigation_compass_2_reported } localization_key = HSM_BAR_investigation_accepted }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } check_variable = { HSM_BAR_investigation_report = 3 } has_country_flag = HSM_BAR_investigation_compass_3_reported } localization_key = HSM_BAR_investigation_limited } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationDoc1
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_doc_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_doc_1 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment11
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_1_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_1_1 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment12
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_1_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_1_2 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment13
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_1_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_1_3 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationDoc2
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_doc_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_doc_2 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment21
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_2_1 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_2_1 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment22
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_2_2 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_2_2 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationFragment23
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_fragment_2_3 }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_fragment_2_3 } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod1title
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_1_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_1_title } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod1brief
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_1_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_1_brief } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod1price
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_1_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_1_price } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod2title
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_2_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_2_title } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod2brief
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_2_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_2_brief } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod2price
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_2_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_2_price } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod3title
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_3_title }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_3_title } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod3brief
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_3_brief }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_3_brief } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationMethod3price
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 1 } } localization_key = HSM_BAR_investigation_rock_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 2 } } localization_key = HSM_BAR_investigation_titan_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 3 } } localization_key = HSM_BAR_investigation_entity_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 4 } } localization_key = HSM_BAR_investigation_amulet_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 17 } } localization_key = HSM_BAR_investigation_plants_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 14 } } localization_key = HSM_BAR_investigation_echo_3_price }
+text = { trigger = { check_variable = { HSM_BAR_investigation_case = 16 } } localization_key = HSM_BAR_investigation_compass_3_price } text = { localization_key = HSM_BAR_investigation_none } }
+defined_text = { name = GetHSMBARInvestigationPage1Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_page = 1 } } localization_key = GFX_HSM_BAR_archive_edition_selected } text = { localization_key = GFX_HSM_BAR_archive_edition } }
+defined_text = { name = GetHSMBARInvestigationReport1Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_report = 1 } } localization_key = GFX_HSM_BAR_archive_tab_selected } text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARInvestigationPage2Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_page = 2 } } localization_key = GFX_HSM_BAR_archive_edition_selected } text = { localization_key = GFX_HSM_BAR_archive_edition } }
+defined_text = { name = GetHSMBARInvestigationReport2Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_report = 2 } } localization_key = GFX_HSM_BAR_archive_tab_selected } text = { localization_key = GFX_HSM_BAR_archive_tab } }
+defined_text = { name = GetHSMBARInvestigationPage3Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_page = 3 } } localization_key = GFX_HSM_BAR_archive_edition_selected } text = { localization_key = GFX_HSM_BAR_archive_edition } }
+defined_text = { name = GetHSMBARInvestigationReport3Skin
+text = { trigger = { check_variable = { HSM_BAR_investigation_report = 3 } } localization_key = GFX_HSM_BAR_archive_tab_selected } text = { localization_key = GFX_HSM_BAR_archive_tab } }

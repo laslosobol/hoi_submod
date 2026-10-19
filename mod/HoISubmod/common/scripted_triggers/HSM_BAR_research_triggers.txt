@@ -1,0 +1,93 @@
+# Country scope throughout; project availability must enter FROM first.
+HSM_BAR_research_actor = {
+    tag = BAR
+    has_country_flag = HSM_BAR_active
+    has_country_flag = HSM_BAR_institute_open
+    has_capitulated = no
+    OR = {
+        has_country_flag = HSM_BAR_collegium
+        AND = { has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded }
+    }
+}
+
+HSM_BAR_research_has_facility = {
+    any_owned_state = {
+        is_fully_controlled_by = PREV
+        magical_facility > 0
+    }
+}
+
+HSM_BAR_research_clinic_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_clinic_eligible_tt
+        HSM_BAR_research_actor = yes
+        has_country_flag = HSM_BAR_collegium
+        NOT = { has_country_flag = HSM_BAR_project_clinic_done }
+    }
+}
+
+# Suspension blocks new trials, not ratification of earned clinical results.
+HSM_BAR_research_clinic_can_start = {
+    HSM_BAR_research_clinic_eligible = yes
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_clinic_trials_open_tt
+        NOT = { has_country_flag = HSM_BAR_collegium_trial_pause }
+    }
+}
+
+HSM_BAR_research_grid_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_grid_eligible_tt
+        HSM_BAR_research_actor = yes
+        has_country_flag = HSM_BAR_collegium
+        has_country_flag = HSM_BAR_project_clinic_done
+        NOT = { has_country_flag = HSM_BAR_project_grid_done }
+    }
+}
+
+HSM_BAR_research_wards_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_wards_eligible_tt
+        HSM_BAR_research_actor = yes
+        NOT = { has_country_flag = HSM_BAR_project_wards_done }
+        OR = { has_country_flag = HSM_BAR_collegium HSM_BAR_containment_knowledge_ready = yes }
+    }
+}
+
+HSM_BAR_research_containment_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_containment_eligible_tt
+        HSM_BAR_research_actor = yes
+        has_country_flag = HSM_BAR_directorate
+        has_country_flag = HSM_BAR_project_wards_done
+        HSM_BAR_containment_knowledge_ready = yes
+        NOT = { has_country_flag = HSM_BAR_project_containment_done }
+    }
+}
+
+HSM_BAR_research_forensics_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_forensics_eligible_tt
+        HSM_BAR_research_actor = yes
+        has_country_flag = HSM_BAR_directorate
+        has_country_flag = HSM_BAR_field_research_open
+        has_country_flag = HSM_BAR_project_containment_done
+        HSM_BAR_forensics_knowledge_ready = yes
+        NOT = { has_country_flag = HSM_BAR_project_forensics_done }
+    }
+}
+
+HSM_BAR_research_suppression_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_research_suppression_eligible_tt
+        HSM_BAR_research_actor = yes
+        has_country_flag = HSM_BAR_directorate
+        has_country_flag = HSM_BAR_field_research_open
+        has_country_flag = HSM_BAR_normalization
+        NOT = { has_country_flag = HSM_BAR_coexistence }
+        has_country_flag = HSM_BAR_project_forensics_done
+        has_country_flag = HSM_BAR_suppression_authorized
+        HSM_BAR_suppression_knowledge_ready = yes
+        NOT = { has_country_flag = HSM_BAR_project_suppression_done }
+    }
+}

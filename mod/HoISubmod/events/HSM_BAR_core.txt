@@ -1,0 +1,381 @@
+add_namespace = hsm_bar_core
+
+country_event = {
+ id = hsm_bar_core.1
+ title = hsm_bar_core.1.t
+ desc = hsm_bar_core.1.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_1_done } }
+ option = {
+  name = hsm_bar_core.1.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_1_done } }
+   set_country_flag = HSM_BAR_core_1_done
+   set_country_flag = HSM_BAR_split_ledgers
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.1.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_1_done } }
+   set_country_flag = HSM_BAR_core_1_done
+   set_country_flag = HSM_BAR_borrowed_accounts
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.2
+ title = hsm_bar_core.2.t
+ desc = hsm_bar_core.2.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_2_done } }
+ option = {
+  name = hsm_bar_core.2.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_2_done } }
+   set_country_flag = HSM_BAR_core_2_done
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.2.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_2_done } }
+   set_country_flag = HSM_BAR_core_2_done
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.3
+ title = hsm_bar_core.3.t
+ desc = hsm_bar_core.3.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_3_done } }
+ option = {
+  name = hsm_bar_core.3.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_3_done } }
+   set_country_flag = HSM_BAR_core_3_done
+   HSM_BAR_anomalies_pulse = yes
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.4
+ title = hsm_bar_core.4.t
+ desc = hsm_bar_core.4.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_4_done } }
+ option = {
+  name = hsm_bar_core.4.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_4_done } }
+   set_country_flag = HSM_BAR_core_4_done
+   set_country_flag = HSM_BAR_cult_leads add_political_power = 20
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.5
+ title = hsm_bar_core.5.t
+ desc = hsm_bar_core.5.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_5_done } }
+ option = {
+  name = hsm_bar_core.5.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_5_done } }
+   set_country_flag = HSM_BAR_core_5_done
+   set_country_flag = HSM_BAR_cult_sting 
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.5.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_5_done } }
+   set_country_flag = HSM_BAR_core_5_done
+   set_country_flag = HSM_BAR_cult_intercept
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.6
+ title = hsm_bar_core.6.t
+ desc = hsm_bar_core.6.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_6_done } }
+ option = {
+  name = hsm_bar_core.6.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_6_done } }
+   set_country_flag = HSM_BAR_core_6_done
+   set_country_flag = HSM_BAR_cult_network_broken 
+   HSM_BAR_core_refresh = yes
+   custom_effect_tooltip = HSM_BAR_residencies_continuation_tt
+   hidden_effect = { HSM_BAR_residencies_begin = yes }
+  }
+ }
+ option = {
+  name = hsm_bar_core.6.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_6_done } }
+   set_country_flag = HSM_BAR_core_6_done
+   set_country_flag = HSM_BAR_cult_network_broken set_country_flag = HSM_BAR_cult_channel_retained
+   HSM_BAR_core_refresh = yes
+   custom_effect_tooltip = HSM_BAR_residencies_continuation_tt
+   hidden_effect = { HSM_BAR_residencies_begin = yes }
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.7
+ title = hsm_bar_core.7.t
+ desc = hsm_bar_core.7.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_7_done } }
+ option = {
+  name = hsm_bar_core.7.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_7_done } }
+   set_country_flag = HSM_BAR_core_7_done
+   add_political_power = 40
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.8
+ title = hsm_bar_core.8.t
+ desc = hsm_bar_core.8.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_8_done } }
+ option = {
+  name = hsm_bar_core.8.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_8_done } }
+   set_country_flag = HSM_BAR_core_8_done
+
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.9
+ title = hsm_bar_core.9.t
+ desc = hsm_bar_core.9.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_9_done } }
+ option = {
+  name = hsm_bar_core.9.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_9_done } }
+   set_country_flag = HSM_BAR_core_9_done
+   set_country_flag = HSM_BAR_dissent_recorded
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.9.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_9_done } }
+   set_country_flag = HSM_BAR_core_9_done
+   set_country_flag = HSM_BAR_suppression_accelerated
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.10
+ title = hsm_bar_core.10.t
+ desc = hsm_bar_core.10.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_10_done } }
+ option = {
+  name = hsm_bar_core.10.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_10_done } }
+   set_country_flag = HSM_BAR_core_10_done
+
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.11
+ title = hsm_bar_core.11.t
+ desc = hsm_bar_core.11.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_11_done } }
+ option = {
+  name = hsm_bar_core.11.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_11_done } }
+   set_country_flag = HSM_BAR_core_11_done
+   set_country_flag = HSM_BAR_selective_suppression add_political_power = -40 
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.11.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_11_done } }
+   set_country_flag = HSM_BAR_core_11_done
+   set_country_flag = HSM_BAR_extended_test
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.12
+ title = hsm_bar_core.12.t
+ desc = hsm_bar_core.12.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_12_done } }
+ option = {
+  name = hsm_bar_core.12.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_12_done } }
+   set_country_flag = HSM_BAR_core_12_done
+   clr_country_flag = HSM_BAR_suppression_live
+   set_country_flag = HSM_BAR_suppression_aborted
+   remove_ideas = HSM_BAR_suppression_crisis
+   if = {
+    limit = { has_country_flag = HSM_BAR_selective_suppression }
+    add_political_power = -40
+
+   }
+   else = {
+    add_political_power = -75
+
+   }
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.12.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_12_done } }
+   set_country_flag = HSM_BAR_core_12_done
+   set_country_flag = HSM_BAR_suppression_escalated
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.13
+ title = hsm_bar_core.13.t
+ desc = hsm_bar_core.13.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_13_done } has_country_flag = HSM_BAR_suppression_live NOT = { has_country_flag = HSM_BAR_suppression_resolved } }
+ option = {
+  name = hsm_bar_core.13.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_13_done } }
+   set_country_flag = HSM_BAR_core_13_done
+   if = { limit = { has_country_flag = HSM_BAR_suppression_live NOT = { has_country_flag = HSM_BAR_suppression_resolved } } add_political_power = -25 }
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.14
+ title = hsm_bar_core.14.t
+ desc = hsm_bar_core.14.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_14_done } }
+ option = {
+  name = hsm_bar_core.14.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_14_done } }
+   set_country_flag = HSM_BAR_core_14_done
+   add_political_power = 30
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+country_event = {
+ id = hsm_bar_core.15
+ title = hsm_bar_core.15.t
+ desc = hsm_bar_core.15.d
+ picture = GFX_event_gothic_interior
+ is_triggered_only = yes
+ trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_15_done } }
+ option = {
+  name = hsm_bar_core.15.a
+  ai_chance = { factor = 80 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_15_done } }
+   set_country_flag = HSM_BAR_core_15_done
+   set_country_flag = HSM_BAR_service_settled clr_country_flag = HSM_BAR_suppression_live clr_country_flag = HSM_BAR_normalization clr_country_flag = HSM_BAR_global_authorized set_country_flag = HSM_BAR_coexistence remove_ideas = HSM_BAR_suppression_crisis remove_ideas = HSM_BAR_normalization_service add_ideas = HSM_BAR_accountable_service add_political_power = -75 
+   HSM_BAR_core_refresh = yes
+  }
+ }
+ option = {
+  name = hsm_bar_core.15.b
+  ai_chance = { factor = 20 }
+  if = {
+   limit = { has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded NOT = { has_country_flag = HSM_BAR_core_15_done } }
+   set_country_flag = HSM_BAR_core_15_done
+   set_country_flag = HSM_BAR_global_authorized set_country_flag = HSM_BAR_smile_compromised
+   HSM_BAR_core_refresh = yes
+  }
+ }
+}
+
+

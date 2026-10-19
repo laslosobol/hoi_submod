@@ -1,0 +1,224 @@
+# Native defeat/release handling still owns the generic-tree reset.
+HSM_BAR_dissolve_institutions = {
+ if = { limit = { has_country_flag = HSM_BAR_mtk_projects_initialized } HSM_BAR_mtk_projects_teardown = yes }
+ if = { limit = { has_country_flag = HSM_BAR_service_gui_initialized } HSM_BAR_service_gui_teardown = yes }
+ if = { limit = { has_country_flag = HSM_BAR_investigation_initialized } HSM_BAR_investigation_teardown = yes }
+ if = { limit = { has_country_flag = HSM_BAR_fielddesk_initialized } HSM_BAR_fielddesk_teardown = yes }
+ if = { limit = { has_country_flag = HSM_BAR_collegium_initialized } HSM_BAR_collegium_cancel_programs = yes }
+ if = { limit = { has_country_flag = HSM_BAR_civic_republic_awarded } HSM_BAR_civic_teardown = yes }
+ if = {
+  limit = {
+   OR = {
+    has_completed_focus = HSM_BAR_mtc_frontiers
+    has_country_flag = HSM_BAR_mtc_frontiers_direct_declaration
+    has_country_flag = HSM_BAR_mtc_frontiers_defending
+   }
+  }
+  HSM_BAR_mtc_frontiers_teardown = yes
+ }
+ if = {
+  limit = {
+   OR = {
+    has_country_flag = HSM_BAR_residencies_initialized
+    has_country_flag = HSM_BAR_residencies_started
+   }
+  }
+  HSM_BAR_residencies_teardown = yes
+ }
+ clr_country_flag = HSM_BAR_active
+ clr_country_flag = HSM_BAR_collegium
+ clr_country_flag = HSM_BAR_directorate
+ clr_country_flag = HSM_BAR_service_founded
+ clr_country_flag = HSM_BAR_republic_transition
+ clear_variable = HSM_BAR_public_trust
+ clear_variable = HSM_BAR_capacity
+ clr_country_flag = HSM_BAR_development_living_standards_running
+ clr_country_flag = HSM_BAR_development_school_network_running
+ clr_country_flag = HSM_BAR_development_industrial_program_running
+ clr_country_flag = HSM_BAR_development_research_grants_running
+ HSM_BAR_refresh_case_outcomes = yes
+ clr_country_flag = HSM_BAR_diplomacy_open
+ clr_country_flag = HSM_BAR_institute_open
+ clr_country_flag = HSM_BAR_foreign_mandate
+ clr_country_flag = HSM_BAR_smile_partner
+ clr_country_flag = HSM_BAR_smile_request_pending
+ clr_country_flag = HSM_BAR_suppression_live
+ HSM_BAR_collegium_remove_constitution = yes
+ remove_dynamic_modifier = { modifier = HSM_BAR_collegium_services }
+ HSM_BAR_refresh_service_training = yes
+ remove_ideas = HSM_BAR_provisional_watch
+ remove_ideas = HSM_BAR_accountable_service
+ remove_ideas = HSM_BAR_normalization_service
+ remove_ideas = HSM_BAR_public_defence
+ remove_ideas = HSM_BAR_reconstruction_contract
+ remove_ideas = HSM_BAR_custody_charter
+ remove_ideas = HSM_BAR_suppression_crisis
+ remove_ideas = HSM_BAR_sombra_volunteers
+ remove_ideas = HSM_BAR_displaced_families
+ remove_ideas = HSM_BAR_careful_retrieval
+ remove_ideas = HSM_BAR_expedited_retrieval
+ remove_ideas = HSM_BAR_applied_findings
+ remove_ideas = HSM_BAR_research_clinic_consent_idea
+ remove_ideas = HSM_BAR_research_clinic_expedience_idea
+ remove_ideas = HSM_BAR_research_grid_distributed_idea
+ remove_ideas = HSM_BAR_research_grid_central_idea
+ remove_ideas = HSM_BAR_research_wards_personal_idea
+ remove_ideas = HSM_BAR_research_wards_monitoring_idea
+ remove_ideas = HSM_BAR_research_containment_layered_idea
+ remove_ideas = HSM_BAR_research_containment_sealed_idea
+ remove_ideas = HSM_BAR_research_forensics_reviewed_idea
+ remove_ideas = HSM_BAR_research_forensics_classified_idea
+ remove_ideas = HSM_BAR_research_suppression_reversible_idea
+ remove_ideas = HSM_BAR_research_suppression_permanent_idea
+ EQS = { clr_country_flag = HSM_BAR_smile_partner remove_ideas = HSM_BAR_anti_sombra }
+ clr_country_flag = HSM_BAR_WIT_agreement
+ clr_country_flag = HSM_BAR_dip_WIT_pending
+ clr_country_flag = HSM_BAR_dip_WIT_terms
+ clr_country_flag = HSM_BAR_dip_WIT_rejected
+ clr_country_flag = HSM_BAR_dip_WIT_escalated
+ remove_opinion_modifier = { target = WIT modifier = HSM_BAR_dip_treaty }
+ WIT = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+ clr_country_flag = HSM_BAR_ZES_agreement
+ clr_country_flag = HSM_BAR_dip_ZES_pending
+ clr_country_flag = HSM_BAR_dip_ZES_terms
+ clr_country_flag = HSM_BAR_dip_ZES_rejected
+ clr_country_flag = HSM_BAR_dip_ZES_escalated
+ remove_opinion_modifier = { target = ZES modifier = HSM_BAR_dip_treaty }
+ ZES = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+ clr_country_flag = HSM_BAR_OLV_agreement
+ clr_country_flag = HSM_BAR_dip_OLV_pending
+ clr_country_flag = HSM_BAR_dip_OLV_terms
+ clr_country_flag = HSM_BAR_dip_OLV_rejected
+ clr_country_flag = HSM_BAR_dip_OLV_escalated
+ remove_opinion_modifier = { target = OLV modifier = HSM_BAR_dip_treaty }
+ OLV = { remove_opinion_modifier = { target = BAR modifier = HSM_BAR_dip_treaty } }
+}
+
+# Entry replaces only the friendship ending. Original character death effects remain authoritative.
+HSM_BAR_initialize_common = {
+ set_country_flag = HSM_BAR_active
+ set_country_flag = BAR_end_of_pentarchy
+ set_country_flag = { flag = barrad_endgame value = 1 }
+ bar_kill_ambrosius = yes
+ remove_ideas = BAR_pentarchy
+ remove_ideas = BAR_ambrosius_goods
+ remove_ideas = BAR_ambrosius_research_negative
+ remove_ideas = BAR_ambrosius_research_positive
+ remove_ideas = BAR_pentarchy_concern
+ remove_ideas = BAR_pentarchy_enemy
+ remove_ideas = BAR_no_volunteers
+ clr_country_flag = trade_laws_blocked
+ clr_country_flag = BAR_ambrosius_diplomacy_unlocked
+ remove_ideas = BAR_relations_asinti_silver_negative
+ remove_ideas = BAR_relations_asinti_silver_positive
+ remove_ideas = BAR_relations_asinti_leopold_negative
+ remove_ideas = BAR_relations_asinti_leopold_positive
+ remove_ideas = BAR_relations_asinti_viira_negative
+ remove_ideas = BAR_relations_asinti_viira_positive
+ remove_ideas = BAR_relations_silver_leopold_negative
+ remove_ideas = BAR_relations_silver_leopold_positive
+ remove_ideas = BAR_relations_silver_viira_negative
+ remove_ideas = BAR_relations_silver_viira_positive
+ remove_ideas = BAR_relations_leopold_viira_negative
+ remove_ideas = BAR_relations_leopold_viira_positive
+ clear_variable = HSM_BAR_public_trust
+ clear_variable = HSM_BAR_capacity
+ add_popularity = { ideology = democratic popularity = 0.5 }
+ add_country_leader_role = {
+  character = BAR_captain_gasienica
+  promote_leader = yes
+  country_leader = { ideology = harmonic_libertarianism expire = "1965.1.1" }
+ }
+ set_politics = { ruling_party = democratic elections_allowed = yes }
+ BAR_captain_gasienica = { set_portraits = { civilian = { large = "gfx/leaders/BAR/gasienica.tga" } } }
+ add_stability = -0.10
+ add_political_power = 75
+ HSM_BAR_anomalies_initialize = yes
+ HSM_BAR_dip_initialize = yes
+}
+HSM_BAR_start_collegium = {
+ set_country_flag = HSM_BAR_collegium
+ HSM_BAR_initialize_common = yes
+ set_cosmetic_tag = HSM_BAR_COL
+ HSM_BAR_collegium_initialize = yes
+ load_focus_tree = { tree = HSM_BAR_collegium_tree keep_completed = yes }
+}
+HSM_BAR_start_directorate = {
+ barrad_kill_leopold = yes
+ barrad_kill_asinti = yes
+ barrad_kill_viira = yes
+ barrad_kill_silver = yes
+ set_country_flag = HSM_BAR_directorate
+ HSM_BAR_initialize_common = yes
+ set_cosmetic_tag = HSM_BAR_DIR
+ set_country_flag = HSM_BAR_republic_transition
+ HSM_BAR_core_refresh = yes
+ load_focus_tree = { tree = HSM_BAR_republic_tree keep_completed = yes }
+ country_event = { id = hsm_bar_republic.1 days = 3 }
+}
+# Maintenance is deliberately silent: callers expose rewards and unlocks, not the whole ledger.
+HSM_BAR_core_refresh = {
+ hidden_effect = {
+  # Retired institutional meters must not survive as hidden progression gates.
+  clear_variable = HSM_BAR_public_trust
+  clear_variable = HSM_BAR_capacity
+  # Remove obsolete secrecy data when continuing an existing campaign.
+  clear_variable = HSM_BAR_cover_integrity
+  clear_variable = HSM_BAR_service_coordination
+  HSM_BAR_refresh_service_training = yes
+  if = { limit = { has_country_flag = HSM_BAR_collegium } HSM_BAR_collegium_refresh = yes }
+  HSM_BAR_refresh_case_outcomes = yes
+ }
+}
+HSM_BAR_core_pulse = {
+ clr_country_flag = BAR_ambrosius_diplomacy_unlocked
+ if = { limit = { has_country_flag = HSM_BAR_service_founded } HSM_BAR_initialize_service = yes }
+ HSM_BAR_core_refresh = yes
+ HSM_BAR_collegium_pulse = yes
+ HSM_BAR_dip_daily_pulse = yes
+ if = {
+  limit = { has_country_flag = HSM_BAR_directorate NOT = { has_country_flag = HSM_BAR_case_pulse_cooldown } }
+  set_country_flag = { flag = HSM_BAR_case_pulse_cooldown days = 7 }
+  HSM_BAR_anomalies_pulse = yes
+ }
+ if = {
+  limit = { has_country_flag = HSM_BAR_suppression_live NOT = { has_country_flag = HSM_BAR_suppression_resolved } }
+  if = {
+   limit = { NOT = { has_country_flag = HSM_BAR_suppression_test_window } }
+   set_country_flag = HSM_BAR_suppression_resolved
+   country_event = { id = hsm_bar_core.12 days = 1 }
+  }
+ }
+ if = {
+  limit = { has_country_flag = HSM_BAR_smile_partner OR = { has_war_with = EQS has_country_flag = HSM_BAR_smile_compromised NOT = { EQS = { exists = yes has_government = democratic } } } }
+  clr_country_flag = HSM_BAR_smile_partner
+  EQS = { clr_country_flag = HSM_BAR_smile_partner remove_ideas = HSM_BAR_anti_sombra }
+ }
+ if = {
+  limit = { has_idea = HSM_BAR_sombra_volunteers NOT = { HSM_BAR_sombra_cooperation = yes } }
+  remove_ideas = HSM_BAR_sombra_volunteers
+ }
+}
+HSM_BAR_adopt_coexistence = {
+ set_country_flag = HSM_BAR_coexistence
+ remove_ideas = HSM_BAR_provisional_watch
+ add_ideas = HSM_BAR_accountable_service
+ HSM_BAR_core_refresh = yes
+ country_event = { id = hsm_bar_core.8 days = 1 }
+}
+HSM_BAR_adopt_normalization = {
+ set_country_flag = HSM_BAR_normalization
+ remove_ideas = HSM_BAR_provisional_watch
+ add_ideas = HSM_BAR_normalization_service
+ country_event = { id = hsm_bar_core.9 days = 1 }
+}
+HSM_BAR_initialize_service = {
+ if = {
+  limit = { NOT = { has_country_flag = HSM_BAR_covert_structure_initialized } }
+  set_country_flag = HSM_BAR_covert_structure_initialized
+  # Old public-repression spirits are not part of the covert institution.
+  remove_ideas = HSM_BAR_displaced_families
+  clr_country_flag = HSM_BAR_repressive_methods
+  clr_country_flag = HSM_BAR_collective_classification
+ }
+}

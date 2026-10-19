@@ -1,0 +1,358 @@
+# Concrete case predicates; no scripted-effect parameter expansion.
+HSM_BAR_cases_actor = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_institute_open
+    OR = { NOT = { has_dlc = "Gotterdammerung" } HSM_BAR_research_has_facility = yes }
+}
+HSM_BAR_case_review_ready = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_cases_review_ready_tt
+        has_country_flag = HSM_BAR_study_rock_done
+        has_country_flag = HSM_BAR_study_echo_done
+        has_country_flag = HSM_BAR_case_echo_closed
+    }
+}
+HSM_BAR_containment_knowledge_ready = {
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_cases_containment_knowledge_tt
+        has_country_flag = HSM_BAR_study_rock_done
+        has_country_flag = HSM_BAR_study_entity_done
+        has_country_flag = HSM_BAR_study_echo_done
+    }
+}
+HSM_BAR_forensics_knowledge_ready = {
+    HSM_BAR_containment_knowledge_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_cases_forensics_knowledge_tt
+        has_country_flag = HSM_BAR_study_titan_done
+        has_country_flag = HSM_BAR_study_compass_done
+    }
+}
+HSM_BAR_suppression_knowledge_ready = {
+    HSM_BAR_forensics_knowledge_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = HSM_BAR_cases_suppression_knowledge_tt
+        has_country_flag = HSM_BAR_study_amulet_done
+    }
+}
+
+HSM_BAR_cases_rock_access = {
+    has_country_flag = HSM_BAR_case_rock_investigated
+    controls_state = 624
+}
+HSM_BAR_cases_rock_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_rock_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_rock_done }
+}
+
+HSM_BAR_cases_titan_access = {
+    has_country_flag = HSM_BAR_case_titan_investigated
+    controls_state = 624
+}
+HSM_BAR_cases_titan_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_titan_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_titan_done }
+}
+
+HSM_BAR_cases_entity_access = {
+    has_country_flag = HSM_BAR_case_entity_investigated
+    controls_state = 624
+}
+HSM_BAR_cases_entity_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_entity_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_entity_done }
+}
+
+HSM_BAR_cases_amulet_access = {
+    has_country_flag = HSM_BAR_case_amulet_investigated
+    controls_state = 624
+}
+HSM_BAR_cases_amulet_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_amulet_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_amulet_done }
+}
+
+HSM_BAR_cases_plants_access = {
+    has_country_flag = HSM_BAR_case_plants_investigated
+    controls_state = 624
+}
+HSM_BAR_cases_plants_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_plants_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_plants_done }
+}
+
+HSM_BAR_cases_reactor_access = {
+    has_country_flag = HSM_BAR_case_reactor_investigated
+    controls_state = 624
+    624 = { nuclear_reactor > 0 }
+}
+HSM_BAR_cases_reactor_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_reactor_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_reactor_done }
+}
+
+HSM_BAR_cases_crown_access = {
+    has_country_flag = HSM_BAR_case_crown_known
+    any_of_scopes = {
+        array = global.HSM_BAR_case_crowns
+        has_country_flag = HSM_BAR_case_crown_secured
+        NOT = { has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_leader }
+        var:HSM_BAR_case_crown_site = { is_controlled_by = BAR }
+    }
+}
+HSM_BAR_cases_crown_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_crown_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_crown_done }
+}
+
+HSM_BAR_cases_chalice_access = {
+    has_country_flag = HSM_BAR_case_chalice_investigated
+    has_global_flag = HSM_BAR_case_chalice_secured
+    var:global.HSM_BAR_case_chalice_site = { is_controlled_by = BAR }
+}
+HSM_BAR_cases_chalice_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_chalice_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_chalice_done }
+}
+
+HSM_BAR_cases_phylactery_access = {
+    has_country_flag = HSM_BAR_case_phylactery_investigated
+    has_global_flag = HSM_BAR_case_phylactery_secured
+    var:global.HSM_BAR_case_phylactery_site = { is_controlled_by = BAR }
+}
+HSM_BAR_cases_phylactery_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_phylactery_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_phylactery_done }
+}
+
+HSM_BAR_cases_darkheart_access = {
+    has_country_flag = HSM_BAR_case_darkheart_investigated
+    has_global_flag = HSM_BAR_case_darkheart_secured
+    var:global.HSM_BAR_case_darkheart_site = { is_controlled_by = BAR }
+}
+HSM_BAR_cases_darkheart_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_darkheart_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_darkheart_done }
+}
+
+HSM_BAR_cases_grover_access = {
+    has_country_flag = HSM_BAR_case_grover_investigated
+}
+HSM_BAR_cases_grover_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_grover_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_grover_done }
+}
+
+HSM_BAR_cases_rosa_access = {
+    has_country_flag = HSM_BAR_case_rosa_investigated
+}
+HSM_BAR_cases_rosa_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_rosa_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_rosa_done }
+}
+
+HSM_BAR_cases_herald_access = {
+    has_country_flag = HSM_BAR_case_herald_investigated
+}
+HSM_BAR_cases_herald_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_herald_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_herald_done }
+}
+
+HSM_BAR_cases_sombra_access = {
+    has_country_flag = HSM_BAR_case_sombra_investigated
+}
+HSM_BAR_cases_sombra_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_sombra_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_sombra_done }
+}
+
+HSM_BAR_cases_echo_access = {
+    has_country_flag = HSM_BAR_case_echo_investigated
+}
+HSM_BAR_cases_echo_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_echo_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_echo_done }
+}
+
+HSM_BAR_cases_marsh_access = {
+    has_country_flag = HSM_BAR_case_marsh_investigated
+}
+HSM_BAR_cases_marsh_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_marsh_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_marsh_done }
+}
+
+HSM_BAR_cases_compass_access = {
+    has_country_flag = HSM_BAR_case_compass_investigated
+}
+HSM_BAR_cases_compass_eligible = {
+    HSM_BAR_cases_actor = yes
+    HSM_BAR_cases_compass_access = yes
+    NOT = { has_country_flag = HSM_BAR_study_compass_done }
+}
+
+HSM_BAR_cases_sombra_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_equus_open
+    NOT = { has_country_flag = HSM_BAR_case_sombra_rumor }
+    any_country = { HSM_BAR_case_sombra_lead = yes }
+}
+HSM_BAR_cases_sombra_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_equus_open has_country_flag = HSM_BAR_case_sombra_rumor }
+    HSM_BAR_case_sombra_lead = yes
+}
+
+HSM_BAR_cases_darkheart_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_equus_open
+    NOT = { has_country_flag = HSM_BAR_case_darkheart_rumor }
+    any_country = { HSM_BAR_case_darkheart_lead = yes }
+}
+HSM_BAR_cases_darkheart_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_equus_open has_country_flag = HSM_BAR_case_darkheart_rumor }
+    HSM_BAR_case_darkheart_lead = yes
+}
+
+HSM_BAR_cases_crown_equus_candidate = {
+    has_country_flag = HSM_BAR_case_crown_exists
+    NOT = { has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_rumor }
+    has_variable = HSM_BAR_case_crown_site
+    var:HSM_BAR_case_crown_site = { is_on_continent = europe }
+}
+HSM_BAR_cases_crown_equus_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_equus_open
+    any_of_scopes = { array = global.HSM_BAR_case_crowns HSM_BAR_cases_crown_equus_candidate = yes }
+}
+
+HSM_BAR_cases_grover_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_griffonia_open
+    NOT = { has_country_flag = HSM_BAR_case_grover_rumor }
+    any_country = { HSM_BAR_case_grover_lead = yes }
+}
+HSM_BAR_cases_grover_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_griffonia_open has_country_flag = HSM_BAR_case_grover_rumor }
+    HSM_BAR_case_grover_lead = yes
+}
+
+HSM_BAR_cases_herald_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_griffonia_open
+    NOT = { has_country_flag = HSM_BAR_case_herald_rumor }
+    any_country = { HSM_BAR_case_herald_lead = yes }
+}
+HSM_BAR_cases_herald_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_griffonia_open has_country_flag = HSM_BAR_case_herald_rumor }
+    HSM_BAR_case_herald_lead = yes
+}
+
+HSM_BAR_cases_crown_griffonia_candidate = {
+    has_country_flag = HSM_BAR_case_crown_exists
+    NOT = { has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_rumor }
+    has_variable = HSM_BAR_case_crown_site
+    var:HSM_BAR_case_crown_site = { is_on_continent = asia }
+}
+HSM_BAR_cases_crown_griffonia_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_griffonia_open
+    any_of_scopes = { array = global.HSM_BAR_case_crowns HSM_BAR_cases_crown_griffonia_candidate = yes }
+}
+
+HSM_BAR_cases_rosa_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_north_open
+    NOT = { has_country_flag = HSM_BAR_case_rosa_rumor }
+    any_country = { HSM_BAR_case_rosa_lead = yes }
+}
+HSM_BAR_cases_rosa_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_north_open has_country_flag = HSM_BAR_case_rosa_rumor }
+    HSM_BAR_case_rosa_lead = yes
+}
+
+HSM_BAR_cases_chalice_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_north_open
+    NOT = { has_country_flag = HSM_BAR_case_chalice_rumor }
+    any_country = { HSM_BAR_case_chalice_lead = yes }
+}
+HSM_BAR_cases_chalice_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_north_open has_country_flag = HSM_BAR_case_chalice_rumor }
+    HSM_BAR_case_chalice_lead = yes
+}
+
+HSM_BAR_cases_phylactery_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_north_open
+    NOT = { has_country_flag = HSM_BAR_case_phylactery_rumor }
+    any_country = { HSM_BAR_case_phylactery_lead = yes }
+}
+HSM_BAR_cases_phylactery_lead_open = {
+    ROOT = { has_country_flag = HSM_BAR_region_north_open has_country_flag = HSM_BAR_case_phylactery_rumor }
+    HSM_BAR_case_phylactery_lead = yes
+}
+
+HSM_BAR_cases_echo_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_local_open
+    NOT = { has_country_flag = HSM_BAR_case_echo_rumor }
+    controls_state = 624
+}
+
+HSM_BAR_cases_compass_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_local_open
+    NOT = { has_country_flag = HSM_BAR_case_compass_rumor }
+    controls_state = 624
+}
+
+HSM_BAR_cases_reactor_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_local_open
+    NOT = { has_country_flag = HSM_BAR_case_reactor_rumor }
+    controls_state = 624
+    624 = { nuclear_reactor > 0 }
+}
+
+HSM_BAR_cases_marsh_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_riverlands_open
+    NOT = { has_country_flag = HSM_BAR_case_marsh_rumor }
+    
+}
+
+HSM_BAR_cases_zebrica_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_zebrica_open
+    NOT = { has_country_flag = HSM_BAR_case_zebrica_rumor }
+    
+}
+
+HSM_BAR_cases_crown_zebrica_candidate = {
+    has_country_flag = HSM_BAR_case_crown_exists
+    NOT = { has_country_flag = HSM_BAR_case_crown_missing has_country_flag = HSM_BAR_case_crown_rumor }
+    has_variable = HSM_BAR_case_crown_site
+    var:HSM_BAR_case_crown_site = { is_on_continent = africa }
+}
+HSM_BAR_cases_crown_zebrica_rumor_available = {
+    HSM_BAR_case_enabled = yes
+    has_country_flag = HSM_BAR_region_zebrica_open
+    any_of_scopes = { array = global.HSM_BAR_case_crowns HSM_BAR_cases_crown_zebrica_candidate = yes }
+}

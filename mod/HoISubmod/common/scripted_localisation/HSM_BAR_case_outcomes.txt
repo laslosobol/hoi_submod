@@ -1,0 +1,783 @@
+# Results presentation only. Current effects follow the same access and final-policy gates as the ledger.
+defined_text = {
+    name = GetHSMBAROutcome_rock
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_rock_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_rock_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_rock
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_rock_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_rock
+    text = { trigger = { has_country_flag = HSM_BAR_case_rock_protect } localization_key = HSM_BAR_outcome_rock_protect }
+    text = { trigger = { has_country_flag = HSM_BAR_case_rock_restrict } localization_key = HSM_BAR_outcome_rock_restrict }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rock_applied } localization_key = HSM_BAR_outcome_rock_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rock_reserved } localization_key = HSM_BAR_outcome_rock_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_rock
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_rock_access = yes has_country_flag = HSM_BAR_study_rock_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_rock_protect } localization_key = HSM_BAR_outcome_rock_protect_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_case_rock_restrict } localization_key = HSM_BAR_outcome_rock_restrict_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rock_applied } localization_key = HSM_BAR_outcome_rock_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rock_reserved } localization_key = HSM_BAR_outcome_rock_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_rock
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_rock_recorded has_country_flag = HSM_BAR_study_rock_applied } localization_key = HSM_BAR_outcome_rock_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_rock_recorded has_country_flag = HSM_BAR_study_rock_reserved } localization_key = HSM_BAR_outcome_rock_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_rock_applied has_country_flag = HSM_BAR_study_rock_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_rock
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_rock_recorded has_country_flag = HSM_BAR_case_rock_protect } localization_key = HSM_BAR_outcome_rock_protect_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_rock_recorded has_country_flag = HSM_BAR_case_rock_restrict } localization_key = HSM_BAR_outcome_rock_restrict_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_rock_protect has_country_flag = HSM_BAR_case_rock_restrict } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_titan
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_titan_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_titan_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_titan
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_titan_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_titan
+    text = { trigger = { has_country_flag = HSM_BAR_case_titan_protect } localization_key = HSM_BAR_outcome_titan_protect }
+    text = { trigger = { has_country_flag = HSM_BAR_case_titan_restrict } localization_key = HSM_BAR_outcome_titan_restrict }
+    text = { trigger = { has_country_flag = HSM_BAR_study_titan_applied } localization_key = HSM_BAR_outcome_titan_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_titan_reserved } localization_key = HSM_BAR_outcome_titan_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_titan
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_titan_access = yes has_country_flag = HSM_BAR_study_titan_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_titan_protect } localization_key = HSM_BAR_outcome_titan_protect_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_case_titan_restrict } localization_key = HSM_BAR_outcome_titan_restrict_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_titan_applied } localization_key = HSM_BAR_outcome_titan_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_titan_reserved } localization_key = HSM_BAR_outcome_titan_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_titan
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_titan_recorded has_country_flag = HSM_BAR_study_titan_applied } localization_key = HSM_BAR_outcome_titan_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_titan_recorded has_country_flag = HSM_BAR_study_titan_reserved } localization_key = HSM_BAR_outcome_titan_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_titan_applied has_country_flag = HSM_BAR_study_titan_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_titan
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_titan_recorded has_country_flag = HSM_BAR_case_titan_protect } localization_key = HSM_BAR_outcome_titan_protect_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_titan_recorded has_country_flag = HSM_BAR_case_titan_restrict } localization_key = HSM_BAR_outcome_titan_restrict_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_titan_protect has_country_flag = HSM_BAR_case_titan_restrict } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_entity
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_entity_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_entity_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_entity
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_entity_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_entity
+    text = { trigger = { has_country_flag = HSM_BAR_case_entity_protect } localization_key = HSM_BAR_outcome_entity_protect }
+    text = { trigger = { has_country_flag = HSM_BAR_case_entity_restrict } localization_key = HSM_BAR_outcome_entity_restrict }
+    text = { trigger = { has_country_flag = HSM_BAR_study_entity_applied } localization_key = HSM_BAR_outcome_entity_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_entity_reserved } localization_key = HSM_BAR_outcome_entity_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_entity
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_entity_access = yes has_country_flag = HSM_BAR_study_entity_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_entity_protect } localization_key = HSM_BAR_outcome_entity_protect_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_case_entity_restrict } localization_key = HSM_BAR_outcome_entity_restrict_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_entity_applied } localization_key = HSM_BAR_outcome_entity_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_entity_reserved } localization_key = HSM_BAR_outcome_entity_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_entity
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_entity_recorded has_country_flag = HSM_BAR_study_entity_applied } localization_key = HSM_BAR_outcome_entity_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_entity_recorded has_country_flag = HSM_BAR_study_entity_reserved } localization_key = HSM_BAR_outcome_entity_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_entity_applied has_country_flag = HSM_BAR_study_entity_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_entity
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_entity_recorded has_country_flag = HSM_BAR_case_entity_protect } localization_key = HSM_BAR_outcome_entity_protect_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_entity_recorded has_country_flag = HSM_BAR_case_entity_restrict } localization_key = HSM_BAR_outcome_entity_restrict_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_entity_protect has_country_flag = HSM_BAR_case_entity_restrict } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_amulet
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_amulet_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_amulet_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_amulet
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_amulet_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_amulet
+    text = { trigger = { has_country_flag = HSM_BAR_case_amulet_protect } localization_key = HSM_BAR_outcome_amulet_protect }
+    text = { trigger = { has_country_flag = HSM_BAR_case_amulet_restrict } localization_key = HSM_BAR_outcome_amulet_restrict }
+    text = { trigger = { has_country_flag = HSM_BAR_study_amulet_applied } localization_key = HSM_BAR_outcome_amulet_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_amulet_reserved } localization_key = HSM_BAR_outcome_amulet_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_amulet
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_amulet_access = yes has_country_flag = HSM_BAR_study_amulet_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_amulet_protect } localization_key = HSM_BAR_outcome_amulet_protect_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_case_amulet_restrict } localization_key = HSM_BAR_outcome_amulet_restrict_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_amulet_applied } localization_key = HSM_BAR_outcome_amulet_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_amulet_reserved } localization_key = HSM_BAR_outcome_amulet_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_amulet
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_amulet_recorded has_country_flag = HSM_BAR_study_amulet_applied } localization_key = HSM_BAR_outcome_amulet_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_amulet_recorded has_country_flag = HSM_BAR_study_amulet_reserved } localization_key = HSM_BAR_outcome_amulet_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_amulet_applied has_country_flag = HSM_BAR_study_amulet_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_amulet
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_amulet_recorded has_country_flag = HSM_BAR_case_amulet_protect } localization_key = HSM_BAR_outcome_amulet_protect_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_amulet_recorded has_country_flag = HSM_BAR_case_amulet_restrict } localization_key = HSM_BAR_outcome_amulet_restrict_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_amulet_protect has_country_flag = HSM_BAR_case_amulet_restrict } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_plants
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_plants_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_plants_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_plants
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_plants_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_plants
+    text = { trigger = { has_country_flag = HSM_BAR_case_plants_protect } localization_key = HSM_BAR_outcome_plants_protect }
+    text = { trigger = { has_country_flag = HSM_BAR_case_plants_restrict } localization_key = HSM_BAR_outcome_plants_restrict }
+    text = { trigger = { has_country_flag = HSM_BAR_study_plants_applied } localization_key = HSM_BAR_outcome_plants_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_plants_reserved } localization_key = HSM_BAR_outcome_plants_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_plants
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_plants_access = yes has_country_flag = HSM_BAR_study_plants_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_plants_protect } localization_key = HSM_BAR_outcome_plants_protect_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_case_plants_restrict } localization_key = HSM_BAR_outcome_plants_restrict_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_plants_applied } localization_key = HSM_BAR_outcome_plants_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_plants_reserved } localization_key = HSM_BAR_outcome_plants_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_plants
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_plants_recorded has_country_flag = HSM_BAR_study_plants_applied } localization_key = HSM_BAR_outcome_plants_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_plants_recorded has_country_flag = HSM_BAR_study_plants_reserved } localization_key = HSM_BAR_outcome_plants_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_plants_applied has_country_flag = HSM_BAR_study_plants_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_plants
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_plants_recorded has_country_flag = HSM_BAR_case_plants_protect } localization_key = HSM_BAR_outcome_plants_protect_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_plants_recorded has_country_flag = HSM_BAR_case_plants_restrict } localization_key = HSM_BAR_outcome_plants_restrict_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_plants_protect has_country_flag = HSM_BAR_case_plants_restrict } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_reactor
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_reactor_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved  } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_reactor_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_reactor
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved  } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_reactor_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_reactor
+    text = { trigger = { has_country_flag = HSM_BAR_study_reactor_applied } localization_key = HSM_BAR_outcome_reactor_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_reactor_reserved } localization_key = HSM_BAR_outcome_reactor_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_reactor
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_reactor_access = yes has_country_flag = HSM_BAR_study_reactor_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_study_reactor_applied } localization_key = HSM_BAR_outcome_reactor_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_reactor_reserved } localization_key = HSM_BAR_outcome_reactor_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_reactor
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_reactor_recorded has_country_flag = HSM_BAR_study_reactor_applied } localization_key = HSM_BAR_outcome_reactor_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_reactor_recorded has_country_flag = HSM_BAR_study_reactor_reserved } localization_key = HSM_BAR_outcome_reactor_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_reactor_applied has_country_flag = HSM_BAR_study_reactor_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_reactor
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_crown
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_crown_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved  } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_crown_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_crown
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved  } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_crown_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_crown
+    text = { trigger = { has_country_flag = HSM_BAR_study_crown_applied } localization_key = HSM_BAR_outcome_crown_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_crown_reserved } localization_key = HSM_BAR_outcome_crown_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_crown
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_crown_access = yes has_country_flag = HSM_BAR_study_crown_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_study_crown_applied } localization_key = HSM_BAR_outcome_crown_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_crown_reserved } localization_key = HSM_BAR_outcome_crown_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_crown
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_crown_recorded has_country_flag = HSM_BAR_study_crown_applied } localization_key = HSM_BAR_outcome_crown_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_crown_recorded has_country_flag = HSM_BAR_study_crown_reserved } localization_key = HSM_BAR_outcome_crown_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_crown_applied has_country_flag = HSM_BAR_study_crown_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_crown
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_chalice
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_chalice_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved has_country_flag = HSM_BAR_case_chalice_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_chalice_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_chalice
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved has_country_flag = HSM_BAR_case_chalice_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_chalice_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_chalice
+    text = { trigger = { has_country_flag = HSM_BAR_case_chalice_closed } localization_key = HSM_BAR_outcome_chalice_sealed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_chalice_applied } localization_key = HSM_BAR_outcome_chalice_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_chalice_reserved } localization_key = HSM_BAR_outcome_chalice_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_chalice
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_chalice_access = yes has_country_flag = HSM_BAR_study_chalice_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_chalice_closed } localization_key = HSM_BAR_outcome_chalice_sealed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_chalice_applied } localization_key = HSM_BAR_outcome_chalice_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_chalice_reserved } localization_key = HSM_BAR_outcome_chalice_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_chalice
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_chalice_recorded has_country_flag = HSM_BAR_study_chalice_applied } localization_key = HSM_BAR_outcome_chalice_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_chalice_recorded has_country_flag = HSM_BAR_study_chalice_reserved } localization_key = HSM_BAR_outcome_chalice_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_chalice_applied has_country_flag = HSM_BAR_study_chalice_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_chalice
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_chalice_recorded has_country_flag = HSM_BAR_case_chalice_closed } localization_key = HSM_BAR_outcome_chalice_sealed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_chalice_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_phylactery
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_phylactery_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved has_country_flag = HSM_BAR_case_phylactery_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_phylactery_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_phylactery
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved has_country_flag = HSM_BAR_case_phylactery_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_phylactery_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_phylactery
+    text = { trigger = { has_country_flag = HSM_BAR_case_phylactery_closed } localization_key = HSM_BAR_outcome_phylactery_sealed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_phylactery_applied } localization_key = HSM_BAR_outcome_phylactery_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_phylactery_reserved } localization_key = HSM_BAR_outcome_phylactery_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_phylactery
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_phylactery_access = yes has_country_flag = HSM_BAR_study_phylactery_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_phylactery_closed } localization_key = HSM_BAR_outcome_phylactery_sealed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_phylactery_applied } localization_key = HSM_BAR_outcome_phylactery_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_phylactery_reserved } localization_key = HSM_BAR_outcome_phylactery_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_phylactery
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_phylactery_recorded has_country_flag = HSM_BAR_study_phylactery_applied } localization_key = HSM_BAR_outcome_phylactery_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_phylactery_recorded has_country_flag = HSM_BAR_study_phylactery_reserved } localization_key = HSM_BAR_outcome_phylactery_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_phylactery_applied has_country_flag = HSM_BAR_study_phylactery_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_phylactery
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_phylactery_recorded has_country_flag = HSM_BAR_case_phylactery_closed } localization_key = HSM_BAR_outcome_phylactery_sealed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_phylactery_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_darkheart
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_darkheart_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved has_country_flag = HSM_BAR_case_darkheart_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_darkheart_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_darkheart
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved has_country_flag = HSM_BAR_case_darkheart_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_darkheart_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_darkheart
+    text = { trigger = { has_country_flag = HSM_BAR_case_darkheart_closed } localization_key = HSM_BAR_outcome_darkheart_sealed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_darkheart_applied } localization_key = HSM_BAR_outcome_darkheart_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_darkheart_reserved } localization_key = HSM_BAR_outcome_darkheart_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_darkheart
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_darkheart_access = yes has_country_flag = HSM_BAR_study_darkheart_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_darkheart_closed } localization_key = HSM_BAR_outcome_darkheart_sealed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_darkheart_applied } localization_key = HSM_BAR_outcome_darkheart_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_darkheart_reserved } localization_key = HSM_BAR_outcome_darkheart_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_darkheart
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_darkheart_recorded has_country_flag = HSM_BAR_study_darkheart_applied } localization_key = HSM_BAR_outcome_darkheart_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_darkheart_recorded has_country_flag = HSM_BAR_study_darkheart_reserved } localization_key = HSM_BAR_outcome_darkheart_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_darkheart_applied has_country_flag = HSM_BAR_study_darkheart_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_darkheart
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_darkheart_recorded has_country_flag = HSM_BAR_case_darkheart_closed } localization_key = HSM_BAR_outcome_darkheart_sealed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_darkheart_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_grover
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_grover_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved has_country_flag = HSM_BAR_case_grover_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_grover_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_grover
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved has_country_flag = HSM_BAR_case_grover_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_grover_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_grover
+    text = { trigger = { has_country_flag = HSM_BAR_case_grover_closed } localization_key = HSM_BAR_outcome_grover_reviewed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_grover_applied } localization_key = HSM_BAR_outcome_grover_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_grover_reserved } localization_key = HSM_BAR_outcome_grover_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_grover
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_grover_access = yes has_country_flag = HSM_BAR_study_grover_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_grover_closed } localization_key = HSM_BAR_outcome_grover_reviewed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_grover_applied } localization_key = HSM_BAR_outcome_grover_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_grover_reserved } localization_key = HSM_BAR_outcome_grover_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_grover
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_grover_recorded has_country_flag = HSM_BAR_study_grover_applied } localization_key = HSM_BAR_outcome_grover_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_grover_recorded has_country_flag = HSM_BAR_study_grover_reserved } localization_key = HSM_BAR_outcome_grover_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_grover_applied has_country_flag = HSM_BAR_study_grover_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_grover
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_grover_recorded has_country_flag = HSM_BAR_case_grover_closed } localization_key = HSM_BAR_outcome_grover_reviewed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_grover_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_rosa
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_rosa_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved has_country_flag = HSM_BAR_case_rosa_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_rosa_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_rosa
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved has_country_flag = HSM_BAR_case_rosa_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_rosa_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_rosa
+    text = { trigger = { has_country_flag = HSM_BAR_case_rosa_closed } localization_key = HSM_BAR_outcome_rosa_reviewed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rosa_applied } localization_key = HSM_BAR_outcome_rosa_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rosa_reserved } localization_key = HSM_BAR_outcome_rosa_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_rosa
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_rosa_access = yes has_country_flag = HSM_BAR_study_rosa_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_rosa_closed } localization_key = HSM_BAR_outcome_rosa_reviewed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rosa_applied } localization_key = HSM_BAR_outcome_rosa_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_rosa_reserved } localization_key = HSM_BAR_outcome_rosa_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_rosa
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_rosa_recorded has_country_flag = HSM_BAR_study_rosa_applied } localization_key = HSM_BAR_outcome_rosa_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_rosa_recorded has_country_flag = HSM_BAR_study_rosa_reserved } localization_key = HSM_BAR_outcome_rosa_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_rosa_applied has_country_flag = HSM_BAR_study_rosa_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_rosa
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_rosa_recorded has_country_flag = HSM_BAR_case_rosa_closed } localization_key = HSM_BAR_outcome_rosa_reviewed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_rosa_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_herald
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_herald_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved has_country_flag = HSM_BAR_case_herald_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_herald_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_herald
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved has_country_flag = HSM_BAR_case_herald_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_herald_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_herald
+    text = { trigger = { has_country_flag = HSM_BAR_case_herald_closed } localization_key = HSM_BAR_outcome_herald_reviewed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_herald_applied } localization_key = HSM_BAR_outcome_herald_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_herald_reserved } localization_key = HSM_BAR_outcome_herald_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_herald
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_herald_access = yes has_country_flag = HSM_BAR_study_herald_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_herald_closed } localization_key = HSM_BAR_outcome_herald_reviewed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_herald_applied } localization_key = HSM_BAR_outcome_herald_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_herald_reserved } localization_key = HSM_BAR_outcome_herald_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_herald
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_herald_recorded has_country_flag = HSM_BAR_study_herald_applied } localization_key = HSM_BAR_outcome_herald_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_herald_recorded has_country_flag = HSM_BAR_study_herald_reserved } localization_key = HSM_BAR_outcome_herald_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_herald_applied has_country_flag = HSM_BAR_study_herald_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_herald
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_herald_recorded has_country_flag = HSM_BAR_case_herald_closed } localization_key = HSM_BAR_outcome_herald_reviewed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_herald_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_sombra
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_sombra_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved has_country_flag = HSM_BAR_case_sombra_closed } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_sombra_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_sombra
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved has_country_flag = HSM_BAR_case_sombra_closed } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_sombra_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_sombra
+    text = { trigger = { has_country_flag = HSM_BAR_case_sombra_closed } localization_key = HSM_BAR_outcome_sombra_reviewed }
+    text = { trigger = { has_country_flag = HSM_BAR_study_sombra_applied } localization_key = HSM_BAR_outcome_sombra_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_sombra_reserved } localization_key = HSM_BAR_outcome_sombra_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_sombra
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_sombra_access = yes has_country_flag = HSM_BAR_study_sombra_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_case_sombra_closed } localization_key = HSM_BAR_outcome_sombra_reviewed_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_sombra_applied } localization_key = HSM_BAR_outcome_sombra_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_sombra_reserved } localization_key = HSM_BAR_outcome_sombra_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_sombra
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_sombra_recorded has_country_flag = HSM_BAR_study_sombra_applied } localization_key = HSM_BAR_outcome_sombra_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_sombra_recorded has_country_flag = HSM_BAR_study_sombra_reserved } localization_key = HSM_BAR_outcome_sombra_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_sombra_applied has_country_flag = HSM_BAR_study_sombra_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_sombra
+    text = { trigger = { has_country_flag = HSM_BAR_disposition_sombra_recorded has_country_flag = HSM_BAR_case_sombra_closed } localization_key = HSM_BAR_outcome_sombra_reviewed_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_case_sombra_closed } } localization_key = HSM_BAR_outcome_legacy_disposition }
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_echo
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_echo_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved  } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_echo_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_echo
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved  } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_echo_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_echo
+    text = { trigger = { has_country_flag = HSM_BAR_study_echo_applied } localization_key = HSM_BAR_outcome_echo_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_echo_reserved } localization_key = HSM_BAR_outcome_echo_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_echo
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_echo_access = yes has_country_flag = HSM_BAR_study_echo_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_study_echo_applied } localization_key = HSM_BAR_outcome_echo_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_echo_reserved } localization_key = HSM_BAR_outcome_echo_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_echo
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_echo_recorded has_country_flag = HSM_BAR_study_echo_applied } localization_key = HSM_BAR_outcome_echo_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_echo_recorded has_country_flag = HSM_BAR_study_echo_reserved } localization_key = HSM_BAR_outcome_echo_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_echo_applied has_country_flag = HSM_BAR_study_echo_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_echo
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_marsh
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_marsh_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved  } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_marsh_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_marsh
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved  } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_marsh_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_marsh
+    text = { trigger = { has_country_flag = HSM_BAR_study_marsh_applied } localization_key = HSM_BAR_outcome_marsh_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_marsh_reserved } localization_key = HSM_BAR_outcome_marsh_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_marsh
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_marsh_access = yes has_country_flag = HSM_BAR_study_marsh_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_study_marsh_applied } localization_key = HSM_BAR_outcome_marsh_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_marsh_reserved } localization_key = HSM_BAR_outcome_marsh_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_marsh
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_marsh_recorded has_country_flag = HSM_BAR_study_marsh_applied } localization_key = HSM_BAR_outcome_marsh_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_marsh_recorded has_country_flag = HSM_BAR_study_marsh_reserved } localization_key = HSM_BAR_outcome_marsh_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_marsh_applied has_country_flag = HSM_BAR_study_marsh_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_marsh
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_compass
+    text = { trigger = { NOT = { has_country_flag = HSM_BAR_study_compass_done } } localization_key = HSM_BAR_outcome_no_result }
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved  } } } localization_key = HSM_BAR_outcome_pending_panel }
+    text = { localization_key = HSM_BAR_outcome_compass_panel }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeStatus_compass
+    text = { trigger = { NOT = { OR = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved  } } } localization_key = HSM_BAR_outcome_pending }
+    text = { trigger = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_compass_access = yes } localization_key = HSM_BAR_outcome_active }
+    text = { localization_key = HSM_BAR_outcome_suspended }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomePolicy_compass
+    text = { trigger = { has_country_flag = HSM_BAR_study_compass_applied } localization_key = HSM_BAR_outcome_compass_applied }
+    text = { trigger = { has_country_flag = HSM_BAR_study_compass_reserved } localization_key = HSM_BAR_outcome_compass_reserved }
+    text = { localization_key = HSM_BAR_outcome_pending }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeEffects_compass
+    text = { trigger = { NOT = { AND = { tag = BAR has_country_flag = HSM_BAR_active has_country_flag = HSM_BAR_directorate has_country_flag = HSM_BAR_service_founded has_capitulated = no HSM_BAR_cases_compass_access = yes has_country_flag = HSM_BAR_study_compass_done } } } localization_key = HSM_BAR_outcome_zero }
+    text = { trigger = { has_country_flag = HSM_BAR_study_compass_applied } localization_key = HSM_BAR_outcome_compass_applied_effects }
+    text = { trigger = { has_country_flag = HSM_BAR_study_compass_reserved } localization_key = HSM_BAR_outcome_compass_reserved_effects }
+    text = { localization_key = HSM_BAR_outcome_zero }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeHistory_compass
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_compass_recorded has_country_flag = HSM_BAR_study_compass_applied } localization_key = HSM_BAR_outcome_compass_apply_cost }
+    text = { trigger = { has_country_flag = HSM_BAR_outcome_compass_recorded has_country_flag = HSM_BAR_study_compass_reserved } localization_key = HSM_BAR_outcome_compass_reserve_cost }
+    text = { trigger = { OR = { has_country_flag = HSM_BAR_study_compass_applied has_country_flag = HSM_BAR_study_compass_reserved } } localization_key = HSM_BAR_outcome_legacy_cost }
+    text = { localization_key = HSM_BAR_outcome_no_cost }
+}
+
+defined_text = {
+    name = GetHSMBAROutcomeDisposition_compass
+    text = { localization_key = HSM_BAR_outcome_no_disposition }
+}
+
+defined_text = {
+    name = GetHSMBAROutcome_zebrica
+    text = { trigger = { has_country_flag = HSM_BAR_case_zebrica_inconclusive } localization_key = HSM_BAR_outcome_inconclusive }
+    text = { localization_key = HSM_BAR_outcome_no_result }
+}

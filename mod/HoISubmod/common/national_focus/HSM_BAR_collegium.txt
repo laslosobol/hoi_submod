@@ -1,0 +1,696 @@
+# Stage two retains all first-stage definitions. Its independent root prevents descendant auto-inclusion in stage one.
+focus_tree = {
+ id = HSM_BAR_collegium_tree
+ country = { factor = 0 }
+ default = no
+ continuous_focus_position = { x = 1600 y = 2200 }
+ shared_focus = HSM_BAR_common_reconstruction
+ shared_focus = HSM_BAR_civic_republic
+ shared_focus = HSM_BAR_mtc_frontiers
+ shared_focus = HSM_BAR_collegium_oath
+ shared_focus = HSM_BAR_collegium_names
+ shared_focus = HSM_BAR_collegium_silver
+ shared_focus = HSM_BAR_collegium_leopold
+ shared_focus = HSM_BAR_collegium_asinti
+ shared_focus = HSM_BAR_collegium_viira
+ shared_focus = HSM_BAR_collegium_records
+ shared_focus = HSM_BAR_collegium_life
+ shared_focus = HSM_BAR_collegium_clinic
+ shared_focus = HSM_BAR_collegium_wards
+ shared_focus = HSM_BAR_collegium_school
+ shared_focus = HSM_BAR_collegium_grid
+ shared_focus = HSM_BAR_collegium_land
+ shared_focus = HSM_BAR_collegium_refugees
+ shared_focus = HSM_BAR_collegium_oversight
+ shared_focus = HSM_BAR_collegium_budget
+ shared_focus = HSM_BAR_collegium_report
+ shared_focus = HSM_BAR_collegium_future
+}
+
+focus_tree = {
+ id = HSM_BAR_collegium_future_tree
+ country = { factor = 0 }
+ default = no
+ continuous_focus_position = { x = 1600 y = 2200 }
+ shared_focus = HSM_BAR_common_reconstruction
+ shared_focus = HSM_BAR_civic_republic
+ shared_focus = HSM_BAR_mtc_frontiers
+ shared_focus = HSM_BAR_collegium_oath
+ shared_focus = HSM_BAR_collegium_names
+ shared_focus = HSM_BAR_collegium_silver
+ shared_focus = HSM_BAR_collegium_leopold
+ shared_focus = HSM_BAR_collegium_asinti
+ shared_focus = HSM_BAR_collegium_viira
+ shared_focus = HSM_BAR_collegium_records
+ shared_focus = HSM_BAR_collegium_life
+ shared_focus = HSM_BAR_collegium_clinic
+ shared_focus = HSM_BAR_collegium_wards
+ shared_focus = HSM_BAR_collegium_school
+ shared_focus = HSM_BAR_collegium_grid
+ shared_focus = HSM_BAR_collegium_land
+ shared_focus = HSM_BAR_collegium_refugees
+ shared_focus = HSM_BAR_collegium_oversight
+ shared_focus = HSM_BAR_collegium_budget
+ shared_focus = HSM_BAR_collegium_report
+ shared_focus = HSM_BAR_collegium_future
+ shared_focus = HSM_BAR_collegium_future_root
+ shared_focus = HSM_BAR_collegium_longevity
+ shared_focus = HSM_BAR_collegium_bodycraft
+ shared_focus = HSM_BAR_collegium_ethics
+ shared_focus = HSM_BAR_collegium_teachers
+ shared_focus = HSM_BAR_collegium_civil_reserve
+ shared_focus = HSM_BAR_collegium_war_reserve
+ shared_focus = HSM_BAR_collegium_peer_review
+ shared_focus = HSM_BAR_collegium_memorial
+ shared_focus = HSM_BAR_collegium_assembly
+ shared_focus = HSM_BAR_collegium_open
+ shared_focus = HSM_BAR_collegium_republic
+ shared_focus = HSM_BAR_collegium_tutelage
+ shared_focus = HSM_BAR_collegium_lasting
+ shared_focus = HSM_BAR_collegium_students
+ shared_focus = HSM_BAR_collegium_applied_chorus
+ shared_focus = HSM_BAR_collegium_applied_manufactory
+ shared_focus = HSM_BAR_collegium_applied_last_minute
+ shared_focus = HSM_BAR_collegium_applied_contact
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_oath
+ icon = GFX_HSM_BAR_cover_charter
+ x = 10
+ y = 0
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = {
+  HSM_BAR_collegium_focus_access = yes
+  has_completed_focus = HSM_BAR_common_reconstruction
+ }
+ completion_reward = {
+ HSM_BAR_collegium_initialize = yes
+ country_event = { id = HSM_BAR_collegium.1 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_names
+ icon = GFX_HSM_BAR_art_memorial
+ x = 0
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_oath }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.2 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_silver
+ icon = GFX_HSM_BAR_art_mortal_life
+ x = 5
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_oath }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.3 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_leopold
+ icon = GFX_HSM_BAR_art_prosthesis
+ x = 9
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_oath }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.4 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_asinti
+ icon = GFX_HSM_BAR_art_ritual_brake
+ x = 13
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_oath }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.5 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_viira
+ icon = GFX_HSM_BAR_art_chorus
+ x = 17
+ y = 1
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_oath }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.6 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_records
+ icon = GFX_HSM_BAR_cover_archives
+ x = 0
+ y = 2
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_names }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_testimony_settled }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_archive_services_tt
+ set_country_flag = HSM_BAR_collegium_independent_archive
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_life
+ icon = GFX_HSM_BAR_art_mortal_life
+ x = 5
+ y = 2
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_silver }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_life_bonus bonus = 0.5 uses = 1 category = hospital_tech }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_clinic
+ icon = GFX_HSM_BAR_art_hospital
+ x = 9
+ y = 2
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_leopold }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_patient_rights }
+ completion_reward = {
+ set_country_flag = HSM_BAR_clinic_program
+ country_event = { id = HSM_BAR_collegium.7 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_wards
+ icon = GFX_HSM_BAR_art_ward
+ x = 13
+ y = 2
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_asinti }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_consent }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_wards_research bonus = 0.5 uses = 1 category = magical_tech }
+ set_country_flag = HSM_BAR_wards_program
+ country_event = { id = HSM_BAR_collegium.23 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_school
+ icon = GFX_HSM_BAR_art_lesson
+ x = 17
+ y = 2
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_viira }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_school_services_tt
+ add_tech_bonus = { name = HSM_BAR_collegium_school_research bonus = 0.5 uses = 1 category = electronics }
+ set_country_flag = HSM_BAR_collegium_school_open
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_grid
+ icon = GFX_HSM_BAR_art_grid
+ x = 9
+ y = 3
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_life }
+ prerequisite = { focus = HSM_BAR_collegium_clinic }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_grid_services_tt
+ add_tech_bonus = { name = HSM_BAR_collegium_grid_research bonus = 0.5 uses = 1 category = industry }
+ set_country_flag = HSM_BAR_grid_program
+ country_event = { id = HSM_BAR_collegium.8 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_land
+ icon = GFX_HSM_BAR_art_field
+ x = 13
+ y = 3
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_wards }
+ completion_reward = {
+ 624 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+ set_country_flag = HSM_BAR_collegium_land_program
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_refugees
+ icon = GFX_HSM_BAR_art_refugees
+ x = 17
+ y = 3
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_school }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.9 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_oversight
+ icon = GFX_HSM_BAR_art_inspection
+ x = 0
+ y = 3
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_records }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_inspection_services_tt
+ set_country_flag = HSM_BAR_collegium_inspectors
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_budget
+ icon = GFX_HSM_BAR_art_budget
+ x = 10
+ y = 4
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_grid }
+ prerequisite = { focus = HSM_BAR_collegium_land }
+ prerequisite = { focus = HSM_BAR_collegium_refugees }
+ prerequisite = { focus = HSM_BAR_collegium_oversight }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_refugee_policy }
+ completion_reward = {
+ set_country_flag = HSM_BAR_collegium_public_budget
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_report
+ icon = GFX_HSM_BAR_cover_archives
+ x = 10
+ y = 5
+ cost = 4
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_budget }
+available = { HSM_BAR_collegium_focus_access = yes HSM_BAR_collegium_ready = yes }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.10 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_future
+ icon = GFX_HSM_BAR_cover_charter
+ x = 10
+ y = 6
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_report }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_report_answered }
+ completion_reward = {
+ set_country_flag = HSM_BAR_collegium_second_stage
+ custom_effect_tooltip = HSM_BAR_collegium_next_tree_tt
+ load_focus_tree = { tree = HSM_BAR_collegium_future_tree keep_completed = yes }
+ country_event = { id = HSM_BAR_collegium.11 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_future_root
+ icon = GFX_HSM_BAR_art_collegium
+ x = 10
+ y = 8
+ cost = 4
+ ai_will_do = { factor = 10 }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_second_stage }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_board_services_tt
+ set_country_flag = HSM_BAR_collegium_research_board
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_longevity
+ icon = GFX_HSM_BAR_art_mortal_life
+ x = 2
+ y = 9
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_future_root }
+available = { HSM_BAR_collegium_focus_access = yes HSM_BAR_collegium_clinic_ready = yes }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_longevity_research bonus = 0.75 uses = 1 category = hospital_tech }
+ country_event = { id = HSM_BAR_collegium.12 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_bodycraft
+ icon = GFX_HSM_BAR_art_prosthesis
+ x = 7
+ y = 9
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_future_root }
+available = { HSM_BAR_collegium_focus_access = yes HSM_BAR_collegium_clinic_ready = yes }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_bodycraft_research bonus = 0.5 uses = 1 category = logistics_tech }
+ country_event = { id = HSM_BAR_collegium.13 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_ethics
+ icon = GFX_HSM_BAR_art_ritual_brake
+ x = 12
+ y = 9
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_future_root }
+available = { HSM_BAR_collegium_focus_access = yes HSM_BAR_collegium_wards_ready = yes }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.14 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_teachers
+ icon = GFX_HSM_BAR_art_teacher
+ x = 17
+ y = 9
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_future_root }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_teachers_research bonus = 0.5 uses = 1 category = electronics }
+ country_event = { id = HSM_BAR_collegium.15 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_civil_reserve
+ icon = GFX_HSM_BAR_art_grid
+ x = 4
+ y = 10
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_longevity }
+ prerequisite = { focus = HSM_BAR_collegium_bodycraft }
+available = { HSM_BAR_collegium_focus_access = yes HSM_BAR_collegium_grid_ready = yes }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_reserve_services_tt
+ set_country_flag = HSM_BAR_collegium_civil_reserve
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_war_reserve
+ icon = GFX_HSM_BAR_art_hospital
+ x = 10
+ y = 10
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_bodycraft }
+ prerequisite = { focus = HSM_BAR_collegium_ethics }
+ completion_reward = {
+ add_tech_bonus = { name = HSM_BAR_collegium_war_reserve_research bonus = 0.5 uses = 1 category = logistics_tech }
+ set_country_flag = HSM_BAR_collegium_defence_protocol
+ country_event = { id = HSM_BAR_collegium.20 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_peer_review
+ icon = GFX_HSM_BAR_art_peer_review
+ x = 16
+ y = 10
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_ethics }
+ prerequisite = { focus = HSM_BAR_collegium_teachers }
+ completion_reward = {
+ custom_effect_tooltip = HSM_BAR_collegium_review_services_tt
+ add_tech_bonus = { name = HSM_BAR_collegium_peer_review_research bonus = 0.5 uses = 1 category = magical_tech }
+ set_country_flag = HSM_BAR_collegium_peer_review
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_memorial
+ icon = GFX_HSM_BAR_art_memorial
+ x = 0
+ y = 10
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_longevity }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.24 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_assembly
+ icon = GFX_HSM_BAR_art_assembly
+ x = 10
+ y = 11
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_civil_reserve }
+ prerequisite = { focus = HSM_BAR_collegium_war_reserve }
+ prerequisite = { focus = HSM_BAR_collegium_peer_review }
+ prerequisite = { focus = HSM_BAR_collegium_memorial }
+available = { HSM_BAR_collegium_focus_access = yes has_completed_focus = HSM_BAR_civic_cabinet has_country_flag = HSM_BAR_collegium_report_answered has_country_flag = HSM_BAR_collegium_peer_review has_country_flag = HSM_BAR_collegium_patient_rights has_country_flag = HSM_BAR_collegium_consent }
+ completion_reward = {
+ country_event = { id = HSM_BAR_collegium.16 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_open
+ icon = GFX_HSM_BAR_art_collegium
+ x = 4
+ y = 12
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_assembly }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_assembly_heard NOT = { has_country_flag = HSM_BAR_collegium_charter_deliberation } }
+mutually_exclusive = { focus = HSM_BAR_collegium_republic focus = HSM_BAR_collegium_tutelage }
+ completion_reward = {
+ HSM_BAR_collegium_remove_constitution = yes
+ add_ideas = HSM_BAR_collegium_open_spirit
+ set_country_flag = HSM_BAR_collegium_open_charter
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_republic
+ icon = GFX_HSM_BAR_art_republic
+ x = 10
+ y = 12
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_assembly }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_assembly_heard NOT = { has_country_flag = HSM_BAR_collegium_charter_deliberation } }
+mutually_exclusive = { focus = HSM_BAR_collegium_open focus = HSM_BAR_collegium_tutelage }
+ completion_reward = {
+ HSM_BAR_collegium_remove_constitution = yes
+ add_ideas = HSM_BAR_collegium_republic_spirit
+ set_country_flag = HSM_BAR_collegium_republic_charter
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_tutelage
+ icon = GFX_HSM_BAR_art_tutelage
+ x = 16
+ y = 12
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_assembly }
+available = { HSM_BAR_collegium_focus_access = yes has_country_flag = HSM_BAR_collegium_assembly_heard NOT = { has_country_flag = HSM_BAR_collegium_charter_deliberation } }
+mutually_exclusive = { focus = HSM_BAR_collegium_open focus = HSM_BAR_collegium_republic }
+ completion_reward = {
+ HSM_BAR_collegium_remove_constitution = yes
+ add_ideas = HSM_BAR_collegium_tutelage_spirit
+ set_country_flag = HSM_BAR_collegium_tutelage_charter
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_lasting
+ icon = GFX_HSM_BAR_art_friendship
+ x = 10
+ y = 13
+ cost = 5
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+prerequisite = { focus = HSM_BAR_collegium_open focus = HSM_BAR_collegium_republic focus = HSM_BAR_collegium_tutelage }
+ completion_reward = {
+ set_country_flag = HSM_BAR_collegium_ending
+ country_event = { id = HSM_BAR_collegium.17 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_students
+ icon = GFX_HSM_BAR_art_teacher
+ x = 10
+ y = 14
+ cost = 4
+ ai_will_do = { factor = 10 }
+ available = { HSM_BAR_collegium_focus_access = yes }
+ prerequisite = { focus = HSM_BAR_collegium_lasting }
+ completion_reward = {
+ set_country_flag = HSM_BAR_collegium_students_graduated
+ country_event = { id = HSM_BAR_collegium.19 days = 1 }
+  hidden_effect = { HSM_BAR_collegium_refresh = yes }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_applied_chorus
+ icon = GFX_HSM_BAR_art_chorus
+ x = 2
+ y = 16
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_students }
+ available = {
+  HSM_BAR_collegium_focus_access = yes
+  custom_trigger_tooltip = {
+   tooltip = HSM_BAR_collegium_chorus_ready_tt
+   has_country_flag = HSM_BAR_mtk_chorus_done
+  }
+ }
+ completion_reward = {
+  add_tech_bonus = { name = HSM_BAR_collegium_applied_chorus bonus = 0.75 uses = 2 category = magical_tech }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_applied_manufactory
+ icon = GFX_HSM_BAR_art_manufactory
+ x = 7
+ y = 16
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_students }
+ available = {
+  HSM_BAR_collegium_focus_access = yes
+  custom_trigger_tooltip = {
+   tooltip = HSM_BAR_collegium_manufactory_ready_tt
+   has_country_flag = HSM_BAR_mtk_manufactory_done
+  }
+ }
+ completion_reward = {
+  add_tech_bonus = { name = HSM_BAR_collegium_applied_manufactory bonus = 0.75 uses = 2 category = industry }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_applied_last_minute
+ icon = GFX_HSM_BAR_art_last_minute
+ x = 12
+ y = 16
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_students }
+ available = {
+  HSM_BAR_collegium_focus_access = yes
+  custom_trigger_tooltip = {
+   tooltip = HSM_BAR_collegium_last_minute_ready_tt
+   has_country_flag = HSM_BAR_mtk_last_minute_done
+  }
+ }
+ completion_reward = {
+  add_tech_bonus = { name = HSM_BAR_collegium_applied_last_minute bonus = 1 uses = 2 category = hospital_tech }
+ }
+}
+
+shared_focus = {
+ id = HSM_BAR_collegium_applied_contact
+ icon = GFX_HSM_BAR_art_contact
+ x = 17
+ y = 16
+ cost = 5
+ ai_will_do = { factor = 10 }
+ prerequisite = { focus = HSM_BAR_collegium_students }
+ available = {
+  HSM_BAR_collegium_focus_access = yes
+  custom_trigger_tooltip = {
+   tooltip = HSM_BAR_collegium_contact_ready_tt
+   has_country_flag = HSM_BAR_mtk_contact_done
+  }
+ }
+ completion_reward = {
+  add_tech_bonus = { name = HSM_BAR_collegium_applied_contact bonus = 1 uses = 1 category = magical_tech }
+ }
+}

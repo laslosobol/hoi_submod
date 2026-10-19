@@ -1,0 +1,16 @@
+add_namespace = hsm_bar_social_survey
+
+country_event = {
+ id = hsm_bar_social_survey.1
+ title = hsm_bar_social_survey.1.t
+ desc = hsm_bar_social_survey.1.d
+ picture = GFX_event_school
+ is_triggered_only = yes
+ trigger = {
+  HSM_BAR_development_route = yes
+  has_country_flag = HSM_BAR_social_survey_assessed
+  NOT = { has_country_flag = HSM_BAR_social_survey_reported }
+ }
+ immediate = { set_country_flag = HSM_BAR_social_survey_reported }
+ option = { name = hsm_bar_social_survey.1.a }
+}

@@ -1,0 +1,448 @@
+scripted_gui = {
+ HSM_BAR_service_gui_launcher = { context_type = player_context parent_window_token = politics_tab window_name = "HSM_BAR_service_gui_launcher"
+ visible = { HSM_BAR_service_gui_available = yes } effects = { HSM_BAR_service_gui_open_click = { if = { limit = { HSM_BAR_service_gui_available = yes }
+ set_variable = { HSM_BAR_service_gui_open = 1 } clear_variable = HSM_BAR_archive_open clear_variable = HSM_BAR_fielddesk_open HSM_BAR_service_gui_refresh = yes } } } }
+ HSM_BAR_service_gui_window = { context_type = player_context window_name = "HSM_BAR_service_gui_window"
+ visible = { HSM_BAR_service_gui_available = yes has_variable = HSM_BAR_service_gui_open }
+ dynamic_lists = { HSM_BAR_service_gui_subject_list = { array = HSM_BAR_service_gui_subjects value = HSM_BAR_service_gui_subject_entry entry_container = "HSM_BAR_service_gui_subject_row" }
+ HSM_BAR_service_gui_action_list = { array = HSM_BAR_service_gui_actions value = HSM_BAR_service_gui_entry entry_container = "HSM_BAR_service_gui_action_row" } }
+ properties = { HSM_BAR_service_gui_subject_button = { image = "[GetHSMBARServiceRowSkin]" }
+ HSM_BAR_service_gui_region_1 = { image = "[GetHSMBARServiceRegion1]" }
+HSM_BAR_service_gui_region_2 = { image = "[GetHSMBARServiceRegion2]" }
+HSM_BAR_service_gui_region_3 = { image = "[GetHSMBARServiceRegion3]" }
+HSM_BAR_service_gui_region_4 = { image = "[GetHSMBARServiceRegion4]" }
+HSM_BAR_service_gui_region_5 = { image = "[GetHSMBARServiceRegion5]" }
+HSM_BAR_service_gui_region_6 = { image = "[GetHSMBARServiceRegion6]" } }
+ triggers = { HSM_BAR_service_gui_start_click_enabled = { OR = { AND = { check_variable = { HSM_BAR_service_gui_entry = 1 } HSM_BAR_service_gui_case_local_survey_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 2 } HSM_BAR_investigation_rock_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 3 } HSM_BAR_service_gui_case_rock_protect_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 4 } HSM_BAR_service_gui_case_rock_restrict_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 5 } HSM_BAR_investigation_titan_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 6 } HSM_BAR_service_gui_case_titan_protect_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 7 } HSM_BAR_service_gui_case_titan_restrict_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 8 } HSM_BAR_investigation_entity_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 9 } HSM_BAR_service_gui_case_entity_protect_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 10 } HSM_BAR_service_gui_case_entity_restrict_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 11 } HSM_BAR_investigation_amulet_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 12 } HSM_BAR_service_gui_case_amulet_protect_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 13 } HSM_BAR_service_gui_case_amulet_restrict_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 14 } HSM_BAR_investigation_plants_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 15 } HSM_BAR_service_gui_case_plants_protect_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 16 } HSM_BAR_service_gui_case_plants_restrict_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 17 } HSM_BAR_service_gui_case_chalice_investigate_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 18 } HSM_BAR_service_gui_case_chalice_secure_local_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 19 } HSM_BAR_service_gui_case_chalice_seal_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 20 } HSM_BAR_service_gui_case_phylactery_investigate_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 21 } HSM_BAR_service_gui_case_phylactery_secure_local_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 22 } HSM_BAR_service_gui_case_phylactery_seal_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 23 } HSM_BAR_service_gui_case_darkheart_investigate_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 24 } HSM_BAR_service_gui_case_darkheart_secure_local_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 25 } HSM_BAR_service_gui_case_darkheart_seal_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 26 } HSM_BAR_service_gui_case_rosa_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 27 } HSM_BAR_service_gui_case_grover_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 28 } HSM_BAR_service_gui_case_herald_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 29 } HSM_BAR_service_gui_case_sombra_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 30 } HSM_BAR_service_gui_case_crown_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 31 } HSM_BAR_service_gui_case_crown_secure_local_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 32 } HSM_BAR_service_gui_case_grover_secure_local_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 33 } HSM_BAR_service_gui_case_grover_inter_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 34 } HSM_BAR_service_gui_case_occupied_archives_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 35 } HSM_BAR_service_gui_rumor_sombra_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 36 } HSM_BAR_service_gui_rumor_darkheart_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 37 } HSM_BAR_service_gui_rumor_crown_equus_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 38 } HSM_BAR_service_gui_rumor_grover_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 39 } HSM_BAR_service_gui_rumor_herald_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 40 } HSM_BAR_service_gui_rumor_crown_griffonia_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 41 } HSM_BAR_service_gui_rumor_rosa_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 42 } HSM_BAR_service_gui_rumor_chalice_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 43 } HSM_BAR_service_gui_rumor_phylactery_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 44 } HSM_BAR_investigation_echo_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 45 } HSM_BAR_investigation_compass_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 46 } HSM_BAR_service_gui_rumor_reactor_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 47 } HSM_BAR_service_gui_rumor_marsh_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 48 } HSM_BAR_service_gui_rumor_zebrica_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 49 } HSM_BAR_service_gui_rumor_crown_zebrica_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 50 } HSM_BAR_service_gui_study_rock_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 51 } HSM_BAR_service_gui_study_rock_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 52 } HSM_BAR_service_gui_study_titan_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 53 } HSM_BAR_service_gui_study_titan_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 54 } HSM_BAR_service_gui_study_entity_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 55 } HSM_BAR_service_gui_study_entity_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 56 } HSM_BAR_service_gui_study_amulet_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 57 } HSM_BAR_service_gui_study_amulet_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 58 } HSM_BAR_service_gui_study_plants_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 59 } HSM_BAR_service_gui_study_plants_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 60 } HSM_BAR_service_gui_study_reactor_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 61 } HSM_BAR_service_gui_study_reactor_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 62 } HSM_BAR_service_gui_study_crown_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 63 } HSM_BAR_service_gui_study_crown_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 64 } HSM_BAR_service_gui_study_chalice_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 65 } HSM_BAR_service_gui_study_chalice_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 66 } HSM_BAR_service_gui_study_phylactery_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 67 } HSM_BAR_service_gui_study_phylactery_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 68 } HSM_BAR_service_gui_study_darkheart_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 69 } HSM_BAR_service_gui_study_darkheart_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 70 } HSM_BAR_service_gui_study_grover_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 71 } HSM_BAR_service_gui_study_grover_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 72 } HSM_BAR_service_gui_study_rosa_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 73 } HSM_BAR_service_gui_study_rosa_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 74 } HSM_BAR_service_gui_study_herald_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 75 } HSM_BAR_service_gui_study_herald_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 76 } HSM_BAR_service_gui_study_sombra_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 77 } HSM_BAR_service_gui_study_sombra_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 78 } HSM_BAR_service_gui_study_echo_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 79 } HSM_BAR_service_gui_study_echo_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 80 } HSM_BAR_service_gui_study_marsh_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 81 } HSM_BAR_service_gui_study_marsh_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 82 } HSM_BAR_service_gui_study_compass_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 83 } HSM_BAR_service_gui_study_compass_disposition_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 84 } HSM_BAR_service_gui_replicate_bulletin_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 85 } HSM_BAR_service_gui_review_retrieval_order_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 86 } HSM_BAR_service_gui_trace_couriers_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 87 } HSM_BAR_service_gui_watched_transfer_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 88 } HSM_BAR_service_gui_contact_smile_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 89 } HSM_BAR_service_gui_share_wards_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 90 } HSM_BAR_service_gui_assist_against_sombra_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 91 } HSM_BAR_service_gui_sombra_volunteer_mission_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 92 } HSM_BAR_service_gui_abort_suppression_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 93 } HSM_BAR_service_gui_residencies_equus_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 94 } HSM_BAR_service_gui_residencies_griffonia_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 95 } HSM_BAR_service_gui_residencies_north_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 96 } HSM_BAR_service_gui_residencies_riverlands_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 97 } HSM_BAR_service_gui_residencies_zebrica_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 98 } HSM_BAR_service_gui_residencies_comparison_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 99 } HSM_BAR_service_gui_residencies_reply_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 100 } HSM_BAR_service_gui_residencies_papers_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 101 } HSM_BAR_service_gui_residencies_exchange_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 102 } HSM_BAR_service_gui_residencies_aftermath_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 103 } HSM_BAR_service_gui_residencies_review_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 104 } HSM_BAR_service_gui_normalization_grid_equus_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 105 } HSM_BAR_service_gui_normalization_grid_griffonia_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 106 } HSM_BAR_service_gui_normalization_grid_north_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 107 } HSM_BAR_service_gui_normalization_grid_riverlands_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 108 } HSM_BAR_service_gui_normalization_grid_zebrica_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 109 } HSM_BAR_service_gui_normalization_activate_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 110 } HSM_BAR_service_gui_normalization_restore_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 111 } HSM_BAR_service_gui_normalization_press_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 112 } HSM_BAR_service_gui_normalization_arm_without_magic_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 113 } HSM_BAR_service_gui_recover_science_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 114 } HSM_BAR_service_gui_reclaim_fields_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 115 } HSM_BAR_service_gui_heal_homeland_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 116 } HSM_BAR_service_gui_research_wards_fallback_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 117 } HSM_BAR_service_gui_research_wards_resume_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 118 } HSM_BAR_service_gui_research_containment_fallback_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 119 } HSM_BAR_service_gui_research_containment_resume_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 120 } HSM_BAR_service_gui_research_forensics_fallback_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 121 } HSM_BAR_service_gui_research_forensics_resume_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 122 } HSM_BAR_service_gui_research_suppression_fallback_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 123 } HSM_BAR_service_gui_research_suppression_resume_can_start = yes }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 124 } HSM_BAR_service_gui_research_restore_facility_can_start = yes } } }
+HSM_BAR_service_gui_investigate_visible = { OR = { AND = { check_variable = { HSM_BAR_service_gui_subject = 1 } HSM_BAR_investigation_rock_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 2 } HSM_BAR_investigation_titan_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 3 } HSM_BAR_investigation_entity_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 4 } HSM_BAR_investigation_amulet_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 17 } HSM_BAR_investigation_plants_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 14 } HSM_BAR_investigation_echo_can_open = yes }
+AND = { check_variable = { HSM_BAR_service_gui_subject = 16 } HSM_BAR_investigation_compass_can_open = yes } } }
+HSM_BAR_service_gui_cancel_visible = { OR = { AND = { check_variable = { HSM_BAR_service_gui_entry = 1 } has_country_flag = HSM_BAR_service_gui_case_local_survey_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 2 } has_country_flag = HSM_BAR_service_gui_case_rock_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 5 } has_country_flag = HSM_BAR_service_gui_case_titan_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 8 } has_country_flag = HSM_BAR_service_gui_case_entity_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 11 } has_country_flag = HSM_BAR_service_gui_case_amulet_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 14 } has_country_flag = HSM_BAR_service_gui_case_plants_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 17 } has_country_flag = HSM_BAR_service_gui_case_chalice_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 20 } has_country_flag = HSM_BAR_service_gui_case_phylactery_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 23 } has_country_flag = HSM_BAR_service_gui_case_darkheart_investigate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 35 } has_country_flag = HSM_BAR_service_gui_rumor_sombra_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 36 } has_country_flag = HSM_BAR_service_gui_rumor_darkheart_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 37 } has_country_flag = HSM_BAR_service_gui_rumor_crown_equus_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 38 } has_country_flag = HSM_BAR_service_gui_rumor_grover_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 39 } has_country_flag = HSM_BAR_service_gui_rumor_herald_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 40 } has_country_flag = HSM_BAR_service_gui_rumor_crown_griffonia_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 41 } has_country_flag = HSM_BAR_service_gui_rumor_rosa_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 42 } has_country_flag = HSM_BAR_service_gui_rumor_chalice_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 43 } has_country_flag = HSM_BAR_service_gui_rumor_phylactery_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 44 } has_country_flag = HSM_BAR_service_gui_rumor_echo_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 45 } has_country_flag = HSM_BAR_service_gui_rumor_compass_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 46 } has_country_flag = HSM_BAR_service_gui_rumor_reactor_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 47 } has_country_flag = HSM_BAR_service_gui_rumor_marsh_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 48 } has_country_flag = HSM_BAR_service_gui_rumor_zebrica_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 49 } has_country_flag = HSM_BAR_service_gui_rumor_crown_zebrica_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 50 } has_country_flag = HSM_BAR_service_gui_study_rock_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 52 } has_country_flag = HSM_BAR_service_gui_study_titan_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 54 } has_country_flag = HSM_BAR_service_gui_study_entity_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 56 } has_country_flag = HSM_BAR_service_gui_study_amulet_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 58 } has_country_flag = HSM_BAR_service_gui_study_plants_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 60 } has_country_flag = HSM_BAR_service_gui_study_reactor_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 62 } has_country_flag = HSM_BAR_service_gui_study_crown_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 64 } has_country_flag = HSM_BAR_service_gui_study_chalice_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 66 } has_country_flag = HSM_BAR_service_gui_study_phylactery_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 68 } has_country_flag = HSM_BAR_service_gui_study_darkheart_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 70 } has_country_flag = HSM_BAR_service_gui_study_grover_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 72 } has_country_flag = HSM_BAR_service_gui_study_rosa_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 74 } has_country_flag = HSM_BAR_service_gui_study_herald_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 76 } has_country_flag = HSM_BAR_service_gui_study_sombra_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 78 } has_country_flag = HSM_BAR_service_gui_study_echo_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 80 } has_country_flag = HSM_BAR_service_gui_study_marsh_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 82 } has_country_flag = HSM_BAR_service_gui_study_compass_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 84 } has_country_flag = HSM_BAR_service_gui_replicate_bulletin_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 85 } has_country_flag = HSM_BAR_service_gui_review_retrieval_order_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 86 } has_country_flag = HSM_BAR_service_gui_trace_couriers_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 87 } has_country_flag = HSM_BAR_service_gui_watched_transfer_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 93 } has_country_flag = HSM_BAR_service_gui_residencies_equus_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 94 } has_country_flag = HSM_BAR_service_gui_residencies_griffonia_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 95 } has_country_flag = HSM_BAR_service_gui_residencies_north_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 96 } has_country_flag = HSM_BAR_service_gui_residencies_riverlands_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 97 } has_country_flag = HSM_BAR_service_gui_residencies_zebrica_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 98 } has_country_flag = HSM_BAR_service_gui_residencies_comparison_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 99 } has_country_flag = HSM_BAR_service_gui_residencies_reply_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 100 } has_country_flag = HSM_BAR_service_gui_residencies_papers_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 101 } has_country_flag = HSM_BAR_service_gui_residencies_exchange_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 102 } has_country_flag = HSM_BAR_service_gui_residencies_aftermath_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 103 } has_country_flag = HSM_BAR_service_gui_residencies_review_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 104 } has_country_flag = HSM_BAR_service_gui_normalization_grid_equus_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 105 } has_country_flag = HSM_BAR_service_gui_normalization_grid_griffonia_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 106 } has_country_flag = HSM_BAR_service_gui_normalization_grid_north_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 107 } has_country_flag = HSM_BAR_service_gui_normalization_grid_riverlands_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 108 } has_country_flag = HSM_BAR_service_gui_normalization_grid_zebrica_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 109 } has_country_flag = HSM_BAR_service_gui_normalization_activate_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 110 } has_country_flag = HSM_BAR_service_gui_normalization_restore_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 111 } has_country_flag = HSM_BAR_service_gui_normalization_press_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 112 } has_country_flag = HSM_BAR_service_gui_normalization_arm_without_magic_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 113 } has_country_flag = HSM_BAR_service_gui_recover_science_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 114 } has_country_flag = HSM_BAR_service_gui_reclaim_fields_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 115 } has_country_flag = HSM_BAR_service_gui_heal_homeland_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 116 } has_country_flag = HSM_BAR_service_gui_research_wards_fallback_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 118 } has_country_flag = HSM_BAR_service_gui_research_containment_fallback_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 120 } has_country_flag = HSM_BAR_service_gui_research_forensics_fallback_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 122 } has_country_flag = HSM_BAR_service_gui_research_suppression_fallback_running }
+AND = { check_variable = { HSM_BAR_service_gui_entry = 124 } has_country_flag = HSM_BAR_service_gui_research_restore_facility_running } } }
+HSM_BAR_service_gui_empty_visible = { check_variable = { HSM_BAR_service_gui_actions^num = 0 } }
+HSM_BAR_service_gui_fielddesk_click_enabled = { has_country_flag = HSM_BAR_foreign_mandate }
+HSM_BAR_service_gui_region_1_click_enabled = { HSM_BAR_service_gui_region_1_open = yes }
+HSM_BAR_service_gui_region_2_click_enabled = { HSM_BAR_service_gui_region_2_open = yes }
+HSM_BAR_service_gui_region_3_click_enabled = { HSM_BAR_service_gui_region_3_open = yes }
+HSM_BAR_service_gui_region_4_click_enabled = { HSM_BAR_service_gui_region_4_open = yes }
+HSM_BAR_service_gui_region_5_click_enabled = { HSM_BAR_service_gui_region_5_open = yes }
+HSM_BAR_service_gui_region_6_click_enabled = { HSM_BAR_service_gui_region_6_open = yes }
+ } effects = { HSM_BAR_service_gui_close_click = { clear_variable = HSM_BAR_service_gui_open }
+HSM_BAR_service_gui_subject_button_click = { if = { limit = { HSM_BAR_service_gui_available = yes is_in_array = { array = HSM_BAR_service_gui_subjects value = HSM_BAR_service_gui_subject_entry } } set_variable = { HSM_BAR_service_gui_subject = HSM_BAR_service_gui_subject_entry } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_archive_click = { if = { limit = { HSM_BAR_service_gui_available = yes } set_variable = { HSM_BAR_archive_region = HSM_BAR_service_gui_region } set_variable = { HSM_BAR_archive_page = 1 } set_variable = { HSM_BAR_archive_case = HSM_BAR_service_gui_subject } set_variable = { HSM_BAR_archive_document = 1 } clear_variable = HSM_BAR_archive_copy clear_variable = HSM_BAR_service_gui_open set_variable = { HSM_BAR_archive_open = 1 } HSM_BAR_archive_refresh = yes } }
+HSM_BAR_service_gui_fielddesk_click = { if = { limit = { HSM_BAR_service_gui_available = yes } clear_variable = HSM_BAR_service_gui_open set_variable = { HSM_BAR_fielddesk_open = 1 } HSM_BAR_fielddesk_refresh = yes } }
+HSM_BAR_service_gui_investigate_click = { if = { limit = { HSM_BAR_service_gui_available = yes } if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 1 } } HSM_BAR_investigation_rock_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 2 } } HSM_BAR_investigation_titan_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 3 } } HSM_BAR_investigation_entity_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 4 } } HSM_BAR_investigation_amulet_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 17 } } HSM_BAR_investigation_plants_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 14 } } HSM_BAR_investigation_echo_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_subject = 16 } } HSM_BAR_investigation_compass_open = yes } } }
+HSM_BAR_service_gui_queue_click = { if = { limit = { has_country_flag = HSM_BAR_service_gui_queue } clr_country_flag = HSM_BAR_service_gui_queue } else = { set_country_flag = HSM_BAR_service_gui_queue } HSM_BAR_service_gui_refresh = yes }
+HSM_BAR_service_gui_start_click = { hidden_effect = { if = { limit = { HSM_BAR_service_gui_available = yes is_in_array = { array = HSM_BAR_service_gui_actions value = HSM_BAR_service_gui_entry } }
+ if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 1 } } HSM_BAR_service_gui_case_local_survey_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 2 } } HSM_BAR_investigation_rock_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 3 } } HSM_BAR_service_gui_case_rock_protect_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 4 } } HSM_BAR_service_gui_case_rock_restrict_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 5 } } HSM_BAR_investigation_titan_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 6 } } HSM_BAR_service_gui_case_titan_protect_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 7 } } HSM_BAR_service_gui_case_titan_restrict_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 8 } } HSM_BAR_investigation_entity_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 9 } } HSM_BAR_service_gui_case_entity_protect_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 10 } } HSM_BAR_service_gui_case_entity_restrict_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 11 } } HSM_BAR_investigation_amulet_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 12 } } HSM_BAR_service_gui_case_amulet_protect_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 13 } } HSM_BAR_service_gui_case_amulet_restrict_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 14 } } HSM_BAR_investigation_plants_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 15 } } HSM_BAR_service_gui_case_plants_protect_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 16 } } HSM_BAR_service_gui_case_plants_restrict_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 17 } } HSM_BAR_service_gui_case_chalice_investigate_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 18 } } HSM_BAR_service_gui_case_chalice_secure_local_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 19 } } HSM_BAR_service_gui_case_chalice_seal_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 20 } } HSM_BAR_service_gui_case_phylactery_investigate_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 21 } } HSM_BAR_service_gui_case_phylactery_secure_local_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 22 } } HSM_BAR_service_gui_case_phylactery_seal_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 23 } } HSM_BAR_service_gui_case_darkheart_investigate_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 24 } } HSM_BAR_service_gui_case_darkheart_secure_local_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 25 } } HSM_BAR_service_gui_case_darkheart_seal_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 26 } } HSM_BAR_service_gui_case_rosa_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 27 } } HSM_BAR_service_gui_case_grover_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 28 } } HSM_BAR_service_gui_case_herald_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 29 } } HSM_BAR_service_gui_case_sombra_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 30 } } HSM_BAR_service_gui_case_crown_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 31 } } HSM_BAR_service_gui_case_crown_secure_local_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 32 } } HSM_BAR_service_gui_case_grover_secure_local_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 33 } } HSM_BAR_service_gui_case_grover_inter_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 34 } } HSM_BAR_service_gui_case_occupied_archives_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 35 } } HSM_BAR_service_gui_rumor_sombra_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 36 } } HSM_BAR_service_gui_rumor_darkheart_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 37 } } HSM_BAR_service_gui_rumor_crown_equus_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 38 } } HSM_BAR_service_gui_rumor_grover_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 39 } } HSM_BAR_service_gui_rumor_herald_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 40 } } HSM_BAR_service_gui_rumor_crown_griffonia_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 41 } } HSM_BAR_service_gui_rumor_rosa_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 42 } } HSM_BAR_service_gui_rumor_chalice_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 43 } } HSM_BAR_service_gui_rumor_phylactery_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 44 } } HSM_BAR_investigation_echo_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 45 } } HSM_BAR_investigation_compass_open = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 46 } } HSM_BAR_service_gui_rumor_reactor_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 47 } } HSM_BAR_service_gui_rumor_marsh_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 48 } } HSM_BAR_service_gui_rumor_zebrica_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 49 } } HSM_BAR_service_gui_rumor_crown_zebrica_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 50 } } HSM_BAR_service_gui_study_rock_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 51 } } HSM_BAR_service_gui_study_rock_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 52 } } HSM_BAR_service_gui_study_titan_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 53 } } HSM_BAR_service_gui_study_titan_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 54 } } HSM_BAR_service_gui_study_entity_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 55 } } HSM_BAR_service_gui_study_entity_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 56 } } HSM_BAR_service_gui_study_amulet_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 57 } } HSM_BAR_service_gui_study_amulet_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 58 } } HSM_BAR_service_gui_study_plants_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 59 } } HSM_BAR_service_gui_study_plants_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 60 } } HSM_BAR_service_gui_study_reactor_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 61 } } HSM_BAR_service_gui_study_reactor_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 62 } } HSM_BAR_service_gui_study_crown_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 63 } } HSM_BAR_service_gui_study_crown_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 64 } } HSM_BAR_service_gui_study_chalice_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 65 } } HSM_BAR_service_gui_study_chalice_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 66 } } HSM_BAR_service_gui_study_phylactery_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 67 } } HSM_BAR_service_gui_study_phylactery_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 68 } } HSM_BAR_service_gui_study_darkheart_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 69 } } HSM_BAR_service_gui_study_darkheart_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 70 } } HSM_BAR_service_gui_study_grover_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 71 } } HSM_BAR_service_gui_study_grover_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 72 } } HSM_BAR_service_gui_study_rosa_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 73 } } HSM_BAR_service_gui_study_rosa_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 74 } } HSM_BAR_service_gui_study_herald_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 75 } } HSM_BAR_service_gui_study_herald_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 76 } } HSM_BAR_service_gui_study_sombra_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 77 } } HSM_BAR_service_gui_study_sombra_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 78 } } HSM_BAR_service_gui_study_echo_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 79 } } HSM_BAR_service_gui_study_echo_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 80 } } HSM_BAR_service_gui_study_marsh_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 81 } } HSM_BAR_service_gui_study_marsh_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 82 } } HSM_BAR_service_gui_study_compass_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 83 } } HSM_BAR_service_gui_study_compass_disposition_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 84 } } HSM_BAR_service_gui_replicate_bulletin_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 85 } } HSM_BAR_service_gui_review_retrieval_order_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 86 } } HSM_BAR_service_gui_trace_couriers_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 87 } } HSM_BAR_service_gui_watched_transfer_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 88 } } HSM_BAR_service_gui_contact_smile_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 89 } } HSM_BAR_service_gui_share_wards_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 90 } } HSM_BAR_service_gui_assist_against_sombra_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 91 } } HSM_BAR_service_gui_sombra_volunteer_mission_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 92 } } HSM_BAR_service_gui_abort_suppression_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 93 } } HSM_BAR_service_gui_residencies_equus_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 94 } } HSM_BAR_service_gui_residencies_griffonia_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 95 } } HSM_BAR_service_gui_residencies_north_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 96 } } HSM_BAR_service_gui_residencies_riverlands_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 97 } } HSM_BAR_service_gui_residencies_zebrica_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 98 } } HSM_BAR_service_gui_residencies_comparison_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 99 } } HSM_BAR_service_gui_residencies_reply_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 100 } } HSM_BAR_service_gui_residencies_papers_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 101 } } HSM_BAR_service_gui_residencies_exchange_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 102 } } HSM_BAR_service_gui_residencies_aftermath_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 103 } } HSM_BAR_service_gui_residencies_review_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 104 } } HSM_BAR_service_gui_normalization_grid_equus_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 105 } } HSM_BAR_service_gui_normalization_grid_griffonia_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 106 } } HSM_BAR_service_gui_normalization_grid_north_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 107 } } HSM_BAR_service_gui_normalization_grid_riverlands_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 108 } } HSM_BAR_service_gui_normalization_grid_zebrica_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 109 } } HSM_BAR_service_gui_normalization_activate_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 110 } } HSM_BAR_service_gui_normalization_restore_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 111 } } HSM_BAR_service_gui_normalization_press_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 112 } } HSM_BAR_service_gui_normalization_arm_without_magic_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 113 } } HSM_BAR_service_gui_recover_science_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 114 } } HSM_BAR_service_gui_reclaim_fields_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 115 } } HSM_BAR_service_gui_heal_homeland_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 116 } } HSM_BAR_service_gui_research_wards_fallback_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 117 } } HSM_BAR_service_gui_research_wards_resume_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 118 } } HSM_BAR_service_gui_research_containment_fallback_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 119 } } HSM_BAR_service_gui_research_containment_resume_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 120 } } HSM_BAR_service_gui_research_forensics_fallback_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 121 } } HSM_BAR_service_gui_research_forensics_resume_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 122 } } HSM_BAR_service_gui_research_suppression_fallback_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 123 } } HSM_BAR_service_gui_research_suppression_resume_start = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 124 } } HSM_BAR_service_gui_research_restore_facility_start = yes }
+ HSM_BAR_service_gui_refresh = yes } } }
+HSM_BAR_service_gui_cancel_click = { hidden_effect = { if = { limit = { HSM_BAR_service_gui_available = yes }
+ if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 1 } } HSM_BAR_service_gui_case_local_survey_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 2 } } HSM_BAR_service_gui_case_rock_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 5 } } HSM_BAR_service_gui_case_titan_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 8 } } HSM_BAR_service_gui_case_entity_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 11 } } HSM_BAR_service_gui_case_amulet_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 14 } } HSM_BAR_service_gui_case_plants_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 17 } } HSM_BAR_service_gui_case_chalice_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 20 } } HSM_BAR_service_gui_case_phylactery_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 23 } } HSM_BAR_service_gui_case_darkheart_investigate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 35 } } HSM_BAR_service_gui_rumor_sombra_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 36 } } HSM_BAR_service_gui_rumor_darkheart_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 37 } } HSM_BAR_service_gui_rumor_crown_equus_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 38 } } HSM_BAR_service_gui_rumor_grover_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 39 } } HSM_BAR_service_gui_rumor_herald_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 40 } } HSM_BAR_service_gui_rumor_crown_griffonia_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 41 } } HSM_BAR_service_gui_rumor_rosa_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 42 } } HSM_BAR_service_gui_rumor_chalice_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 43 } } HSM_BAR_service_gui_rumor_phylactery_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 44 } } HSM_BAR_service_gui_rumor_echo_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 45 } } HSM_BAR_service_gui_rumor_compass_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 46 } } HSM_BAR_service_gui_rumor_reactor_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 47 } } HSM_BAR_service_gui_rumor_marsh_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 48 } } HSM_BAR_service_gui_rumor_zebrica_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 49 } } HSM_BAR_service_gui_rumor_crown_zebrica_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 50 } } HSM_BAR_service_gui_study_rock_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 52 } } HSM_BAR_service_gui_study_titan_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 54 } } HSM_BAR_service_gui_study_entity_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 56 } } HSM_BAR_service_gui_study_amulet_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 58 } } HSM_BAR_service_gui_study_plants_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 60 } } HSM_BAR_service_gui_study_reactor_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 62 } } HSM_BAR_service_gui_study_crown_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 64 } } HSM_BAR_service_gui_study_chalice_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 66 } } HSM_BAR_service_gui_study_phylactery_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 68 } } HSM_BAR_service_gui_study_darkheart_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 70 } } HSM_BAR_service_gui_study_grover_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 72 } } HSM_BAR_service_gui_study_rosa_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 74 } } HSM_BAR_service_gui_study_herald_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 76 } } HSM_BAR_service_gui_study_sombra_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 78 } } HSM_BAR_service_gui_study_echo_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 80 } } HSM_BAR_service_gui_study_marsh_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 82 } } HSM_BAR_service_gui_study_compass_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 84 } } HSM_BAR_service_gui_replicate_bulletin_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 85 } } HSM_BAR_service_gui_review_retrieval_order_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 86 } } HSM_BAR_service_gui_trace_couriers_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 87 } } HSM_BAR_service_gui_watched_transfer_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 93 } } HSM_BAR_service_gui_residencies_equus_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 94 } } HSM_BAR_service_gui_residencies_griffonia_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 95 } } HSM_BAR_service_gui_residencies_north_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 96 } } HSM_BAR_service_gui_residencies_riverlands_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 97 } } HSM_BAR_service_gui_residencies_zebrica_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 98 } } HSM_BAR_service_gui_residencies_comparison_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 99 } } HSM_BAR_service_gui_residencies_reply_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 100 } } HSM_BAR_service_gui_residencies_papers_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 101 } } HSM_BAR_service_gui_residencies_exchange_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 102 } } HSM_BAR_service_gui_residencies_aftermath_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 103 } } HSM_BAR_service_gui_residencies_review_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 104 } } HSM_BAR_service_gui_normalization_grid_equus_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 105 } } HSM_BAR_service_gui_normalization_grid_griffonia_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 106 } } HSM_BAR_service_gui_normalization_grid_north_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 107 } } HSM_BAR_service_gui_normalization_grid_riverlands_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 108 } } HSM_BAR_service_gui_normalization_grid_zebrica_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 109 } } HSM_BAR_service_gui_normalization_activate_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 110 } } HSM_BAR_service_gui_normalization_restore_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 111 } } HSM_BAR_service_gui_normalization_press_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 112 } } HSM_BAR_service_gui_normalization_arm_without_magic_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 113 } } HSM_BAR_service_gui_recover_science_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 114 } } HSM_BAR_service_gui_reclaim_fields_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 115 } } HSM_BAR_service_gui_heal_homeland_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 116 } } HSM_BAR_service_gui_research_wards_fallback_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 118 } } HSM_BAR_service_gui_research_containment_fallback_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 120 } } HSM_BAR_service_gui_research_forensics_fallback_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 122 } } HSM_BAR_service_gui_research_suppression_fallback_cancel = yes }
+if = { limit = { check_variable = { HSM_BAR_service_gui_entry = 124 } } HSM_BAR_service_gui_research_restore_facility_cancel = yes }
+ HSM_BAR_service_gui_refresh = yes } } }
+HSM_BAR_service_gui_region_1_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_1_open = yes } set_variable = { HSM_BAR_service_gui_region = 1 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_region_2_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_2_open = yes } set_variable = { HSM_BAR_service_gui_region = 2 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_region_3_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_3_open = yes } set_variable = { HSM_BAR_service_gui_region = 3 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_region_4_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_4_open = yes } set_variable = { HSM_BAR_service_gui_region = 4 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_region_5_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_5_open = yes } set_variable = { HSM_BAR_service_gui_region = 5 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+HSM_BAR_service_gui_region_6_click = { if = { limit = { HSM_BAR_service_gui_available = yes HSM_BAR_service_gui_region_6_open = yes } set_variable = { HSM_BAR_service_gui_region = 6 } set_variable = { HSM_BAR_service_gui_subject = 0 } clr_country_flag = HSM_BAR_service_gui_queue HSM_BAR_service_gui_refresh = yes } }
+ }
+ } }

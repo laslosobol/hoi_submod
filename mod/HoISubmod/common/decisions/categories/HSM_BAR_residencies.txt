@@ -1,0 +1,20 @@
+HSM_BAR_residencies_reports = {
+ icon = generic_research
+ allowed = { original_tag = BAR }
+ visible = { HSM_BAR_service_legacy_visible = yes
+  HSM_BAR_residencies_actor = yes
+  OR = {
+   has_country_flag = HSM_BAR_region_equus_open
+   has_country_flag = HSM_BAR_region_griffonia_open
+   has_country_flag = HSM_BAR_region_north_open
+   has_country_flag = HSM_BAR_region_riverlands_open
+   has_country_flag = HSM_BAR_region_zebrica_open
+  }
+ }
+}
+HSM_BAR_residencies_countertrade = {
+ icon = generic_political_discourse
+ allowed = { original_tag = BAR }
+ visible = { HSM_BAR_service_legacy_visible = yes HSM_BAR_residencies_actor = yes has_country_flag = HSM_BAR_residencies_started }
+}
+
