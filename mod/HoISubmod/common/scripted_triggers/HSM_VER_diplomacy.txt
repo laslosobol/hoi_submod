@@ -1,0 +1,95 @@
+# These checks use the actual participants, never the current event's FROM.
+HSM_VER_two_free_houses = {
+	ERI = { exists = yes is_subject = no has_capitulated = no }
+	EYR = { exists = yes is_subject = no has_capitulated = no }
+}
+HSM_VER_houses_at_peace = {
+	HSM_VER_two_free_houses = yes
+	ERI = { NOT = { has_war_with = EYR } }
+}
+HSM_VER_armistice_context = {
+	HSM_VER_diplomatic_routes_open = yes
+	HSM_VER_two_free_houses = yes
+	ERI = { has_war = no has_country_leader = { character = ERI_duke_vincent_erie } }
+	EYR = { has_war = no has_country_leader = { character = EYR_duke_iovinus_eyrie } }
+	NOT = { HSM_VER_negotiated_peace_valid = yes }
+}
+HSM_VER_can_offer_armistice = {
+	HSM_VER_armistice_context = yes
+	ERI = { NOT = { has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_armistice_retry } }
+}
+HSM_VER_armistice_valid = {
+	HSM_VER_houses_at_peace = yes
+	ERI = { has_country_flag = HSM_VER_armistice }
+	EYR = { has_country_flag = HSM_VER_armistice }
+}
+HSM_VER_negotiated_peace_valid = {
+	HSM_VER_houses_at_peace = yes
+	ERI = { has_country_flag = HSM_VER_treaty_signed }
+	EYR = { has_country_flag = HSM_VER_treaty_signed }
+}
+HSM_VER_charter_valid = {
+	HSM_VER_negotiated_peace_valid = yes
+	ERI = { has_country_flag = HSM_VER_charter_signed NOT = { has_country_flag = HSM_VER_charter_suspended } }
+	EYR = { has_country_flag = HSM_VER_charter_signed NOT = { has_country_flag = HSM_VER_charter_suspended } }
+}
+HSM_VER_avian_partner = {
+	HSM_VER_CR_union_government = yes
+	AVI = {
+		exists = yes
+		is_subject = no
+		has_capitulated = no
+		NOT = { has_war_with = ERI has_war_with = EYR }
+		has_country_flag = HSM_VER_charter_signed
+		NOT = { has_country_flag = HSM_VER_charter_suspended }
+	}
+}
+HSM_VER_can_offer_treaty = {
+	HSM_VER_diplomatic_routes_open = yes
+	OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes }
+	ERI = { NOT = { has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_treaty_retry } }
+}
+HSM_VER_avian_invitation_valid = {
+	HSM_VER_AVI_intergigantes_route = yes
+	HSM_VER_negotiated_peace_valid = yes
+	ERI = { has_country_flag = HSM_VER_avian_pending }
+	AVI = { exists = yes is_subject = no has_capitulated = no NOT = { has_war_with = ERI has_war_with = EYR has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_congress_observer } }
+}
+HSM_VER_avian_ratification_valid = {
+	HSM_VER_AVI_intergigantes_route = yes
+	HSM_VER_charter_valid = yes
+	AVI = { exists = yes is_subject = no has_capitulated = no has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_avian_charter_pending NOT = { has_war_with = ERI has_war_with = EYR has_country_flag = HSM_VER_charter_signed } }
+}
+HSM_VER_can_form_defensive_league = {
+	HSM_VER_charter_valid = yes
+	ERI = { has_war = no }
+	EYR = { has_war = no }
+	OR = {
+		AND = { ERI = { is_in_faction = no } EYR = { is_in_faction = no } }
+		AND = { ERI = { is_faction_leader = yes } EYR = { OR = { is_in_faction = no is_in_faction_with = ERI } } }
+		AND = { EYR = { is_faction_leader = yes } ERI = { OR = { is_in_faction = no is_in_faction_with = EYR } } }
+		HSM_VER_houses_share_led_faction = yes
+	}
+}
+HSM_VER_defence_league_operational = {
+	HSM_VER_charter_valid = yes
+	HSM_VER_houses_share_led_faction = yes
+}
+HSM_VER_houses_share_led_faction = {
+	ERI = { exists = yes }
+	EYR = { exists = yes }
+	ERI = { is_in_faction_with = EYR }
+	OR = { ERI = { is_faction_leader = yes } EYR = { is_faction_leader = yes } AVI = { exists = yes is_faction_leader = yes is_in_faction_with = ERI } }
+}
+HSM_VER_can_offer_defence = {
+	HSM_VER_can_form_defensive_league = yes
+	ERI = { NOT = { has_country_flag = HSM_VER_defence_pending has_country_flag = HSM_VER_defence_retry has_country_flag = HSM_VER_defence_accepted } }
+}
+HSM_VER_judgement_unresolved = {
+	HSM_VER_charter_valid = yes
+	ERI = {
+		has_completed_focus = HSM_ERI_first_judgement
+		has_country_leader = { character = ERI_duke_vincent_erie }
+		NOT = { has_country_flag = HSM_VER_judgement_resolved has_country_flag = HSM_VER_court_respected has_country_flag = HSM_VER_royal_exception }
+	}
+}

@@ -1,0 +1,199 @@
+add_namespace = hsm_ver_zypressen
+country_event = {
+ id = hsm_ver_zypressen.0 title = hsm_ver_zypressen.0.t desc = hsm_ver_zypressen.0.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_entry = yes }
+ option = { name = hsm_ver_zypressen.0.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.1 title = hsm_ver_zypressen.1.t desc = hsm_ver_zypressen.1.d
+ picture = GFX_event_trubach_coronation
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_entry = yes has_country_flag = HSM_ZYP_coronation_pending NOT = { has_country_flag = HSM_ZYP_crowned } }
+ option = { name = hsm_ver_zypressen.1.a ai_chance = { factor = 95 } custom_effect_tooltip = HSM_VER_EVT_AVI_crown_tt hidden_effect = { HSM_ZYP_crown_emperor = yes } }
+ option = {
+  name = hsm_ver_zypressen.1.b ai_chance = { factor = 5 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_crown_defer_tt
+  hidden_effect = { if = { limit = { NOT = { has_country_flag = HSM_ZYP_crowned } } clr_country_flag = HSM_ZYP_coronation_pending set_country_flag = { flag = HSM_ZYP_coronation_retry value = 1 days = 60 } } }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.2 title = hsm_ver_zypressen.2.t desc = hsm_ver_zypressen.2.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_policy_chosen } }
+ option = {
+  name = hsm_ver_zypressen.2.a ai_chance = { factor = 45 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_policy_autonomous_tt
+  hidden_effect = { if = { limit = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_policy_chosen } } set_country_flag = HSM_ZYP_policy_chosen clr_country_flag = HSM_ZYP_policy_pending } }
+ }
+ option = {
+  name = hsm_ver_zypressen.2.b ai_chance = { factor = 55 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_policy_central_tt
+  hidden_effect = { if = { limit = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_policy_chosen } } set_country_flag = HSM_ZYP_policy_chosen set_country_flag = HSM_ZYP_central_proposal clr_country_flag = HSM_ZYP_policy_pending } }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.3 title = hsm_ver_zypressen.3.t
+ desc = { trigger = { HSM_ZYP_grover_dead = yes } text = hsm_ver_zypressen.3.dead.d }
+ desc = { trigger = { HSM_ZYP_grover_local = yes } text = hsm_ver_zypressen.3.local.d }
+ desc = { trigger = { HSM_ZYP_grover_foreign = yes } text = hsm_ver_zypressen.3.foreign.d }
+ desc = { trigger = { HSM_ZYP_grover_unknown = yes } text = hsm_ver_zypressen.3.d }
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.3.a custom_effect_tooltip = HSM_VER_EVT_AVI_grover_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.4 title = hsm_ver_zypressen.4.t desc = hsm_ver_zypressen.4.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_works_chosen } }
+ option = {
+  name = hsm_ver_zypressen.4.a ai_chance = { factor = 50 }
+
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_works_chosen } } }
+   hidden_effect = { set_country_flag = HSM_ZYP_works_chosen } hidden_effect = { clr_country_flag = HSM_ZYP_works_pending }
+   HSM_ZYP_civilian_works = yes
+   add_tech_bonus = { name = HSM_ZYP_construction_bonus bonus = 1 uses = 1 category = construction_tech }
+  }
+ }
+ option = {
+  name = hsm_ver_zypressen.4.b ai_chance = { factor = 50 }
+
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_works_chosen } } }
+   hidden_effect = { set_country_flag = HSM_ZYP_works_chosen } hidden_effect = { clr_country_flag = HSM_ZYP_works_pending }
+   add_ideas = HSM_ZYP_railway_board
+  }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.5 title = hsm_ver_zypressen.5.t desc = hsm_ver_zypressen.5.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_muster_chosen } }
+ option = {
+  name = hsm_ver_zypressen.5.a ai_chance = { factor = 55 }
+
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_muster_chosen } } }
+   hidden_effect = { set_country_flag = HSM_ZYP_muster_chosen } hidden_effect = { clr_country_flag = HSM_ZYP_muster_pending }
+   add_ideas = HSM_ZYP_professional_muster army_experience = 30
+  }
+ }
+ option = {
+  name = hsm_ver_zypressen.5.b ai_chance = { factor = 45 }
+
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes NOT = { has_country_flag = HSM_ZYP_muster_chosen } } }
+   hidden_effect = { set_country_flag = HSM_ZYP_muster_chosen } hidden_effect = { clr_country_flag = HSM_ZYP_muster_pending }
+   add_ideas = HSM_ZYP_limited_muster
+   add_tech_bonus = { name = HSM_ZYP_support_bonus bonus = 1 uses = 1 category = support_tech }
+  }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.6 title = hsm_ver_zypressen.6.t desc = hsm_ver_zypressen.6.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes HSM_ZYP_all_regions_settled = yes has_war = no }
+ option = { name = hsm_ver_zypressen.6.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.7 title = hsm_ver_zypressen.7.t desc = hsm_ver_zypressen.7.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes HSM_ZYP_all_regions_settled = yes has_war = no }
+ option = { name = hsm_ver_zypressen.7.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.10 title = hsm_ver_zypressen.10.t
+ desc = { trigger = { AVI = { has_country_flag = HSM_ZYP_central_proposal } } text = hsm_ver_zypressen.10.central.d }
+ desc = { trigger = { AVI = { NOT = { has_country_flag = HSM_ZYP_central_proposal } } } text = hsm_ver_zypressen.10.d }
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_reply_valid = yes }
+ option = {
+  name = hsm_ver_zypressen.10.a trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_central_offer_tt AVI = { has_country_flag = HSM_ZYP_central_proposal } } } ai_chance = { factor = 45 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_central_sign_tt show_ideas_tooltip = HSM_ZYP_common_ministries
+  if = { limit = { hidden_trigger = { HSM_ZYP_reply_valid = yes AVI = { has_country_flag = HSM_ZYP_central_proposal } } }
+   hidden_effect = { set_country_flag = HSM_ZYP_signed } hidden_effect = { clr_country_flag = HSM_ZYP_refused }
+   hidden_effect = { clr_country_flag = HSM_ZYP_offer_pending }
+   HSM_ZYP_refresh_agreement = yes AVI = { country_event = { id = hsm_ver_zypressen.12 days = 1 } }
+  }
+ }
+ option = {
+  name = hsm_ver_zypressen.10.b trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_autonomous_offer_tt AVI = { NOT = { has_country_flag = HSM_ZYP_central_proposal } } } } ai_chance = { factor = 65 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_autonomous_sign_tt show_ideas_tooltip = HSM_ZYP_autonomous_crown
+  if = { limit = { hidden_trigger = { HSM_ZYP_reply_valid = yes AVI = { NOT = { has_country_flag = HSM_ZYP_central_proposal } } } }
+   HSM_ZYP_sign_autonomous = yes AVI = { country_event = { id = hsm_ver_zypressen.12 days = 1 } }
+  }
+ }
+ option = {
+  name = hsm_ver_zypressen.10.c trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_central_offer_tt AVI = { has_country_flag = HSM_ZYP_central_proposal } } } ai_chance = { factor = 35 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_counter_offer_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_reply_valid = yes AVI = { has_country_flag = HSM_ZYP_central_proposal } } }
+   hidden_effect = { clr_country_flag = HSM_ZYP_offer_pending }
+   hidden_effect = { set_country_flag = { flag = HSM_ZYP_counter_pending value = 1 days = 30 } }
+   AVI = { country_event = { id = hsm_ver_zypressen.11 days = 1 } }
+  }
+ }
+ option = {
+  name = hsm_ver_zypressen.10.e ai_chance = { factor = 20 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_dynastic_refuse_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_reply_valid = yes } }
+   hidden_effect = { clr_country_flag = HSM_ZYP_offer_pending } hidden_effect = { set_country_flag = HSM_ZYP_refused }
+   AVI = { country_event = { id = hsm_ver_zypressen.12 days = 1 } }
+  }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.11 title = hsm_ver_zypressen.11.t desc = hsm_ver_zypressen.11.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes FROM = { HSM_ZYP_counter_valid = yes } }
+ option = {
+  name = hsm_ver_zypressen.11.a ai_chance = { factor = 75 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_counter_accept_tt FROM = { show_ideas_tooltip = HSM_ZYP_autonomous_crown }
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes FROM = { HSM_ZYP_counter_valid = yes } } } FROM = { HSM_ZYP_sign_autonomous = yes } }
+ }
+ option = {
+  name = hsm_ver_zypressen.11.b ai_chance = { factor = 25 }
+  custom_effect_tooltip = HSM_VER_EVT_AVI_counter_refuse_tt
+  hidden_effect = { if = { limit = { HSM_ZYP_active = yes FROM = { HSM_ZYP_counter_valid = yes } } FROM = { clr_country_flag = HSM_ZYP_counter_pending set_country_flag = HSM_ZYP_refused } } }
+ }
+}
+country_event = {
+ id = hsm_ver_zypressen.12 title = hsm_ver_zypressen.12.t desc = hsm_ver_zypressen.12.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.12.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.20 title = hsm_ver_zypressen.20.t desc = hsm_ver_zypressen.20.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.20.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.21 title = hsm_ver_zypressen.21.t desc = hsm_ver_zypressen.21.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.21.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.22 title = hsm_ver_zypressen.22.t desc = hsm_ver_zypressen.22.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.22.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+ id = hsm_ver_zypressen.23 title = hsm_ver_zypressen.23.t desc = hsm_ver_zypressen.23.d
+ picture = GFX_report_event_generic_read_write
+ is_triggered_only = yes timeout_days = 13
+ trigger = { HSM_ZYP_active = yes }
+ option = { name = hsm_ver_zypressen.23.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}

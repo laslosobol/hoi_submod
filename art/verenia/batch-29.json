@@ -1,0 +1,194 @@
+[
+  {
+    "id": "HSM_AVI_hear_the_towns",
+    "target": "HSM_AVI_hear_the_towns",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_hear_the_towns-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_hear_the_towns.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A town-hall hearing bell beside a carrier's wheel and a workshop petition box. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "edit_prompt": "Change ONLY the green ship steering wheel behind the bell into an ordinary land transport wagon wheel: weathered muted-green wooden spokes within a continuous iron tyre rim, no projecting handles. Preserve the hearing bell, petition box, diagrammed papers, material colors, painterly game icon style and transparent exterior. No extra emblems or text.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_charter_without_submission",
+    "target": "HSM_AVI_charter_without_submission",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_charter_without_submission.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_charter_without_submission.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An open charter binder with three equal ratification tabs and a jurisdiction diagram. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_common_accounts",
+    "target": "HSM_AVI_common_accounts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_common_accounts-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_common_accounts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three contribution trays, one filled and two awaiting replies, beside a common works estimate. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "edit_prompt": "Change ONLY the contents of the three green stacked trays: retain paperwork in the TOP tray, remove ALL papers from the middle and bottom trays so these two are visibly completely empty dark-green trays, awaiting replies. Remove the three small blank brass nameplates from the tray fronts. Preserve the separate ledger at right, coins, safe, composition, material colors and transparent exterior. No text or new objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_roads_between_houses",
+    "target": "HSM_AVI_roads_between_houses",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_roads_between_houses.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_roads_between_houses.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two differently built road sections joined by a shared surveying straightedge. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_limited_joint_staff",
+    "target": "HSM_AVI_limited_joint_staff",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_limited_joint_staff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_limited_joint_staff.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A staff map bounded by a clearly drawn jurisdiction frame, with a telephone outside its limit. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_a_court_for_hosts",
+    "target": "HSM_AVI_a_court_for_hosts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_a_court_for_hosts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_a_court_for_hosts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A courtroom balance weighing the host administration's own office key. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_the_first_common_budget",
+    "target": "HSM_AVI_the_first_common_budget",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_the_first_common_budget.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_the_first_common_budget.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A budget abacus beside funded construction models and one deferred bridge section. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_the_unauthorised_levy",
+    "target": "HSM_AVI_the_unauthorised_levy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_the_unauthorised_levy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_the_unauthorised_levy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A supply requisition hook pulling timber beyond a marked allocation line, a broken budget clasp below. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_honour_the_exemptions",
+    "target": "HSM_AVI_honour_the_exemptions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_honour_the_exemptions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_honour_the_exemptions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An untouched exempt materials stack beside a newly paid civilian workshop order. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_common_workshops",
+    "target": "HSM_AVI_common_workshops",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_common_workshops.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_common_workshops.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two engineers' gauges comparing a finished machine component on a shared workbench. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civic bronze/wood, finance green/pewter, precision steel; carrier wheel and contribution-tray contents corrected.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,14 @@
+Verenia common cosmetic flag
+Created: 2026-10-24
+Generator: built-in image_gen (not fallback CLI)
+Source: art/source/HSM_VER_UNIFIED.png
+Exports: mod/HoISubmod/gfx/flags/HSM_VER_UNIFIED.tga (82 x 52),
+         mod/HoISubmod/gfx/flags/medium/HSM_VER_UNIFIED.tga (41 x 26),
+         mod/HoISubmod/gfx/flags/small/HSM_VER_UNIFIED.tga (10 x 7).
+Exporter: tools/Convert-ToHoi4Tga.ps1; opaque background #005642.
+Map and UI colour: RGB 62, 137, 124.
+
+Final generation prompt:
+Use case: logo-brand. Asset type: a finished flat national flag texture for the fantasy country Verenia in a Hearts of Iron IV Equestria at War submod. A common country uniting the Houses of Erie, Eyrie and Avian, not the flag of one house or the Griffonian Empire.
+Produce a single horizontal flag, exact aspect ratio 82:52 (approximately 1.577:1). Flat front-on rectangle filling the whole canvas edge-to-edge, no margins, mockup, flagpole, folds, drop shadow or surroundings.
+Design: deep emerald-teal field with a broad ivory central horizontal band, edged above and below by narrow antique-gold stripes. At centre place one bold crimson heraldic shield containing a simple elegant ivory griffon with one raised wing and raised foreclaw, facing left. Above the shield, three small gold six-point stars as the three historical houses. No crown, no text or lettering. Restrained medieval civic heraldry with crisp shapes and only a whisper of printed cloth grain; no painterly shading, no gradient. Strong coherent silhouette and few broad details, readable at 82x52 and 41x26 pixels; avoid dense decoration, tiny feather lines or ornate wreaths. The composition should feel like an actual sober state flag. Opaque output.

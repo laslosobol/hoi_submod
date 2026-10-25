@@ -1,0 +1,84 @@
+HSM_VER_AVI_government_available = {
+	HSM_VER_CR_union_government = yes
+	AVI = {
+		exists = yes is_subject = no has_capitulated = no
+		OR = { has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } HSM_VER_REG_successor_government = yes }
+		NOT = { has_completed_focus = communists_win has_completed_focus = loyalists_win has_completed_focus = fascists_win has_completed_focus = the_second_winterfest_ball }
+	}
+}
+HSM_VER_AVI_entry_available = {
+	HSM_VER_AVI_government_available = yes
+	HSM_VER_AVI_intergigantes_route = yes
+	HSM_VER_houses_at_peace = yes
+	AVI = { has_completed_focus = treaty_of_friendship NOT = { has_war_with = ERI has_war_with = EYR } }
+	OR = {
+		HSM_VER_negotiated_peace_valid = yes
+		ERI = { NOT = { has_country_flag = HSM_VER_campaign_active has_country_flag = HSM_VER_treaty_broken } }
+	}
+}
+HSM_VER_AVI_route_active = {
+	HSM_VER_AVI_government_available = yes
+	HSM_VER_AVI_intergigantes_route = yes
+	HSM_VER_negotiated_peace_valid = yes
+	AVI = { has_country_flag = HSM_AVI_preserved_union NOT = { has_war_with = ERI has_war_with = EYR } }
+}
+# Keep native AI political outcomes available through the separate Winterfest choice.
+HSM_VER_AVI_native_crisis_ai = {
+	OR = {
+		has_country_flag = AVI_AI_HISTORICAL
+		has_country_flag = AVI_AI_NEUTRAL_ALTERNATE
+		has_country_flag = AVI_AI_HARMONY_ALTERNATE
+		has_country_flag = AVI_AI_FASCIST_ALTERNATE
+		has_country_flag = AVI_AI_COMMUNIST_ALTERNATE
+		has_game_rule = { rule = AVI_ai_behavior option = HISTORICAL }
+		has_game_rule = { rule = AVI_ai_behavior option = AVI_NEUTRAL_ALTERNATE }
+		has_game_rule = { rule = AVI_ai_behavior option = AVI_HARMONY_ALTERNATE }
+		has_game_rule = { rule = AVI_ai_behavior option = AVI_FASCIST_ALTERNATE }
+		has_game_rule = { rule = AVI_ai_behavior option = AVI_COMMUNIST_ALTERNATE }
+		AND = { is_historical_focus_on = yes has_game_rule = { rule = AVI_ai_behavior option = DEFAULT } }
+	}
+}
+HSM_VER_AVI_three_party_charter = {
+	HSM_VER_AVI_route_active = yes
+	HSM_VER_charter_valid = yes
+	HSM_VER_avian_partner = yes
+}
+HSM_VER_AVI_can_sponsor_charter = {
+	HSM_VER_AVI_route_active = yes
+	ERI = { NOT = { has_country_flag = HSM_VER_charter_pending has_country_flag = HSM_VER_charter_retry has_country_flag = HSM_VER_charter_signed } }
+}
+HSM_VER_AVI_budget_reply_valid = {
+	HSM_VER_AVI_three_party_charter = yes
+	AVI = { has_country_flag = HSM_AVI_budget_prepared }
+	OR = { tag = ERI tag = EYR }
+	has_country_flag = HSM_AVI_budget_pending
+	NOT = { has_country_flag = HSM_AVI_budget_signed }
+}
+HSM_VER_AVI_budget_answers_complete = {
+	ERI = { has_country_flag = HSM_AVI_budget_answered }
+	EYR = { has_country_flag = HSM_AVI_budget_answered }
+}
+HSM_VER_AVI_budget_in_force = {
+	HSM_VER_AVI_three_party_charter = yes
+	AVI = { has_country_flag = HSM_AVI_budget_prepared has_country_flag = HSM_AVI_budget_signed }
+	OR = {
+		AND = { tag = AVI OR = { ERI = { has_country_flag = HSM_AVI_budget_signed } EYR = { has_country_flag = HSM_AVI_budget_signed } } }
+		AND = { OR = { tag = ERI tag = EYR } has_country_flag = HSM_AVI_budget_signed }
+	}
+}
+HSM_VER_AVI_can_reopen_budget = {
+	HSM_VER_AVI_three_party_charter = yes
+	AVI = { has_country_flag = HSM_AVI_budget_prepared }
+	OR = {
+		ERI = { NOT = { has_country_flag = HSM_AVI_budget_signed has_country_flag = HSM_AVI_budget_pending has_country_flag = HSM_AVI_budget_retry } }
+		EYR = { NOT = { has_country_flag = HSM_AVI_budget_signed has_country_flag = HSM_AVI_budget_pending has_country_flag = HSM_AVI_budget_retry } }
+	}
+}
+HSM_VER_AVI_levy_unresolved = {
+	HSM_VER_AVI_three_party_charter = yes
+	AVI = { has_completed_focus = HSM_AVI_the_unauthorised_levy NOT = { has_country_flag = HSM_AVI_levy_resolved } }
+}
+HSM_VER_AVI_settlement_ready = {
+	HSM_VER_AVI_three_party_charter = yes
+	AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+}

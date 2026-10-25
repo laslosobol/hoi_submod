@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		HSM_VER_REG_joint_guardianship = {
+			picture = HSM_VER_ART_HSM_VER_REG_joint_guardianship allowed = { original_tag = AVI } removal_cost = -1
+			cancel = { OR = { NOT = { HSM_VER_REG_agreement_live = yes } NOT = { HSM_VER_REG_local_minor = yes } NOT = { has_country_flag = HSM_VER_REG_regency } } }
+			modifier = { stability_factor = 0.08 political_power_factor = 0.08 political_power_gain = -0.15 }
+		}
+		HSM_VER_REG_civil_settlement = {
+			picture = HSM_VER_ART_HSM_VER_REG_civil_settlement allowed = { original_tag = AVI } removal_cost = -1
+			cancel = { NOT = { HSM_VER_REG_agreement_live = yes } }
+			modifier = { production_speed_infrastructure_factor = 0.10 industry_repair_factor = 0.15 }
+		}
+		HSM_VER_REG_reserved_rights = {
+			picture = HSM_VER_ART_HSM_VER_REG_reserved_rights allowed = { original_tag = AVI } removal_cost = -1
+			cancel = { NOT = { HSM_VER_REG_agreement_live = yes } }
+			modifier = { stability_factor = 0.06 production_factory_efficiency_gain_factor = 0.10 political_power_factor = -0.05 }
+		}
+		HSM_VER_REG_joint_logistics = {
+			picture = HSM_VER_ART_HSM_VER_REG_joint_logistics allowed = { original_tag = AVI } removal_cost = -1
+			cancel = { NOT = { HSM_VER_REG_agreement_live = yes } }
+			modifier = { planning_speed = 0.10 supply_consumption_factor = -0.08 political_power_gain = -0.10 }
+		}
+		HSM_VER_REG_territorial_reserves = {
+			picture = HSM_VER_ART_HSM_VER_REG_territorial_reserves allowed = { original_tag = AVI } removal_cost = -1
+			cancel = { NOT = { HSM_VER_REG_agreement_live = yes } }
+			modifier = { army_core_defence_factor = 0.10 army_morale_factor = 0.10 planning_speed = -0.05 }
+		}
+	}
+}

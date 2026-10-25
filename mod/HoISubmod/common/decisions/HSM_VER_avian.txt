@@ -1,0 +1,37 @@
+HSM_AVI_congress_business = {
+	HSM_AVI_reconvene_charter = {
+		icon = generic_political_discourse
+		visible = { has_completed_focus = HSM_AVI_charter_without_submission ERI = { NOT = { has_country_flag = HSM_VER_charter_signed } } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_charter_ready_tt HSM_VER_AVI_can_sponsor_charter = yes } }
+		cost = 35
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_charter_tt hidden_effect = { HSM_VER_AVI_sponsor_charter = yes } }
+		ai_will_do = { factor = 20 }
+	}
+	HSM_AVI_reaffirm_membership = {
+		icon = generic_political_discourse
+		visible = { HSM_VER_charter_valid = yes NOT = { has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_congress_observer } }
+		available = {
+			custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+			custom_trigger_tooltip = { tooltip = HSM_VER_DEC_membership_wait_tt NOT = { has_country_flag = HSM_VER_avian_charter_pending has_country_flag = HSM_AVI_membership_retry } }
+		}
+		cost = 25
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_membership_tt hidden_effect = { HSM_VER_AVI_reaffirm_membership = yes } }
+		ai_will_do = { factor = 10 }
+	}
+	HSM_AVI_reopen_budget = {
+		icon = generic_political_discourse
+		visible = { has_country_flag = HSM_AVI_budget_prepared OR = { ERI = { NOT = { has_country_flag = HSM_AVI_budget_signed } } EYR = { NOT = { has_country_flag = HSM_AVI_budget_signed } } } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_budget_ready_tt HSM_VER_AVI_can_reopen_budget = yes } }
+		cost = 35
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_budget_tt hidden_effect = { HSM_VER_AVI_offer_budget = yes } }
+		ai_will_do = { factor = 5 }
+	}
+	HSM_AVI_withdraw_levy = {
+		icon = generic_political_discourse
+		visible = { has_country_flag = HSM_AVI_levy_exception }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes } }
+		cost = 100 fire_only_once = yes
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_levy_tt hidden_effect = { HSM_VER_AVI_withdraw_levy = yes } }
+		ai_will_do = { factor = 20 }
+	}
+}

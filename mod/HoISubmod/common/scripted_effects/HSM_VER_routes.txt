@@ -1,0 +1,94 @@
+HSM_VER_choose_diplomacy = {
+	if = {
+		limit = { HSM_VER_diplomatic_routes_open = yes }
+		set_country_flag = HSM_VER_diplomatic_route
+		# AI participation is part of the authored campaign, not a second random gate.
+		if = { limit = { tag = ERI EYR = { is_ai = yes } } EYR = { set_country_flag = HSM_VER_diplomatic_route } }
+		if = { limit = { tag = EYR ERI = { is_ai = yes } } ERI = { set_country_flag = HSM_VER_diplomatic_route } }
+		HSM_VER_promote_route_armistice = yes
+	}
+}
+HSM_VER_promote_route_armistice = {
+	if = {
+		limit = { HSM_VER_armistice_valid = yes OR = { ERI = { has_country_flag = HSM_VER_diplomatic_route } EYR = { has_country_flag = HSM_VER_diplomatic_route } } }
+		# Clear the old timed flag first so migrating saves do not retain its expiry.
+		ERI = { clr_country_flag = HSM_VER_armistice set_country_flag = HSM_VER_armistice }
+		EYR = { clr_country_flag = HSM_VER_armistice set_country_flag = HSM_VER_armistice }
+	}
+}
+HSM_VER_choose_military = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_diplomatic_route } }
+		set_country_flag = HSM_VER_military_route
+		# An envoy dispatched before the route choice cannot commit either House later.
+		ERI = {
+			clr_country_flag = HSM_VER_armistice_pending
+			clr_country_flag = HSM_VER_armistice_offer_unresolved
+			clr_country_flag = HSM_VER_treaty_pending
+			clr_country_flag = HSM_VER_treaty_offer_unresolved
+			clr_country_flag = HSM_VER_charter_pending
+			clr_country_flag = HSM_VER_charter_offer_unresolved
+		}
+	}
+}
+HSM_VER_conclude_armistice = {
+	if = {
+		limit = { HSM_VER_armistice_context = yes NOT = { HSM_VER_armistice_valid = yes } }
+		if = {
+			limit = { HSM_VER_conference_ai_partner = yes }
+			ERI = { set_country_flag = HSM_VER_armistice_pending }
+			HSM_VER_sign_armistice = yes
+			if = { limit = { tag = EYR } country_event = { id = hsm_ver_eyrie.112 days = 1 } }
+		}
+		else_if = {
+			limit = { ERI = { NOT = { has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_armistice_refused } } }
+			ERI = { clr_country_flag = HSM_VER_armistice_retry }
+			if = { limit = { tag = EYR } HSM_VER_eyr_offer_armistice = yes }
+			else = { HSM_VER_offer_armistice = yes }
+		}
+	}
+}
+HSM_VER_conclude_treaty = {
+	if = {
+		limit = { HSM_VER_diplomatic_routes_open = yes HSM_VER_armistice_valid = yes NOT = { HSM_VER_negotiated_peace_valid = yes } }
+		if = {
+			limit = { HSM_VER_conference_ai_partner = yes }
+			HSM_VER_sign_treaty = yes
+			if = { limit = { tag = EYR } country_event = { id = hsm_ver_eyrie.125 days = 1 } }
+			else = { country_event = { id = hsm_verenia.32 days = 1 } }
+		}
+		else_if = {
+			limit = { ERI = { NOT = { has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_treaty_refused } } }
+			ERI = { clr_country_flag = HSM_VER_treaty_retry }
+			if = { limit = { tag = EYR } HSM_VER_eyr_offer_treaty = yes }
+			else = { HSM_VER_offer_treaty = yes }
+		}
+	}
+}
+HSM_VER_migrate_routes = {
+	# Recover completed old signing focuses once; never overwrite a military choice
+	# or a human counterpart's refusal, and never grant unfinished focus rewards.
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_route_revision_3 } }
+		set_country_flag = HSM_VER_route_revision_3
+		if = {
+			limit = { OR = { has_completed_focus = HSM_ERI_FORCE_the_price_of_victory has_completed_focus = HSM_EYR_FORCE_the_last_campaign } }
+			set_country_flag = HSM_VER_military_route
+		}
+		else_if = {
+			limit = { OR = { has_completed_focus = HSM_ERI_offer_armistice has_completed_focus = HSM_EYR_reciprocal_frontier has_completed_focus = HSM_ERI_diplomatic_settlement has_completed_focus = HSM_EYR_diplomatic_settlement } }
+			HSM_VER_choose_diplomacy = yes
+			if = {
+				limit = { HSM_VER_conference_ai_partner = yes OR = { has_completed_focus = HSM_ERI_offer_armistice has_completed_focus = HSM_EYR_reciprocal_frontier } }
+				HSM_VER_conclude_armistice = yes
+				if = { limit = { OR = { has_completed_focus = HSM_ERI_friendship_treaty has_completed_focus = HSM_EYR_friendship_with_safeguards } } HSM_VER_conclude_treaty = yes }
+				if = {
+					limit = { HSM_VER_negotiated_peace_valid = yes OR = { has_completed_focus = HSM_ERI_common_statute has_completed_focus = HSM_EYR_a_charter_we_can_sign } ERI = { NOT = { has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_charter_pending } } }
+					ERI = { clr_country_flag = HSM_VER_charter_retry clr_country_flag = HSM_VER_charter_refused }
+					if = { limit = { tag = EYR } HSM_VER_eyr_offer_charter = yes }
+					else = { HSM_VER_offer_charter = yes }
+				}
+			}
+		}
+	}
+}

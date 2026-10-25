@@ -1,0 +1,5 @@
+on_actions = {
+	# A loaded save receives its one-time reconciliation on the next daily tick.
+	on_daily_ERI = { effect = { HSM_VER_DEV_migrate_ERI = yes } }
+	on_daily_EYR = { effect = { HSM_VER_DEV_migrate_EYR = yes } }
+}

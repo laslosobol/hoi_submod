@@ -1,0 +1,2632 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "count": 49,
+    "selection": "Exactly the native-spirit-briefs records in original order; use after the 100 local spirit briefs. Separate native icons remain required even when effects feed the unified spirit.",
+    "status": "Art guidance only; no approvals, export manifests, bindings or gameplay changes.",
+    "input_sha256": {
+      "art/verenia/native-spirit-briefs.json": "8f10617f01b2feded5f07726f18d152a020bf6f6c63f17a78cfcf8ad6e364238",
+      "art/verenia/palette-guidance.json": "4c8b6d5ba135c614052d1d526db8d06662ed119abdcfb658937baedbf03c49f2",
+      "EaW/common/ideas/zzz_AVI_ideas.txt": "899cfb77b76bc552c8b032752e65c3e4d6b5e4099b95332198a67da95abbb00f"
+    }
+  },
+  "rules": {
+    "style": "Painted HOI4/EaW objects, readable at 64x64, transparent exterior, one dominant assembly and at most two supporting motifs from the unchanged brief.",
+    "precedence": [
+      "Canonical context and explicit brief colors/exclusions",
+      "Per-record contextual material clarifications in this file",
+      "Existing per-object material rules",
+      "Category swatches as optional balance, never a mandatory whole-icon tint"
+    ],
+    "material_policy": "Retain natural materials and sparse highlights. Category mappings and inherited material palettes are copied from palette-guidance; contextual clarifications prevent keyword false matches. Do not add props merely because a material rule mentions them. Explicit brass objects override a generic steel assignment.",
+    "heraldry": "None of these 49 briefs requires a flag or crown. No new heraldry, logos, party insignia, aircraft roundels, external franchise symbols, humans/hands, pseudo-text or invented anatomy. Swatches are not national colors.",
+    "polarity": "Effect character is a semantic interpretation, not ideological endorsement or an automatic reading of numeric signs. Reduced costs/training time can be beneficial. Preserve mixed effects through object state and arrangement; never red=bad/green=good or universal gold/cobalt.",
+    "evidence": "Effects and canonical context are copied from the native briefs; original sprite imagery is not authority for added symbols. Numeric effects are context, not text to render on the icon.",
+    "approval": "This file grants no art approval. Source and 64x64 export visual review, hashes and binding checks remain separate."
+  },
+  "groups": [
+    {
+      "id": "agricultural_stages",
+      "members": [
+        "AVI_agri_1",
+        "AVI_agri_2",
+        "AVI_agri_3"
+      ],
+      "direction": "Sequential storage, mechanised resource use, closed-loop self-sufficiency; distinguish silhouette before color."
+    },
+    {
+      "id": "militarised_society_stages",
+      "members": [
+        "AVI_milsoc_1",
+        "AVI_milsoc_2"
+      ],
+      "direction": "Household training versus formal service pack; retain material family."
+    },
+    {
+      "id": "academy_branches",
+      "members": [
+        "AVI_off_aca",
+        "AVI_off_aca_1",
+        "AVI_off_aca_2"
+      ],
+      "direction": "Base teaching, commoner access and house-retainer experience; last two are different branches, not a single linear quality ladder."
+    },
+    {
+      "id": "currency_stages",
+      "members": [
+        "AVI_livre_1",
+        "AVI_livre_2"
+      ],
+      "direction": "Coin/balance/gear versus coin/banknote/scale; no invented inscriptions."
+    },
+    {
+      "id": "force_structure_tradeoffs",
+      "members": [
+        "AVI_militia",
+        "AVI_regulars"
+      ],
+      "direction": "Both have benefits and costs; mismatched pouches versus aligned belt, not red bad versus green good."
+    },
+    {
+      "id": "equal_military_effects",
+      "members": [
+        "AVI_the_strong_arm_of_the_revolution",
+        "AVI_Kriegsamt"
+      ],
+      "direction": "Different political institutions, drum/rack versus alarm/planning wheel; no symbols borrowed from stock sprites."
+    },
+    {
+      "id": "equal_economic_effects",
+      "members": [
+        "AVI_socialist_economics",
+        "AVI_Wirtschaftsministerium"
+      ],
+      "direction": "Collective allocation versus ministry conveyor/export gate; distinct physical arrangements despite equal modifiers."
+    },
+    {
+      "id": "foundation_family",
+      "members": [
+        "AVI_foundation",
+        "AVI_foundation_lar",
+        "AVI_found_hq"
+      ],
+      "direction": "Same institution; base and DLC apparatus variants plus coordination headquarters, not three agencies."
+    },
+    {
+      "id": "dlc_AVI_unified_intelligence_agency",
+      "members": [
+        "AVI_unified_intelligence_agency",
+        "AVI_unified_intelligence_agency_lar"
+      ],
+      "direction": "Same institution and material family; apparatus and silhouette distinguish DLC variants, not moral value or higher rank."
+    },
+    {
+      "id": "dlc_AVI_long_arm_of_the_revolution",
+      "members": [
+        "AVI_long_arm_of_the_revolution",
+        "AVI_long_arm_of_the_revolution_lar"
+      ],
+      "direction": "Same institution and material family; apparatus and silhouette distinguish DLC variants, not moral value or higher rank."
+    },
+    {
+      "id": "dlc_AVI_Evidenzbureau",
+      "members": [
+        "AVI_Evidenzbureau",
+        "AVI_Evidenzbureau_lar"
+      ],
+      "direction": "Same institution and material family; apparatus and silhouette distinguish DLC variants, not moral value or higher rank."
+    },
+    {
+      "id": "dlc_AVI_foundation",
+      "members": [
+        "AVI_foundation",
+        "AVI_foundation_lar"
+      ],
+      "direction": "Same institution and material family; apparatus and silhouette distinguish DLC variants, not moral value or higher rank."
+    }
+  ],
+  "records": [
+    {
+      "id": "E_E_rivalry",
+      "kind": "spirit",
+      "name": "Erie-Eyrie Rivalry",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "Two duelling swords locked across a cracked boundary stone, one grip ivory and the other cobalt.",
+      "effect_evidence": "tag=EYR; attack_bonus_against=0.05; defense_bonus_against=0.1; tag=ERI; attack_bonus_against=0.05; defense_bonus_against=0.1; war_support_factor=-0.025",
+      "description": "§RTwo households, both alike in dignity,\\nFrom ancient grudge break to new mutiny,\\nWhere civil blood makes civil claws unclean.§!\\n§W--------------§!\\nThe bitter feud between the rival houses of Eyrie and Erie - both houses as irreconcilable to each other as the Sun and Moon, Day and Night - has led to decades of incessant internecine violence between the two heavily militarised houses. Both leaders of the houses claim to be the rightful and legitimate Dukes of Verenia, and both of them refuse to negotiate with each other. The violence will likely continue until one side proves triumphant.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Shared Erie/Eyrie spirit, not an Avian-owned rivalry. Colour accents are material cues, not invented heraldry. The localized refusal to negotiate describes the native feud, not all later submod routes.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "swords"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "stone"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        }
+      ],
+      "explicit_color_locks": [
+        {
+          "subject": "two sword grips",
+          "colors": [
+            "#E4DECA",
+            "#385DA4"
+          ],
+          "meaning": "One ivory and one cobalt as specified; steel blades unchanged, no invented house arms."
+        }
+      ],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "mixed",
+      "composition_and_material_guidance": "Keep the cracked stone and opposed swords dominant: reciprocal combat bonuses coexist with lower war support. Ivory/cobalt grips are object colors, not Erie/Eyrie flag substitutes.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_econcoop",
+      "kind": "spirit",
+      "name": "Interhouse Economic Cooperation",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "Three different construction beams fitted into one load-bearing joint, with a mineral basket beneath.",
+      "effect_evidence": "production_speed_buildings_factor=0.1; production_factory_max_efficiency_factor=0.1; local_resources_factor=0.1",
+      "description": "Cooperation among the Houses improves construction, production capacity and access to local resources.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Cooperation among the Houses improves construction, production capacity and access to local resources.",
+      "category": "housing_utilities",
+      "direction": "Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.",
+      "category_swatches": [
+        "#D7D6C7",
+        "#AB6C58",
+        "#727C78"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "beams",
+            "basket"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "industry",
+          "subjects": [
+            "mineral"
+          ],
+          "base_hex": "#525D59",
+          "instruction": "Soot-dark iron and exposed grey metal; copper pipe #A17350 only where plausible. Glowing crucible alone permits amber #D58A42."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Three fitted beams read as productive cooperation; distinguish their timber values without assigning house colors. Mineral basket stays earthy and subordinate.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_studentexchange",
+      "kind": "spirit",
+      "name": "Interhouse Student Exchange Programmes",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A travelling school satchel opened to an illustrated geometry book, with two differently coloured destination tags.",
+      "effect_evidence": "research_speed_factor=0.025",
+      "description": "Interhouse student exchanges broaden access to learning and modestly accelerate research.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Interhouse student exchanges broaden access to learning and modestly accelerate research.",
+      "category": "education_languages",
+      "direction": "Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.",
+      "category_swatches": [
+        "#E7E0CD",
+        "#536F62",
+        "#9A5B48",
+        "#715C73"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "paper",
+          "subjects": [
+            "book"
+          ],
+          "base_hex": "#E5DFCF",
+          "instruction": "Ivory paper with charcoal diagrams; slate is #515B59, not paper. Different bindings may use sage #5C7966 and russet #985E4C; never language flags."
+        },
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "satchel"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Open geometry book and travelling satchel communicate modest research exchange. Use sage and russet destination tags with geometric marks, not flags or pseudo-text.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_scienceexchange",
+      "kind": "spirit",
+      "name": "The Avian Scientific Exchange Conference",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A conference microscope between three delegate stools, with its instrument case left visibly unlocked.",
+      "effect_evidence": "research_speed_factor=0.15; drift_defence_factor=-0.025; civilian_intel_to_others=5",
+      "description": "The Avian Scientific Exchange Conference brings together the brightest minds from across the Three Houses for a months-long scientific conference in Avian. No doubt this conference will be a boon to the scientific communities of all parties involved, but the concentrated presence of so many foreign minds in one place will entail some substantial security concerns ... ",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Avian Scientific Exchange Conference brings together the brightest minds from across the Three Houses for a months-long scientific conference in Avian. No doubt this conference will be a boon to the scientific communities of all parties involved, but the concentrated presence of so many foreign minds in one place will entail some substantial security concerns ... ",
+      "category": "science_precision",
+      "direction": "Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass.",
+      "category_swatches": [
+        "#D3D9D3",
+        "#758889",
+        "#B07850",
+        "#689B9A"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "stools"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "science",
+          "subjects": [
+            "microscope",
+            "instrument"
+          ],
+          "base_hex": "#C5D2CD",
+          "instruction": "Light enamel bodies, grey steel fittings; glass muted turquoise #6F9F99 and contacts copper #AD7953. No luminous cyan halo."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "case"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "mixed",
+      "composition_and_material_guidance": "Pale microscope is the research benefit; the visibly unlocked case is the security cost. Keep both legible without a sinister color wash or added warning badge.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_relaxd_citizenship",
+      "kind": "spirit",
+      "name": "Relaxed Citizenship Requirements",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An open residence gate framing a family travel trunk and a newly lit home window.",
+      "effect_evidence": "MONTHLY_POPULATION=0.15",
+      "description": "Relaxed citizenship requirements permit easier settlement and increase population growth.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Relaxed citizenship requirements permit easier settlement and increase population growth.",
+      "category": "housing_utilities",
+      "direction": "Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.",
+      "category_swatches": [
+        "#D7D6C7",
+        "#AB6C58",
+        "#727C78"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "gate"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Open gate and travel trunk convey settlement access; the explicitly lit window permits a small warm amber accent, not a background glow.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_common_markets",
+      "kind": "spirit",
+      "name": "Tripartite Common Market Agreement",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A three-stall market enclosed by one outer tariff rail, its internal toll chains laid aside.",
+      "effect_evidence": "production_speed_buildings_factor=0.15; production_factory_max_efficiency_factor=0.15; local_resources_factor=0.15; min_export=-0.05; consumer_goods_factor=-0.1; global_building_slots_factor=0.05",
+      "description": "The ratification of the Tripartite Common Market Agreement by the Three Houses has officially allowed for the close integration of their national economies, boosting economic growth by enforcing protectionist policies against foreign nations whilst greatly liberalising trade between the Three Houses. Although there arises from time to time occasional skirmishes or border wars between Houses Erie and Eyrie, the neutral House Avian acts as an arbitrator and so prevents the agreement from falling apart - an advantageous, if somewhat convoluted, state of affairs that all three Houses, despite their differences, are happy to maintain.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Preserve the native description's economic integration and Avian arbitration; no annexation, unified flag or claim that all rivalry has ended.",
+      "category": "rail_roads",
+      "direction": "Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present.",
+      "category_swatches": [
+        "#93968D",
+        "#65777A",
+        "#A36C59",
+        "#708C81"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "chains"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Internal chains lie aside while the outer tariff rail remains: internal liberalisation and external protection coexist. Natural wood stalls and iron rail; this is a market, not a railway. No unified-state flag.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_unified_intelligence_agency",
+      "kind": "spirit",
+      "name": "Tripartite Intelligence Agency",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A listening headset over a three-line cable junction, a brass cipher wheel beneath.",
+      "effect_evidence": "encryption_factor=0.1; decryption_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.15; subversive_activites_upkeep=-0.15",
+      "description": "The Tripartite Intelligence Agency is the central coordinating body for foreign espionage operations of the Three Houses.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Tripartite Intelligence Agency is the central coordinating body for foreign espionage operations of the Three Houses.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "wheel"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "headset",
+            "cable",
+            "cipher"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Base institution: headset above a three-line junction. Preserve the explicitly brass cipher wheel as a small local fitting; charcoal hardware and copper leads dominate.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_unified_intelligence_agency_lar",
+      "kind": "spirit",
+      "name": "Tripartite Intelligence Agency",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A cipher-rotor machine fed by three separate signal leads, with a compact surveillance lens beside it.",
+      "effect_evidence": "crypto_strength=1; decryption_power_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.15; subversive_activites_upkeep=-0.15",
+      "description": "The Tripartite Intelligence Agency is the central coordinating body for foreign espionage operations of the Three Houses.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Tripartite Intelligence Agency is the central coordinating body for foreign espionage operations of the Three Houses.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "cipher",
+            "rotor",
+            "leads"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "machine"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "lens"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "DLC variant of the same institution: rotor machine with three leads and a lens replaces the headset silhouette. Retain the base material family; no new agency insignia or automatic rank upgrade.",
+      "variant_of": "AVI_unified_intelligence_agency",
+      "variant_note": "Same institution and lore as base version. Keep a distinct physical composition without inventing a new branch, identity or insignia.",
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_annual_military_exercises",
+      "kind": "spirit",
+      "name": "Annual Military Exercises",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "Three manoeuvre blocks converging around a sand-table bridge beside an exercise stopwatch.",
+      "effect_evidence": "max_command_power=20; command_power_gain_mult=0.1; mobilization_speed=0.1; max_planning=0.1; planning_speed=0.1; conscription=0.005",
+      "description": "Recurring joint exercises improve command capacity, mobilisation, planning and military participation.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Recurring joint exercises improve command capacity, mobilisation, planning and military participation.",
+      "category": "rail_roads",
+      "direction": "Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present.",
+      "category_swatches": [
+        "#93968D",
+        "#65777A",
+        "#A36C59",
+        "#708C81"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "table"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "bridge"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "stopwatch"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "A miniature sand-table bridge and converging blocks convey joint planning, not actual railway construction. Warm wood, grey model stone and a restrained stopwatch rim; no national-colored counters.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_agri_1",
+      "kind": "spirit",
+      "name": "Agricultural Sustainability",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A stout grain bin with a carefully fitted lid and a single ripe sheaf at its base.",
+      "effect_evidence": "production_factory_max_efficiency_factor=0.05",
+      "description": "A more dependable agricultural supply supports sustainable production and a higher factory efficiency ceiling.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A more dependable agricultural supply supports sustainable production and a higher factory efficiency ceiling.",
+      "category": "agriculture_food",
+      "direction": "Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.",
+      "category_swatches": [
+        "#C9AC61",
+        "#74865A",
+        "#686052"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "bin"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "grain",
+            "sheaf"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Stage 1: compact closed grain bin and single sheaf. Matte straw and weathered timber dominate; secure storage signifies the smaller efficiency benefit.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_agri_2",
+      "kind": "spirit",
+      "name": "Everygriff a Farmer",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A seed drill sharing its axle with a simple workshop wheel, a basket of locally gathered materials below.",
+      "effect_evidence": "production_factory_max_efficiency_factor=0.1; local_resources_factor=0.05",
+      "description": "Wider participation in farming strengthens production efficiency and the use of local resources.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Wider participation in farming strengthens production efficiency and the use of local resources.",
+      "category": "agriculture_food",
+      "direction": "Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.",
+      "category_swatches": [
+        "#C9AC61",
+        "#74865A",
+        "#686052"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "wheel"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "basket"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "seed"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        },
+        {
+          "material_rule": "civil_surface",
+          "subjects": [
+            "workshop"
+          ],
+          "base_hex": "#979E91",
+          "instruction": "Stone/concrete neutral grey, earth muted umber #776F59 and timber #A09275; existing brick may be muted terracotta. No colored decorative backdrop."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Stage 2: horizontal seed-drill axle and workshop wheel distinguish local resource use from stage 1 storage. Add iron structure while retaining natural seed and basket colors.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_agri_3",
+      "kind": "spirit",
+      "name": "Closed Agro-Ecosystem",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A closed-loop irrigation channel surrounding a productive farm plot and a full granary.",
+      "effect_evidence": "production_factory_max_efficiency_factor=0.1; local_resources_factor=0.1; production_speed_buildings_factor=0.1; global_building_slots_factor=0.1",
+      "description": "House Avian has managed to create and maintain an entirely self-sufficient agricultural and ecological system within their realm, thus negating their dependence on external imports of food.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "House Avian has managed to create and maintain an entirely self-sufficient agricultural and ecological system within their realm, thus negating their dependence on external imports of food.",
+      "category": "agriculture_food",
+      "direction": "Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.",
+      "category_swatches": [
+        "#C9AC61",
+        "#74865A",
+        "#686052"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "farm",
+            "granary"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Stage 3: closed-loop channel encloses farm plot and full granary. Muted river green in the channel, sage planted ground and straw produce; no metallic gold or national border emblem.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_coopfarms",
+      "kind": "spirit",
+      "name": "Cooperative Farms",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A communal produce hamper beneath a shared threshing rake, three farm lanes meeting underneath.",
+      "effect_evidence": "consumer_goods_factor=-0.1; MONTHLY_POPULATION=0.05",
+      "description": "Farm cooperatives ease civilian economic demands and support household population growth.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Farm cooperatives ease civilian economic demands and support household population growth.",
+      "category": "agriculture_food",
+      "direction": "Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.",
+      "category_swatches": [
+        "#C9AC61",
+        "#74865A",
+        "#686052"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "rake"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "hamper"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "produce",
+            "farm"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Shared produce hamper and converging lanes convey household support and cooperative supply. Warm woven fibre, natural produce and iron rake; no party icon.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_protectionism",
+      "kind": "spirit",
+      "name": "Avian Protectionism",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A customs shutter shielding a domestic market scale, with an export crate held on the inner side.",
+      "effect_evidence": "min_export=-0.05; consumer_goods_factor=-0.1",
+      "description": "Protective trade arrangements reduce export obligations and the consumer-goods burden.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Protective trade arrangements reduce export obligations and the consumer-goods burden.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "crate"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "scale"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Shutter protects the scale and crate remains inside. Contrast dark iron shutter against pale timber crate, not a red prohibition emblem; reduced export obligations are not an economic collapse.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_sca",
+      "kind": "spirit",
+      "name": "State-Capital Collusion",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A state treasury key interlocked with a private factory key over an economic policy dial.",
+      "effect_evidence": "trade_laws_cost_factor=-0.5; economy_cost_factor=-0.5",
+      "description": "State-capital collusion lowers the political cost of changing trade and economic laws.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Localized title says Collusion. Portray privileged state-capital coordination, not a neutral public welfare agency.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "key"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "treasury"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "factory"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_privileged_context",
+      "composition_and_material_guidance": "Interlocked state/private keys express privileged collusion and cheaper law changes. Dark iron and restrained worn brass on keys; do not recast it as public welfare or add a state seal.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_milsoc_1",
+      "kind": "spirit",
+      "name": "Militarised Society",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A household training whistle hanging above a practice rifle and an everyday work apron.",
+      "effect_evidence": "conscription_factor=0.10; training_time_factor=-0.10",
+      "description": "Widespread basic military training increases the recruitable population share and shortens training.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Widespread basic military training increases the recruitable population share and shortens training.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "rifle"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "apron"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "whistle"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Stage 1: household apron, whistle and practice rifle show civilian training. Khaki cloth and walnut stock dominate; brass only on the existing whistle.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_milsoc_2",
+      "kind": "spirit",
+      "name": "Militarised Society - Mandatory Service",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A complete service pack flanked by two annual calendar discs, its cartridge belt fastened tight.",
+      "effect_evidence": "conscription=0.025; training_time_factor=-0.25; army_org_factor=0.05",
+      "description": "All citizens of House Avian, be they nobles or commoners, have to undergo two years of compulsory military service.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "All citizens of House Avian, be they nobles or commoners, have to undergo two years of compulsory military service.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "cartridge"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "pack",
+            "belt"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Stage 2: complete service pack and two calendar discs show formal service. Make the packed upright silhouette and fastened belt distinct from the first stage rifle/apron; no medal or rank crest.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_fortify",
+      "kind": "spirit",
+      "name": "Fortification Effort",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A concrete bunker mould with reinforcing rods and a mason's trowel.",
+      "effect_evidence": "production_speed_bunker_factor=0.25",
+      "description": "A coordinated fortification effort speeds bunker construction.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A coordinated fortification effort speeds bunker construction.",
+      "category": "fortification",
+      "direction": "Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded.",
+      "category_swatches": [
+        "#91958D",
+        "#627452",
+        "#353E40"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "rods"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "bunker"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Concrete mould and exposed steel reinforcement indicate faster bunker construction, not a direct combat-stat bonus. Cool grey mass with dark joints and silver trowel edge.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_de_arse",
+      "kind": "spirit",
+      "name": "Decentralised Arsenal",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A cutaway hillside weapons cache behind a closed supply-road barrier, a second cache visible beyond.",
+      "effect_evidence": "out_of_supply_factor=-0.10; no_supply_grace=120",
+      "description": "The decentralisation of the House Avian arsenal and the distribution of weapon caches all over the Avian realm ensures that potent armed resistance may continue even when the House's main supply depots and armouries are overrun.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The decentralisation of the House Avian arsenal and the distribution of weapon caches all over the Avian realm ensures that potent armed resistance may continue even when the House's main supply depots and armouries are overrun.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "civil_surface",
+          "subjects": [
+            "hillside",
+            "road",
+            "barrier"
+          ],
+          "base_hex": "#979E91",
+          "instruction": "Stone/concrete neutral grey, earth muted umber #776F59 and timber #A09275; existing brick may be muted terracotta. No colored decorative backdrop."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "cache"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        },
+        {
+          "material_rule": "precise_fittings",
+          "subjects": [
+            "weapons"
+          ],
+          "base_hex": "#879795",
+          "instruction": "Grey steel with dark recesses; wood grips #795F46 and optical glass #ABC1B7, no all-gold treatment."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Two hillside caches and a closed road barrier communicate distributed supply endurance. Earth, timber and dark storage iron; do not depict destruction or add supply trucks.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_gfg",
+      "kind": "spirit",
+      "name": "Guns for Gilda",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A gunsmith's conversion vise holding an old rifle action beside its newly machined replacement.",
+      "effect_evidence": "equipment_conversion_speed=0.15",
+      "description": "A programme to modernise older weapons increases equipment-conversion speed.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A programme to modernise older weapons increases equipment-conversion speed.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "vise",
+            "rifle"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Conversion is the contrast between the old action and newly machined replacement. Use worn blued steel versus clean silver working edges in the same vise; no new weapon-performance claim.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_rrr",
+      "kind": "spirit",
+      "name": "Avian Reservist System",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A mobilisation bell above a ready reserve pack and a compact route clock.",
+      "effect_evidence": "conscription=0.025; land_reinforce_rate=0.10; army_morale_factor=0.10; mobilization_speed=0.10",
+      "description": "The Avian Reservist System - named after its chief architect, Lady Katrina Avian - allows the House to call up its military reservists in a timely and efficient manner during times of crisis.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Historical ID uses rrr/Rivertail terminology; current localization identifies Lady Katrina Avian as its architect. No invented portrait.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "pack"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "bell",
+            "clock"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Mobilisation bell, ready pack and clock express reserve readiness. Khaki pack, grey clock and local aged-brass bell; current context is Katrina, not an invented Rivertail portrait.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_das_raubvogel",
+      "kind": "spirit",
+      "name": "Das Raubvogel",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A concealed field transmitter beneath a lifted floorboard, with rail-cutting tools beside it.",
+      "effect_evidence": "resistance_growth_on_our_occupied_states=0.25; defensive_war_stability_factor=0.25; special_forces_cap=0.025",
+      "description": "Das Raubvogel - the Birds of Prey - is the name of a clandestine network for continued resistance activity should House Avian ever fall to foreign invasion.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Das Raubvogel - the Birds of Prey - is the name of a clandestine network for continued resistance activity should House Avian ever fall to foreign invasion.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "tools"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "floorboard"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "field"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        },
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "transmitter"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_in_occupation",
+      "composition_and_material_guidance": "Concealed transmitter under lifted timber with cutting tools conveys resistance during occupation. Field means deployed equipment, not farmland: omit the inherited crop material assignment. Charcoal radio, copper connectors and worn wood.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_eternal",
+      "kind": "spirit",
+      "name": "House Avian Eternal",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A battered fortress hinge still holding an upright gate against fallen masonry.",
+      "effect_evidence": "surrender_limit=0.15",
+      "description": "Avian's determination to continue resistance raises its surrender threshold.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Avian's determination to continue resistance raises its surrender threshold.",
+      "category": "fortification",
+      "direction": "Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded.",
+      "category_swatches": [
+        "#91958D",
+        "#627452",
+        "#353E40"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "hinge"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "fortress",
+            "gate",
+            "masonry"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_under_damage",
+      "composition_and_material_guidance": "Battered hinge still supports the upright gate despite rubble. Keep a strong unbroken iron connection visible against pale fallen masonry; damage expresses endurance, not defeat.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_off_aca",
+      "kind": "spirit",
+      "name": "Avian Officer Academy",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An academy lectern supporting a tactical diagram board and a brass command whistle.",
+      "effect_evidence": "air_chief_cost_factor=-0.25; army_chief_cost_factor=-0.25; navy_chief_cost_factor=-0.25; high_command_cost_factor=-0.25; max_command_power=25",
+      "description": "Officer education lowers senior military appointment costs and expands command capacity.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Officer education lowers senior military appointment costs and expands command capacity.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "paper",
+          "subjects": [
+            "diagram"
+          ],
+          "base_hex": "#E5DFCF",
+          "instruction": "Ivory paper with charcoal diagrams; slate is #515B59, not paper. Different bindings may use sage #5C7966 and russet #985E4C; never language flags."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "lectern"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "whistle"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "board"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Base academy: lectern, meaningful tactical diagram and small brass whistle. Walnut and ivory establish teaching; no empty board, lettering or noble crest.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_off_aca_1",
+      "kind": "spirit",
+      "name": "Avian Officer Academy",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An unlocked academy examination gate with a tradesgriffon's tool case beside a command baton.",
+      "effect_evidence": "air_chief_cost_factor=-0.25; army_chief_cost_factor=-0.25; navy_chief_cost_factor=-0.25; high_command_cost_factor=-0.25; military_leader_cost_factor=-0.50; max_command_power=25",
+      "description": "Opening command careers to commoners further reduces military-leader costs while retaining the academy's command benefits.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Same displayed name as other academy levels; the commoner route and military_leader_cost_factor distinguish this tier.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "tool"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "gate"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "case"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_branch",
+      "composition_and_material_guidance": "Commoner branch: unlocked examination gate, work tool case and baton indicate broader access and lower leader cost. Emphasise the opening and worn practical materials; not a generic higher rank of the retainer branch.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_off_aca_2",
+      "kind": "spirit",
+      "name": "Avian Officer Academy",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An heirloom campaign sword resting on an advanced tactical model inside the academy's reserved gallery.",
+      "effect_evidence": "air_chief_cost_factor=-0.25; army_chief_cost_factor=-0.25; navy_chief_cost_factor=-0.25; high_command_cost_factor=-0.25; army_leader_start_level=1; max_command_power=25",
+      "description": "House-retainer officer education preserves senior appointment benefits and gives new army leaders a higher starting level.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Same displayed name as other academy levels; house-retainer route and army_leader_start_level distinguish this tier. No invented noble crest.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "sword"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_branch",
+      "composition_and_material_guidance": "House-retainer branch: heirloom sword and advanced model in reserved gallery indicate a higher starting army-leader level. Aged steel and dark wood distinguish it from the open gate; no invented noble arms or crown.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_militia",
+      "kind": "spirit",
+      "name": "Militia Army",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "Several mismatched militia cartridge pouches gathered around a communal muster drum.",
+      "effect_evidence": "conscription=0.025; training_time_factor=0.1; army_org_factor=-0.05",
+      "description": "A larger citizen militia increases recruitment but takes longer to train and is less organised.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A larger citizen militia increases recruitment but takes longer to train and is less organised.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "cartridge"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "pouches"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        },
+        {
+          "material_rule": "industry",
+          "subjects": [
+            "drum"
+          ],
+          "base_hex": "#525D59",
+          "instruction": "Soot-dark iron and exposed grey metal; copper pipe #A17350 only where plausible. Glowing crucible alone permits amber #D58A42."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "mixed",
+      "composition_and_material_guidance": "Mismatched pouches around a communal drum convey larger recruitment with longer training and lower organisation. Use varied worn khaki/leather values. Drum is a musical muster drum: timber shell and pale hide, not an industrial metal drum.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_regulars",
+      "kind": "spirit",
+      "name": "Professional Army",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A single tightly fitted ammunition belt above a precision drill metronome and polished field kit.",
+      "effect_evidence": "conscription_factor=-0.015; training_time_factor=-0.1; army_org_factor=0.1",
+      "description": "A professional army trades some recruitable population for faster training and stronger organisation.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A professional army trades some recruitable population for faster training and stronger organisation.",
+      "category": "arms_precision",
+      "direction": "Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.",
+      "category_swatches": [
+        "#48545A",
+        "#785A40",
+        "#B39855"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "belt",
+            "kit"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "field"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "metronome"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "mixed",
+      "composition_and_material_guidance": "Aligned belt and drill metronome show faster training and better organisation with a recruitment tradeoff. Uniform khaki, polished working edges and clear rhythm; field kit means equipment, not crops, so omit the inherited crop assignment.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_declared_neutral",
+      "kind": "spirit",
+      "name": "Avian Neutrality",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A sheathed sword securing a closed frontier lock, with an outward-facing inspection lens.",
+      "effect_evidence": "drift_defence_factor=0.25; foreign_subversive_activites=-0.50; enemy_operative_detection_chance_factor=0.1; enemy_justify_war_goal_time=0.25; ai_focus_aggressive_factor=-0.50",
+      "description": "Declared neutrality discourages aggression and foreign subversion while strengthening ideological and counterintelligence defences.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Declared neutrality discourages aggression and foreign subversion while strengthening ideological and counterintelligence defences.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "sword",
+            "lock"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "lens"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "defensive_benefit",
+      "composition_and_material_guidance": "Sheathed sword, closed frontier lock and outward lens show guarded neutrality, not disarmament or guaranteed peace. Dark steel with restrained optical glass; no added neutrality flag.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_Liberty_idea",
+      "kind": "spirit",
+      "name": "Liberty!",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An unlocked printing-press platen beside a merchant's open balance.",
+      "effect_evidence": "production_factory_max_efficiency_factor=0.12; trade_opinion_factor=0.5",
+      "description": "Civic liberty supports productive efficiency and improves foreign trade relations.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Civic liberty supports productive efficiency and improves foreign trade relations.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "press"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "platen"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "balance"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Unlocked press and open merchant balance express productive/trade benefits. Use iron machinery, wooden platen and pewter balance; no hand, revolutionary insignia or invented national symbol.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_linguistic_antagonism",
+      "kind": "spirit",
+      "name": "Linguistic Antagonism",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "Two incompatible school readers pulling apart a cracked speaking-trumpet joint.",
+      "effect_evidence": "stability_factor=-0.05; war_support_factor=-0.10; political_power_gain=-0.10",
+      "description": "Although the nobility of House Avian utilise the Imperial Dialect as their lingua franca, the languages spoken by the commoners range from the Herzland dialect to Aquileian. The lack of linguistic uniformity obfuscates communication and further ingrains cultural strife.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Although the nobility of House Avian utilise the Imperial Dialect as their lingua franca, the languages spoken by the commoners range from the Herzland dialect to Aquileian. The lack of linguistic uniformity obfuscates communication and further ingrains cultural strife.",
+      "category": "education_languages",
+      "direction": "Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.",
+      "category_swatches": [
+        "#E7E0CD",
+        "#536F62",
+        "#9A5B48",
+        "#715C73"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "paper",
+          "subjects": [
+            "readers"
+          ],
+          "base_hex": "#E5DFCF",
+          "instruction": "Ivory paper with charcoal diagrams; slate is #515B59, not paper. Different bindings may use sage #5C7966 and russet #985E4C; never language flags."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "trumpet"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "penalty",
+      "composition_and_material_guidance": "Two differently bound readers pull apart a cracked speaking-trumpet joint. Sage/russet bindings and a dark visible break signal instability and political friction; no language-to-nation color assignment or flags.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_urbanisation_effort",
+      "kind": "spirit",
+      "name": "Urbanisation Effort",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A rising apartment frame above a paved street corner and a builder's hoist.",
+      "effect_evidence": "production_speed_buildings_factor=0.15",
+      "description": "The urbanisation programme accelerates construction.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "The urbanisation programme accelerates construction.",
+      "category": "housing_utilities",
+      "direction": "Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.",
+      "category_swatches": [
+        "#D7D6C7",
+        "#AB6C58",
+        "#727C78"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "apartment"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "hoist"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Rising apartment frame and hoist convey faster construction. Pale plaster/stone, grey structural iron and muted green hoist; no gold cityscape or extra skyline.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_agrarian_reform",
+      "kind": "spirit",
+      "name": "Agrarian Reform",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A repaired ploughshare aligning previously uneven field strips beside a full seed measure.",
+      "effect_evidence": "production_factory_max_efficiency_factor=0.15",
+      "description": "Agrarian reform raises the sustainable production-efficiency ceiling.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Agrarian reform raises the sustainable production-efficiency ceiling.",
+      "category": "agriculture_food",
+      "direction": "Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.",
+      "category_swatches": [
+        "#C9AC61",
+        "#74865A",
+        "#686052"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "ploughshare"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "crop",
+          "subjects": [
+            "field",
+            "seed"
+          ],
+          "base_hex": "#BDA465",
+          "instruction": "Grain/bread straw-ochre; planted ground sage #76885B, soil #766D59. Not metallic gold."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Repaired ploughshare and aligned strips contrast previous unevenness with productive reform. Clean steel repair edge, muted soil/sage and straw seed measure; retain the agricultural material family.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_treasury",
+      "kind": "spirit",
+      "name": "Avian Treasury",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A treasury counting tray balancing an imported machine component against retained export coins.",
+      "effect_evidence": "license_purchase_cost=-0.25; min_export=-0.05",
+      "description": "Avian's treasury improves purchasing terms for licences and reduces compulsory exports.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Avian's treasury improves purchasing terms for licences and reduces compulsory exports.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "tray"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "treasury",
+            "coins"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "machine"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Counting tray weighs imported machinery against retained coins. Timber tray and pewter currency with grey machine part; no invented currency crest or assumption that all coins are gold.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_livre_1",
+      "kind": "spirit",
+      "name": "Avian Livre",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A single livre coin resting level on a merchant's balance beside a small imported gear.",
+      "effect_evidence": "trade_opinion_factor=0.25; license_purchase_cost=-0.05",
+      "description": "A stronger Avian livre improves trade relations and modestly lowers licence-purchase costs.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "A stronger Avian livre improves trade relations and modestly lowers licence-purchase costs.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "gear"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "livre",
+            "coin",
+            "balance"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        },
+        {
+          "material_rule": "precise_fittings",
+          "subjects": [
+            "level"
+          ],
+          "base_hex": "#879795",
+          "instruction": "Grey steel with dark recesses; wood grips #795F46 and optical glass #ABC1B7, no all-gold treatment."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Currency stage 1: single coin on balance beside imported gear. Restrained pewter, dark iron and small silver gear edges; simpler composition reflects the smaller trade/licensing benefits.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_livre_2",
+      "kind": "spirit",
+      "name": "Avian Livre",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A livre coin and banknote marked only with geometric denominations beside a calibrated exchange scale.",
+      "effect_evidence": "trade_opinion_factor=0.5; license_purchase_cost=-0.25",
+      "description": "Language-neutral currency strengthens acceptance in trade and further lowers licence-purchase costs.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "No words requiring translation, fabricated inscriptions, national crest or pseudo-text; simple denominations only.",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "paper",
+          "subjects": [
+            "banknote"
+          ],
+          "base_hex": "#E5DFCF",
+          "instruction": "Ivory paper with charcoal diagrams; slate is #515B59, not paper. Different bindings may use sage #5C7966 and russet #985E4C; never language flags."
+        },
+        {
+          "material_rule": "money",
+          "subjects": [
+            "livre",
+            "coin",
+            "scale"
+          ],
+          "base_hex": "#B5B9B1",
+          "instruction": "Pewter/grey metal currency and mechanism; dark iron strongboxes, green felt #55735F only on existing lining. Do not invent coin arms."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Currency stage 2: coin plus ivory banknote beside calibrated scale. The banknote silhouette distinguishes stronger trade/licensing benefits; geometric denominations only, no portrait, crest or pseudo-text.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_opposable_thumbs",
+      "kind": "spirit",
+      "name": "Superior Griffish Physiognomy",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A precision tool held by a jointed workshop clamp beside a delicate screw mechanism; represent dexterity without depicting anatomy.",
+      "effect_evidence": "Empty modifier block; no research or targeted modifiers.",
+      "description": "§Y(All non-Griffon races)§! §WAttack bonus against country:§! §G+15.0%§!\\n§Y(All non-Griffon races)§! §WDefense bonus against country:§! §G+15.0%§!\\n--------------\\nWhatever happens, we have got. The opposable thumb, and they have not.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Definition-only target: modifier block is empty; scoped audit found no exact-ID usage. Do not treat localized +15% claims as implemented bonuses. Use tools to represent dexterity, with no humans, hands, invented anatomy or racial caricature.",
+      "category": "workshops",
+      "direction": "Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable.",
+      "category_swatches": [
+        "#515D5D",
+        "#B5BDB6",
+        "#658075"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "tool"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "civil_surface",
+          "subjects": [
+            "workshop"
+          ],
+          "base_hex": "#979E91",
+          "instruction": "Stone/concrete neutral grey, earth muted umber #776F59 and timber #A09275; existing brick may be muted terracotta. No colored decorative backdrop."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "no_implemented_modifier",
+      "composition_and_material_guidance": "Clamp and precision screw represent dexterity without anatomy. Empty modifier block: do not depict or claim localized research bonuses as implemented. Worn workshop iron and clean zinc edges, no flesh or hands.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_the_strong_arm_of_the_revolution",
+      "kind": "spirit",
+      "name": "The Strong Arm of the Revolution",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A crimson-wrapped mobilisation drum beneath an evenly aligned People's Army equipment rack.",
+      "effect_evidence": "max_command_power=25; command_power_gain_mult=0.1; mobilization_speed=0.1; max_planning=0.1; planning_speed=0.1; conscription=0.015",
+      "description": "The Avian People's Liberation Army, reformed along socialist and egalitarian lines, will protect our nascent communist state from those who would seek to tear it down from without our borders.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Avian People's Liberation Army, reformed along socialist and egalitarian lines, will protect our nascent communist state from those who would seek to tear it down from without our borders.",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "rack"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "cloth",
+          "subjects": [
+            "wrapped"
+          ],
+          "base_hex": "#78505A",
+          "instruction": "Muted burgundy textile, unless the source brief explicitly specifies another color; not an invented party or national color."
+        },
+        {
+          "material_rule": "industry",
+          "subjects": [
+            "drum"
+          ],
+          "base_hex": "#525D59",
+          "instruction": "Soot-dark iron and exposed grey metal; copper pipe #A17350 only where plausible. Glowing crucible alone permits amber #D58A42."
+        }
+      ],
+      "explicit_color_locks": [
+        {
+          "subject": "crimson-wrapped mobilisation drum",
+          "hex": "#9E3944",
+          "meaning": "Explicit textile/object color from brief, not permission to add party insignia."
+        }
+      ],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_political_context",
+      "composition_and_material_guidance": "Crimson-wrapped mobilisation drum below aligned equipment rack distinguishes this military institution from Kriegsamt. Crimson stays on the specified wrap. Use timber/hide instrument construction, not a metal industrial barrel; no party insignia.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_socialist_economics",
+      "kind": "spirit",
+      "name": "Socialist Economics",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A collective allocation hopper dividing raw materials between a factory wheel and household supply bins.",
+      "effect_evidence": "production_speed_buildings_factor=0.15; production_factory_max_efficiency_factor=0.15; local_resources_factor=0.15; min_export=-0.10; consumer_goods_factor=-0.20; global_building_slots_factor=0.05",
+      "description": "State-directed socialist production expands industrial capacity, resource use and construction while reducing exports and civilian economic demands.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "State-directed socialist production expands industrial capacity, resource use and construction while reducing exports and civilian economic demands.",
+      "category": "housing_utilities",
+      "direction": "Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.",
+      "category_swatches": [
+        "#D7D6C7",
+        "#AB6C58",
+        "#727C78"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "wheel"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "bins"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "factory"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_political_context",
+      "composition_and_material_guidance": "Allocation hopper splits resources between factory and household bins. Iron/green machinery and natural wooden bins, not an automatic red wash; distinct from the ministry export gate despite matching economic modifiers.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_long_arm_of_the_revolution",
+      "kind": "spirit",
+      "name": "The Long Arm of the Revolution",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A crimson-bound security cabinet clamped shut beneath a listening funnel.",
+      "effect_evidence": "encryption_factor=0.1; decryption_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.20; subversive_activites_upkeep=-0.15",
+      "description": "The Avian Commissariat for State Security protects our people from the fascist bourgeois agitators, those archaic remnants of the previous aristocratic capitalist society, who would seek to destroy our idealistic socialist nation from within.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Avian Commissariat for State Security protects our people from the fascist bourgeois agitators, those archaic remnants of the previous aristocratic capitalist society, who would seek to destroy our idealistic socialist nation from within.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "listening funnel"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        },
+        {
+          "material_rule": "cloth",
+          "subjects": [
+            "bound"
+          ],
+          "base_hex": "#78505A",
+          "instruction": "Muted burgundy textile, unless the source brief explicitly specifies another color; not an invented party or national color."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "cabinet"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [
+        {
+          "subject": "crimson-bound security cabinet",
+          "hex": "#9E3944",
+          "meaning": "Explicit textile/object color from brief, not permission to add party insignia."
+        }
+      ],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_repressive_context",
+      "composition_and_material_guidance": "Base security institution: shut cabinet beneath a listening funnel. Preserve crimson binding against charcoal/grey-green storage. Surveillance and coercive closure are part of the context; no party emblem or welfare framing.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_long_arm_of_the_revolution_lar",
+      "kind": "spirit",
+      "name": "The Long Arm of the Revolution",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A locked crimson cipher case with visible rotor wheels and an internal surveillance cable.",
+      "effect_evidence": "crypto_strength=1; decryption_power_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.20; subversive_activites_upkeep=-0.15",
+      "description": "The Avian Commissariat for State Security protects our people from the fascist bourgeois agitators, those archaic remnants of the previous aristocratic capitalist society, who would seek to destroy our idealistic socialist nation from within.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Avian Commissariat for State Security protects our people from the fascist bourgeois agitators, those archaic remnants of the previous aristocratic capitalist society, who would seek to destroy our idealistic socialist nation from within.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "wheels"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "cipher",
+            "rotor",
+            "cable"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "case"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [
+        {
+          "subject": "crimson cipher case",
+          "hex": "#9E3944",
+          "meaning": "Explicit textile/object color from brief, not permission to add party insignia."
+        }
+      ],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_repressive_context",
+      "composition_and_material_guidance": "Same security institution, DLC apparatus variant: compact locked crimson case with visible rotors and internal cable. Preserve the explicit case color, not merely a tiny red accent; no added agency or rank badge.",
+      "variant_of": "AVI_long_arm_of_the_revolution",
+      "variant_note": "Same institution and lore as base version. Keep a distinct physical composition without inventing a new branch, identity or insignia.",
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_Kriegsamt",
+      "kind": "spirit",
+      "name": "Kriegsamt",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A mobilisation alarm mounted above a war-office planning wheel and a reserve kit rack.",
+      "effect_evidence": "max_command_power=25; command_power_gain_mult=0.1; mobilization_speed=0.1; max_planning=0.1; planning_speed=0.1; conscription=0.015",
+      "description": "The War Office",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The War Office",
+      "category": "field_service",
+      "direction": "Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.",
+      "category_swatches": [
+        "#A79B75",
+        "#485155",
+        "#657253"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "wheel"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "textile",
+          "subjects": [
+            "kit"
+          ],
+          "base_hex": "#999C79",
+          "instruction": "Muted olive/khaki fabric, not state livery; leather straps #77604B and iron buckles."
+        },
+        {
+          "material_rule": "wood",
+          "subjects": [
+            "rack"
+          ],
+          "base_hex": "#A19477",
+          "instruction": "Weathered timber or woven fibre with dark grain, no gold coating; furniture may be deeper walnut #76604C."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_political_context",
+      "composition_and_material_guidance": "War-office alarm and planning wheel over kit rack distinguish it from the crimson mobilisation drum. Khaki kit, dark steel wheel and restrained alarm fittings; equal military modifiers do not require identical art.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_Wirtschaftsministerium",
+      "kind": "spirit",
+      "name": "Wirtschaftsministerium",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A ministry allocation lever directing ore into a factory conveyor behind an export stop gate.",
+      "effect_evidence": "production_speed_buildings_factor=0.15; production_factory_max_efficiency_factor=0.15; local_resources_factor=0.15; min_export=-0.10; consumer_goods_factor=-0.20; global_building_slots_factor=0.05",
+      "description": "The Ministry of Economics",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Ministry of Economics",
+      "category": "finance_trade",
+      "direction": "Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.",
+      "category_swatches": [
+        "#B8BBB0",
+        "#3E4745",
+        "#547967",
+        "#E3DDC8"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "metal",
+          "subjects": [
+            "lever"
+          ],
+          "base_hex": "#6D7A7C",
+          "instruction": "Iron/steel, dark in recesses with silver working edges. Wooden stocks/grips stay walnut #785B43; cartridge cases may be brass #AD9458."
+        },
+        {
+          "material_rule": "stone",
+          "subjects": [
+            "gate"
+          ],
+          "base_hex": "#A3A79B",
+          "instruction": "Cool limestone/concrete, dark joints; existing roof tiles/brick may be terracotta #A86955. Iron gate leaves remain #4A5556."
+        },
+        {
+          "material_rule": "vehicle",
+          "subjects": [
+            "factory",
+            "conveyor"
+          ],
+          "base_hex": "#71816A",
+          "instruction": "Muted green machine paint over iron, silver worn edges and near-black rubber. Civil machines need not use army camouflage."
+        },
+        {
+          "material_rule": "industry",
+          "subjects": [
+            "ore"
+          ],
+          "base_hex": "#525D59",
+          "instruction": "Soot-dark iron and exposed grey metal; copper pipe #A17350 only where plausible. Glowing crucible alone permits amber #D58A42."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_political_context",
+      "composition_and_material_guidance": "Allocation lever and conveyor behind export stop gate distinguish ministry control from the collective hopper. Muted machine green, dark ore and steel; gate is industrial hardware, with stone only if its existing support is masonry.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_Evidenzbureau",
+      "kind": "spirit",
+      "name": "Evidenzbureau",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "An innocuous registry drawer opened to reveal a hidden listening receiver beneath its filing grid.",
+      "effect_evidence": "encryption_factor=0.1; decryption_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.20; subversive_activites_upkeep=-0.15",
+      "description": "The Registry Bureau - an innocuous name for the ruthless secret intelligence agency answering directly to the Lieutenant-General himself.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Registry Bureau - an innocuous name for the ruthless secret intelligence agency answering directly to the Lieutenant-General himself.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "receiver"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "grid"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_repressive_context",
+      "composition_and_material_guidance": "Base registry facade: drawer reveals a hidden receiver. Grey-green storage and ivory filing grid outside, charcoal/copper device within; secrecy serves the Lieutenant-General, not a neutral records service.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_Evidenzbureau_lar",
+      "kind": "spirit",
+      "name": "Evidenzbureau",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A registry card cabinet with a concealed cipher drum and a small surveillance aperture.",
+      "effect_evidence": "crypto_strength=1; decryption_power_factor=0.1; own_operative_detection_chance_factor=-0.1; stability_factor=0.015; drift_defence_factor=0.20; subversive_activites_upkeep=-0.15",
+      "description": "The Registry Bureau - an innocuous name for the ruthless secret intelligence agency answering directly to the Lieutenant-General himself.",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "The Registry Bureau - an innocuous name for the ruthless secret intelligence agency answering directly to the Lieutenant-General himself.",
+      "category": "signals_intelligence",
+      "direction": "Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.",
+      "category_swatches": [
+        "#303436",
+        "#8C9A97",
+        "#B2754F",
+        "#789C83"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "cipher"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        },
+        {
+          "material_rule": "industry",
+          "subjects": [
+            "drum"
+          ],
+          "base_hex": "#525D59",
+          "instruction": "Soot-dark iron and exposed grey metal; copper pipe #A17350 only where plausible. Glowing crucible alone permits amber #D58A42."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "cabinet"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_repressive_context",
+      "composition_and_material_guidance": "Same bureau, DLC variant: upright card cabinet with concealed cipher drum and small aperture. Keep the base storage palette and change geometry; cipher drum is mechanical, not a musical drum or a new insignia.",
+      "variant_of": "AVI_Evidenzbureau",
+      "variant_note": "Same institution and lore as base version. Keep a distinct physical composition without inventing a new branch, identity or insignia.",
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_foundation",
+      "kind": "spirit",
+      "name": "The Foundation",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A sealed containment cabinet behind a protective observation shutter, with a scientific instrument beside it.",
+      "effect_evidence": "decryption_tech=0.05; encryption_tech=0.05; encryption_factor=0.05; decryption_factor=0.05; stability_factor=0.025; license_purchase_cost=-0.25; army_org_factor=0.05; special_forces_cap=0.05; research_speed_factor=0.05; conscription=0.015",
+      "description": "§YWhilst the rest of griffonkind dwells in the light, we must stand in the darkness to fight it, contain it, and shield it from the eyes of the public, so that others may live in a sane and normal world.§!",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Secrecy and containment are established by its native description. Do not import an external franchise emblem, named anomaly or invented creature.",
+      "category": "containment_research",
+      "direction": "Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia.",
+      "category_swatches": [
+        "#CAD8D2",
+        "#30383A",
+        "#A66B48"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "science",
+          "subjects": [
+            "containment",
+            "instrument"
+          ],
+          "base_hex": "#C5D2CD",
+          "instruction": "Light enamel bodies, grey steel fittings; glass muted turquoise #6F9F99 and contacts copper #AD7953. No luminous cyan halo."
+        },
+        {
+          "material_rule": "records_storage",
+          "subjects": [
+            "cabinet"
+          ],
+          "base_hex": "#788678",
+          "instruction": "Storage grey-green enamel or worn timber #9B8C70; paper and drawings ivory #E5DFCF. Keep distinct tabs sage/russet/plum without assigning nations."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_containment_context",
+      "composition_and_material_guidance": "Base containment institution: sealed cabinet behind shutter plus instrument. Pale enamel against graphite shielding and subdued glass; no named anomaly, creature or external franchise logo.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_foundation_lar",
+      "kind": "spirit",
+      "name": "The Foundation",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A shielded observation console connected to a sealed containment vessel and a cipher relay.",
+      "effect_evidence": "decryption_tech=0.05; encryption_tech=0.05; crypto_strength=1; decryption_power_factor=0.05; stability_factor=0.025; license_purchase_cost=-0.25; army_org_factor=0.05; special_forces_cap=0.05; research_speed_factor=0.05; conscription=0.015",
+      "description": "§YWhilst the rest of griffonkind dwells in the light, we must stand in the darkness to fight it, contain it, and shield it from the eyes of the public, so that others may live in a sane and normal world.§!",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Same Foundation, not a separate organisation. No external franchise emblem or invented contained entity.",
+      "category": "containment_research",
+      "direction": "Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia.",
+      "category_swatches": [
+        "#CAD8D2",
+        "#30383A",
+        "#A66B48"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "science",
+          "subjects": [
+            "console",
+            "containment",
+            "vessel"
+          ],
+          "base_hex": "#C5D2CD",
+          "instruction": "Light enamel bodies, grey steel fittings; glass muted turquoise #6F9F99 and contacts copper #AD7953. No luminous cyan halo."
+        },
+        {
+          "material_rule": "radio",
+          "subjects": [
+            "cipher"
+          ],
+          "base_hex": "#353D3D",
+          "instruction": "Charcoal bakelite/iron with copper connectors #AE7956; small instrument green #7A9B80, no overall cobalt tint."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_containment_context",
+      "composition_and_material_guidance": "Same Foundation, DLC variant: observation console linked to sealed vessel and cipher relay. Share pale enamel/graphite/copper palette; distinct console/vessel silhouette, no new organisation or invented contained entity.",
+      "variant_of": "AVI_foundation",
+      "variant_note": "Same institution and lore as base version. Keep a distinct physical composition without inventing a new branch, identity or insignia.",
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_found_hq",
+      "kind": "spirit",
+      "name": "Foundation Headquarters",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A central facility console linking a laboratory instrument to a special-task equipment locker.",
+      "effect_evidence": "command_power_gain_mult=0.05; max_planning=0.05; planning_speed=0.05; army_org_factor=0.05; special_forces_cap=0.025; research_speed_factor=0.15; non_core_manpower=0.025; minimum_training_level=-0.05",
+      "description": "The central headquarters of the Foundation",
+      "description_origin": "resolved_english_localization",
+      "canonical_context": "Headquarters is the coordination tier, not another Foundation or an operational nuclear weapon.",
+      "category": "science_precision",
+      "direction": "Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass.",
+      "category_swatches": [
+        "#D3D9D3",
+        "#758889",
+        "#B07850",
+        "#689B9A"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "science",
+          "subjects": [
+            "console",
+            "laboratory",
+            "instrument"
+          ],
+          "base_hex": "#C5D2CD",
+          "instruction": "Light enamel bodies, grey steel fittings; glass muted turquoise #6F9F99 and contacts copper #AD7953. No luminous cyan halo."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit_with_containment_context",
+      "composition_and_material_guidance": "Headquarters coordination: central console connects laboratory instrument and equipment locker. Lighter precision enamel with dark locker, distinct from sealed containment cabinet/vessel; not an operational nuclear weapon or a second Foundation.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    },
+    {
+      "id": "AVI_aviation",
+      "kind": "spirit",
+      "name": "Avian Aeronautical Adeptness",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "source_brief": "A fighter banking through a broken cloud beside a flight-training stopwatch and a ground-support sight.",
+      "effect_evidence": "experience_gain_air_factor=0.1; air_weather_penalty=-0.1; army_bonus_air_superiority_factor=0.1; air_ace_generation_chance_factor=0.25; air_strategic_bomber_bombing_factor=0.05; air_cas_present_factor=0.1",
+      "description": "Avian aviation proficiency improves air experience, weather performance, ace development and support for ground operations.",
+      "description_origin": "authored_synopsis_from_effects_and_related_focus",
+      "canonical_context": "Avian aviation proficiency improves air experience, weather performance, ace development and support for ground operations.",
+      "category": "aviation",
+      "direction": "Satin aluminium, muted olive fabric and charcoal mechanisms; no invented aircraft roundels.",
+      "category_swatches": [
+        "#B7C2C2",
+        "#727B59",
+        "#333B3E"
+      ],
+      "material_palettes": [
+        {
+          "material_rule": "airframe",
+          "subjects": [
+            "fighter",
+            "flight"
+          ],
+          "base_hex": "#B7C2C4",
+          "instruction": "Aluminium structure, charcoal mechanisms and olive fabric #7B8061 where appropriate; no invented roundels or flags."
+        },
+        {
+          "material_rule": "signal",
+          "subjects": [
+            "stopwatch"
+          ],
+          "base_hex": "#8D927F",
+          "instruction": "Iron bodies with local aged brass #AA925C on optical rings or bells; glass pale grey-green. Amber light only for explicitly lit lamps."
+        }
+      ],
+      "explicit_color_locks": [],
+      "heraldry": {
+        "mode": "none_added",
+        "instruction": "Material colors are not heraldry. Do not add flags, crests, crowns, lilies or emblems absent from the source brief."
+      },
+      "effect_character": "benefit",
+      "composition_and_material_guidance": "Banking fighter contrasts with broken cloud, stopwatch and support sight. Satin aluminium, muted olive fabric and charcoal mechanisms; pale cloud stays subordinate with transparent exterior. No invented roundels or aircraft flags.",
+      "variant_of": null,
+      "variant_note": null,
+      "status": "guidance_only_not_generated_or_approved"
+    }
+  ]
+}

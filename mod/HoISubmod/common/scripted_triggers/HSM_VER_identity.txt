@@ -1,0 +1,9 @@
+# Domestic education survives the lawful co-ruler handover without widening
+# the original-duke predicate used by the military and settlement branches.
+HSM_VER_ID_eligible_house = {
+	exists = yes is_subject = no has_capitulated = no
+	OR = {
+		HSM_VER_FORCE_eligible_house = yes
+		HSM_VER_ROM_government = yes
+	}
+}

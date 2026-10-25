@@ -1,0 +1,33 @@
+HSM_VER_diplomatic_business = {
+	HSM_VER_obey_judgement = {
+		icon = generic_political_discourse
+		visible = { has_country_flag = HSM_VER_charter_suspended has_country_flag = HSM_VER_royal_exception }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_treaty_tt HSM_VER_negotiated_peace_valid = yes } }
+		cost = 100
+		fire_only_once = yes
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_obey_tt hidden_effect = { HSM_VER_restore_charter = yes } country_event = { id = hsm_verenia.73 days = 1 } }
+		ai_will_do = { factor = 20 }
+	}
+	HSM_VER_exchange_prisoners = {
+		icon = generic_political_discourse
+		visible = { OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } NOT = { has_country_flag = HSM_VER_prisoners_returned } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_free_houses_peace_tt HSM_VER_houses_at_peace = yes has_war = no EYR = { has_war = no } } }
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = HSM_VER_DEC_prisoners_tt
+			hidden_effect = { set_country_flag = HSM_VER_prisoners_returned }
+		EYR = { country_event = { id = hsm_verenia.24 days = 1 } }
+		}
+		ai_will_do = { factor = 20 }
+	}
+	HSM_VER_propose_defence = {
+		icon = generic_prepare_civil_war
+		visible = { has_country_flag = HSM_VER_defence_prepared NOT = { has_country_flag = HSM_VER_defence_accepted } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_defence_ready_tt HSM_VER_can_offer_defence = yes } }
+		cost = 35
+		days_re_enable = 180
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_defence_ERI_tt hidden_effect = { HSM_VER_offer_defence = yes } }
+		ai_will_do = { factor = 10 }
+	}
+}

@@ -1,0 +1,204 @@
+[
+  {
+    "id": "HSM_VER_GRO_registers",
+    "target": "HSM_VER_GRO_registers",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_registers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_registers.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two overlapping capital property diagrams reconciled under an archivist's straightedge. Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_districts",
+    "target": "HSM_VER_GRO_districts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_districts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_districts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A district register cabinet linked to outlying civic offices by a simple jurisdiction diagram. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_home_workshops",
+    "target": "HSM_VER_GRO_home_workshops",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_home_workshops-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_home_workshops.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A Verenian home workshop receiving a new machine while an imperial dispatch case rests aside. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the red wax seal hanging from the dispatch case: remove its embossed decorative symbol completely, leave plain smooth red wax within its existing raised rim. Keep all other objects, colors, dimensions, composition and transparent background unchanged.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_service",
+    "target": "HSM_VER_GRO_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_service-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Keep the depot-to-hospital lesson model, route diagram and command whistle. Make the hospital tent plain linen white with no red cross, badge, letters or insignia. Show its medical function only through a small folded linen cot or muted sea-green medicine bottle within the existing tent opening. Preserve the fictional map, restrained materials and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark. Remove the cross from the little hospital pictogram on the map too; use a plain tent shape there.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: A military lesson model showing a depot-to-hospital supply route beside a command whistle. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Keep the depot-to-hospital lesson model, route diagram and command whistle. Make the hospital tent plain linen white with no red cross, badge, letters or insignia. Show its medical function only through a small folded linen cot or muted sea-green medicine bottle within the existing tent opening. Preserve the fictional map, restrained materials and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark. Remove the cross from the little hospital pictogram on the map too; use a plain tent shape there.",
+      "previous_source": "art/verenia/HSM_VER_GRO_service.png",
+      "source_sha256": "4c71eadef2f1a9c3c776e90520b8e12f5d6584b0ef79c9f4a34e343671159cb9",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/HSM_VER_GRO_service",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_VER_GRO_succession_articles",
+    "target": "HSM_VER_GRO_succession_articles",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_succession_articles.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_succession_articles.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two separate government keyrings laid beside a defined handover timetable and treasury allocation trays. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_prepared_crown",
+    "target": "HSM_VER_GRO_prepared_crown",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_prepared_crown.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_prepared_crown.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A prepared sovereign's dais behind neatly arranged ministry keys and a transfer clock; omit crown pending canonical review. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_civil_compact",
+    "target": "HSM_VER_GRO_civil_compact",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_civil_compact.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_civil_compact.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A civilian council desk with a court key and workshop plan, independent of any dynastic throne. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_restored_oath",
+    "target": "HSM_VER_GRO_restored_oath",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover_restored.txt",
+    "source": "art/verenia/HSM_VER_GRO_restored_oath.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_restored_oath.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A sovereign's oath lectern bounded by a constitutional frame, with public witness benches. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_restored_reconstruction",
+    "target": "HSM_VER_GRO_restored_reconstruction",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover_restored.txt",
+    "source": "art/verenia/HSM_VER_GRO_restored_reconstruction.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_restored_reconstruction.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A repaired town roof above a reopened workshop door and a wage purse. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_restored_charter",
+    "target": "HSM_VER_GRO_restored_charter",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover_restored.txt",
+    "source": "art/verenia/HSM_VER_GRO_restored_charter.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_restored_charter.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A law book with a clear institutional diagram supporting a restrained sovereign's writing desk. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; wax ornament removed, period materials and readable silhouettes.",
+    "runtime_verified": false
+  }
+]

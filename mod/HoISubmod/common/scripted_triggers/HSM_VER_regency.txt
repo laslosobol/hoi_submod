@@ -1,0 +1,156 @@
+HSM_VER_REG_state_held = {
+	owner = { OR = { tag = AVI is_subject_of = AVI AND = { OR = { tag = ERI tag = EYR } HSM_VER_IMP_actual_signatory = yes is_subject = no } } }
+	controller = { OR = { tag = AVI is_subject_of = AVI AND = { OR = { tag = ERI tag = EYR } HSM_VER_IMP_actual_signatory = yes is_subject = no } } }
+}
+HSM_VER_REG_herzland_held = {
+	all_of_scopes = { array = GRI.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = BRZ.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = STW.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = KAT.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = ANG.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = YAL.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = ROU.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = PYT.original_cores HSM_VER_REG_state_held = yes }
+	all_of_scopes = { array = FEA.original_cores HSM_VER_REG_state_held = yes }
+}
+HSM_VER_REG_context = {
+	AVI = {
+		tag = AVI original_tag = AVI
+		exists = yes is_subject = no has_capitulated = no has_war = no
+		has_government = neutrality
+		has_country_flag = HSM_AVI_settlement_completed
+		has_country_flag = HSM_VER_REG_defensive_war
+		has_country_flag = HSM_VER_REG_defeat
+		has_country_flag = HSM_VER_REG_peace
+		NOT = { has_country_flag = HSM_VER_REG_settling }
+		owns_state = 382 controls_state = 382
+	}
+	OR = {
+		AND = { AVI = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_absorbed_ERI has_country_flag = HSM_VER_UNI_absorbed_EYR has_country_flag = HSM_VER_UNI_absorbed_AVI has_country_flag = HSM_VER_IMP_union_dispossessed } } HSM_VER_AVI_three_party_charter = yes }
+		AND = { AVI = { HSM_VER_IMP_unified_charter = yes has_country_flag = HSM_AVI_preserved_union } HSM_VER_AVI_government_available = yes }
+	}
+	HSM_VER_REG_herzland_held = yes
+	ERI = { OR = { exists = no has_war = no } }
+	EYR = { OR = { exists = no has_war = no } }
+	GRI = { OR = { exists = no has_war = no } }
+}
+HSM_VER_REG_minor = {
+	NOT = { has_global_flag = GRI_grover_vi_dead date > 1021.5.21 }
+	NOT = { any_country = { exists = yes has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } } }
+}
+HSM_VER_REG_local_minor = {
+	HSM_VER_REG_minor = yes
+	AVI = { has_character = GRI_emperor_grover_vi }
+	NOT = { any_country = { exists = yes NOT = { tag = AVI } has_character = GRI_emperor_grover_vi } }
+}
+HSM_VER_REG_local_adult = {
+	NOT = { has_global_flag = GRI_grover_vi_dead }
+	date > 1021.5.21
+	AVI = { has_character = GRI_emperor_grover_vi }
+}
+HSM_VER_REG_foreign_household = {
+	NOT = { has_global_flag = GRI_grover_vi_dead AVI = { has_character = GRI_emperor_grover_vi } }
+	any_country = { exists = yes NOT = { tag = AVI } has_character = GRI_emperor_grover_vi }
+}
+HSM_VER_REG_can_recover_household = {
+	HSM_VER_REG_context = yes
+	HSM_VER_REG_minor = yes
+	AVI = { has_country_flag = HSM_VER_REG_started NOT = { has_character = GRI_emperor_grover_vi has_country_flag = HSM_VER_REG_compact has_country_flag = HSM_VER_REG_household_received } }
+	GRI = { exists = no has_character = GRI_emperor_grover_vi NOT = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } } }
+	NOT = { any_country = { exists = yes has_character = GRI_emperor_grover_vi } }
+	all_of_scopes = { array = GRI.original_cores is_owned_and_controlled_by = AVI }
+}
+HSM_VER_REG_house_host = {
+	OR = { tag = ERI tag = EYR }
+	exists = yes is_subject = no has_capitulated = no has_war = no
+	has_country_flag = HSM_VER_charter_signed
+	has_character = GRI_emperor_grover_vi
+	HSM_VER_REG_minor = yes
+	AVI = { NOT = { has_character = GRI_emperor_grover_vi has_country_flag = HSM_VER_REG_household_received } }
+}
+HSM_VER_REG_custody_reply_valid = {
+	HSM_VER_REG_house_host = yes HSM_VER_REG_context = yes
+	has_country_flag = HSM_VER_REG_custody_pending
+	AVI = { has_country_flag = HSM_VER_REG_started NOT = { has_country_flag = HSM_VER_REG_compact } }
+}
+HSM_VER_REG_can_propose = {
+	HSM_VER_REG_context = yes
+	AVI = {
+		has_completed_focus = HSM_VER_REG_agreement_for_herzland
+		NOT = { has_country_flag = HSM_VER_REG_pending has_country_flag = HSM_VER_REG_retry has_country_flag = HSM_VER_REG_regency has_country_flag = HSM_VER_REG_compact has_country_flag = HSM_VER_REG_majority_due }
+	}
+	NOT = { AND = { HSM_VER_REG_successor_government = yes HSM_VER_REG_both_consents = yes } }
+}
+HSM_VER_REG_reply_valid = {
+	HSM_VER_REG_context = yes
+	HSM_VER_IMP_actual_signatory = yes
+	is_subject = no has_capitulated = no has_war = no
+	OR = { tag = ERI tag = EYR }
+	has_country_flag = HSM_VER_REG_vote_pending
+	AVI = { has_country_flag = HSM_VER_REG_pending }
+	OR = { AVI = { has_country_flag = HSM_VER_REG_propose_civil } AND = { AVI = { has_country_flag = HSM_VER_REG_propose_regency } HSM_VER_REG_local_minor = yes } }
+}
+HSM_VER_REG_agreement_live = {
+	HSM_VER_REG_context = yes
+	HSM_VER_REG_both_consents = yes
+	AVI = { OR = { has_country_flag = HSM_VER_REG_compact HSM_VER_REG_successor_government = yes AND = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes } } }
+}
+HSM_VER_REG_successor_government = {
+	AVI = {
+		has_country_flag = HSM_VER_REG_majority
+		has_character = GRI_emperor_grover_vi
+		has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+	}
+	NOT = { has_global_flag = GRI_grover_vi_dead }
+}
+HSM_VER_REG_can_succeed = {
+	HSM_VER_REG_context = yes
+	HSM_VER_REG_both_consents = yes
+	HSM_VER_REG_local_adult = yes
+	AVI = {
+		exists = yes is_subject = no
+		has_country_flag = HSM_VER_REG_majority_due
+		has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes }
+		NOT = { has_country_flag = HSM_VER_REG_majority has_completed_focus = the_second_winterfest_ball has_completed_focus = communists_win has_completed_focus = loyalists_win has_completed_focus = fascists_win }
+	}
+	NOT = { any_country = { exists = yes NOT = { tag = AVI } has_character = GRI_emperor_grover_vi } }
+}
+
+# Independent governments and constituent estates give distinct, explicit assent.
+HSM_VER_REG_both_consents = {
+	OR = {
+		AND = { AVI = { NOT = { has_country_flag = HSM_VER_UNI_absorbed_ERI } } ERI = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_VER_REG_signed } }
+		AVI = { HSM_VER_IMP_unified_charter = yes has_country_flag = HSM_VER_UNI_absorbed_ERI has_country_flag = HSM_VER_REG_estates_ERI_signed }
+	}
+	OR = {
+		AND = { AVI = { NOT = { has_country_flag = HSM_VER_UNI_absorbed_EYR } } EYR = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_VER_REG_signed } }
+		AVI = { HSM_VER_IMP_unified_charter = yes has_country_flag = HSM_VER_UNI_absorbed_EYR has_country_flag = HSM_VER_REG_estates_EYR_signed }
+	}
+}
+HSM_VER_REG_estates_reply_context = {
+	tag = AVI original_tag = AVI
+	HSM_VER_REG_context = yes
+	HSM_VER_IMP_unified_charter = yes
+	NOT = { has_country_flag = HSM_VER_REG_refused }
+	OR = {
+		AND = { has_country_flag = HSM_VER_REG_pending OR = { has_country_flag = HSM_VER_REG_propose_civil AND = { has_country_flag = HSM_VER_REG_propose_regency HSM_VER_REG_local_minor = yes } } }
+		has_country_flag = HSM_VER_REG_compact
+		AND = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes }
+		AND = { has_country_flag = HSM_VER_REG_majority_due HSM_VER_REG_local_adult = yes }
+		HSM_VER_REG_successor_government = yes
+	}
+}
+HSM_VER_REG_estates_ERI_reply_valid = {
+	HSM_VER_REG_estates_reply_context = yes
+	has_country_flag = HSM_VER_UNI_absorbed_ERI
+	ERI = { exists = no }
+	has_country_flag = HSM_VER_REG_estates_ERI_pending
+	NOT = { has_country_flag = HSM_VER_REG_estates_ERI_signed }
+}
+HSM_VER_REG_estates_EYR_reply_valid = {
+	HSM_VER_REG_estates_reply_context = yes
+	has_country_flag = HSM_VER_UNI_absorbed_EYR
+	EYR = { exists = no }
+	has_country_flag = HSM_VER_REG_estates_EYR_pending
+	NOT = { has_country_flag = HSM_VER_REG_estates_EYR_signed }
+}

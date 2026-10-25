@@ -1,0 +1,174 @@
+[
+  {
+    "id": "HSM_VER_ID_EYR_civic_fellowships",
+    "target": "HSM_VER_ID_EYR_civic_fellowships",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_civic_fellowships.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_civic_fellowships.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An examination score abacus beside a fellowship purse and a civic-service key. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_settlement",
+    "target": "HSM_VER_IMP_settlement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_settlement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_settlement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A temporary reconstruction office scaffold around a damaged civic gate, an expiry clock prominent. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_household_record",
+    "target": "HSM_VER_IMP_household_record",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_household_record.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_household_record.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An archival evidence cabinet with separate household-status tabs under a magnifier; no portrait, grave or guardianship claim. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_city_contracts",
+    "target": "HSM_VER_IMP_city_contracts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_city_contracts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_city_contracts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A municipal repair estimate diagram beside a factory roof model and paid building materials. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_open_archives",
+    "target": "HSM_VER_IMP_open_archives",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_open_archives.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_open_archives.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An opened archive cabinet releasing machine drawings and survey instruments to a civilian workbench. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_public_accounts",
+    "target": "HSM_VER_IMP_public_accounts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_public_accounts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_public_accounts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A municipal audit table weighing repair invoices against a temporary office's running clock. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_last_year",
+    "target": "HSM_VER_IMP_last_year",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_last_year.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_last_year.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A final-year calendar beside funded repair tools and a closed extension clasp. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_return_the_keys",
+    "target": "HSM_VER_IMP_return_the_keys",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_return_the_keys.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_return_the_keys.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A commission's keyring set on a municipal service counter beside retained engineering drawings. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_after_defence",
+    "target": "HSM_VER_REG_after_defence",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_after_defence-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_REG_after_defence.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three House consultation chairs around a damaged Herzland gate model, no claim to an imperial crown. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the map sheet at the left side of the round table. Replace every coastline/continent with a simple local inland diagram: one gently winding river, three small square town markers, short connecting roads, a few hills. No coastline, no globe, no Earth geography, no writing. Keep the three chairs, ruined gate model, other documents, palette, composition and transparency unchanged.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; replaced Earth-like map with local river diagram; restrained civic materials.",
+    "runtime_verified": false
+  }
+]

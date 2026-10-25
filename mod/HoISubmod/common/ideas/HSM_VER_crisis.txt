@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		HSM_VER_CR_emergency_hospitals = {
+			picture = HSM_VER_ART_HSM_VER_CR_emergency_hospitals
+			allowed = { original_tag = AVI }
+			removal_cost = -1
+			modifier = { army_org_regain = 0.10 casualty_trickleback = 0.10 }
+		}
+		HSM_VER_CR_border_watch = {
+			picture = HSM_VER_ART_HSM_VER_CR_border_watch
+			allowed = { OR = { original_tag = ERI original_tag = EYR } }
+			removal_cost = -1
+			modifier = { army_defence_factor = 0.07 dig_in_speed_factor = 0.15 }
+		}
+		HSM_VER_CR_civilian_transit = {
+			picture = HSM_VER_ART_HSM_VER_CR_civilian_transit
+			allowed = { OR = { original_tag = AVI original_tag = ERI original_tag = EYR } }
+			removal_cost = -1
+			modifier = { production_speed_infrastructure_factor = 0.10 industrial_capacity_factory = 0.05 }
+		}
+	}
+}

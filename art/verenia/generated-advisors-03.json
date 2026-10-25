@@ -1,0 +1,182 @@
+[
+  {
+    "id": "generic_air_close_air_sup",
+    "target": "generic_air_close_air_sup",
+    "source": "art/verenia/HSM_VER_GEN_generic_air_close_air_sup.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_close_air_sup.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: androgynous adult; warm grey feathers, dark crest, hazel eyes, brown aviator jacket and wool collar, focused. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_air_chief_all_weather",
+    "target": "generic_air_chief_all_weather",
+    "source": "art/verenia/HSM_VER_GEN_generic_air_chief_all_weather.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_chief_all_weather.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: androgynous mature; ivory feathers, slate crest, green eyes, slate-blue aviation coat, watchful. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_army_art",
+    "target": "generic_army_art",
+    "source": "art/verenia/HSM_VER_GEN_generic_army_art.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_art.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: male older; russet feathers, pale cheeks, amber eyes, olive high-collar uniform, exacting. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_army_art_female",
+    "target": "generic_army_art_female",
+    "source": "art/verenia/HSM_VER_GEN_generic_army_art_female.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_art_female.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: female older; silver-grey feathers, cinnamon crest, blue eyes, olive high-collar uniform, exacting. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_army_log",
+    "target": "generic_army_log",
+    "source": "art/verenia/HSM_VER_GEN_generic_army_log.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_log.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: male mature; beige feathers, brown brows, green eyes, khaki field tunic, patient. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_army_log_female",
+    "target": "generic_army_log_female",
+    "source": "art/verenia/HSM_VER_GEN_generic_army_log_female.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_log_female.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: female mature; cream feathers, grey-brown crest, amber eyes, khaki field tunic, patient. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_navy_fleet_log",
+    "target": "generic_navy_fleet_log",
+    "source": "art/verenia/HSM_VER_GEN_generic_navy_fleet_log.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_fleet_log.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: male older; charcoal feathers, white cheeks, hazel eyes, faded blue naval jacket, practical. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_navy_fleet_log_female",
+    "target": "generic_navy_fleet_log_female",
+    "source": "art/verenia/HSM_VER_GEN_generic_navy_fleet_log_female.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_fleet_log_female.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: female older; grey feathers, black brows, green eyes, faded blue naval jacket, practical. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_air_air_combat_trainer",
+    "target": "generic_air_air_combat_trainer",
+    "source": "art/verenia/HSM_VER_GEN_generic_air_air_combat_trainer.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_air_combat_trainer.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: androgynous mature; tawny feathers, ivory throat, dark crest, blue eyes, blue-grey flight instructor jacket, warm and firm. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_head_of_intelligence",
+    "target": "generic_head_of_intelligence",
+    "source": "art/verenia/HSM_VER_GEN_generic_head_of_intelligence.png",
+    "kind": "generated_advisor",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_head_of_intelligence.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / Hearts of Iron IV advisor portrait. Original unnamed griffon: androgynous mature; slate feathers, silver cheeks, amber eyes, charcoal civilian suit, observant. Eagle-headed griffon with distinctly avian hooked ochre beak and feathered face, not human or pony. Head and upper shoulders, centered three-quarter view. Refined painterly character art, readable at 65x67 pixels. Plain muted charcoal background. No hands or claws in frame. All clothes plain, no hats, crowns, badges, medals, shoulder insignia, heraldry, flags, writing or logos. Not an existing named character. Portrait aspect156:210.",
+    "approved": true,
+    "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+    "runtime_verified": false
+  }
+]

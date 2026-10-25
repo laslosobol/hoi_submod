@@ -1,0 +1,192 @@
+[
+  {
+    "id": "avian_air_assault_academy",
+    "target": "avian_air_assault_academy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_air_assault_academy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_air_assault_academy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Instate the Avian Air Assault Academy. Composition: An open training parachute suspending an equipment bundle beside an academy jump platform.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "develop_a_heavy_fighter",
+    "target": "develop_a_heavy_fighter",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/develop_a_heavy_fighter.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_develop_a_heavy_fighter.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Heavy Fighter Effort. Composition: A twin-engine heavy interceptor climbing toward a distant bomber silhouette.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "develop_an_air_doctrine",
+    "target": "develop_an_air_doctrine",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/develop_an_air_doctrine.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_develop_an_air_doctrine.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Develop an Aerial Doctrine. Composition: Aerial formation models mounted above a flight-planning board with intersecting course lines.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "lishill_fighter_production_plant",
+    "target": "lishill_fighter_production_plant",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/lishill_fighter_production_plant.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_lishill_fighter_production_plant.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Lishill Fighter Production Plant. Composition: A fighter fuselage on a factory assembly cradle beneath an overhead hoist.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "hallhaus_radar_station",
+    "target": "hallhaus_radar_station",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/hallhaus_radar_station.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_hallhaus_radar_station.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Hallhaus Radar Station. Composition: A lattice radar aerial turning above a compact Hallhaus station roof.. Palette: grey lattice steel, muted green station, black bakelite and copper. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "expand_plane_production",
+    "target": "expand_plane_production",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/expand_plane_production.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_expand_plane_production.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Expand Plane Production. Composition: Two successive aircraft fuselages on parallel production tracks beside a propeller rack.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "assert_ascendant_avian_aviation_ability",
+    "target": "assert_ascendant_avian_aviation_ability",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/assert_ascendant_avian_aviation_ability.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_assert_ascendant_avian_aviation_ability.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Assert Ascendant Avian Aviation Ability. Composition: A cutaway jet turbine beside a small rocket test stand; depict technological research, not a completed missile arsenal.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "acknowledge_advanced_aerial_accomplishments",
+    "target": "acknowledge_advanced_aerial_accomplishments",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/acknowledge_advanced_aerial_accomplishments.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_acknowledge_advanced_aerial_accomplishments.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Acknowledge Advanced Aerial Accomplishments. Composition: A polished fighter in level flight above pilot goggles and a precise flight-performance chart.. Palette: satin silver aluminium, muted olive aircraft panels, charcoal rubber, pale blue glass. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "acknowledge_social_problems",
+    "target": "acknowledge_social_problems",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/acknowledge_social_problems.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_acknowledge_social_problems.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Acknowledge Social Problems. Composition: A worn empty household purse beside a cracked cooking pot and a shuttered workshop.. Palette: worn brown leather, grey iron, faded plaster and dark weathered wood. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "establish_the_treasury",
+    "target": "establish_the_treasury",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/establish_the_treasury.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_establish_the_treasury.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one HOI4/EaW painted focus icon for Establish the Treasury. Composition: A treasury counting desk with coin trays and an abacus balancing two unequal columns.. Palette: pewter coins, green ledger binding, dark walnut, ivory; tiny brass fittings. One dominant bold silhouette with at most two subordinate motifs, extremely readable at99x86. Do not add decorative documents, scrolls, medallions or extra tools. Real materials, no gold-encrusted objects. Transparent exterior. No text, pseudotext, blank documents, invented heraldry, flags, crowns or human anatomy. Inanimate equipment illustration, no battle scene.",
+    "approved": true,
+    "review": "Full-size and native99x86 inspected. Aviation silver/olive; social distress weathered materials; treasury walnut/green. No invented arms. Runtime pending.",
+    "runtime_verified": false
+  }
+]

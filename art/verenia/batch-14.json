@@ -1,0 +1,192 @@
+[
+  {
+    "id": "strengthen_the_avian_livre",
+    "target": "strengthen_the_avian_livre",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/strengthen_the_avian_livre.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_strengthen_the_avian_livre.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Strengthen the Avian Livre. An Avian livre coin stack steadied by a calibrated balance and a bank vault door.. Palette: green financial bindings, pewter silver coins, ivory paper, dark walnut, iron; gold only minor real brass fittings. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "chamber_of_commerce",
+    "target": "chamber_of_commerce",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/chamber_of_commerce.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_chamber_of_commerce.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Found the Avian Chamber of Commerce. A commercial meeting table centred on a merchant scale with trade crates at its foot.. Palette: green financial bindings, pewter silver coins, ivory paper, dark walnut, iron; gold only minor real brass fittings. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "language_neutral_inscriptions",
+    "target": "language_neutral_inscriptions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/language_neutral_inscriptions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_language_neutral_inscriptions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Language-neutral Inscriptions. A coin and banknote carrying simple geometric denominations and numerals only, no language or invented arms.. Palette: green financial bindings, pewter silver coins, ivory paper, dark walnut, iron; gold only minor real brass fittings. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "a_commoners_chamber",
+    "target": "a_commoners_chamber",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/a_commoners_chamber.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_a_commoners_chamber.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for A Commoners' Chamber. An open chamber doorway admitting a tradesgriffon's tool case to the meeting table.. Palette: green financial bindings, pewter silver coins, ivory paper, dark walnut, iron; gold only minor real brass fittings. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "an_aristocratic_chamber",
+    "target": "an_aristocratic_chamber",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/an_aristocratic_chamber.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_an_aristocratic_chamber.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for An Aristocratic Chamber. A velvet meeting chair behind a closed chamber rail, with a substantial private strongbox.. Palette: deep burgundy velvet, dark walnut, silver iron strongbox, tiny aged brass hinges. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "language_problem",
+    "target": "language_problem",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/language_problem.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_language_problem.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for The Linguistic Divide. Two differently bound dictionaries separated by a cracked school slate.. Palette: ivory pages, differentiated muted russet and green book bindings, grey slate, natural wood; only Aquileian selected reader has a cobalt bookmark. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "choose_aquelian",
+    "target": "choose_aquelian",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/choose_aquelian.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_choose_aquelian.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Favour Aquileian. An Aquileian-language reader selected from a pair of books, marked by a cobalt bookmark; no lilies.. Palette: ivory pages, differentiated muted russet and green book bindings, grey slate, natural wood; only Aquileian selected reader has a cobalt bookmark. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "dual_hegemony",
+    "target": "dual_hegemony",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/dual_hegemony.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_dual_hegemony.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Linguistic Dual Hegemony. Two equally sized dictionaries supporting one classroom lamp, equal visual weight.. Palette: ivory pages, differentiated muted russet and green book bindings, grey slate, natural wood; only Aquileian selected reader has a cobalt bookmark. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "choose_griffish",
+    "target": "choose_griffish",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/choose_griffish.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_choose_griffish.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Favour Griffish. A Griffish-language reader selected beside a Heartlands route diagram; no imperial crown.. Palette: ivory pages, differentiated muted russet and green book bindings, grey slate, natural wood; only Aquileian selected reader has a cobalt bookmark. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "aquelian_dialect",
+    "target": "aquelian_dialect",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/aquelian_dialect.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_aquelian_dialect.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One distinct painted HOI4/EaW focus icon for Codify the Aquileian Dialect. A classroom printing block beside an Aquileian reader with a concrete illustrated lesson.. Palette: ivory pages, differentiated muted russet and green book bindings, grey slate, natural wood; only Aquileian selected reader has a cobalt bookmark. One dominant silhouette, max two supporting motifs. Transparent exterior, readable at99x86. No extra decorative scrolls or ornaments. No flags, crests, crowns, lilies or people. No empty documents or pseudotext: books can be closed, or contain clearly drawn lesson diagrams; money only simple numerals and geometric pattern, no faces or national symbols. Real materials, not uniform gilded ornament.",
+    "approved": true,
+    "review": "Source and native99x86 preview reviewed. Financial green/silver, differentiated book bindings and burgundy aristocratic chair; no national heraldry added. Runtime pending.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_EYR_FORCE_avians_border",
+    "target": "HSM_EYR_FORCE_avians_border",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_avians_border.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_avians_border.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A civil survey map replacing a garrison operations chart beneath a property registrar's ruler. Palette: Olive canvas, pale packing timber and dark iron; counters differentiated by value rather than heraldic colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_inspections_not_parades",
+    "target": "HSM_EYR_FORCE_inspections_not_parades",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_inspections_not_parades.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_inspections_not_parades.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An inspection lantern illuminating ordinary depot shelves rather than parade equipment. Palette: Olive canvas, pale packing timber and dark iron; counters differentiated by value rather than heraldic colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_road_that_stays_open",
+    "target": "HSM_EYR_FORCE_road_that_stays_open",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_road_that_stays_open.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_road_that_stays_open.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A former campaign road carrying a civilian cart past an open checkpoint. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_avian_claim",
+    "target": "HSM_EYR_FORCE_avian_claim",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_avian_claim.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_avian_claim.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A fresh Avian campaign demand beside a frontier telescope and a civilian travel case. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_avian_articles",
+    "target": "HSM_EYR_FORCE_avian_articles",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_avian_articles.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_avian_articles.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A bridge-guard key balanced against an Avian appeals box and a released wagon harness. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_avian_integration",
+    "target": "HSM_EYR_FORCE_avian_integration",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_avian_integration.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_avian_integration.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A temporary supply hut converted into a permanent workshop beside paid wages and petition tabs. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_open_court",
+    "target": "HSM_VER_GRO_open_court",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_open_court.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_open_court.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A palace doorway opening onto a household inquiry desk with an unclaimed key. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_household_file",
+    "target": "HSM_VER_GRO_household_file",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_household_file.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_household_file.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A magnifying glass over an indexed household record with separate unresolved evidence tabs; no assumed living or dead Grover. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_lessons",
+    "target": "HSM_VER_GRO_lessons",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_lessons.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_lessons.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An open court speaking trumpet beside a lesson book and a partly movable visitor screen. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_petitions",
+    "target": "HSM_VER_GRO_petitions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_petitions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_GRO_petitions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A petitioner's property key on justice scales opposite a court patron's service token. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; period materials, plain seals, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

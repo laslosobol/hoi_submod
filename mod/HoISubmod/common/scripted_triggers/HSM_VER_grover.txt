@@ -1,0 +1,152 @@
+# A fixed Herzland boundary prevents later imperial cores from swallowing Verenia.
+HSM_VER_GRO_herzland_state = {
+	OR = {
+		state = 378 state = 382 state = 397 state = 398 state = 399 state = 402
+		state = 405 state = 411 state = 422 state = 423 state = 424 state = 433
+		state = 434 state = 437 state = 439 state = 440 state = 441 state = 443
+		state = 447 state = 458 state = 479 state = 486 state = 492 state = 497
+		state = 498 state = 506 state = 520 state = 538 state = 539 state = 545
+		state = 546 state = 547 state = 554 state = 555 state = 568 state = 665
+		state = 666 state = 674
+	}
+}
+HSM_VER_GRO_government = {
+	exists = yes is_subject = no has_government = neutrality
+	OR = {
+		AND = { tag = ERI original_tag = ERI has_country_leader = { character = ERI_duke_vincent_erie ruling_only = yes } }
+		AND = { tag = EYR original_tag = EYR has_country_leader = { character = EYR_duke_iovinus_eyrie ruling_only = yes } }
+		HSM_VER_ROM_government = yes
+	}
+	has_country_flag = HSM_VER_UNI_founded
+	NOT = { has_country_flag = HSM_VER_IMP_union_dispossessed }
+}
+HSM_VER_GRO_verenia_held = {
+	391 = { is_owned_and_controlled_by = PREV }
+	400 = { is_owned_and_controlled_by = PREV }
+	401 = { is_owned_and_controlled_by = PREV }
+	500 = { is_owned_and_controlled_by = PREV }
+	673 = { is_owned_and_controlled_by = PREV }
+}
+HSM_VER_GRO_herzland_held = {
+	378 = { is_owned_and_controlled_by = PREV }
+	382 = { is_owned_and_controlled_by = PREV }
+	397 = { is_owned_and_controlled_by = PREV }
+	398 = { is_owned_and_controlled_by = PREV }
+	399 = { is_owned_and_controlled_by = PREV }
+	402 = { is_owned_and_controlled_by = PREV }
+	405 = { is_owned_and_controlled_by = PREV }
+	411 = { is_owned_and_controlled_by = PREV }
+	422 = { is_owned_and_controlled_by = PREV }
+	423 = { is_owned_and_controlled_by = PREV }
+	424 = { is_owned_and_controlled_by = PREV }
+	433 = { is_owned_and_controlled_by = PREV }
+	434 = { is_owned_and_controlled_by = PREV }
+	437 = { is_owned_and_controlled_by = PREV }
+	439 = { is_owned_and_controlled_by = PREV }
+	440 = { is_owned_and_controlled_by = PREV }
+	441 = { is_owned_and_controlled_by = PREV }
+	443 = { is_owned_and_controlled_by = PREV }
+	447 = { is_owned_and_controlled_by = PREV }
+	458 = { is_owned_and_controlled_by = PREV }
+	479 = { is_owned_and_controlled_by = PREV }
+	486 = { is_owned_and_controlled_by = PREV }
+	492 = { is_owned_and_controlled_by = PREV }
+	497 = { is_owned_and_controlled_by = PREV }
+	498 = { is_owned_and_controlled_by = PREV }
+	506 = { is_owned_and_controlled_by = PREV }
+	520 = { is_owned_and_controlled_by = PREV }
+	538 = { is_owned_and_controlled_by = PREV }
+	539 = { is_owned_and_controlled_by = PREV }
+	545 = { is_owned_and_controlled_by = PREV }
+	546 = { is_owned_and_controlled_by = PREV }
+	547 = { is_owned_and_controlled_by = PREV }
+	554 = { is_owned_and_controlled_by = PREV }
+	555 = { is_owned_and_controlled_by = PREV }
+	568 = { is_owned_and_controlled_by = PREV }
+	665 = { is_owned_and_controlled_by = PREV }
+	666 = { is_owned_and_controlled_by = PREV }
+	674 = { is_owned_and_controlled_by = PREV }
+}
+HSM_VER_GRO_local_alive = {
+	NOT = { has_global_flag = GRI_grover_vi_dead }
+	has_character = GRI_emperor_grover_vi
+	NOT = { any_country = { exists = yes NOT = { tag = PREV } has_character = GRI_emperor_grover_vi } }
+}
+HSM_VER_GRO_local_minor = {
+	HSM_VER_GRO_local_alive = yes
+	NOT = { date > 1021.5.21 }
+}
+HSM_VER_GRO_local_adult = {
+	HSM_VER_GRO_local_alive = yes date > 1021.5.21
+}
+HSM_VER_GRO_can_start = {
+	HSM_VER_GRO_government = yes has_capitulated = no has_war = no
+	HSM_VER_GRO_herzland_held = yes
+	HSM_VER_GRO_verenia_held = yes
+	GRI = { exists = no NOT = { has_country_flag = HSM_VER_GRO_restored } }
+	OR = { has_country_flag = HSM_VER_diplomatic_route has_country_flag = HSM_VER_military_route }
+	NOT = { has_country_flag = HSM_VER_GRO_started has_country_flag = HSM_VER_GRO_completed }
+}
+HSM_VER_GRO_active = {
+	HSM_VER_GRO_government = yes has_capitulated = no
+	has_country_flag = HSM_VER_GRO_started
+	NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished }
+	owns_state = 382 controls_state = 382
+}
+HSM_VER_GRO_can_recover = {
+	HSM_VER_GRO_active = yes HSM_VER_GRO_herzland_held = yes
+	NOT = { has_global_flag = GRI_grover_vi_dead has_character = GRI_emperor_grover_vi }
+	GRI = { exists = no has_character = GRI_emperor_grover_vi }
+	NOT = { any_country = { exists = yes has_character = GRI_emperor_grover_vi } }
+}
+HSM_VER_GRO_can_mandate = {
+	HSM_VER_GRO_active = yes HSM_VER_GRO_local_alive = yes
+	HSM_VER_GRO_herzland_held = yes has_war = no
+	HSM_VER_GRO_verenia_held = yes
+	GRI = { exists = no }
+	NOT = { has_country_flag = HSM_VER_GRO_mandate has_country_flag = HSM_VER_GRO_interrupted }
+}
+HSM_VER_GRO_regency_live = {
+	HSM_VER_GRO_active = yes HSM_VER_GRO_local_alive = yes
+	has_country_flag = HSM_VER_GRO_mandate
+	NOT = { has_country_flag = HSM_VER_GRO_interrupted }
+	GRI = { exists = no }
+}
+HSM_VER_GRO_civil_available = {
+	HSM_VER_GRO_active = yes
+	NOT = { has_country_flag = HSM_VER_GRO_mandate has_country_flag = HSM_VER_GRO_interrupted }
+}
+HSM_VER_GRO_can_release = {
+	HSM_VER_GRO_regency_live = yes HSM_VER_GRO_local_adult = yes
+	HSM_VER_GRO_herzland_held = yes has_war = no
+	HSM_VER_GRO_verenia_held = yes
+	has_country_flag = HSM_VER_GRO_prepared
+	has_country_flag = HSM_VER_GRO_articles_done
+	NOT = { has_country_flag = HSM_VER_GRO_completed }
+	GRI = { exists = no NOT = { has_country_flag = HSM_VER_GRO_restored } }
+}
+HSM_VER_GRO_partnership = {
+	is_subject = no
+	GRI = { exists = yes is_subject = no has_country_flag = HSM_VER_GRO_restored }
+	OR = {
+		AND = { tag = ERI has_country_flag = HSM_VER_GRO_completed is_in_faction_with = GRI NOT = { has_war_with = GRI } GRI = { has_country_flag = HSM_VER_GRO_partner_ERI } }
+		AND = { tag = EYR has_country_flag = HSM_VER_GRO_completed is_in_faction_with = GRI NOT = { has_war_with = GRI } GRI = { has_country_flag = HSM_VER_GRO_partner_EYR } }
+		AND = { tag = GRI has_country_flag = HSM_VER_GRO_partner_ERI ERI = { exists = yes is_subject = no has_country_flag = HSM_VER_GRO_completed is_in_faction_with = GRI NOT = { has_war_with = GRI } } }
+		AND = { tag = GRI has_country_flag = HSM_VER_GRO_partner_EYR EYR = { exists = yes is_subject = no has_country_flag = HSM_VER_GRO_completed is_in_faction_with = GRI NOT = { has_war_with = GRI } } }
+	}
+}
+# Delayed native event windows must recheck the actual household, not just ROOT.
+HSM_VER_GRO_protected_household = {
+	OR = {
+		GRI = { exists = yes has_country_flag = HSM_VER_GRO_restored has_character = GRI_emperor_grover_vi }
+		ERI = { HSM_VER_GRO_government = yes has_country_flag = HSM_VER_GRO_started has_character = GRI_emperor_grover_vi NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished } }
+		EYR = { HSM_VER_GRO_government = yes has_country_flag = HSM_VER_GRO_started has_character = GRI_emperor_grover_vi NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished } }
+	}
+}
+HSM_VER_GRO_native_ruler_allowed = { NOT = { has_country_flag = HSM_VER_GRO_restored } }
+HSM_VER_GRO_native_household_allowed = { NOT = { HSM_VER_GRO_protected_household = yes } }
+HSM_VER_GRO_native_childhood_allowed = {
+	HSM_VER_GRO_native_ruler_allowed = yes
+	HSM_VER_GRO_native_household_allowed = yes
+}
+HSM_VER_GRO_native_demand_allowed = { FROM = { HSM_VER_GRO_native_ruler_allowed = yes } }

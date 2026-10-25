@@ -1,0 +1,193 @@
+[
+  {
+    "id": "HSM_ERI_civilian_industry",
+    "target": "HSM_ERI_civilian_industry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_civilian_industry.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_civilian_industry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A civilian machine shop producing construction fittings beside timber stacks. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_workshop_network",
+    "target": "HSM_ERI_workshop_network",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_workshop_network.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_workshop_network.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A common drive shaft joining several small workshop benches. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_veterans_to_work",
+    "target": "HSM_ERI_veterans_to_work",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_veterans_to_work.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_veterans_to_work.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A worn service helmet hung above an apprentice's new tool apron. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_village_schools",
+    "target": "HSM_ERI_village_schools",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_village_schools.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_village_schools.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A modest village classroom desk with an illustrated primer and an evening lamp. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_teacher_training",
+    "target": "HSM_ERI_teacher_training",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_teacher_training.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_teacher_training.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An instructor's demonstration slate carrying a geometric lesson beside a prepared teaching box. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_technical_college",
+    "target": "HSM_ERI_technical_college",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_technical_college.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_technical_college.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A college laboratory arch framing an electrical meter and a mechanical teaching model. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_applied_research",
+    "target": "HSM_ERI_applied_research",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_applied_research-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_applied_research.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A precision electrical test bench with a notebook showing measured curves. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "edit_prompt": "Edit this painted game icon. Replace ONLY the modern rectangular electronic oscilloscope with a 1930s analog electrical laboratory instrument: squat dark enamel steel and walnut case, large ivory circular galvanometer dial with a thin mechanical needle and simple unnumbered tick marks, two small bakelite knobs and two exposed glass vacuum tubes. Absolutely no digital display, glowing screen, modern buttons, text, logos or heraldry. Preserve the plum notebook with measured curves, composition, painterly style, transparent exterior. Materials grey steel, ivory, walnut, small copper terminals; no gilded ornament.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_research_council",
+    "target": "HSM_ERI_research_council",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_research_council.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_research_council.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A laboratory scheduling dial between two different research instruments and a shared equipment key. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_public_libraries",
+    "target": "HSM_ERI_public_libraries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_public_libraries.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_public_libraries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A travelling book chest opened beside a public reading-room lamp. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_universal_schooling",
+    "target": "HSM_ERI_universal_schooling",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_universal_schooling.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_universal_schooling.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An open school gate with several differently sized satchels arranged along its welcoming path. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct material palettes, no invented heraldry; analog research apparatus corrected to period equipment.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,73 @@
+# Joint membership is explicit consent to the current presidency, never merely a tag.
+
+HSM_VER_COOP_has_live_membership = {
+	OR = {
+		AND = { has_country_flag = HSM_VER_UNI_member_ERI ERI = { exists = yes has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } } }
+		AND = { has_country_flag = HSM_VER_UNI_member_EYR EYR = { exists = yes has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } } }
+		AND = { has_country_flag = HSM_VER_UNI_member_AVI AVI = { exists = yes has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } } }
+	}
+}
+HSM_VER_COOP_member_of_ERI = {
+	OR = { tag = ERI AND = { has_country_flag = HSM_VER_UNI_member_ERI HSM_VER_UNI_candidate_for_ERI = yes } }
+	ERI = { HSM_VER_UNI_operational = yes }
+}
+HSM_VER_COOP_member_of_EYR = {
+	OR = { tag = EYR AND = { has_country_flag = HSM_VER_UNI_member_EYR HSM_VER_UNI_candidate_for_EYR = yes } }
+	EYR = { HSM_VER_UNI_operational = yes }
+}
+HSM_VER_COOP_member_of_AVI = {
+	OR = { tag = AVI AND = { has_country_flag = HSM_VER_UNI_member_AVI HSM_VER_UNI_candidate_for_AVI = yes } }
+	AVI = { HSM_VER_UNI_operational = yes }
+}
+HSM_VER_COOP_joint_member = {
+	HSM_VER_UNI_house = yes exists = yes
+	OR = { HSM_VER_COOP_member_of_ERI = yes HSM_VER_COOP_member_of_EYR = yes HSM_VER_COOP_member_of_AVI = yes }
+}
+HSM_VER_COOP_can_customs_union = {
+	OR = {
+		AND = { HSM_VER_COOP_member_of_ERI = yes ERI = { HSM_VER_UNI_can_customs = yes } }
+		AND = { HSM_VER_COOP_member_of_EYR = yes EYR = { HSM_VER_UNI_can_customs = yes } }
+		AND = { HSM_VER_COOP_member_of_AVI = yes AVI = { HSM_VER_UNI_can_customs = yes } }
+	}
+}
+HSM_VER_COOP_can_common_works = {
+	OR = {
+		AND = { HSM_VER_COOP_member_of_ERI = yes ERI = { HSM_VER_UNI_can_works = yes } }
+		AND = { HSM_VER_COOP_member_of_EYR = yes EYR = { HSM_VER_UNI_can_works = yes } }
+		AND = { HSM_VER_COOP_member_of_AVI = yes AVI = { HSM_VER_UNI_can_works = yes } }
+	}
+}
+HSM_VER_COOP_can_common_administration = {
+	OR = {
+		AND = { HSM_VER_COOP_member_of_ERI = yes ERI = { HSM_VER_UNI_can_administration = yes } }
+		AND = { HSM_VER_COOP_member_of_EYR = yes EYR = { HSM_VER_UNI_can_administration = yes } }
+		AND = { HSM_VER_COOP_member_of_AVI = yes AVI = { HSM_VER_UNI_can_administration = yes } }
+	}
+}
+HSM_VER_COOP_can_unified_command = {
+	OR = {
+		AND = { HSM_VER_COOP_member_of_ERI = yes ERI = { HSM_VER_UNI_can_command = yes } }
+		AND = { HSM_VER_COOP_member_of_EYR = yes EYR = { HSM_VER_UNI_can_command = yes } }
+		AND = { HSM_VER_COOP_member_of_AVI = yes AVI = { HSM_VER_UNI_can_command = yes } }
+	}
+}
+# Started military focuses protect a player's choice before the completion flag exists.
+HSM_VER_COOP_no_military_choice = {
+	ERI = { NOT = { HSM_VER_COOP_military_choice = yes } }
+	EYR = { NOT = { HSM_VER_COOP_military_choice = yes } }
+}
+HSM_VER_COOP_military_choice = {
+	OR = {
+		has_country_flag = HSM_VER_military_route
+		AND = { tag = ERI OR = { has_completed_focus = HSM_ERI_FORCE_the_price_of_victory focus_progress = { focus = HSM_ERI_FORCE_the_price_of_victory progress > 0 } } }
+		AND = { tag = EYR OR = { has_completed_focus = HSM_EYR_FORCE_the_last_campaign focus_progress = { focus = HSM_EYR_FORCE_the_last_campaign progress > 0 } } }
+	}
+}
+HSM_VER_COOP_diplomatic_choice = {
+	OR = {
+		has_country_flag = HSM_VER_diplomatic_route
+		AND = { tag = ERI OR = { has_completed_focus = HSM_ERI_diplomatic_settlement focus_progress = { focus = HSM_ERI_diplomatic_settlement progress > 0 } } }
+		AND = { tag = EYR OR = { has_completed_focus = HSM_EYR_diplomatic_settlement focus_progress = { focus = HSM_EYR_diplomatic_settlement progress > 0 } } }
+	}
+}
+

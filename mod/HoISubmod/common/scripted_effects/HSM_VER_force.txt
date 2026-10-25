@@ -1,0 +1,174 @@
+HSM_VER_FORCE_prepare = {
+	if = { limit = { HSM_VER_FORCE_can_prepare = yes } set_country_flag = HSM_VER_FORCE_campaign }
+}
+HSM_VER_FORCE_issue_goal = {
+	if = {
+		limit = { HSM_VER_FORCE_can_issue_goal = yes }
+		if = { limit = { tag = ERI NOT = { has_wargoal_against = EYR } } create_wargoal = { type = annex_everything target = EYR } }
+		if = { limit = { tag = EYR NOT = { has_wargoal_against = ERI } } create_wargoal = { type = annex_everything target = ERI } }
+	}
+}
+HSM_VER_FORCE_record_war = {
+	ERI = { set_country_flag = HSM_VER_FORCE_war_recorded clr_country_flag = HSM_VER_FORCE_rival_defeated clr_country_flag = HSM_VER_FORCE_peace_recorded clr_country_flag = HSM_VER_FORCE_settling }
+	EYR = { set_country_flag = HSM_VER_FORCE_war_recorded clr_country_flag = HSM_VER_FORCE_rival_defeated clr_country_flag = HSM_VER_FORCE_peace_recorded clr_country_flag = HSM_VER_FORCE_settling }
+}
+HSM_VER_FORCE_open_settlement = {
+	if = {
+		limit = { HSM_VER_FORCE_settlement_context = yes }
+		set_country_flag = HSM_VER_FORCE_settlement_started
+		remove_ideas = E_E_rivalry
+		if = { limit = { tag = ERI EYR = { exists = yes is_subject_of = ERI } } EYR = { remove_ideas = E_E_rivalry } }
+		if = { limit = { tag = EYR ERI = { exists = yes is_subject_of = EYR } } ERI = { remove_ideas = E_E_rivalry } }
+	}
+}
+HSM_VER_FORCE_approach_avian = {
+	if = {
+		limit = {
+			HSM_VER_AVI_intergigantes_route = yes
+			HSM_VER_FORCE_settlement_active = yes
+			has_war = no
+			NOT = { has_country_flag = HSM_VER_FORCE_avian_resolved has_country_flag = HSM_VER_FORCE_avian_pending }
+			AVI = { exists = yes is_subject = no has_capitulated = no has_war = no }
+		}
+		if = {
+			limit = { has_country_flag = HSM_VER_FORCE_avian_sought }
+			set_country_flag = { flag = HSM_VER_FORCE_avian_pending value = 1 days = 45 }
+			AVI = { country_event = { id = hsm_ver_force.1 days = 1 } }
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = HSM_VER_FORCE_avian_choice_pending } }
+			set_country_flag = { flag = HSM_VER_FORCE_avian_choice_pending value = 1 days = 45 }
+			country_event = { id = hsm_ver_force.4 days = 1 }
+		}
+	}
+}
+HSM_VER_FORCE_maintain = {
+	# Recover an ongoing war in an updated save, but never fabricate a past victory.
+	if = { limit = { HSM_VER_FORCE_at_war = yes NOT = { has_country_flag = HSM_VER_FORCE_war_recorded } } HSM_VER_FORCE_record_war = yes }
+	if = {
+		limit = { HSM_VER_FORCE_at_war = no NOT = { has_country_flag = HSM_VER_FORCE_peace_recorded } }
+		clr_country_flag = HSM_VER_FORCE_war_recorded clr_country_flag = HSM_VER_FORCE_rival_defeated
+	}
+	if = { limit = { OR = { has_war = yes NOT = { HSM_VER_FORCE_settlement_active = yes } } } clr_country_flag = HSM_VER_FORCE_avian_pending }
+	if = { limit = { tag = ERI has_country_flag = HSM_VER_FORCE_campaign } HSM_VER_ERI_FORCE_maintain = yes }
+	if = { limit = { tag = EYR has_country_flag = HSM_VER_FORCE_campaign } HSM_VER_EYR_FORCE_maintain = yes }
+	HSM_VER_FORCE_maintain_avian = yes
+}
+
+HSM_VER_FORCE_claim_avian = {
+	if = {
+		limit = { HSM_VER_FORCE_can_claim_avian = yes }
+		set_country_flag = HSM_VER_FORCE_avian_resolved
+		clr_country_flag = HSM_VER_FORCE_avian_choice_pending
+		if = { limit = { NOT = { has_wargoal_against = AVI } } create_wargoal = { type = annex_everything target = AVI } }
+		AVI = { country_event = { id = hsm_ver_force.10 days = 1 } }
+	}
+}
+HSM_VER_FORCE_clear_avian_proof = {
+	clr_country_flag = HSM_VER_FORCE_AVI_war
+	clr_country_flag = HSM_VER_FORCE_AVI_defeated
+	clr_country_flag = HSM_VER_FORCE_AVI_peace
+	clr_country_flag = HSM_VER_FORCE_AVI_settling
+	clr_country_flag = HSM_VER_FORCE_AVI_terms_pending
+	# Consent belongs to this exact subject relationship and campaign.
+	if = { limit = { tag = ERI } AVI = { clr_country_flag = HSM_VER_FORCE_AVI_consent_ERI } }
+	if = { limit = { tag = EYR } AVI = { clr_country_flag = HSM_VER_FORCE_AVI_consent_EYR } }
+}
+HSM_VER_FORCE_record_avian_war = {
+	HSM_VER_FORCE_clear_avian_proof = yes
+	clr_country_flag = HSM_VER_FORCE_AVI_terms_chosen
+	clr_country_flag = HSM_VER_FORCE_AVI_terms_refused
+	clr_country_flag = HSM_VER_FORCE_AVI_charter
+	clr_country_flag = HSM_VER_FORCE_AVI_transition
+	if = {
+		limit = { HSM_VER_AVR_regional_authority = yes AVI = { is_subject = no owns_state = 470 } }
+		set_country_flag = HSM_VER_FORCE_AVI_war
+	}
+}
+HSM_VER_FORCE_open_avian_terms = {
+	if = {
+		limit = { HSM_VER_FORCE_avian_victory = yes NOT = { has_country_flag = HSM_VER_FORCE_AVI_terms_opened } has_political_power > 74 }
+		add_political_power = -75
+		set_country_flag = HSM_VER_FORCE_AVI_terms_opened
+		HSM_VER_FORCE_dispatch_avian_terms = yes
+	}
+}
+HSM_VER_FORCE_dispatch_avian_terms = {
+	if = {
+		limit = {
+			HSM_VER_FORCE_avian_victory = yes has_country_flag = HSM_VER_FORCE_AVI_terms_opened
+			NOT = { has_country_flag = HSM_VER_FORCE_AVI_terms_chosen has_country_flag = HSM_VER_FORCE_AVI_terms_pending has_country_flag = HSM_VER_FORCE_AVI_terms_refused }
+		}
+		set_country_flag = { flag = HSM_VER_FORCE_AVI_terms_pending value = 1 days = 45 }
+		if = { limit = { HSM_VER_FORCE_avian_subject = yes } AVI = { country_event = { id = hsm_ver_force.11 days = 1 } } }
+		else = { country_event = { id = hsm_ver_force.12 days = 1 } }
+	}
+}
+HSM_VER_FORCE_ratify_avian_terms = {
+	set_country_flag = HSM_VER_FORCE_AVI_terms_chosen
+	set_country_flag = { flag = HSM_VER_FORCE_AVI_transition value = 1 days = 90 }
+	clr_country_flag = HSM_VER_FORCE_AVI_terms_pending
+	HSM_VER_FORCE_maintain_avian = yes
+}
+HSM_VER_FORCE_integrate_avian = {
+	if = {
+		limit = { HSM_VER_FORCE_can_integrate_avian = yes }
+		# Annexation requires a defeated own subject's live consent; only 470 is cored.
+		if = { limit = { HSM_VER_FORCE_avian_subject = yes } HSM_VER_AVR_transfer_household = yes HSM_VER_SP_inherit_avian = yes annex_country = { target = AVI transfer_troops = yes } }
+		if = { limit = { tag = ERI } 470 = { add_core_of = ERI } }
+		if = { limit = { tag = EYR } 470 = { add_core_of = EYR } }
+		470 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		set_country_flag = HSM_VER_FORCE_AVI_integrated
+		set_country_flag = HSM_VER_UNI_absorbed_AVI
+		set_country_flag = { flag = HSM_VER_FORCE_AVI_report_wait value = 1 days = 60 }
+		HSM_VER_FORCE_maintain_avian = yes
+	}
+}
+HSM_VER_FORCE_maintain_avian = {
+	# Recover wars already running when the update was loaded; never infer an old win.
+	if = { limit = { HSM_VER_AVR_regional_authority = yes has_war_with = AVI NOT = { has_country_flag = HSM_VER_FORCE_AVI_war } } HSM_VER_FORCE_record_avian_war = yes }
+	if = {
+		limit = { has_country_flag = HSM_VER_FORCE_AVI_war NOT = { has_war_with = AVI has_country_flag = HSM_VER_FORCE_AVI_peace } }
+		HSM_VER_FORCE_clear_avian_proof = yes
+	}
+	# A later foreign annexation/overlord change cannot be laundered into our victory.
+	if = {
+		limit = {
+			has_country_flag = HSM_VER_FORCE_AVI_peace
+			NOT = {
+				AND = { tag = ERI OR = { AND = { owns_state = 470 OR = { AVI = { exists = no } AVI = { is_subject_of = ERI } } } AVI = { owns_state = 470 is_subject_of = ERI } } }
+				AND = { tag = EYR OR = { AND = { owns_state = 470 OR = { AVI = { exists = no } AVI = { is_subject_of = EYR } } } AVI = { owns_state = 470 is_subject_of = EYR } } }
+			}
+		}
+		HSM_VER_FORCE_clear_avian_proof = yes
+	}
+	if = {
+		limit = { OR = { has_completed_focus = HSM_ERI_FORCE_avian_articles has_completed_focus = HSM_EYR_FORCE_avian_articles } }
+		if = { limit = { AVI = { exists = no } } clr_country_flag = HSM_VER_FORCE_AVI_terms_refused }
+		HSM_VER_FORCE_open_avian_terms = yes
+		HSM_VER_FORCE_dispatch_avian_terms = yes
+	}
+	if = {
+		limit = { has_country_flag = HSM_VER_FORCE_AVI_terms_chosen NOT = { has_country_flag = HSM_VER_FORCE_AVI_integrated } HSM_VER_FORCE_avian_victory = yes }
+		if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_FORCE_AVI_transition = yes } } HSM_VER_SP_add_HSM_VER_FORCE_AVI_transition = yes }
+	}
+	else = { HSM_VER_SP_remove_HSM_VER_FORCE_AVI_transition = yes }
+	if = {
+		limit = {
+			has_country_flag = HSM_VER_FORCE_AVI_integrated HSM_VER_AVR_regional_authority = yes
+			AVI = { exists = no }
+			OR = { AND = { tag = ERI owns_state = 470 470 = { is_fully_controlled_by = ERI } } AND = { tag = EYR owns_state = 470 470 = { is_fully_controlled_by = EYR } } }
+		}
+		if = {
+			limit = { has_country_flag = HSM_VER_FORCE_AVI_charter }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_FORCE_AVI_charter = yes } } HSM_VER_SP_add_HSM_VER_FORCE_AVI_charter = yes }
+		}
+		else = { if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_FORCE_AVI_commission = yes } } HSM_VER_SP_add_HSM_VER_FORCE_AVI_commission = yes } }
+		if = {
+			limit = { has_war = no NOT = { has_country_flag = HSM_VER_FORCE_AVI_report_wait has_country_flag = HSM_VER_FORCE_AVI_report_seen has_country_flag = HSM_VER_FORCE_AVI_report_pending } }
+			set_country_flag = { flag = HSM_VER_FORCE_AVI_report_pending value = 1 days = 45 }
+			country_event = { id = hsm_ver_force.14 days = 1 }
+		}
+	}
+	else = { HSM_VER_SP_remove_HSM_VER_FORCE_AVI_charter = yes HSM_VER_SP_remove_HSM_VER_FORCE_AVI_commission = yes }
+}

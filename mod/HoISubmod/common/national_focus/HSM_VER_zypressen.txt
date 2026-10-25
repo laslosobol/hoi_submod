@@ -1,0 +1,369 @@
+# Parent integration: import ONLY HSM_ZYP_victory_roll into avian_fascists.
+# Absolute positions; do not connect the root to the native tree with a prerequisite.
+shared_focus = {
+ id = HSM_ZYP_victory_roll icon = GFX_HSM_VER_ART_HSM_ZYP_victory_roll
+ x = 58 y = 0 cost = 3
+
+ available = {
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_government_tt HSM_ZYP_government = yes }
+  has_capitulated = no
+  has_war = no
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_herzland_tt HSM_ZYP_herzland_held = yes }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_victory_roll_effect_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_entry = yes } } hidden_effect = { set_country_flag = HSM_ZYP_started } country_event = { id = hsm_ver_zypressen.0 days = 1 } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_imperial_coronation icon = GFX_HSM_VER_ART_HSM_ZYP_imperial_coronation
+ x = 58 y = 1 cost = 4
+ prerequisite = { focus = HSM_ZYP_victory_roll }
+ available = {
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_government_tt HSM_ZYP_government = yes }
+  has_capitulated = no
+  has_war = no
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_herzland_tt HSM_ZYP_herzland_held = yes }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_entry = yes } } HSM_ZYP_queue_coronation = yes }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_household_register icon = GFX_HSM_VER_ART_HSM_ZYP_household_register
+ x = 56 y = 2 cost = 3
+ prerequisite = { focus = HSM_ZYP_imperial_coronation }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_household_register_effect_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes } } country_event = { id = hsm_ver_zypressen.3 days = 1 } add_tech_bonus = { name = HSM_ZYP_electronics_bonus bonus = 0.75 uses = 1 category = electronics } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_rolls_of_the_crowns icon = GFX_HSM_VER_ART_HSM_ZYP_rolls_of_the_crowns
+ x = 60 y = 2 cost = 4
+ prerequisite = { focus = HSM_ZYP_imperial_coronation }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_rolls_of_the_crowns_effect_tt
+  hidden_effect = {
+   if = { limit = { HSM_ZYP_active = yes } HSM_ZYP_maintain = yes }
+  }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_repair_the_arteries icon = GFX_HSM_VER_ART_HSM_ZYP_repair_the_arteries
+ x = 56 y = 3 cost = 5
+ prerequisite = { focus = HSM_ZYP_household_register }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes } } add_tech_bonus = { name = HSM_ZYP_support_bonus bonus = 1 uses = 2 category = support_tech } hidden_effect = { HSM_ZYP_maintain = yes } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_commissions_not_orders icon = GFX_HSM_VER_ART_HSM_ZYP_commissions_not_orders
+ x = 60 y = 3 cost = 4
+ prerequisite = { focus = HSM_ZYP_rolls_of_the_crowns }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_policy_tt has_country_flag = HSM_ZYP_policy_chosen }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_commissions_not_orders_effect_tt
+  hidden_effect = {
+   if = { limit = { HSM_ZYP_active = yes has_country_flag = HSM_ZYP_policy_chosen } HSM_ZYP_offer_congress = yes custom_effect_tooltip = HSM_ZYP_congress_tt }
+  }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_arsenals_and_workshops icon = GFX_HSM_VER_ART_HSM_ZYP_arsenals_and_workshops
+ x = 56 y = 4 cost = 5
+ prerequisite = { focus = HSM_ZYP_repair_the_arteries }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_works_tt has_country_flag = HSM_ZYP_works_chosen }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes has_country_flag = HSM_ZYP_works_chosen } } HSM_ZYP_military_works = yes add_tech_bonus = { name = HSM_ZYP_industry_bonus bonus = 1 uses = 2 category = industry } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_common_colleges icon = GFX_HSM_VER_ART_HSM_ZYP_common_colleges
+ x = 60 y = 4 cost = 5
+ prerequisite = { focus = HSM_ZYP_commissions_not_orders }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes } } add_tech_bonus = { name = HSM_ZYP_electronics_bonus bonus = 1 uses = 2 category = electronics } hidden_effect = { HSM_ZYP_maintain = yes } custom_effect_tooltip = HSM_ZYP_colleges_tt }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_the_muster_dispute icon = GFX_HSM_VER_ART_HSM_ZYP_the_muster_dispute
+ x = 58 y = 5 cost = 4
+ prerequisite = { focus = HSM_ZYP_arsenals_and_workshops }
+ prerequisite = { focus = HSM_ZYP_common_colleges }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_the_muster_dispute_effect_tt
+  hidden_effect = {
+   if = { limit = { HSM_ZYP_active = yes } HSM_ZYP_maintain = yes }
+  }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_western_campaign icon = GFX_HSM_VER_ART_HSM_ZYP_western_campaign
+ x = 58 y = 6 cost = 5
+ prerequisite = { focus = HSM_ZYP_the_muster_dispute }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  has_war = no
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_muster_tt has_country_flag = HSM_ZYP_muster_chosen }
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes has_war = no has_country_flag = HSM_ZYP_muster_chosen } } hidden_effect = { HSM_ZYP_review_frontiers = yes } country_event = { id = hsm_ver_zypressen.20 days = 1 } custom_effect_tooltip = HSM_ZYP_campaign_tt }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_reconstruction_contracts icon = GFX_HSM_VER_ART_HSM_ZYP_reconstruction_contracts
+ x = 56 y = 7 cost = 5
+ prerequisite = { focus = HSM_ZYP_western_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_west_tt HSM_ZYP_west_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_west_settled = yes has_war = no } } HSM_ZYP_civilian_works = yes add_tech_bonus = { name = HSM_ZYP_construction_bonus bonus = 1 uses = 2 category = construction_tech } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_northern_campaign icon = GFX_HSM_VER_ART_HSM_ZYP_northern_campaign
+ x = 60 y = 7 cost = 5
+ prerequisite = { focus = HSM_ZYP_western_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_west_tt HSM_ZYP_west_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_west_settled = yes has_war = no } } hidden_effect = { HSM_ZYP_review_frontiers = yes } country_event = { id = hsm_ver_zypressen.21 days = 1 } custom_effect_tooltip = HSM_ZYP_campaign_tt }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_southern_campaign icon = GFX_HSM_VER_ART_HSM_ZYP_southern_campaign
+ x = 58 y = 8 cost = 5
+ prerequisite = { focus = HSM_ZYP_reconstruction_contracts }
+ prerequisite = { focus = HSM_ZYP_northern_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_west_tt HSM_ZYP_west_settled = yes }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_north_tt HSM_ZYP_north_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes has_war = no } } hidden_effect = { HSM_ZYP_review_frontiers = yes } country_event = { id = hsm_ver_zypressen.22 days = 1 } custom_effect_tooltip = HSM_ZYP_campaign_tt }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_eastern_campaign icon = GFX_HSM_VER_ART_HSM_ZYP_eastern_campaign
+ x = 58 y = 9 cost = 5
+ prerequisite = { focus = HSM_ZYP_southern_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_three_regions_tt HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes HSM_ZYP_south_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes HSM_ZYP_south_settled = yes has_war = no } } hidden_effect = { HSM_ZYP_review_frontiers = yes } country_event = { id = hsm_ver_zypressen.23 days = 1 } custom_effect_tooltip = HSM_ZYP_campaign_tt }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_seats_for_new_crowns icon = GFX_HSM_VER_ART_HSM_ZYP_seats_for_new_crowns
+ x = 60 y = 10 cost = 4
+ prerequisite = { focus = HSM_ZYP_eastern_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_all_regions_tt HSM_ZYP_all_regions_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_seats_for_new_crowns_effect_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_all_regions_settled = yes has_war = no } } hidden_effect = { HSM_ZYP_offer_congress = yes } add_tech_bonus = { name = HSM_ZYP_industry_bonus bonus = 1 uses = 1 category = industry } }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_accounts_after_campaign icon = GFX_HSM_VER_ART_HSM_ZYP_accounts_after_campaign
+ x = 56 y = 10 cost = 4
+ prerequisite = { focus = HSM_ZYP_eastern_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_all_regions_tt HSM_ZYP_all_regions_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  custom_effect_tooltip = HSM_VER_UI_ZYP_accounts_after_campaign_effect_tt
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_all_regions_settled = yes has_war = no } } country_event = { id = hsm_ver_zypressen.6 days = 1 } add_ideas = HSM_ZYP_settled_orders }
+ }
+}
+shared_focus = {
+ id = HSM_ZYP_crown_and_countries icon = GFX_HSM_VER_ART_HSM_ZYP_crown_and_countries
+ x = 58 y = 11 cost = 4
+ prerequisite = { focus = HSM_ZYP_seats_for_new_crowns }
+ prerequisite = { focus = HSM_ZYP_accounts_after_campaign }
+ available = {
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_crowned_government_tt
+   HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+  }
+  custom_trigger_tooltip = {
+   tooltip = HSM_VER_UI_ZYP_capital_tt
+   382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+  }
+  custom_trigger_tooltip = { tooltip = HSM_VER_UI_ZYP_all_regions_tt HSM_ZYP_all_regions_settled = yes }
+  has_war = no
+ }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 5 }
+ completion_reward = {
+  if = { limit = { hidden_trigger = { HSM_ZYP_active = yes HSM_ZYP_all_regions_settled = yes has_war = no } } country_event = { id = hsm_ver_zypressen.7 days = 1 } army_experience = 40 add_tech_bonus = { name = HSM_ZYP_support_bonus bonus = 1 uses = 2 category = support_tech } }
+ }
+}

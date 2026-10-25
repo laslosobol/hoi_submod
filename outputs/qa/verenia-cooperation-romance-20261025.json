@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-25",
+  "scope": "ERI/EYR coordinated diplomacy, four joint institutional focuses, Rosaline/Montague diplomatic co-rulership, portraits and Grover narrative continuity",
+  "source_checks": [
+    {
+      "suite": "Test-Verenia.py",
+      "tests": 102,
+      "result": "pass"
+    },
+    {
+      "suite": "Test-VereniaUnification.py",
+      "tests": 43,
+      "result": "pass"
+    },
+    {
+      "suite": "Test-VereniaCooperation.py",
+      "tests": 21,
+      "result": "pass"
+    },
+    {
+      "suite": "Test-VereniaRomance.py",
+      "tests": 21,
+      "result": "pass"
+    },
+    {
+      "suite": "Test-VereniaGrover.py",
+      "tests": 41,
+      "result": "pass"
+    },
+    {
+      "suite": "Test-VereniaRoutes.py",
+      "tests": 34,
+      "result": "pass",
+      "executed_by": "cooperation implementation agent"
+    },
+    {
+      "suite": "Test-VereniaFocusUI.py",
+      "tests": 17,
+      "focuses_audited": 262,
+      "result": "pass",
+      "limitations": "Source estimates, no engine rendering."
+    },
+    {
+      "suite": "Test-VereniaNarrativeUI.py --ui-only",
+      "tests": 22,
+      "options_audited": 308,
+      "decisions_audited": 25,
+      "focus_descriptions_audited": 262,
+      "result": "pass",
+      "limitations": "Historical pre-feature gameplay snapshots intentionally not compared or modified."
+    },
+    {
+      "suite": "Bind-VereniaIcons.py --self-test",
+      "tests": 12,
+      "live_selectors": 560,
+      "result": "pass"
+    },
+    {
+      "suite": "Build-VereniaArt.py --manifest art/verenia/romance/portraits.json --check",
+      "sources": 3,
+      "exports": 5,
+      "result": "pass"
+    },
+    {
+      "suite": "Update-VereniaArtProgress.py --check",
+      "result": "pass",
+      "scope": "Earlier 632-source package; new romance portraits have their own manifest."
+    }
+  ],
+  "visual_review": {
+    "manifest": "art/verenia/romance/portraits.json",
+    "preview": "art/verenia/romance/portraits-native-preview.png",
+    "reviewed": "All three sources and native exports checked. Montague revised for a distinct identity. House colors preserved, no invented heraldry."
+  },
+  "runtime_verified": false,
+  "remaining_verification": "Fresh in-game ERI/EYR playtest: native joint-focus participant UI and AI pacing, parallel projects, wedding portraits, continuation to Avian and Grover. Multiplayer scheduling not emulated.",
+  "baseline_policy": "Do not refresh frozen UI gameplay digests to conceal deliberate feature changes; use current UI audits plus gameplay scenario suites."
+}

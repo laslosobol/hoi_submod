@@ -1,0 +1,40 @@
+[
+  {
+    "id": "resistance_organisation",
+    "target": "resistance_organisation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/resistance_organisation-correspondence-study.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_resistance_organisation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly strategy-game icon: A small wooden correspondence sorting box with three compartments holding sealed ivory envelopes, one burgundy cord tying a packet. Administrative communication and organization motif. Walnut, ivory paper and muted green dividers. Compact silhouette readable at99x86. Fully opaque objects with generous completely transparent exterior. No background, halo, glow or shadow. No lettering, insignia, heraldry, people or weapons. Only named objects.",
+    "approved": true,
+    "review": "Source and native99x86 reviewed: correspondence and training subjects readable, plain seals, appropriate material colors, transparent exterior.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_infantry_drills",
+    "target": "HSM_EYR_infantry_drills",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_infantry_drills-correspondence-study.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_infantry_drills.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly strategy-game icon: An open olive-bound training manual displaying a simple geometric arrangement of wooden practice blocks, with one small plain grey whistle beside it. Learning and coordinated exercises motif. Ivory pages, olive cloth binding and grey metal. Compact silhouette readable at99x86. Fully opaque objects with generous completely transparent exterior. No background, halo, glow or shadow. No lettering, insignia, heraldry, people or weapons. Only named objects.",
+    "approved": true,
+    "review": "Source and native99x86 reviewed: correspondence and training subjects readable, plain seals, appropriate material colors, transparent exterior.",
+    "runtime_verified": false
+  }
+]

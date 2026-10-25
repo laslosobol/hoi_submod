@@ -1,0 +1,22 @@
+HSM_VER_GRO_category = {
+	HSM_VER_GRO_household_retry_decision = {
+		icon = generic_political_discourse
+		visible = { has_completed_focus = HSM_VER_GRO_household_file NOT = { has_country_flag = HSM_VER_GRO_mandate has_country_flag = HSM_VER_GRO_interrupted } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_household_retry_tt HSM_VER_GRO_active = yes NOT = { has_country_flag = HSM_VER_GRO_household_retry } } }
+		cost = 0 fire_only_once = no
+		complete_effect = { custom_effect_tooltip = HSM_VER_GRO_household_report_tt hidden_effect = { HSM_VER_GRO_household = yes } }
+		ai_will_do = { factor = 0 }
+	}
+	HSM_VER_GRO_close_interrupted = {
+		icon = generic_political_discourse
+		visible = { has_country_flag = HSM_VER_GRO_interrupted }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_close_interrupted_tt HSM_VER_GRO_active = yes has_war = no } }
+		cost = 0 fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = HSM_VER_GRO_civil_tt
+			effect_tooltip = { add_tech_bonus = { name = HSM_VER_GRO_civil_compact bonus = 1 uses = 2 category = industry } }
+			hidden_effect = { HSM_VER_GRO_civil = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+}

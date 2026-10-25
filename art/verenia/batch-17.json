@@ -1,0 +1,187 @@
+[
+  {
+    "id": "communists_win",
+    "target": "communists_win",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/communists_win.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_communists_win.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for The Communists Win. Composition: A crimson revolutionary banner above a broken aristocratic gate lock; no human revolutionary or invented party crest.. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "a_socialist_economic_system",
+    "target": "a_socialist_economic_system",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/a_socialist_economic_system.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_a_socialist_economic_system.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for A Socialist Economic System. Composition: A private strongbox opened into evenly divided public supply bins.. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "the_long_arm_of_the_revolution",
+    "target": "the_long_arm_of_the_revolution",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/the_long_arm_of_the_revolution-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_the_long_arm_of_the_revolution.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for The Long Arm of the Revolution. Composition: A surveillance receiver looming over a locked correspondence cabinet tied with crimson cord.. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "edit_prompt": "Replace the Earth world map on the right-hand paper with a simple abstract communications network: six circles linked by straight lines, no continent outlines. Remove blank label plates on cabinet and replace with plain dark metal. Preserve receiver, crimson cord, palette, other contents and transparent exterior.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_collectivism",
+    "target": "avian_collectivism",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_collectivism.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_collectivism.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Avian Collectivism. Composition: Field fences removed around one collective granary and shared agricultural tools.. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "a_socialist_education_system",
+    "target": "a_socialist_education_system",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/a_socialist_education_system.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_a_socialist_education_system.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for A Socialist Education System. Composition: A crimson lesson book open to an illustrated factory lesson beside a reading lamp.. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_socialist_technocracy",
+    "target": "avian_socialist_technocracy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_socialist_technocracy-review-v3.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_socialist_technocracy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Precise framing edit of this painted game icon: zoom the ENTIRE group out about 25 percent and complete any missing top edge of the silo conveyor. Every object must be fully inside the image with at least 8 percent genuinely transparent border on all four sides. Keep the three analog dials, paper chart recorder, steel grain bin, tripod surveying scope and diagram book. Remove the numeric labels from the dials, leaving simple tick marks and needles only. Preserve material colors, lighting, style and the arrangement. No added emblems, text, figures or screens.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon for Socialist Technocracy. Composition: A laboratory control console backed by a communal grain bin and a technical instrument.. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Precise framing edit of this painted game icon: zoom the ENTIRE group out about 25 percent and complete any missing top edge of the silo conveyor. Every object must be fully inside the image with at least 8 percent genuinely transparent border on all four sides. Keep the three analog dials, paper chart recorder, steel grain bin, tripod surveying scope and diagram book. Remove the numeric labels from the dials, leaving simple tick marks and needles only. Preserve material colors, lighting, style and the arrangement. No added emblems, text, figures or screens.",
+      "previous_source": "art/verenia/avian_socialist_technocracy.png",
+      "source_sha256": "ac1c1dda199d21aa33e7c14201c8241de6557b7b7c0661c98dd018a432a58972",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/avian_socialist_technocracy",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "loyalists_win",
+    "target": "loyalists_win",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/loyalists_win-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_loyalists_win.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for The Loyalists Win. Composition: A battered civic gate reopened beside a ballot box and a sheathed loyalist sword.. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "edit_prompt": "Change only the red draped cloth to muted grey-green fabric. Preserve ballot box, marked ballot, battered gate and sheathed sword exactly. Keep transparent background. No new objects or emblems.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "purging_the_army",
+    "target": "purging_the_army",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/purging_the_army.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_purging_the_army.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Purging the Army. Composition: An officer's sword removed from a civilian meeting desk and secured in a barracks rack.. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "purging_the_aristocracy",
+    "target": "purging_the_aristocracy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/purging_the_aristocracy-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_purging_the_aristocracy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Purging the Aristocracy. Composition: A hereditary estate key broken beside a working craftsperson's tool chest.. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable.. Preserve crimson cloth/book/cord exactly when specified in composition, a plain revolutionary color not a new coat of arms. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frame, national heraldry, crowns, lilies, hammer-and-sickle emblems or stars. No humans or human silhouettes/anatomy, no animals. Pages show meaningful simple diagrams, never blank forms/pseudotext. Non-graphic symbolic objects only.",
+    "edit_prompt": "Replace the ornate fleur-de-lis-like handle of the broken key with a plain large oval iron loop. Remove all floral or heraldic ornaments from this key. Change the crimson draped cloth to muted grey-green cloth. Keep the broken key shaft, toolbox, illustrated book, palette of metal/wood, composition and transparency unchanged.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Revolutionary and loyalist palettes separated; no Earth maps or invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  }
+]

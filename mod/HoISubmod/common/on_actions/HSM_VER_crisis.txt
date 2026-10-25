@@ -1,0 +1,22 @@
+on_actions = {
+	on_annex = {
+		effect = {
+			if = { limit = { FROM = { tag = AVI } } ERI = { HSM_VER_CR_end_compact = yes } EYR = { HSM_VER_CR_end_compact = yes } }
+			else_if = { limit = { FROM = { HSM_VER_CR_house = yes } } FROM = { HSM_VER_CR_end_compact = yes } }
+			if = { limit = { AVI = { exists = yes } } AVI = { HSM_VER_CR_refresh_avian = yes } }
+		}
+	}
+	on_daily_ERI = { effect = { ERI = { HSM_VER_CR_maintain_house = yes } } }
+	on_daily_EYR = { effect = { EYR = { HSM_VER_CR_maintain_house = yes } } }
+	on_daily_AVI = { effect = { AVI = { HSM_VER_CR_maintain_avian = yes } } }
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = { OR = { AND = { tag = AVI FROM = { HSM_VER_CR_house = yes } } AND = { HSM_VER_CR_house = yes FROM = { tag = AVI } } } }
+				ERI = { HSM_VER_CR_refresh_compact = yes }
+				EYR = { HSM_VER_CR_refresh_compact = yes }
+				AVI = { HSM_VER_CR_refresh_avian = yes }
+			}
+		}
+	}
+}

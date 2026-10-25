@@ -1,0 +1,23 @@
+HSM_ZYP_imperial_business = {
+ HSM_ZYP_reconvene_coronation = {
+  icon = generic_political_discourse cost = 0
+  visible = { has_completed_focus = HSM_ZYP_imperial_coronation NOT = { has_country_flag = HSM_ZYP_crowned } }
+  available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_coronation_ready_tt HSM_ZYP_entry = yes NOT = { has_country_flag = HSM_ZYP_coronation_pending has_country_flag = HSM_ZYP_coronation_retry } } }
+  complete_effect = { custom_effect_tooltip = HSM_VER_DEC_coronation_tt HSM_ZYP_queue_coronation = yes }
+  ai_will_do = { factor = 10 }
+ }
+ HSM_ZYP_reopen_congress = {
+  icon = generic_political_discourse cost = 35
+  visible = { has_completed_focus = HSM_ZYP_commissions_not_orders }
+  available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_congress_ready_tt HSM_ZYP_active = yes has_country_flag = HSM_ZYP_policy_chosen any_country = { HSM_ZYP_can_invite = yes } } }
+  complete_effect = { custom_effect_tooltip = HSM_VER_DEC_congress_tt hidden_effect = { HSM_ZYP_offer_congress = yes } }
+  ai_will_do = { factor = 5 }
+ }
+ HSM_ZYP_review_campaign = {
+  icon = generic_political_discourse cost = 35
+  visible = { has_completed_focus = HSM_ZYP_western_campaign NOT = { HSM_ZYP_all_regions_settled = yes } }
+  available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_frontiers_ready_tt HSM_ZYP_can_review_frontiers = yes } }
+  complete_effect = { custom_effect_tooltip = HSM_VER_DEC_frontiers_tt hidden_effect = { HSM_ZYP_review_frontiers = yes set_country_flag = { flag = HSM_ZYP_frontier_retry value = 1 days = 90 } } }
+  ai_will_do = { factor = 5 }
+ }
+}

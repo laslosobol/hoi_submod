@@ -1,0 +1,550 @@
+# Country-scope native development floors for domestic and shared union milestones.
+# Only recognised lower EaW laws advance; earned and special development is kept.
+# Preview only the applicable destination law. Native catch-up steps run hidden
+# so tooltip expansion never lists every intermediate tier.
+
+HSM_VER_DEV_ensure_poverty1 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_poverty1_tt
+				OR = { has_idea = poverty }
+			}
+		}
+		effect_tooltip = { add_ideas = poverty1 }
+		hidden_effect = {
+			if = {
+				limit = { has_idea = poverty }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_poverty2 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_poverty2_tt
+				OR = { has_idea = poverty has_idea = poverty1 }
+			}
+		}
+		effect_tooltip = { add_ideas = poverty2 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_poverty1 = yes
+			if = {
+				limit = { has_idea = poverty1 }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_poverty3 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_poverty3_tt
+				OR = { has_idea = poverty has_idea = poverty1 has_idea = poverty2 }
+			}
+		}
+		effect_tooltip = { add_ideas = poverty3 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_poverty2 = yes
+			if = {
+				limit = { has_idea = poverty2 }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_poverty4 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_poverty4_tt
+				OR = { has_idea = poverty has_idea = poverty1 has_idea = poverty2 has_idea = poverty3 }
+			}
+		}
+		effect_tooltip = { add_ideas = poverty4 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_poverty3 = yes
+			if = {
+				limit = { has_idea = poverty3 }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_poverty5 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_poverty5_tt
+				OR = { has_idea = poverty has_idea = poverty1 has_idea = poverty2 has_idea = poverty3 has_idea = poverty4 }
+			}
+		}
+		effect_tooltip = { add_ideas = poverty5 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_poverty4 = yes
+			if = {
+				limit = { has_idea = poverty4 }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_no_poverty = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_no_poverty_tt
+				OR = { has_idea = poverty has_idea = poverty1 has_idea = poverty2 has_idea = poverty3 has_idea = poverty4 has_idea = poverty5 }
+			}
+		}
+		effect_tooltip = { add_ideas = no_poverty }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_poverty5 = yes
+			if = {
+				limit = { has_idea = poverty5 }
+				decrease_poverty = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_lack_of_scientists1 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_lack_of_scientists1_tt
+				OR = { has_idea = lack_of_scientists }
+			}
+		}
+		effect_tooltip = { add_ideas = lack_of_scientists1 }
+		hidden_effect = {
+			if = {
+				limit = { has_idea = lack_of_scientists }
+				decrease_illiteracy = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_lack_of_scientists2 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_lack_of_scientists2_tt
+				OR = { has_idea = lack_of_scientists has_idea = lack_of_scientists1 }
+			}
+		}
+		effect_tooltip = { add_ideas = lack_of_scientists2 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_lack_of_scientists1 = yes
+			if = {
+				limit = { has_idea = lack_of_scientists1 }
+				decrease_illiteracy = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_lack_of_scientists3 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_lack_of_scientists3_tt
+				OR = { has_idea = lack_of_scientists has_idea = lack_of_scientists1 has_idea = lack_of_scientists2 }
+			}
+		}
+		effect_tooltip = { add_ideas = lack_of_scientists3 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_lack_of_scientists2 = yes
+			if = {
+				limit = { has_idea = lack_of_scientists2 }
+				decrease_illiteracy = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_no_lack_of_scientists = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_no_lack_of_scientists_tt
+				OR = { has_idea = lack_of_scientists has_idea = lack_of_scientists1 has_idea = lack_of_scientists2 has_idea = lack_of_scientists3 }
+			}
+		}
+		effect_tooltip = { add_ideas = no_lack_of_scientists }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_lack_of_scientists3 = yes
+			if = {
+				limit = { has_idea = lack_of_scientists3 }
+				decrease_illiteracy = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_better_science_base = {
+	hidden_effect = { set_country_flag = better_science_base_unlocked }
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_better_science_base_tt
+				OR = { has_idea = poor_science_base }
+			}
+		}
+		effect_tooltip = { add_ideas = better_science_base }
+		hidden_effect = {
+			if = {
+				limit = { has_idea = poor_science_base }
+				increase_science_base = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_big_science_base = {
+	hidden_effect = { set_country_flag = big_science_base_unlocked }
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_big_science_base_tt
+				OR = { has_idea = poor_science_base has_idea = better_science_base }
+			}
+		}
+		effect_tooltip = { add_ideas = big_science_base }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_better_science_base = yes
+			if = {
+				limit = { has_idea = better_science_base }
+				increase_science_base = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_proper_science_base = {
+	hidden_effect = { set_country_flag = proper_science_base_unlocked }
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_proper_science_base_tt
+				OR = { has_idea = poor_science_base has_idea = better_science_base has_idea = big_science_base }
+			}
+		}
+		effect_tooltip = { add_ideas = proper_science_base }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_big_science_base = yes
+			if = {
+				limit = { has_idea = big_science_base }
+				increase_science_base = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_agrarian_society = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_agrarian_society_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society }
+			}
+		}
+		effect_tooltip = { add_ideas = agrarian_society }
+		hidden_effect = {
+			if = {
+				limit = { OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society } }
+				increase_society_development = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_pre_industrial_society = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_pre_industrial_society_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 }
+			}
+		}
+		effect_tooltip = { add_ideas = pre_industrial_society }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_agrarian_society = yes
+			if = {
+				limit = { OR = { has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 } }
+				increase_society_development = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_pre_industrial_society1 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_pre_industrial_society1_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 has_idea = pre_industrial_society }
+			}
+		}
+		effect_tooltip = { add_ideas = pre_industrial_society1 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_pre_industrial_society = yes
+			if = {
+				limit = { has_idea = pre_industrial_society }
+				increase_society_development_gradual = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_pre_industrial_society2 = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_pre_industrial_society2_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 has_idea = pre_industrial_society has_idea = pre_industrial_society1 }
+			}
+		}
+		effect_tooltip = { add_ideas = pre_industrial_society2 }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_pre_industrial_society1 = yes
+			if = {
+				limit = { has_idea = pre_industrial_society1 }
+				increase_society_development_gradual = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_outdated_industry = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_outdated_industry_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 has_idea = pre_industrial_society has_idea = pre_industrial_society1 has_idea = pre_industrial_society2 has_idea = pre_industrial_society3 }
+			}
+		}
+		effect_tooltip = { add_ideas = outdated_industry }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_pre_industrial_society2 = yes
+			if = {
+				limit = { OR = { has_idea = pre_industrial_society2 has_idea = pre_industrial_society3 } }
+				increase_society_development = yes
+			}
+		}
+	}
+}
+
+HSM_VER_DEV_ensure_modern_society = {
+	if = {
+		limit = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_UI_DOM_below_modern_society_tt
+				OR = { has_idea = tribal_society has_idea = tribal_society2 has_idea = tribal_society3 has_idea = tribal_society4 has_idea = communal_society has_idea = agrarian_society has_idea = agrarian_society2 has_idea = agrarian_society3 has_idea = agrarian_society4 has_idea = agrarian_society5 has_idea = agrarian_society6 has_idea = pre_industrial_society has_idea = pre_industrial_society1 has_idea = pre_industrial_society2 has_idea = pre_industrial_society3 has_idea = outdated_industry has_idea = outdated_industry2 }
+			}
+		}
+		effect_tooltip = { add_ideas = modern_society }
+		hidden_effect = {
+			HSM_VER_DEV_ensure_outdated_industry = yes
+			if = {
+				limit = { OR = { has_idea = outdated_industry has_idea = outdated_industry2 } }
+				increase_society_development = yes
+			}
+		}
+	}
+}
+
+# Old completed focuses have already paid their ordinary rewards. Reconcile only
+# idempotent law floors and decision unlocks, never factories, bonuses or slots.
+HSM_VER_DEV_migrate_ERI = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_DEV_migrated_v1 } }
+		if = {
+			limit = { has_completed_focus = HSM_ERI_reconstruction NOT = { has_country_flag = HSM_ERI_reconstruction_paid } }
+			set_country_flag = HSM_ERI_reconstruction_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_restore_public_services NOT = { has_country_flag = HSM_ERI_restore_public_services_paid } }
+			set_country_flag = HSM_ERI_restore_public_services_paid
+			set_country_flag = can_improve_poverty
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_reopen_roads NOT = { has_country_flag = HSM_ERI_reopen_roads_paid } }
+			set_country_flag = HSM_ERI_reopen_roads_paid
+			HSM_VER_DEV_ensure_agrarian_society = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_civilian_industry NOT = { has_country_flag = HSM_ERI_civilian_industry_paid } }
+			set_country_flag = HSM_ERI_civilian_industry_paid
+			HSM_VER_DEV_ensure_pre_industrial_society = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_workshop_network NOT = { has_country_flag = HSM_ERI_workshop_network_paid } }
+			set_country_flag = HSM_ERI_workshop_network_paid
+			HSM_VER_DEV_ensure_pre_industrial_society2 = yes
+			set_country_flag = can_improve_society_development
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_veterans_to_work NOT = { has_country_flag = HSM_ERI_veterans_to_work_paid } }
+			set_country_flag = HSM_ERI_veterans_to_work_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_village_schools NOT = { has_country_flag = HSM_ERI_village_schools_paid } }
+			set_country_flag = HSM_ERI_village_schools_paid
+			set_country_flag = can_improve_illiteracy
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_teacher_training NOT = { has_country_flag = HSM_ERI_teacher_training_paid } }
+			set_country_flag = HSM_ERI_teacher_training_paid
+			HSM_VER_DEV_ensure_better_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_technical_college NOT = { has_country_flag = HSM_ERI_technical_college_paid } }
+			set_country_flag = HSM_ERI_technical_college_paid
+			HSM_VER_DEV_ensure_big_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_applied_research NOT = { has_country_flag = HSM_ERI_applied_research_paid } }
+			set_country_flag = HSM_ERI_applied_research_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_research_council NOT = { has_country_flag = HSM_ERI_research_council_paid } }
+			set_country_flag = HSM_ERI_research_council_paid
+			HSM_VER_DEV_ensure_proper_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_public_libraries NOT = { has_country_flag = HSM_ERI_public_libraries_paid } }
+			set_country_flag = HSM_ERI_public_libraries_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_universal_schooling NOT = { has_country_flag = HSM_ERI_universal_schooling_paid } }
+			set_country_flag = HSM_ERI_universal_schooling_paid
+			HSM_VER_DEV_ensure_no_lack_of_scientists = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_district_housing NOT = { has_country_flag = HSM_ERI_district_housing_paid } }
+			set_country_flag = HSM_ERI_district_housing_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_social_insurance NOT = { has_country_flag = HSM_ERI_social_insurance_paid } }
+			set_country_flag = HSM_ERI_social_insurance_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_rural_credit NOT = { has_country_flag = HSM_ERI_rural_credit_paid } }
+			set_country_flag = HSM_ERI_rural_credit_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_public_utilities NOT = { has_country_flag = HSM_ERI_public_utilities_paid } }
+			set_country_flag = HSM_ERI_public_utilities_paid
+			HSM_VER_DEV_ensure_outdated_industry = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_ERI_lasting_prosperity NOT = { has_country_flag = HSM_ERI_lasting_prosperity_paid } }
+			set_country_flag = HSM_ERI_lasting_prosperity_paid
+			HSM_VER_DEV_ensure_no_poverty = yes
+			HSM_VER_DEV_ensure_modern_society = yes
+		}
+		set_country_flag = HSM_VER_DEV_migrated_v1
+	}
+}
+
+HSM_VER_DEV_migrate_EYR = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_DEV_migrated_v1 } }
+		if = {
+			limit = { has_completed_focus = HSM_EYR_borderland_reconstruction NOT = { has_country_flag = HSM_EYR_borderland_reconstruction_paid } }
+			set_country_flag = HSM_EYR_borderland_reconstruction_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_fair_grain_markets NOT = { has_country_flag = HSM_EYR_fair_grain_markets_paid } }
+			set_country_flag = HSM_EYR_fair_grain_markets_paid
+			set_country_flag = can_improve_poverty
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_market_roads NOT = { has_country_flag = HSM_EYR_market_roads_paid } }
+			set_country_flag = HSM_EYR_market_roads_paid
+			HSM_VER_DEV_ensure_agrarian_society = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_rural_processing NOT = { has_country_flag = HSM_EYR_rural_processing_paid } }
+			set_country_flag = HSM_EYR_rural_processing_paid
+			HSM_VER_DEV_ensure_pre_industrial_society = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_equipment_cooperatives NOT = { has_country_flag = HSM_EYR_equipment_cooperatives_paid } }
+			set_country_flag = HSM_EYR_equipment_cooperatives_paid
+			HSM_VER_DEV_ensure_pre_industrial_society2 = yes
+			set_country_flag = can_improve_society_development
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_seasonal_work_schemes NOT = { has_country_flag = HSM_EYR_seasonal_work_schemes_paid } }
+			set_country_flag = HSM_EYR_seasonal_work_schemes_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_evening_classes NOT = { has_country_flag = HSM_EYR_evening_classes_paid } }
+			set_country_flag = HSM_EYR_evening_classes_paid
+			set_country_flag = can_improve_illiteracy
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_practical_science NOT = { has_country_flag = HSM_EYR_practical_science_paid } }
+			set_country_flag = HSM_EYR_practical_science_paid
+			HSM_VER_DEV_ensure_big_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_district_laboratories NOT = { has_country_flag = HSM_EYR_district_laboratories_paid } }
+			set_country_flag = HSM_EYR_district_laboratories_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_technical_fellowships NOT = { has_country_flag = HSM_EYR_technical_fellowships_paid } }
+			set_country_flag = HSM_EYR_technical_fellowships_paid
+			HSM_VER_DEV_ensure_proper_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_teacher_training NOT = { has_country_flag = HSM_EYR_teacher_training_paid } }
+			set_country_flag = HSM_EYR_teacher_training_paid
+			HSM_VER_DEV_ensure_better_science_base = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_public_libraries NOT = { has_country_flag = HSM_EYR_public_libraries_paid } }
+			set_country_flag = HSM_EYR_public_libraries_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_universal_schooling NOT = { has_country_flag = HSM_EYR_universal_schooling_paid } }
+			set_country_flag = HSM_EYR_universal_schooling_paid
+			HSM_VER_DEV_ensure_no_lack_of_scientists = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_district_housing NOT = { has_country_flag = HSM_EYR_district_housing_paid } }
+			set_country_flag = HSM_EYR_district_housing_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_social_insurance NOT = { has_country_flag = HSM_EYR_social_insurance_paid } }
+			set_country_flag = HSM_EYR_social_insurance_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_rural_credit NOT = { has_country_flag = HSM_EYR_rural_credit_paid } }
+			set_country_flag = HSM_EYR_rural_credit_paid
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_public_utilities NOT = { has_country_flag = HSM_EYR_public_utilities_paid } }
+			set_country_flag = HSM_EYR_public_utilities_paid
+			HSM_VER_DEV_ensure_outdated_industry = yes
+		}
+		if = {
+			limit = { has_completed_focus = HSM_EYR_lasting_prosperity NOT = { has_country_flag = HSM_EYR_lasting_prosperity_paid } }
+			set_country_flag = HSM_EYR_lasting_prosperity_paid
+			HSM_VER_DEV_ensure_no_poverty = yes
+			HSM_VER_DEV_ensure_modern_society = yes
+		}
+		set_country_flag = HSM_VER_DEV_migrated_v1
+	}
+}

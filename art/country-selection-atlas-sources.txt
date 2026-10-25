@@ -1,0 +1,91 @@
+COUNTRY SELECTOR ART / 2026-10-24
+
+Credits
+-------
+The Equestria at War atlas is created by Deer (lunar_explorator).
+Country-selection maps developed by Scars and Egil of the EaW team.
+Their included "Making your own country selection screen map.txt" explicitly
+provides the public PSD sources for modders and asks for these credits.
+
+Source folder:
+https://drive.google.com/drive/folders/1rakuJBqmSFsY1ANGFlxR-HXan6Fqz5gi
+Source file: Map Revamp Split - Griffonia.psd
+Drive ID: 1DbxEYdok8qq-LzgCX_OfDtsN67EuW6kQ
+PSD dimensions: 4599x4303. The temporary download is not a runtime dependency.
+Native framing template:
+gfx/interface/country_selection_screen/country_map/template.png (485x344)
+
+Inputs
+------
+The PSD's existing composite was exported without drawing new geography.
+Verenia reference crop: (1450, 2010, 2310, 2720), size 860x710.
+Cyanolisia reference crop: (2440, 2600, 3300, 3310), size 860x710.
+Each country highlight was edited with the built-in image generation tool.
+The results were visually checked against the source atlas; they are artwork,
+not a live or pixel-exact representation of the province database.
+No CLI or API image generator was used.
+
+Retained outputs
+----------------
+art/source/HSM_CSS_CYA_atlas.png
+art/source/HSM_CSS_ERI_atlas.png
+art/source/HSM_CSS_EYR_atlas.png
+art/source/HSM_CSS_AVI_atlas.png
+art/source/HSM_country_selection_icon.png
+
+The exporter only crops to the reviewed viewports, resizes, composites the
+existing EaW frame, and converts to TGA. It does not repaint atlas geometry.
+Rebuild with: python tools/Render-CountrySelectionMaps.py
+Preview: outputs/country-selection/atlas-contact-sheet.png
+
+Icon prompt
+-----------
+Create a single transparent-background painted UI icon for the Equestria at
+War: Expanded Stories country-selection tab, designed to be legible at only
+78 by 70 pixels. An open ivory-paged chronicle with a deep emerald leather
+binding, a few restrained antique-gold corners, and one pale feather quill
+diagonally across its right side. Three-quarter near-front view, broad strong
+silhouette, chunky readable forms, rich hand-painted grand-strategy game asset
+rendering, crisply separated edges and small warm highlights. The book must
+dominate the composition. One small red ribbon bookmark, no extra props.
+Match the tactile painted gold-and-stone material feel of Hearts of Iron IV
+fantasy mod UI, not a flat vector symbol, not a modern app logo, not a
+photorealistic photograph. Centered, fills most of a nearly square canvas,
+transparent empty margin on all sides. No circular badge, no shield behind
+it, no rectangular plaque, no lettering or numerals, no wordmarks, no
+pseudo-writing, no glow cloud, no floor or background.
+
+Map prompts
+-----------
+Shared direction: Edit the existing EaW atlas crop with a strictly minimal
+country-selection color treatment. Preserve every border, all city/country
+text, rivers, railways, symbols, positions, framing and proportions. Do not
+redraw the map, invent geography, add labels, translate text or add decorations.
+Only the selected country's existing territory should brighten; its lettering
+should be ivory. Keep terrain and paper texture visible. Neighbours remain
+separate, readable, softly dimmed/desaturated. No frame, UI or caption bar;
+preserve the source aspect ratio and the appearance of the original atlas.
+
+CYA: Highlight COUNTY OF CYANOLISIA, the long coastal mainland strip running
+diagonally from lower-left to upper-right through the centre, in muted
+sapphire-blue with a softly luminous blue border. Do not highlight Asterion
+or its islands. Preserve surrounding Brodfeld, Gryphia, Blackhollow, Sicameon.
+
+ERI: Highlight HOUSE OF ERIE around Erie, Laile and Nidheim, below Avian and
+west of Eyrie, in muted blue-grey/teal with a pale-blue border. Avian and Eyrie
+remain unselected. Keep all roads, city lettering and atlas texture visible.
+
+EYR: Highlight HOUSE OF EYRIE around Eyrie and Calembourg, north of Lake
+Rumare between Erie and Angriver, in warm golden-olive with a gold border.
+Avian, Erie and Angriver remain unselected and separate.
+
+AVI: Highlight HOUSE OF AVIAN around its existing label and Mittelkatl,
+below Greifenmarschen, west of Yale and north of Erie, in pale sage/sea-green
+with a subtle silver-green border. Restrained printed-atlas highlight, no
+harsh neon. Erie and Eyrie remain unselected and separate.
+
+Final viewport coordinates in the 860x710 reference coordinate system:
+CYA: (0, 0, 860, 710)
+ERI: (160, 180, 620, 565)
+EYR: (400, 130, 840, 498)
+AVI: (125, 55, 605, 457)

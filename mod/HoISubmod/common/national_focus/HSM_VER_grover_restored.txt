@@ -1,0 +1,345 @@
+# Loaded once by the host's restoration effect, after the original Grover is transferred.
+focus_tree = {
+	id = HSM_VER_GRO_restored_empire
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			original_tag = GRI
+			has_country_flag = HSM_VER_GRO_restored
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 850 }
+
+	focus = {
+		id = HSM_VER_GRO_restored_oath
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_oath
+		x = 4 y = 0 cost = 4
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			country_event = { id = hsm_ver_grover_restored.1 days = 1 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_reconstruction
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_reconstruction
+		prerequisite = { focus = HSM_VER_GRO_restored_oath }
+		x = 0 y = 1 cost = 7
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			# Prefer Griffenheim, then the current capital, then another safe home state.
+			if = {
+				limit = { hidden_trigger = {
+					382 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+				} }
+				382 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			else_if = {
+				limit = { hidden_trigger = {
+					capital_scope = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+				} }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			else_if = {
+				limit = { hidden_trigger = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+				} }
+				random_owned_state = {
+					limit = { hidden_trigger = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					} }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			else = {
+				add_tech_bonus = { name = HSM_VER_GRO_restored_construction_bonus bonus = 1 uses = 2 category = construction_tech }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_charter
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_charter
+		prerequisite = { focus = HSM_VER_GRO_restored_oath }
+		x = 4 y = 1 cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			country_event = { id = hsm_ver_grover_restored.2 days = 1 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_embassies
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_embassies
+		prerequisite = { focus = HSM_VER_GRO_restored_oath }
+		x = 8 y = 1 cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_partner_tt
+				OR = {
+					AND = {
+						has_country_flag = HSM_VER_GRO_partner_ERI
+						ERI = { exists = yes NOT = { has_war_with = ROOT } }
+					}
+					AND = {
+						has_country_flag = HSM_VER_GRO_partner_EYR
+						EYR = { exists = yes NOT = { has_war_with = ROOT } }
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			add_tech_bonus = { name = HSM_VER_GRO_restored_exchange_bonus bonus = 0.5 uses = 2 category = electronics }
+			country_event = { id = hsm_ver_grover_restored.3 days = 1 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_workshops
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_workshops
+		prerequisite = { focus = HSM_VER_GRO_restored_reconstruction }
+		x = 0 y = 2 cost = 7
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			add_tech_bonus = { name = HSM_VER_GRO_restored_industry_bonus bonus = 0.75 uses = 2 category = industry }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_courts
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_courts
+		prerequisite = { focus = HSM_VER_GRO_restored_charter }
+		x = 4 y = 2 cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			add_ideas = HSM_VER_GRO_restored_public_service
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_defence
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_defence
+		prerequisite = { focus = HSM_VER_GRO_restored_charter }
+		x = 8 y = 2 cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = { name = HSM_VER_GRO_restored_defence_bonus bonus = 0.75 uses = 2 category = support_tech }
+		}
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_university
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_university
+		prerequisite = { focus = HSM_VER_GRO_restored_workshops }
+		prerequisite = { focus = HSM_VER_GRO_restored_courts }
+		x = 2 y = 3 cost = 7
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			if = { limit = { hidden_trigger = { amount_research_slots < 5 } } add_research_slot = 1 }
+			add_tech_bonus = { name = HSM_VER_GRO_restored_university_bonus bonus = 1 uses = 2 category = electronics }
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_arsenals
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_arsenals
+		prerequisite = { focus = HSM_VER_GRO_restored_defence }
+		x = 8 y = 3 cost = 7
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 15 }
+		completion_reward = {
+			if = {
+				limit = { hidden_trigger = {
+					382 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+					}
+				} }
+				382 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				}
+			}
+			else_if = {
+				limit = { hidden_trigger = {
+					capital_scope = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+					}
+				} }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				}
+			}
+			else_if = {
+				limit = { hidden_trigger = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+					}
+				} }
+				custom_effect_tooltip = HSM_VER_GRO_restored_arsenal_site_tt
+				hidden_effect = {
+					random_owned_state = {
+						limit = { hidden_trigger = {
+							is_fully_controlled_by = ROOT
+							free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+						} }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+			}
+			else = {
+				add_tech_bonus = { name = HSM_VER_GRO_restored_arsenal_bonus bonus = 1 uses = 2 category = infantry_weapons }
+			}
+			army_experience = 20
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY }
+	}
+
+	focus = {
+		id = HSM_VER_GRO_restored_peace
+		icon = GFX_HSM_VER_ART_HSM_VER_GRO_restored_peace
+		prerequisite = { focus = HSM_VER_GRO_restored_university }
+		prerequisite = { focus = HSM_VER_GRO_restored_arsenals }
+		x = 4 y = 4 cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HSM_VER_GRO_restored_government_tt
+				original_tag = GRI
+				has_country_flag = HSM_VER_GRO_restored
+				is_subject = no
+				has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+			}
+		}
+		cancel_if_invalid = yes
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			add_ideas = HSM_VER_GRO_restored_civic_settlement
+			country_event = { id = hsm_ver_grover_restored.4 days = 1 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}

@@ -1,0 +1,3290 @@
+{
+  "schema_version": 1,
+  "purpose": "Separate read-only scope audit. This is not a binder manifest, approval register, art brief extension, or authorization to replace shared graphics.",
+  "scope_tags": [
+    "AVI",
+    "ERI",
+    "EYR"
+  ],
+  "pinned_inputs": {
+    "art/verenia/inventory.json": "ed4fecf7ac64c32088d681850d860ffb04d42ec7d901778cc0f0a24f19356963",
+    "art/verenia/icon-briefs.json": "932de63f78b094ad15fd6466aad96cdccf967bcb30ffb5229906ca2ae0d12bfd",
+    "art/verenia/portrait-bindings.json": "5a6169353281443ea82b42890a2ce8ae1385b93b37ad4a797b544792cabb36fc"
+  },
+  "summary": {
+    "native_spirit_definitions_missing_from_inventory": 49,
+    "native_AVI_prefixed_spirits": 48,
+    "shared_ERI_EYR_rivalry_spirits": 1,
+    "native_missing_already_in_unified_component_list": 15,
+    "named_character_records_checked": 27,
+    "named_portrait_fields_checked": 32,
+    "named_character_records_missing_from_bindings": 0,
+    "named_portrait_fields_missing_from_bindings": 0,
+    "legacy_manufacturers_missing_from_bindings": 0,
+    "legacy_generic_manufacturers_already_recorded_but_blocked": 11,
+    "generic_advisor_template_ids_missing_from_bindings": 30,
+    "potentially_applicable_MIO_ids_missing_from_bindings": 10,
+    "unavailable_MIO_archetypes_excluded": 22
+  },
+  "findings": [
+    {
+      "issue": "Native spirits omitted by inventory scan",
+      "evidence": {
+        "file": "tools/Inventory-VereniaArt.py",
+        "line": 20
+      },
+      "detail": "The scan iterates only MOD/common/ideas and admits HSM_VER/HSM_ERI/HSM_EYR stems or AVI.txt. EaW/common/ideas/zzz_AVI_ideas.txt is never scanned. All 49 country-category definitions are missing; avithreehousescorp is an industrial concern, not a 50th spirit."
+    },
+    {
+      "issue": "All named House portrait fields covered",
+      "detail": "Compared actual portrait leaf selectors, including both Tripartite College instances, to portrait-bindings.json. All 27 character records and 32 portrait fields are represented. Presence is not a fresh approval/hash/in-game validation."
+    },
+    {
+      "issue": "Shared legacy manufacturers are recorded, not completed",
+      "evidence": {
+        "file": "tools/Bind-VereniaPortraits.py",
+        "line": 163
+      },
+      "detail": "The binder inventories 11 generic legacy manufacturers plus avithreehousescorp. The 11 remain blocked_shared_definition; the unique corporation is batch01_native_override. Do not list the 11 as absent, or their global texture replacements as scoped work."
+    },
+    {
+      "issue": "Generated advisor templates are outside binder discovery",
+      "evidence": {
+        "file": "EaW/history/general/generic_advisors.txt",
+        "line": 4
+      },
+      "detail": "The binder reads the three named character files, not generate_character templates. Erie and Eyrie lack the custom-advisor opt-out in their country history. Avian sets has_custom_advisors, but the separately gated intelligence-chief generator remains relevant. Runtime generated IDs and personal names cannot be inferred as fixed static character IDs."
+    },
+    {
+      "issue": "MIO organization IDs are outside binder discovery",
+      "evidence": {
+        "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+        "line": 14
+      },
+      "detail": "Ten generic MIO definitions have potentially applicable allowed blocks. They are different targets from the eleven legacy designer ideas even when a sprite is shared. Twenty-two archetype-only definitions explicitly allowed=no are excluded from the actionable count."
+    }
+  ],
+  "missing_native_spirits": [
+    {
+      "id": "E_E_rivalry",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 33,
+      "picture": "AVI_E_E_rivalry",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Erie-Eyrie Rivalry",
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 652
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 653
+        },
+        {
+          "file": "EaW/history/countries/ERI - HouseErie.txt",
+          "line": 45
+        },
+        {
+          "file": "EaW/history/countries/EYR - HouseEyrie.txt",
+          "line": 45
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 753
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 754
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_diplomacy.txt",
+          "line": 115
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_diplomacy.txt",
+          "line": 128
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_force.txt",
+          "line": 19
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_force.txt",
+          "line": 20
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_force.txt",
+          "line": 21
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_econcoop",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 64,
+      "picture": "generic_production_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Interhouse Economic Cooperation",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 290
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 291
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 292
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 434
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 435
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 436
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 439
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1564
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1569
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1572
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1576
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1579
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1580
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1989
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2009
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2017
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2023
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2095
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2100
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2104
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_studentexchange",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 78,
+      "picture": "generic_army_war_college",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Interhouse Student Exchange Programmes",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 343
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 344
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 345
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1588
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1593
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1596
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1600
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1603
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1604
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1990
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_scienceexchange",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 88,
+      "picture": "generic_research_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "The Avian Scientific Exchange Conference",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 407
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 408
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 409
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 411
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 412
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 413
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_relaxd_citizenship",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 98,
+      "picture": "griffon_passport",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Relaxed Citizenship Requirements",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 388
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1612
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1617
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1620
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1624
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1627
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1628
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1991
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_common_markets",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 106,
+      "picture": "FRA_matignon_agreements",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Tripartite Common Market Agreement",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 434
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 435
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 436
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4099
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4557
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 439
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4288
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4746
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1636
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1641
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1644
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1648
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1651
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1652
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1992
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2011
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2019
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2096
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2101
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2103
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_unified_intelligence_agency",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 123,
+      "picture": "ast_classify_aliens",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Tripartite Intelligence Agency",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 728
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 729
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 730
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4125
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4536
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 873
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4314
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4725
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1660
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1665
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1668
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1672
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1675
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1676
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1993
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2037
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2049
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2059
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2067
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2073
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2114
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2121
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2127
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2132
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2136
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_unified_intelligence_agency_lar",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 140,
+      "picture": "ast_classify_aliens",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Tripartite Intelligence Agency",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 723
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 724
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 725
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4122
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4533
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 865
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4311
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4722
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1684
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1689
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1692
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1696
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1699
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1700
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1994
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2039
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2051
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2061
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2069
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2115
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2122
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2128
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2133
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2135
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_annual_military_exercises",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 157,
+      "picture": "generic_volunteer_expedition_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Annual Military Exercises",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 752
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 753
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 754
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4080
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4577
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 911
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4269
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4766
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1708
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1713
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1716
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1720
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1723
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1724
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1995
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2027
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2033
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2107
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2111
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_agri_1",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 174,
+      "picture": "generic_agrarian_society",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Agricultural Sustainability",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1569
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1629
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1758
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1818
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_agri_2",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 184,
+      "picture": "generic_agrarian_society",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Everygriff a Farmer",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1629
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1763
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1818
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1952
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_agri_3",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 195,
+      "picture": "generic_agrarian_society",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Closed Agro-Ecosystem",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1763
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1952
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_coopfarms",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 208,
+      "picture": "generic_infantry_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Cooperative Farms",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1697
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1886
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_protectionism",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 219,
+      "picture": "chi_hyper_inflation5",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Protectionism",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1589
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1778
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_sca",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 230,
+      "picture": "generic_goods_red_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "State-Capital Collusion",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1717
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1906
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_milsoc_1",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 241,
+      "picture": "FRA_national_mobilization_focus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Militarised Society",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1808
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1850
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 1997
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2039
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_milsoc_2",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 252,
+      "picture": "FRA_national_mobilization_focus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Militarised Society - Mandatory Service",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1850
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2039
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_fortify",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 264,
+      "picture": "generic_wall_line",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Fortification Effort",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 1831
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2020
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_de_arse",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 274,
+      "picture": "CZE_planning_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Decentralised Arsenal",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2152
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2341
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_gfg",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 285,
+      "picture": "ast_all_in",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Guns for Gilda",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2037
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2226
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_rrr",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 295,
+      "picture": "FRA_national_mobilization_focus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Reservist System",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2173
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2362
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_das_raubvogel",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 308,
+      "picture": "FRA_army_of_aggression_focus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Das Raubvogel",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2194
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2383
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_eternal",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 320,
+      "picture": "ast_volunteer_defence_corps",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "House Avian Eternal",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2260
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2449
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_off_aca",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 330,
+      "picture": "general_staff",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Officer Academy",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2300
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2367
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2387
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2489
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2556
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2576
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_off_aca_1",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 344,
+      "picture": "general_staff",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Officer Academy",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2367
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2556
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_off_aca_2",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 360,
+      "picture": "general_staff",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Officer Academy",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2387
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2576
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_militia",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 375,
+      "picture": "generic_manpower_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Militia Army",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2408
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2597
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_regulars",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 391,
+      "picture": "generic_morale_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Professional Army",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 2430
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 2619
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_declared_neutral",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 407,
+      "picture": "vittoria_mutilata",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Neutrality",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/events/Avian Events.txt",
+          "line": 158
+        },
+        {
+          "file": "mod/HoISubmod/events/Avian Events.txt",
+          "line": 249
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_Liberty_idea",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 421,
+      "picture": "generic_democratic_drift_bonus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Liberty!",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4349
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4538
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_linguistic_antagonism",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 445,
+      "picture": "GRW_opened_up_schools2",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Linguistic Antagonism",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3466
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3494
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3516
+        },
+        {
+          "file": "EaW/history/countries/AVI - HouseAvian.txt",
+          "line": 46
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3655
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3683
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3705
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_urbanisation_effort",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 457,
+      "picture": "man_five_year_plan_industry",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Urbanisation Effort",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3629
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3818
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_agrarian_reform",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 467,
+      "picture": "severe_famine",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Agrarian Reform",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3608
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3797
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_treasury",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 477,
+      "picture": "trade",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Treasury",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3246
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3435
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_livre_1",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 488,
+      "picture": "ger_mefo_bills",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Livre",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3265
+        },
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3306
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3454
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3495
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_livre_2",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 499,
+      "picture": "ger_mefo_bills",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Livre",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3306
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3495
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_opposable_thumbs",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 510,
+      "picture": "chi_war_of_resistance3",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Superior Griffish Physiognomy",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [],
+      "note": "Defined with an empty modifier block; no exact-ID use found in the scoped focus/event/history/effect/on-action scan. Definition coverage gap, not proof of a currently obtainable spirit."
+    },
+    {
+      "id": "AVI_the_strong_arm_of_the_revolution",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 519,
+      "picture": "trotskyite_plot",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "The Strong Arm of the Revolution",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4080
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4269
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1732
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1737
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1740
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1744
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1747
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1748
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1996
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2029
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2108
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2110
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_socialist_economics",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 534,
+      "picture": "ast_abandon_the_westminster_system_communism",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Socialist Economics",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4099
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4288
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1756
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1761
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1764
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1768
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1771
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1772
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1997
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2013
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2097
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2099
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_long_arm_of_the_revolution",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 549,
+      "picture": "nkvd",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "The Long Arm of the Revolution",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4125
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4314
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1780
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1785
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1788
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1792
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1795
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1796
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1998
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2041
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2053
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2063
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2116
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2123
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2129
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2131
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_long_arm_of_the_revolution_lar",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 564,
+      "picture": "nkvd",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "The Long Arm of the Revolution",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4122
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4311
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1804
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1809
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1812
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1816
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1819
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1820
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1999
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2043
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2055
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2117
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2124
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2126
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_Kriegsamt",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 579,
+      "picture": "chi_wargaming_division",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Kriegsamt",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4577
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4766
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1828
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1833
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1836
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1840
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1843
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1844
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2000
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2106
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_Wirtschaftsministerium",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 594,
+      "picture": "ast_abandon_the_westminster_system_fascism",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Wirtschaftsministerium",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4557
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4746
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1852
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1857
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1860
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1864
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1867
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1868
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2001
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2094
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_Evidenzbureau",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 609,
+      "picture": "air_support_focus",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Evidenzbureau",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4536
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4725
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1876
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1881
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1884
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1888
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1891
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1892
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2002
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2045
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2118
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2120
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_Evidenzbureau_lar",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 624,
+      "picture": "air_support_focus",
+      "in_inventory": false,
+      "unified_spirit_component": true,
+      "name": "Evidenzbureau",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 4533
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 4722
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1900
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1905
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1908
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1912
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1915
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 1916
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2003
+        },
+        {
+          "file": "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+          "line": 2113
+        }
+      ],
+      "note": "Included in Build-VereniaSpirit.py NATIVE component list. Component storage after union does not provide a separate pre-union icon or an inventory record."
+    },
+    {
+      "id": "AVI_foundation",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 639,
+      "picture": "raj_indian_gentlemen_officers",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "The Foundation",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/events/Avian Events.txt",
+          "line": 909
+        },
+        {
+          "file": "mod/HoISubmod/events/Avian Events.txt",
+          "line": 1058
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_foundation_lar",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 661,
+      "picture": "raj_indian_gentlemen_officers",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "The Foundation",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/events/Avian Events.txt",
+          "line": 906
+        },
+        {
+          "file": "mod/HoISubmod/events/Avian Events.txt",
+          "line": 1055
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_found_hq",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 683,
+      "picture": "air_support_focus",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Foundation Headquarters",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 5193
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 5382
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    },
+    {
+      "id": "AVI_aviation",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 700,
+      "picture": "generic_air_research",
+      "in_inventory": false,
+      "unified_spirit_component": false,
+      "name": "Avian Aeronautical Adeptness",
+      "scope_tags": [
+        "AVI",
+        "ERI/EYR where granted by cooperation"
+      ],
+      "scoped_use_references": [
+        {
+          "file": "EaW/common/national_focus/AVI.txt",
+          "line": 3207
+        },
+        {
+          "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+          "line": 3396
+        }
+      ],
+      "note": "Native definition absent from pinned inventory."
+    }
+  ],
+  "covered_named_characters": [
+    {
+      "id": "AVI_lady_katrina_avian",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 2,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "AVI_aaron_redtail",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 28,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "AVI_trubach_von_zypressen",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 41,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "AVI_lady_kalra_blackclaw",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 60,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "AVI_aviehrenreich",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 78,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avijoachim",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 100,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi1",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 122,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi2",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 144,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avichamberofcommerce",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 161,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avichamberofcommerce_1",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 187,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avichamberofcommerce_2",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 210,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avijohannesvondross",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 233,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_aviphilipperemy",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 257,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi10",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 281,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi11",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 302,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi8",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 323,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi9",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 341,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi4",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 359,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi5",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 378,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi6",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 397,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi7",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 416,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avitripartitecolleges",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 435,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "AVI_avi3",
+      "file": "mod/HoISubmod/common/characters/AVI.txt",
+      "line": 491,
+      "in_bindings": true,
+      "advisor": true
+    },
+    {
+      "id": "ERI_duke_vincent_erie",
+      "file": "mod/HoISubmod/common/characters/ERI.txt",
+      "line": 2,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "ERI_valens_silverclaw",
+      "file": "mod/HoISubmod/common/characters/ERI.txt",
+      "line": 37,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "EYR_duke_iovinus_eyrie",
+      "file": "mod/HoISubmod/common/characters/EYR.txt",
+      "line": 2,
+      "in_bindings": true,
+      "advisor": false
+    },
+    {
+      "id": "EYR_eusebius_nicticorax",
+      "file": "mod/HoISubmod/common/characters/EYR.txt",
+      "line": 37,
+      "in_bindings": true,
+      "advisor": false
+    }
+  ],
+  "missing_named_portrait_selectors": [],
+  "legacy_manufacturer_binding_status": [
+    {
+      "id": "avithreehousescorp",
+      "category": "industrial_concern",
+      "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+      "line": 5,
+      "picture": "AVI_threehousescorp",
+      "in_bindings": true,
+      "binding_status": "batch01_native_override"
+    },
+    {
+      "id": "generic_tank_manufacturer",
+      "category": "tank_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1338,
+      "picture": "generic_tank_manufacturer_1",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_naval_manufacturer",
+      "category": "naval_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1358,
+      "picture": "generic_naval_manufacturer_1",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_light_aircraft_manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1381,
+      "picture": "generic_air_manufacturer_1",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_medium_aircraft_manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1399,
+      "picture": "generic_air_manufacturer_3",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_heavy_aircraft_manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1414,
+      "picture": "generic_air_manufacturer_2",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_naval_aircraft_manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1429,
+      "picture": "generic_naval_manufacturer_2",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_industrial_concern",
+      "category": "industrial_concern",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1447,
+      "picture": "generic_industrial_concern_1",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_electronics_concern",
+      "category": "industrial_concern",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1466,
+      "picture": "generic_electronics_concern_1",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_infantry_equipment_manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1487,
+      "picture": "generic_infantry_equipment_manufacturer_2",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_artillery_manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1504,
+      "picture": "generic_artillery_manufacturer_2",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    },
+    {
+      "id": "generic_motorized_equipment_manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1519,
+      "picture": "generic_motorized_equipment_manufacturer_3",
+      "in_bindings": true,
+      "binding_status": "blocked_shared_definition"
+    }
+  ],
+  "missing_generated_advisor_templates": [
+    {
+      "id": "generic_communist_revolutionary",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 25,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\ttoken_base = generic_communist_revolutionary\n\n\t\t\t\t\tadvisor = {\n\t\t\t\t\t\tslot = political_advisor\n\t\t\t\t\t\ttraits = { communist_revolutionary }\n\n\t\t\t\t\t\tai_will_do = {\n\t\t\t\t\t\t\tfactor = 0\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tportraits = {\n\t\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t\t}\n\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_democratic_reformer",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 47,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\ttoken_base = generic_democratic_reformer\n\n\t\t\t\t\tadvisor = {\n\t\t\t\t\t\tslot = political_advisor\n\t\t\t\t\t\ttraits = { democratic_reformer }\n\n\t\t\t\t\t\tai_will_do = {\n\t\t\t\t\t\t\tfactor = 0\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tportraits = {\n\t\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t\t}\n\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_fascist_demagogue",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 69,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\ttoken_base = generic_fascist_demagogue\n\n\t\t\t\t\tadvisor = {\n\t\t\t\t\t\tslot = political_advisor\n\t\t\t\t\t\ttraits = { fascist_demagogue }\n\n\t\t\t\t\t\tai_will_do = {\n\t\t\t\t\t\t\tfactor = 0\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tportraits = {\n\t\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t\t}\n\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_captain_of_industry",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 94,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_captain_of_industry\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = political_advisor\n\t\t\t\t\ttraits = { captain_of_industry }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_fortification_engineer",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 112,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_fortification_engineer\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = political_advisor\n\t\t\t\t\ttraits = { fortification_engineer }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_war_industrialist",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 130,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_war_industrialist\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = political_advisor\n\t\t\t\t\ttraits = { war_industrialist }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_backroom_backstabber",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 148,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_backroom_backstabber\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = political_advisor\n\t\t\t\t\ttraits = { backroom_backstabber }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_military_theorist",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 171,
+      "slot": "theorist",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_military_theorist\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = theorist\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { military_theorist }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_military_theorist_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 184,
+      "slot": "theorist",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_military_theorist_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = theorist\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { military_theorist }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_naval_theorist",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 206,
+      "slot": "theorist",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_naval_theorist\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = theorist\n\t\t\t\t\t\t\tledger = navy\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { naval_theorist }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_naval_theorist_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 219,
+      "slot": "theorist",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_naval_theorist_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = theorist\n\t\t\t\t\t\t\tledger = navy\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { naval_theorist }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_air_warfare_theorist",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 238,
+      "slot": "theorist",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_air_warfare_theorist\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = theorist\n\t\t\t\t\tledger = air\n\t\t\t\t\tcost = 100\n\t\t\t\t\ttraits = { air_warfare_theorist }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_chief_off",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 269,
+      "slot": "army_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_chief_off\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = army_chief\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_chief_offensive_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_chief_off_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 281,
+      "slot": "army_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_chief_off_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = army_chief\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_chief_offensive_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_chief_def",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 307,
+      "slot": "army_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_chief_def\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = army_chief\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_chief_defensive_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_chief_def_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 319,
+      "slot": "army_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_chief_def_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = army_chief\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_chief_defensive_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_chief_decisive_bat",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 346,
+      "slot": "navy_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_chief_decisive_bat\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = navy_chief\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { navy_chief_decisive_battle_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_chief_decisive_bat_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 358,
+      "slot": "navy_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_chief_decisive_bat_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = navy_chief\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { navy_chief_decisive_battle_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_anti_submarine",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 384,
+      "slot": "navy_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_anti_submarine\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = navy_chief\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { alt_navy_anti_submarine_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_anti_submarine_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 396,
+      "slot": "navy_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_anti_submarine_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = navy_chief\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { alt_navy_anti_submarine_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_air_close_air_sup",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 420,
+      "slot": "air_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_air_close_air_sup\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = air_chief\n\t\t\t\t\tcost = 100\n\t\t\t\t\ttraits = { alt_air_close_air_support_2 }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_air_chief_all_weather",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 443,
+      "slot": "air_chief",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_air_chief_all_weather\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = air_chief\n\t\t\t\t\tcost = 100\n\t\t\t\t\ttraits = { air_chief_all_weather_2 }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_art",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 471,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_art\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_artillery_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_art_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 484,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_art_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { army_artillery_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_log",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 510,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_log\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { army_logistics_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_army_log_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 523,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_army_log_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = army\n\t\t\t\t\t\t\tcost = 100\n\t\t\t\t\t\t\ttraits = { army_logistics_2 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_fleet_log",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 550,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_fleet_log\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = navy\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { navy_fleet_logistics_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = male\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_navy_fleet_log_female",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 563,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\t\t\ttoken_base = generic_navy_fleet_log_female\n\n\t\t\t\t\t\tadvisor = {\n\t\t\t\t\t\t\tslot = high_command\n\t\t\t\t\t\t\tledger = navy\n\t\t\t\t\t\t\tcost = 50\n\t\t\t\t\t\t\ttraits = { navy_fleet_logistics_1 }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tgender = female\n\t\t\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_air_air_combat_trainer",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 586,
+      "slot": "high_command",
+      "in_bindings": false,
+      "scope_tags": [
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Outer guard excludes has_custom_advisors (AVI has that flag). Requires absence of the corresponding advisor traits. Male/female variants are random alternatives, not simultaneous guaranteed characters.",
+      "generation_definition": "generate_character = {\n\t\t\t\ttoken_base = generic_air_air_combat_trainer\n\n\t\t\t\tadvisor = {\n\t\t\t\t\tslot = high_command\n\t\t\t\t\tledger = air\n\t\t\t\t\tcost = 100\n\t\t\t\t\ttraits = { air_air_combat_training_2 }\n\t\t\t\t}\n\n\t\t\t\tportraits = {\n\t\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t\t}\n\t\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    },
+    {
+      "id": "generic_head_of_intelligence",
+      "id_type": "token_base; runtime character ID not asserted",
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 611,
+      "slot": "political_advisor",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "conditions": "Separate from has_custom_advisors guard: requires La Resistance, no has_custom_spymaster flag and no existing head_of_intelligence advisor; visible/available also depend on an intelligence agency.",
+      "generation_definition": "generate_character = {\n\t\t\ttoken_base = generic_head_of_intelligence\n\n\t\t\tadvisor = {\n\t\t\t\tslot = political_advisor\n\t\t\t\ttraits = { head_of_intelligence }\n\n\t\t\t\tvisible = {\n\t\t\t\t\tcan_create_intelligence_agency = yes\n\t\t\t\t}\n\t\t\t\tavailable = {\n\t\t\t\t\thas_intelligence_agency = yes\n\t\t\t\t}\n\n\t\t\t\tai_will_do = {\n\t\t\t\t\tfactor = 1\n\t\t\t\t\tmodifier = {\n\t\t\t\t\t\thas_intelligence_agency = no\n\t\t\t\t\t\tfactor = 0\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tportraits = {\n\t\t\t\tarmy = { small = GFX_idea_unknown_advisor }\n\t\t\t}\n\t\t}",
+      "binding_requirement": "Runtime-generated shared template: identify the actual country-owned character at runtime or introduce a reviewed country-scoped binding. Do not globally replace generic portraits or invent a fixed runtime ID."
+    }
+  ],
+  "missing_generic_mio_organizations": [
+    {
+      "id": "generic_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 14,
+      "icon": "GFX_idea_generic_tank_manufacturer_1",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_tank_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_escort_ship_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 2883,
+      "icon": "GFX_idea_generic_naval_manufacturer_1",
+      "allowed": "allowed = {\n\t\thas_dlc = \"Arms Against Tyranny\"\n\t\tNOT = { has_custom_ship_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_general_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 4304,
+      "icon": "GFX_idea_YUG_rogozarski",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_aircraft_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_light_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 4575,
+      "icon": "GFX_idea_generic_air_manufacturer_1",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_aircraft_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_medium_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 4917,
+      "icon": "GFX_idea_generic_air_manufacturer_3",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_aircraft_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_heavy_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 5240,
+      "icon": "GFX_idea_generic_air_manufacturer_2",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_aircraft_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_naval_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 5793,
+      "icon": "GFX_idea_generic_naval_manufacturer_2",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_aircraft_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_artillery_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 7041,
+      "icon": "GFX_idea_generic_artillery_manufacturer_2",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_artillery_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_infantry_equipment_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 7352,
+      "icon": "GFX_idea_generic_infantry_equipment_manufacturer_2",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_infantry_equipment_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    },
+    {
+      "id": "generic_motorized_mechanized_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 7907,
+      "icon": "GFX_idea_generic_motorized_equipment_manufacturer_3",
+      "allowed": "allowed = {\n\t\tNOT = { has_custom_motorized_mechanized_mio = yes }\n\t}",
+      "in_bindings": false,
+      "scope_tags": [
+        "AVI",
+        "ERI",
+        "EYR"
+      ],
+      "scope_basis": "None of AVI/ERI/EYR appears in the relevant has_custom_*_mio exclusion triggers. Shared fallback organization; DLC and game-state visibility still apply.",
+      "binding_requirement": "Not the same ID as its legacy manufacturer. Needs a separately scoped organization/icon design; globally replacing its shared sprite would affect other countries."
+    }
+  ],
+  "excluded_mio_archetypes": [
+    {
+      "id": "generic_infantry_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 242,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_assault_guns_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 535,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_mobile_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 848,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_medium_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 1069,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_main_battle_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 1306,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_heavy_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 1557,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_super_heavy_tank_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 1807,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_tank_refurbishment_plant_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 2068,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_task_force_ship_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 2360,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_battle_line_ship_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 2620,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_raider_ship_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 3092,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_submarine_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 3391,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_black_sea_fleet_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 3713,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_refurbishment_repair_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 4022,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_cas_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 5536,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_multi_role_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 6079,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_high_agility_fighter_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 6431,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_range_focused_aircraft_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 6707,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_support_equipment_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 7639,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_armored_car_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 8221,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_helicopter_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 8435,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    },
+    {
+      "id": "generic_train_organization",
+      "file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+      "line": 8576,
+      "reason": "allowed = always no; archetype-only, not counted as an available Verenian manufacturer target."
+    }
+  ],
+  "evidence": [
+    {
+      "file": "EaW/history/countries/AVI - HouseAvian.txt",
+      "line": 41,
+      "detail": "has_custom_advisors opt-out"
+    },
+    {
+      "file": "EaW/history/countries/ERI - HouseErie.txt",
+      "line": 52,
+      "detail": "Named character recruitment; no has_custom_advisors opt-out found in this history"
+    },
+    {
+      "file": "EaW/history/countries/EYR - HouseEyrie.txt",
+      "line": 52,
+      "detail": "Named character recruitment; no has_custom_advisors opt-out found in this history"
+    },
+    {
+      "file": "EaW/history/general/generic_advisors.txt",
+      "line": 604,
+      "detail": "Separate intelligence-chief conditional outside main custom-advisor guard"
+    },
+    {
+      "file": "EaW/common/scripted_effects/EAW_race_effects.txt",
+      "line": 6312,
+      "detail": "Runtime generic portrait reassignment, including griffon-specific random pools; shared aliases are not country-owned assets"
+    },
+    {
+      "file": "EaW/common/scripted_triggers/EAW_MIO_triggers.txt",
+      "line": 1,
+      "detail": "Custom MIO exclusions: no AVI/ERI/EYR tags in this file"
+    },
+    {
+      "file": "EaW/common/scripted_triggers/EAW_MIO_triggers.txt",
+      "line": 597,
+      "detail": "country_with_custom_designers also excludes none of the three Houses"
+    },
+    {
+      "file": "EaW/descriptor.mod",
+      "line": 14,
+      "detail": "EaW replaces common/characters; common/ideas and history/general are also replaced. Do not add vanilla fallback advisor definitions to this count."
+    },
+    {
+      "file": "tools/Build-VereniaSpirit.py",
+      "line": 35,
+      "detail": "15 native spirit component IDs, not separate icon inventory coverage"
+    }
+  ],
+  "limitations": [
+    "Static definition and selector audit, not a running game/save inspection. Advisor generation, random gender choices, DLC, existing traits and MIO visibility mean definition counts are not counts of simultaneously visible UI portraits.",
+    "The exact generated-advisor identifiers reported are token_base values. No country prefix/suffix or runtime character identity has been invented.",
+    "Country-specific legacy designer coverage was checked against native AVI ideas, shared generic ideas, named House character files and explicit AVI/ERI/EYR mentions in idea definitions; unrelated countries' designers are outside scope.",
+    "Native spirit use references are exact-ID matches in the enumerated scoped files. HSM_VER_SP wrapper references or dynamic references may exist without an exact standalone match.",
+    "Missing from inventory does not prove missing artwork globally. Native stock art, shared sprites and unified dynamic-modifier art are separate from scoped custom replacements.",
+    "No images, gameplay, GFX, inventory, icon briefs, portrait bindings or tools were changed."
+  ],
+  "reference_scan_files": [
+    "EaW/common/national_focus/AVI.txt",
+    "EaW/events/Avian Events.txt",
+    "EaW/history/countries/AVI - HouseAvian.txt",
+    "EaW/history/countries/ERI - HouseErie.txt",
+    "EaW/history/countries/EYR - HouseEyrie.txt",
+    "mod/HoISubmod/common/national_focus/AVI.txt",
+    "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_eyrie.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_grover.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_grover_restored.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_regency.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "mod/HoISubmod/events/Avian Events.txt",
+    "mod/HoISubmod/events/HSM_VER_avian.txt",
+    "mod/HoISubmod/events/HSM_VER_avian_relations.txt",
+    "mod/HoISubmod/events/HSM_VER_commonwealth.txt",
+    "mod/HoISubmod/events/HSM_VER_crisis.txt",
+    "mod/HoISubmod/events/HSM_VER_diplomacy.txt",
+    "mod/HoISubmod/events/HSM_VER_erie_force.txt",
+    "mod/HoISubmod/events/HSM_VER_eyrie.txt",
+    "mod/HoISubmod/events/HSM_VER_eyrie_force.txt",
+    "mod/HoISubmod/events/HSM_VER_force.txt",
+    "mod/HoISubmod/events/HSM_VER_grover.txt",
+    "mod/HoISubmod/events/HSM_VER_grover_restored.txt",
+    "mod/HoISubmod/events/HSM_VER_imperial.txt",
+    "mod/HoISubmod/events/HSM_VER_regency.txt",
+    "mod/HoISubmod/events/HSM_VER_routes.txt",
+    "mod/HoISubmod/events/HSM_VER_unification.txt",
+    "mod/HoISubmod/events/HSM_VER_zypressen.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_avian.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_avian_relations.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_crisis.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_development.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_diplomacy.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_erie_force.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_eyrie.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_eyrie_force.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_force.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_grover.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_imperial.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_regency.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_routes.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_spirit_components.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_unification.txt",
+    "mod/HoISubmod/common/scripted_effects/HSM_VER_zypressen.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_avian.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_avian_relations.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_crisis.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_development.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_diplomacy.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_eyrie.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_force.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_grover.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_imperial.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_regency.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_unification.txt",
+    "mod/HoISubmod/common/on_actions/HSM_VER_zypressen.txt"
+  ]
+}

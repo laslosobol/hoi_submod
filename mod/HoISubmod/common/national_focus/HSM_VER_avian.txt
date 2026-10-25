@@ -1,0 +1,269 @@
+# First constitutional phase; the initial avian tree also imports HSM_VER_UNI_convention.
+shared_focus = {
+	id = HSM_AVI_three_separate_seals icon = GFX_HSM_VER_ART_HSM_AVI_three_separate_seals
+	x = 50 y = 0 cost = 4
+	mutually_exclusive = { focus = the_second_winterfest_ball }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_government_tt
+			HSM_VER_AVI_government_available = yes
+			HSM_VER_AVI_intergigantes_route = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_friendship_tt
+			HSM_VER_houses_at_peace = yes
+			AVI = { has_completed_focus = treaty_of_friendship NOT = { has_war_with = ERI has_war_with = EYR } }
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_peace_entry_tt
+			OR = {
+				HSM_VER_negotiated_peace_valid = yes
+				ERI = { NOT = { has_country_flag = HSM_VER_campaign_active has_country_flag = HSM_VER_treaty_broken } }
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			factor = 0
+			HSM_VER_AVI_native_crisis_ai = yes
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_start_effect_tt
+		HSM_VER_AVI_start_campaign = yes
+	}
+}
+shared_focus = {
+	id = HSM_AVI_two_legible_copies icon = GFX_HSM_VER_ART_HSM_AVI_two_legible_copies
+	prerequisite = { focus = HSM_AVI_three_separate_seals }
+	x = 48 y = 1 cost = 4
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_government_tt
+			HSM_VER_AVI_government_available = yes
+			HSM_VER_AVI_intergigantes_route = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_union_peace_tt
+			HSM_VER_negotiated_peace_valid = yes
+			AVI = { has_country_flag = HSM_AVI_preserved_union NOT = { has_war_with = ERI has_war_with = EYR } }
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_language_effect_tt
+		hidden_effect = { HSM_VER_AVI_queue_scenes = yes }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_hear_the_towns icon = GFX_HSM_VER_ART_HSM_AVI_hear_the_towns
+	prerequisite = { focus = HSM_AVI_three_separate_seals }
+	x = 52 y = 1 cost = 4
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_government_tt
+			HSM_VER_AVI_government_available = yes
+			HSM_VER_AVI_intergigantes_route = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_union_peace_tt
+			HSM_VER_negotiated_peace_valid = yes
+			AVI = { has_country_flag = HSM_AVI_preserved_union NOT = { has_war_with = ERI has_war_with = EYR } }
+		}
+	}
+	completion_reward = { add_tech_bonus = { name = HSM_AVI_construction_bonus bonus = 0.75 uses = 1 category = construction_tech } country_event = { id = hsm_ver_avian.3 days = 1 } }
+}
+shared_focus = {
+	id = HSM_AVI_charter_without_submission icon = GFX_HSM_VER_ART_HSM_AVI_charter_without_submission
+	prerequisite = { focus = HSM_AVI_two_legible_copies }
+	prerequisite = { focus = HSM_AVI_hear_the_towns }
+	x = 50 y = 2 cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_government_tt
+			HSM_VER_AVI_government_available = yes
+			HSM_VER_AVI_intergigantes_route = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_union_peace_tt
+			HSM_VER_negotiated_peace_valid = yes
+			AVI = { has_country_flag = HSM_AVI_preserved_union NOT = { has_war_with = ERI has_war_with = EYR } }
+		}
+	}
+	bypass = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_charter_effect_tt
+		hidden_effect = { HSM_VER_AVI_sponsor_charter = yes }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_common_accounts icon = GFX_HSM_VER_ART_HSM_AVI_common_accounts
+	prerequisite = { focus = HSM_AVI_charter_without_submission }
+	x = 48 y = 3 cost = 4
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_consent_tt HSM_VER_charter_valid = yes HSM_VER_avian_partner = yes }
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_budget_effect_tt
+		hidden_effect = { HSM_VER_AVI_offer_budget = yes }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_roads_between_houses icon = GFX_HSM_VER_ART_HSM_AVI_roads_between_houses
+	prerequisite = { focus = HSM_AVI_charter_without_submission }
+	x = 52 y = 3 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_consent_tt HSM_VER_charter_valid = yes HSM_VER_avian_partner = yes }
+	}
+	completion_reward = {
+		HSM_VER_apply_shared_services = yes
+		add_tech_bonus = { name = HSM_AVI_industry_bonus bonus = 0.75 uses = 2 category = industry }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_limited_joint_staff icon = GFX_HSM_VER_ART_HSM_AVI_limited_joint_staff
+	prerequisite = { focus = HSM_AVI_common_accounts }
+	x = 48 y = 4 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_consent_tt HSM_VER_charter_valid = yes HSM_VER_avian_partner = yes }
+	}
+	completion_reward = {
+		HSM_VER_apply_joint_staff = yes
+		army_experience = 20
+		add_tech_bonus = { name = HSM_AVI_support_bonus bonus = 0.75 uses = 1 category = support_tech }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_a_court_for_hosts icon = GFX_HSM_VER_ART_HSM_AVI_a_court_for_hosts
+	prerequisite = { focus = HSM_AVI_roads_between_houses }
+	x = 52 y = 4 cost = 4
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_consent_tt HSM_VER_charter_valid = yes HSM_VER_avian_partner = yes }
+	}
+	completion_reward = { add_tech_bonus = { name = HSM_AVI_electronics_bonus bonus = 0.75 uses = 1 category = electronics } country_event = { id = hsm_ver_avian.4 days = 1 } }
+}
+shared_focus = {
+	id = HSM_AVI_the_first_common_budget icon = GFX_HSM_VER_ART_HSM_AVI_the_first_common_budget
+	prerequisite = { focus = HSM_AVI_limited_joint_staff }
+	prerequisite = { focus = HSM_AVI_a_court_for_hosts }
+	x = 50 y = 5 cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_budget_answers_tt HSM_VER_AVI_budget_answers_complete = yes }
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_review_budget_effect_tt
+		hidden_effect = { HSM_VER_AVI_queue_scenes = yes }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_the_unauthorised_levy icon = GFX_HSM_VER_ART_HSM_AVI_the_unauthorised_levy
+	prerequisite = { focus = HSM_AVI_the_first_common_budget }
+	x = 50 y = 6 cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_budget_reviewed_tt has_country_flag = HSM_AVI_budget_reviewed }
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_levy_effect_tt
+		hidden_effect = { HSM_VER_AVI_queue_scenes = yes }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_honour_the_exemptions icon = GFX_HSM_VER_ART_HSM_AVI_honour_the_exemptions
+	prerequisite = { focus = HSM_AVI_the_unauthorised_levy }
+	x = 48 y = 7 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_levy_settled_tt
+			AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+		}
+	}
+	completion_reward = {
+		HSM_VER_AVI_civilian_works = yes
+	}
+}
+shared_focus = {
+	id = HSM_AVI_common_workshops icon = GFX_HSM_VER_ART_HSM_AVI_common_workshops
+	prerequisite = { focus = HSM_AVI_the_unauthorised_levy }
+	x = 52 y = 7 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_levy_settled_tt
+			AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+		}
+	}
+	completion_reward = { add_tech_bonus = { name = HSM_AVI_industry_bonus bonus = 1 uses = 2 category = industry } }
+}
+shared_focus = {
+	id = HSM_AVI_defence_without_a_master icon = GFX_HSM_VER_ART_HSM_AVI_defence_without_a_master
+	prerequisite = { focus = HSM_AVI_honour_the_exemptions }
+	x = 48 y = 8 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_levy_settled_tt
+			AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+		}
+	}
+	completion_reward = { army_experience = 20 add_tech_bonus = { name = HSM_AVI_engineers_bonus bonus = 1 uses = 1 category = engineers_tech } }
+}
+shared_focus = {
+	id = HSM_AVI_open_minutes icon = GFX_HSM_VER_ART_HSM_AVI_open_minutes
+	prerequisite = { focus = HSM_AVI_common_workshops }
+	x = 52 y = 8 cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_levy_settled_tt
+			AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+		}
+	}
+	completion_reward = {
+		hidden_effect = { set_country_flag = HSM_AVI_minutes_seen }
+		country_event = { id = hsm_ver_avian.41 days = 1 }
+	}
+}
+shared_focus = {
+	id = HSM_AVI_a_union_worth_keeping icon = GFX_HSM_VER_ART_HSM_AVI_a_union_worth_keeping
+	prerequisite = { focus = HSM_AVI_defence_without_a_master }
+	prerequisite = { focus = HSM_AVI_open_minutes }
+	x = 50 y = 9 cost = 4
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_charter_in_force_tt HSM_VER_AVI_three_party_charter = yes }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_levy_settled_tt
+			AVI = { has_country_flag = HSM_AVI_levy_settled NOT = { has_country_flag = HSM_AVI_levy_exception } }
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_AVI_convention_effect_tt
+		HSM_VER_AVI_finish_first_settlement = yes
+	}
+}
+shared_focus = {
+	id = HSM_AVI_neighbours_without_a_chair icon = GFX_HSM_VER_ART_HSM_AVI_neighbours_without_a_chair
+	prerequisite = { focus = HSM_AVI_charter_without_submission }
+	x = 55 y = 4 cost = 4
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_route_active_tt HSM_VER_AVI_route_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_AVI_no_charter_tt NOT = { HSM_VER_AVI_three_party_charter = yes } }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_AVI_separate_settlement_tt
+			OR = { ERI = { has_country_flag = HSM_VER_charter_refused } AND = { HSM_VER_charter_valid = yes NOT = { has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_avian_charter_pending } } }
+		}
+	}
+	completion_reward = {
+		hidden_effect = { set_country_flag = HSM_AVI_independent_settlement }
+		add_tech_bonus = { name = HSM_AVI_construction_bonus bonus = 1 uses = 1 category = construction_tech }
+		country_event = { id = hsm_ver_avian.51 days = 1 }
+	}
+}

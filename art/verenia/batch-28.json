@@ -1,0 +1,154 @@
+[
+  {
+    "id": "HSM_EYR_defensive_service",
+    "target": "HSM_EYR_defensive_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_defensive_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_defensive_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A local terrain model beneath a defensive service helmet and exercise whistle. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_skilled_reserve",
+    "target": "HSM_EYR_skilled_reserve",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_skilled_reserve.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_skilled_reserve.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A workshop calendar dividing reserve drills from paid work beside a stored service pack. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_engineer_corps",
+    "target": "HSM_EYR_engineer_corps",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_engineer_corps.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_engineer_corps.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A covered trench cross-section with drainage pipe and engineer's spade. Palette: Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_supply_depots",
+    "target": "HSM_EYR_supply_depots",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_supply_depots.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_supply_depots.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A depot cargo crate being matched to a receipt grid and a delivery clock. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_observation_posts",
+    "target": "HSM_EYR_observation_posts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_observation_posts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_observation_posts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An observation telescope above a sketched ridge line and a patrol notebook. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_signals_network",
+    "target": "HSM_EYR_signals_network",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_signals_network.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_signals_network.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A field telephone cable linking a lookout instrument to a reserve muster bell. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_three_separate_seals",
+    "target": "HSM_AVI_three_separate_seals",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_three_separate_seals.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_three_separate_seals.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three separate metal clasps fitted along one provisional charter binding, each still independently fastened. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_two_legible_copies",
+    "target": "HSM_AVI_two_legible_copies",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_two_legible_copies.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_two_legible_copies.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two parallel diagrammed record sheets beneath a translator's magnifying lens and paired bookmarks. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Infantry markers are plain wooden geometric blocks. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: field-service olive/steel and ivory civic records; simple clasps instead of invented heraldic seals.",
+    "runtime_verified": false
+  }
+]

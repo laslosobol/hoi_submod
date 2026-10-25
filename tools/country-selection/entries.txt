@@ -1,0 +1,30 @@
+		# Expanded Stories featured countries. These are selector cards, not gameplay majors.
+		"CYA" = {
+			history = "HSM_CSS_CYA_DESC"
+			ideology = neutrality
+			label = { HSM_CSS_Filter }
+			ideas = { CYA_direct_rule_from_evosmoshafen CYA_minotaurian_outback CYA_minotaurian_indigenes }
+			focuses = { HSM_CYA_the_countess_alone HSM_CYA_proclaim_cyanolisian_march HSM_CYA_the_child_may_rule }
+		}
+		"ERI" = {
+			history = "HSM_CSS_ERI_DESC"
+			ideology = neutrality
+			label = { HSM_CSS_Filter }
+			ideas = { E_E_rivalry pre_industrial_society poverty3 }
+			focuses = { HSM_ERI_friendship_treaty HSM_VER_UNI_constitutional_act HSM_VER_CW_first_budget }
+		}
+		"EYR" = {
+			history = "HSM_CSS_EYR_DESC"
+			ideology = neutrality
+			label = { HSM_CSS_Filter }
+			ideas = { E_E_rivalry pre_industrial_society poverty }
+			focuses = { HSM_EYR_friendship_with_safeguards HSM_VER_UNI_constitutional_act HSM_VER_CW_first_budget }
+		}
+		"AVI" = {
+			history = "HSM_CSS_AVI_DESC"
+			ideology = neutrality
+			label = { HSM_CSS_Filter }
+			ideas = { AVI_linguistic_antagonism feudalism poverty4 }
+			focuses = { HSM_AVI_charter_without_submission HSM_AVI_a_union_worth_keeping HSM_VER_UNI_constitutional_act }
+		}
+

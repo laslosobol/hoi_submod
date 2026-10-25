@@ -1,0 +1,184 @@
+[
+  {
+    "id": "HSM_ERI_district_housing",
+    "target": "HSM_ERI_district_housing",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_district_housing.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_district_housing.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A repaired row-house roof above a sound window and a mason's trowel. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_social_insurance",
+    "target": "HSM_ERI_social_insurance",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_social_insurance.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_social_insurance.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A three-slot contribution box supplying a medicine bottle and a household coin purse. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_rural_credit",
+    "target": "HSM_ERI_rural_credit",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_rural_credit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_rural_credit.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A village loan chest beside a seed sack and a balance with transparent equal weights. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_public_utilities",
+    "target": "HSM_ERI_public_utilities",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_public_utilities.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_public_utilities.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A water valve connected to an electric street lamp and a municipal service pipe. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_lasting_prosperity",
+    "target": "HSM_ERI_lasting_prosperity",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_lasting_prosperity.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_lasting_prosperity.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A lit home window above a full meal bowl and a worker's dependable tool case. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_army_for_a_country",
+    "target": "HSM_ERI_army_for_a_country",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_army_for_a_country.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_army_for_a_country.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A military stores inspection tray beside a district road map and a defensive helmet. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_professional_officers",
+    "target": "HSM_ERI_professional_officers",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_professional_officers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_professional_officers.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A staff-course measuring compass over a tactical exercise board and promotion exam slate. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_support_companies",
+    "target": "HSM_ERI_support_companies",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_support_companies-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_support_companies.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Keep the linen-white medic bag, muted olive straps, green medicine bottle, portable bridge section and shovel. Remove the red cross entirely; identify medical supplies through visible rolled bandages and the green bottle. Bag fabric stays plain, with no replacement logo, badge, letters or heraldry. Preserve readable 99x86 silhouette and transparent exterior. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: A field medic's bag beside a portable bridge section and engineer's shovel. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Keep the linen-white medic bag, muted olive straps, green medicine bottle, portable bridge section and shovel. Remove the red cross entirely; identify medical supplies through visible rolled bandages and the green bottle. Bag fabric stays plain, with no replacement logo, badge, letters or heraldry. Preserve readable 99x86 silhouette and transparent exterior. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+      "previous_source": "art/verenia/HSM_ERI_support_companies.png",
+      "source_sha256": "fe2ecfacfbbe7185ce2030406820bba70b7bc52dca18a1148b8214e00df9d2ea",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/HSM_ERI_support_companies",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_ERI_arsenal_workshops",
+    "target": "HSM_ERI_arsenal_workshops",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_arsenal_workshops.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_arsenal_workshops.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An arsenal inspection bench with a barrel gauge and a field-gun breech. Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: civilian material palettes separated from field-service khaki and steel; no invented national heraldry.",
+    "runtime_verified": false
+  }
+]

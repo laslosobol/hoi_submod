@@ -1,0 +1,194 @@
+# Country scope throughout. These predicates never infer custody from territory.
+HSM_VER_IMP_original_empire = {
+	tag = GRI
+	original_tag = GRI
+}
+
+HSM_VER_IMP_actual_signatory = {
+	exists = yes
+	has_country_flag = HSM_VER_charter_signed
+	NOT = { has_country_flag = HSM_VER_charter_suspended }
+	OR = {
+		AND = { tag = ERI original_tag = ERI }
+		AND = { tag = EYR original_tag = EYR }
+		AND = { tag = AVI original_tag = AVI }
+	}
+}
+
+# Historical seals are evidence only while the actual UNI host holds the homeland.
+HSM_VER_IMP_charter_history = {
+	has_country_flag = HSM_VER_charter_signed
+	NOT = { has_country_flag = HSM_VER_charter_suspended }
+	OR = {
+		AND = { tag = ERI original_tag = ERI has_country_flag = HSM_VER_treaty_signed }
+		AND = { tag = EYR original_tag = EYR has_country_flag = HSM_VER_treaty_signed }
+		AND = { tag = AVI original_tag = AVI }
+	}
+}
+
+HSM_VER_IMP_unified_charter = {
+	exists = yes is_subject = no has_capitulated = no
+	has_country_flag = HSM_VER_UNI_founded
+	HSM_VER_UNI_ducal_land_held = yes
+	HSM_VER_IMP_charter_history = yes
+	NOT = { has_country_flag = HSM_VER_IMP_union_dispossessed }
+	ERI = { HSM_VER_IMP_charter_history = yes }
+	EYR = { HSM_VER_IMP_charter_history = yes }
+	OR = {
+		tag = ERI
+		AND = { has_country_flag = HSM_VER_UNI_absorbed_ERI ERI = { exists = no } }
+		AND = { NOT = { has_country_flag = HSM_VER_UNI_absorbed_ERI } ERI = { exists = yes is_subject = no has_capitulated = no NOT = { has_war_with = EYR has_war_with = AVI } } }
+	}
+	OR = {
+		tag = EYR
+		AND = { has_country_flag = HSM_VER_UNI_absorbed_EYR EYR = { exists = no } }
+		AND = { NOT = { has_country_flag = HSM_VER_UNI_absorbed_EYR } EYR = { exists = yes is_subject = no has_capitulated = no NOT = { has_war_with = ERI has_war_with = AVI } } }
+	}
+	OR = {
+		AND = { tag = AVI HSM_VER_IMP_charter_history = yes owns_state = 470 470 = { is_fully_controlled_by = AVI } }
+		AND = {
+			has_country_flag = HSM_VER_UNI_absorbed_AVI AVI = { exists = no original_tag = AVI }
+			# Later Avian admission does not replace either original ducal signature.
+			OR = {
+				AVI = { HSM_VER_IMP_charter_history = yes }
+				has_country_flag = HSM_VER_FORCE_AVI_integrated
+				has_country_flag = HSM_VER_AVR_ratified
+			}
+			owns_state = 470
+			OR = { AND = { tag = ERI 470 = { is_fully_controlled_by = ERI } } AND = { tag = EYR 470 = { is_fully_controlled_by = EYR } } }
+		}
+		# AVI may remain outside the original bilateral charter; it is not an absorbed member.
+		AND = { NOT = { tag = AVI has_country_flag = HSM_VER_UNI_absorbed_AVI } AVI = { exists = yes NOT = { has_war_with = ERI has_war_with = EYR } } }
+	}
+}
+
+HSM_VER_IMP_institutions_available = {
+	OR = {
+		AND = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_absorbed_ERI has_country_flag = HSM_VER_UNI_absorbed_EYR has_country_flag = HSM_VER_UNI_absorbed_AVI has_country_flag = HSM_VER_IMP_union_dispossessed } HSM_VER_charter_valid = yes }
+		HSM_VER_IMP_unified_charter = yes
+	}
+	tag = ERI
+	original_tag = ERI
+	exists = yes
+	is_subject = no
+	has_capitulated = no
+	has_war = no
+	has_country_flag = HSM_VER_charter_signed
+	has_country_flag = HSM_VER_union_established
+	NOT = { has_country_flag = HSM_VER_charter_suspended }
+}
+
+HSM_VER_IMP_settlement_context = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FUI_imperial_institutions_tt
+		HSM_VER_IMP_institutions_available = yes
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_IMP_defensive_victory_tt
+		has_country_flag = HSM_VER_IMP_defensive_war_recorded
+		has_country_flag = HSM_VER_IMP_defeat_recorded
+		has_country_flag = HSM_VER_IMP_peace_recorded
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_IMP_peace_and_capital_tt
+		owns_state = 382
+		controls_state = 382
+		GRI = { OR = { exists = no has_war = no } }
+		NOT = {
+			any_country = {
+				HSM_VER_IMP_actual_signatory = yes
+				OR = { has_war = yes has_capitulated = yes }
+			}
+		}
+	}
+}
+
+HSM_VER_IMP_mandate_work_allowed = {
+	HSM_VER_IMP_settlement_context = yes
+	has_country_flag = HSM_VER_IMP_mandate_active
+	has_country_flag = HSM_VER_IMP_mandate_deadline
+	NOT = { has_country_flag = HSM_VER_IMP_final_choice }
+}
+
+HSM_VER_IMP_partner_available = {
+	HSM_VER_IMP_actual_signatory = yes
+	OR = { tag = EYR tag = AVI }
+	is_subject = no
+	has_capitulated = no
+	has_war = no
+}
+
+HSM_VER_IMP_protocol_offer_valid = {
+	HSM_VER_IMP_partner_available = yes
+	NOT = { has_country_flag = HSM_VER_IMP_protocol_answered }
+	ERI = {
+		HSM_VER_IMP_mandate_work_allowed = yes
+		has_country_flag = HSM_VER_IMP_protocol_offered
+	}
+}
+
+HSM_VER_IMP_internal_protocol_available = {
+	tag = ERI original_tag = ERI
+	HSM_VER_IMP_unified_charter = yes
+	OR = { has_country_flag = HSM_VER_UNI_absorbed_EYR has_country_flag = HSM_VER_UNI_absorbed_AVI }
+}
+HSM_VER_IMP_internal_protocol_offer_valid = {
+	HSM_VER_IMP_internal_protocol_available = yes
+	HSM_VER_IMP_settlement_context = yes
+	OR = {
+		HSM_VER_IMP_mandate_work_allowed = yes
+		AND = {
+			has_country_flag = HSM_VER_IMP_protocol_signed
+			OR = { has_country_flag = HSM_VER_IMP_voluntary_handover has_country_flag = HSM_VER_IMP_programme_finished }
+		}
+	}
+	has_country_flag = HSM_VER_IMP_protocol_offered
+	NOT = { has_country_flag = HSM_VER_IMP_internal_protocol_answered }
+}
+
+# The technical protocol survives civilian handover, but never war or revoked consent.
+HSM_VER_IMP_protocol_valid = {
+	has_country_flag = HSM_VER_IMP_protocol_signed
+	ERI = {
+		HSM_VER_IMP_institutions_available = yes
+		has_country_flag = HSM_VER_IMP_protocol_signed
+	}
+	OR = {
+		HSM_VER_IMP_partner_available = yes
+		AND = {
+			tag = ERI
+			OR = {
+				AND = { HSM_VER_IMP_internal_protocol_available = yes has_country_flag = HSM_VER_IMP_internal_protocol_signed }
+				EYR = { HSM_VER_IMP_partner_available = yes has_country_flag = HSM_VER_IMP_protocol_signed }
+				AVI = { HSM_VER_IMP_partner_available = yes has_country_flag = HSM_VER_IMP_protocol_signed }
+			}
+		}
+	}
+}
+
+# Native adulthood is after 1021.5.21. Death always overrides character residue.
+HSM_VER_IMP_grover_dead = { has_global_flag = GRI_grover_vi_dead }
+HSM_VER_IMP_grover_local_minor = {
+	NOT = { HSM_VER_IMP_grover_dead = yes }
+	has_character = GRI_emperor_grover_vi
+	NOT = { date > 1021.5.21 }
+}
+HSM_VER_IMP_grover_local_adult = {
+	NOT = { HSM_VER_IMP_grover_dead = yes }
+	has_character = GRI_emperor_grover_vi
+	date > 1021.5.21
+}
+HSM_VER_IMP_grover_abroad = {
+	NOT = { HSM_VER_IMP_grover_dead = yes }
+	NOT = { has_character = GRI_emperor_grover_vi }
+	any_country = {
+		exists = yes
+		NOT = { tag = ERI }
+		has_character = GRI_emperor_grover_vi
+	}
+}
+HSM_VER_IMP_grover_unknown = {
+	NOT = { HSM_VER_IMP_grover_dead = yes }
+	NOT = { has_character = GRI_emperor_grover_vi }
+	NOT = { HSM_VER_IMP_grover_abroad = yes }
+}

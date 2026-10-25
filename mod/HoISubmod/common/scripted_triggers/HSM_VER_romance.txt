@@ -1,0 +1,100 @@
+# The public government predicate is deliberately post-union and leader-specific.
+# It must never make the military route, an Avian presidency or a coup legitimate.
+HSM_VER_ROM_house = {
+	OR = { AND = { tag = ERI original_tag = ERI } AND = { tag = EYR original_tag = EYR } }
+}
+HSM_VER_ROM_original_duke = {
+	OR = {
+		AND = { tag = ERI has_country_leader = { character = ERI_duke_vincent_erie ruling_only = yes } }
+		AND = { tag = EYR has_country_leader = { character = EYR_duke_iovinus_eyrie ruling_only = yes } }
+	}
+}
+HSM_VER_ROM_diplomatic_founder = {
+	HSM_VER_ROM_house = yes
+	exists = yes is_subject = no has_government = neutrality
+	has_country_flag = HSM_VER_UNI_founded
+	has_country_flag = HSM_VER_UNI_diplomatic
+	NOT = { has_country_flag = HSM_VER_UNI_military has_country_flag = HSM_VER_military_route has_country_flag = HSM_VER_IMP_union_dispossessed }
+	OR = {
+		AND = { tag = ERI has_country_flag = HSM_VER_UNI_president_ERI has_country_flag = HSM_VER_UNI_absorbed_EYR EYR = { exists = no } }
+		AND = { tag = EYR has_country_flag = HSM_VER_UNI_president_EYR has_country_flag = HSM_VER_UNI_absorbed_ERI ERI = { exists = no } }
+	}
+}
+HSM_VER_ROM_government = {
+	HSM_VER_ROM_diplomatic_founder = yes
+	has_country_flag = HSM_VER_ROM_crowned
+	has_country_leader = { character = HSM_VER_rosaline_and_montague ruling_only = yes }
+}
+HSM_VER_ROM_story_context = {
+	HSM_VER_ROM_house = yes
+	exists = yes is_subject = no has_capitulated = no has_war = no has_government = neutrality
+	HSM_VER_ROM_original_duke = yes
+	NOT = { has_country_flag = HSM_VER_ROM_crowned has_country_flag = HSM_VER_military_route has_country_flag = HSM_VER_UNI_military }
+	OR = {
+		HSM_VER_ROM_diplomatic_founder = yes
+		AND = {
+			NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_closed }
+			has_country_flag = HSM_VER_diplomatic_route
+			HSM_VER_diplomatic_routes_open = yes
+			HSM_VER_negotiated_peace_valid = yes
+			ERI = { HSM_VER_UNI_government = yes has_war = no has_capitulated = no has_completed_focus = HSM_ERI_family_letters }
+			EYR = { HSM_VER_UNI_government = yes has_war = no has_capitulated = no has_completed_focus = HSM_EYR_montagues_correspondence }
+			AVI = { NOT = { has_country_flag = HSM_VER_UNI_leader } }
+		}
+	}
+}
+# One delivery for the two Houses. Prefer the actual president, then the human.
+HSM_VER_ROM_narrator = {
+	OR = {
+		has_country_flag = HSM_VER_UNI_leader
+		AND = {
+			ERI = { NOT = { has_country_flag = HSM_VER_UNI_leader } }
+			EYR = { NOT = { has_country_flag = HSM_VER_UNI_leader } }
+			OR = {
+				AND = { tag = ERI OR = { is_ai = no EYR = { is_ai = yes } } }
+				AND = { tag = EYR is_ai = no ERI = { is_ai = yes } }
+			}
+		}
+	}
+}
+HSM_VER_ROM_can_meet = {
+	HSM_VER_ROM_story_context = yes
+	NOT = { has_country_flag = HSM_VER_UNI_founded }
+	ERI = { NOT = { has_country_flag = HSM_VER_ROM_started } }
+	EYR = { NOT = { has_country_flag = HSM_VER_ROM_started } }
+}
+HSM_VER_ROM_can_work = {
+	HSM_VER_ROM_story_context = yes
+	OR = { HSM_VER_UNI_operational = yes HSM_VER_ROM_diplomatic_founder = yes }
+	has_country_flag = HSM_VER_UNI_diplomatic
+	has_country_flag = HSM_VER_UNI_started
+	ERI = { has_country_flag = HSM_VER_ROM_started NOT = { has_country_flag = HSM_VER_ROM_service_agreed } }
+	EYR = { has_country_flag = HSM_VER_ROM_started NOT = { has_country_flag = HSM_VER_ROM_service_agreed } }
+}
+HSM_VER_ROM_can_betroth = {
+	HSM_VER_ROM_story_context = yes
+	OR = { HSM_VER_UNI_operational = yes HSM_VER_ROM_diplomatic_founder = yes }
+	has_country_flag = HSM_VER_UNI_diplomatic
+	has_country_flag = HSM_VER_UNI_administration
+	has_country_flag = HSM_VER_UNI_draft
+	ERI = { has_country_flag = HSM_VER_ROM_service_agreed NOT = { has_country_flag = HSM_VER_ROM_betrothed } }
+	EYR = { has_country_flag = HSM_VER_ROM_service_agreed NOT = { has_country_flag = HSM_VER_ROM_betrothed } }
+}
+HSM_VER_ROM_characters_available = {
+	NOT = {
+		any_possible_country = {
+			NOT = { tag = PREV }
+			OR = { has_character = HSM_VER_rosaline_and_montague has_character = HSM_VER_rosaline_erie has_character = HSM_VER_montague_eyrie }
+		}
+	}
+}
+HSM_VER_ROM_can_crown = {
+	HSM_VER_ROM_story_context = yes
+	HSM_VER_ROM_diplomatic_founder = yes
+	HSM_VER_UNI_ducal_land_held = yes
+	HSM_VER_ROM_characters_available = yes
+	NOT = { has_country_flag = HSM_VER_UNI_committing }
+	# Old founded saves receive an explicit retrospective wedding/handover scene.
+	# A campaign that has started the new story must finish its actual choices.
+	OR = { has_country_flag = HSM_VER_ROM_betrothed NOT = { has_country_flag = HSM_VER_ROM_started } }
+}

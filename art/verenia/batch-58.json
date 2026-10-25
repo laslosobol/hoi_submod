@@ -1,0 +1,175 @@
+[
+  {
+    "id": "AVI_rrr",
+    "target": "AVI_rrr",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_rrr.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_rrr.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A mobilisation bell above a ready reserve pack and a compact route clock. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_eternal",
+    "target": "AVI_eternal",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_eternal.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_eternal.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A battered fortress hinge still holding an upright gate against fallen masonry. Material palette: Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_off_aca",
+    "target": "AVI_off_aca",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_off_aca.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_off_aca.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An academy lectern supporting a tactical diagram board and a brass command whistle. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_off_aca_1",
+    "target": "AVI_off_aca_1",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_off_aca_1.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_off_aca_1.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An unlocked academy examination gate with a tradesgriffon's tool case beside a command baton. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_off_aca_2",
+    "target": "AVI_off_aca_2",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_off_aca_2-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_off_aca_2.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An heirloom campaign sword resting on an advanced tactical model inside the academy's reserved gallery. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "edit_prompt": "Remove the entire round surveying gauge on its tripod at the upper right. Keep the sword, terrain model and paper map unchanged. Preserve painted style and transparent exterior. No replacement objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_militia",
+    "target": "AVI_militia",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_militia.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_militia.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Several mismatched militia cartridge pouches gathered around a communal muster drum. Material palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_regulars",
+    "target": "AVI_regulars",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_regulars.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_regulars.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A single tightly fitted ammunition belt above a precision drill metronome and polished field kit. Material palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_declared_neutral",
+    "target": "AVI_declared_neutral",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_declared_neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_declared_neutral.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A sheathed sword securing a closed frontier lock, with an outward-facing inspection lens. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_Liberty_idea",
+    "target": "AVI_Liberty_idea",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_Liberty_idea-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_Liberty_idea.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An unlocked printing-press platen beside a merchant's open balance. Material palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "edit_prompt": "Simplify this painted game icon: keep the printing press on the left, replace the entire foreground ledger, coins, key and rear safe with one open merchant balance scale on the right, made of iron with modest brass fittings. Only the press and scale, no other objects. The press paper contains abstract typesetting lines only. Transparent exterior, bold readable silhouette, no text or heraldry.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

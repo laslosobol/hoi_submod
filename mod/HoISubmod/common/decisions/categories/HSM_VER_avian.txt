@@ -1,0 +1,5 @@
+HSM_AVI_congress_business = {
+	icon = generic_political_discourse
+	allowed = { original_tag = AVI }
+	visible = { has_country_flag = HSM_AVI_preserved_union }
+}

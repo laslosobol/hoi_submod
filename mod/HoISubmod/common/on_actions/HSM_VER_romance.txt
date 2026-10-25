@@ -1,0 +1,4 @@
+on_actions = {
+	on_daily_ERI = { effect = { ERI = { HSM_VER_ROM_maintain = yes } } }
+	on_daily_EYR = { effect = { EYR = { HSM_VER_ROM_maintain = yes } } }
+}

@@ -1,0 +1,34 @@
+characters = {
+	# The joint office receives its sole, neutral leader role only in the wedding.
+	HSM_VER_rosaline_and_montague = {
+		name = HSM_VER_rosaline_and_montague
+		portraits = { civilian = { large = "gfx/leaders/HSM_VER/HSM_VER_rosaline_and_montague.tga" } }
+	}
+	# Each co-ruler may also undertake a specific working portfolio. These are
+	# optional paid cabinet appointments, not two extra automatic national spirits.
+	HSM_VER_rosaline_erie = {
+		name = HSM_VER_rosaline_erie
+		gender = female
+		portraits = { civilian = { large = "gfx/leaders/HSM_VER/rosaline.tga" small = "gfx/interface/ideas/Advisors/HSM_VER/rosaline.tga" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = HSM_VER_ROM_rosaline_petitions
+			allowed = { OR = { original_tag = ERI original_tag = EYR } }
+			available = { HSM_VER_ROM_government = yes }
+			traits = { HSM_VER_ROM_keeper_of_petitions }
+			cost = 100
+		}
+	}
+	HSM_VER_montague_eyrie = {
+		name = HSM_VER_montague_eyrie
+		portraits = { civilian = { large = "gfx/leaders/HSM_VER/montague.tga" small = "gfx/interface/ideas/Advisors/HSM_VER/montague.tga" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = HSM_VER_ROM_montague_provinces
+			allowed = { OR = { original_tag = ERI original_tag = EYR } }
+			available = { HSM_VER_ROM_government = yes }
+			traits = { HSM_VER_ROM_provincial_coordinator }
+			cost = 100
+		}
+	}
+}

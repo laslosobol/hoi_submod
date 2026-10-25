@@ -1,0 +1,121 @@
+HSM_VER_IMP_record_fate = {
+	custom_effect_tooltip = HSM_VER_IMP_noncustodial_tt
+	if = { limit = { HSM_VER_IMP_mandate_work_allowed = yes } set_country_flag = HSM_VER_IMP_fate_recorded }
+}
+
+HSM_VER_IMP_begin_mandate = {
+	if = {
+		limit = { HSM_VER_IMP_settlement_context = yes NOT = { has_country_flag = HSM_VER_IMP_offer_resolved } }
+		set_country_flag = HSM_VER_IMP_offer_resolved
+		set_country_flag = HSM_VER_IMP_mandate_active
+		set_country_flag = { flag = HSM_VER_IMP_mandate_deadline value = 1 days = 730 }
+		add_political_power = -50
+		add_timed_idea = { idea = HSM_VER_IMP_reconstruction_mandate days = 730 }
+	}
+}
+
+HSM_VER_IMP_offer_protocol = {
+	if = {
+		limit = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_protocol_offered } }
+		set_country_flag = HSM_VER_IMP_protocol_offered
+		EYR = { if = { limit = { HSM_VER_IMP_protocol_offer_valid = yes } country_event = { id = hsm_ver_imperial.4 days = 1 } } }
+		AVI = { if = { limit = { HSM_VER_IMP_protocol_offer_valid = yes } country_event = { id = hsm_ver_imperial.4 days = 1 } } }
+	}
+	HSM_VER_IMP_queue_internal_protocol = yes
+}
+
+# Also runs when an already-offered foreign protocol becomes domestic on unification.
+HSM_VER_IMP_queue_internal_protocol = {
+	if = {
+		limit = { HSM_VER_IMP_internal_protocol_offer_valid = yes NOT = { has_country_flag = HSM_VER_IMP_internal_protocol_pending } }
+		set_country_flag = { flag = HSM_VER_IMP_internal_protocol_pending value = 1 days = 30 }
+		country_event = { id = hsm_ver_imperial.7 days = 1 }
+	}
+}
+HSM_VER_IMP_sign_internal_protocol = {
+	if = {
+		limit = { HSM_VER_IMP_internal_protocol_offer_valid = yes }
+		set_country_flag = HSM_VER_IMP_internal_protocol_answered
+		set_country_flag = HSM_VER_IMP_internal_protocol_signed
+		set_country_flag = HSM_VER_IMP_protocol_signed
+		if = {
+			limit = { NOT = { has_idea = HSM_VER_IMP_technical_protocol } }
+			add_timed_idea = { idea = HSM_VER_IMP_technical_protocol days = 730 }
+		}
+	}
+}
+
+# Recipient scope, with a fresh consent/context check when the option is selected.
+HSM_VER_IMP_sign_protocol = {
+	if = {
+		limit = { HSM_VER_IMP_protocol_offer_valid = yes }
+		set_country_flag = HSM_VER_IMP_protocol_answered
+		set_country_flag = HSM_VER_IMP_protocol_signed
+		add_timed_idea = { idea = HSM_VER_IMP_technical_protocol days = 730 }
+		ERI = {
+			if = {
+				limit = { NOT = { has_country_flag = HSM_VER_IMP_protocol_signed } }
+				set_country_flag = HSM_VER_IMP_protocol_signed
+				add_timed_idea = { idea = HSM_VER_IMP_technical_protocol days = 730 }
+			}
+		}
+	}
+}
+
+HSM_VER_IMP_extend_mandate = {
+	if = {
+		limit = { HSM_VER_IMP_mandate_work_allowed = yes has_country_flag = HSM_VER_IMP_audit_published }
+		set_country_flag = HSM_VER_IMP_final_choice
+		set_country_flag = HSM_VER_IMP_mandate_extended
+		set_country_flag = { flag = HSM_VER_IMP_mandate_deadline value = 1 days = 365 }
+		remove_ideas = HSM_VER_IMP_reconstruction_mandate
+		add_political_power = -50
+		add_timed_idea = { idea = HSM_VER_IMP_final_programme days = 365 }
+	}
+}
+
+HSM_VER_IMP_civilian_handover = {
+	if = {
+		limit = { HSM_VER_IMP_mandate_work_allowed = yes has_country_flag = HSM_VER_IMP_audit_published }
+		set_country_flag = HSM_VER_IMP_final_choice
+		set_country_flag = HSM_VER_IMP_mandate_ended
+		set_country_flag = HSM_VER_IMP_voluntary_handover
+		clr_country_flag = HSM_VER_IMP_mandate_active
+		clr_country_flag = HSM_VER_IMP_mandate_deadline
+		remove_ideas = HSM_VER_IMP_reconstruction_mandate
+		add_political_power = 75
+		add_stability = 0.02
+		add_timed_idea = { idea = HSM_VER_IMP_civilian_legacy days = 730 }
+		country_event = { id = hsm_ver_imperial.6 days = 30 }
+	}
+}
+
+# One country pulse, two finite deadlines. No repeated reward or indefinite mandate.
+HSM_VER_IMP_check_mandate = {
+	if = {
+		limit = {
+			has_country_flag = HSM_VER_IMP_mandate_active
+			OR = {
+				NOT = { HSM_VER_IMP_settlement_context = yes }
+				NOT = { has_country_flag = HSM_VER_IMP_mandate_deadline }
+			}
+		}
+		if = {
+			limit = { NOT = { HSM_VER_IMP_settlement_context = yes } }
+			set_country_flag = HSM_VER_IMP_mandate_interrupted
+		}
+		else_if = {
+			limit = { has_country_flag = HSM_VER_IMP_mandate_extended }
+			set_country_flag = HSM_VER_IMP_programme_finished
+			add_timed_idea = { idea = HSM_VER_IMP_civilian_legacy days = 730 }
+		}
+		else = { set_country_flag = HSM_VER_IMP_mandate_lapsed }
+		set_country_flag = HSM_VER_IMP_final_choice
+		set_country_flag = HSM_VER_IMP_mandate_ended
+		clr_country_flag = HSM_VER_IMP_mandate_active
+		clr_country_flag = HSM_VER_IMP_mandate_deadline
+		remove_ideas = HSM_VER_IMP_reconstruction_mandate
+		remove_ideas = HSM_VER_IMP_final_programme
+		country_event = { id = hsm_ver_imperial.6 }
+	}
+}

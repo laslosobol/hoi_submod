@@ -1,0 +1,21 @@
+HSM_VER_CR_border_correspondence = {
+	HSM_VER_CR_reopen_talks = {
+		icon = generic_political_discourse
+		visible = { NOT = { has_country_flag = HSM_VER_CR_compact } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_contact_ready_tt HSM_VER_CR_can_offer = yes } }
+		cost = 0
+		fire_only_once = no
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_contact_tt hidden_effect = { HSM_VER_CR_offer_compact = yes } }
+		ai_will_do = { factor = 5 }
+	}
+}
+HSM_VER_CR_integration_correspondence = {
+	HSM_VER_CR_reconsider_integration = {
+		icon = generic_political_discourse
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_integration_ready_tt OR = { ERI = { HSM_VER_CR_integration_retry_valid = yes } EYR = { HSM_VER_CR_integration_retry_valid = yes } } } }
+		cost = 35
+		days_re_enable = 90
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_integration_tt hidden_effect = { ERI = { HSM_VER_CR_retry_integration = yes } EYR = { HSM_VER_CR_retry_integration = yes } } }
+		ai_will_do = { factor = 10 }
+	}
+}

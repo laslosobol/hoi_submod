@@ -1,0 +1,193 @@
+[
+  {
+    "id": "HSM_ERI_FORCE_the_first_petition",
+    "target": "HSM_ERI_FORCE_the_first_petition",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_the_first_petition-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_the_first_petition.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A family house key balanced against a patron's campaign medal, with a surveyed estate plan beneath. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Remove only the invented star and laurel emblem from the medal face. Show the plain worn reverse of the round bronze medal with a simple raised circular rim and no emblem, text or insignia. Preserve its green ribbon, house key, property survey, composition, colors, painterly icon finish and transparent exterior.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_reconstruction_contracts",
+    "target": "HSM_ERI_FORCE_reconstruction_contracts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_reconstruction_contracts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_reconstruction_contracts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A reconstruction contract board showing a building plan beside paid materials and a workshop saw. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_a_regular_levy",
+    "target": "HSM_ERI_FORCE_a_regular_levy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_a_regular_levy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_a_regular_levy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A regular training clock above standard service kits, replacing loose personal pledge cords. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_the_third_house",
+    "target": "HSM_ERI_FORCE_the_third_house",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_the_third_house.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_the_third_house.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two conflicting land-survey grids aligned beneath a chancery ruler; this is domestic consolidation, not Avian conquest. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_a_bound_duke",
+    "target": "HSM_ERI_FORCE_a_bound_duke",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_a_bound_duke.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_a_bound_duke.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A ducal office key caught within a judicial measuring frame beside a reopened estate case. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_a_single_chancery",
+    "target": "HSM_ERI_FORCE_a_single_chancery",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_a_single_chancery.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_a_single_chancery.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A single chancery dispatch chute feeding factory and army order trays. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_inheritance_without_feud",
+    "target": "HSM_ERI_FORCE_inheritance_without_feud",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_inheritance_without_feud.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_inheritance_without_feud.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A repaired district school doorway above a laid-down campaign sword and protected property key. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_avian_claim",
+    "target": "HSM_ERI_FORCE_avian_claim",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_avian_claim.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_avian_claim.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A neutral Avian frontier gate facing a new military demand case; no suggestion of treaty consent. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_avian_articles",
+    "target": "HSM_ERI_FORCE_avian_articles",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_avian_articles.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_avian_articles.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An Avian property register with two competing claim tabs beside a local court key. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_avian_integration",
+    "target": "HSM_ERI_FORCE_avian_integration",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_avian_integration.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_avian_integration.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A provisional Avian border barrier dismantled beside a paid workshop account and permanent office key. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented medal emblem removed; administrative and military silhouettes distinct.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,3 @@
+on_actions = {
+	on_daily_EYR = { effect = { EYR = { HSM_VER_eyr_queue_policy_scenes = yes HSM_VER_eyr_queue_command_case = yes } } }
+}

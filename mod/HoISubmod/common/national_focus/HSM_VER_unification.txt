@@ -1,0 +1,148 @@
+# Parent imports only HSM_VER_UNI_convention into the three intended trees.
+# Shared convention and constitution; joint works/administration can proceed in parallel.
+shared_focus = {
+	id = HSM_VER_UNI_convention
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_convention
+	x = 24 y = 2 cost = 3
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_UNI_can_start_tt HSM_VER_UNI_can_start = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UNI_convention_tt
+		hidden_effect = { HSM_VER_UNI_start_convention = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+joint_focus = {
+	id = HSM_VER_UNI_customs_union
+	joint_trigger = { HSM_VER_COOP_joint_member = yes }
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_customs_union
+	x = 24 y = 3 cost = 4
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_convention }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_COOP_customs_union_available_tt HSM_VER_COOP_can_customs_union = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_COOP_customs_union_reward_tt
+		show_ideas_tooltip = HSM_VER_UNI_customs_spirit
+	}
+	completion_reward_joint_originator = {
+		hidden_effect = { HSM_VER_COOP_complete_customs_union = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+joint_focus = {
+	id = HSM_VER_UNI_common_works
+	joint_trigger = { HSM_VER_COOP_joint_member = yes }
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_common_works
+	x = 22 y = 4 cost = 4
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_customs_union }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_COOP_common_works_available_tt HSM_VER_COOP_can_common_works = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_COOP_common_works_reward_tt
+		show_ideas_tooltip = HSM_VER_UNI_works_spirit
+	}
+	completion_reward_joint_originator = {
+		hidden_effect = { HSM_VER_COOP_complete_common_works = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+joint_focus = {
+	id = HSM_VER_UNI_common_administration
+	joint_trigger = { HSM_VER_COOP_joint_member = yes }
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_common_administration
+	x = 26 y = 4 cost = 4
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_customs_union }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_COOP_common_administration_available_tt HSM_VER_COOP_can_common_administration = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_COOP_common_administration_reward_tt
+		show_ideas_tooltip = HSM_VER_UNI_administration_spirit
+	}
+	completion_reward_joint_originator = {
+		hidden_effect = { HSM_VER_COOP_complete_common_administration = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+joint_focus = {
+	id = HSM_VER_UNI_unified_command
+	joint_trigger = { HSM_VER_COOP_joint_member = yes }
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_unified_command
+	x = 24 y = 6 cost = 4
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_common_administration }
+	prerequisite = { focus = HSM_VER_UNI_common_works }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_COOP_unified_command_available_tt HSM_VER_COOP_can_unified_command = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_COOP_unified_command_reward_tt
+		show_ideas_tooltip = HSM_VER_UNI_command_spirit
+	}
+	completion_reward_joint_originator = {
+		hidden_effect = { HSM_VER_COOP_complete_unified_command = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_UNI_constitutional_draft
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_constitutional_draft
+	x = 24 y = 7 cost = 3
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_unified_command }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_UNI_can_draft_tt HSM_VER_UNI_can_draft = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UNI_constitutional_draft_tt
+		hidden_effect = { HSM_VER_UNI_open_ratification = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_UNI_constitutional_act
+	icon = GFX_HSM_VER_UNI_constitutional_act
+	x = 24 y = 8 cost = 3
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_constitutional_draft }
+	available = { HSM_VER_UNI_can_found = yes }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UNI_constitutional_act_tt
+		show_ideas_tooltip = HSM_VER_UNI_constitutional_state
+		hidden_effect = { HSM_VER_UNI_found_union = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_UNI_settled_institutions
+	icon = GFX_HSM_VER_ART_HSM_VER_UNI_settled_institutions
+	x = 24 y = 9 cost = 3
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_constitutional_act }
+	available = { HSM_VER_UNI_can_settle = yes }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UNI_settled_institutions_tt
+		show_ideas_tooltip = HSM_VER_UNI_settled_state
+		hidden_effect = { HSM_VER_UNI_settle_institutions = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}

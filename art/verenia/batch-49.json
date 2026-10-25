@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_VER_CR_border_watch",
+    "target": "HSM_VER_CR_border_watch",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_crisis.txt",
+    "source": "art/verenia/HSM_VER_CR_border_watch.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CR_border_watch.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A frontier lookout shelter above newly dug defensive earthworks and a temporary watch clock. Palette and material constraints: New earthworks are soil/turf rather than concrete bunkers. Keep lookout shelter and temporary clock distinct; muted earth and natural shelter materials with dark metal fittings, not a solid stone fort. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CR_civilian_transit",
+    "target": "HSM_VER_CR_civilian_transit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_crisis.txt",
+    "source": "art/verenia/HSM_VER_CR_civilian_transit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CR_civilian_transit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two independent border posts sharing a road-maintenance wheel and civilian cargo schedule. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_frontier_inspections",
+    "target": "HSM_VER_frontier_inspections",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_frontier_inspections.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_frontier_inspections.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Paired patrol lanterns above a single inspected boundary stone; neither overruns the line. Palette and material constraints: Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_petition_commitments",
+    "target": "HSM_VER_petition_commitments",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_petition_commitments.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_petition_commitments.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A public petition box tied to a household repair-material basket, promised resources visibly reserved. Palette and material constraints: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_peace_dividend",
+    "target": "HSM_VER_peace_dividend",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_peace_dividend.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_peace_dividend.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A repaired road branching into a new railway siding beneath a steady peace lantern. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_common_courts",
+    "target": "HSM_VER_common_courts",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_common_courts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_common_courts.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two independent court keys suspended equally beneath one binding judicial scale. Palette and material constraints: Binding describes judicial authority, not cloth: omit the burgundy cloth assignment. Use metal keys and a balanced bronze/iron scale, preserving two independent keys at equal status. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_joint_staff",
+    "target": "HSM_VER_joint_staff",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_joint_staff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_joint_staff.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two national map cases opening toward shared supply calculations and a field telephone. Palette and material constraints: Field telephone is charcoal bakelite/iron with restrained copper connectors, not crops. Map cases retain natural leather/storage materials and ivory calculations. National describes the two separate cases, not permission to add flags or national colors. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_limited_presidency",
+    "target": "HSM_VER_limited_presidency",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_limited_presidency.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_limited_presidency.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A modest presiding chair enclosed by a clearly bounded council rail; no sovereign throne. Palette and material constraints: Use civic_deliberation material balance: modest walnut chair and bounded council rail, with restrained metal fittings. Rail is civic furniture, not railway track. No throne, crown or sovereign emblem. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_public_council",
+    "target": "HSM_VER_public_council",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_public_council.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_public_council.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Equal civic chairs around a public works model, with an open scrutiny lens. Palette and material constraints: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_shared_services",
+    "target": "HSM_VER_shared_services",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_shared_services.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_shared_services.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A technical records drawer feeding matching parts into two separate workshop trays. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; paired independent civic institutions, restrained materials and no invented heraldry.",
+    "runtime_verified": false
+  }
+]

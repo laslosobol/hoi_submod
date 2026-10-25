@@ -1,0 +1,174 @@
+[
+  {
+    "id": "liberalise_officer_corps",
+    "target": "liberalise_officer_corps",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/liberalise_officer_corps-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_liberalise_officer_corps.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Liberalise the Officer Corps: An academy gate opened beside an examination slate and an unadorned officer's baton. Palette: dark walnut, ivory paper, silver metal, small deep burgundy cloth accents; muted brass only on minor fittings. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "edit_prompt": "Change only the clipboard paper: replace the empty checklist with a clearly drawn black-ink geometry examination diagram, a triangle with construction arcs and angle marks, and a small schematic bridge elevation. No letters, words or blank form. Preserve academy gate, baton, burgundy cloth, silver and walnut materials, composition and transparent exterior exactly.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "aristocratic_house_officers",
+    "target": "aristocratic_house_officers",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/aristocratic_house_officers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_aristocratic_house_officers.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Aristocratic Officers: A closed academy gate with an heirloom officer's sword and a reserved velvet chair. Palette: dark walnut, ivory paper, silver metal, small deep burgundy cloth accents; muted brass only on minor fittings. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "commoner_generals",
+    "target": "commoner_generals",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/commoner_generals.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_commoner_generals.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Recruit Commoner Generals: A workshop apron laid beside a command baton and a completed geometric tactical exercise. Palette: dark walnut, ivory paper, silver metal, small deep burgundy cloth accents; muted brass only on minor fittings. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "house_retainers",
+    "target": "house_retainers",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/house_retainers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_house_retainers.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Favour House Retainers: A household service key crossing an old campaign sword above a military map case. Palette: dark walnut, ivory paper, silver metal, small deep burgundy cloth accents; muted brass only on minor fittings. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "militia_army",
+    "target": "militia_army",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/militia_army.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_militia_army.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. A Citizen's Milita Army: Several mismatched civilian satchels hung beneath a communal rifle rack. Palette: muted olive canvas, dark steel, natural wood, offwhite paper. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "professional_regulars",
+    "target": "professional_regulars",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/professional_regulars.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_professional_regulars.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. A Professional Standing Army: One precisely packed field kit beside a polished service rifle and regulation cartridge boxes. Palette: muted olive canvas, dark steel, natural wood, offwhite paper. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "artillery_effort",
+    "target": "artillery_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/artillery_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_artillery_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Artillery Development: A cutaway artillery barrel beside an improved shell and a rifling gauge. Palette: silver machined steel, charcoal, dark wood, pale blue technical details; no gold. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "support",
+    "target": "support",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/support.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_support.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Research Support Weapons: An entrenching shovel and binoculars laid across a compact support-equipment crate. Palette: muted olive canvas, dark steel, natural wood, offwhite paper. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "traditonal_warfare",
+    "target": "traditonal_warfare",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/traditonal_warfare.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_traditonal_warfare.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Favour Traditional Doctrines: A griffon-fitted plate helmet and knightly lance above a repairable armour joint. Palette: silver plate armor, charcoal joints, restrained burgundy cloth; no gold. Compact readable silhouette at 99x86. Max two subordinate motifs. Actual transparent exterior. No surrounding frame, no words or pseudotext, no empty papers, no flags, crests, lilies, crowns or human anatomy. Physical materials, not gold-encrusted fantasy equipment. Inanimate objects, no combat scene.",
+    "approved": true,
+    "review": "Source and native 99x86 preview approved; distinct silhouettes and restrained material palettes. Runtime QA pending.",
+    "runtime_verified": false
+  }
+]

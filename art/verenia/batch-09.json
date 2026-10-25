@@ -1,0 +1,173 @@
+[
+  {
+    "id": "infrastructure_modernisation",
+    "target": "infrastructure_modernisation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/infrastructure_modernisation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_infrastructure_modernisation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Infrastructure Modernisation: A newly surfaced road crossing a stone culvert, with a surveyor's level beside it. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "closed_agro_ecosystem",
+    "target": "closed_agro_ecosystem",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/closed_agro_ecosystem.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_closed_agro_ecosystem.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. A Closed Agro-ecosystem: A farm plot enclosed by a protective fence, with factory machinery kept outside its boundary. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "splendid_isolation",
+    "target": "splendid_isolation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/splendid_isolation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_splendid_isolation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Splendid Isolation: A quiet shuttered border lodge with an intact grain basket inside its protective wall. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "militarised_society",
+    "target": "militarised_society",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/militarised_society.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_militarised_society.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Militarised Society: A household tool rack paired with a training rifle and a drill whistle. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "fortify_the_borders",
+    "target": "fortify_the_borders",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/fortify_the_borders.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_fortify_the_borders.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Fortify the Borders: A border watchtower joined to a low bunker by barbed wire. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "mandatory_service",
+    "target": "mandatory_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/mandatory_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_mandatory_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Mandatory Military Service: A service kit laid over a calendar marked with repeated muster dots. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "weekly_rifle_practice",
+    "target": "weekly_rifle_practice",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/weekly_rifle_practice.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_weekly_rifle_practice.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Weekly Rifle Practice: A rifle sight aligned on a tightly grouped practice target, a weekly tally strip beneath. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "western_line",
+    "target": "western_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/western_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_western_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Western Defenses: A west-facing fortress gun behind a stepped concrete firing wall. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "eastern_line",
+    "target": "eastern_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/eastern_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_eastern_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Eastern Defenses: A long eastern trench line anchored by two observation towers, a compass showing east. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful diagram. No heraldic animals. Inanimate objects only, no violence or injuries.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

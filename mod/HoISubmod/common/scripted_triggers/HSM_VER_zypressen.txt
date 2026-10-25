@@ -1,0 +1,192 @@
+# All entry territory is settled ownership, not occupation or original-tag survival.
+HSM_ZYP_government = {
+ tag = AVI original_tag = AVI exists = yes is_subject = no
+ has_government = fascism
+ has_country_leader = { character = AVI_trubach_von_zypressen ruling_only = yes }
+ has_completed_focus = a_zypressen_on_the_imperial_throne
+}
+HSM_ZYP_herzland_held = {
+ 378 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 378 } }
+ 382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+ 397 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 397 } }
+ 398 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 398 } }
+ 399 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 399 } }
+ 402 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 402 } }
+ 405 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 405 } }
+ 411 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 411 } }
+ 422 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 422 } }
+ 423 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 423 } }
+ 424 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 424 } }
+ 433 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 433 } }
+ 434 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 434 } }
+ 437 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 437 } }
+ 439 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 439 } }
+ 440 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 440 } }
+ 441 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 441 } }
+ 443 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 443 } }
+ 447 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 447 } }
+ 458 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 458 } }
+ 479 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 479 } }
+ 486 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 486 } }
+ 492 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 492 } }
+ 497 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 497 } }
+ 498 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 498 } }
+ 506 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 506 } }
+ 520 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 520 } }
+ 538 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 538 } }
+ 539 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 539 } }
+ 545 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 545 } }
+ 546 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 546 } }
+ 547 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 547 } }
+ 554 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 554 } }
+ 555 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 555 } }
+ 568 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 568 } }
+ 665 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 665 } }
+ 666 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 666 } }
+ 674 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 674 } }
+}
+HSM_ZYP_entry = {
+ HSM_ZYP_government = yes has_capitulated = no has_war = no
+ HSM_ZYP_herzland_held = yes
+}
+HSM_ZYP_active = {
+ HSM_ZYP_government = yes has_capitulated = no has_country_flag = HSM_ZYP_crowned
+ 382 = { owner = { OR = { tag = AVI is_subject_of = AVI } has_full_control_of_state = 382 } }
+}
+# The actual rulers installed by the native focuses/decisions, not all fascist puppets.
+HSM_ZYP_dynastic_crown = {
+ exists = yes is_subject_of = AVI
+ OR = {
+  AND = { tag = FLO original_tag = FLO has_country_leader = { character = FLO_archduke_trubach ruling_only = yes } }
+  AND = { tag = BOI original_tag = BOI has_country_leader = { character = BOI_king_trubach ruling_only = yes } }
+  AND = { tag = FEZ original_tag = FEZ has_country_leader = { character = FEZ_prince_trubach ruling_only = yes } }
+  AND = { tag = LAK original_tag = LAK has_country_leader = { character = LAK_baron_trubach ruling_only = yes } }
+  AND = { tag = JFT original_tag = JFT has_country_leader = { character = JFT_baron_trubach ruling_only = yes } }
+  AND = { tag = VIN original_tag = VIN has_country_leader = { character = VIN_duke_trubach ruling_only = yes } }
+  AND = { tag = JEB original_tag = JEB has_country_leader = { character = JEB_duke_trubach ruling_only = yes } }
+  AND = { tag = JER original_tag = JER has_country_leader = { character = JER_count_trubach ruling_only = yes } }
+  AND = { tag = ARA original_tag = ARA has_country_leader = { character = ARA_baron_trubach ruling_only = yes } }
+  AND = { tag = FRN original_tag = FRN has_country_leader = { character = FRN_count_trubach ruling_only = yes } }
+  AND = { tag = TAL original_tag = TAL has_country_leader = { character = TAL_duke_trubach ruling_only = yes } }
+  AND = { tag = FAL original_tag = FAL has_country_leader = { character = FAL_duke_trubach ruling_only = yes } }
+  AND = { tag = SIC original_tag = SIC has_country_leader = { character = SIC_viscount_trubach ruling_only = yes } }
+  AND = { tag = CYA original_tag = CYA has_country_leader = { character = CYA_count_trubach ruling_only = yes } }
+  AND = { tag = BRF original_tag = BRF has_country_leader = { character = BRF_prince_adagio_i ruling_only = yes } }
+  AND = { tag = WNG original_tag = WNG has_country_leader = { character = WNG_king_trubach ruling_only = yes } }
+  AND = { tag = TRD original_tag = TRD has_country_leader = { character = TRD_lord_protector_trubach ruling_only = yes } }
+  AND = { tag = HAU original_tag = HAU has_country_leader = { character = HAU_graf_trubach ruling_only = yes } }
+  AND = { tag = FAT original_tag = FAT has_country_leader = { character = FAT_duke_featherus_i ruling_only = yes } }
+  AND = { tag = VED original_tag = VED has_country_leader = { character = VED_king_trubach ruling_only = yes } }
+  AND = { tag = HLQ original_tag = HLQ has_country_leader = { character = HLQ_grand_master_trubach ruling_only = yes } }
+  AND = { tag = LNS original_tag = LNS has_country_leader = { character = LNS_count_trubach ruling_only = yes } }
+  AND = { tag = LUS original_tag = LUS has_country_leader = { character = LUS_prince_trubach ruling_only = yes } }
+  AND = { tag = ANG original_tag = ANG has_country_leader = { character = ANG_baron_cyrus_i ruling_only = yes } }
+  AND = { tag = ROU original_tag = ROU has_country_leader = { character = ROU_lord_protector_trubach ruling_only = yes } }
+  AND = { tag = BRZ original_tag = BRZ has_country_leader = { character = BRZ_count_trubach ruling_only = yes } }
+  AND = { tag = KAT original_tag = KAT has_country_leader = { character = KAT_prince_trubach ruling_only = yes } }
+  AND = { tag = STW original_tag = STW has_country_leader = { character = STW_duke_trubach ruling_only = yes } }
+  AND = { tag = GRY original_tag = GRY has_country_leader = { character = GRY_archduke_trubach ruling_only = yes } }
+  AND = { tag = GRU original_tag = GRU has_country_leader = { character = GRU_grand_master_trubach ruling_only = yes } }
+  AND = { tag = FEA original_tag = FEA has_country_leader = { character = FEA_duke_trubach ruling_only = yes } }
+  AND = { tag = GRF original_tag = GRF has_country_leader = { character = GRF_lord_protector_trubach ruling_only = yes } }
+  AND = { tag = GRI original_tag = GRI has_country_leader = { character = GRI_lord_protector_trubach ruling_only = yes } }
+  AND = { tag = HLR original_tag = HLR has_country_leader = { character = HLR_grand_master_trubach ruling_only = yes } }
+  AND = { tag = MER original_tag = MER has_country_leader = { character = MER_governor_trubach ruling_only = yes } }
+ }
+}
+HSM_ZYP_partner = {
+ HSM_ZYP_dynastic_crown = yes has_capitulated = no
+ NOT = { has_war_with = AVI }
+ AVI = { HSM_ZYP_active = yes }
+}
+HSM_ZYP_can_invite = {
+ HSM_ZYP_partner = yes
+ NOT = { has_country_flag = HSM_ZYP_signed has_country_flag = HSM_ZYP_offer_pending has_country_flag = HSM_ZYP_counter_pending has_country_flag = HSM_ZYP_offer_retry }
+}
+HSM_ZYP_reply_valid = {
+ HSM_ZYP_partner = yes has_country_flag = HSM_ZYP_offer_pending
+ NOT = { has_country_flag = HSM_ZYP_signed }
+ AVI = { has_country_flag = HSM_ZYP_policy_chosen }
+}
+HSM_ZYP_counter_valid = {
+ HSM_ZYP_partner = yes has_country_flag = HSM_ZYP_counter_pending
+ NOT = { has_country_flag = HSM_ZYP_signed }
+}
+HSM_ZYP_agreement_valid = { HSM_ZYP_partner = yes has_country_flag = HSM_ZYP_signed }
+HSM_ZYP_friendly_owner = {
+ OR = {
+  tag = AVI is_subject_of = AVI is_in_faction_with = AVI
+  AND = { is_subject = yes overlord = { is_in_faction_with = AVI } }
+ }
+}
+HSM_ZYP_goal_target = {
+ exists = yes is_subject = no has_capitulated = no
+ NOT = { HSM_ZYP_friendly_owner = yes has_war_with = AVI }
+}
+HSM_ZYP_west_owner = { OR = { owns_state = 390 owns_state = 208 owns_state = 436 owns_state = 457 owns_state = 380 owns_state = 396 owns_state = 379 owns_state = 383 owns_state = 376 owns_state = 517 owns_state = 421 owns_state = 472 owns_state = 435 owns_state = 524 owns_state = 502 owns_state = 523 owns_state = 516 owns_state = 407 owns_state = 473 owns_state = 377 owns_state = 406 owns_state = 408 } }
+HSM_ZYP_west_settled = {
+ NOT = { any_country = { HSM_ZYP_west_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } } }
+}
+HSM_ZYP_west_opponent = {
+ HSM_ZYP_goal_target = yes
+ OR = {
+  HSM_ZYP_west_owner = yes
+  any_subject_country = { HSM_ZYP_west_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } }
+ }
+}
+HSM_ZYP_north_owner = { OR = { owns_state = 556 owns_state = 557 owns_state = 432 owns_state = 485 owns_state = 548 owns_state = 449 owns_state = 450 owns_state = 582 owns_state = 480 owns_state = 474 owns_state = 583 owns_state = 581 owns_state = 477 owns_state = 476 owns_state = 475 owns_state = 459 owns_state = 403 owns_state = 404 owns_state = 429 owns_state = 484 owns_state = 431 owns_state = 482 owns_state = 575 owns_state = 576 owns_state = 584 owns_state = 483 owns_state = 430 owns_state = 585 owns_state = 542 owns_state = 522 owns_state = 561 owns_state = 601 owns_state = 658 owns_state = 659 owns_state = 660 owns_state = 381 } }
+HSM_ZYP_north_settled = {
+ NOT = { any_country = { HSM_ZYP_north_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } } }
+}
+HSM_ZYP_north_opponent = {
+ HSM_ZYP_goal_target = yes
+ OR = {
+  HSM_ZYP_north_owner = yes
+  any_subject_country = { HSM_ZYP_north_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } }
+ }
+}
+HSM_ZYP_south_owner = { OR = { owns_state = 410 owns_state = 526 owns_state = 515 owns_state = 481 owns_state = 521 owns_state = 652 owns_state = 487 owns_state = 367 owns_state = 368 owns_state = 366 owns_state = 388 owns_state = 570 owns_state = 518 owns_state = 528 owns_state = 527 owns_state = 444 owns_state = 509 owns_state = 460 owns_state = 445 owns_state = 535 owns_state = 534 owns_state = 549 owns_state = 504 owns_state = 533 owns_state = 503 owns_state = 530 owns_state = 529 owns_state = 409 owns_state = 392 owns_state = 393 owns_state = 394 owns_state = 395 owns_state = 375 owns_state = 369 owns_state = 370 owns_state = 374 owns_state = 372 owns_state = 371 owns_state = 373 owns_state = 536 } }
+HSM_ZYP_south_settled = {
+ NOT = { any_country = { HSM_ZYP_south_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } } }
+}
+HSM_ZYP_south_opponent = {
+ HSM_ZYP_goal_target = yes
+ OR = {
+  HSM_ZYP_south_owner = yes
+  any_subject_country = { HSM_ZYP_south_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } }
+ }
+}
+HSM_ZYP_east_owner = { OR = { owns_state = 633 owns_state = 634 owns_state = 553 owns_state = 537 owns_state = 552 owns_state = 540 owns_state = 505 owns_state = 593 owns_state = 608 owns_state = 607 owns_state = 591 owns_state = 632 owns_state = 596 owns_state = 609 owns_state = 631 owns_state = 598 owns_state = 597 owns_state = 610 owns_state = 611 owns_state = 612 owns_state = 613 owns_state = 592 owns_state = 512 owns_state = 514 owns_state = 559 owns_state = 594 owns_state = 595 owns_state = 599 owns_state = 600 owns_state = 623 owns_state = 630 owns_state = 420 owns_state = 564 owns_state = 565 owns_state = 566 owns_state = 425 owns_state = 426 owns_state = 427 owns_state = 428 owns_state = 451 owns_state = 456 owns_state = 507 owns_state = 510 owns_state = 511 owns_state = 589 owns_state = 590 owns_state = 508 owns_state = 588 owns_state = 414 owns_state = 651 owns_state = 605 owns_state = 663 owns_state = 385 } }
+HSM_ZYP_east_settled = {
+ NOT = { any_country = { HSM_ZYP_east_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } } }
+}
+HSM_ZYP_east_opponent = {
+ HSM_ZYP_goal_target = yes
+ OR = {
+  HSM_ZYP_east_owner = yes
+  any_subject_country = { HSM_ZYP_east_owner = yes NOT = { HSM_ZYP_friendly_owner = yes } }
+ }
+}
+HSM_ZYP_all_regions_settled = {
+ HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes
+ HSM_ZYP_south_settled = yes HSM_ZYP_east_settled = yes
+}
+HSM_ZYP_can_review_frontiers = {
+ HSM_ZYP_active = yes has_war = no
+ NOT = { has_country_flag = HSM_ZYP_frontier_retry }
+ OR = {
+  AND = { has_completed_focus = HSM_ZYP_western_campaign  any_country = { HSM_ZYP_west_opponent = yes AVI = { NOT = { has_wargoal_against = PREV } } } }
+  AND = { has_completed_focus = HSM_ZYP_northern_campaign HSM_ZYP_west_settled = yes any_country = { HSM_ZYP_north_opponent = yes AVI = { NOT = { has_wargoal_against = PREV } } } }
+  AND = { has_completed_focus = HSM_ZYP_southern_campaign HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes any_country = { HSM_ZYP_south_opponent = yes AVI = { NOT = { has_wargoal_against = PREV } } } }
+  AND = { has_completed_focus = HSM_ZYP_eastern_campaign HSM_ZYP_west_settled = yes HSM_ZYP_north_settled = yes HSM_ZYP_south_settled = yes any_country = { HSM_ZYP_east_opponent = yes AVI = { NOT = { has_wargoal_against = PREV } } } }
+ }
+}
+HSM_ZYP_grover_dead = { has_global_flag = GRI_grover_vi_dead }
+HSM_ZYP_grover_local = { NOT = { HSM_ZYP_grover_dead = yes } has_character = GRI_emperor_grover_vi }
+HSM_ZYP_grover_foreign = {
+ NOT = { HSM_ZYP_grover_dead = yes has_character = GRI_emperor_grover_vi }
+ any_country = { exists = yes NOT = { tag = AVI } has_character = GRI_emperor_grover_vi }
+}
+HSM_ZYP_grover_unknown = {
+ NOT = { HSM_ZYP_grover_dead = yes HSM_ZYP_grover_local = yes HSM_ZYP_grover_foreign = yes }
+}

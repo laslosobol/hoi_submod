@@ -1,0 +1,1680 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-25T12:03:41.074Z",
+  "scope": {
+    "correctionsFile": "art/verenia/final-review/corrections.json",
+    "correctionsFileSha256": "05998748854763da26ef2522d07c0ff2889a9a582d47e68f23875271c372a378",
+    "correctionRowsZeroBased": [
+      0,
+      19
+    ],
+    "aggregateCount": 20,
+    "previouslyReviewedCount": 14,
+    "additionalReviewedCount": 6,
+    "aviationSource": "art/verenia/AVI_aviation-review-v3.png",
+    "aviationV2Reviewed": false,
+    "consoleSource": "art/verenia/avian_socialist_technocracy-review-v3.png",
+    "rollingMillSource": "art/verenia/expand_aviaire_metalworks-review-v3.png"
+  },
+  "summary": {
+    "reviewed": 20,
+    "passed": 20,
+    "failed": 0,
+    "visibleDefects": 0,
+    "originalFindingsResolved": 20,
+    "sourceClippingRepairsVerified": 9,
+    "visibleAlphaDefects": 0,
+    "nativeReadabilityFailures": 0,
+    "eyrieFlagPreserved": true,
+    "reviewOnly": true
+  },
+  "method": [
+    "The first five replacement sources were viewed full-size in the preceding review and their source hashes were rechecked unchanged here. Their native previews had been inspected on grey, light and near-black backdrops.",
+    "All nine additional sources (corrections rows 5–13) were actually opened with view_image detail=original and compared against the correction prompts and original recorded findings.",
+    "Inspection-only resamples use the same nonportrait ImageOps.contain/LANCZOS and transparent centering as Build-VereniaArt.py, at each manifest's 99x86 or 64x64 size. The three new contact sheets were actually viewed, including every native resample on grey, light and near-black backdrops.",
+    "Aviation review-v3 canopy was also visually inspected in an enlarged nearest-neighbor crop. No review of aviation review-v2 was performed.",
+    "Alpha thresholds 1,32,128,240 were recorded to distinguish negligible fringe from actual source silhouette clipping; these measurements supplement actual image viewing.",
+    "All twenty source hashes remained unchanged across their visual checks and the final aggregate verification. No source images, game assets, manifests or gameplay files were edited.",
+    "All six final sources (corrections rows 14–19) were actually viewed at full original detail. Console and rolling-mill review-v3 sources were used. The two final source/native contact sheets and all twenty native before/after pairs were actually viewed.",
+    "Existing fourteen source hashes were reconfirmed unchanged before appending the final six; their earlier full-size inspections remain applicable."
+  ],
+  "priorReview": "art/verenia/final-review/replacements-5-review.json",
+  "nonBlockingNotes": [
+    {
+      "type": "narrow_margins",
+      "observation": "Several replacements have less than the literal 8–10 percent padding requested in generation prompts. Previously clipped object forms are now complete. HSM_VER_GRO_transition, AVI_livre_1, AVI_livre_2 and AVI_treasury have subpixel side margins at native size (alpha>=32 touches at least one outer native column). No visible truncation was found; this is recorded as framing variance rather than a new regeneration request.",
+      "ids": [
+        "HSM_VER_GRO_transition",
+        "AVI_livre_1",
+        "AVI_livre_2",
+        "AVI_treasury"
+      ]
+    },
+    {
+      "type": "low_alpha_residue",
+      "observation": "13 of twenty sources retain trace outer-edge alpha between 1 and 3/255. No source has alpha>=32 at an outer boundary. These traces produced no visible haze, halo or stray backdrop on the inspected neutral, light and near-black composites.",
+      "ids": [
+        "HSM_VER_REG_a_union_without_a_throne",
+        "HSM_EYR_avian_association",
+        "HSM_VER_IMP_civilian_legacy",
+        "HSM_VER_GRO_service",
+        "HSM_ZYP_commissions_not_orders",
+        "HSM_VER_FORCE_AVI_commission",
+        "HSM_VER_GRO_transition",
+        "AVI_livre_2",
+        "AVI_treasury",
+        "expand_aviaire_metalworks",
+        "HSM_ERI_support_companies",
+        "HSM_ERI_integrated_staff",
+        "HSM_ERI_FORCE_not_a_dowry"
+      ]
+    }
+  ],
+  "findings": [],
+  "reviewedIDs": [
+    "HSM_VER_REG_a_union_without_a_throne",
+    "HSM_EYR_avian_association",
+    "HSM_VER_IMP_civilian_legacy",
+    "HSM_ZYP_crown_and_countries",
+    "overtures_eyrie",
+    "HSM_VER_GRO_service",
+    "HSM_ZYP_commissions_not_orders",
+    "HSM_VER_FORCE_AVI_commission",
+    "HSM_VER_GRO_transition",
+    "AVI_urbanisation_effort",
+    "AVI_aviation",
+    "AVI_livre_1",
+    "AVI_livre_2",
+    "AVI_treasury",
+    "avian_socialist_technocracy",
+    "expand_aviaire_metalworks",
+    "oil_refineries",
+    "HSM_ERI_support_companies",
+    "HSM_ERI_integrated_staff",
+    "HSM_ERI_FORCE_not_a_dowry"
+  ],
+  "fullsizeInspectedIDs": [
+    "HSM_VER_REG_a_union_without_a_throne",
+    "HSM_EYR_avian_association",
+    "HSM_VER_IMP_civilian_legacy",
+    "HSM_ZYP_crown_and_countries",
+    "overtures_eyrie",
+    "HSM_VER_GRO_service",
+    "HSM_ZYP_commissions_not_orders",
+    "HSM_VER_FORCE_AVI_commission",
+    "HSM_VER_GRO_transition",
+    "AVI_urbanisation_effort",
+    "AVI_aviation",
+    "AVI_livre_1",
+    "AVI_livre_2",
+    "AVI_treasury",
+    "avian_socialist_technocracy",
+    "expand_aviaire_metalworks",
+    "oil_refineries",
+    "HSM_ERI_support_companies",
+    "HSM_ERI_integrated_staff",
+    "HSM_ERI_FORCE_not_a_dowry"
+  ],
+  "nativeInspectedIDs": [
+    "HSM_VER_REG_a_union_without_a_throne",
+    "HSM_EYR_avian_association",
+    "HSM_VER_IMP_civilian_legacy",
+    "HSM_ZYP_crown_and_countries",
+    "overtures_eyrie",
+    "HSM_VER_GRO_service",
+    "HSM_ZYP_commissions_not_orders",
+    "HSM_VER_FORCE_AVI_commission",
+    "HSM_VER_GRO_transition",
+    "AVI_urbanisation_effort",
+    "AVI_aviation",
+    "AVI_livre_1",
+    "AVI_livre_2",
+    "AVI_treasury",
+    "avian_socialist_technocracy",
+    "expand_aviaire_metalworks",
+    "oil_refineries",
+    "HSM_ERI_support_companies",
+    "HSM_ERI_integrated_staff",
+    "HSM_ERI_FORCE_not_a_dowry"
+  ],
+  "inspectionContacts": [
+    "art/verenia/final-review/inspection-replacements-5/contact.png",
+    "art/verenia/final-review/inspection-replacements-14/rows-5-7.png",
+    "art/verenia/final-review/inspection-replacements-14/rows-8-10.png",
+    "art/verenia/final-review/inspection-replacements-14/rows-11-13.png",
+    "art/verenia/final-review/inspection-replacements-20/rows-14-16.png",
+    "art/verenia/final-review/inspection-replacements-20/rows-17-19.png"
+  ],
+  "aviationInspectionCrop": "art/verenia/final-review/inspection-replacements-14/AVI_aviation-v3-cockpit-5x.png",
+  "assets": [
+    {
+      "id": "HSM_VER_REG_a_union_without_a_throne",
+      "correctionRowZeroBased": 0,
+      "source": "art/verenia/HSM_VER_REG_a_union_without_a_throne-review-v2.png",
+      "sha256": "183e1328a9a61b07f7c3932633cac5f481cc0d2fc59cea0ab7d3811c4dc7f216",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Complete oval table, three chairs and table pedestal; side chair/table crop resolved. Public-service keys, diagram and ruled/dotted ledger readable.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": true,
+      "alphaInspection": {
+        "id": "HSM_VER_REG_a_union_without_a_throne",
+        "source": "art/verenia/HSM_VER_REG_a_union_without_a_throne-review-v2.png",
+        "dimensions": [
+          1345,
+          1169
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            60,
+            1329,
+            1108
+          ],
+          "32": [
+            26,
+            63,
+            1321,
+            1106
+          ],
+          "128": [
+            26,
+            63,
+            1320,
+            1105
+          ],
+          "240": [
+            27,
+            64,
+            1319,
+            1104
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          2,
+          4,
+          97,
+          82
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_VER_REG_a_union_without_a_throne-native-inspection.png"
+    },
+    {
+      "id": "HSM_EYR_avian_association",
+      "correctionRowZeroBased": 1,
+      "source": "art/verenia/HSM_EYR_avian_association-review-v2.png",
+      "sha256": "ba7a1341609f53ea9f50636a583c8d00f890e86894625f899963038858bad29f",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Complete observer chair and compact round table; invitation remains separate on seat. All major edges and feet present; no new symbols.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": true,
+      "alphaInspection": {
+        "id": "HSM_EYR_avian_association",
+        "source": "art/verenia/HSM_EYR_avian_association-review-v2.png",
+        "dimensions": [
+          1346,
+          1168
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            17,
+            1306,
+            1168
+          ],
+          "32": [
+            86,
+            69,
+            1285,
+            1111
+          ],
+          "128": [
+            87,
+            69,
+            1285,
+            1111
+          ],
+          "240": [
+            88,
+            70,
+            1284,
+            1110
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          6,
+          5,
+          95,
+          82
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_EYR_avian_association-native-inspection.png"
+    },
+    {
+      "id": "HSM_VER_IMP_civilian_legacy",
+      "correctionRowZeroBased": 2,
+      "source": "art/verenia/HSM_VER_IMP_civilian_legacy-review-v2.png",
+      "sha256": "aeb5de70233238d816b06131626a221a78b75269160537bcc4a0c5a979c1370f",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Tool chest, hammer, wrench, paper corners and green tray now complete within source. Tool/chest separation remains legible at 64px.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": true,
+      "alphaInspection": {
+        "id": "HSM_VER_IMP_civilian_legacy",
+        "source": "art/verenia/HSM_VER_IMP_civilian_legacy-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            158,
+            1239,
+            1235
+          ],
+          "32": [
+            33,
+            217,
+            1236,
+            1116
+          ],
+          "128": [
+            33,
+            218,
+            1235,
+            1115
+          ],
+          "240": [
+            34,
+            219,
+            1234,
+            1114
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          1,
+          11,
+          63,
+          57
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_VER_IMP_civilian_legacy-native-inspection.png"
+    },
+    {
+      "id": "HSM_ZYP_crown_and_countries",
+      "correctionRowZeroBased": 3,
+      "source": "art/verenia/HSM_ZYP_crown_and_countries-review-v2.png",
+      "sha256": "4844277194b83a08f2e9cf046c294a17fd94e7810420eb470abd39e09a0a3f12",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Complete oval administration desk/base and burgundy chair; schematic jurisdiction map, folder, compass and travel case retained.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": true,
+      "alphaInspection": {
+        "id": "HSM_ZYP_crown_and_countries",
+        "source": "art/verenia/HSM_ZYP_crown_and_countries-review-v2.png",
+        "dimensions": [
+          1349,
+          1166
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            35,
+            41,
+            1317,
+            1144
+          ],
+          "32": [
+            39,
+            72,
+            1312,
+            1087
+          ],
+          "128": [
+            39,
+            73,
+            1312,
+            1086
+          ],
+          "240": [
+            40,
+            74,
+            1311,
+            1086
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          2,
+          5,
+          97,
+          80
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_ZYP_crown_and_countries-native-inspection.png"
+    },
+    {
+      "id": "overtures_eyrie",
+      "correctionRowZeroBased": 4,
+      "source": "art/verenia/overtures_eyrie-review-v2.png",
+      "sha256": "679844e4d630ff15f9c386285a3b22016357b118343b5aaa62fb1ec1f5a978e0",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Finished squared plinth replaces flat missing-bottom cutoff. Eyrie blue flag retains gold bird on viewer left facing right and disc on right; design/orientation visually preserved against canonical reference and original.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": true,
+      "alphaInspection": {
+        "id": "overtures_eyrie",
+        "source": "art/verenia/overtures_eyrie-review-v2.png",
+        "dimensions": [
+          1347,
+          1168
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            33,
+            30,
+            1235,
+            1139
+          ],
+          "32": [
+            269,
+            32,
+            1102,
+            1135
+          ],
+          "128": [
+            270,
+            32,
+            1101,
+            1134
+          ],
+          "240": [
+            270,
+            33,
+            1101,
+            1133
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          19,
+          2,
+          81,
+          84
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/overtures_eyrie-native-inspection.png"
+    },
+    {
+      "id": "HSM_VER_GRO_service",
+      "correctionRowZeroBased": 5,
+      "source": "art/verenia/HSM_VER_GRO_service-review-v2.png",
+      "sha256": "4c71eadef2f1a9c3c776e90520b8e12f5d6584b0ef79c9f4a34e343671159cb9",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Red cross removed from physical tent and map pictogram. Plain linen tent now contains cot/bottle; route model and whistle preserved. No replacement badge.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-01"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_VER_GRO_service",
+        "source": "art/verenia/HSM_VER_GRO_service-review-v2.png",
+        "dimensions": [
+          1345,
+          1169
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            34,
+            76,
+            1331,
+            1169
+          ],
+          "32": [
+            40,
+            79,
+            1325,
+            1020
+          ],
+          "128": [
+            41,
+            80,
+            1325,
+            1020
+          ],
+          "240": [
+            41,
+            80,
+            1324,
+            1019
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          3,
+          5,
+          98,
+          75
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_VER_GRO_service-native-inspection.png"
+    },
+    {
+      "id": "HSM_ZYP_commissions_not_orders",
+      "correctionRowZeroBased": 6,
+      "source": "art/verenia/HSM_ZYP_commissions_not_orders-review-v2.png",
+      "sha256": "b9eca3ff9f7d3f4284ce3b64820ada001b6b2796facf12eaaa2162b464cabef6",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Both chair tops, table corners and feet now complete inside canvas. Revised geometric ministry map and separate negotiating chairs preserved.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-02"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_ZYP_commissions_not_orders",
+        "source": "art/verenia/HSM_ZYP_commissions_not_orders-review-v2.png",
+        "dimensions": [
+          1349,
+          1166
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            64,
+            1335,
+            1166
+          ],
+          "32": [
+            33,
+            67,
+            1317,
+            1103
+          ],
+          "128": [
+            33,
+            67,
+            1317,
+            1103
+          ],
+          "240": [
+            34,
+            68,
+            1316,
+            1102
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          2,
+          5,
+          97,
+          82
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_ZYP_commissions_not_orders-native-inspection.png"
+    },
+    {
+      "id": "HSM_VER_FORCE_AVI_commission",
+      "correctionRowZeroBased": 7,
+      "source": "art/verenia/HSM_VER_FORCE_AVI_commission-review-v2.png",
+      "sha256": "0c31831bdb9d081a771cb72d71111e992878de25cb3913f35a21031e82757665",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Gold/orange and blue rim lighting removed. Gear, closed gate and stone pillars now neutral grey/charcoal with silver wear; subdued red lever remains distinct.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-03"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_VER_FORCE_AVI_commission",
+        "source": "art/verenia/HSM_VER_FORCE_AVI_commission-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            30,
+            1220,
+            1254
+          ],
+          "32": [
+            125,
+            33,
+            1129,
+            1157
+          ],
+          "128": [
+            126,
+            33,
+            1128,
+            1157
+          ],
+          "240": [
+            127,
+            34,
+            1128,
+            1156
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          6,
+          1,
+          58,
+          59
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_VER_FORCE_AVI_commission-native-inspection.png"
+    },
+    {
+      "id": "HSM_VER_GRO_transition",
+      "correctionRowZeroBased": 8,
+      "source": "art/verenia/HSM_VER_GRO_transition-review-v2.png",
+      "sha256": "b412a112635d9f6ddbdafd7d5c95ba9cd9c2181646e2b783a23cc6afe5d4c1be",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Dove/branch roundel removed and replaced by a connected square milestone. Key now grey metal with limited brass fittings; chair and timetable unchanged in meaning.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-04"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_VER_GRO_transition",
+        "source": "art/verenia/HSM_VER_GRO_transition-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            17,
+            1254,
+            1240
+          ],
+          "32": [
+            25,
+            47,
+            1250,
+            1234
+          ],
+          "128": [
+            26,
+            47,
+            1249,
+            1233
+          ],
+          "240": [
+            27,
+            48,
+            1248,
+            1232
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          3
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          1,
+          2,
+          64,
+          63
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/HSM_VER_GRO_transition-native-inspection.png"
+    },
+    {
+      "id": "AVI_urbanisation_effort",
+      "correctionRowZeroBased": 9,
+      "source": "art/verenia/AVI_urbanisation_effort-review-v2.png",
+      "sha256": "2bab7bd8963f61ba190ab2f0767ee79803378e20e2ad67809d2502567773fdfc",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Highest steel upright/cap and finite foreground paving base now complete; hoist intact. Open building bays remain real transparent gaps rather than erroneous holes.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-05"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "AVI_urbanisation_effort",
+        "source": "art/verenia/AVI_urbanisation_effort-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            53,
+            25,
+            1202,
+            1224
+          ],
+          "32": [
+            104,
+            54,
+            1151,
+            1218
+          ],
+          "128": [
+            104,
+            55,
+            1150,
+            1217
+          ],
+          "240": [
+            106,
+            56,
+            1149,
+            1216
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          5,
+          3,
+          59,
+          63
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/AVI_urbanisation_effort-native-inspection.png"
+    },
+    {
+      "id": "AVI_aviation",
+      "correctionRowZeroBased": 10,
+      "source": "art/verenia/AVI_aviation-review-v3.png",
+      "sha256": "97a78360e39baf7a507f76635c482ca113f33a64646c5ea12af41d32b8eaed47",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Reviewed review-v3 only. Cockpit panes now opaque slate-blue with broad reflections; no visible face, hand, flesh-colored mark or definite occupant anatomy. Airframe, propeller, cloud, stopwatch and sight remain readable. Cockpit additionally inspected in a 5x nearest-neighbor crop.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-06"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "AVI_aviation",
+        "source": "art/verenia/AVI_aviation-review-v3.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            27,
+            19,
+            1244,
+            1222
+          ],
+          "32": [
+            30,
+            52,
+            1237,
+            1208
+          ],
+          "128": [
+            30,
+            52,
+            1236,
+            1208
+          ],
+          "240": [
+            32,
+            54,
+            1235,
+            1207
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          1,
+          2,
+          63,
+          62
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/AVI_aviation-native-inspection.png"
+    },
+    {
+      "id": "AVI_livre_1",
+      "correctionRowZeroBased": 11,
+      "source": "art/verenia/AVI_livre_1-review-v2.png",
+      "sha256": "2ef2dda695a26332771a9984e34d42ad7ea7f53d61b26ffc9e9547de5fd11c96",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Broad balance pans, supports and plaque now grey iron/pewter; brass restricted to small fasteners/pivot details. Plain coin and imported gear preserved and separated at native size.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-07"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "AVI_livre_1",
+        "source": "art/verenia/AVI_livre_1-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            33,
+            82,
+            1248,
+            1169
+          ],
+          "32": [
+            35,
+            86,
+            1245,
+            1167
+          ],
+          "128": [
+            36,
+            86,
+            1245,
+            1166
+          ],
+          "240": [
+            37,
+            87,
+            1244,
+            1165
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          2,
+          4,
+          64,
+          60
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/AVI_livre_1-native-inspection.png"
+    },
+    {
+      "id": "AVI_livre_2",
+      "correctionRowZeroBased": 12,
+      "source": "art/verenia/AVI_livre_2-review-v2.png",
+      "sha256": "680a537e31d03425d0e45a57e5d2da61dd8c0f6c762217a6fbb85c62c7c74bf3",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Pans, beam, supports and chains changed to grey metal; only small pivot fittings retain brass. Geometric banknotes and plain pewter coins preserved; native silhouette clear.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-08"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "AVI_livre_2",
+        "source": "art/verenia/AVI_livre_2-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            25,
+            1254,
+            1220
+          ],
+          "32": [
+            7,
+            173,
+            1247,
+            1129
+          ],
+          "128": [
+            8,
+            174,
+            1246,
+            1128
+          ],
+          "240": [
+            9,
+            175,
+            1245,
+            1127
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          0,
+          9,
+          64,
+          58
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/AVI_livre_2-native-inspection.png"
+    },
+    {
+      "id": "AVI_treasury",
+      "correctionRowZeroBased": 13,
+      "source": "art/verenia/AVI_treasury-review-v2.png",
+      "sha256": "01e5787a30f9afe131ef3fffa506b41f0f5438e8709ee49b714559fd0454d530",
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Weighing trays and structural mechanism now grey metal with restrained small brass pivots. Machine component and coin stacks retain distinguishable native silhouettes.",
+      "resolvedPriorFindingIDs": [
+        "V36-60-09"
+      ],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "AVI_treasury",
+        "source": "art/verenia/AVI_treasury-review-v2.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            41,
+            1249,
+            1254
+          ],
+          "32": [
+            8,
+            234,
+            1247,
+            1011
+          ],
+          "128": [
+            9,
+            234,
+            1246,
+            1010
+          ],
+          "240": [
+            10,
+            235,
+            1245,
+            1010
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "nativeSize": [
+          64,
+          64
+        ],
+        "nativeAlphaBoundsAt32": [
+          0,
+          12,
+          64,
+          52
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-14/AVI_treasury-native-inspection.png"
+    },
+    {
+      "id": "avian_socialist_technocracy",
+      "correctionRowZeroBased": 14,
+      "source": "art/verenia/avian_socialist_technocracy-review-v3.png",
+      "sha256": "ac1c1dda199d21aa33e7c14201c8241de6557b7b7c0661c98dd018a432a58972",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Console is analog: three unnumbered needle gauges, chart recorder and switches replace the digital display. Silo/conveyor top is complete within source. Survey instrument, grain and diagram book remain distinct at 99x86; no top clipping or new emblem.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "avian_socialist_technocracy",
+        "source": "art/verenia/avian_socialist_technocracy-review-v3.png",
+        "dimensions": [
+          1344,
+          1170
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            125,
+            48,
+            1271,
+            1149
+          ],
+          "32": [
+            135,
+            51,
+            1268,
+            1146
+          ],
+          "128": [
+            135,
+            52,
+            1268,
+            1145
+          ],
+          "240": [
+            137,
+            53,
+            1267,
+            1144
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          10,
+          4,
+          94,
+          84
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/avian_socialist_technocracy-native-inspection.png"
+    },
+    {
+      "id": "expand_aviaire_metalworks",
+      "correctionRowZeroBased": 15,
+      "source": "art/verenia/expand_aviaire_metalworks-review-v3.png",
+      "sha256": "38c831841f09fcabac1aea327f6c85b0c5e5f989a45e874c537a2a7e5beb5be7",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "review-v3 contains the complete upper pipe elbow and machinery extents. Both roller pairs and plate stack are cooled silver steel; rust is localized surface color, not incandescence. Native silhouette clearly separates rollers and plates.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "expand_aviaire_metalworks",
+        "source": "art/verenia/expand_aviaire_metalworks-review-v3.png",
+        "dimensions": [
+          1345,
+          1169
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            113,
+            1291,
+            1118
+          ],
+          "32": [
+            90,
+            119,
+            1264,
+            1115
+          ],
+          "128": [
+            91,
+            119,
+            1264,
+            1115
+          ],
+          "240": [
+            92,
+            120,
+            1263,
+            1114
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          6,
+          8,
+          93,
+          82
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/expand_aviaire_metalworks-native-inspection.png"
+    },
+    {
+      "id": "oil_refineries",
+      "correctionRowZeroBased": 16,
+      "source": "art/verenia/oil_refineries-review-v2.png",
+      "sha256": "529f8b11d7e6ae2a18eeee725e1d047f30191f0fcd82d446dd34af629e6b32e3",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Distillation tower, full upper pipe elbow, lower base and fuel drum are contained. Pipes are opaque iron/rusty copper with neutral highlights; no visible orange emission or reflected bloom. Native silhouette remains readable.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "oil_refineries",
+        "source": "art/verenia/oil_refineries-review-v2.png",
+        "dimensions": [
+          1345,
+          1169
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            87,
+            53,
+            1307,
+            1113
+          ],
+          "32": [
+            246,
+            143,
+            1148,
+            1106
+          ],
+          "128": [
+            246,
+            144,
+            1148,
+            1105
+          ],
+          "240": [
+            247,
+            145,
+            1147,
+            1105
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          18,
+          10,
+          85,
+          82
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/oil_refineries-native-inspection.png"
+    },
+    {
+      "id": "HSM_ERI_support_companies",
+      "correctionRowZeroBased": 17,
+      "source": "art/verenia/HSM_ERI_support_companies-review-v2.png",
+      "sha256": "fe2ecfacfbbe7185ce2030406820bba70b7bc52dca18a1148b8214e00df9d2ea",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Medic bag face is plain linen with no red cross or replacement logo. Rolled bandage and green bottle identify medical supplies; olive straps, bridge section and shovel preserved and distinguishable at 99x86.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_ERI_support_companies",
+        "source": "art/verenia/HSM_ERI_support_companies-review-v2.png",
+        "dimensions": [
+          1347,
+          1168
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            61,
+            1333,
+            1126
+          ],
+          "32": [
+            33,
+            78,
+            1329,
+            1087
+          ],
+          "128": [
+            34,
+            79,
+            1329,
+            1086
+          ],
+          "240": [
+            34,
+            80,
+            1328,
+            1085
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          2,
+          5,
+          98,
+          80
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/HSM_ERI_support_companies-native-inspection.png"
+    },
+    {
+      "id": "HSM_ERI_integrated_staff",
+      "correctionRowZeroBased": 18,
+      "source": "art/verenia/HSM_ERI_integrated_staff-review-v2.png",
+      "sha256": "254c0529b75d8d792ca14132c36cbe948a0ac922c4cf92fb7cb761a33aa1b103",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Medical bag on the planning board is plain linen without a red-cross badge. Rolled bandage and small muted-green bottle retained; infantry and supply-cart counters and fictional board remain coherent and readable. No pseudo-text or anatomy.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_ERI_integrated_staff",
+        "source": "art/verenia/HSM_ERI_integrated_staff-review-v2.png",
+        "dimensions": [
+          1346,
+          1169
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            49,
+            1313,
+            1153
+          ],
+          "32": [
+            86,
+            236,
+            1309,
+            983
+          ],
+          "128": [
+            86,
+            236,
+            1309,
+            982
+          ],
+          "240": [
+            87,
+            237,
+            1308,
+            981
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          6,
+          17,
+          97,
+          73
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/HSM_ERI_integrated_staff-native-inspection.png"
+    },
+    {
+      "id": "HSM_ERI_FORCE_not_a_dowry",
+      "correctionRowZeroBased": 19,
+      "source": "art/verenia/HSM_ERI_FORCE_not_a_dowry-review-v2.png",
+      "sha256": "4849ef33259b9e1f3825d71144524503fd5090051d57208738869d9d34e6b59e",
+      "nativeDimensions": [
+        99,
+        86
+      ],
+      "result": "pass",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "transparentExteriorVisuallyChecked": true,
+      "originalFindingResolved": true,
+      "visibleDefects": [],
+      "observation": "Envelope is clearly open, with unsealed flap and partly exposed geometric-diagram letter inside a grey-green tray. No wax seal. Loose chain lies outside the tray and ends before the letter; burgundy cord has free tails and does not close the flap. Open correspondence reads at native size.",
+      "resolvedPriorFindingIDs": [],
+      "sourceHashUnchangedDuringReview": true,
+      "priorFiveHashReconfirmed": null,
+      "alphaInspection": {
+        "id": "HSM_ERI_FORCE_not_a_dowry",
+        "source": "art/verenia/HSM_ERI_FORCE_not_a_dowry-review-v2.png",
+        "dimensions": [
+          1345,
+          1170
+        ],
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            20,
+            31,
+            1318,
+            1170
+          ],
+          "32": [
+            23,
+            47,
+            1315,
+            1040
+          ],
+          "128": [
+            23,
+            48,
+            1315,
+            1040
+          ],
+          "240": [
+            24,
+            49,
+            1314,
+            1039
+          ]
+        },
+        "outerEdgeAlphaMaxTopBottomLeftRight": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nativeSize": [
+          99,
+          86
+        ],
+        "nativeAlphaBoundsAt32": [
+          1,
+          3,
+          97,
+          77
+        ]
+      },
+      "nativeInspectionImage": "art/verenia/final-review/inspection-replacements-20/HSM_ERI_FORCE_not_a_dowry-native-inspection.png"
+    }
+  ],
+  "limitations": "This is visual approval of the specifically hashed replacement PNGs and inspection-only resamples. It does not confirm that sources have been integrated into manifests/game exports or tested in game. Literal generous padding targets are not universally achieved; complete visible silhouettes and practical native readability were verified.",
+  "reviewHistory": [
+    {
+      "reviewedAtUtc": "2026-10-25T11:54:25.565Z",
+      "aggregateCount": 14,
+      "passed": 14,
+      "failed": 0
+    }
+  ],
+  "nativeBeforeAfterContact": "art/verenia/final-review/inspection-replacements-20/native-before-after-20.png",
+  "nativeBeforeAfterContactActuallyViewed": true
+}

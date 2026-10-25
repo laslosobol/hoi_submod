@@ -1,0 +1,516 @@
+HSM_VER_enable_negotiated_campaign = {
+	if = {
+		limit = { ERI = { NOT = { has_country_flag = HSM_VER_campaign_active } } }
+		ERI = { set_country_flag = HSM_VER_campaign_active }
+		# Adopt an already achieved EaW peace without replaying or reversing it.
+		if = {
+			limit = { AVI = { has_completed_focus = treaty_of_friendship } HSM_VER_houses_at_peace = yes ERI = { NOT = { has_country_flag = HSM_VER_treaty_broken } } }
+			HSM_VER_sign_treaty = yes
+		}
+	}
+}
+HSM_VER_start_campaign = {
+	hidden_effect = { HSM_VER_enable_negotiated_campaign = yes }
+	if = {
+		limit = { hidden_trigger = { NOT = { has_country_flag = HSM_VER_eri_story_started } } }
+		hidden_effect = { set_country_flag = HSM_VER_eri_story_started }
+		country_event = { id = hsm_verenia.1 days = 1 }
+	}
+}
+HSM_VER_prepare_guarantees = {
+	ERI = { hidden_effect = { set_country_flag = HSM_VER_guarantees_prepared } }
+	if = {
+		limit = { hidden_trigger = { ERI = { NOT = { has_country_flag = HSM_VER_conference_scene_issued has_country_flag = HSM_VER_treaty_signed } } } }
+		ERI = { hidden_effect = { set_country_flag = HSM_VER_conference_scene_issued } }
+		country_event = { id = hsm_ver_routes.1 days = 1 }
+	}
+	if = {
+		limit = { hidden_trigger = { HSM_VER_armistice_valid = yes NOT = { HSM_VER_negotiated_peace_valid = yes } ERI = { NOT = { has_country_flag = HSM_VER_property_arbitration } } } }
+		ERI = { hidden_effect = { set_country_flag = HSM_VER_joint_inspection } add_ideas = HSM_VER_frontier_inspections }
+		EYR = { add_ideas = HSM_VER_frontier_inspections }
+	}
+}
+HSM_VER_offer_armistice = {
+	if = {
+		limit = { HSM_VER_can_offer_armistice = yes }
+		log = "[GetDateText]: Verenia: armistice offer sent to Eyrie."
+		if = { limit = { tag = AVI } ERI = { set_country_flag = HSM_VER_avian_mediation } }
+		ERI = {
+			set_country_flag = HSM_VER_negotiation_revision_2
+			set_country_flag = { flag = HSM_VER_armistice_pending value = 1 days = 45 }
+			set_country_flag = { flag = HSM_VER_armistice_reply_window value = 1 days = 29 }
+			set_country_flag = HSM_VER_armistice_offer_unresolved
+			clr_country_flag = HSM_VER_armistice_from_eyrie
+			set_country_flag = { flag = HSM_VER_armistice_retry value = 1 days = 90 }
+			clr_country_flag = HSM_VER_armistice_refused
+			country_event = { id = hsm_verenia.29 days = 30 }
+		}
+		EYR = { country_event = { id = hsm_verenia.20 days = 1 } }
+	}
+}
+HSM_VER_sign_armistice = {
+	if = {
+		limit = { HSM_VER_armistice_context = yes ERI = { has_country_flag = HSM_VER_armistice_pending } }
+		log = "[GetDateText]: Verenia: bilateral armistice signed."
+		if = {
+			limit = { ERI = { has_country_flag = HSM_VER_guarantees_prepared NOT = { has_country_flag = HSM_VER_property_arbitration } } }
+			ERI = { set_country_flag = HSM_VER_joint_inspection }
+		}
+		if = { limit = { ERI = { has_border_war_with = EYR } } cancel_border_war = { attacker = 401 defender = 400 } cancel_border_war = { attacker = 400 defender = 401 } }
+		ERI = {
+			clr_country_flag = HSM_VER_armistice_pending
+			clr_country_flag = HSM_VER_armistice_offer_unresolved
+			clr_country_flag = HSM_VER_armistice_refused
+			if = { limit = { has_country_flag = HSM_VER_diplomatic_route } set_country_flag = HSM_VER_armistice }
+			else = { set_country_flag = { flag = HSM_VER_armistice value = 1 days = 365 } }
+			set_truce = { target = EYR days = 365 }
+			remove_wargoal = { type = annex_everything target = EYR }
+			remove_wargoal = { type = puppet_wargoal_focus target = EYR }
+			country_event = { id = hsm_verenia.22 days = 1 }
+		}
+		EYR = {
+			if = { limit = { has_country_flag = HSM_VER_diplomatic_route } set_country_flag = HSM_VER_armistice }
+			else = { set_country_flag = { flag = HSM_VER_armistice value = 1 days = 365 } }
+			set_truce = { target = ERI days = 365 }
+			remove_wargoal = { type = annex_everything target = ERI }
+			remove_wargoal = { type = puppet_wargoal_focus target = ERI }
+		}
+		HSM_VER_promote_route_armistice = yes
+		if = {
+			limit = { ERI = { has_country_flag = HSM_VER_joint_inspection } }
+			ERI = { add_ideas = HSM_VER_frontier_inspections }
+			EYR = { add_ideas = HSM_VER_frontier_inspections }
+		}
+	}
+}
+HSM_VER_offer_treaty = {
+	if = {
+		limit = { HSM_VER_can_offer_treaty = yes NOT = { HSM_VER_negotiated_peace_valid = yes } }
+		log = "[GetDateText]: Verenia: treaty offer sent to Eyrie."
+		ERI = {
+			set_country_flag = HSM_VER_negotiation_revision_2
+			set_country_flag = { flag = HSM_VER_treaty_pending value = 1 days = 45 }
+			set_country_flag = { flag = HSM_VER_treaty_reply_window value = 1 days = 29 }
+			set_country_flag = HSM_VER_treaty_offer_unresolved
+			clr_country_flag = HSM_VER_treaty_from_eyrie
+			set_country_flag = { flag = HSM_VER_treaty_retry value = 1 days = 90 }
+			clr_country_flag = HSM_VER_treaty_refused
+			country_event = { id = hsm_verenia.39 days = 30 }
+		}
+		EYR = { country_event = { id = hsm_verenia.30 days = 1 } }
+	}
+}
+HSM_VER_sign_treaty = {
+	if = {
+		limit = { HSM_VER_houses_at_peace = yes HSM_VER_diplomatic_routes_open = yes }
+		log = "[GetDateText]: Verenia: bilateral friendship treaty signed."
+		ERI = {
+			clr_country_flag = HSM_VER_treaty_pending
+			clr_country_flag = HSM_VER_treaty_offer_unresolved
+			clr_country_flag = HSM_VER_treaty_refused
+			clr_country_flag = HSM_VER_armistice_pending
+			clr_country_flag = HSM_VER_armistice_offer_unresolved
+			set_country_flag = HSM_VER_treaty_signed
+			set_truce = { target = EYR days = 365 }
+			remove_ideas = E_E_rivalry
+			remove_ideas = HSM_VER_frontier_inspections
+			add_ideas = HSM_VER_peace_dividend
+			remove_opinion_modifier = { target = EYR modifier = mortal_enemies }
+			remove_wargoal = { type = annex_everything target = EYR }
+			remove_wargoal = { type = puppet_wargoal_focus target = EYR }
+			# Match the cross-core concessions of EaW's treaty_of_friendship.
+			remove_state_core = 400
+			remove_state_core = 391
+		}
+		EYR = {
+			set_country_flag = HSM_VER_treaty_signed
+			set_truce = { target = ERI days = 365 }
+			remove_ideas = E_E_rivalry
+			remove_ideas = HSM_VER_frontier_inspections
+			add_ideas = HSM_VER_peace_dividend
+			remove_opinion_modifier = { target = ERI modifier = mortal_enemies }
+			remove_wargoal = { type = annex_everything target = ERI }
+			remove_wargoal = { type = puppet_wargoal_focus target = ERI }
+			remove_state_core = 673
+			remove_state_core = 410
+			remove_state_core = 500
+		}
+	}
+}
+HSM_VER_invite_avian = {
+	if = {
+		limit = {
+			HSM_VER_AVI_intergigantes_route = yes
+			HSM_VER_negotiated_peace_valid = yes
+			AVI = { exists = yes is_subject = no has_capitulated = no NOT = { has_war_with = ERI has_war_with = EYR has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_charter_signed } }
+			ERI = { NOT = { has_country_flag = HSM_VER_avian_pending has_country_flag = HSM_VER_avian_retry } }
+		}
+		ERI = {
+			set_country_flag = { flag = HSM_VER_avian_pending value = 1 days = 45 }
+			set_country_flag = HSM_VER_avian_offer_unresolved
+			set_country_flag = { flag = HSM_VER_avian_retry value = 1 days = 120 }
+			clr_country_flag = HSM_VER_avian_declined
+			country_event = { id = hsm_verenia.59 days = 30 }
+		}
+		AVI = { country_event = { id = hsm_verenia.50 days = 1 } }
+	}
+}
+HSM_VER_offer_charter = {
+	if = {
+		limit = { HSM_VER_diplomatic_routes_open = yes HSM_VER_negotiated_peace_valid = yes ERI = { NOT = { has_country_flag = HSM_VER_charter_pending has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_charter_retry } } }
+		ERI = {
+			set_country_flag = { flag = HSM_VER_charter_pending value = 1 days = 60 }
+			set_country_flag = HSM_VER_charter_offer_unresolved
+			clr_country_flag = HSM_VER_charter_from_eyrie
+			set_country_flag = { flag = HSM_VER_charter_retry value = 1 days = 120 }
+			clr_country_flag = HSM_VER_charter_refused
+			country_event = { id = hsm_verenia.60 days = 1 }
+			country_event = { id = hsm_verenia.69 days = 45 }
+		}
+	}
+}
+HSM_VER_ratify_charter = {
+	if = {
+		limit = { HSM_VER_diplomatic_routes_open = yes HSM_VER_negotiated_peace_valid = yes ERI = { has_country_flag = HSM_VER_charter_pending NOT = { has_country_flag = HSM_VER_charter_signed } } }
+		ERI = {
+			clr_country_flag = HSM_VER_charter_pending
+			clr_country_flag = HSM_VER_charter_offer_unresolved
+			clr_country_flag = HSM_VER_charter_refused
+			set_country_flag = HSM_VER_charter_signed
+			HSM_VER_apply_court = yes
+			country_event = { id = hsm_verenia.64 days = 1 }
+		}
+		EYR = { set_country_flag = HSM_VER_charter_signed HSM_VER_SP_add_HSM_VER_common_courts = yes }
+		HSM_VER_reconcile_charter_suspension = yes
+		HSM_VER_offer_avian_charter = yes
+	}
+}
+HSM_VER_offer_avian_charter = {
+	if = {
+		limit = {
+			HSM_VER_AVI_intergigantes_route = yes
+			HSM_VER_charter_valid = yes
+			AVI = { exists = yes is_subject = no has_capitulated = no has_country_flag = HSM_VER_congress_observer NOT = { has_war_with = ERI has_war_with = EYR has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_avian_charter_pending } }
+		}
+		AVI = {
+			set_country_flag = { flag = HSM_VER_avian_charter_pending value = 1 days = 30 }
+			country_event = { id = hsm_verenia.63 days = 1 }
+		}
+	}
+}
+HSM_VER_apply_joint_staff = {
+	custom_effect_tooltip = HSM_VER_UI_ducal_charter_recipients_tt
+	show_ideas_tooltip = HSM_VER_joint_staff
+	hidden_effect = {
+		if = {
+			limit = { HSM_VER_charter_valid = yes }
+			ERI = { set_country_flag = HSM_VER_staff_established HSM_VER_SP_add_HSM_VER_joint_staff = yes }
+			EYR = { set_country_flag = HSM_VER_staff_established HSM_VER_SP_add_HSM_VER_joint_staff = yes }
+			if = { limit = { HSM_VER_avian_partner = yes } AVI = { set_country_flag = HSM_VER_staff_established HSM_VER_SP_add_HSM_VER_joint_staff = yes } }
+		}
+	}
+}
+HSM_VER_apply_shared_services = {
+	custom_effect_tooltip = HSM_VER_UI_ducal_charter_recipients_tt
+	show_ideas_tooltip = HSM_VER_shared_services
+	hidden_effect = {
+		if = {
+			limit = { HSM_VER_charter_valid = yes }
+			ERI = { set_country_flag = HSM_VER_services_established HSM_VER_SP_add_HSM_VER_shared_services = yes }
+			EYR = { set_country_flag = HSM_VER_services_established HSM_VER_SP_add_HSM_VER_shared_services = yes }
+			if = { limit = { HSM_VER_avian_partner = yes } AVI = { set_country_flag = HSM_VER_services_established HSM_VER_SP_add_HSM_VER_shared_services = yes } }
+		}
+	}
+}
+HSM_VER_remove_charter_benefits = {
+	# Once incorporated, these are domestic institutions, not a foreign treaty.
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		HSM_VER_SP_remove_HSM_AVI_common_budget = yes
+		HSM_VER_SP_remove_HSM_VER_common_courts = yes
+		HSM_VER_SP_remove_HSM_VER_limited_presidency = yes
+		HSM_VER_SP_remove_HSM_VER_public_council = yes
+		HSM_VER_SP_remove_HSM_VER_joint_staff = yes
+		HSM_VER_SP_remove_HSM_VER_shared_services = yes
+	}
+}
+HSM_VER_apply_court = {
+	if = {
+		limit = { tag = ERI has_country_flag = HSM_VER_ducal_presidency }
+		HSM_VER_SP_remove_HSM_VER_common_courts = yes
+		HSM_VER_SP_remove_HSM_VER_public_council = yes
+		if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_limited_presidency = yes } } HSM_VER_SP_add_HSM_VER_limited_presidency = yes }
+	}
+	else_if = {
+		limit = { tag = ERI has_country_flag = HSM_VER_civic_delegates }
+		HSM_VER_SP_remove_HSM_VER_common_courts = yes
+		HSM_VER_SP_remove_HSM_VER_limited_presidency = yes
+		if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_public_council = yes } } HSM_VER_SP_add_HSM_VER_public_council = yes }
+	}
+	else = { if = { limit = { NOT = { HSM_VER_SP_has_HSM_VER_common_courts = yes } } HSM_VER_SP_add_HSM_VER_common_courts = yes } }
+}
+HSM_VER_suspend_charter = {
+	ERI = { set_country_flag = HSM_VER_charter_suspended HSM_VER_remove_charter_benefits = yes }
+	EYR = { set_country_flag = HSM_VER_charter_suspended HSM_VER_remove_charter_benefits = yes }
+	AVI = { if = { limit = { has_country_flag = HSM_VER_charter_signed } set_country_flag = HSM_VER_charter_suspended HSM_VER_remove_charter_benefits = yes } }
+}
+HSM_VER_restore_charter = {
+	if = {
+		limit = { HSM_VER_negotiated_peace_valid = yes }
+		ERI = { clr_country_flag = HSM_VER_royal_exception set_country_flag = HSM_VER_court_respected HSM_VER_SP_remove_HSM_VER_ducal_exception = yes }
+		HSM_VER_reconcile_charter_suspension = yes
+	}
+}
+HSM_VER_reconcile_charter_suspension = {
+	if = {
+		limit = { OR = { ERI = { has_country_flag = HSM_VER_royal_exception } EYR = { has_country_flag = HSM_EYR_command_dispute } AVI = { has_country_flag = HSM_AVI_levy_exception has_country_flag = HSM_VER_charter_signed } } }
+		HSM_VER_suspend_charter = yes
+	}
+	else = {
+		ERI = { clr_country_flag = HSM_VER_charter_suspended }
+		EYR = { clr_country_flag = HSM_VER_charter_suspended }
+		AVI = { clr_country_flag = HSM_VER_charter_suspended }
+	}
+}
+HSM_VER_offer_defence = {
+	if = {
+		limit = { HSM_VER_can_offer_defence = yes }
+		ERI = {
+			set_country_flag = { flag = HSM_VER_defence_pending value = 1 days = 30 }
+			set_country_flag = { flag = HSM_VER_defence_retry value = 1 days = 90 }
+			clr_country_flag = HSM_VER_defence_host_eyrie
+		}
+		if = { limit = { EYR = { is_ai = yes } } HSM_VER_form_defensive_league = yes }
+		else = { EYR = { country_event = { id = hsm_verenia.80 days = 1 } } }
+	}
+}
+HSM_VER_form_defensive_league = {
+	if = {
+		limit = { HSM_VER_can_form_defensive_league = yes ERI = { has_country_flag = HSM_VER_defence_pending NOT = { has_country_flag = HSM_VER_defence_accepted } } }
+		if = {
+			limit = { ERI = { is_in_faction = no } EYR = { is_in_faction = no } }
+			if = { limit = { ERI = { has_country_flag = HSM_VER_defence_host_eyrie } } EYR = { set_rule = { can_create_factions = yes } create_faction = HSM_VER_defensive_league } }
+			else = { ERI = { set_rule = { can_create_factions = yes } create_faction = HSM_VER_defensive_league } }
+		}
+		if = { limit = { ERI = { is_faction_leader = yes } EYR = { is_in_faction = no } } ERI = { add_to_faction = EYR } }
+		if = { limit = { EYR = { is_faction_leader = yes } ERI = { is_in_faction = no } } EYR = { add_to_faction = ERI } }
+		ERI = {
+			set_country_flag = HSM_VER_defence_accepted
+			clr_country_flag = HSM_VER_defence_pending
+			clr_country_flag = HSM_VER_defence_declined
+		}
+		EYR = { set_country_flag = HSM_VER_defence_accepted }
+		AVI = { clr_country_flag = HSM_VER_avian_defence_declined }
+		HSM_VER_offer_avian_defence = yes
+	}
+}
+HSM_VER_offer_avian_defence = {
+	if = {
+		limit = {
+			HSM_VER_defence_league_operational = yes HSM_VER_avian_partner = yes
+			ERI = { has_country_flag = HSM_VER_defence_accepted }
+			AVI = { is_in_faction = no NOT = { has_country_flag = HSM_VER_defence_accepted has_country_flag = HSM_VER_avian_defence_pending has_country_flag = HSM_VER_avian_defence_retry has_country_flag = HSM_VER_avian_defence_declined } }
+		}
+		AVI = {
+			set_country_flag = { flag = HSM_VER_avian_defence_pending value = 1 days = 30 }
+			set_country_flag = { flag = HSM_VER_avian_defence_retry value = 1 days = 90 }
+			country_event = { id = hsm_verenia.82 days = 1 }
+		}
+	}
+}
+HSM_VER_reconcile_defensive_league = {
+	# Charter suspension does not dissolve an existing military alliance.
+	if = {
+		limit = { ERI = { has_country_flag = HSM_VER_defence_accepted } NOT = { HSM_VER_houses_share_led_faction = yes } }
+		ERI = { clr_country_flag = HSM_VER_defence_accepted }
+		EYR = { clr_country_flag = HSM_VER_defence_accepted }
+		AVI = { clr_country_flag = HSM_VER_defence_accepted clr_country_flag = HSM_VER_avian_defence_pending }
+	}
+	if = {
+		limit = { AVI = { has_country_flag = HSM_VER_defence_accepted NOT = { is_in_faction_with = ERI } } }
+		AVI = { clr_country_flag = HSM_VER_defence_accepted set_country_flag = HSM_VER_avian_defence_declined }
+	}
+}
+HSM_VER_queue_judgement = {
+	# A 30-day delivery guard outlasts the native 13-day event response window.
+	# If occupation prevents delivery, expiry allows a new attempt after liberation.
+	if = {
+		limit = { hidden_trigger = { HSM_VER_judgement_unresolved = yes ERI = { NOT = { has_country_flag = HSM_VER_judgement_pending } } } }
+		ERI = {
+			hidden_effect = { set_country_flag = { flag = HSM_VER_judgement_pending value = 1 days = 30 } }
+			country_event = { id = hsm_verenia.70 days = 1 }
+		}
+	}
+}
+# Called in the independent House's scope by AVI's coup events, not an annexation.
+HSM_VER_avian_crisis_response = {
+	if = {
+		limit = { exists = yes is_subject = no NOT = { has_country_flag = HSM_VER_crisis_notified } }
+		set_country_flag = HSM_VER_crisis_notified
+		set_country_flag = HSM_VER_CR_contact_opened
+		set_country_flag = { flag = HSM_VER_CR_demand_pending value = 1 days = 30 }
+		AVI = {
+			clr_country_flag = HSM_VER_charter_signed
+			clr_country_flag = HSM_VER_congress_observer
+			clr_country_flag = HSM_VER_avian_charter_pending
+			clr_country_flag = HSM_VER_avian_defence_pending
+			HSM_VER_remove_charter_benefits = yes
+		}
+		ERI = { clr_country_flag = HSM_VER_avian_pending clr_country_flag = HSM_VER_avian_offer_unresolved }
+		country_event = { id = hsm_verenia.95 days = 1 }
+	}
+}
+# ERI's register retains unresolved offers after their timed pending flags expire.
+# Legacy and Eyrie-produced untimed offers close only after the original cooldown,
+# which outlasts every queued reply and timeout. Recovery never restarts that clock.
+HSM_VER_reconcile_negotiation_timeouts = {
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = HSM_VER_armistice_pending NOT = { has_country_flag = HSM_VER_armistice_retry } }
+				AND = { has_country_flag = HSM_VER_armistice_offer_unresolved NOT = { has_country_flag = HSM_VER_armistice_pending } }
+			}
+		}
+		clr_country_flag = HSM_VER_armistice_pending
+		clr_country_flag = HSM_VER_armistice_offer_unresolved
+		clr_country_flag = HSM_VER_armistice_from_eyrie
+		if = { limit = { NOT = { has_country_flag = HSM_VER_armistice has_country_flag = HSM_VER_treaty_signed } } set_country_flag = HSM_VER_armistice_refused }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = HSM_VER_treaty_pending NOT = { has_country_flag = HSM_VER_treaty_retry } }
+				AND = { has_country_flag = HSM_VER_treaty_offer_unresolved NOT = { has_country_flag = HSM_VER_treaty_pending } }
+			}
+		}
+		clr_country_flag = HSM_VER_treaty_pending
+		clr_country_flag = HSM_VER_treaty_offer_unresolved
+		clr_country_flag = HSM_VER_treaty_from_eyrie
+		if = { limit = { NOT = { has_country_flag = HSM_VER_treaty_signed } } set_country_flag = HSM_VER_treaty_refused }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = HSM_VER_charter_pending NOT = { has_country_flag = HSM_VER_charter_retry } }
+				AND = { has_country_flag = HSM_VER_charter_offer_unresolved NOT = { has_country_flag = HSM_VER_charter_pending } }
+			}
+		}
+		clr_country_flag = HSM_VER_charter_pending
+		clr_country_flag = HSM_VER_charter_offer_unresolved
+		clr_country_flag = HSM_VER_charter_from_eyrie
+		if = { limit = { NOT = { has_country_flag = HSM_VER_charter_signed } } set_country_flag = HSM_VER_charter_refused }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = HSM_VER_avian_pending NOT = { has_country_flag = HSM_VER_avian_retry } }
+				AND = { has_country_flag = HSM_VER_avian_offer_unresolved NOT = { has_country_flag = HSM_VER_avian_pending } }
+			}
+		}
+		clr_country_flag = HSM_VER_avian_pending
+		clr_country_flag = HSM_VER_avian_offer_unresolved
+		if = { limit = { AVI = { NOT = { has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_charter_signed has_war_with = ERI has_war_with = EYR } } } set_country_flag = HSM_VER_avian_declined }
+	}
+}
+# Called daily for just the three tags. Historical signatures survive occupation;
+# benefits do not. Actual inter-House war voids the agreement permanently.
+HSM_VER_maintain_agreements = {
+	if = { limit = { OR = { tag = ERI tag = EYR } } HSM_VER_migrate_routes = yes }
+	if = {
+		limit = {
+			OR = { tag = ERI tag = EYR }
+			HSM_VER_armistice_valid = yes ERI = { has_country_flag = HSM_VER_joint_inspection }
+			NOT = { HSM_VER_negotiated_peace_valid = yes has_idea = HSM_VER_frontier_inspections }
+		}
+		add_ideas = HSM_VER_frontier_inspections
+	}
+	if = {
+		limit = { has_idea = HSM_VER_frontier_inspections OR = { NOT = { HSM_VER_armistice_valid = yes } HSM_VER_negotiated_peace_valid = yes } }
+		remove_ideas = HSM_VER_frontier_inspections
+	}
+	if = { limit = { tag = ERI } HSM_VER_reconcile_defensive_league = yes HSM_VER_reconcile_charter_suspension = yes }
+	if = {
+		limit = { tag = ERI has_war_with = EYR OR = { has_country_flag = HSM_VER_armistice has_country_flag = HSM_VER_treaty_signed has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_charter_pending } }
+		HSM_VER_void_bilateral_treaty = yes
+	}
+	if = {
+		limit = { tag = AVI OR = { has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_avian_charter_pending } OR = { has_war_with = ERI has_war_with = EYR } }
+		clr_country_flag = HSM_VER_charter_signed
+		clr_country_flag = HSM_VER_congress_observer
+		clr_country_flag = HSM_VER_avian_charter_pending
+		clr_country_flag = HSM_VER_avian_defence_pending
+		ERI = { clr_country_flag = HSM_VER_avian_pending clr_country_flag = HSM_VER_avian_offer_unresolved }
+		HSM_VER_remove_charter_benefits = yes
+	}
+	if = {
+		limit = { has_country_flag = HSM_VER_treaty_signed NOT = { HSM_VER_negotiated_peace_valid = yes } }
+		remove_ideas = HSM_VER_peace_dividend
+	}
+	if = {
+		limit = { has_country_flag = HSM_VER_treaty_signed HSM_VER_negotiated_peace_valid = yes NOT = { has_idea = HSM_VER_peace_dividend } }
+		add_ideas = HSM_VER_peace_dividend
+	}
+	if = {
+		limit = { has_country_flag = HSM_VER_charter_signed }
+		if = {
+			limit = { HSM_VER_charter_valid = yes is_subject = no has_capitulated = no NOT = { has_country_flag = HSM_VER_charter_suspended has_war_with = ERI has_war_with = EYR } }
+			HSM_VER_apply_court = yes
+			if = { limit = { has_country_flag = HSM_VER_staff_established NOT = { HSM_VER_SP_has_HSM_VER_joint_staff = yes } } HSM_VER_SP_add_HSM_VER_joint_staff = yes }
+			if = { limit = { has_country_flag = HSM_VER_services_established NOT = { HSM_VER_SP_has_HSM_VER_shared_services = yes } } HSM_VER_SP_add_HSM_VER_shared_services = yes }
+		}
+		else = { HSM_VER_remove_charter_benefits = yes }
+	}
+	if = {
+		limit = { tag = ERI }
+		HSM_VER_reconcile_negotiation_timeouts = yes
+		HSM_VER_migrate_negotiation_revision = yes
+		# Renewed consent restores the completed institution, never the finale's rewards.
+		if = {
+			limit = { has_completed_focus = HSM_ERI_generation_without_feud HSM_VER_charter_valid = yes NOT = { has_country_flag = HSM_VER_union_established } }
+			set_country_flag = HSM_VER_union_established
+		}
+		HSM_VER_queue_judgement = yes
+	}
+	if = { limit = { tag = AVI } HSM_VER_offer_avian_charter = yes HSM_VER_offer_avian_defence = yes }
+}
+HSM_VER_migrate_negotiation_revision = {
+	# One-time recovery of a failed old offer. Never signs on the other House's behalf.
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_negotiation_revision_2 } }
+		set_country_flag = HSM_VER_negotiation_revision_2
+		if = {
+			limit = { has_country_flag = HSM_VER_armistice_refused NOT = { has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_armistice has_country_flag = HSM_VER_treaty_signed } }
+			clr_country_flag = HSM_VER_armistice_retry
+		}
+		if = {
+			limit = { has_country_flag = HSM_VER_treaty_refused NOT = { has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_treaty_signed } }
+			clr_country_flag = HSM_VER_treaty_retry
+		}
+	}
+}
+HSM_VER_void_bilateral_treaty = {
+	ERI = { remove_ideas = HSM_VER_frontier_inspections clr_country_flag = HSM_VER_joint_inspection }
+	EYR = { remove_ideas = HSM_VER_frontier_inspections }
+	ERI = { set_country_flag = HSM_VER_treaty_broken clr_country_flag = HSM_VER_treaty_signed clr_country_flag = HSM_VER_armistice clr_country_flag = HSM_VER_charter_signed clr_country_flag = HSM_VER_union_established remove_ideas = HSM_VER_peace_dividend HSM_VER_remove_charter_benefits = yes }
+	EYR = { clr_country_flag = HSM_VER_treaty_signed clr_country_flag = HSM_VER_armistice clr_country_flag = HSM_VER_charter_signed remove_ideas = HSM_VER_peace_dividend HSM_VER_remove_charter_benefits = yes }
+	AVI = { clr_country_flag = HSM_VER_charter_signed HSM_VER_remove_charter_benefits = yes }
+	ERI = {
+		clr_country_flag = HSM_VER_armistice_pending
+		clr_country_flag = HSM_VER_treaty_pending
+		clr_country_flag = HSM_VER_charter_pending
+		clr_country_flag = HSM_VER_avian_pending
+		clr_country_flag = HSM_VER_armistice_offer_unresolved
+		clr_country_flag = HSM_VER_treaty_offer_unresolved
+		clr_country_flag = HSM_VER_charter_offer_unresolved
+		clr_country_flag = HSM_VER_avian_offer_unresolved
+		clr_country_flag = HSM_VER_defence_pending
+		clr_country_flag = HSM_VER_defence_accepted
+		clr_country_flag = HSM_VER_judgement_pending
+		clr_country_flag = HSM_VER_armistice_from_eyrie
+		clr_country_flag = HSM_VER_treaty_from_eyrie
+		clr_country_flag = HSM_VER_charter_from_eyrie
+		clr_country_flag = HSM_VER_defence_host_eyrie
+	}
+	EYR = { clr_country_flag = HSM_VER_defence_accepted }
+	AVI = { clr_country_flag = HSM_VER_congress_observer clr_country_flag = HSM_VER_avian_charter_pending clr_country_flag = HSM_VER_defence_accepted clr_country_flag = HSM_VER_avian_defence_pending }
+}

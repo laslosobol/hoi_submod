@@ -1,0 +1,209 @@
+add_namespace = hsm_ver_eyr_force
+
+# Iovinus can imagine defeating Erie more easily than sending his own headquarters home.
+# .victory.d is retrospective after a settled victory; .d works before or during war.
+country_event = {
+	id = hsm_ver_eyr_force.1 title = hsm_ver_eyr_force.1.t
+	desc = { trigger = { HSM_VER_FORCE_settlement_context = yes } text = hsm_ver_eyr_force.1.victory.d }
+	desc = { trigger = { NOT = { HSM_VER_FORCE_settlement_context = yes } } text = hsm_ver_eyr_force.1.d }
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_can_prepare = yes has_country_flag = HSM_EYR_FORCE_campaign_pending NOT = { has_country_flag = HSM_EYR_FORCE_campaign_read } }
+	option = {
+		name = hsm_ver_eyr_force.1.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_campaign_read_tt
+		hidden_effect = {
+			if = {
+				limit = { tag = EYR HSM_VER_FORCE_can_prepare = yes has_country_flag = HSM_EYR_FORCE_campaign_pending NOT = { has_country_flag = HSM_EYR_FORCE_campaign_read } }
+				clr_country_flag = HSM_EYR_FORCE_campaign_pending set_country_flag = HSM_EYR_FORCE_campaign_read
+			}
+		}
+	}
+}
+
+# Officers still see emergencies; returning workers want release dates. Civilian administration
+# or standing military districts will face different workshop problems after the transition.
+country_event = {
+	id = hsm_ver_eyr_force.2 title = hsm_ver_eyr_force.2.t desc = hsm_ver_eyr_force.2.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_order_pending NOT = { has_country_flag = HSM_EYR_FORCE_order_chosen } }
+	option = {
+		name = hsm_ver_eyr_force.2.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_civilian_release_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_civilian_release
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_order_pending NOT = { has_country_flag = HSM_EYR_FORCE_order_chosen } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_civilian_release = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_order_pending set_country_flag = HSM_EYR_FORCE_order_chosen
+				set_country_flag = HSM_EYR_FORCE_civilian_order
+				set_country_flag = { flag = HSM_EYR_FORCE_transition_wait value = 1 days = 120 }
+				HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_eyr_force.2.b
+		custom_effect_tooltip = HSM_VER_EUI_ducal_military_order_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_military_government
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_order_pending NOT = { has_country_flag = HSM_EYR_FORCE_order_chosen } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_military_government = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_order_pending set_country_flag = HSM_EYR_FORCE_order_chosen
+				set_country_flag = HSM_EYR_FORCE_military_order
+				set_country_flag = { flag = HSM_EYR_FORCE_transition_wait value = 1 days = 120 }
+				HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+}
+
+# Montague's unfinished reply to an older letter from Rosaline tests military censorship.
+# Their established interest implies neither marriage nor Rosaline's current whereabouts.
+country_event = {
+	id = hsm_ver_eyr_force.3 title = hsm_ver_eyr_force.3.t desc = hsm_ver_eyr_force.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_correspondence_pending NOT = { has_country_flag = HSM_EYR_FORCE_correspondence_decided } }
+	option = {
+		name = hsm_ver_eyr_force.3.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_open_post_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_open_correspondence
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_correspondence_pending NOT = { has_country_flag = HSM_EYR_FORCE_correspondence_decided } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_open_correspondence = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_correspondence_pending set_country_flag = HSM_EYR_FORCE_correspondence_decided
+				set_country_flag = HSM_EYR_FORCE_private_post HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_eyr_force.3.b
+		custom_effect_tooltip = HSM_VER_EUI_ducal_supervised_post_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_supervised_correspondence
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_correspondence_pending NOT = { has_country_flag = HSM_EYR_FORCE_correspondence_decided } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_supervised_correspondence = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_correspondence_pending set_country_flag = HSM_EYR_FORCE_correspondence_decided
+				set_country_flag = HSM_EYR_FORCE_countersigned_post HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+}
+
+# Civilian release exposes a retraining shortage; tutelage crowds civilian repairs out of workshops.
+# Fund training, leave boards unaided, reserve military production, or fund civilian contracts.
+country_event = {
+	id = hsm_ver_eyr_force.4 title = hsm_ver_eyr_force.4.t
+	desc = { trigger = { has_country_flag = HSM_EYR_FORCE_civilian_order } text = hsm_ver_eyr_force.4.civilian.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_EYR_FORCE_civilian_order } } text = hsm_ver_eyr_force.4.d }
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_workshops_pending NOT = { has_country_flag = HSM_EYR_FORCE_workshops_decided } }
+	option = {
+		name = hsm_ver_eyr_force.4.a
+		trigger = { has_country_flag = HSM_EYR_FORCE_civilian_order }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_fund_training_tt
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_civilian_order has_country_flag = HSM_EYR_FORCE_workshops_pending NOT = { has_country_flag = HSM_EYR_FORCE_workshops_decided } } }
+			add_political_power = -75
+			HSM_VER_EYR_FORCE_civilian_workshop = yes
+			add_tech_bonus = { name = HSM_EYR_FORCE_retraining_bonus bonus = 1.0 uses = 1 category = industry }
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_workshops_pending set_country_flag = HSM_EYR_FORCE_workshops_decided
+				set_country_flag = HSM_EYR_FORCE_training_funded HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_eyr_force.4.b
+		trigger = { has_country_flag = HSM_EYR_FORCE_civilian_order }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_unfunded_training_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_unplaced_reservists
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_civilian_order has_country_flag = HSM_EYR_FORCE_workshops_pending NOT = { has_country_flag = HSM_EYR_FORCE_workshops_decided } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_unplaced_reservists = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_workshops_pending set_country_flag = HSM_EYR_FORCE_workshops_decided
+				set_country_flag = HSM_EYR_FORCE_training_unfunded HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_eyr_force.4.c
+		trigger = { has_country_flag = HSM_EYR_FORCE_military_order }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_arms_priority_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_military_production_priority
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_military_order has_country_flag = HSM_EYR_FORCE_workshops_pending NOT = { has_country_flag = HSM_EYR_FORCE_workshops_decided } } }
+			HSM_VER_SP_add_HSM_EYR_FORCE_military_production_priority = yes
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_workshops_pending set_country_flag = HSM_EYR_FORCE_workshops_decided
+				set_country_flag = HSM_EYR_FORCE_arms_priority HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_eyr_force.4.contracts
+		trigger = { has_country_flag = HSM_EYR_FORCE_military_order }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_civilian_contracts_tt
+		show_ideas_tooltip = HSM_EYR_FORCE_contracted_workshops
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_military_order has_country_flag = HSM_EYR_FORCE_workshops_pending NOT = { has_country_flag = HSM_EYR_FORCE_workshops_decided } } }
+			add_political_power = -75
+			HSM_VER_SP_add_HSM_EYR_FORCE_contracted_workshops = yes
+			add_tech_bonus = { name = HSM_EYR_FORCE_contracts_bonus bonus = 0.75 uses = 2 category = industry }
+			hidden_effect = {
+				clr_country_flag = HSM_EYR_FORCE_workshops_pending set_country_flag = HSM_EYR_FORCE_workshops_decided
+				set_country_flag = HSM_EYR_FORCE_civilian_contracts HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+}
+
+# A delayed inspection contrasts civilian accountability with efficient but intimidating command.
+# Both descriptions must accommodate either workshop funding choice; this is not another vote.
+country_event = {
+	id = hsm_ver_eyr_force.5 title = hsm_ver_eyr_force.5.t
+	desc = { trigger = { has_country_flag = HSM_EYR_FORCE_civilian_order } text = hsm_ver_eyr_force.5.civilian.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_EYR_FORCE_civilian_order } } text = hsm_ver_eyr_force.5.d }
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_inspection_pending NOT = { has_country_flag = HSM_EYR_FORCE_inspection_seen } }
+	option = {
+		name = hsm_ver_eyr_force.5.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_inspection_read_tt
+		hidden_effect = {
+			if = {
+				limit = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_inspection_pending NOT = { has_country_flag = HSM_EYR_FORCE_inspection_seen } }
+				clr_country_flag = HSM_EYR_FORCE_inspection_pending set_country_flag = HSM_EYR_FORCE_inspection_seen
+				HSM_VER_EYR_FORCE_maintain = yes
+			}
+		}
+	}
+}
+
+# Iovinus watches ordinary traffic: civilian freedom from command, or enduring military permits.
+# Neither ending assumes Avian assent, Vincent's survival, an independent Erie, or a wedding.
+country_event = {
+	id = hsm_ver_eyr_force.6 title = hsm_ver_eyr_force.6.t
+	desc = { trigger = { has_country_flag = HSM_EYR_FORCE_civilian_order } text = hsm_ver_eyr_force.6.civilian.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_EYR_FORCE_civilian_order } } text = hsm_ver_eyr_force.6.d }
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 14
+	trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_ending_pending NOT = { has_country_flag = HSM_EYR_FORCE_ending_seen } }
+	option = {
+		name = hsm_ver_eyr_force.6.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ending_read_tt
+		hidden_effect = {
+			if = {
+				limit = { tag = EYR HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_EYR_FORCE_ending_pending NOT = { has_country_flag = HSM_EYR_FORCE_ending_seen } }
+				clr_country_flag = HSM_EYR_FORCE_ending_pending set_country_flag = HSM_EYR_FORCE_ending_seen
+			}
+		}
+	}
+}

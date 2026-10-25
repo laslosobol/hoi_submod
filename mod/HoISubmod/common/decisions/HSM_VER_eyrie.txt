@@ -1,0 +1,19 @@
+HSM_EYR_diplomatic_business = {
+	HSM_EYR_withdraw_requisitions = {
+		icon = generic_political_discourse
+		visible = { has_country_flag = HSM_EYR_command_dispute }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_treaty_tt HSM_VER_negotiated_peace_valid = yes } custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_eyr_government_tt HSM_VER_eyr_government_available = yes } }
+		cost = 100
+		fire_only_once = yes
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_requisitions_tt hidden_effect = { HSM_VER_eyr_withdraw_requisitions = yes } }
+		ai_will_do = { factor = 20 }
+	}
+	HSM_EYR_propose_defence = {
+		icon = generic_prepare_civil_war
+		visible = { has_country_flag = HSM_EYR_defence_prepared ERI = { NOT = { has_country_flag = HSM_VER_defence_accepted } } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_defence_ready_tt HSM_VER_can_offer_defence = yes } custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_eyr_government_tt HSM_VER_eyr_government_available = yes } }
+		cost = 35
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_defence_EYR_tt hidden_effect = { HSM_VER_eyr_offer_defence = yes } }
+		ai_will_do = { factor = 10 }
+	}
+}

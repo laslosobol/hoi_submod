@@ -1,0 +1,67 @@
+add_namespace = hsm_ver_romance
+
+country_event = {
+	id = hsm_ver_romance.1
+	title = hsm_ver_romance.1.t desc = hsm_ver_romance.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_ROM_can_meet = yes }
+	option = {
+		name = hsm_ver_romance.1.a
+		custom_effect_tooltip = HSM_VER_ROM_meeting_tt
+		hidden_effect = { HSM_VER_ROM_meet = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_romance.2
+	title = hsm_ver_romance.2.t desc = hsm_ver_romance.2.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_ROM_can_work = yes }
+	option = {
+		name = hsm_ver_romance.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_ROM_open_court_tt
+		effect_tooltip = { add_country_leader_trait = HSM_VER_ROM_doors_of_the_court }
+		hidden_effect = { HSM_VER_ROM_open_petitions = yes }
+	}
+	option = {
+		name = hsm_ver_romance.2.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_ROM_travelling_court_tt
+		effect_tooltip = { add_country_leader_trait = HSM_VER_ROM_court_on_the_road }
+		hidden_effect = { HSM_VER_ROM_provincial_visits = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_romance.3
+	title = hsm_ver_romance.3.t desc = hsm_ver_romance.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_ROM_can_betroth = yes }
+	option = {
+		name = hsm_ver_romance.3.a
+		custom_effect_tooltip = HSM_VER_ROM_betrothal_tt
+		hidden_effect = { HSM_VER_ROM_betroth = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_romance.4
+	title = hsm_ver_romance.4.t
+	desc = { trigger = { has_country_flag = HSM_VER_ROM_betrothed } text = hsm_ver_romance.4.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_ROM_started } } text = hsm_ver_romance.4.legacy.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_ROM_can_crown = yes }
+	option = {
+		name = hsm_ver_romance.4.a
+		custom_effect_tooltip = HSM_VER_ROM_handover_tt
+		effect_tooltip = { add_country_leader_trait = HSM_VER_ROM_two_signatures }
+		if = {
+			limit = { hidden_trigger = { has_country_flag = HSM_VER_ROM_travelling_court } }
+			effect_tooltip = { add_country_leader_trait = HSM_VER_ROM_court_on_the_road }
+		}
+		else = { effect_tooltip = { add_country_leader_trait = HSM_VER_ROM_doors_of_the_court } }
+		hidden_effect = { HSM_VER_ROM_crown = yes }
+	}
+}

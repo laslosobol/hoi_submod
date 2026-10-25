@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		HSM_VER_IMP_reconstruction_mandate = {
+			picture = HSM_VER_ART_HSM_VER_IMP_reconstruction_mandate
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { OR = { NOT = { HSM_VER_IMP_settlement_context = yes } NOT = { has_country_flag = HSM_VER_IMP_mandate_active } } }
+			modifier = { industry_repair_factor = 0.30 political_power_gain = -0.10 }
+		}
+		HSM_VER_IMP_final_programme = {
+			picture = HSM_VER_ART_HSM_VER_IMP_final_programme
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { OR = { NOT = { HSM_VER_IMP_settlement_context = yes } NOT = { has_country_flag = HSM_VER_IMP_mandate_active } } }
+			modifier = { industry_repair_factor = 0.50 research_speed_factor = 0.03 political_power_gain = -0.20 }
+		}
+		HSM_VER_IMP_civilian_legacy = {
+			picture = HSM_VER_ART_HSM_VER_IMP_civilian_legacy
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.02 production_factory_efficiency_gain_factor = 0.05 }
+		}
+		HSM_VER_IMP_technical_protocol = {
+			picture = HSM_VER_ART_HSM_VER_IMP_technical_protocol
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { HSM_VER_IMP_protocol_valid = yes } }
+			modifier = { research_speed_factor = 0.02 production_factory_efficiency_gain_factor = 0.05 }
+		}
+	}
+}

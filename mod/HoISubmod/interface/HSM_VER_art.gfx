@@ -1,0 +1,74 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_HSM_VER_UNI_constitutional_act
+		textureFile = "gfx/interface/goals/HSM_VER_UNI_constitutional_act.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_VER_UNI_constitutional_act_shine
+		textureFile = "gfx/interface/goals/HSM_VER_UNI_constitutional_act.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HSM_VER_UNI_constitutional_act.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HSM_VER_UNI_constitutional_act.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_HSM_VER_GRO_mandate
+		textureFile = "gfx/interface/goals/HSM_VER_GRO_mandate.tga"
+	}
+	spriteType = {
+		name = GFX_HSM_VER_GRO_mandate_shine
+		textureFile = "gfx/interface/goals/HSM_VER_GRO_mandate.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HSM_VER_GRO_mandate.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HSM_VER_GRO_mandate.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_idea_HSM_VER_SP_united_verenia
+		textureFile = "gfx/interface/ideas/HSM_VER_SP_united_verenia.tga"
+	}
+}

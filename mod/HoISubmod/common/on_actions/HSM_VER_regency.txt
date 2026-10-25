@@ -1,0 +1,58 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = { limit = { HSM_VER_IMP_actual_signatory = yes FROM = { HSM_VER_IMP_original_empire = yes } } AVI = { clr_country_flag = HSM_VER_REG_defeat clr_country_flag = HSM_VER_REG_peace } }
+			if = {
+				limit = { HSM_VER_IMP_original_empire = yes FROM = { HSM_VER_IMP_actual_signatory = yes } AVI = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_AVI_preserved_union } }
+				set_country_flag = HSM_VER_REG_aggressor
+				FROM = { set_country_flag = HSM_VER_REG_victim }
+				AVI = { set_country_flag = HSM_VER_REG_defensive_war clr_country_flag = HSM_VER_REG_defeat clr_country_flag = HSM_VER_REG_peace }
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					HSM_VER_IMP_original_empire = yes has_country_flag = HSM_VER_REG_aggressor
+					AVI = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_VER_REG_defensive_war has_defensive_war_with = ROOT NOT = { has_offensive_war_with = ROOT } }
+					FROM = { has_defensive_war_with = ROOT NOT = { has_offensive_war_with = ROOT } OR = { tag = AVI has_war_together_with = AVI } }
+					any_country = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_VER_REG_victim has_defensive_war_with = ROOT NOT = { has_offensive_war_with = ROOT } }
+				}
+				AVI = { set_country_flag = HSM_VER_REG_defeat }
+			}
+		}
+	}
+	on_uncapitulation = { effect = { if = { limit = { HSM_VER_IMP_original_empire = yes AVI = { has_war_with = ROOT } } AVI = { clr_country_flag = HSM_VER_REG_defeat clr_country_flag = HSM_VER_REG_peace } } } }
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = { tag = AVI original_tag = AVI has_country_flag = HSM_VER_REG_defensive_war has_country_flag = HSM_VER_REG_defeat NOT = { has_country_flag = bypass_on_peaceconference_ended } FROM = { HSM_VER_IMP_original_empire = yes has_country_flag = HSM_VER_REG_aggressor NOT = { has_country_flag = bypass_on_peaceconference_ended } } }
+				set_country_flag = HSM_VER_REG_peace
+				set_country_flag = { flag = HSM_VER_REG_settling value = 1 days = 45 }
+			}
+		}
+	}
+	on_war_relation_added = {
+		effect = {
+			if = { limit = { OR = { tag = AVI tag = ERI tag = EYR } FROM = { OR = { tag = AVI tag = ERI tag = EYR } } } HSM_VER_REG_void_pact = yes }
+		}
+	}
+	on_daily_AVI = {
+		effect = {
+			AVI = {
+				if = { limit = { NOT = { has_defensive_war_with = GRI } } clr_country_flag = HSM_VER_REG_victim }
+				ERI = { if = { limit = { NOT = { has_defensive_war_with = GRI } } clr_country_flag = HSM_VER_REG_victim } }
+				EYR = { if = { limit = { NOT = { has_defensive_war_with = GRI } } clr_country_flag = HSM_VER_REG_victim } }
+				if = { limit = { NOT = { has_war_with = GRI has_country_flag = HSM_VER_REG_peace } } clr_country_flag = HSM_VER_REG_defeat }
+				if = {
+					limit = { NOT = { has_war_with = GRI } NOT = { any_country = { HSM_VER_IMP_actual_signatory = yes has_country_flag = HSM_VER_REG_victim } } }
+					GRI = { clr_country_flag = HSM_VER_REG_aggressor }
+					if = { limit = { NOT = { has_country_flag = HSM_VER_REG_peace } } clr_country_flag = HSM_VER_REG_defensive_war clr_country_flag = HSM_VER_REG_defeat }
+				}
+				if = { limit = { OR = { has_war_with = ERI has_war_with = EYR ERI = { has_war_with = EYR } } } HSM_VER_REG_void_pact = yes }
+				if = { limit = { has_country_flag = HSM_VER_REG_started } HSM_VER_REG_maintain = yes }
+			}
+		}
+	}
+}

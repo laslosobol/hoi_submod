@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		HSM_VER_GRO_restored_public_service = {
+			picture = HSM_VER_ART_HSM_VER_GRO_restored_public_service
+			allowed = { original_tag = GRI }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				industry_repair_factor = 0.15
+			}
+		}
+		HSM_VER_GRO_restored_civic_settlement = {
+			picture = HSM_VER_ART_HSM_VER_GRO_restored_civic_settlement
+			allowed = { original_tag = GRI }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

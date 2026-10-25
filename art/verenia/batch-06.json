@@ -1,0 +1,196 @@
+[
+  {
+    "id": "three_colleges",
+    "target": "three_colleges",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/three_colleges.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_three_colleges.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: Support the Tripartite College. Composition: A three-wing college building around one open book bearing a geometric lesson diagram. Context: With coalescing curriculums, there's no reason why we cannot form a single curriculum offered by a single college. A Tripartite College will further bolster a sense of unity among our generations and instil an identity not determined of the realm of the House they are from, but of our single inter-house entity. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "ending_the_rivalry",
+    "target": "ending_the_rivalry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/ending_the_rivalry.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_ending_the_rivalry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: Ending the Rivalry. Composition: Two notched duelling blades lowered across a removed frontier chain. Context: The feud between House Eire and House Eyrie have continually been a hindrance to a unified House Realm, and any hope to achieve that dream starts with an end to the rivalry. Let us begin the arduous process, for a better future for our people. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "annual_hunting_trip",
+    "target": "annual_hunting_trip",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/annual_hunting_trip.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_annual_hunting_trip.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: The Annual Hunting Trip. Composition: A hunting horn and sporting rifle resting beside autumn branches; no dead hunter or invented accident. Context: The time is upon us: the yearly hunting trip where most of the House Avian nobles shall leave for the countryside. With all of the doom and gloom that permeates the courts, it is refreshing for the members of said courts to unwind and get in touch with their predator side. Hunting never got anyone killed, anyways. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "weekly_luncheons",
+    "target": "weekly_luncheons",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/weekly_luncheons-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_weekly_luncheons.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: Weekly Luncheons. Composition: Two opposed place settings brought together around a shared loaf and a small luncheon bell. Context: The best way for rivals to get over their feud is to force them to see and treat each other as equals. House Avian can arrange for weekly lunches for members of both House Eire and House Eyrie. The first few events will be messy, but who knows? At least everyone will have a laugh. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "edit_prompt": "Edit this game icon. Remove every fleur-de-lis on the cups and all lily ornaments. Replace cup decoration with simple parallel gold stripes. Keep the shared loaf, tableware and bell. Preserve painted style, transparent exterior, composition otherwise. No text, coats of arms or new symbols.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "winterfest_ball",
+    "target": "winterfest_ball",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/winterfest_ball.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_winterfest_ball.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: The Winterfest Ball. Composition: A winter evergreen sprig above two linked ballroom dance cards bearing matching musical-note motifs. Context: The Winterfest Ball is a House Erie tradition, and has never seen a single member of House Eyrie attend since the start of their bloody rivalry. With proper preparations, we can break this sad streak and demonstrate just how far the two houses have come in mending their relationship. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "scion_swap",
+    "target": "scion_swap",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/scion_swap-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_scion_swap.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: The Scion Swap. Composition: Two noble travel trunks facing opposite directions across an open gate; no wedding rings or coerced marriage. Context: Tensions have diminished between House Erie and House Eyrie, but there are many that are sceptical of a lasting peace. What better way to tie the two houses together via the exchange of two highborn noble scions? Montague Eyrie, Earl of Verenia, and Lady Rosaline Erie of Bantry have demonstrated an interest in this exchange. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "edit_prompt": "Edit this game icon. Remove the fleur-de-lis finials on both gate pillars and replace with plain spherical stone finials. No lilies anywhere. Preserve painted style, transparent exterior, composition otherwise. No text, coats of arms or new symbols.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "treaty_of_friendship",
+    "target": "treaty_of_friendship",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/treaty_of_friendship.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_treaty_of_friendship.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: Eyrie-Erie Treaty of Friendship. Composition: Two sheathed ancestral swords tied together with a peace ribbon over a repaired boundary stone. Context: Bread was broken and shared, love has bloomed, and plenty of laughs were had between House Erie and House Eyrie. Were one to see these two houses interact without knowing their history, they would find it difficult to believe that they were ever at each other's throats. It is time to declare the Eyrie-Erie feud as officially over. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "the_intergigantes_tripartite",
+    "target": "the_intergigantes_tripartite",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/the_intergigantes_tripartite.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_the_intergigantes_tripartite.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: The Intergigantes Tripartite. Composition: Three load-bearing columns supporting one defensive lintel, a durable alliance rather than a merged state. Context: With no further bad blood blocking the way, House Avian can finally set about to uniting the House Realms with an alliance that shall last forever or until the last griffon of the realms breathes their last. May our friendship last for decades! One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "unified_intelligence_agency",
+    "target": "unified_intelligence_agency",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/unified_intelligence_agency-v2.png",
+    "edit_prompt": "Remove all background; retain objects and provide actual transparent alpha.",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_unified_intelligence_agency.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: A Unified Intelligence Agency. Composition: Three cable reels feeding a single listening receiver and a lens over a plotted surveillance network. Context: The spy networks of both Eyrie and Erie need to be unified along side House Avian's intelligence agency in order to keep watch over external and internal affairs. Even with our current Tripartite's ability to fend itself off from other powers, we must make sure we are able to detect any future threats through unified cohesian within our intelligence agency. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "annual_military_exercises",
+    "target": "annual_military_exercises",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/annual_military_exercises-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_annual_military_exercises.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create ONE unique transparent-background national focus icon for Hearts of Iron IV / Equestria at War. Painted game asset, crisp edges, readable at 99x86 pixels. Theme: Annual Military Exercises. Composition: Three sets of exercise markers advancing together across a training sand table. Context: We should work with the other Houses to pursue full military cohesion through annual military exercises. Even though our past disunity brought about different military strategies, annual military exercises between all houses can bring about more needed experience and ability to change in order to fight any future wars. One dominant silhouette, no more than two supporting motifs. Antique gold, dark iron, ivory, restrained cobalt and crimson. Detailed materials but bold simple silhouettes, not a photo or shiny 3D render. Isolated object group filling canvas, exterior genuinely transparent, no rectangular background, no generic surrounding medal or laurel frame. No words, numbers, pseudo-text, blank documents/seals, invented coats of arms, flags or human hands. Diagrams when present must be meaningful simple geometric drawings. No decorative crown.",
+    "edit_prompt": "Edit this game icon. Replace ALL human soldiers, horses, cannons and tents with three small groups of simple geometric wooden training blocks: blue cylinders, red cubes and ivory cones. Keep the military sand table and three parallel arrows. This is an abstract modern military exercise planning icon, not medieval human cavalry. Simplify to be readable at 99x86. No people or animals or flags. Preserve painted style, transparent exterior, composition otherwise. No text, coats of arms or new symbols.",
+    "approved": true,
+    "review": "Full-size and native-size reviewed. Unrelated lilies removed from luncheon/scion art; military markers abstracted. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_VER_IMP_technical_protocol",
+    "target": "HSM_VER_IMP_technical_protocol",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_technical_protocol.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_IMP_technical_protocol.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two consenting technical folios exchanging matching component diagrams across a timed clasp. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_joint_guardianship",
+    "target": "HSM_VER_REG_joint_guardianship",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_joint_guardianship.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_REG_joint_guardianship.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two distinct assent clasps protecting a minor's household key beneath a finite guardianship hourglass. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_civil_settlement",
+    "target": "HSM_VER_REG_civil_settlement",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_civil_settlement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_REG_civil_settlement.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Separate civic assent keys supporting a repaired bridge arch and a municipal tool case. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_reserved_rights",
+    "target": "HSM_VER_REG_reserved_rights",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_reserved_rights.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_REG_reserved_rights.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: District institutional keys protected inside an enduring constitutional bracket around a central office key. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_joint_logistics",
+    "target": "HSM_VER_REG_joint_logistics",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_joint_logistics.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_REG_joint_logistics.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A jointly approved delivery clock connected to a ration crate and field planning compass. Palette and material constraints: Use logistics direction rather than civil_access: timber ration crate, clock and metal planning compass. Field is not crops; textile applies only to packaging, not ration contents. Do not add gates, vegetation or exposed food. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_REG_territorial_reserves",
+    "target": "HSM_VER_REG_territorial_reserves",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_territorial_reserves.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_REG_territorial_reserves.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A reserve kit beside a home-terrain earthwork and a recovery canteen. Palette and material constraints: Home-terrain earthwork is soil/turf, not stone bunker. Keep khaki reserve kit and metal canteen distinct. Defence/recovery benefits coexist with slower planning; avoid presenting this as an unconditional command upgrade. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_customs_spirit",
+    "target": "HSM_VER_UNI_customs_spirit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_customs_spirit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_UNI_customs_spirit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: One customs measuring bar aligning a cargo crate and standard machine component. Palette and material constraints: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_works_spirit",
+    "target": "HSM_VER_UNI_works_spirit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_works_spirit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_UNI_works_spirit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A shared workshop order wheel connected to a repaired road section. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_administration_spirit",
+    "target": "HSM_VER_UNI_administration_spirit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_administration_spirit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_UNI_administration_spirit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A growing common records cabinet beside a running administrative clock and a technical reference book. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_command_spirit",
+    "target": "HSM_VER_UNI_command_spirit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_command_spirit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_UNI_command_spirit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A shared staff receiver beneath a civilian presidency lock, two local service cords preserved. Palette and material constraints: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology: cream dial and needle, never electronic displays. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Distinct institutional silhouettes, material palette and period analog equipment; no invented heraldry.",
+    "runtime_verified": false
+  }
+]

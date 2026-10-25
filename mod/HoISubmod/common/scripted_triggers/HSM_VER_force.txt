@@ -1,0 +1,187 @@
+HSM_VER_FORCE_eligible_house = {
+	exists = yes is_subject = no has_capitulated = no
+	OR = {
+		AND = { tag = ERI has_country_leader = { character = ERI_duke_vincent_erie ruling_only = yes } }
+		AND = { tag = EYR has_country_leader = { character = EYR_duke_iovinus_eyrie ruling_only = yes } }
+	}
+}
+HSM_VER_FORCE_at_war = {
+	OR = { AND = { tag = ERI has_war_with = EYR } AND = { tag = EYR has_war_with = ERI } }
+}
+HSM_VER_FORCE_no_protected_peace = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_no_protected_peace_tt
+		ERI = { NOT = { has_country_flag = HSM_VER_armistice has_country_flag = HSM_VER_treaty_signed has_non_aggression_pact_with = EYR is_in_faction_with = EYR } }
+		EYR = { NOT = { has_country_flag = HSM_VER_armistice has_country_flag = HSM_VER_treaty_signed } }
+		NOT = { AND = { AVI = { has_completed_focus = treaty_of_friendship } ERI = { NOT = { has_country_flag = HSM_VER_campaign_active has_country_flag = HSM_VER_treaty_broken } } } }
+	}
+}
+HSM_VER_FORCE_free_rival = {
+	OR = { AND = { tag = ERI EYR = { exists = yes is_subject = no has_capitulated = no } } AND = { tag = EYR ERI = { exists = yes is_subject = no has_capitulated = no } } }
+}
+HSM_VER_FORCE_can_prepare = {
+	HSM_VER_FORCE_eligible_house = yes
+	NOT = { has_country_flag = HSM_VER_diplomatic_route }
+	OR = {
+		HSM_VER_FORCE_settlement_context = yes
+		HSM_VER_FORCE_at_war = yes
+		AND = { HSM_VER_FORCE_no_protected_peace = yes HSM_VER_FORCE_free_rival = yes }
+	}
+}
+HSM_VER_FORCE_can_issue_goal = {
+	HSM_VER_FORCE_eligible_house = yes
+	NOT = { has_country_flag = HSM_VER_diplomatic_route }
+	HSM_VER_FORCE_no_protected_peace = yes
+	HSM_VER_FORCE_free_rival = yes
+	has_war = no
+	NOT = { has_country_flag = had_war_with_rival }
+	OR = {
+		AND = { tag = ERI can_declare_war_on = EYR EYR = { has_war = no NOT = { has_country_flag = had_war_with_rival } } }
+		AND = { tag = EYR can_declare_war_on = ERI ERI = { has_war = no NOT = { has_country_flag = had_war_with_rival } } }
+	}
+}
+# All five original ducal provinces must have a settled owner, not just an occupier.
+# Explicit tags keep this valid when tested in FROM during Avian's response.
+HSM_VER_FORCE_settlement_held = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_settlement_tt
+		HSM_VER_FORCE_eligible_house = yes
+		HSM_VER_FORCE_at_war = no
+		has_country_flag = HSM_VER_FORCE_war_recorded
+		has_country_flag = HSM_VER_FORCE_rival_defeated
+		has_country_flag = HSM_VER_FORCE_peace_recorded
+		NOT = { has_country_flag = HSM_VER_FORCE_settling }
+		OR = {
+			AND = {
+				tag = ERI owns_state = 401 owns_state = 500 owns_state = 673
+				401 = { is_fully_controlled_by = ERI } 500 = { is_fully_controlled_by = ERI } 673 = { is_fully_controlled_by = ERI }
+				OR = { EYR = { exists = no } EYR = { is_subject_of = ERI has_capitulated = no } }
+				391 = { OR = { AND = { is_owned_by = ERI is_fully_controlled_by = ERI } AND = { is_owned_by = EYR is_fully_controlled_by = EYR EYR = { is_subject_of = ERI } } } }
+				400 = { OR = { AND = { is_owned_by = ERI is_fully_controlled_by = ERI } AND = { is_owned_by = EYR is_fully_controlled_by = EYR EYR = { is_subject_of = ERI } } } }
+			}
+			AND = {
+				tag = EYR owns_state = 391 owns_state = 400
+				391 = { is_fully_controlled_by = EYR } 400 = { is_fully_controlled_by = EYR }
+				OR = { ERI = { exists = no } ERI = { is_subject_of = EYR has_capitulated = no } }
+				401 = { OR = { AND = { is_owned_by = EYR is_fully_controlled_by = EYR } AND = { is_owned_by = ERI is_fully_controlled_by = ERI ERI = { is_subject_of = EYR } } } }
+				500 = { OR = { AND = { is_owned_by = EYR is_fully_controlled_by = EYR } AND = { is_owned_by = ERI is_fully_controlled_by = ERI ERI = { is_subject_of = EYR } } } }
+				673 = { OR = { AND = { is_owned_by = EYR is_fully_controlled_by = EYR } AND = { is_owned_by = ERI is_fully_controlled_by = ERI ERI = { is_subject_of = EYR } } } }
+			}
+		}
+	}
+}
+HSM_VER_FORCE_settlement_context = {
+	has_war = no
+	HSM_VER_FORCE_settlement_held = yes
+}
+HSM_VER_FORCE_settlement_active = {
+	HSM_VER_FORCE_settlement_held = yes
+	custom_trigger_tooltip = { tooltip = HSM_VER_FORCE_settlement_started_tt has_country_flag = HSM_VER_FORCE_settlement_started }
+}
+HSM_VER_FORCE_avian_offer_valid = {
+	HSM_VER_AVI_intergigantes_route = yes
+	tag = AVI exists = yes is_subject = no has_capitulated = no has_war = no
+	FROM = {
+		HSM_VER_FORCE_settlement_active = yes
+		has_war = no
+		has_country_flag = HSM_VER_FORCE_avian_pending
+		NOT = { has_country_flag = HSM_VER_FORCE_avian_resolved }
+	}
+}
+
+# Integration cores only the native heartland; a defeated subject must consent
+# to surrendering its government, forces and any additional legitimate holdings.
+HSM_VER_FORCE_avian_subject = {
+	AVI = {
+		exists = yes has_capitulated = no has_war = no
+	}
+	OR = {
+		AND = { tag = ERI AVI = { is_subject_of = ERI } OR = { AND = { owns_state = 470 470 = { is_fully_controlled_by = ERI } } 470 = { is_owned_by = AVI is_fully_controlled_by = AVI } } }
+		AND = { tag = EYR AVI = { is_subject_of = EYR } OR = { AND = { owns_state = 470 470 = { is_fully_controlled_by = EYR } } 470 = { is_owned_by = AVI is_fully_controlled_by = AVI } } }
+	}
+}
+HSM_VER_FORCE_avian_lands = {
+	OR = {
+		AND = {
+			AVI = { exists = no }
+			OR = {
+				AND = { tag = ERI owns_state = 470 470 = { is_fully_controlled_by = ERI } }
+				AND = { tag = EYR owns_state = 470 470 = { is_fully_controlled_by = EYR } }
+			}
+		}
+		HSM_VER_FORCE_avian_subject = yes
+	}
+}
+HSM_VER_FORCE_can_claim_avian = {
+	HSM_VER_AVR_regional_authority = yes has_war = no
+	HSM_VER_AVI_neutral_route = yes
+	AVI = { exists = yes is_subject = no has_capitulated = no has_war = no owns_state = 470 }
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_peace_tt
+		NOT = { has_non_aggression_pact_with = AVI is_in_faction_with = AVI has_country_flag = HSM_VER_FORCE_avian_pending }
+		can_declare_war_on = AVI
+	}
+}
+HSM_VER_FORCE_avian_victory = {
+	# Keep each failure visible: a postwar wait is not a failed ducal charter.
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_AVR_authority_tt
+		HSM_VER_AVR_regional_authority = yes
+	}
+	has_war = no
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_war_recorded_tt
+		has_country_flag = HSM_VER_FORCE_AVI_war
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_defeat_recorded_tt
+		has_country_flag = HSM_VER_FORCE_AVI_defeated
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_peace_recorded_tt
+		has_country_flag = HSM_VER_FORCE_AVI_peace
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_settling_complete_tt
+		has_country_flag = HSM_VER_FORCE_AVI_peace
+		NOT = { has_country_flag = HSM_VER_FORCE_AVI_settling }
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_lands_held_tt
+		HSM_VER_FORCE_avian_lands = yes
+	}
+}
+HSM_VER_FORCE_avian_terms_valid = {
+	HSM_VER_FORCE_avian_victory = yes
+	has_country_flag = HSM_VER_FORCE_AVI_terms_opened
+	has_country_flag = HSM_VER_FORCE_AVI_terms_pending
+	NOT = { has_country_flag = HSM_VER_FORCE_AVI_terms_chosen has_country_flag = HSM_VER_FORCE_AVI_terms_refused }
+}
+HSM_VER_FORCE_avian_subject_offer = {
+	tag = AVI
+	FROM = { HSM_VER_FORCE_avian_terms_valid = yes HSM_VER_FORCE_avian_subject = yes }
+}
+HSM_VER_FORCE_can_integrate_avian = {
+	HSM_VER_FORCE_avian_victory = yes
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_articles_ratified_tt
+		has_country_flag = HSM_VER_FORCE_AVI_terms_chosen
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_transition_complete_tt
+		has_country_flag = HSM_VER_FORCE_AVI_terms_chosen
+		NOT = { has_country_flag = HSM_VER_FORCE_AVI_transition }
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_current_consent_tt
+		OR = {
+			AVI = { exists = no }
+			AND = { tag = ERI AVI = { has_country_flag = HSM_VER_FORCE_AVI_consent_ERI } }
+			AND = { tag = EYR AVI = { has_country_flag = HSM_VER_FORCE_AVI_consent_EYR } }
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FORCE_avian_not_integrated_tt
+		NOT = { has_country_flag = HSM_VER_FORCE_AVI_integrated }
+	}
+}

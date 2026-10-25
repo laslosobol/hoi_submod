@@ -1,0 +1,393 @@
+# Host-scoped API. No ROOT/FROM assumptions: delayed responses use explicit host tags.
+# A current campaign locks its entry route. Founding never relies on the old two-country charter.
+HSM_VER_UNI_house = { OR = { tag = ERI tag = EYR tag = AVI } }
+HSM_VER_UNI_receives_customs = {
+	exists = yes
+	OR = {
+		AND = {
+			OR = { tag = ERI has_country_flag = HSM_VER_UNI_member_ERI }
+			ERI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_customs }
+		}
+		AND = {
+			OR = { tag = EYR has_country_flag = HSM_VER_UNI_member_EYR }
+			EYR = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_customs }
+		}
+		AND = {
+			OR = { tag = AVI has_country_flag = HSM_VER_UNI_member_AVI }
+			AVI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_customs }
+		}
+	}
+}
+HSM_VER_UNI_receives_works = {
+	exists = yes
+	OR = {
+		AND = {
+			OR = { tag = ERI has_country_flag = HSM_VER_UNI_member_ERI }
+			ERI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_works }
+		}
+		AND = {
+			OR = { tag = EYR has_country_flag = HSM_VER_UNI_member_EYR }
+			EYR = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_works }
+		}
+		AND = {
+			OR = { tag = AVI has_country_flag = HSM_VER_UNI_member_AVI }
+			AVI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_works }
+		}
+	}
+}
+HSM_VER_UNI_receives_administration = {
+	exists = yes
+	OR = {
+		AND = {
+			OR = { tag = ERI has_country_flag = HSM_VER_UNI_member_ERI }
+			ERI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_administration }
+		}
+		AND = {
+			OR = { tag = EYR has_country_flag = HSM_VER_UNI_member_EYR }
+			EYR = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_administration }
+		}
+		AND = {
+			OR = { tag = AVI has_country_flag = HSM_VER_UNI_member_AVI }
+			AVI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_administration }
+		}
+	}
+}
+HSM_VER_UNI_receives_command = {
+	exists = yes
+	OR = {
+		AND = {
+			OR = { tag = ERI has_country_flag = HSM_VER_UNI_member_ERI }
+			ERI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_command }
+		}
+		AND = {
+			OR = { tag = EYR has_country_flag = HSM_VER_UNI_member_EYR }
+			EYR = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_command }
+		}
+		AND = {
+			OR = { tag = AVI has_country_flag = HSM_VER_UNI_member_AVI }
+			AVI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_command }
+		}
+	}
+}
+HSM_VER_UNI_government = {
+	OR = {
+		AND = { tag = ERI has_government = neutrality has_country_leader = { character = ERI_duke_vincent_erie ruling_only = yes } }
+		AND = { tag = EYR has_government = neutrality has_country_leader = { character = EYR_duke_iovinus_eyrie ruling_only = yes } }
+		AND = { tag = AVI HSM_VER_AVI_government_available = yes has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } OR = { has_government = neutrality has_government = democratic } }
+	}
+}
+HSM_VER_UNI_safe_country = {
+	exists = yes has_war = no has_capitulated = no
+	all_owned_state = { is_fully_controlled_by = PREV }
+	OR = {
+		is_in_faction = no
+		AND = {
+			any_country = { is_in_faction_with = PREV is_faction_leader = yes HSM_VER_UNI_house = yes }
+			NOT = { any_country = { is_in_faction_with = PREV NOT = { HSM_VER_UNI_house = yes is_subject_of = ERI is_subject_of = EYR is_subject_of = AVI } } }
+		}
+	}
+}
+HSM_VER_UNI_avian_route = {
+	tag = AVI HSM_VER_AVI_intergigantes_route = yes
+}
+HSM_VER_UNI_native_homeland = {
+	OR = {
+		AND = { tag = ERI owns_state = 401 401 = { is_fully_controlled_by = ERI } owns_state = 500 500 = { is_fully_controlled_by = ERI } owns_state = 673 673 = { is_fully_controlled_by = ERI } }
+		AND = { tag = EYR owns_state = 391 391 = { is_fully_controlled_by = EYR } owns_state = 400 400 = { is_fully_controlled_by = EYR } }
+		AND = { tag = AVI owns_state = 470 470 = { is_fully_controlled_by = AVI } }
+	}
+}
+HSM_VER_UNI_free_signatory = {
+	HSM_VER_UNI_safe_country = yes is_subject = no HSM_VER_UNI_government = yes
+	HSM_VER_UNI_native_homeland = yes
+	has_country_flag = HSM_VER_charter_signed
+	NOT = { has_country_flag = HSM_VER_charter_suspended }
+	OR = { tag = ERI tag = EYR HSM_VER_UNI_avian_route = yes }
+}
+HSM_VER_UNI_diplomatic_context = {
+	HSM_VER_charter_valid = yes HSM_VER_diplomatic_routes_open = yes
+	HSM_VER_UNI_free_signatory = yes
+	ERI = { HSM_VER_UNI_free_signatory = yes }
+	EYR = { HSM_VER_UNI_free_signatory = yes }
+	OR = { tag = ERI ERI = { NOT = { any_subject_country = { always = yes } } } }
+	OR = { tag = EYR EYR = { NOT = { any_subject_country = { always = yes } } } }
+	OR = {
+		AND = { tag = ERI has_country_flag = HSM_VER_union_established }
+		AND = { tag = EYR has_country_flag = HSM_EYR_settlement_completed }
+		AND = { tag = AVI has_country_flag = HSM_AVI_settlement_completed }
+	}
+}
+HSM_VER_UNI_military_context = {
+	HSM_VER_FORCE_settlement_active = yes HSM_VER_UNI_safe_country = yes
+	HSM_VER_UNI_government = yes is_subject = no
+	OR = {
+		AND = {
+			tag = ERI has_completed_focus = HSM_ERI_FORCE_inheritance_without_feud
+			OR = {
+				EYR = { exists = no }
+				EYR = { HSM_VER_UNI_safe_country = yes is_subject_of = ERI NOT = { any_subject_country = { always = yes } } }
+			}
+		}
+		AND = {
+			tag = EYR has_completed_focus = HSM_EYR_FORCE_road_that_stays_open
+			OR = {
+				ERI = { exists = no }
+				ERI = { HSM_VER_UNI_safe_country = yes is_subject_of = EYR NOT = { any_subject_country = { always = yes } } }
+			}
+		}
+	}
+}
+HSM_VER_UNI_no_other_campaign = {
+	NOT = {
+		ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { tag = PREV } }
+		EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { tag = PREV } }
+		AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { tag = PREV } }
+	}
+}
+HSM_VER_UNI_can_start = {
+	HSM_VER_UNI_house = yes
+	NOT = { has_country_flag = HSM_VER_UNI_started has_country_flag = HSM_VER_UNI_closed }
+	ERI = { NOT = { has_country_flag = HSM_VER_UNI_leader AND = { exists = yes has_country_flag = HSM_VER_UNI_founded } } }
+	EYR = { NOT = { has_country_flag = HSM_VER_UNI_leader AND = { exists = yes has_country_flag = HSM_VER_UNI_founded } } }
+	AVI = { NOT = { has_country_flag = HSM_VER_UNI_leader AND = { exists = yes has_country_flag = HSM_VER_UNI_founded } } }
+	OR = { HSM_VER_UNI_diplomatic_context = yes HSM_VER_UNI_military_context = yes }
+	# Human Avian can still pursue its longer campaign before signing the charter.
+	# War or occupation does not surrender that opportunity to a neighbouring AI.
+	OR = {
+		is_ai = no
+		AND = {
+			ERI = { OR = { tag = PREV exists = no is_ai = yes } }
+			EYR = { OR = { tag = PREV exists = no is_ai = yes } }
+			AVI = {
+				OR = {
+					tag = PREV exists = no is_ai = yes is_subject = yes
+					NOT = { HSM_VER_CR_union_government = yes }
+					has_completed_focus = the_second_winterfest_ball
+					NOT = { OR = { has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } HSM_VER_REG_successor_government = yes } }
+				}
+			}
+		}
+	}
+}
+HSM_VER_UNI_mandate_survives = {
+	exists = yes is_subject = no HSM_VER_UNI_government = yes
+	OR = {
+		AND = {
+			has_country_flag = HSM_VER_UNI_diplomatic
+			ERI = { exists = yes is_subject = no HSM_VER_UNI_government = yes }
+			EYR = { exists = yes is_subject = no HSM_VER_UNI_government = yes }
+		}
+		AND = {
+			has_country_flag = HSM_VER_UNI_military
+			has_country_flag = HSM_VER_FORCE_war_recorded
+			has_country_flag = HSM_VER_FORCE_rival_defeated
+			has_country_flag = HSM_VER_FORCE_peace_recorded
+			OR = {
+				AND = {
+					tag = ERI
+					OR = {
+						AND = { has_country_flag = HSM_VER_UNI_preannexed_rival EYR = { exists = no } }
+						AND = { NOT = { has_country_flag = HSM_VER_UNI_preannexed_rival } EYR = { exists = yes is_subject_of = ERI } }
+					}
+				}
+				AND = {
+					tag = EYR
+					OR = {
+						AND = { has_country_flag = HSM_VER_UNI_preannexed_rival ERI = { exists = no } }
+						AND = { NOT = { has_country_flag = HSM_VER_UNI_preannexed_rival } ERI = { exists = yes is_subject_of = EYR } }
+					}
+				}
+			}
+		}
+	}
+}
+HSM_VER_UNI_avian_mandate_survives = {
+	exists = yes is_subject = no HSM_VER_UNI_government = yes HSM_VER_UNI_avian_route = yes
+	NOT = { any_subject_country = { always = yes } }
+}
+HSM_VER_UNI_context = {
+	has_country_flag = HSM_VER_UNI_leader
+	NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing }
+	HSM_VER_UNI_no_other_campaign = yes
+	HSM_VER_UNI_mandate_survives = yes
+	OR = {
+		tag = AVI
+		AND = {
+			tag = ERI
+			AVI = {
+				OR = {
+					NOT = { has_country_flag = HSM_VER_UNI_member_ERI has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_invite_deferred_ERI }
+					HSM_VER_UNI_candidate_for_ERI = yes
+				}
+			}
+		}
+		AND = {
+			tag = EYR
+			AVI = {
+				OR = {
+					NOT = { has_country_flag = HSM_VER_UNI_member_EYR has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_invite_deferred_EYR }
+					HSM_VER_UNI_candidate_for_EYR = yes
+				}
+			}
+		}
+	}
+	OR = {
+		AND = { has_country_flag = HSM_VER_UNI_diplomatic HSM_VER_UNI_diplomatic_context = yes }
+		AND = { has_country_flag = HSM_VER_UNI_military HSM_VER_UNI_military_context = yes }
+	}
+}
+
+HSM_VER_UNI_candidate_for_ERI = {
+	HSM_VER_UNI_house = yes NOT = { tag = ERI }
+	NOT = { any_subject_country = { always = yes } }
+	OR = {
+		AND = { ERI = { has_country_flag = HSM_VER_UNI_diplomatic } HSM_VER_UNI_free_signatory = yes }
+		AND = { tag = EYR ERI = { has_country_flag = HSM_VER_UNI_military } HSM_VER_UNI_safe_country = yes is_subject_of = ERI NOT = { any_subject_country = { always = yes } } }
+	}
+}
+HSM_VER_UNI_invitation_valid_ERI = {
+	has_country_flag = HSM_VER_UNI_reply_wait_ERI
+	has_country_flag = HSM_VER_UNI_invite_pending_ERI
+	NOT = { has_country_flag = HSM_VER_UNI_refused_ERI has_country_flag = HSM_VER_UNI_member_ERI }
+	ERI = { HSM_VER_UNI_context = yes }
+	HSM_VER_UNI_candidate_for_ERI = yes
+}
+HSM_VER_UNI_vote_valid_ERI = {
+	has_country_flag = HSM_VER_UNI_reply_wait_ERI
+	has_country_flag = HSM_VER_UNI_vote_pending_ERI
+	has_country_flag = HSM_VER_UNI_member_ERI
+	NOT = { has_country_flag = HSM_VER_UNI_refused_ERI has_country_flag = HSM_VER_UNI_consent_ERI }
+	ERI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_draft }
+	HSM_VER_UNI_candidate_for_ERI = yes
+}
+HSM_VER_UNI_members_ready_ERI = {
+	OR = { EYR = { HSM_VER_UNI_candidate_for_ERI = yes has_country_flag = HSM_VER_UNI_member_ERI } AND = { has_country_flag = HSM_VER_UNI_military EYR = { exists = no } } }
+	AVI = { NOT = { has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_invite_deferred_ERI } OR = { NOT = { has_country_flag = HSM_VER_UNI_member_ERI } HSM_VER_UNI_candidate_for_ERI = yes } }
+}
+HSM_VER_UNI_votes_ready_ERI = {
+	EYR = { OR = { exists = no has_country_flag = HSM_VER_UNI_consent_ERI } }
+	AVI = { OR = { NOT = { has_country_flag = HSM_VER_UNI_member_ERI } has_country_flag = HSM_VER_UNI_consent_ERI } }
+}
+
+HSM_VER_UNI_candidate_for_EYR = {
+	HSM_VER_UNI_house = yes NOT = { tag = EYR }
+	NOT = { any_subject_country = { always = yes } }
+	OR = {
+		AND = { EYR = { has_country_flag = HSM_VER_UNI_diplomatic } HSM_VER_UNI_free_signatory = yes }
+		AND = { tag = ERI EYR = { has_country_flag = HSM_VER_UNI_military } HSM_VER_UNI_safe_country = yes is_subject_of = EYR NOT = { any_subject_country = { always = yes } } }
+	}
+}
+HSM_VER_UNI_invitation_valid_EYR = {
+	has_country_flag = HSM_VER_UNI_reply_wait_EYR
+	has_country_flag = HSM_VER_UNI_invite_pending_EYR
+	NOT = { has_country_flag = HSM_VER_UNI_refused_EYR has_country_flag = HSM_VER_UNI_member_EYR }
+	EYR = { HSM_VER_UNI_context = yes }
+	HSM_VER_UNI_candidate_for_EYR = yes
+}
+HSM_VER_UNI_vote_valid_EYR = {
+	has_country_flag = HSM_VER_UNI_reply_wait_EYR
+	has_country_flag = HSM_VER_UNI_vote_pending_EYR
+	has_country_flag = HSM_VER_UNI_member_EYR
+	NOT = { has_country_flag = HSM_VER_UNI_refused_EYR has_country_flag = HSM_VER_UNI_consent_EYR }
+	EYR = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_draft }
+	HSM_VER_UNI_candidate_for_EYR = yes
+}
+HSM_VER_UNI_members_ready_EYR = {
+	OR = { ERI = { HSM_VER_UNI_candidate_for_EYR = yes has_country_flag = HSM_VER_UNI_member_EYR } AND = { has_country_flag = HSM_VER_UNI_military ERI = { exists = no } } }
+	AVI = { NOT = { has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_invite_deferred_EYR } OR = { NOT = { has_country_flag = HSM_VER_UNI_member_EYR } HSM_VER_UNI_candidate_for_EYR = yes } }
+}
+HSM_VER_UNI_votes_ready_EYR = {
+	ERI = { OR = { exists = no has_country_flag = HSM_VER_UNI_consent_EYR } }
+	AVI = { OR = { NOT = { has_country_flag = HSM_VER_UNI_member_EYR } has_country_flag = HSM_VER_UNI_consent_EYR } }
+}
+
+HSM_VER_UNI_candidate_for_AVI = {
+	HSM_VER_UNI_house = yes NOT = { tag = AVI }
+	NOT = { any_subject_country = { always = yes } }
+	OR = {
+		AND = { AVI = { has_country_flag = HSM_VER_UNI_diplomatic } HSM_VER_UNI_free_signatory = yes }
+
+	}
+}
+HSM_VER_UNI_invitation_valid_AVI = {
+	has_country_flag = HSM_VER_UNI_reply_wait_AVI
+	has_country_flag = HSM_VER_UNI_invite_pending_AVI
+	NOT = { has_country_flag = HSM_VER_UNI_refused_AVI has_country_flag = HSM_VER_UNI_member_AVI }
+	AVI = { HSM_VER_UNI_context = yes }
+	HSM_VER_UNI_candidate_for_AVI = yes
+}
+HSM_VER_UNI_vote_valid_AVI = {
+	has_country_flag = HSM_VER_UNI_reply_wait_AVI
+	has_country_flag = HSM_VER_UNI_vote_pending_AVI
+	has_country_flag = HSM_VER_UNI_member_AVI
+	NOT = { has_country_flag = HSM_VER_UNI_refused_AVI has_country_flag = HSM_VER_UNI_consent_AVI }
+	AVI = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_draft }
+	HSM_VER_UNI_candidate_for_AVI = yes
+}
+HSM_VER_UNI_members_ready_AVI = {
+	OR = { ERI = { HSM_VER_UNI_candidate_for_AVI = yes has_country_flag = HSM_VER_UNI_member_AVI } AND = { has_country_flag = HSM_VER_UNI_military ERI = { exists = no } } }
+	OR = { EYR = { HSM_VER_UNI_candidate_for_AVI = yes has_country_flag = HSM_VER_UNI_member_AVI } AND = { has_country_flag = HSM_VER_UNI_military EYR = { exists = no } } }
+}
+HSM_VER_UNI_votes_ready_AVI = {
+	ERI = { OR = { exists = no has_country_flag = HSM_VER_UNI_consent_AVI } }
+	EYR = { OR = { exists = no has_country_flag = HSM_VER_UNI_consent_AVI } }
+}
+
+HSM_VER_UNI_operational = {
+	HSM_VER_UNI_context = yes
+	NOT = { has_country_flag = HSM_VER_UNI_suspended }
+	OR = {
+		AND = { tag = ERI HSM_VER_UNI_members_ready_ERI = yes }
+		AND = { tag = EYR HSM_VER_UNI_members_ready_EYR = yes }
+		AND = { tag = AVI HSM_VER_UNI_members_ready_AVI = yes }
+	}
+}
+HSM_VER_UNI_can_customs = { HSM_VER_UNI_operational = yes NOT = { has_country_flag = HSM_VER_UNI_customs } }
+HSM_VER_UNI_can_works = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_customs NOT = { has_country_flag = HSM_VER_UNI_works } }
+HSM_VER_UNI_can_administration = {
+	custom_trigger_tooltip = { tooltip = HSM_VER_FUI_uni_operational_tt HSM_VER_UNI_operational = yes }
+	custom_trigger_tooltip = { tooltip = HSM_VER_COOP_customs_ready_tt has_country_flag = HSM_VER_UNI_customs }
+	custom_trigger_tooltip = { tooltip = HSM_VER_COOP_administration_open_tt NOT = { has_country_flag = HSM_VER_UNI_administration } }
+	has_political_power > 99
+}
+HSM_VER_UNI_can_command = {
+	custom_trigger_tooltip = { tooltip = HSM_VER_FUI_uni_operational_tt HSM_VER_UNI_operational = yes }
+	custom_trigger_tooltip = { tooltip = HSM_VER_COOP_projects_ready_tt has_country_flag = HSM_VER_UNI_administration has_country_flag = HSM_VER_UNI_works }
+	custom_trigger_tooltip = { tooltip = HSM_VER_COOP_transitions_done_tt NOT = { has_country_flag = HSM_VER_UNI_customs_wait has_country_flag = HSM_VER_UNI_admin_wait has_country_flag = HSM_VER_UNI_command } }
+	has_political_power > 49
+}
+HSM_VER_UNI_can_draft = { HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_command NOT = { has_country_flag = HSM_VER_UNI_draft } }
+HSM_VER_UNI_can_found = {
+	custom_trigger_tooltip = { tooltip = HSM_VER_FUI_uni_operational_tt HSM_VER_UNI_operational = yes }
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FUI_uni_preparations_tt
+		has_country_flag = HSM_VER_UNI_draft
+		has_country_flag = HSM_VER_UNI_customs has_country_flag = HSM_VER_UNI_works
+		has_country_flag = HSM_VER_UNI_administration has_country_flag = HSM_VER_UNI_command
+		NOT = { has_country_flag = HSM_VER_UNI_customs_wait has_country_flag = HSM_VER_UNI_admin_wait }
+	}
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_FUI_uni_consents_tt
+		OR = {
+			AND = { tag = ERI HSM_VER_UNI_votes_ready_ERI = yes }
+			AND = { tag = EYR HSM_VER_UNI_votes_ready_EYR = yes }
+			AND = { tag = AVI HSM_VER_UNI_votes_ready_AVI = yes }
+		}
+	}
+}
+HSM_VER_UNI_founded_homeland = {
+	HSM_VER_UNI_house = yes exists = yes is_subject = no has_capitulated = no
+	has_country_flag = HSM_VER_UNI_founded
+	owns_state = 401 owns_state = 500 owns_state = 673 owns_state = 391 owns_state = 400
+	OR = {
+		AND = { tag = ERI 401 = { is_fully_controlled_by = ERI } 500 = { is_fully_controlled_by = ERI } 673 = { is_fully_controlled_by = ERI } 391 = { is_fully_controlled_by = ERI } 400 = { is_fully_controlled_by = ERI }  }
+		AND = { tag = EYR 401 = { is_fully_controlled_by = EYR } 500 = { is_fully_controlled_by = EYR } 673 = { is_fully_controlled_by = EYR } 391 = { is_fully_controlled_by = EYR } 400 = { is_fully_controlled_by = EYR }  }
+		AND = { tag = AVI 401 = { is_fully_controlled_by = AVI } 500 = { is_fully_controlled_by = AVI } 673 = { is_fully_controlled_by = AVI } 391 = { is_fully_controlled_by = AVI } 400 = { is_fully_controlled_by = AVI } 470 = { is_fully_controlled_by = AVI } owns_state = 470 }
+	}
+}
+HSM_VER_UNI_can_settle = {
+	custom_trigger_tooltip = { tooltip = HSM_VER_FUI_uni_homeland_tt HSM_VER_UNI_founded_homeland = yes }
+	has_war = no
+	custom_trigger_tooltip = { tooltip = HSM_VER_FUI_uni_budget_wait_tt NOT = { has_country_flag = HSM_VER_UNI_post_wait has_country_flag = HSM_VER_UNI_settled } }
+}
+

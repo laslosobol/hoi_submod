@@ -1,0 +1,135 @@
+[
+  {
+    "id": "foundation_military_effort",
+    "target": "foundation_military_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/foundation_military_effort-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_foundation_military_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A small grey facility watchtower beside a sealed pale-green equipment crate. Empty observation window, no people or weapons. Concrete grey, pale enamel, charcoal fittings. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "on_site_nuclear_devices",
+    "target": "on_site_nuclear_devices",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/on_site_nuclear_devices-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_on_site_nuclear_devices.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A thick grey laboratory observation shutter with a small turquoise glass window and an analog radiation measurement meter. No device schematics, weapons or explosion. Scientific monitoring symbol. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_modern_infantry",
+    "target": "HSM_ERI_modern_infantry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_modern_infantry-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_modern_infantry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A standardized khaki field pack with a rolled grey blanket and metal canteen. No weapons. Olive canvas, grey wool, brushed steel. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_repair_arsenals",
+    "target": "HSM_EYR_repair_arsenals",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_repair_arsenals-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_repair_arsenals.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A heavy workshop vise holding a plain worn steel hinge, with a repaired hinge alongside. Gunmetal iron, walnut bench edge, muted green enamel. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_promises_in_writing",
+    "target": "HSM_ERI_FORCE_promises_in_writing",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_promises_in_writing-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_promises_in_writing.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A bound delivery ledger with a simple geometric timetable and a small wooden cargo crate. Ivory paper, burgundy cord, weathered timber. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_workshops_after_war",
+    "target": "HSM_EYR_FORCE_workshops_after_war",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_workshops_after_war-neutral-v3.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_workshops_after_war.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "A single compact antique workshop bench lathe, painted game inventory icon. Muted green enamel machine body, grey iron bed, small copper handwheel. Squat compact silhouette with generous transparent margins. One isolated object, fully opaque machine, completely transparent exterior and gaps. No backdrop, glow, haze, shadow, lettering, border, logos or other objects. Hand-painted strategy-game asset readable at 99x86 pixels.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_technical_agreement",
+    "target": "HSM_VER_IMP_technical_agreement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_technical_agreement-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_IMP_technical_agreement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: Two closed grey-green engineering portfolios sharing one ivory drawing sheet with a simple gear diagram. Burgundy straps and grey steel clips. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

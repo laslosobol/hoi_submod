@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		HSM_EYR_DEV_public_works = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_public_works
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { industry_repair_factor = 0.15 }
+		}
+		HSM_EYR_DEV_rural_investment = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_rural_investment
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { production_speed_industrial_complex_factor = 0.10 }
+		}
+		HSM_EYR_DEV_practical_education = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_practical_education
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.05 }
+		}
+		HSM_EYR_DEV_skilled_reserve = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_skilled_reserve
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		HSM_EYR_DEV_field_engineers = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_field_engineers
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { dig_in_speed_factor = 0.15 }
+		}
+		HSM_EYR_DEV_depot_service = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_depot_service
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { supply_consumption_factor = -0.05 }
+		}
+		HSM_EYR_DEV_observer_sections = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_observer_sections
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { recon_factor = 0.10 }
+		}
+		HSM_EYR_DEV_coordinated_signals = {
+			picture = HSM_VER_ART_HSM_EYR_DEV_coordinated_signals
+			allowed = { original_tag = EYR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				recon_factor = 0.10
+				land_reinforce_rate = 0.02
+			}
+		}
+	}
+}

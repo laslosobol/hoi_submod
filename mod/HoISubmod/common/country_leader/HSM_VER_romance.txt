@@ -1,0 +1,7 @@
+leader_traits = {
+	HSM_VER_ROM_two_signatures = { random = no stability_factor = 0.05 political_power_factor = 0.05 }
+	HSM_VER_ROM_doors_of_the_court = { random = no political_power_gain = 0.10 }
+	HSM_VER_ROM_court_on_the_road = { random = no production_speed_infrastructure_factor = 0.10 }
+	HSM_VER_ROM_keeper_of_petitions = { random = no stability_factor = 0.05 }
+	HSM_VER_ROM_provincial_coordinator = { random = no production_speed_infrastructure_factor = 0.10 }
+}

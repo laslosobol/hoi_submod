@@ -1,0 +1,825 @@
+# Public effects take the current ERI/EYR/AVI host scope; all are guarded and idempotent.
+# Private *_for_TAG and response helpers bind consent to one named presidency.
+HSM_VER_UNI_remove_temporary_ideas = {
+	remove_ideas = HSM_VER_UNI_customs_spirit
+	remove_ideas = HSM_VER_UNI_works_spirit
+	remove_ideas = HSM_VER_UNI_administration_spirit
+	remove_ideas = HSM_VER_UNI_command_spirit
+}
+HSM_VER_UNI_start_convention = {
+	if = {
+		limit = { HSM_VER_UNI_can_start = yes }
+		set_country_flag = HSM_VER_UNI_started
+		set_country_flag = HSM_VER_UNI_leader
+		if = { limit = { HSM_VER_UNI_diplomatic_context = yes } set_country_flag = HSM_VER_UNI_diplomatic }
+		else = {
+			set_country_flag = HSM_VER_UNI_military
+			if = {
+				limit = { OR = { AND = { tag = ERI EYR = { exists = no } } AND = { tag = EYR ERI = { exists = no } } } }
+				set_country_flag = HSM_VER_UNI_preannexed_rival
+			}
+		}
+		if = {
+			limit = { tag = ERI }
+			set_country_flag = HSM_VER_UNI_president_ERI
+			EYR = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_ERI = yes NOT = { has_country_flag = HSM_VER_UNI_invited_ERI } }
+					set_country_flag = HSM_VER_UNI_invited_ERI
+					set_country_flag = HSM_VER_UNI_invite_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.10 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_ERI = yes NOT = { has_country_flag = HSM_VER_UNI_invited_ERI } }
+					set_country_flag = HSM_VER_UNI_invited_ERI
+					set_country_flag = HSM_VER_UNI_invite_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.10 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = EYR }
+			set_country_flag = HSM_VER_UNI_president_EYR
+			ERI = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_EYR = yes NOT = { has_country_flag = HSM_VER_UNI_invited_EYR } }
+					set_country_flag = HSM_VER_UNI_invited_EYR
+					set_country_flag = HSM_VER_UNI_invite_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.11 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_EYR = yes NOT = { has_country_flag = HSM_VER_UNI_invited_EYR } }
+					set_country_flag = HSM_VER_UNI_invited_EYR
+					set_country_flag = HSM_VER_UNI_invite_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.11 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = AVI }
+			set_country_flag = HSM_VER_UNI_president_AVI
+			ERI = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_AVI = yes NOT = { has_country_flag = HSM_VER_UNI_invited_AVI } }
+					set_country_flag = HSM_VER_UNI_invited_AVI
+					set_country_flag = HSM_VER_UNI_invite_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.12 days = 1 }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { HSM_VER_UNI_candidate_for_AVI = yes NOT = { has_country_flag = HSM_VER_UNI_invited_AVI } }
+					set_country_flag = HSM_VER_UNI_invited_AVI
+					set_country_flag = HSM_VER_UNI_invite_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.12 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+HSM_VER_UNI_clear_membership_ERI = {
+	clr_country_flag = HSM_VER_UNI_invite_pending_ERI
+	clr_country_flag = HSM_VER_UNI_invite_deferred_ERI
+	clr_country_flag = HSM_VER_UNI_vote_pending_ERI
+	clr_country_flag = HSM_VER_UNI_reply_wait_ERI
+	clr_country_flag = HSM_VER_UNI_member_ERI
+	clr_country_flag = HSM_VER_UNI_consent_ERI
+	HSM_VER_UNI_remove_temporary_ideas = yes
+}
+HSM_VER_UNI_accept_invitation_ERI = {
+	if = {
+		limit = { HSM_VER_UNI_invitation_valid_ERI = yes }
+		clr_country_flag = HSM_VER_UNI_invite_pending_ERI
+		clr_country_flag = HSM_VER_UNI_reply_wait_ERI
+		set_country_flag = HSM_VER_UNI_member_ERI
+		HSM_VER_COOP_sync_history = yes
+	}
+}
+HSM_VER_UNI_withdraw_ERI = {
+	if = {
+		limit = {
+			OR = { has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_invite_deferred_ERI has_country_flag = HSM_VER_UNI_vote_pending_ERI has_country_flag = HSM_VER_UNI_member_ERI }
+			ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		}
+		set_country_flag = HSM_VER_UNI_refused_ERI
+		HSM_VER_UNI_clear_membership_ERI = yes
+		# Both ducal homelands are mandatory. Avian may leave a ducal convention.
+		if = { limit = { OR = { tag = ERI tag = EYR } } ERI = { HSM_VER_UNI_close_convention = yes } }
+	}
+}
+HSM_VER_UNI_ratify_ERI = {
+	if = {
+		limit = { HSM_VER_UNI_vote_valid_ERI = yes }
+		clr_country_flag = HSM_VER_UNI_vote_pending_ERI
+		clr_country_flag = HSM_VER_UNI_reply_wait_ERI
+		set_country_flag = HSM_VER_UNI_consent_ERI
+	}
+}
+
+HSM_VER_UNI_clear_membership_EYR = {
+	clr_country_flag = HSM_VER_UNI_invite_pending_EYR
+	clr_country_flag = HSM_VER_UNI_invite_deferred_EYR
+	clr_country_flag = HSM_VER_UNI_vote_pending_EYR
+	clr_country_flag = HSM_VER_UNI_reply_wait_EYR
+	clr_country_flag = HSM_VER_UNI_member_EYR
+	clr_country_flag = HSM_VER_UNI_consent_EYR
+	HSM_VER_UNI_remove_temporary_ideas = yes
+}
+HSM_VER_UNI_accept_invitation_EYR = {
+	if = {
+		limit = { HSM_VER_UNI_invitation_valid_EYR = yes }
+		clr_country_flag = HSM_VER_UNI_invite_pending_EYR
+		clr_country_flag = HSM_VER_UNI_reply_wait_EYR
+		set_country_flag = HSM_VER_UNI_member_EYR
+		HSM_VER_COOP_sync_history = yes
+	}
+}
+HSM_VER_UNI_withdraw_EYR = {
+	if = {
+		limit = {
+			OR = { has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_invite_deferred_EYR has_country_flag = HSM_VER_UNI_vote_pending_EYR has_country_flag = HSM_VER_UNI_member_EYR }
+			EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		}
+		set_country_flag = HSM_VER_UNI_refused_EYR
+		HSM_VER_UNI_clear_membership_EYR = yes
+		# Both ducal homelands are mandatory. Avian may leave a ducal convention.
+		if = { limit = { OR = { tag = ERI tag = EYR } } EYR = { HSM_VER_UNI_close_convention = yes } }
+	}
+}
+HSM_VER_UNI_ratify_EYR = {
+	if = {
+		limit = { HSM_VER_UNI_vote_valid_EYR = yes }
+		clr_country_flag = HSM_VER_UNI_vote_pending_EYR
+		clr_country_flag = HSM_VER_UNI_reply_wait_EYR
+		set_country_flag = HSM_VER_UNI_consent_EYR
+	}
+}
+
+HSM_VER_UNI_clear_membership_AVI = {
+	clr_country_flag = HSM_VER_UNI_invite_pending_AVI
+	clr_country_flag = HSM_VER_UNI_invite_deferred_AVI
+	clr_country_flag = HSM_VER_UNI_vote_pending_AVI
+	clr_country_flag = HSM_VER_UNI_reply_wait_AVI
+	clr_country_flag = HSM_VER_UNI_member_AVI
+	clr_country_flag = HSM_VER_UNI_consent_AVI
+	HSM_VER_UNI_remove_temporary_ideas = yes
+}
+HSM_VER_UNI_accept_invitation_AVI = {
+	if = {
+		limit = { HSM_VER_UNI_invitation_valid_AVI = yes }
+		clr_country_flag = HSM_VER_UNI_invite_pending_AVI
+		clr_country_flag = HSM_VER_UNI_reply_wait_AVI
+		set_country_flag = HSM_VER_UNI_member_AVI
+		HSM_VER_COOP_sync_history = yes
+	}
+}
+HSM_VER_UNI_withdraw_AVI = {
+	if = {
+		limit = {
+			OR = { has_country_flag = HSM_VER_UNI_invite_pending_AVI has_country_flag = HSM_VER_UNI_invite_deferred_AVI has_country_flag = HSM_VER_UNI_vote_pending_AVI has_country_flag = HSM_VER_UNI_member_AVI }
+			AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		}
+		set_country_flag = HSM_VER_UNI_refused_AVI
+		HSM_VER_UNI_clear_membership_AVI = yes
+		# Both ducal homelands are mandatory. Avian may leave a ducal convention.
+		if = { limit = { OR = { tag = ERI tag = EYR } } AVI = { HSM_VER_UNI_close_convention = yes } }
+	}
+}
+HSM_VER_UNI_ratify_AVI = {
+	if = {
+		limit = { HSM_VER_UNI_vote_valid_AVI = yes }
+		clr_country_flag = HSM_VER_UNI_vote_pending_AVI
+		clr_country_flag = HSM_VER_UNI_reply_wait_AVI
+		set_country_flag = HSM_VER_UNI_consent_AVI
+	}
+}
+
+HSM_VER_UNI_close_convention = {
+	if = {
+		limit = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		set_country_flag = HSM_VER_UNI_closed
+		clr_country_flag = HSM_VER_UNI_leader
+		clr_country_flag = HSM_VER_UNI_suspended
+		clr_country_flag = HSM_VER_UNI_ballot_quarantine
+		HSM_VER_UNI_remove_temporary_ideas = yes
+		if = { limit = { tag = ERI } EYR = { HSM_VER_UNI_clear_membership_ERI = yes } AVI = { HSM_VER_UNI_clear_membership_ERI = yes } }
+		if = { limit = { tag = EYR } ERI = { HSM_VER_UNI_clear_membership_EYR = yes } AVI = { HSM_VER_UNI_clear_membership_EYR = yes } }
+		if = { limit = { tag = AVI } ERI = { HSM_VER_UNI_clear_membership_AVI = yes } EYR = { HSM_VER_UNI_clear_membership_AVI = yes } }
+	}
+}
+HSM_VER_UNI_establish_customs = {
+	if = {
+		limit = { HSM_VER_UNI_can_customs = yes }
+		set_country_flag = HSM_VER_UNI_customs
+		set_country_flag = { flag = HSM_VER_UNI_customs_wait value = 1 days = 60 }
+		HSM_VER_UNI_sync_all_ideas = yes
+	}
+}
+# A House receives its physical works only once, including across failed presidencies.
+HSM_VER_UNI_grant_works = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_UNI_works_received } }
+		set_country_flag = HSM_VER_UNI_works_received
+		if = {
+			limit = { tag = ERI owns_state = 401 }
+			401 = {
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+		if = {
+			limit = { tag = EYR owns_state = 400 }
+			400 = {
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+		if = {
+			limit = { tag = AVI owns_state = 470 }
+			470 = {
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+	}
+}
+HSM_VER_UNI_build_common_works = {
+	if = {
+		limit = { HSM_VER_UNI_can_works = yes }
+		set_country_flag = HSM_VER_UNI_works
+		HSM_VER_UNI_grant_works = yes
+		if = { limit = { tag = ERI } EYR = { if = { limit = { has_country_flag = HSM_VER_UNI_member_ERI } HSM_VER_UNI_grant_works = yes } } AVI = { if = { limit = { has_country_flag = HSM_VER_UNI_member_ERI } HSM_VER_UNI_grant_works = yes } } }
+		if = { limit = { tag = EYR } ERI = { if = { limit = { has_country_flag = HSM_VER_UNI_member_EYR } HSM_VER_UNI_grant_works = yes } } AVI = { if = { limit = { has_country_flag = HSM_VER_UNI_member_EYR } HSM_VER_UNI_grant_works = yes } } }
+		if = { limit = { tag = AVI } ERI = { if = { limit = { has_country_flag = HSM_VER_UNI_member_AVI } HSM_VER_UNI_grant_works = yes } } EYR = { if = { limit = { has_country_flag = HSM_VER_UNI_member_AVI } HSM_VER_UNI_grant_works = yes } } }
+		HSM_VER_UNI_sync_all_ideas = yes
+	}
+}
+HSM_VER_UNI_establish_administration = {
+	if = {
+		limit = { HSM_VER_UNI_can_administration = yes }
+		add_political_power = -100
+		set_country_flag = HSM_VER_UNI_administration
+		set_country_flag = { flag = HSM_VER_UNI_admin_wait value = 1 days = 90 }
+		HSM_VER_UNI_sync_all_ideas = yes
+	}
+}
+HSM_VER_UNI_establish_command = {
+	if = {
+		limit = { HSM_VER_UNI_can_command = yes }
+		add_political_power = -50
+		set_country_flag = HSM_VER_UNI_command
+		HSM_VER_UNI_sync_all_ideas = yes
+	}
+}
+HSM_VER_UNI_open_ratification = {
+	if = {
+		limit = { HSM_VER_UNI_can_draft = yes }
+		set_country_flag = HSM_VER_UNI_draft
+		HSM_VER_UNI_dispatch_ratification = yes
+	}
+}
+HSM_VER_UNI_dispatch_ratification = {
+	if = {
+		limit = {
+			HSM_VER_UNI_operational = yes has_country_flag = HSM_VER_UNI_draft
+			NOT = { has_country_flag = HSM_VER_UNI_ballot_quarantine }
+		}
+		if = {
+			limit = { tag = ERI }
+			EYR = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_ERI NOT = { has_country_flag = HSM_VER_UNI_vote_asked_ERI } }
+					set_country_flag = HSM_VER_UNI_vote_asked_ERI
+					set_country_flag = HSM_VER_UNI_vote_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.20 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_ERI NOT = { has_country_flag = HSM_VER_UNI_vote_asked_ERI } }
+					set_country_flag = HSM_VER_UNI_vote_asked_ERI
+					set_country_flag = HSM_VER_UNI_vote_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.20 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = EYR }
+			ERI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_EYR NOT = { has_country_flag = HSM_VER_UNI_vote_asked_EYR } }
+					set_country_flag = HSM_VER_UNI_vote_asked_EYR
+					set_country_flag = HSM_VER_UNI_vote_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.21 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_EYR NOT = { has_country_flag = HSM_VER_UNI_vote_asked_EYR } }
+					set_country_flag = HSM_VER_UNI_vote_asked_EYR
+					set_country_flag = HSM_VER_UNI_vote_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.21 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = AVI }
+			ERI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_AVI NOT = { has_country_flag = HSM_VER_UNI_vote_asked_AVI } }
+					set_country_flag = HSM_VER_UNI_vote_asked_AVI
+					set_country_flag = HSM_VER_UNI_vote_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.22 days = 1 }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_member_AVI NOT = { has_country_flag = HSM_VER_UNI_vote_asked_AVI } }
+					set_country_flag = HSM_VER_UNI_vote_asked_AVI
+					set_country_flag = HSM_VER_UNI_vote_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.22 days = 1 }
+				}
+			}
+		}
+	}
+}
+HSM_VER_UNI_found_union = {
+	# Validate the entire compact before the first annexation invalidates the old charter.
+	if = {
+		limit = { HSM_VER_UNI_can_found = yes }
+		set_country_flag = HSM_VER_UNI_committing
+		if = {
+			limit = { tag = ERI }
+			if = {
+				limit = { always = yes }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						EYR = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = EYR } has_character = GRI_emperor_grover_vi } }
+					}
+					EYR = { GRI_emperor_grover_vi = { set_nationality = ERI } }
+				}
+				if = { limit = { EYR = { exists = yes } } annex_country = { target = EYR transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { EYR = { exists = no } owns_state = 391 391 = { is_fully_controlled_by = ERI } owns_state = 400 400 = { is_fully_controlled_by = ERI } }
+					set_country_flag = HSM_VER_UNI_absorbed_EYR
+					391 = { add_core_of = ERI }
+					400 = { add_core_of = ERI }
+				}
+			}
+			if = {
+				limit = { AVI = { has_country_flag = HSM_VER_UNI_member_ERI has_country_flag = HSM_VER_UNI_consent_ERI } }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						AVI = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = AVI } has_character = GRI_emperor_grover_vi } }
+					}
+					AVI = { GRI_emperor_grover_vi = { set_nationality = ERI } }
+				}
+				if = { limit = { AVI = { exists = yes } } HSM_VER_SP_inherit_avian = yes annex_country = { target = AVI transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { AVI = { exists = no } owns_state = 470 470 = { is_fully_controlled_by = ERI } }
+					set_country_flag = HSM_VER_UNI_absorbed_AVI
+					470 = { add_core_of = ERI }
+				}
+			}
+		}
+		if = {
+			limit = { tag = EYR }
+			if = {
+				limit = { always = yes }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						ERI = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = ERI } has_character = GRI_emperor_grover_vi } }
+					}
+					ERI = { GRI_emperor_grover_vi = { set_nationality = EYR } }
+				}
+				if = { limit = { ERI = { exists = yes } } annex_country = { target = ERI transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { ERI = { exists = no } owns_state = 401 401 = { is_fully_controlled_by = EYR } owns_state = 500 500 = { is_fully_controlled_by = EYR } owns_state = 673 673 = { is_fully_controlled_by = EYR } }
+					set_country_flag = HSM_VER_UNI_absorbed_ERI
+					401 = { add_core_of = EYR }
+					500 = { add_core_of = EYR }
+					673 = { add_core_of = EYR }
+				}
+			}
+			if = {
+				limit = { AVI = { has_country_flag = HSM_VER_UNI_member_EYR has_country_flag = HSM_VER_UNI_consent_EYR } }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						AVI = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = AVI } has_character = GRI_emperor_grover_vi } }
+					}
+					AVI = { GRI_emperor_grover_vi = { set_nationality = EYR } }
+				}
+				if = { limit = { AVI = { exists = yes } } HSM_VER_SP_inherit_avian = yes annex_country = { target = AVI transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { AVI = { exists = no } owns_state = 470 470 = { is_fully_controlled_by = EYR } }
+					set_country_flag = HSM_VER_UNI_absorbed_AVI
+					470 = { add_core_of = EYR }
+				}
+			}
+		}
+		if = {
+			limit = { tag = AVI }
+			if = {
+				limit = { always = yes }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						ERI = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = ERI } has_character = GRI_emperor_grover_vi } }
+					}
+					ERI = { GRI_emperor_grover_vi = { set_nationality = AVI } }
+				}
+				if = { limit = { ERI = { exists = yes } } annex_country = { target = ERI transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { ERI = { exists = no } owns_state = 401 401 = { is_fully_controlled_by = AVI } owns_state = 500 500 = { is_fully_controlled_by = AVI } owns_state = 673 673 = { is_fully_controlled_by = AVI } }
+					set_country_flag = HSM_VER_UNI_absorbed_ERI
+					401 = { add_core_of = AVI }
+					500 = { add_core_of = AVI }
+					673 = { add_core_of = AVI }
+				}
+			}
+			if = {
+				limit = { always = yes }
+				# Transfer actual custody before the holder disappears; never recruit a child.
+				if = {
+					limit = {
+						EYR = { has_character = GRI_emperor_grover_vi }
+						NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = EYR } has_character = GRI_emperor_grover_vi } }
+					}
+					EYR = { GRI_emperor_grover_vi = { set_nationality = AVI } }
+				}
+				if = { limit = { EYR = { exists = yes } } annex_country = { target = EYR transfer_troops = yes } }
+				# An absent rival reached here only through recorded military victory.
+				if = {
+					limit = { EYR = { exists = no } owns_state = 391 391 = { is_fully_controlled_by = AVI } owns_state = 400 400 = { is_fully_controlled_by = AVI } }
+					set_country_flag = HSM_VER_UNI_absorbed_EYR
+					391 = { add_core_of = AVI }
+					400 = { add_core_of = AVI }
+				}
+			}
+		}
+		set_country_flag = HSM_VER_UNI_founded
+		set_country_flag = { flag = HSM_VER_UNI_post_wait value = 1 days = 60 }
+		# Shared state identity; the actual president, country tag and government remain.
+		set_cosmetic_tag = HSM_VER_UNIFIED
+		HSM_VER_UNI_remove_temporary_ideas = yes
+		HSM_VER_SP_add_HSM_VER_UNI_constitutional_state = yes
+		if = { limit = { tag = ERI } EYR = { HSM_VER_UNI_clear_membership_ERI = yes } AVI = { HSM_VER_UNI_clear_membership_ERI = yes } }
+		if = { limit = { tag = EYR } ERI = { HSM_VER_UNI_clear_membership_EYR = yes } AVI = { HSM_VER_UNI_clear_membership_EYR = yes } }
+		if = { limit = { tag = AVI } ERI = { HSM_VER_UNI_clear_membership_AVI = yes } EYR = { HSM_VER_UNI_clear_membership_AVI = yes } }
+		clr_country_flag = HSM_VER_UNI_committing
+		country_event = { id = hsm_ver_uni.30 days = 1 }
+		HSM_VER_ROM_on_union = yes
+	}
+}
+HSM_VER_UNI_settle_institutions = {
+	if = {
+		limit = { HSM_VER_UNI_can_settle = yes }
+		set_country_flag = HSM_VER_UNI_settled
+		HSM_VER_SP_remove_HSM_VER_UNI_constitutional_state = yes
+		HSM_VER_SP_add_HSM_VER_UNI_settled_state = yes
+		add_stability = 0.03
+	}
+}
+HSM_VER_UNI_suspend_convention = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_UNI_suspended } }
+		set_country_flag = HSM_VER_UNI_suspended
+		# Old open events time out before fresh ballots can be dispatched.
+		set_country_flag = { flag = HSM_VER_UNI_ballot_quarantine value = 1 days = 32 }
+		if = {
+			limit = { tag = ERI }
+			EYR = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_ERI } set_country_flag = HSM_VER_UNI_invite_deferred_ERI }
+				clr_country_flag = HSM_VER_UNI_invite_pending_ERI
+				clr_country_flag = HSM_VER_UNI_vote_pending_ERI
+				clr_country_flag = HSM_VER_UNI_reply_wait_ERI
+				clr_country_flag = HSM_VER_UNI_consent_ERI
+				clr_country_flag = HSM_VER_UNI_vote_asked_ERI
+			}
+			AVI = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_ERI } set_country_flag = HSM_VER_UNI_invite_deferred_ERI }
+				clr_country_flag = HSM_VER_UNI_invite_pending_ERI
+				clr_country_flag = HSM_VER_UNI_vote_pending_ERI
+				clr_country_flag = HSM_VER_UNI_reply_wait_ERI
+				clr_country_flag = HSM_VER_UNI_consent_ERI
+				clr_country_flag = HSM_VER_UNI_vote_asked_ERI
+			}
+		}
+		if = {
+			limit = { tag = EYR }
+			ERI = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_EYR } set_country_flag = HSM_VER_UNI_invite_deferred_EYR }
+				clr_country_flag = HSM_VER_UNI_invite_pending_EYR
+				clr_country_flag = HSM_VER_UNI_vote_pending_EYR
+				clr_country_flag = HSM_VER_UNI_reply_wait_EYR
+				clr_country_flag = HSM_VER_UNI_consent_EYR
+				clr_country_flag = HSM_VER_UNI_vote_asked_EYR
+			}
+			AVI = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_EYR } set_country_flag = HSM_VER_UNI_invite_deferred_EYR }
+				clr_country_flag = HSM_VER_UNI_invite_pending_EYR
+				clr_country_flag = HSM_VER_UNI_vote_pending_EYR
+				clr_country_flag = HSM_VER_UNI_reply_wait_EYR
+				clr_country_flag = HSM_VER_UNI_consent_EYR
+				clr_country_flag = HSM_VER_UNI_vote_asked_EYR
+			}
+		}
+		if = {
+			limit = { tag = AVI }
+			ERI = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_AVI } set_country_flag = HSM_VER_UNI_invite_deferred_AVI }
+				clr_country_flag = HSM_VER_UNI_invite_pending_AVI
+				clr_country_flag = HSM_VER_UNI_vote_pending_AVI
+				clr_country_flag = HSM_VER_UNI_reply_wait_AVI
+				clr_country_flag = HSM_VER_UNI_consent_AVI
+				clr_country_flag = HSM_VER_UNI_vote_asked_AVI
+			}
+			EYR = {
+				if = { limit = { has_country_flag = HSM_VER_UNI_invite_pending_AVI } set_country_flag = HSM_VER_UNI_invite_deferred_AVI }
+				clr_country_flag = HSM_VER_UNI_invite_pending_AVI
+				clr_country_flag = HSM_VER_UNI_vote_pending_AVI
+				clr_country_flag = HSM_VER_UNI_reply_wait_AVI
+				clr_country_flag = HSM_VER_UNI_consent_AVI
+				clr_country_flag = HSM_VER_UNI_vote_asked_AVI
+			}
+		}
+	}
+}
+HSM_VER_UNI_resume_invitations = {
+	if = {
+		limit = { HSM_VER_UNI_context = yes NOT = { has_country_flag = HSM_VER_UNI_suspended has_country_flag = HSM_VER_UNI_ballot_quarantine } }
+		if = {
+			limit = { tag = ERI }
+			EYR = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_ERI HSM_VER_UNI_candidate_for_ERI = yes NOT = { has_country_flag = HSM_VER_UNI_refused_ERI } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_ERI
+					set_country_flag = HSM_VER_UNI_invite_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.10 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_ERI HSM_VER_UNI_candidate_for_ERI = yes NOT = { has_country_flag = HSM_VER_UNI_refused_ERI } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_ERI
+					set_country_flag = HSM_VER_UNI_invite_pending_ERI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_ERI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.10 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = EYR }
+			ERI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_EYR HSM_VER_UNI_candidate_for_EYR = yes NOT = { has_country_flag = HSM_VER_UNI_refused_EYR } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_EYR
+					set_country_flag = HSM_VER_UNI_invite_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.11 days = 1 }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_EYR HSM_VER_UNI_candidate_for_EYR = yes NOT = { has_country_flag = HSM_VER_UNI_refused_EYR } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_EYR
+					set_country_flag = HSM_VER_UNI_invite_pending_EYR
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_EYR value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.11 days = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { tag = AVI }
+			ERI = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_AVI HSM_VER_UNI_candidate_for_AVI = yes NOT = { has_country_flag = HSM_VER_UNI_refused_AVI } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_AVI
+					set_country_flag = HSM_VER_UNI_invite_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.12 days = 1 }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { has_country_flag = HSM_VER_UNI_invite_deferred_AVI HSM_VER_UNI_candidate_for_AVI = yes NOT = { has_country_flag = HSM_VER_UNI_refused_AVI } }
+					clr_country_flag = HSM_VER_UNI_invite_deferred_AVI
+					set_country_flag = HSM_VER_UNI_invite_pending_AVI
+					set_country_flag = { flag = HSM_VER_UNI_reply_wait_AVI value = 1 days = 45 }
+					country_event = { id = hsm_ver_uni.12 days = 1 }
+				}
+			}
+		}
+	}
+}
+HSM_VER_UNI_migrate_cosmetic = {
+	# Upgrade only old name-only unions; never overwrite a later imperial identity.
+	if = {
+		limit = {
+			HSM_VER_UNI_house = yes
+			exists = yes
+			has_country_flag = HSM_VER_UNI_founded
+			OR = {
+				has_cosmetic_tag = HSM_VER_UNI_ERI
+				has_cosmetic_tag = HSM_VER_UNI_EYR
+				has_cosmetic_tag = HSM_VER_UNI_AVI
+			}
+		}
+		set_cosmetic_tag = HSM_VER_UNIFIED
+	}
+}
+HSM_VER_UNI_maintain_campaign = {
+	HSM_VER_UNI_migrate_cosmetic = yes
+	HSM_VER_SP_maintain = yes
+	if = {
+		limit = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		# Only political dissolution ends a mandate. War and occupation have no expiry.
+		if = { limit = { NOT = { HSM_VER_UNI_mandate_survives = yes } } HSM_VER_UNI_close_convention = yes }
+		else_if = {
+			limit = { NOT = { HSM_VER_UNI_context = yes } }
+			HSM_VER_UNI_suspend_convention = yes
+		}
+		else_if = {
+			limit = { has_country_flag = HSM_VER_UNI_suspended }
+			clr_country_flag = HSM_VER_UNI_suspended
+			if = { limit = { has_country_flag = HSM_VER_UNI_customs NOT = { has_country_flag = HSM_VER_UNI_administration } } set_country_flag = { flag = HSM_VER_UNI_customs_wait value = 1 days = 60 } }
+			if = { limit = { has_country_flag = HSM_VER_UNI_administration NOT = { has_country_flag = HSM_VER_UNI_command } } set_country_flag = { flag = HSM_VER_UNI_admin_wait value = 1 days = 90 } }
+		}
+		HSM_VER_UNI_resume_invitations = yes
+	}
+	# Completed focuses can finish a deferred reward after a temporary suspension.
+	if = { limit = { has_completed_focus = HSM_VER_UNI_convention NOT = { has_country_flag = HSM_VER_COOP_shared_history } } HSM_VER_UNI_start_convention = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_customs_union } HSM_VER_UNI_establish_customs = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_common_works } HSM_VER_UNI_build_common_works = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_common_administration } HSM_VER_UNI_establish_administration = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_unified_command } HSM_VER_UNI_establish_command = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_constitutional_draft } HSM_VER_UNI_open_ratification = yes }
+	HSM_VER_UNI_dispatch_ratification = yes
+	if = { limit = { has_completed_focus = HSM_VER_UNI_constitutional_act } HSM_VER_UNI_found_union = yes }
+	if = { limit = { has_completed_focus = HSM_VER_UNI_settled_institutions } HSM_VER_UNI_settle_institutions = yes }
+}
+HSM_VER_UNI_reconcile_all = {
+	HSM_VER_COOP_release_shared_history = yes
+	# Explicit dead-tag scopes clear a presidency even after its own daily hook ceases.
+	ERI = {
+		if = { limit = { exists = no has_country_flag = HSM_VER_UNI_founded } clr_country_flag = HSM_VER_UNI_leader }
+		HSM_VER_UNI_maintain_campaign = yes
+	}
+	EYR = {
+		if = { limit = { exists = no has_country_flag = HSM_VER_UNI_founded } clr_country_flag = HSM_VER_UNI_leader }
+		HSM_VER_UNI_maintain_campaign = yes
+	}
+	AVI = {
+		if = { limit = { exists = no has_country_flag = HSM_VER_UNI_founded } clr_country_flag = HSM_VER_UNI_leader }
+		HSM_VER_UNI_maintain_campaign = yes
+	}
+	EYR = {
+		if = {
+			limit = {
+				ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_vote_pending_ERI }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_ERI }
+			}
+			HSM_VER_UNI_withdraw_ERI = yes
+		}
+
+	}
+	AVI = {
+		if = {
+			limit = {
+				ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_vote_pending_ERI }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_ERI }
+			}
+			HSM_VER_UNI_withdraw_ERI = yes
+		}
+		if = {
+			limit = {
+				OR = { has_country_flag = HSM_VER_UNI_member_ERI has_country_flag = HSM_VER_UNI_invite_pending_ERI has_country_flag = HSM_VER_UNI_invite_deferred_ERI }
+				NOT = { HSM_VER_UNI_avian_mandate_survives = yes }
+			}
+			HSM_VER_UNI_withdraw_ERI = yes
+		}
+	}
+	ERI = {
+		if = {
+			limit = {
+				EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_vote_pending_EYR }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_EYR }
+			}
+			HSM_VER_UNI_withdraw_EYR = yes
+		}
+
+	}
+	AVI = {
+		if = {
+			limit = {
+				EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_vote_pending_EYR }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_EYR }
+			}
+			HSM_VER_UNI_withdraw_EYR = yes
+		}
+		if = {
+			limit = {
+				OR = { has_country_flag = HSM_VER_UNI_member_EYR has_country_flag = HSM_VER_UNI_invite_pending_EYR has_country_flag = HSM_VER_UNI_invite_deferred_EYR }
+				NOT = { HSM_VER_UNI_avian_mandate_survives = yes }
+			}
+			HSM_VER_UNI_withdraw_EYR = yes
+		}
+	}
+	ERI = {
+		if = {
+			limit = {
+				AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_AVI has_country_flag = HSM_VER_UNI_vote_pending_AVI }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_AVI }
+			}
+			HSM_VER_UNI_withdraw_AVI = yes
+		}
+
+	}
+	EYR = {
+		if = {
+			limit = {
+				AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+				OR = { has_country_flag = HSM_VER_UNI_invite_pending_AVI has_country_flag = HSM_VER_UNI_vote_pending_AVI }
+				NOT = { has_country_flag = HSM_VER_UNI_reply_wait_AVI }
+			}
+			HSM_VER_UNI_withdraw_AVI = yes
+		}
+
+	}
+	HSM_VER_UNI_sync_all_ideas = yes
+	HSM_VER_COOP_sync_history = yes
+}
+HSM_VER_UNI_sync_ideas = {
+	if = {
+		limit = { HSM_VER_UNI_receives_customs = yes }
+		if = { limit = { NOT = { has_idea = HSM_VER_UNI_customs_spirit } } add_ideas = HSM_VER_UNI_customs_spirit }
+	}
+	else = { remove_ideas = HSM_VER_UNI_customs_spirit }
+	if = {
+		limit = { HSM_VER_UNI_receives_works = yes }
+		if = { limit = { NOT = { has_idea = HSM_VER_UNI_works_spirit } } add_ideas = HSM_VER_UNI_works_spirit }
+	}
+	else = { remove_ideas = HSM_VER_UNI_works_spirit }
+	if = {
+		limit = { HSM_VER_UNI_receives_administration = yes }
+		if = { limit = { NOT = { has_idea = HSM_VER_UNI_administration_spirit } } add_ideas = HSM_VER_UNI_administration_spirit }
+	}
+	else = { remove_ideas = HSM_VER_UNI_administration_spirit }
+	if = {
+		limit = { HSM_VER_UNI_receives_command = yes }
+		if = { limit = { NOT = { has_idea = HSM_VER_UNI_command_spirit } } add_ideas = HSM_VER_UNI_command_spirit }
+	}
+	else = { remove_ideas = HSM_VER_UNI_command_spirit }
+}
+HSM_VER_UNI_sync_all_ideas = {
+	ERI = { HSM_VER_UNI_sync_ideas = yes }
+	EYR = { HSM_VER_UNI_sync_ideas = yes }
+	AVI = { HSM_VER_UNI_sync_ideas = yes }
+}
+

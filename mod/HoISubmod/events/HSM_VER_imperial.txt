@@ -1,0 +1,178 @@
+add_namespace = hsm_ver_imperial
+
+country_event = {
+	id = hsm_ver_imperial.7
+	title = hsm_ver_imperial.7.t
+	desc = hsm_ver_imperial.7.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_IMP_internal_protocol_offer_valid = yes }
+	option = { name = hsm_ver_imperial.7.a ai_chance = { factor = 70 } custom_effect_tooltip = HSM_VER_EVT_internal_protocol_tt show_ideas_tooltip = HSM_VER_IMP_technical_protocol hidden_effect = { HSM_VER_IMP_sign_internal_protocol = yes } }
+	option = {
+		name = hsm_ver_imperial.7.b ai_chance = { factor = 30 }
+		custom_effect_tooltip = HSM_VER_EVT_decline_protocol_tt
+		hidden_effect = { if = { limit = { HSM_VER_IMP_internal_protocol_offer_valid = yes } set_country_flag = HSM_VER_IMP_internal_protocol_answered } }
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.1
+	title = hsm_ver_imperial.1.t
+	desc = hsm_ver_imperial.1.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { HSM_VER_IMP_settlement_context = yes NOT = { has_country_flag = HSM_VER_IMP_offer_resolved } }
+	option = {
+		name = hsm_ver_imperial.1.a
+		ai_chance = { factor = 80 }
+		custom_effect_tooltip = HSM_VER_EVT_mandate_tt
+		show_ideas_tooltip = HSM_VER_IMP_reconstruction_mandate
+		hidden_effect = { HSM_VER_IMP_begin_mandate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.1.b
+		ai_chance = { factor = 20 }
+		custom_effect_tooltip = HSM_VER_EVT_decline_mandate_tt
+		hidden_effect = {
+		set_country_flag = HSM_VER_IMP_offer_resolved
+		set_country_flag = HSM_VER_IMP_settlement_declined
+		}
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.2
+	title = hsm_ver_imperial.2.t
+	desc = { trigger = { HSM_VER_IMP_grover_dead = yes } text = hsm_ver_imperial.2.dead }
+	desc = { trigger = { HSM_VER_IMP_grover_local_minor = yes } text = hsm_ver_imperial.2.minor }
+	desc = { trigger = { HSM_VER_IMP_grover_local_adult = yes } text = hsm_ver_imperial.2.adult }
+	desc = { trigger = { HSM_VER_IMP_grover_abroad = yes NOT = { date > 1021.5.21 } } text = hsm_ver_imperial.2.abroad_minor }
+	desc = { trigger = { HSM_VER_IMP_grover_abroad = yes date > 1021.5.21 } text = hsm_ver_imperial.2.abroad_adult }
+	desc = { trigger = { HSM_VER_IMP_grover_unknown = yes } text = hsm_ver_imperial.2.unknown }
+	picture = GFX_event_griffenheim_night
+	is_triggered_only = yes
+	trigger = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_fate_recorded } }
+	option = {
+		name = hsm_ver_imperial.2.a
+		trigger = { HSM_VER_IMP_grover_dead = yes }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.2.b
+		trigger = { HSM_VER_IMP_grover_local_minor = yes }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.2.c
+		trigger = { HSM_VER_IMP_grover_local_adult = yes }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.2.d
+		trigger = { HSM_VER_IMP_grover_abroad = yes NOT = { date > 1021.5.21 } }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.2.e
+		trigger = { HSM_VER_IMP_grover_abroad = yes date > 1021.5.21 }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.2.f
+		trigger = { HSM_VER_IMP_grover_unknown = yes }
+		custom_effect_tooltip = HSM_VER_EVT_household_record_tt
+		hidden_effect = { HSM_VER_IMP_record_fate = yes }
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.3
+	title = hsm_ver_imperial.3.t
+	desc = hsm_ver_imperial.3.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_contracts_awarded } }
+	option = {
+		name = hsm_ver_imperial.3.a
+		ai_chance = { factor = 60 }
+
+		if = {
+		limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_contracts_awarded } } }
+		hidden_effect = { set_country_flag = HSM_VER_IMP_contracts_awarded }
+		if = {
+			limit = { hidden_trigger = { 382 = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+			382 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_tech_bonus = { name = HSM_VER_IMP_workshop_bonus bonus = 1 uses = 1 category = industry } }
+	}
+	}
+	option = {
+		name = hsm_ver_imperial.3.b
+		ai_chance = { factor = 40 }
+
+		if = {
+		limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_contracts_awarded } } }
+		hidden_effect = { set_country_flag = HSM_VER_IMP_contracts_awarded }
+		add_tech_bonus = { name = HSM_VER_IMP_repair_bonus bonus = 0.75 uses = 2 category = construction_tech }
+	}
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.4
+	title = hsm_ver_imperial.4.t
+	desc = hsm_ver_imperial.4.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { HSM_VER_IMP_protocol_offer_valid = yes }
+	option = {
+		name = hsm_ver_imperial.4.a
+		ai_chance = { factor = 70 }
+		custom_effect_tooltip = HSM_VER_EVT_foreign_protocol_tt
+		show_ideas_tooltip = HSM_VER_IMP_technical_protocol
+		hidden_effect = { HSM_VER_IMP_sign_protocol = yes }
+	}
+	option = {
+		name = hsm_ver_imperial.4.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = HSM_VER_EVT_decline_protocol_tt
+		hidden_effect = { set_country_flag = HSM_VER_IMP_protocol_answered }
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.5
+	title = hsm_ver_imperial.5.t
+	desc = hsm_ver_imperial.5.d
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { HSM_VER_IMP_mandate_work_allowed = yes NOT = { has_country_flag = HSM_VER_IMP_audit_published } }
+	option = {
+		name = hsm_ver_imperial.5.a
+		hidden_effect = { if = { limit = { HSM_VER_IMP_mandate_work_allowed = yes } set_country_flag = HSM_VER_IMP_audit_published } }
+		custom_effect_tooltip = HSM_VER_EVT_audit_tt
+	}
+}
+
+country_event = {
+	id = hsm_ver_imperial.6
+	title = hsm_ver_imperial.6.t
+	desc = { trigger = { has_country_flag = HSM_VER_IMP_voluntary_handover } text = hsm_ver_imperial.6.handover }
+	desc = { trigger = { has_country_flag = HSM_VER_IMP_programme_finished } text = hsm_ver_imperial.6.finished }
+	desc = { trigger = { has_country_flag = HSM_VER_IMP_mandate_interrupted } text = hsm_ver_imperial.6.interrupted }
+	desc = { trigger = { has_country_flag = HSM_VER_IMP_mandate_lapsed } text = hsm_ver_imperial.6.lapsed }
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { tag = ERI has_country_flag = HSM_VER_IMP_mandate_ended NOT = { has_country_flag = HSM_VER_IMP_epilogue_delivered } }
+	immediate = { set_country_flag = HSM_VER_IMP_epilogue_delivered }
+	option = { name = hsm_ver_imperial.6.a }
+}

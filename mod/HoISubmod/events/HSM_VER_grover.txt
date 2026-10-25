@@ -1,0 +1,350 @@
+add_namespace = hsm_ver_grover
+
+# Parent queues all events and owns timed pending flags and choice memories.
+# Accession reads the memories copied to GRI; it never changes the settlement.
+country_event = {
+	id = hsm_ver_grover.1
+	title = hsm_ver_grover.1.t
+	picture = GFX_event_griffenheim
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.1.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.1.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.1.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.1.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.1.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_GRO_active = yes }
+	option = { name = hsm_ver_grover.1.a custom_effect_tooltip = HSM_VER_GRO_open_court_tt }
+}
+country_event = {
+	id = hsm_ver_grover.2
+	title = hsm_ver_grover.2.t
+	picture = GFX_report_event_generic_read_write
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_ver_grover.2.dead.d }
+	desc = { trigger = { HSM_VER_GRO_local_minor = yes } text = hsm_ver_grover.2.minor.d }
+	desc = { trigger = { HSM_VER_GRO_local_adult = yes } text = hsm_ver_grover.2.adult.d }
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = GRI_grover_vi_dead HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes }
+			any_country = { exists = yes NOT = { tag = ROOT } has_character = GRI_emperor_grover_vi }
+		}
+		text = hsm_ver_grover.2.foreign.d
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_global_flag = GRI_grover_vi_dead
+				HSM_VER_GRO_local_minor = yes
+				HSM_VER_GRO_local_adult = yes
+				any_country = { exists = yes NOT = { tag = ROOT } has_character = GRI_emperor_grover_vi }
+			}
+		}
+		text = hsm_ver_grover.2.unknown.d
+	}
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_GRO_active = yes }
+	option = { name = hsm_ver_grover.2.a }
+}
+country_event = {
+	id = hsm_ver_grover.3
+	title = hsm_ver_grover.3.t
+	picture = GFX_report_event_generic_parliament
+	desc = { trigger = { HSM_VER_GRO_local_minor = yes } text = hsm_ver_grover.3.minor.d }
+	desc = { trigger = { HSM_VER_GRO_local_adult = yes } text = hsm_ver_grover.3.adult.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes } }
+	option = { name = hsm_ver_grover.3.a }
+}
+country_event = {
+	id = hsm_ver_grover.4
+	title = hsm_ver_grover.4.t
+	picture = GFX_report_event_generic_read_write
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.4.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.4.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.4.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.4.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.4.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes
+		OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes }
+		has_country_flag = HSM_VER_GRO_lessons_pending
+		NOT = { has_country_flag = HSM_VER_GRO_lessons_done }
+	}
+	option = {
+		name = hsm_ver_grover.4.a
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_open_education_tt
+		effect_tooltip = { add_tech_bonus = { name = HSM_VER_GRO_lessons bonus = 0.75 uses = 2 category = industry } }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+			HSM_VER_GRO_open_education = yes
+		} }
+	}
+	option = {
+		name = hsm_ver_grover.4.b
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_filtered_education_tt
+		effect_tooltip = { add_tech_bonus = { name = HSM_VER_GRO_lessons bonus = 0.75 uses = 2 category = electronics } }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+			HSM_VER_GRO_filtered_education = yes
+		} }
+	}
+	option = { name = hsm_ver_grover.lapsed.a trigger = { NOT = { AND = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } } } } }
+}
+country_event = {
+	id = hsm_ver_grover.5
+	title = hsm_ver_grover.5.t
+	picture = GFX_report_event_generic_parliament
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.5.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.5.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.5.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.5.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.5.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes
+		OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes }
+		has_country_flag = HSM_VER_GRO_lessons_done
+		has_country_flag = HSM_VER_GRO_petition_pending
+		NOT = { has_country_flag = HSM_VER_GRO_petition_done }
+	}
+	option = {
+		name = hsm_ver_grover.5.a
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_apply_law_tt
+		effect_tooltip = { add_stability = 0.05 }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+			HSM_VER_GRO_apply_law = yes
+		} }
+	}
+	option = {
+		name = hsm_ver_grover.5.b
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_protect_patron_tt
+		effect_tooltip = { add_war_support = 0.05 }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+			HSM_VER_GRO_protect_patron = yes
+		} }
+	}
+	option = { name = hsm_ver_grover.lapsed.a trigger = { NOT = { AND = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } } } } }
+}
+country_event = {
+	id = hsm_ver_grover.6
+	title = hsm_ver_grover.6.t
+	picture = GFX_event_griffon_diplomacy
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.6.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.6.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.6.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.6.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.6.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes
+		OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes }
+		has_country_flag = HSM_VER_GRO_petition_done
+		has_country_flag = HSM_VER_GRO_service_pending
+		NOT = { has_country_flag = HSM_VER_GRO_service_done }
+	}
+	option = {
+		name = hsm_ver_grover.6.a
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_logistics_tt
+		effect_tooltip = { add_tech_bonus = { name = HSM_VER_GRO_service bonus = 1 uses = 2 category = support_tech } }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+			HSM_VER_GRO_logistics = yes
+		} }
+	}
+	option = {
+		name = hsm_ver_grover.6.b
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_GRO_command_tt
+		effect_tooltip = { add_doctrine_cost_reduction = { name = HSM_VER_GRO_service cost_reduction = 0.75 uses = 2 category = land_doctrine } }
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+			HSM_VER_GRO_command = yes
+		} }
+	}
+	option = { name = hsm_ver_grover.lapsed.a trigger = { NOT = { AND = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } } } } }
+}
+country_event = {
+	id = hsm_ver_grover.7
+	title = hsm_ver_grover.7.t
+	picture = GFX_report_event_generic_parliament
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.7.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.7.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.7.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.7.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.7.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes
+		OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes }
+		has_country_flag = HSM_VER_GRO_service_done
+		has_country_flag = HSM_VER_GRO_articles_pending
+		NOT = { has_country_flag = HSM_VER_GRO_articles_done }
+	}
+	option = {
+		name = hsm_ver_grover.7.a
+		trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_pending NOT = { has_country_flag = HSM_VER_GRO_articles_done } }
+		custom_effect_tooltip = HSM_VER_GRO_sign_articles_tt
+		hidden_effect = { if = {
+			limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_pending NOT = { has_country_flag = HSM_VER_GRO_articles_done } }
+			HSM_VER_GRO_sign_articles = yes
+		} }
+	}
+	option = { name = hsm_ver_grover.lapsed.a trigger = { NOT = { AND = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_pending NOT = { has_country_flag = HSM_VER_GRO_articles_done } } } } }
+}
+country_event = {
+	id = hsm_ver_grover.8
+	title = hsm_ver_grover.8.t
+	picture = GFX_event_gothic_interior
+	desc = { trigger = { HSM_VER_GRO_local_minor = yes } text = hsm_ver_grover.8.minor.d }
+	desc = { trigger = { HSM_VER_GRO_local_adult = yes } text = hsm_ver_grover.8.adult.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes } }
+	option = { name = hsm_ver_grover.8.a custom_effect_tooltip = HSM_VER_GRO_prepare_tt }
+}
+country_event = {
+	id = hsm_ver_grover.9
+	title = hsm_ver_grover.9.t
+	picture = GFX_report_event_generic_parliament
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_ver_grover.9.dead.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } has_country_flag = HSM_VER_GRO_interrupted } text = hsm_ver_grover.9.interrupted.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_GRO_interrupted } OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes } } text = hsm_ver_grover.9.local.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes has_country_flag = HSM_VER_GRO_interrupted } } text = hsm_ver_grover.9.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { OR = { tag = ERI tag = EYR } has_country_flag = HSM_VER_GRO_civil_finished }
+	option = { name = hsm_ver_grover.9.a }
+}
+country_event = {
+	id = hsm_ver_grover.10
+	title = hsm_ver_grover.10.t
+	picture = GFX_event_griffenheim
+	desc = {
+		trigger = {
+			HSM_VER_ROM_government = yes
+			OR = { has_country_flag = HSM_VER_GRO_eri_diplomatic has_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		}
+		text = hsm_ver_grover.10.romance.d
+	}
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.10.eri_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eri_military } text = hsm_ver_grover.10.eri_military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_diplomatic HSM_VER_ROM_government = no } text = hsm_ver_grover.10.eyr_diplomatic.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_eyr_military } text = hsm_ver_grover.10.eyr_military.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		OR = { tag = ERI tag = EYR }
+		has_country_flag = HSM_VER_GRO_completed
+		date > 1021.5.21
+		NOT = { has_global_flag = GRI_grover_vi_dead }
+		GRI = { exists = yes is_subject = no has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
+	}
+	option = { name = hsm_ver_grover.10.a }
+}
+country_event = {
+	id = hsm_ver_grover.11
+	title = hsm_ver_grover.11.t
+	picture = GFX_event_gothic_interior
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_open_education has_country_flag = HSM_VER_GRO_apply_law has_country_flag = HSM_VER_GRO_logistics } text = hsm_ver_grover.11.open_law_logistics.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_open_education has_country_flag = HSM_VER_GRO_apply_law has_country_flag = HSM_VER_GRO_command } text = hsm_ver_grover.11.open_law_command.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_open_education has_country_flag = HSM_VER_GRO_protect_patron has_country_flag = HSM_VER_GRO_logistics } text = hsm_ver_grover.11.open_patron_logistics.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_open_education has_country_flag = HSM_VER_GRO_protect_patron has_country_flag = HSM_VER_GRO_command } text = hsm_ver_grover.11.open_patron_command.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_filtered_education has_country_flag = HSM_VER_GRO_apply_law has_country_flag = HSM_VER_GRO_logistics } text = hsm_ver_grover.11.filtered_law_logistics.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_filtered_education has_country_flag = HSM_VER_GRO_apply_law has_country_flag = HSM_VER_GRO_command } text = hsm_ver_grover.11.filtered_law_command.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_filtered_education has_country_flag = HSM_VER_GRO_protect_patron has_country_flag = HSM_VER_GRO_logistics } text = hsm_ver_grover.11.filtered_patron_logistics.d }
+	desc = { trigger = { has_country_flag = HSM_VER_GRO_filtered_education has_country_flag = HSM_VER_GRO_protect_patron has_country_flag = HSM_VER_GRO_command } text = hsm_ver_grover.11.filtered_patron_command.d }
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					OR = { has_country_flag = HSM_VER_GRO_open_education has_country_flag = HSM_VER_GRO_filtered_education }
+					OR = { has_country_flag = HSM_VER_GRO_apply_law has_country_flag = HSM_VER_GRO_protect_patron }
+					OR = { has_country_flag = HSM_VER_GRO_logistics has_country_flag = HSM_VER_GRO_command }
+				}
+			}
+		}
+		text = hsm_ver_grover.11.d
+	}
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = {
+		tag = GRI is_subject = no date > 1021.5.21
+		has_country_flag = HSM_VER_GRO_restored
+		has_character = GRI_emperor_grover_vi
+		has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+		NOT = { has_global_flag = GRI_grover_vi_dead }
+	}
+	option = { name = hsm_ver_grover.11.a }
+}
+country_event = {
+	id = hsm_ver_grover.12
+	title = hsm_ver_grover.12.t
+	picture = GFX_report_event_generic_read_write
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_ver_grover.12.dead.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead has_character = GRI_emperor_grover_vi } } text = hsm_ver_grover.12.custody.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } has_character = GRI_emperor_grover_vi } text = hsm_ver_grover.12.government.d }
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { OR = { tag = ERI tag = EYR } has_country_flag = HSM_VER_GRO_interrupted }
+	option = { name = hsm_ver_grover.12.a }
+}
+country_event = {
+	id = hsm_ver_grover.13
+	title = hsm_ver_grover.13.t
+	desc = hsm_ver_grover.13.d
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes HSM_VER_GRO_local_adult = yes }
+	option = { name = hsm_ver_grover.13.a }
+}

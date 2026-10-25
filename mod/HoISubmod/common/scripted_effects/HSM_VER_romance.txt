@@ -1,0 +1,105 @@
+# Shared flags survive either House becoming the founder. They are historical
+# memories, not authority: every option checks the current government again.
+HSM_VER_ROM_clear_delivery = {
+	ERI = { clr_country_flag = HSM_VER_ROM_delivery }
+	EYR = { clr_country_flag = HSM_VER_ROM_delivery }
+}
+HSM_VER_ROM_mark_delivery = {
+	ERI = { set_country_flag = { flag = HSM_VER_ROM_delivery value = 1 days = 45 } }
+	EYR = { set_country_flag = { flag = HSM_VER_ROM_delivery value = 1 days = 45 } }
+}
+HSM_VER_ROM_meet = {
+	if = {
+		limit = { HSM_VER_ROM_can_meet = yes }
+		ERI = { set_country_flag = HSM_VER_ROM_started }
+		EYR = { set_country_flag = HSM_VER_ROM_started }
+		HSM_VER_ROM_clear_delivery = yes
+	}
+}
+HSM_VER_ROM_open_petitions = {
+	if = {
+		limit = { HSM_VER_ROM_can_work = yes }
+		ERI = { set_country_flag = HSM_VER_ROM_service_agreed set_country_flag = HSM_VER_ROM_open_court }
+		EYR = { set_country_flag = HSM_VER_ROM_service_agreed set_country_flag = HSM_VER_ROM_open_court }
+		HSM_VER_ROM_clear_delivery = yes
+	}
+}
+HSM_VER_ROM_provincial_visits = {
+	if = {
+		limit = { HSM_VER_ROM_can_work = yes }
+		ERI = { set_country_flag = HSM_VER_ROM_service_agreed set_country_flag = HSM_VER_ROM_travelling_court }
+		EYR = { set_country_flag = HSM_VER_ROM_service_agreed set_country_flag = HSM_VER_ROM_travelling_court }
+		HSM_VER_ROM_clear_delivery = yes
+	}
+}
+HSM_VER_ROM_betroth = {
+	if = {
+		limit = { HSM_VER_ROM_can_betroth = yes }
+		ERI = { set_country_flag = HSM_VER_ROM_betrothed }
+		EYR = { set_country_flag = HSM_VER_ROM_betrothed }
+		HSM_VER_ROM_clear_delivery = yes
+	}
+}
+HSM_VER_ROM_crown = {
+	if = {
+		limit = { HSM_VER_ROM_can_crown = yes }
+		# This is the only appointment site; daily maintenance only queues scenes.
+		# New characters are unassigned until here, so no annexed/foreign court is raided.
+		set_country_flag = HSM_VER_ROM_crowned
+		if = { limit = { NOT = { has_country_flag = HSM_VER_ROM_started } } set_country_flag = HSM_VER_ROM_legacy_handover }
+		if = { limit = { NOT = { has_character = HSM_VER_rosaline_and_montague } } recruit_character = HSM_VER_rosaline_and_montague }
+		if = { limit = { NOT = { has_character = HSM_VER_rosaline_erie } } recruit_character = HSM_VER_rosaline_erie }
+		if = { limit = { NOT = { has_character = HSM_VER_montague_eyrie } } recruit_character = HSM_VER_montague_eyrie }
+		# Preserve the dukes' military roles and Grover's actual custody.
+		add_country_leader_role = {
+			character = HSM_VER_rosaline_and_montague
+			promote_leader = yes
+			country_leader = {
+				ideology = constitutional_monarchism
+				expire = "1965.1.1.1"
+				desc = HSM_VER_rosaline_and_montague_desc
+				traits = { HSM_VER_ROM_two_signatures }
+			}
+		}
+		if = { limit = { has_country_flag = HSM_VER_ROM_travelling_court } add_country_leader_trait = HSM_VER_ROM_court_on_the_road }
+		else = { add_country_leader_trait = HSM_VER_ROM_doors_of_the_court }
+		HSM_VER_ROM_clear_delivery = yes
+		clr_country_flag = HSM_VER_ROM_wedding_delivery
+	}
+}
+# Public integration hook: call in the actual founder AFTER all UNI founder
+# effects, membership cleanup and clearing HSM_VER_UNI_committing. Idempotent.
+HSM_VER_ROM_on_union = {
+	if = {
+		limit = { HSM_VER_ROM_can_crown = yes NOT = { has_country_flag = HSM_VER_ROM_wedding_delivery } }
+		set_country_flag = { flag = HSM_VER_ROM_wedding_delivery value = 1 days = 45 }
+		country_event = { id = hsm_ver_romance.4 days = 1 }
+	}
+}
+HSM_VER_ROM_maintain = {
+	if = {
+		limit = {
+			HSM_VER_ROM_story_context = yes HSM_VER_ROM_narrator = yes
+			ERI = { NOT = { has_country_flag = HSM_VER_ROM_delivery } }
+			EYR = { NOT = { has_country_flag = HSM_VER_ROM_delivery } }
+		}
+		if = {
+			limit = { HSM_VER_ROM_can_meet = yes }
+			HSM_VER_ROM_mark_delivery = yes
+			country_event = { id = hsm_ver_romance.1 days = 1 }
+		}
+		else_if = {
+			limit = { HSM_VER_ROM_can_work = yes }
+			HSM_VER_ROM_mark_delivery = yes
+			country_event = { id = hsm_ver_romance.2 days = 1 }
+		}
+		else_if = {
+			limit = { HSM_VER_ROM_can_betroth = yes }
+			HSM_VER_ROM_mark_delivery = yes
+			country_event = { id = hsm_ver_romance.3 days = 1 }
+		}
+	}
+	# Also covers pre-hook saves. Provenance and the original ruling duke are
+	# rechecked; no completed wedding or subsequent government is overwritten.
+	HSM_VER_ROM_on_union = yes
+}

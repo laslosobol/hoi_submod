@@ -1,0 +1,140 @@
+# Include only the root in the new ERI tree. All positions are absolute.
+shared_focus = {
+	id = HSM_VER_IMP_settlement
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_settlement
+	x = 54
+	y = 0
+	cost = 3
+	available = { HSM_VER_IMP_settlement_context = yes custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_not_decided_tt NOT = { has_country_flag = HSM_VER_IMP_offer_resolved } } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_IMP_optional_settlement_tt
+		if = { limit = { hidden_trigger = { HSM_VER_IMP_settlement_context = yes } } country_event = { id = hsm_ver_imperial.1 } }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_household_record
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_household_record
+	prerequisite = { focus = HSM_VER_IMP_settlement }
+	x = 52
+	y = 1
+	cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 2 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_IMP_noncustodial_tt
+		if = { limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes } } country_event = { id = hsm_ver_imperial.2 } }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_city_contracts
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_city_contracts
+	prerequisite = { focus = HSM_VER_IMP_settlement }
+	x = 56
+	y = 1
+	cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 3 }
+	completion_reward = {
+		if = { limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes } } country_event = { id = hsm_ver_imperial.3 } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_open_archives
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_open_archives
+	prerequisite = { focus = HSM_VER_IMP_household_record }
+	x = 52
+	y = 2
+	cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_household_recorded_tt has_country_flag = HSM_VER_IMP_fate_recorded } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 3 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes } }
+			add_tech_bonus = { name = HSM_VER_IMP_archive_bonus bonus = 0.5 uses = 2 category = industry }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_technical_agreement
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_technical_agreement
+	prerequisite = { focus = HSM_VER_IMP_city_contracts }
+	x = 56
+	y = 2
+	cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_contracts_awarded_tt has_country_flag = HSM_VER_IMP_contracts_awarded } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 2 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_IMP_protocol_invitation_tt
+		hidden_effect = { HSM_VER_IMP_offer_protocol = yes }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_public_accounts
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_public_accounts
+	prerequisite = { focus = HSM_VER_IMP_open_archives }
+	prerequisite = { focus = HSM_VER_IMP_technical_agreement }
+	x = 54
+	y = 3
+	cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 2 }
+	completion_reward = {
+		if = { limit = { hidden_trigger = { HSM_VER_IMP_mandate_work_allowed = yes } } country_event = { id = hsm_ver_imperial.5 } }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_last_year
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_last_year
+	prerequisite = { focus = HSM_VER_IMP_public_accounts }
+	mutually_exclusive = { focus = HSM_VER_IMP_return_the_keys }
+	x = 52
+	y = 4
+	cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_audit_published_tt has_country_flag = HSM_VER_IMP_audit_published } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_IMP_last_year_tt
+		show_ideas_tooltip = HSM_VER_IMP_final_programme
+		hidden_effect = { HSM_VER_IMP_extend_mandate = yes }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_VER_IMP_return_the_keys
+	icon = GFX_HSM_VER_ART_HSM_VER_IMP_return_the_keys
+	prerequisite = { focus = HSM_VER_IMP_public_accounts }
+	mutually_exclusive = { focus = HSM_VER_IMP_last_year }
+	x = 56
+	y = 4
+	cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_mandate_active_tt HSM_VER_IMP_mandate_work_allowed = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_audit_published_tt has_country_flag = HSM_VER_IMP_audit_published } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 2 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_IMP_handover_tt
+		show_ideas_tooltip = HSM_VER_IMP_civilian_legacy
+		hidden_effect = { HSM_VER_IMP_civilian_handover = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}

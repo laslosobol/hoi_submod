@@ -1,5 +1,8 @@
 .idea/
+.vscode/
 EaW/
+__pycache__/
+*.pyc
 
 # HoI4 / Paradox generated local state
 *.log
@@ -12,3 +15,11 @@ EaW/
 # Keep build exports out of source control.
 dist/
 release/
+
+# Local previews, replaced-art backups, launcher state and planning workbooks.
+art/previews/
+art/verenia/final-review/replaced/
+outputs/*
+!outputs/qa/
+outputs/qa/*
+!outputs/qa/*.json

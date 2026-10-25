@@ -1,0 +1,53 @@
+ideas = {
+	country = {
+		HSM_EYR_FORCE_civilian_release = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_civilian_release
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { stability_factor = 0.05 production_speed_industrial_complex_factor = 0.10 army_org_factor = -0.05 }
+		}
+		HSM_EYR_FORCE_military_government = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_military_government
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { army_org_factor = 0.08 planning_speed = 0.10 stability_factor = -0.05 consumer_goods_factor = 0.05 }
+		}
+		HSM_EYR_FORCE_open_correspondence = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_open_correspondence
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { research_speed_factor = 0.02 political_power_gain = -0.05 }
+		}
+		HSM_EYR_FORCE_supervised_correspondence = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_supervised_correspondence
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { planning_speed = 0.05 stability_factor = -0.02 }
+		}
+		HSM_EYR_FORCE_unplaced_reservists = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_unplaced_reservists
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { stability_factor = -0.04 production_speed_industrial_complex_factor = -0.05 }
+		}
+		HSM_EYR_FORCE_military_production_priority = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_military_production_priority
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { industrial_capacity_factory = 0.10 production_speed_industrial_complex_factor = -0.10 }
+		}
+		HSM_EYR_FORCE_contracted_workshops = {
+			picture = HSM_VER_ART_HSM_EYR_FORCE_contracted_workshops
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+			modifier = { supply_consumption_factor = -0.05 production_factory_efficiency_gain_factor = 0.05 political_power_gain = -0.05 }
+		}
+	}
+}

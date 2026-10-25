@@ -1,0 +1,70 @@
+[
+  {
+    "id": "romance_rosaline",
+    "target": "HSM_VER_rosaline_erie",
+    "kind": "portrait",
+    "source": "art/verenia/romance/rosaline-v1.png",
+    "portrait": true,
+    "approved": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/HSM_VER/rosaline.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/HSM_VER/rosaline.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Create one polished hand-painted Equestria at War / Hearts of Iron IV country leader portrait, vertical aspect ratio 156:210. New original character: Lady Rosaline Erie of Bantry, an adult female griffon noble in her mid twenties, intelligent lively crimson eyes, warm pale cream and light tawny head feathers, a fine swept ivory feather forelock, elegant hooked ochre beak, slightly wry confident smile. Definitely an anthropomorphic fantasy griffon with feathered eagle head, NOT a human, no human hair or skin. Bust only, facing three-quarters to the viewer's right. Refined burgundy and charcoal velvet court coat with modest ivory collar, thin warm gold edging and a single pearl fastener. Her design must be distinct from Duke Vincent: no hat, no heavy fur, no fierce frown, younger softer but decisive features. Painterly feather detail, expressive clean EaW-like shapes, readable at 156x210. Dark muted brown/charcoal interior background, warm light. Head and shoulders fill frame with safe top margin. No text, no frame, no crown, no flag, no invented insignia or heraldic emblem. Palette belongs to House Erie: ivory, charcoal, restrained red and gold highlights. This is an individual production portrait, not a collage.",
+    "review": "Source and native 156x210/65x67 exports visually checked: distinct adult griffon identities, intact faces, correct House color palettes, gold piping only, no invented heraldry. Joint portrait preserves both identities. In-game verification pending.",
+    "runtime_verified": false,
+    "bindings_file": "mod/HoISubmod/common/characters/HSM_VER_romance.txt"
+  },
+  {
+    "id": "romance_montague",
+    "target": "HSM_VER_montague_eyrie",
+    "kind": "portrait",
+    "source": "art/verenia/romance/montague-v2.png",
+    "portrait": true,
+    "approved": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/HSM_VER/montague.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/HSM_VER/montague.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Create one vertical 156:210 production game portrait of Montague Eyrie, Earl of Verenia, adult male griffon noble in his late twenties. Match the illustrated hand-painted feather rendering, lighting and visual world of the supplied Rosaline reference, but draw a DISTINCT male character. Handsome russet-brown eagle-like feathered head, cream eye patches and throat, slightly tousled short swept-back feather crest, cool blue eyes, strong warm ochre hooked beak, calm open thoughtful expression with restrained warmth. He is a courtly correspondent who later becomes a civilian co-ruler, not a general: deep midnight-blue tailored court coat, muted gold piping, ivory shirt/collar, simple oval lapis fastener. No armour, no weapons, no hat or crown. Three-quarter head and upper chest looking toward the viewer's left, clean silhouette and generous top margin. Adult anthropomorphic fantasy griffon anatomy, no human skin/hair/ears. Dark charcoal-blue interior background. Strong readable at tiny 156x210 leader size, polished painterly rendering with stylized EaW expressive eyes. No words, no frame, no flags, no invented heraldic emblems, no badge or medals. Preserve Eyrie's blue/gold palette without creating heraldry. One portrait, not collage.",
+    "correction": "Revise this Montague Eyrie griffon portrait to give him a clearly distinct adult male identity rather than a recolour of the female Rosaline design. Preserve blue-and-gold court coat, cream throat, brown plumage, blue eyes, lapis fastener, painterly style and dark background. Change face and pose: much squarer heavier brow with NO eyelashes, narrower more thoughtful eyes, longer stronger hooked eagle beak, angular cheek feather ridge, SHORT neatly swept backward head feathers without the long ivory female forelock. Turn head to three-quarters LEFT, beak pointing toward left edge, both eyes plausible. A young adult male noble diplomat with serious but kind expression. Bust portrait in 156:210 aspect ratio, entire head within frame safe margins; composition distinct, not a mirrored recolour. Fantasy griffon head entirely feathered, no human skin, no mammalian ears, no hair. No text, crowns, insignia or flags.",
+    "review": "Source and native 156x210/65x67 exports visually checked: distinct adult griffon identities, intact faces, correct House color palettes, gold piping only, no invented heraldry. Joint portrait preserves both identities. In-game verification pending.",
+    "runtime_verified": false,
+    "bindings_file": "mod/HoISubmod/common/characters/HSM_VER_romance.txt"
+  },
+  {
+    "id": "romance_co-rulers",
+    "target": "HSM_VER_rosaline_and_montague",
+    "kind": "portrait",
+    "source": "art/verenia/romance/co-rulers-v1.png",
+    "portrait": true,
+    "approved": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/HSM_VER/HSM_VER_rosaline_and_montague.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "Create ONE joint country-leader portrait for the united state of Verenia in Equestria at War / HOI4, vertical 156:210 aspect ratio. The two supplied pictures are exact character identity references. Depict BOTH adult griffon co-rulers together: Rosaline (cream/tawny plumage, crimson eyes, ivory swept forelock, burgundy-charcoal coat, pearl clasp) and Montague (russet brown plumage, angular heavy brow, blue eyes, short swept feathers, midnight-blue coat, lapis clasp). Preserve their distinct faces, colors and clothes. Tight double bust portrait: Rosaline in left foreground, Montague immediately alongside and slightly above/right behind her, both large heads fully visible with no overlapping eyes or beaks. Her beak points slightly right, his slightly left but both gaze outward to viewer, calm warm confident expressions, companionable equal partners, not embracing or wedding props. Both faces must remain clear at 156x210, keep whole group within central 80% width and avoid empty lower half. Fine gold garment piping only, no crowns, flags, medals, coat-of-arms or invented heraldry. Dark softly painted emerald-charcoal interior backdrop subtly suggests united Verenia, without distracting objects. Match reference painterly EaW fantasy portrait style and lighting. No human anatomy, text, frame, collage division, duplicated limbs, additional characters. This is a single cohesive official portrait with two distinct people, not two separate panels.",
+    "review": "Source and native 156x210/65x67 exports visually checked: distinct adult griffon identities, intact faces, correct House color palettes, gold piping only, no invented heraldry. Joint portrait preserves both identities. In-game verification pending.",
+    "runtime_verified": false,
+    "bindings_file": "mod/HoISubmod/common/characters/HSM_VER_romance.txt"
+  }
+]

@@ -1,0 +1,36 @@
+# Route commitments also guard native mediation and already-open response events.
+HSM_VER_diplomatic_routes_open = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_diplomatic_routes_open_tt
+		ERI = { NOT = { has_country_flag = HSM_VER_military_route has_completed_focus = HSM_ERI_FORCE_the_price_of_victory } }
+		EYR = { NOT = { has_country_flag = HSM_VER_military_route has_completed_focus = HSM_EYR_FORCE_the_last_campaign } }
+	}
+}
+HSM_VER_conference_ai_partner = {
+	OR = {
+		AND = { tag = ERI EYR = { is_ai = yes } }
+		AND = { tag = EYR ERI = { is_ai = yes } }
+	}
+}
+HSM_VER_conference_failed = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_conference_failed_tt
+		has_country_flag = HSM_VER_diplomatic_route
+		is_subject = no
+		has_capitulated = no
+		has_war = no
+		NOT = { HSM_VER_charter_valid = yes }
+		# Founding ends negotiations; later occupation cannot turn that success into refusal.
+		NOT = { has_country_flag = HSM_VER_UNI_founded }
+		OR = {
+			ERI = { has_country_flag = HSM_VER_armistice_refused }
+			ERI = { has_country_flag = HSM_VER_treaty_refused }
+			ERI = { has_country_flag = HSM_VER_charter_refused }
+			NOT = { HSM_VER_two_free_houses = yes }
+			NOT = { HSM_VER_diplomatic_routes_open = yes }
+			ERI = { NOT = { has_country_leader = { character = ERI_duke_vincent_erie } } }
+			EYR = { NOT = { has_country_leader = { character = EYR_duke_iovinus_eyrie } } }
+		}
+		ERI = { NOT = { has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_charter_pending } }
+	}
+}

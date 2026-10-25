@@ -1,0 +1,177 @@
+add_namespace = hsm_ver_uni
+
+# Refusal is first: an unattended human event never defaults to surrender.
+country_event = {
+	id = hsm_ver_uni.10
+	title = hsm_ver_uni.10.t
+	desc = hsm_ver_uni.10.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = ERI }
+		has_country_flag = HSM_VER_UNI_invite_pending_ERI
+		ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.decline
+		custom_effect_tooltip = HSM_VER_EVT_decline_union_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_invitation_valid_ERI = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_invitation_valid_ERI = yes } HSM_VER_UNI_withdraw_ERI = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.participate
+		trigger = { HSM_VER_UNI_invitation_valid_ERI = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_participation_tt
+		hidden_effect = { HSM_VER_UNI_accept_invitation_ERI = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.20
+	title = hsm_ver_uni.20.t
+	desc = hsm_ver_uni.20.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = ERI }
+		has_country_flag = HSM_VER_UNI_vote_pending_ERI
+		ERI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.refuse_absorption
+		custom_effect_tooltip = HSM_VER_EVT_refuse_absorption_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_vote_valid_ERI = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_vote_valid_ERI = yes } HSM_VER_UNI_withdraw_ERI = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.approve_absorption
+		trigger = { HSM_VER_UNI_vote_valid_ERI = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_absorption_warning_tt
+		hidden_effect = { HSM_VER_UNI_ratify_ERI = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.11
+	title = hsm_ver_uni.11.t
+	desc = hsm_ver_uni.11.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = EYR }
+		has_country_flag = HSM_VER_UNI_invite_pending_EYR
+		EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.decline
+		custom_effect_tooltip = HSM_VER_EVT_decline_union_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_invitation_valid_EYR = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_invitation_valid_EYR = yes } HSM_VER_UNI_withdraw_EYR = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.participate
+		trigger = { HSM_VER_UNI_invitation_valid_EYR = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_participation_tt
+		hidden_effect = { HSM_VER_UNI_accept_invitation_EYR = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.21
+	title = hsm_ver_uni.21.t
+	desc = hsm_ver_uni.21.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = EYR }
+		has_country_flag = HSM_VER_UNI_vote_pending_EYR
+		EYR = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.refuse_absorption
+		custom_effect_tooltip = HSM_VER_EVT_refuse_absorption_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_vote_valid_EYR = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_vote_valid_EYR = yes } HSM_VER_UNI_withdraw_EYR = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.approve_absorption
+		trigger = { HSM_VER_UNI_vote_valid_EYR = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_absorption_warning_tt
+		hidden_effect = { HSM_VER_UNI_ratify_EYR = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.12
+	title = hsm_ver_uni.12.t
+	desc = hsm_ver_uni.12.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = AVI }
+		has_country_flag = HSM_VER_UNI_invite_pending_AVI
+		AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.decline
+		custom_effect_tooltip = HSM_VER_EVT_decline_union_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_invitation_valid_AVI = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_invitation_valid_AVI = yes } HSM_VER_UNI_withdraw_AVI = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.participate
+		trigger = { HSM_VER_UNI_invitation_valid_AVI = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_participation_tt
+		hidden_effect = { HSM_VER_UNI_accept_invitation_AVI = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.22
+	title = hsm_ver_uni.22.t
+	desc = hsm_ver_uni.22.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = {
+		HSM_VER_UNI_house = yes NOT = { tag = AVI }
+		has_country_flag = HSM_VER_UNI_vote_pending_AVI
+		AVI = { has_country_flag = HSM_VER_UNI_leader NOT = { has_country_flag = HSM_VER_UNI_closed has_country_flag = HSM_VER_UNI_founded } }
+	}
+	option = {
+		name = hsm_ver_uni.refuse_absorption
+		custom_effect_tooltip = HSM_VER_EVT_refuse_absorption_tt
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_VER_UNI_vote_valid_AVI = yes } }
+		hidden_effect = {
+			if = { limit = { HSM_VER_UNI_vote_valid_AVI = yes } HSM_VER_UNI_withdraw_AVI = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_uni.approve_absorption
+		trigger = { HSM_VER_UNI_vote_valid_AVI = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_UNI_absorption_warning_tt
+		hidden_effect = { HSM_VER_UNI_ratify_AVI = yes }
+	}
+}
+country_event = {
+	id = hsm_ver_uni.30 title = hsm_ver_uni.30.t desc = hsm_ver_uni.30.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	trigger = {
+		HSM_VER_UNI_house = yes exists = yes has_country_flag = HSM_VER_UNI_founded
+		NOT = { has_country_flag = HSM_VER_UNI_founding_report_seen }
+	}
+	immediate = { set_country_flag = HSM_VER_UNI_founding_report_seen }
+	option = { name = hsm_ver_uni.30.a }
+}
+

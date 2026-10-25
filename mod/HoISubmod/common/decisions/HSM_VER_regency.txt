@@ -1,0 +1,26 @@
+HSM_VER_REG_settlement_business = {
+	HSM_VER_REG_reconsider_agreement = {
+		icon = generic_political_discourse cost = 35
+		visible = { has_completed_focus = HSM_VER_REG_agreement_for_herzland NOT = { has_country_flag = HSM_VER_REG_regency has_country_flag = HSM_VER_REG_compact } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_regency_ready_tt HSM_VER_REG_can_propose = yes NOT = { has_country_flag = HSM_VER_REG_proposal_scene } } }
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_regency_tt hidden_effect = { clr_country_flag = HSM_VER_REG_proposal_seen HSM_VER_REG_queue_scenes = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	HSM_VER_REG_request_household = {
+		icon = generic_political_discourse cost = 25
+		visible = { NOT = { has_character = GRI_emperor_grover_vi has_global_flag = GRI_grover_vi_dead has_country_flag = HSM_VER_REG_compact } any_country = { HSM_VER_REG_house_host = yes } }
+		available = {
+			custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_context_tt HSM_VER_REG_context = yes }
+			custom_trigger_tooltip = { tooltip = HSM_VER_DEC_custody_wait_tt NOT = { has_country_flag = HSM_VER_REG_custody_retry } }
+		}
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_custody_request_tt hidden_effect = { HSM_VER_REG_request_household = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	HSM_VER_REG_reopen_household = {
+		icon = generic_political_discourse cost = 0 fire_only_once = yes
+		visible = { has_completed_focus = HSM_VER_REG_household_file NOT = { has_character = GRI_emperor_grover_vi has_global_flag = GRI_grover_vi_dead } }
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_DEC_custody_recover_ready_tt HSM_VER_REG_can_recover_household = yes } }
+		complete_effect = { custom_effect_tooltip = HSM_VER_DEC_custody_recover_tt hidden_effect = { HSM_VER_REG_recover_household = yes } country_event = { id = hsm_ver_regency.2 days = 1 } }
+		ai_will_do = { factor = 1 }
+	}
+}

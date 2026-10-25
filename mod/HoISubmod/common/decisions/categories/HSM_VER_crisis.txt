@@ -1,0 +1,10 @@
+HSM_VER_CR_border_correspondence = {
+	icon = generic_political_discourse
+	allowed = { OR = { original_tag = ERI original_tag = EYR } }
+	visible = { HSM_VER_CR_house = yes has_country_flag = HSM_VER_diplomatic_route NOT = { has_country_flag = HSM_VER_military_route HSM_VER_AVI_neutral_route = yes } has_country_flag = HSM_VER_CR_contact_opened HSM_VER_CR_known_government = yes is_subject = no }
+}
+HSM_VER_CR_integration_correspondence = {
+	icon = generic_political_discourse
+	allowed = { original_tag = AVI }
+	visible = { tag = AVI has_completed_focus = full_integration NOT = { has_completed_focus = HSM_AVI_three_separate_seals } HSM_VER_CR_union_government = yes OR = { ERI = { exists = yes is_subject = no } EYR = { exists = yes is_subject = no } } }
+}

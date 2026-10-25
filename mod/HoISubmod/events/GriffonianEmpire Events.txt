@@ -18,18 +18,24 @@ add_namespace = imperial_news
 	#}
 country_event = { #A Train Trip
 	id = imperial.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.1"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.1"
+		}}
 	title = imperial.1.t
 	desc = imperial.1.d
 	picture = GFX_event_griffenheim
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		NOT = { has_global_flag = GRI_emperor_dead }
 	}
 	option = {
 		name = imperial.1.a
-		add_political_power = 100
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = 100
 		add_stability = 0.10
 		hidden_effect = {
 			country_event = { days = 40 id = imperial.2 }
@@ -58,23 +64,30 @@ country_event = { #A Train Trip
 				country_event = { days = 39 id = grover.27 }
 			}
 		}
+		}
 	}
 }
 
 country_event = { #A Normal Day
 	id = imperial.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.2"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.2"
+		}}
 	title = imperial.2.t
 	desc = imperial.2.d
 	picture = GFX_event_medieval_castle_on_hill
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		NOT = { has_global_flag = GRI_emperor_dead }
 	}
 	option = {
 		name = imperial.2.a
-		add_political_power = -150
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = -150
 		add_stability = -0.10
 		hidden_effect = {
 			if = {
@@ -87,13 +100,18 @@ country_event = { #A Normal Day
 			country_event = { days = 20 id=imperial.3 }
 			}
 		}
+		}
 	}
 }
 
 country_event = {
 	id = imperial.30
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.30"}
-	trigger = { # just in case
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.30"
+		}}
+	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes # just in case
 		tag = GRI
 		date > 1007.3.15
 		NOT = { has_global_flag = GRI_emperor_dead }
@@ -108,14 +126,21 @@ country_event = {
 	fire_only_once = yes
 	hidden = yes
 	option = {
-		country_event = imperial.3
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			country_event = imperial.3
+		}
 	}
 }
 
 country_event = { #April fools trigger
 	id = imperial.300
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.300"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.300"
+		}}
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		tag = GRI
 		date > 1007.2.28
 		NOT = { has_global_flag = GRI_emperor_dead }
@@ -130,13 +155,20 @@ country_event = { #April fools trigger
 	fire_only_once = yes
 	hidden = yes
 	option = {
-		country_event = imperium.2
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			country_event = imperium.2
+		}
 	}
 }
 
 country_event = { #Grover V is dead
 	id = imperial.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.3"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.3"
+		}}
 	title = imperial.3.t
 	desc = imperial.3.d
 	picture = GFX_event_gothic_interior
@@ -144,7 +176,9 @@ country_event = { #Grover V is dead
 	is_triggered_only = yes
 	option = {
 		name = imperial.3.a
-		GRI_emperor_grover_v = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			GRI_emperor_grover_v = {
 			retire = yes
 		}
 		add_country_leader_role = {
@@ -180,6 +214,7 @@ country_event = { #Grover V is dead
 				TRD = { country_event = { id = tradefed.141 days = 4 } }
 			}
 		    complete_national_focus = GRI_emperor_passed
+		}
 		}
 	}
 }
@@ -1091,7 +1126,10 @@ country_event = {
 
 country_event = { #Archon Path
 	id = imperial.44
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.44"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.44"
+		}}
 	title = {
 		trigger = { has_completed_focus = GRI_eros }
 		text = imperial.44.t
@@ -1111,6 +1149,7 @@ country_event = { #Archon Path
 	picture = GFX_event_griffenheim
 	fire_only_once = yes
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		tag = GRI
 		date > 1021.5.21
 		OR = {
@@ -1125,7 +1164,9 @@ country_event = { #Archon Path
 	option = {
 		name = imperial.44.a
 		trigger = { has_completed_focus = GRI_eros }
-		add_political_power = 200
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = 200
 		add_stability = 0.05
 		remove_ideas = GRI_grover_vi
 		set_portraits = {
@@ -1155,11 +1196,14 @@ country_event = { #Archon Path
 			}
 		}
 		set_party_name = { ideology = fascism name = GRI_imperial_party_f long_name = GRI_imperial_party_f_long }
+		}
 	}
 	option = {
 		name = imperial.45.a
 		trigger = { has_completed_focus = GRI_eagleclaw }
-		add_political_power = 200
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = 200
 		add_stability = 0.05
 		hidden_effect = {
 			if = {
@@ -1198,6 +1242,7 @@ country_event = { #Archon Path
 			}
 		}
 		set_party_name = { ideology = neutrality name = GRI_imperial_party_n long_name = GRI_imperial_party_n_long }
+		}
 	}
 }
 
@@ -1874,7 +1919,11 @@ country_event = {
 #Demand land
 country_event = {
 	id = imperial.70
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.70"}
+	trigger = { HSM_VER_GRO_native_demand_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_demand_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.70"
+		}}
 	title = imperial.70.t
 	desc = imperial.70.d
 	picture = GFX_event_griffenheim
@@ -1882,7 +1931,9 @@ country_event = {
 
 	option = {
 		name = imperial.70.a
-		effect_tooltip = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_demand_allowed = yes } }
+			effect_tooltip = {
 			every_state = {
 				limit = {
 					is_core_of_griffon_empire_country = yes
@@ -1902,6 +1953,7 @@ country_event = {
 				country_event = { id = imperial.71 days = 1 }
 			}
 		}
+		}
 		ai_chance = {
 			factor = 1000
 			modifier = {
@@ -1915,7 +1967,9 @@ country_event = {
 		trigger = {
 			is_subject = no
 		}
-		effect_tooltip = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_demand_allowed = yes } }
+			effect_tooltip = {
 			leave_faction = yes
 			FROM = {
 				if = {
@@ -1939,6 +1993,7 @@ country_event = {
 				country_event = { id = imperial.72 days = 1 }
 			}
 		}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -1948,7 +2003,11 @@ country_event = {
 #Demand land
 country_event = {
 	id = imperial.71
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.71"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.71"
+		}}
 	title = imperial.71.t
 	desc = imperial.71.d
 
@@ -1957,7 +2016,9 @@ country_event = {
 
 	option = {
 		name = imperial.71.a
-		every_state = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			every_state = {
 			limit = {
 				is_core_of_griffon_empire_country = yes
 				owner = {
@@ -1969,13 +2030,18 @@ country_event = {
 			}
 			ROOT = { transfer_state = PREV }
 		}
+		}
 	}
 }
 
 #Demand land
 country_event = {
 	id = imperial.72
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.72"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.72"
+		}}
 	title = imperial.72.t
 	desc = imperial.72.d
 
@@ -1984,7 +2050,9 @@ country_event = {
 
 	option = {
 		name = imperial.72.a
-		FROM = { leave_faction = yes }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			FROM = { leave_faction = yes }
 		if = {
 			limit = { has_non_aggression_pact_with = FROM }
 			diplomatic_relation = {
@@ -2003,12 +2071,17 @@ country_event = {
 			id = FROM
 			value = 100
 		}
+		}
 	}
 }
 
 country_event = { #The Barrack Revolt
 	id = imperial.73
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.73"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.73"
+		}}
 	title = imperial.73.t
 	desc = imperial.73.d
 
@@ -2035,9 +2108,12 @@ country_event = { #The Barrack Revolt
 				factor = 0
 			}
 		}
-		add_manpower = -1000
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_manpower = -1000
 		hidden_effect = {
 			country_event = { id = imperial.99 days = 3 }
+		}
 		}
 	}
 
@@ -2068,19 +2144,26 @@ country_event = { #The Barrack Revolt
 				factor = 0
 			}
 		}
-		add_political_power = -50
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = -50
 		add_stability = -0.15
 		add_war_support = -0.05
 		add_manpower = -500
 		hidden_effect = {
 		country_event = { id = imperial.74 days = 3 }
 		}
+		}
 	}
 }
 
 country_event = { #The Army Storms the Palace
 	id = imperial.74
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.74"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.74"
+		}}
 	title = imperial.74.t
 	desc = imperial.74.d
 
@@ -2089,7 +2172,9 @@ country_event = { #The Army Storms the Palace
 
 	option = {
 		name = imperial.74.a
-		add_political_power = -100
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = -100
 		add_stability = -0.15
 		add_war_support = -0.10
 		add_country_leader_role = {
@@ -2128,12 +2213,17 @@ country_event = { #The Army Storms the Palace
 		hidden_effect = {
 		country_event = { id = imperial.75 days = 3 }
 		}
+		}
 	}
 }
 
 country_event = { #Shooting the Emperor
 	id = imperial.75
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.75"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.75"
+		}}
 	title = imperial.75.t
 	desc = imperial.75.d
 
@@ -2142,7 +2232,9 @@ country_event = { #Shooting the Emperor
 
 	option = {
 		name = imperial.75.a
-		add_political_power = 100
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			add_political_power = 100
 		add_stability = 0.05
 		remove_ideas = GRI_grover_vi
 		GRI_emperor_grover_vi = {
@@ -2157,12 +2249,17 @@ country_event = { #Shooting the Emperor
 			country_event = { id = imperial.76 days = 3 }
 			news_event = { id = imperial_news.6 days = 4 }
 		}
+		}
 	}
 }
 
 country_event = { #The Anarchy
 	id = imperial.76
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.76"}
+	trigger = { HSM_VER_GRO_native_ruler_allowed = yes }
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.76"
+		}}
 	title = imperial.76.t
 	desc = imperial.76.d
 
@@ -2171,7 +2268,9 @@ country_event = { #The Anarchy
 
 	option = {
 		name = imperial.76.a
-		end_puppet = STW
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			end_puppet = STW
 		if = {
 			limit = {
 				STW = {
@@ -2286,6 +2385,7 @@ country_event = { #The Anarchy
 			set_country_flag = have_regular_puppets
 			set_country_flag = GRI_junta_established
 			set_global_flag = GRI_junta_flag
+		}
 		}
 	}
 }
@@ -3755,12 +3855,16 @@ country_event = { #Navy Event
 
 country_event = { #Griffenheim Square
 	id = imperial.123
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.123"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.123"
+		}}
 	title = imperial.123.t
 	desc = imperial.123.d
 	picture = GFX_event_griffenheim
 	fire_only_once = yes
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		original_tag = GRI
 		date > 1021.5.21
 		has_completed_focus = GRI_core_south
@@ -3779,7 +3883,9 @@ country_event = { #Griffenheim Square
 	}
 	option = {
 		name = imperial.123.a
-		custom_effect_tooltip = ANG_political_tree_tp
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			custom_effect_tooltip = ANG_political_tree_tp
 		add_stability = -0.40
 		add_war_support = -0.40
 		add_political_power = -100
@@ -3801,6 +3907,7 @@ country_event = { #Griffenheim Square
 		        keep_completed = yes
 		    }
 			complete_national_focus = GRI_griffenheim_square
+		}
 		}
 	}
 }
@@ -4192,12 +4299,16 @@ country_event = { #First Widescale Imperial Parliamentary Election
 
 country_event = { #Eros Dies
 	id = imperial.137
-	immediate = {log = "[GetDateText]: [Root.GetName]: event imperial.137"}
+	immediate = {if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			log = "[GetDateText]: [Root.GetName]: event imperial.137"
+		}}
 	title = imperial.137.t
 	desc = imperial.137.d
 	picture = GFX_event_gothic_interior
 	fire_only_once = yes
 	trigger = {
+		HSM_VER_GRO_native_ruler_allowed = yes
 		original_tag = GRI
 		date > 1022.5.21
 		has_country_leader = {
@@ -4211,9 +4322,12 @@ country_event = { #Eros Dies
 	}
 	option = {
 		name = imperial.137.a
-		set_global_flag = GRI_eros_dead
+		if = {
+			limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+			set_global_flag = GRI_eros_dead
 		GRI_archon_eros_vii = {
 			retire = yes
+		}
 		}
 	}
 }

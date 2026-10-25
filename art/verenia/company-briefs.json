@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "binding_manifest": "art/verenia/company-bindings.json",
+    "binding_manifest_sha256": "716f983db53955a8aad13ad182cf38067442a262a017e25718cb6badeda51634",
+    "source_file": "EaW/common/ideas/zzz_generic.txt",
+    "source_file_sha256": "5c6d5c559828cfa7491000ed4d45f82bbaddeb2edbb076735a6b001916dd3a94",
+    "countries": [
+      "ERI",
+      "EYR",
+      "AVI"
+    ],
+    "record_count": 11,
+    "mapping": "Exactly one record per company-bindings record, preserving order, id, target, clone, name, kind, category, file, original_picture, reference, source and exports. Clone is the scoped company target; id and target remain the original generic IDs as pinned.",
+    "status": "All eleven companies visually approved, exported and mechanically bound under preserve-hired-v2. In-game QA pending."
+  },
+  "art_rules": {
+    "references": [
+      "docs/icon-generation-manifest.md",
+      "art/verenia/README.md",
+      "art/verenia/palette-guidance.json"
+    ],
+    "native_size": {
+      "width": 64,
+      "height": 64
+    },
+    "background": "Transparent exterior",
+    "palette_policy": "Hex swatches are proposed object-material finishes, not canonical company colors or national heraldry. No blanket gold/cobalt palette; small brass/bronze only where the actual component warrants it.",
+    "identity_policy": "These are generic category companies scoped jointly to ERI/EYR/AVI, not eleven newly named lore corporations. Invent no founder, heraldic lineage, national identity or manufacturer trademark. No flags are needed; do not add one.",
+    "trait_policy": "Depict category and supported traits, not unsupported equipment bonuses. Aircraft constructions are illustrative period product symbols, not claims of documented company models. Generic traits with only random/AI fields add no equipment modifier.",
+    "composition": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering.",
+    "reference_review": "Native definitions and trait effects inspected. Original sprite references copied exactly from company-bindings; sprite pixels were not visually reviewed for this sidecar.",
+    "scope_preservation": "All eleven separate company targets remain required. The four aircraft companies use different silhouettes, not palette-swapped copies. No global generic sprite replacement is implied."
+  },
+  "records": [
+    {
+      "id": "generic_tank_manufacturer",
+      "target": "generic_tank_manufacturer",
+      "clone": "HSM_VER_COMP_generic_tank_manufacturer",
+      "name": "Armor Company",
+      "kind": "manufacturer",
+      "category": "tank_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1338,
+      "original_picture": "generic_tank_manufacturer_1",
+      "reference": {
+        "alias": "GFX_idea_generic_tank_manufacturer_1",
+        "path": "gfx/interface/ideas/idea_generic_tank_manufacturer_1.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_tank_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_tank_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "38f508a611935008848b800604dbb2557ad2e9ee4f5811b493b7882bab5ac098"
+        }
+      ],
+      "traits": [
+        "tank_manufacturer"
+      ],
+      "evidence": {
+        "line": 1338,
+        "trait": "tank_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10077,
+        "research_bonus": {
+          "armor": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "equipment_bonus": {
+            "armor": {
+              "reliability": "0.05"
+            },
+            "armored_car_equipment": {
+              "reliability": "0.05"
+            }
+          },
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Armor research company with a small reliability bonus for armor and armored cars.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A heavy tank drive sprocket meshing with three broad track links, one exposed axle bearing seated cleanly at the hub.",
+      "composition_rationale": "The interlocking running gear communicates dependable armored engineering rather than an unsupported heavy-tank or offensive specialization.",
+      "palette": [
+        {
+          "hex": "#657154",
+          "subject": "track side plates",
+          "material": "Muted olive protective paint"
+        },
+        {
+          "hex": "#424D50",
+          "subject": "sprocket and track recesses",
+          "material": "Dark steel"
+        },
+        {
+          "hex": "#B0B8B3",
+          "subject": "bearing and worn contact faces",
+          "material": "Machined steel"
+        }
+      ],
+      "palette_rationale": "Olive paint identifies field machinery; silver contact surfaces make the reliability motif legible. Neither is a national color assignment.",
+      "distinctness": "Squat interlocking tread silhouette; no full vehicle, shared gear border or gold armor.",
+      "lore_hazards": "Do not imply an armor-thickness, firepower or heavy-tank bonus; the inspected trait grants reliability.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Armor Company. Composition: A heavy tank drive sprocket meshing with three broad track links, one exposed axle bearing seated cleanly at the hub. Material colors: track side plates: Muted olive protective paint (#657154); sprocket and track recesses: Dark steel (#424D50); bearing and worn contact faces: Machined steel (#B0B8B3). Squat interlocking tread silhouette; no full vehicle, shared gear border or gold armor. Do not imply an armor-thickness, firepower or heavy-tank bonus; the inspected trait grants reliability.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_naval_manufacturer",
+      "target": "generic_naval_manufacturer",
+      "clone": "HSM_VER_COMP_generic_naval_manufacturer",
+      "name": "Naval Company",
+      "kind": "manufacturer",
+      "category": "naval_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1358,
+      "original_picture": "generic_naval_manufacturer_1",
+      "reference": {
+        "alias": "GFX_idea_generic_naval_manufacturer_1",
+        "path": "gfx/interface/ideas/idea_generic_naval_manufacturer_1.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_naval_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "4b7a254c44f1418ed07c57df9aa0852e919fd1441176dddbe907f3864503f3cf"
+        }
+      ],
+      "traits": [
+        "naval_manufacturer"
+      ],
+      "evidence": {
+        "line": 1358,
+        "trait": "naval_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10322,
+        "research_bonus": {
+          "naval_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "General naval-equipment research company; its generic trait supplies no additional specialized equipment modifier.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A broad shipbuilding hull section resting in a two-block dry-dock cradle, with one bronze screw propeller visible beneath the stern.",
+      "composition_rationale": "Shipyard structure and propulsion communicate general naval design without claiming a battleship, carrier or submarine specialization.",
+      "palette": [
+        {
+          "hex": "#929E9F",
+          "subject": "hull plates",
+          "material": "Weathered steel"
+        },
+        {
+          "hex": "#805C50",
+          "subject": "lower hull strip",
+          "material": "Muted red-oxide primer"
+        },
+        {
+          "hex": "#9E895B",
+          "subject": "propeller",
+          "material": "Aged bronze"
+        },
+        {
+          "hex": "#665F55",
+          "subject": "cradle",
+          "material": "Dark timber"
+        }
+      ],
+      "palette_rationale": "Steel and red-oxide are shipbuilding materials; bronze belongs only on the propeller. No blue ocean disc is needed.",
+      "distinctness": "Deep rounded hull section with an exposed bronze screw, not an anchor crest.",
+      "lore_hazards": "No fleet ensign, anchor-and-crown badge or invented dockyard history; naval research does not imply a particular ship class.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Naval Company. Composition: A broad shipbuilding hull section resting in a two-block dry-dock cradle, with one bronze screw propeller visible beneath the stern. Material colors: hull plates: Weathered steel (#929E9F); lower hull strip: Muted red-oxide primer (#805C50); propeller: Aged bronze (#9E895B); cradle: Dark timber (#665F55). Deep rounded hull section with an exposed bronze screw, not an anchor crest. No fleet ensign, anchor-and-crown badge or invented dockyard history; naval research does not imply a particular ship class.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_light_aircraft_manufacturer",
+      "target": "generic_light_aircraft_manufacturer",
+      "clone": "HSM_VER_COMP_generic_light_aircraft_manufacturer",
+      "name": "Light Air Company",
+      "kind": "manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1381,
+      "original_picture": "generic_air_manufacturer_1",
+      "reference": {
+        "alias": "GFX_idea_generic_air_manufacturer_1",
+        "path": "gfx/interface/ideas/idea_generic_air_manufacturer_1.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_light_aircraft_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_light_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "37714ad91533afb2d7351f3bad275336a6d9be387617bdf6a8a0332354d48844"
+        }
+      ],
+      "traits": [
+        "light_aircraft_manufacturer"
+      ],
+      "evidence": {
+        "line": 1381,
+        "trait": "light_aircraft_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 9710,
+        "research_bonus": {
+          "air_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "equipment_bonus": {
+            "small_plane_airframe": {
+              "air_agility": "0.1",
+              "maximum_speed": "0.1"
+            },
+            "cv_small_plane_airframe": {
+              "air_agility": "0.1",
+              "maximum_speed": "0.1"
+            }
+          },
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Air-equipment research company improving agility and maximum speed for small and carrier-small airframes.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A slim single-engine aircraft banking steeply, its narrow fuselage and compact wings forming a sharp diagonal silhouette.",
+      "composition_rationale": "The light airframe and banking attitude express speed and agility directly; the aircraft is a product symbol, not a named model.",
+      "palette": [
+        {
+          "hex": "#CDD3D0",
+          "subject": "upper wing and fuselage",
+          "material": "Satin aluminium"
+        },
+        {
+          "hex": "#6E7B60",
+          "subject": "engine cowling",
+          "material": "Muted olive paint"
+        },
+        {
+          "hex": "#3A4345",
+          "subject": "propeller and underwing shadow",
+          "material": "Charcoal metal"
+        }
+      ],
+      "palette_rationale": "A bright aluminium wing against a restrained green cowling keeps the compact form readable without ribbons, speed flames or national roundels.",
+      "distinctness": "One engine, steep bank, slender wings; distinct from the medium assembly, heavy frontal silhouette and naval underside.",
+      "lore_hazards": "Do not turn this into a jet, racing brand or acrobatic display team; add no combat scene or invented markings.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Light Air Company. Composition: A slim single-engine aircraft banking steeply, its narrow fuselage and compact wings forming a sharp diagonal silhouette. Material colors: upper wing and fuselage: Satin aluminium (#CDD3D0); engine cowling: Muted olive paint (#6E7B60); propeller and underwing shadow: Charcoal metal (#3A4345). One engine, steep bank, slender wings; distinct from the medium assembly, heavy frontal silhouette and naval underside. Do not turn this into a jet, racing brand or acrobatic display team; add no combat scene or invented markings.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_medium_aircraft_manufacturer",
+      "target": "generic_medium_aircraft_manufacturer",
+      "clone": "HSM_VER_COMP_generic_medium_aircraft_manufacturer",
+      "name": "Medium Air Company",
+      "kind": "manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1399,
+      "original_picture": "generic_air_manufacturer_3",
+      "reference": {
+        "alias": "GFX_idea_generic_air_manufacturer_3",
+        "path": "gfx/interface/ideas/idea_generic_air_manufacturer_3.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_medium_aircraft_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_medium_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "a1a965cc8b713e3808db106d4d2252b03d25be590cd44d9533ef86c4eb3de722"
+        }
+      ],
+      "traits": [
+        "medium_aircraft_manufacturer"
+      ],
+      "evidence": {
+        "line": 1399,
+        "trait": "medium_aircraft_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 9774,
+        "research_bonus": {
+          "air_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "equipment_bonus": {
+            "medium_plane_fighter_airframe": {
+              "reliability": "0.2"
+            },
+            "medium_plane_airframe": {
+              "reliability": "0.2"
+            },
+            "medium_plane_scout_plane_airframe": {
+              "reliability": "0.2"
+            }
+          },
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Air-equipment research company improving reliability across medium, medium-fighter and medium-scout airframes.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A twin-engine wing centre-section held level in a compact assembly cradle, its reinforced central spar exposed between the two nacelles.",
+      "composition_rationale": "A visible structural joint and level inspection setup communicate the reliability trait instead of suggesting another speed-focused fighter.",
+      "palette": [
+        {
+          "hex": "#AAB6B7",
+          "subject": "wing skins",
+          "material": "Dull aluminium"
+        },
+        {
+          "hex": "#727F68",
+          "subject": "internal spar and nacelle primer",
+          "material": "Grey-green protective finish"
+        },
+        {
+          "hex": "#D6D1BD",
+          "subject": "cradle contact pads",
+          "material": "Pale fibre padding"
+        },
+        {
+          "hex": "#454D4D",
+          "subject": "cradle supports",
+          "material": "Dark iron"
+        }
+      ],
+      "palette_rationale": "Muted internal primer distinguishes structural engineering from polished light-aircraft surfaces; pale pads separate the assembly from the dark support.",
+      "distinctness": "Horizontal two-nacelle assembly with exposed centre spar; retain broad simple geometry readable at 64 pixels.",
+      "lore_hazards": "No claims of stronger bombing or longer range; this trait is reliability. Do not render a detailed engineering sheet or tiny rivet diagram.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Medium Air Company. Composition: A twin-engine wing centre-section held level in a compact assembly cradle, its reinforced central spar exposed between the two nacelles. Material colors: wing skins: Dull aluminium (#AAB6B7); internal spar and nacelle primer: Grey-green protective finish (#727F68); cradle contact pads: Pale fibre padding (#D6D1BD); cradle supports: Dark iron (#454D4D). Horizontal two-nacelle assembly with exposed centre spar; retain broad simple geometry readable at 64 pixels. No claims of stronger bombing or longer range; this trait is reliability. Do not render a detailed engineering sheet or tiny rivet diagram.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_heavy_aircraft_manufacturer",
+      "target": "generic_heavy_aircraft_manufacturer",
+      "clone": "HSM_VER_COMP_generic_heavy_aircraft_manufacturer",
+      "name": "Heavy Air Company",
+      "kind": "manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1414,
+      "original_picture": "generic_air_manufacturer_2",
+      "reference": {
+        "alias": "GFX_idea_generic_air_manufacturer_2",
+        "path": "gfx/interface/ideas/idea_generic_air_manufacturer_2.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_heavy_aircraft_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_heavy_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "ae4e70087f9c98eab0eb36035a955eb519cf08f741b2f8a2beda526733077a53"
+        }
+      ],
+      "traits": [
+        "heavy_aircraft_manufacturer"
+      ],
+      "evidence": {
+        "line": 1414,
+        "trait": "heavy_aircraft_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 9813,
+        "research_bonus": {
+          "air_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "equipment_bonus": {
+            "large_plane_airframe": {
+              "air_bombing": "0.1"
+            },
+            "transport_plane_equipment": {
+              "air_range": "0.1"
+            }
+          },
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Air-equipment research company improving large-airframe bombing and transport-aircraft range.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A broad four-engine aircraft seen slightly from below and ahead, with a deep central fuselage and one clearly visible rectangular cargo opening.",
+      "composition_rationale": "Wide wings and substantial cargo volume convey large-airframe capability; a transport feature acknowledges range without requiring a bombing scene.",
+      "palette": [
+        {
+          "hex": "#858E8A",
+          "subject": "broad wing upper edges",
+          "material": "Weathered neutral-grey finish"
+        },
+        {
+          "hex": "#C8CDCA",
+          "subject": "underside and fuselage",
+          "material": "Pale aluminium"
+        },
+        {
+          "hex": "#353D3F",
+          "subject": "four engine openings and cargo opening",
+          "material": "Deep mechanical shadow"
+        }
+      ],
+      "palette_rationale": "A heavier grey mass and pale underside differentiate this from the bright slender light aircraft while keeping all four engines readable.",
+      "distinctness": "Wide frontal four-engine silhouette and deep cargo fuselage; no assembly jig or naval torpedo.",
+      "lore_hazards": "Four engines are an illustrative period large-aircraft cue, not a documented company product. No falling bombs, modern strategic jet or invented unit insignia.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Heavy Air Company. Composition: A broad four-engine aircraft seen slightly from below and ahead, with a deep central fuselage and one clearly visible rectangular cargo opening. Material colors: broad wing upper edges: Weathered neutral-grey finish (#858E8A); underside and fuselage: Pale aluminium (#C8CDCA); four engine openings and cargo opening: Deep mechanical shadow (#353D3F). Wide frontal four-engine silhouette and deep cargo fuselage; no assembly jig or naval torpedo. Four engines are an illustrative period large-aircraft cue, not a documented company product. No falling bombs, modern strategic jet or invented unit insignia.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_naval_aircraft_manufacturer",
+      "target": "generic_naval_aircraft_manufacturer",
+      "clone": "HSM_VER_COMP_generic_naval_aircraft_manufacturer",
+      "name": "Naval Air Company",
+      "kind": "manufacturer",
+      "category": "aircraft_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1429,
+      "original_picture": "generic_naval_manufacturer_2",
+      "reference": {
+        "alias": "GFX_idea_generic_naval_manufacturer_2",
+        "path": "gfx/interface/ideas/idea_generic_naval_manufacturer_2.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_naval_aircraft_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "5c267facf62fadb0fef319e475a02c0cfe699457085412501ed82793dc2fa2cc"
+        }
+      ],
+      "traits": [
+        "naval_aircraft_manufacturer"
+      ],
+      "evidence": {
+        "line": 1429,
+        "trait": "naval_aircraft_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 9830,
+        "research_bonus": {
+          "air_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "equipment_bonus": {
+            "small_plane_naval_bomber_airframe": {
+              "air_range": "0.1",
+              "naval_strike_attack": "0.1"
+            },
+            "cv_small_plane_naval_bomber_airframe": {
+              "air_range": "0.1",
+              "naval_strike_attack": "0.1"
+            },
+            "cv_small_plane_airframe": {
+              "air_range": "0.1",
+              "air_agility": "0.1"
+            },
+            "cv_small_plane_cas_airframe": {
+              "air_range": "0.1",
+              "naval_strike_attack": "0.1"
+            }
+          },
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Air-equipment research company supporting naval-bomber range and naval strike, with carrier-airframe bonuses.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A compact naval aircraft shown from below at a shallow diagonal, one long torpedo secured beneath its fuselage and the wingtips folded upward.",
+      "composition_rationale": "The mounted naval payload and folded wing tips distinguish maritime and carrier design from general aviation and from shipbuilding.",
+      "palette": [
+        {
+          "hex": "#668284",
+          "subject": "upper folded wing tips",
+          "material": "Muted sea-grey paint"
+        },
+        {
+          "hex": "#D3D9D4",
+          "subject": "wing undersides",
+          "material": "Pale grey finish"
+        },
+        {
+          "hex": "#515D60",
+          "subject": "torpedo body",
+          "material": "Dark steel"
+        },
+        {
+          "hex": "#3A4243",
+          "subject": "propeller",
+          "material": "Charcoal metal"
+        }
+      ],
+      "palette_rationale": "Sea-grey paint is a plausible equipment finish, not national blue. The dark torpedo separates cleanly from the pale belly; no water background.",
+      "distinctness": "Underside view with folded tips and one attached torpedo; no propeller-as-logo, floatplane requirement or anchor border.",
+      "lore_hazards": "No attack scene, launch wake, naval flag or invented carrier affiliation. This is a generic product emblem, not a claim that a specific aircraft exists.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Naval Air Company. Composition: A compact naval aircraft shown from below at a shallow diagonal, one long torpedo secured beneath its fuselage and the wingtips folded upward. Material colors: upper folded wing tips: Muted sea-grey paint (#668284); wing undersides: Pale grey finish (#D3D9D4); torpedo body: Dark steel (#515D60); propeller: Charcoal metal (#3A4243). Underside view with folded tips and one attached torpedo; no propeller-as-logo, floatplane requirement or anchor border. No attack scene, launch wake, naval flag or invented carrier affiliation. This is a generic product emblem, not a claim that a specific aircraft exists.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_industrial_concern",
+      "target": "generic_industrial_concern",
+      "clone": "HSM_VER_COMP_generic_industrial_concern",
+      "name": "Industrial Company",
+      "kind": "manufacturer",
+      "category": "industrial_concern",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1447,
+      "original_picture": "generic_industrial_concern_1",
+      "reference": {
+        "alias": "GFX_idea_generic_industrial_concern_1",
+        "path": "gfx/interface/ideas/idea_generic_industrial_concern_1.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_industrial_concern.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_industrial_concern.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "034f4a6b820b7f8d7fd250d203123025bd4cfc31b70953c7b6efafcbd2ba1d85"
+        }
+      ],
+      "traits": [
+        "industrial_concern"
+      ],
+      "evidence": {
+        "line": 1447,
+        "trait": "industrial_concern",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10397,
+        "research_bonus": {
+          "industry": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "country_resource_coal": "6",
+          "local_resources_coal_factor": "0.05",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Industry research concern with six coal resources and a five-percent local coal-resource modifier in its trait.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A squat coal hopper feeding a broad toothed roller, with three large angular coal pieces visible at the hopper lip.",
+      "composition_rationale": "Coal feed and processing machinery represent both the industry research category and the otherwise easy-to-miss coal trait.",
+      "palette": [
+        {
+          "hex": "#262E30",
+          "subject": "coal pieces",
+          "material": "Near-black coal with narrow grey facets"
+        },
+        {
+          "hex": "#63816D",
+          "subject": "hopper casing",
+          "material": "Worn green machine enamel"
+        },
+        {
+          "hex": "#9AA6A1",
+          "subject": "roller teeth",
+          "material": "Bare steel"
+        },
+        {
+          "hex": "#A07959",
+          "subject": "small joint surfaces",
+          "material": "Restrained oxidised metal"
+        }
+      ],
+      "palette_rationale": "Black coal, green enamel and silver roller edges provide industrial variety; warm oxidation stays local rather than becoming a gold outline.",
+      "distinctness": "Top-heavy hopper and low roller, clearly different from the existing Three Houses refinery-tower corporation emblem.",
+      "lore_hazards": "Do not claim an oil-refining specialization or depict three towers/three houses. No new corporation name, state arms or universal factory cog badge.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Industrial Company. Composition: A squat coal hopper feeding a broad toothed roller, with three large angular coal pieces visible at the hopper lip. Material colors: coal pieces: Near-black coal with narrow grey facets (#262E30); hopper casing: Worn green machine enamel (#63816D); roller teeth: Bare steel (#9AA6A1); small joint surfaces: Restrained oxidised metal (#A07959). Top-heavy hopper and low roller, clearly different from the existing Three Houses refinery-tower corporation emblem. Do not claim an oil-refining specialization or depict three towers/three houses. No new corporation name, state arms or universal factory cog badge.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_electronics_concern",
+      "target": "generic_electronics_concern",
+      "clone": "HSM_VER_COMP_generic_electronics_concern",
+      "name": "Electronics Company",
+      "kind": "manufacturer",
+      "category": "industrial_concern",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1466,
+      "original_picture": "generic_electronics_concern_1",
+      "reference": {
+        "alias": "GFX_idea_generic_electronics_concern_1",
+        "path": "gfx/interface/ideas/idea_generic_electronics_concern_1.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_electronics_concern.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_electronics_concern.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "868717cfe85e440b61b6eb735b520bc571dda3ff6c4a817b4a1df1589536bb99"
+        }
+      ],
+      "traits": [
+        "electronics_concern"
+      ],
+      "evidence": {
+        "line": 1466,
+        "trait": "electronics_concern",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10635,
+        "research_bonus": {
+          "electronics": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "factory_energy_consumption": "-0.1",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Electronics research concern whose trait reduces factory energy consumption by ten percent.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A large glass vacuum valve seated beside a compact laminated transformer, connected by one clearly visible copper winding.",
+      "composition_rationale": "Period electronics plus power-conditioning hardware ties research to factory energy economy without suggesting a modern computer or espionage agency.",
+      "palette": [
+        {
+          "hex": "#B3D0C8",
+          "subject": "valve glass",
+          "material": "Pale translucent green glass"
+        },
+        {
+          "hex": "#AE7753",
+          "subject": "coil",
+          "material": "Copper"
+        },
+        {
+          "hex": "#D9D7C9",
+          "subject": "valve socket",
+          "material": "Ivory ceramic"
+        },
+        {
+          "hex": "#454E50",
+          "subject": "transformer laminations",
+          "material": "Graphite steel"
+        }
+      ],
+      "palette_rationale": "Glass, copper and ceramic establish a distinct electrical-material palette. No cobalt glow, lightning heraldry or gold wiring.",
+      "distinctness": "Tall valve next to a squat transformer, linked by one copper coil; avoid extra meter faces or miniature circuit boards.",
+      "lore_hazards": "No silicon microchips, glowing energy core, agency insignia or claim of a radar-specific bonus.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Electronics Company. Composition: A large glass vacuum valve seated beside a compact laminated transformer, connected by one clearly visible copper winding. Material colors: valve glass: Pale translucent green glass (#B3D0C8); coil: Copper (#AE7753); valve socket: Ivory ceramic (#D9D7C9); transformer laminations: Graphite steel (#454E50). Tall valve next to a squat transformer, linked by one copper coil; avoid extra meter faces or miniature circuit boards. No silicon microchips, glowing energy core, agency insignia or claim of a radar-specific bonus.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_infantry_equipment_manufacturer",
+      "target": "generic_infantry_equipment_manufacturer",
+      "clone": "HSM_VER_COMP_generic_infantry_equipment_manufacturer",
+      "name": "Small Arms Company",
+      "kind": "manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1487,
+      "original_picture": "generic_infantry_equipment_manufacturer_2",
+      "reference": {
+        "alias": "GFX_idea_generic_infantry_equipment_manufacturer_2",
+        "path": "gfx/interface/ideas/idea_generic_infantry_equipment_manufacturer_2.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_infantry_equipment_manufacturer-neutral.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_infantry_equipment_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "f71beab78bf6fdf49abd5a5a6634ee06de002817046212cc62c1950cb2baf202"
+        }
+      ],
+      "traits": [
+        "infantry_equipment_manufacturer"
+      ],
+      "evidence": {
+        "line": 1487,
+        "trait": "infantry_equipment_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10339,
+        "research_bonus": {
+          "infantry_weapons": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Infantry-weapons research company; its generic trait adds no specialized equipment modifier.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A single compact rifle receiver with a short walnut stock section held horizontally in a gunsmith's bench vise.",
+      "composition_rationale": "The manufacturing fixture identifies a small-arms company rather than an infantry unit, and the receiver stays distinct from the artillery barrel.",
+      "palette": [
+        {
+          "hex": "#495A61",
+          "subject": "receiver",
+          "material": "Blued steel"
+        },
+        {
+          "hex": "#866344",
+          "subject": "stock section",
+          "material": "Oiled walnut"
+        },
+        {
+          "hex": "#6C766B",
+          "subject": "vise",
+          "material": "Worn grey-green iron"
+        },
+        {
+          "hex": "#BEC3B8",
+          "subject": "jaw contact edges",
+          "material": "Bare metal"
+        }
+      ],
+      "palette_rationale": "Blued steel and wood are intrinsic firearm materials; small silver edges reveal workmanship without gilding the weapon.",
+      "distinctness": "Short horizontal receiver in a square vise; no crossed rifles, ammunition wreath or complete arsenal scene.",
+      "lore_hazards": "No claim of conversion speed, increased damage or automatic-weapons specialization. Do not copy the pending Guns for Gilda focus composition.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Small Arms Company. Composition: A single compact rifle receiver with a short walnut stock section held horizontally in a gunsmith's bench vise. Material colors: receiver: Blued steel (#495A61); stock section: Oiled walnut (#866344); vise: Worn grey-green iron (#6C766B); jaw contact edges: Bare metal (#BEC3B8). Short horizontal receiver in a square vise; no crossed rifles, ammunition wreath or complete arsenal scene. No claim of conversion speed, increased damage or automatic-weapons specialization. Do not copy the pending Guns for Gilda focus composition.",
+      "status": "approved_exported_bound_runtime_pending",
+      "approved_visual_override": {
+        "reference": "art/verenia/company-neutral-exports.json",
+        "record_id": "generic_infantry_equipment_manufacturer",
+        "source": "art/verenia/generic_infantry_equipment_manufacturer-neutral.png",
+        "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A compact metalworking bench vise and a steel caliper laid across a small plain gear. Blued steel, walnut and muted green enamel. Workshop emblem, no weapons. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+        "note": "Approved neutral vise/caliper/plain-gear workshop composition supersedes prior weapon-based visual brief and palette subjects. Preserve original description, native trait/research evidence and gameplay."
+      }
+    },
+    {
+      "id": "generic_artillery_manufacturer",
+      "target": "generic_artillery_manufacturer",
+      "clone": "HSM_VER_COMP_generic_artillery_manufacturer",
+      "name": "Artillery Company",
+      "kind": "manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1504,
+      "original_picture": "generic_artillery_manufacturer_2",
+      "reference": {
+        "alias": "GFX_idea_generic_artillery_manufacturer_2",
+        "path": "gfx/interface/ideas/idea_generic_artillery_manufacturer_2.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_artillery_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_artillery_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "6b4a7bc724faa5924b7ba114997c94ef80edbbea46766e489d1479d22ff14b3e"
+        }
+      ],
+      "traits": [
+        "artillery_manufacturer"
+      ],
+      "evidence": {
+        "line": 1504,
+        "trait": "artillery_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10331,
+        "research_bonus": {
+          "artillery": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Artillery research company; its generic trait adds no specialized equipment modifier.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A short, thick artillery breech and barrel sleeve held upright at a diagonal, with a single large recoil spring visible alongside.",
+      "composition_rationale": "The broad breech and recoil assembly identify artillery engineering at icon scale without relying on a complete gun carriage or shell explosion.",
+      "palette": [
+        {
+          "hex": "#70775C",
+          "subject": "outer barrel sleeve",
+          "material": "Muted field-olive paint"
+        },
+        {
+          "hex": "#A9B2AE",
+          "subject": "breech face and spring",
+          "material": "Machined steel"
+        },
+        {
+          "hex": "#353F42",
+          "subject": "bore and internal recesses",
+          "material": "Dark gunmetal"
+        }
+      ],
+      "palette_rationale": "Field paint contrasts with exposed steel mechanisms; no brass shell is required, so gold has no role in this composition.",
+      "distinctness": "Heavy diagonal tube with oversized breech and one spring; distinguish from the horizontal small-arms vise and tank tread.",
+      "lore_hazards": "No firing scene, blast, ammunition crown or unsupported damage/recoil-performance claim. The mechanism is a category cue, not a new gameplay bonus.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Artillery Company. Composition: A short, thick artillery breech and barrel sleeve held upright at a diagonal, with a single large recoil spring visible alongside. Material colors: outer barrel sleeve: Muted field-olive paint (#70775C); breech face and spring: Machined steel (#A9B2AE); bore and internal recesses: Dark gunmetal (#353F42). Heavy diagonal tube with oversized breech and one spring; distinguish from the horizontal small-arms vise and tank tread. No firing scene, blast, ammunition crown or unsupported damage/recoil-performance claim. The mechanism is a category cue, not a new gameplay bonus.",
+      "status": "approved_exported_bound_runtime_pending"
+    },
+    {
+      "id": "generic_motorized_equipment_manufacturer",
+      "target": "generic_motorized_equipment_manufacturer",
+      "clone": "HSM_VER_COMP_generic_motorized_equipment_manufacturer",
+      "name": "Motorization Company",
+      "kind": "manufacturer",
+      "category": "materiel_manufacturer",
+      "file": "EaW/common/ideas/zzz_generic.txt",
+      "line": 1519,
+      "original_picture": "generic_motorized_equipment_manufacturer_3",
+      "reference": {
+        "alias": "GFX_idea_generic_motorized_equipment_manufacturer_3",
+        "path": "gfx/interface/ideas/idea_generic_motorized_equipment_manufacturer_3.dds",
+        "root": "game",
+        "sprite_definition": "interface/ideas.gfx"
+      },
+      "source": "art/verenia/generic_motorized_equipment_manufacturer.png",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_motorized_equipment_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "b1e82e697ab6818dc57f49589f42ab8fc03aee3acd5e4577c1f4f25c869e2ee4"
+        }
+      ],
+      "traits": [
+        "motorized_equipment_manufacturer"
+      ],
+      "evidence": {
+        "line": 1519,
+        "trait": "motorized_equipment_manufacturer",
+        "trait_file": "EaW/common/country_leader/00_traits.txt",
+        "trait_line": 10363,
+        "research_bonus": {
+          "motorized_equipment": "0.15"
+        },
+        "trait_definition": {
+          "random": "no",
+          "ai_will_do": {
+            "factor": "1"
+          }
+        }
+      },
+      "description": "Motorized-equipment research company; its generic trait adds no specialized equipment modifier.",
+      "description_origin": "Authored summary of the native category, research bonus and inspected trait; not a localized company biography.",
+      "brief": "A sturdy truck wheel attached to a short exposed drive axle, with one stacked leaf spring arching above the hub.",
+      "composition_rationale": "Road-wheel, axle and suspension geometry communicates vehicle manufacture without overlapping the tracked armor company.",
+      "palette": [
+        {
+          "hex": "#303837",
+          "subject": "tyre",
+          "material": "Matte charcoal rubber"
+        },
+        {
+          "hex": "#9AA9A7",
+          "subject": "axle and hub",
+          "material": "Brushed steel"
+        },
+        {
+          "hex": "#778D79",
+          "subject": "wheel rim",
+          "material": "Muted sage enamel"
+        },
+        {
+          "hex": "#555E5B",
+          "subject": "leaf spring",
+          "material": "Tempered dark steel"
+        }
+      ],
+      "palette_rationale": "Rubber supplies a strong dark circle; sage enamel and a silver hub keep the mechanical layers readable. No generic gold gear or national livery.",
+      "distinctness": "One round road tyre beneath an arched leaf spring, not a caterpillar track or whole truck scene.",
+      "lore_hazards": "Do not imply a speed, fuel-economy or reliability bonus beyond the inspected research role. No manufacturer lettering or invented vehicle badge.",
+      "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Motorization Company. Composition: A sturdy truck wheel attached to a short exposed drive axle, with one stacked leaf spring arching above the hub. Material colors: tyre: Matte charcoal rubber (#303837); axle and hub: Brushed steel (#9AA9A7); wheel rim: Muted sage enamel (#778D79); leaf spring: Tempered dark steel (#555E5B). One round road tyre beneath an arched leaf spring, not a caterpillar track or whole truck scene. Do not imply a speed, fuel-economy or reliability bonus beyond the inspected research role. No manufacturer lettering or invented vehicle badge.",
+      "status": "approved_exported_bound_runtime_pending"
+    }
+  ]
+}

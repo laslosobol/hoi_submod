@@ -1,0 +1,154 @@
+[
+  {
+    "id": "modern_warfare",
+    "target": "modern_warfare",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/modern_warfare.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_modern_warfare.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Favour Modern Doctrines. A military transport truck with a road wheel prominent, an infantry kit on its cargo bed.. Palette: muted olive painted machinery, charcoal gunmetal, silver machined edges, natural wood and ivory technical paper. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "forces_that_are_special",
+    "target": "forces_that_are_special",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/forces_that_are_special.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_forces_that_are_special.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Special Forces Effort. A folded parachute, mountain piton and compact landing boat arranged as three specialist disciplines.. Palette: muted olive painted machinery, charcoal gunmetal, silver machined edges, natural wood and ivory technical paper. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "radio_stuff",
+    "target": "radio_stuff",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/radio_stuff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_radio_stuff.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Military Radio Direction Ranging. A compact radio-direction-finding aerial above a radar scope and plotting compass, matching the radar research and station reward.. Palette: muted olive painted machinery, charcoal gunmetal, silver machined edges, natural wood and ivory technical paper. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "doctrine_advancement",
+    "target": "doctrine_advancement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/doctrine_advancement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_doctrine_advancement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Doctrinal Advancement. A sand-table manoeuvre with unit blocks moving along a single coordinated attack route.. Palette: muted olive painted machinery, charcoal gunmetal, silver machined edges, natural wood and ivory technical paper. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "form_the_avian_aviation_auxiliary",
+    "target": "form_the_avian_aviation_auxiliary",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/form_the_avian_aviation_auxiliary.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_form_the_avian_aviation_auxiliary.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Form the Avian Aviation Auxiliary. A single-engine interceptor lifting above a small auxiliary hangar.. Palette: weathered silver aluminium, muted olive aircraft panels, charcoal rubber, light concrete, restrained pale blue glass. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "develop_a_cas",
+    "target": "develop_a_cas",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/develop_a_cas.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_develop_a_cas.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, CAS Effort. A low-flying ground-attack aircraft with a visible bomb rack above a marked ground position.. Palette: weathered silver aluminium, muted olive aircraft panels, charcoal rubber, light concrete, restrained pale blue glass. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "build_military_airstrips",
+    "target": "build_military_airstrips",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/build_military_airstrips.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_build_military_airstrips.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Build Military Airstrips. A compact paved runway with edge lamps and a windsock.. Palette: weathered silver aluminium, muted olive aircraft panels, charcoal rubber, light concrete, restrained pale blue glass. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "develop_a_bomber",
+    "target": "develop_a_bomber",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/develop_a_bomber.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_develop_a_bomber.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4 / Equestria at War focus icon, Tactical Bomber Effort. A twin-engine tactical bomber with its bomb bay visible over a rail-junction diagram.. Palette: weathered silver aluminium, muted olive aircraft panels, charcoal rubber, light concrete, restrained pale blue glass. Compact strong silhouette readable at 99x86. Actual transparent exterior, no surrounding badge, text, pseudotext, empty forms, gilded outlines, ribbons, flags, invented crests or human anatomy. Technical drawings must have meaningful diagrams, not empty paper. Inanimate game UI object composition, no battle scene.",
+    "approved": true,
+    "review": "Source and native-size preview approved: readable machinery silhouettes, silver/olive palette, no invented heraldry. Runtime QA pending.",
+    "runtime_verified": false
+  }
+]

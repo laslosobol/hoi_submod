@@ -1,0 +1,194 @@
+[
+  {
+    "id": "HSM_ERI_DEV_reconstruction_service",
+    "target": "HSM_ERI_DEV_reconstruction_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_reconstruction_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_reconstruction_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A repair scheduling wheel above a compact crate of sorted building materials. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_public_services",
+    "target": "HSM_ERI_DEV_public_services",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_public_services.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_public_services.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A maintained water pump paired with a medicine shelf, a small inspection wrench below. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_workshop_standards",
+    "target": "HSM_ERI_DEV_workshop_standards",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_workshop_standards.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_workshop_standards.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A fitted measuring gauge enclosing three identical workshop components. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_veteran_placements",
+    "target": "HSM_ERI_DEV_veteran_placements",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_veteran_placements.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_veteran_placements.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A service helmet hanging from an apprentice's vise, bridging veteran experience and civilian work. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_technical_education",
+    "target": "HSM_ERI_DEV_technical_education",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_technical_education.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_technical_education.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A teacher's illustrated lesson book supporting a compact scientific instrument. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_officer_corps",
+    "target": "HSM_ERI_DEV_officer_corps",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_officer_corps-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_officer_corps.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An officer's exercise baton crossing a tactical training slate. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "edit_prompt": "Change only the tactical board surface from green canvas to dark charcoal-grey natural slate, preserving pale chalk tactical marks. Keep baton, frame, straps, composition, painted style and transparent background unchanged. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_supply_service",
+    "target": "HSM_ERI_DEV_supply_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_supply_service-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_supply_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A tightly packed supply crate beneath an accurate delivery clock. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "edit_prompt": "Remove only the loose golden key from atop the crate. Make the clock casing aged grey steel rather than brass. Preserve clock face, packed wooden crate, silhouette, painted style and transparent background. No added objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_DEV_integrated_staff",
+    "target": "HSM_ERI_DEV_integrated_staff",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_DEV_integrated_staff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_DEV_integrated_staff.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A command switchboard connecting specialist-service map markers in one coordinated plan. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_public_works",
+    "target": "HSM_EYR_DEV_public_works",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_public_works.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_public_works.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A mason's repair kit beside a public-building maintenance register with a roof diagram. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_rural_investment",
+    "target": "HSM_EYR_DEV_rural_investment",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_rural_investment.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_rural_investment.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A grain-sale coin stack feeding a rural processing flywheel. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; material palettes and distinct silhouettes. Officer slate and supply clock corrected in v2.",
+    "runtime_verified": false
+  }
+]

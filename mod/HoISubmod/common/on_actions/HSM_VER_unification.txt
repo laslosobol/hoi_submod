@@ -1,0 +1,27 @@
+on_actions = {
+	# Any surviving House also reconciles a dead president's stored flags.
+	on_daily_ERI = { effect = { HSM_VER_UNI_reconcile_all = yes } }
+	on_daily_EYR = { effect = { HSM_VER_UNI_reconcile_all = yes } }
+	on_daily_AVI = { effect = { HSM_VER_UNI_reconcile_all = yes } }
+	on_war_relation_added = {
+		effect = {
+			if = { limit = { OR = { HSM_VER_UNI_house = yes FROM = { HSM_VER_UNI_house = yes } } } HSM_VER_UNI_reconcile_all = yes }
+		}
+	}
+	on_annex = {
+		effect = {
+			# The constitutional transaction validates all signatories before annexing.
+			if = {
+				limit = {
+					NOT = {
+						ERI = { has_country_flag = HSM_VER_UNI_committing }
+						EYR = { has_country_flag = HSM_VER_UNI_committing }
+						AVI = { has_country_flag = HSM_VER_UNI_committing }
+					}
+				}
+				HSM_VER_UNI_reconcile_all = yes
+			}
+		}
+	}
+}
+

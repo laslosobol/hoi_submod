@@ -1,0 +1,32 @@
+# Private component flags are membership, not a player-facing resource or score.
+HSM_VER_SP_refresh = {
+ if = {
+  limit = { HSM_VER_SP_active = yes }
+  HSM_VER_SP_capture = yes
+  HSM_VER_SP_normalize = yes
+  HSM_VER_SP_cancel_invalid = yes
+  HSM_VER_SP_recalculate = yes
+  if = {
+   limit = { NOT = { has_dynamic_modifier = { modifier = HSM_VER_SP_united_verenia } } }
+   add_dynamic_modifier = { modifier = HSM_VER_SP_united_verenia }
+  }
+  force_update_dynamic_modifier = yes
+ }
+}
+HSM_VER_SP_maintain = {
+ if = {
+  limit = { HSM_VER_SP_active = yes }
+  # Old saves may still retain Avian's actual ideas on the absorbed tag.
+  # Do not infer earned programmes from focuses or import from a living neighbour.
+  if = {
+   limit = {
+    OR = { tag = ERI tag = EYR }
+    has_country_flag = HSM_VER_UNI_absorbed_AVI
+    AVI = { exists = no }
+    NOT = { has_country_flag = HSM_VER_SP_avian_imported }
+   }
+   HSM_VER_SP_inherit_avian = yes
+  }
+  HSM_VER_SP_refresh = yes
+ }
+}

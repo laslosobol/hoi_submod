@@ -1,0 +1,5 @@
+HSM_VER_GRO_category = {
+	icon = generic_political_actions
+	allowed = { OR = { original_tag = ERI original_tag = EYR } }
+	visible = { has_country_flag = HSM_VER_GRO_started NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished } }
+}

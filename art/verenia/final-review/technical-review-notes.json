@@ -1,0 +1,58 @@
+{
+  "scope": "Seven source images visually spot-checked; not a complete semantic review. Native rendering still pending.",
+  "priority_source_edge_review": [
+    {
+      "id": "overtures_eyrie",
+      "finding": "Verified visible flat cutoff of pillar near source bottom. At source rows1143..1157, 691-692 pixels remain alpha>=128, then drop to zero at row1158 of1167; remaining9 rows are low-alpha fringe rather than a complete base/margin. Native last row contains51 pixels alpha>=64 (max99). Original outermost-row >=240 test missed this. Flag source margin/composition clipping, not export-induced cropping; heraldry orientation cleared by main."
+    },
+    {
+      "id": "HSM_VER_REG_a_union_without_a_throne",
+      "finding": "Outer table/chairs visibly cut at left/right source edges; central keys and papers intact. Check whether scene-style crop is acceptable for isolated icon."
+    },
+    {
+      "id": "HSM_EYR_avian_association",
+      "finding": "Desk continues beyond right source edge; chair leg reaches bottom edge. Envelope and main chair remain readable."
+    },
+    {
+      "id": "HSM_VER_IMP_civilian_legacy",
+      "finding": "Diagram papers/base clipped at right/left source edges; toolbox and tool heads remain intact."
+    },
+    {
+      "id": "HSM_ZYP_crown_and_countries",
+      "finding": "Desk foreground and sides deliberately appear cropped; central map and objects intact. Review isolated-icon suitability."
+    }
+  ],
+  "likely_intentional_alpha": [
+    {
+      "id": "hallhaus_radar_station",
+      "finding": "Strongest semi-transparent-interior metric: 22.9% source /25.3% native sampled interior. Radar mesh visually explains some translucency; inspect on contrasting backgrounds before declaring a defect."
+    },
+    {
+      "id": "HSM_ERI_workshop_network",
+      "finding": "Large enclosed gaps are real spaces between shafts, belts, stands and wheel spokes. Do not fill automatically."
+    },
+    {
+      "id": "HSM_EYR_diplomatic_settlement",
+      "finding": "Transparent openings between gate bars and in guard are expected; thin bars explain native downsampling sensitivity."
+    }
+  ],
+  "other_native_alpha_review": [
+    "HSM_EYR_friendship_with_safeguards",
+    "generic_medium_aircraft_manufacturer",
+    "HSM_ERI_family_letters",
+    "aristocratic_house_officers",
+    "technological_cooperation",
+    "scion_swap"
+  ],
+  "additional_edge_review": [
+    "AVI_urbanisation_effort",
+    "HSM_ZYP_commissions_not_orders",
+    "HSM_ERI_technical_college"
+  ],
+  "interpretation": "Portrait fit cropping and opaque backdrops are intentional pipeline behavior, not accidental RGB-background failures. Pixel-perfect exports introduce no extra crop beyond defined fit/contain. No automatic repairs authorized or performed.",
+  "main_visual_clearances": {
+    "technological_cooperation": "Main full-size review cleared plain blue star/longitude armillary: no continents. This clears semantic concern, not independently measured native alpha.",
+    "overtures_erie_and_eyrie": "Main confirmed heraldry orientations correct. Eyrie pillar clipping remains separately flagged.",
+    "coverage": "Main reports batches01-09,61-64, company/MIO sheets,30 generic advisors and24 named identity comparisons reviewed."
+  }
+}

@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		HSM_VER_UNI_customs_spirit = {
+			picture = HSM_VER_ART_HSM_VER_UNI_customs_spirit
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { HSM_VER_UNI_receives_customs = yes } }
+			modifier = { production_factory_efficiency_gain_factor = 0.08 local_resources_factor = 0.05 }
+		}
+		HSM_VER_UNI_works_spirit = {
+			picture = HSM_VER_ART_HSM_VER_UNI_works_spirit
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { HSM_VER_UNI_receives_works = yes } }
+			modifier = { production_speed_industrial_complex_factor = 0.10 production_speed_infrastructure_factor = 0.15 }
+		}
+		HSM_VER_UNI_administration_spirit = {
+			picture = HSM_VER_ART_HSM_VER_UNI_administration_spirit
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { HSM_VER_UNI_receives_administration = yes } }
+			modifier = { political_power_gain = -0.15 research_speed_factor = 0.03 stability_factor = 0.03 }
+		}
+		HSM_VER_UNI_command_spirit = {
+			picture = HSM_VER_ART_HSM_VER_UNI_command_spirit
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { HSM_VER_UNI_receives_command = yes } }
+			modifier = { army_org_factor = 0.05 supply_consumption_factor = -0.05 }
+		}
+		HSM_VER_UNI_constitutional_state = {
+			picture = HSM_VER_ART_HSM_VER_UNI_constitutional_state
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { stability_factor = 0.05 production_speed_industrial_complex_factor = 0.10 supply_consumption_factor = -0.05 political_power_gain = -0.10 }
+		}
+		HSM_VER_UNI_settled_state = {
+			picture = HSM_VER_ART_HSM_VER_UNI_settled_state
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { stability_factor = 0.08 research_speed_factor = 0.05 production_speed_industrial_complex_factor = 0.10 supply_consumption_factor = -0.05 army_org_factor = 0.05 }
+		}
+	}
+}
+

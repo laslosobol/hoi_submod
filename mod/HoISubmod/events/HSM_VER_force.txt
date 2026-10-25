@@ -1,0 +1,153 @@
+add_namespace = hsm_ver_force
+country_event = {
+	id = hsm_ver_force.4 title = hsm_ver_force.4.t desc = hsm_ver_force.4.d picture = GFX_event_griffon_diplomacy
+	timeout_days = 20
+	is_triggered_only = yes
+	trigger = {
+		HSM_VER_FORCE_settlement_active = yes has_war = no has_country_flag = HSM_VER_FORCE_avian_choice_pending
+		NOT = { has_country_flag = HSM_VER_FORCE_avian_resolved has_country_flag = HSM_VER_FORCE_avian_sought }
+		AVI = { exists = yes is_subject = no has_capitulated = no has_war = no }
+	}
+	option = {
+		name = hsm_ver_force.4.a
+		ai_chance = { factor = 65 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_approach_avian_tt
+		hidden_effect = {
+			if = {
+				limit = { HSM_VER_FORCE_settlement_active = yes has_war = no has_country_flag = HSM_VER_FORCE_avian_choice_pending NOT = { has_country_flag = HSM_VER_FORCE_avian_resolved has_country_flag = HSM_VER_FORCE_avian_sought } AVI = { exists = yes is_subject = no has_capitulated = no has_war = no } }
+				clr_country_flag = HSM_VER_FORCE_avian_choice_pending
+				set_country_flag = HSM_VER_FORCE_avian_sought
+				HSM_VER_FORCE_approach_avian = yes
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_force.4.b
+		ai_chance = { factor = 35 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_leave_avian_tt
+		hidden_effect = {
+			if = {
+				limit = { HSM_VER_FORCE_settlement_active = yes has_war = no has_country_flag = HSM_VER_FORCE_avian_choice_pending NOT = { has_country_flag = HSM_VER_FORCE_avian_resolved has_country_flag = HSM_VER_FORCE_avian_sought } }
+				clr_country_flag = HSM_VER_FORCE_avian_choice_pending
+				set_country_flag = HSM_VER_FORCE_avian_resolved
+			}
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_force.1 title = hsm_ver_force.1.t desc = hsm_ver_force.1.d picture = GFX_event_griffon_diplomacy
+	timeout_days = 20
+	is_triggered_only = yes
+	trigger = { HSM_VER_FORCE_avian_offer_valid = yes }
+	option = {
+		name = hsm_ver_force.1.a
+		ai_chance = { factor = 60 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_accept_pact_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_avian_offer_valid = yes } }
+			FROM = { hidden_effect = { clr_country_flag = HSM_VER_FORCE_avian_pending } hidden_effect = { set_country_flag = HSM_VER_FORCE_avian_resolved } hidden_effect = { set_country_flag = HSM_VER_FORCE_avian_accepted } }
+			hidden_effect = { diplomatic_relation = { country = FROM relation = non_aggression_pact active = yes } }
+			FROM = { country_event = { id = hsm_ver_force.2 days = 1 } }
+		}
+	}
+	option = {
+		name = hsm_ver_force.1.b
+		ai_chance = { factor = 40 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_pact_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_avian_offer_valid = yes } }
+			FROM = { hidden_effect = { clr_country_flag = HSM_VER_FORCE_avian_pending } hidden_effect = { set_country_flag = HSM_VER_FORCE_avian_resolved } hidden_effect = { set_country_flag = HSM_VER_FORCE_avian_refused } country_event = { id = hsm_ver_force.3 days = 1 } }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_force.2 title = hsm_ver_force.2.t desc = hsm_ver_force.2.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_VER_FORCE_settlement_active = yes has_war = no has_country_flag = HSM_VER_FORCE_avian_accepted has_non_aggression_pact_with = AVI AVI = { exists = yes is_subject = no has_capitulated = no has_war = no } }
+	option = { name = hsm_ver_force.2.a }
+}
+country_event = {
+	id = hsm_ver_force.3 title = hsm_ver_force.3.t desc = hsm_ver_force.3.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_VER_FORCE_settlement_active = yes has_country_flag = HSM_VER_FORCE_avian_refused }
+	option = { name = hsm_ver_force.3.a }
+}
+country_event = {
+	id = hsm_ver_force.10 title = hsm_ver_force.10.t desc = hsm_ver_force.10.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { tag = AVI exists = yes is_subject = no FROM = { HSM_VER_AVR_regional_authority = yes has_wargoal_against = AVI } }
+	option = { name = hsm_ver_force.10.a }
+}
+country_event = {
+	id = hsm_ver_force.11 title = hsm_ver_force.11.t desc = hsm_ver_force.11.d picture = GFX_event_griffon_diplomacy
+	timeout_days = 20
+	is_triggered_only = yes trigger = { HSM_VER_FORCE_avian_subject_offer = yes }
+	option = {
+		name = hsm_ver_force.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_subject_consent_tt
+		hidden_effect = {
+			if = {
+				limit = { HSM_VER_FORCE_avian_subject_offer = yes }
+				if = { limit = { FROM = { tag = ERI } } set_country_flag = HSM_VER_FORCE_AVI_consent_ERI }
+				if = { limit = { FROM = { tag = EYR } } set_country_flag = HSM_VER_FORCE_AVI_consent_EYR }
+				FROM = { set_country_flag = HSM_VER_FORCE_AVI_charter HSM_VER_FORCE_ratify_avian_terms = yes }
+			}
+		}
+	}
+	option = {
+		name = hsm_ver_force.11.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_subject_refusal_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_avian_subject_offer = yes } }
+			FROM = {
+				hidden_effect = { clr_country_flag = HSM_VER_FORCE_AVI_terms_pending }
+				hidden_effect = { set_country_flag = HSM_VER_FORCE_AVI_terms_refused }
+				country_event = { id = hsm_ver_force.13 days = 1 }
+			}
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_force.12 title = hsm_ver_force.12.t desc = hsm_ver_force.12.d picture = GFX_event_griffon_diplomacy
+	timeout_days = 20
+	is_triggered_only = yes trigger = { HSM_VER_FORCE_avian_terms_valid = yes AVI = { exists = no } }
+	option = {
+		name = hsm_ver_force.12.a
+		ai_chance = { factor = 50 modifier = { factor = 3 OR = { has_country_flag = HSM_ERI_FORCE_rights has_country_flag = HSM_EYR_FORCE_civilian_order } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_local_charter_tt
+		show_ideas_tooltip = HSM_VER_FORCE_AVI_charter
+		hidden_effect = {
+			if = { limit = { HSM_VER_FORCE_avian_terms_valid = yes AVI = { exists = no } } set_country_flag = HSM_VER_FORCE_AVI_charter HSM_VER_FORCE_ratify_avian_terms = yes }
+		}
+	}
+	option = {
+		name = hsm_ver_force.12.b
+		ai_chance = { factor = 50 modifier = { factor = 3 OR = { has_country_flag = HSM_ERI_FORCE_central has_country_flag = HSM_EYR_FORCE_military_order } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_commission_tt
+		show_ideas_tooltip = HSM_VER_FORCE_AVI_commission
+		hidden_effect = {
+			if = { limit = { HSM_VER_FORCE_avian_terms_valid = yes AVI = { exists = no } } clr_country_flag = HSM_VER_FORCE_AVI_charter HSM_VER_FORCE_ratify_avian_terms = yes }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_force.13 title = hsm_ver_force.13.t desc = hsm_ver_force.13.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes trigger = { HSM_VER_FORCE_avian_victory = yes has_country_flag = HSM_VER_FORCE_AVI_terms_refused }
+	option = { name = hsm_ver_force.13.a }
+}
+country_event = {
+	id = hsm_ver_force.14 title = hsm_ver_force.14.t picture = GFX_event_griffon_diplomacy
+	desc = { trigger = { has_country_flag = HSM_VER_FORCE_AVI_charter } text = hsm_ver_force.14.d_charter }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_FORCE_AVI_charter } } text = hsm_ver_force.14.d_commission }
+	is_triggered_only = yes
+	trigger = {
+		HSM_VER_AVR_regional_authority = yes has_war = no AVI = { exists = no }
+		has_country_flag = HSM_VER_FORCE_AVI_integrated
+		NOT = { has_country_flag = HSM_VER_FORCE_AVI_report_wait has_country_flag = HSM_VER_FORCE_AVI_report_seen }
+		OR = { AND = { tag = ERI owns_state = 470 470 = { is_fully_controlled_by = ERI } } AND = { tag = EYR owns_state = 470 470 = { is_fully_controlled_by = EYR } } }
+	}
+	immediate = { set_country_flag = HSM_VER_FORCE_AVI_report_seen clr_country_flag = HSM_VER_FORCE_AVI_report_pending }
+	option = { name = hsm_ver_force.14.a }
+}

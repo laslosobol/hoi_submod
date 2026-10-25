@@ -1,0 +1,2272 @@
+{
+  "schema_version": 1,
+  "approval_policy": "Explicit approved=true and matching SHA256 for source and each existing native-size TGA. Pending/missing assets are skipped. No exports or sprite overrides are created.",
+  "reference_roots": {
+    "EaW": "EaW",
+    "game": "C:\\shit\\Steam\\steamapps\\common\\Hearts of Iron IV"
+  },
+  "records": [
+    {
+      "id": "AVI_lady_katrina_avian",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Lady Katrina Avian",
+      "name_key": "AVI_lady_katrina_avian",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/katrina-v2.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "batch01_native_override",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_lady_katrina_avian",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/AVI/Princess_Rivertail.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/AVI/Princess_Rivertail.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/leaders/AVI/Princess_Rivertail.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_aaron_redtail",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Aaron Redtail",
+      "name_key": "AVI_aaron_redtail",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/aaron-batch02.png",
+      "approved": true,
+      "source_sha256": "ec4419d302338a91573d009c0740ea674466b3d86fee0e24d52d4386706e0d8d",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_aaron_redtail",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/AVI/aaron_rivertail.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/AVI/aaron_rivertail.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aaron_redtail_civilian_large.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "40d90d535109be59c70015ebac5c42a5a95049fec9529c7a9686155a6d9b836b"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_trubach_von_zypressen",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Trubach von Zypressen",
+      "name_key": "AVI_trubach_von_zypressen",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/trubach-v2.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "batch01_native_override",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_trubach_von_zypressen",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/AVI/general_trubach.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/AVI/general_trubach.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/leaders/AVI/general_trubach.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": null
+          }
+        },
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_trubach_von_zypressen",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "gfx/interface/ideas/Advisors/AVI/idea_general_trubach.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/interface/ideas/Advisors/AVI/idea_general_trubach.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/AVI/idea_general_trubach.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_lady_kalra_blackclaw",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Lady Kalra Blackclaw",
+      "name_key": "AVI_lady_kalra_blackclaw",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/kalra-batch02.png",
+      "approved": true,
+      "source_sha256": "2204c8f9b8d736902558edd80a62e028042849981acf3ed996337e102d206cc5",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_lady_kalra_blackclaw",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/AVI/kalra_blackclaw.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/AVI/kalra_blackclaw.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_lady_kalra_blackclaw_army_large.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "ab5a45f6a924eafa25619df3f4d01a0e0b1f055ecd67f8e86e8bf843f4ca199a"
+          }
+        },
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_lady_kalra_blackclaw",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "gfx/interface/ideas/Advisors/AVI/idea_kalra_blackclaw.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/interface/ideas/Advisors/AVI/idea_kalra_blackclaw.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_lady_kalra_blackclaw_army_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "b03a92132fb5c2f1cb043cf9a4766d226e4e5d6ce3d3821a8b4f21cd6211ed46"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_aviehrenreich",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Count Ehrenreich",
+      "name_key": "aviehrenreich",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_aviehrenreich.png",
+      "approved": true,
+      "source_sha256": "3dc915f7d1c0eb9e56aa699e565d6828acdc4e5802aafbed0aad966aba25b666",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_aviehrenreich",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_operative_male_4_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_operative_male_4_small",
+            "path": "gfx/interface/ideas/Advisors/Asia/idea_griffon_generic_operative_male_4.tga",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aviehrenreich_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "ed3c4ca6ba34060fb8797f7b5f946d41954ca71ea0bef7ad8e5c1d2fda299839"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avijoachim",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Viceroy Joachim",
+      "name_key": "avijoachim",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avijoachim.png",
+      "approved": true,
+      "source_sha256": "9d35677ed8733d1b85ba8a17bdeb929ee96c14c50aa5fbf7be4a9463653ae3b8",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avijoachim",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_generic_griffon_politician",
+          "reference": {
+            "alias": "GFX_idea_generic_griffon_politician",
+            "path": "gfx/interface/ideas/generic_griffon_politician.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avijoachim_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "fb6d48e7d366c721a5b2ec674091c58f90a46e614d76f8371d596c6628a7f939"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi1",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Maximilian Avian",
+      "name_key": "avi1",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi1.png",
+      "approved": true,
+      "source_sha256": "25f9b0f308886c8249172f246e6783a4aa7dcaf643c2da94e674fe847e05cbea",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi1",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_generic_griffon_with_monocle",
+          "reference": {
+            "alias": "GFX_idea_generic_griffon_with_monocle",
+            "path": "gfx/interface/ideas/generic_griffon_with_monocle.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi1_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "0f92d4193d0be1060e0b0bc3b82366fbe5f8eb86b57a15efd5bc86105057edf0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi2",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Erich Flugel",
+      "name_key": "avi2",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi2.png",
+      "approved": true,
+      "source_sha256": "f14727b77eabb0f37c691fbf90886ca80dabba81c8aae5928f0c9a06e5e4a03a",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi2",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_generic_griffon_politician4",
+          "reference": {
+            "alias": "GFX_idea_generic_griffon_politician4",
+            "path": "gfx/interface/ideas/generic_griffon_politician4.tga",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi2_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "870a592514721147237baefd1b67f5307700c115cf8c84d62a58f4467433a015"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avichamberofcommerce",
+      "reference_note": "Institution emblem, not an individual portrait.",
+      "name": "Avian Chamber of Commerce",
+      "name_key": "avichamberofcommerce",
+      "kind": "institution",
+      "source": "art/verenia/chamber-batch02.png",
+      "approved": true,
+      "source_sha256": "368b43cf3a5b31ea0e9c71009da65f149dbfd01abe3b03d02f28903c2c992f18",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avichamberofcommerce",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_kawasaki",
+          "reference": {
+            "alias": "GFX_idea_kawasaki",
+            "path": "gfx/interface/ideas/idea_kawasaki.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "ef1fa6aece2aabb3454a04afe07d00336cddafe5ad352557b7f9dde484450cc2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avichamberofcommerce_1",
+      "reference_note": "Institution emblem, not an individual portrait.",
+      "name": "Avian Chamber of Commerce",
+      "name_key": "avichamberofcommerce",
+      "kind": "institution",
+      "source": "art/verenia/chamber-batch02.png",
+      "approved": true,
+      "source_sha256": "368b43cf3a5b31ea0e9c71009da65f149dbfd01abe3b03d02f28903c2c992f18",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avichamberofcommerce_1",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_kawasaki",
+          "reference": {
+            "alias": "GFX_idea_kawasaki",
+            "path": "gfx/interface/ideas/idea_kawasaki.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_1_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "ef1fa6aece2aabb3454a04afe07d00336cddafe5ad352557b7f9dde484450cc2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avichamberofcommerce_2",
+      "reference_note": "Institution emblem, not an individual portrait.",
+      "name": "Avian Chamber of Commerce",
+      "name_key": "avichamberofcommerce",
+      "kind": "institution",
+      "source": "art/verenia/chamber-batch02.png",
+      "approved": true,
+      "source_sha256": "368b43cf3a5b31ea0e9c71009da65f149dbfd01abe3b03d02f28903c2c992f18",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avichamberofcommerce_2",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_kawasaki",
+          "reference": {
+            "alias": "GFX_idea_kawasaki",
+            "path": "gfx/interface/ideas/idea_kawasaki.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_2_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "ef1fa6aece2aabb3454a04afe07d00336cddafe5ad352557b7f9dde484450cc2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avijohannesvondross",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Johannes von Dross",
+      "name_key": "avijohannesvondross",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avijohannesvondross.png",
+      "approved": true,
+      "source_sha256": "c57fc8d2114e6e048b391e68bc7cd9155d5869cc69c1203c408bd4bb66ab49cf",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avijohannesvondross",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_16_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_16_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_16.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avijohannesvondross_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "a3942b565c16481f491e25592fc9107924e27575a888f7be390941504b4c45f4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_aviphilipperemy",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Philippe Remy",
+      "name_key": "aviphilipperemy",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_aviphilipperemy.png",
+      "approved": true,
+      "source_sha256": "bd6c3f0f3d86ca19dfdf5a28b7870e696d7d5c448edd0bff56afde85d6d342c5",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_aviphilipperemy",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_aquileian_generic_griffon_land_male_2_small",
+          "reference": {
+            "alias": "GFX_portrait_aquileian_generic_griffon_land_male_2_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_aquileian_generic_griffon_land_male_2.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aviphilipperemy_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "f76308b5fd050a870ab5810a54dde3c622890f159d44e1948716ea3efea3829c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi10",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Tobias Hellcrest",
+      "name_key": "avi10",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi10.png",
+      "approved": true,
+      "source_sha256": "c9ad6e078fae157b7de4f5d680b515a986b43c3a029ce2dcd3ce36e6c90c0cc5",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi10",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_generic_griffon_with_cap",
+          "reference": {
+            "alias": "GFX_idea_generic_griffon_with_cap",
+            "path": "gfx/interface/ideas/generic_griffon_with_cap.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi10_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "b3bdddddebedd0fca3d0694ce939a8eecd61a517f387f912158ed3752b3aa044"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi11",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Staffan Marie Stormfeather",
+      "name_key": "avi11",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi11.png",
+      "approved": true,
+      "source_sha256": "4b0b7bae6033de0c9d7683e266150fe0075391f3078aea75a3e665936fe01022",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi11",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_generic_griffon_with_glasses",
+          "reference": {
+            "alias": "GFX_idea_generic_griffon_with_glasses",
+            "path": "gfx/interface/ideas/generic_griffon_with_glasses.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi11_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "c409117eac9e6cb4e1fba1d1c4c4cb73c203ade12f5132f4022c52055282c31c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi8",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Elias Yellowplume",
+      "name_key": "avi8",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi8.png",
+      "approved": true,
+      "source_sha256": "86836c58fdc9c8052c63796c5e35762b2076fe2e6baca625227101cdc9c3d159",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi8",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_navy_7_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_navy_7_small",
+            "path": "gfx/interface/ideas/generic_admirals_small/idea_griffon_generic_navy_7.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi8_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "33d12ddd17e46de2869ee49494480ae9f49d731a01529a3485b60118b14abc7c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi9",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Hubert Stossbeak",
+      "name_key": "avi9",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi9.png",
+      "approved": true,
+      "source_sha256": "9fef27ddb9a9cf2d3d6a50fd42ceac9775a025a23b191c3eb6f2208596e4a730",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi9",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_navy_2_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_navy_2_small",
+            "path": "gfx/interface/ideas/generic_admirals_small/idea_griffon_generic_navy_2.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi9_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "d5da89ffa38e6fbc27f8580a1b9297689cb7d577c7d7aa42a95e68d70e8ab386"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi4",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Patrice de Celles",
+      "name_key": "avi4",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi4.png",
+      "approved": true,
+      "source_sha256": "180f73163c6b4caa59fe56a33ad7656f7ca07269e150d89af97433cc3257d257",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi4",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_12_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_12_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_12.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi4_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "26b7532bf937eb5410a4e2ed6113f5788841b115e6d4c8388a873291a3f08c85"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi5",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Ancietus von Toltz",
+      "name_key": "avi5",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi5.png",
+      "approved": true,
+      "source_sha256": "a07dd8d6c07c5a6c1e5f2d4df57d0a217ec45bbec996ee17181a0f29a6745321",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi5",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_8_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_8_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_8.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi5_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "d9002b8676fea22b7b7fc63a8772fa2b1d12bd24da0b1fc35a3693fbc08d5d7f"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi6",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Feullien von Lishill",
+      "name_key": "avi6",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi6.png",
+      "approved": true,
+      "source_sha256": "e4f0629e709c9f9b0fccdb3849421309d88fbb7a0e4a52c19ae379b71e6b7cf8",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi6",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_14_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_14_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_14.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi6_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "15597e5a86f94f9b656d6f47ad71a696e7cfe39758714290edee7d2c64fb1943"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi7",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Gustave Avian",
+      "name_key": "avi7",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi7.png",
+      "approved": true,
+      "source_sha256": "b6019242bc002ca29af39caeb2075a8b7c3ff00f4fcb6c068863417ee518426c",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi7",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_4_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_4_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_4.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi7_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "1aa01d568f7f6bb9100d20cfb6140dabd27e59d26bbcfd6f245f2514686d7181"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avitripartitecolleges",
+      "reference_note": "Institution emblem, not an individual portrait.",
+      "name": "Tripartite College of Science",
+      "name_key": "avitripartitecolleges",
+      "kind": "institution",
+      "source": "art/verenia/college-batch02.png",
+      "approved": true,
+      "source_sha256": "e770306cf2baa87dc80e32101575edc3a0dfd81dbcf0ed82789e64c294524cb9",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avitripartitecolleges",
+              0
+            ],
+            [
+              "instance",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_tokyo_arsenal",
+          "reference": {
+            "alias": "GFX_idea_tokyo_arsenal",
+            "path": "gfx/interface/ideas/idea_tokyo_arsenal.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avitripartitecolleges_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "3acb1c9b044a7ffa61d097c1b22ec979f0f08400a1c1a2c77cca3e6672e97d11"
+          }
+        },
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avitripartitecolleges",
+              0
+            ],
+            [
+              "instance",
+              1
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_idea_tokyo_arsenal",
+          "reference": {
+            "alias": "GFX_idea_tokyo_arsenal",
+            "path": "gfx/interface/ideas/idea_tokyo_arsenal.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avitripartitecolleges_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "3acb1c9b044a7ffa61d097c1b22ec979f0f08400a1c1a2c77cca3e6672e97d11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AVI_avi3",
+      "reference_note": "Shared generic appearance reference, not a unique canonical character design.",
+      "name": "Peter Hardringer",
+      "name_key": "avi3",
+      "kind": "advisor",
+      "source": "art/verenia/AVI_avi3.png",
+      "approved": true,
+      "source_sha256": "f91725ff1f1eb733e458d1571181ca04ddf394a04f9dc072dd19c2055460cc14",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/AVI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "AVI_avi3",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "GFX_portrait_griffon_generic_land_9_small",
+          "reference": {
+            "alias": "GFX_portrait_griffon_generic_land_9_small",
+            "path": "gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_9.dds",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_portraits.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi3_civilian_small.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": "cb842d9ae0fe8fab55386b7d36f7400b7ec89b57a2b9e5cd7d14bbb3561b689b"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ERI_duke_vincent_erie",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Duke Vincent Erie",
+      "name_key": "ERI_duke_vincent_erie",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/vincent-v2.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "batch01_native_override",
+      "bindings": [
+        {
+          "file": "common/characters/ERI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "ERI_duke_vincent_erie",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "gfx/interface/ideas/Advisors/ERI/ERI_vincet.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/interface/ideas/Advisors/ERI/ERI_vincet.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/ERI/ERI_vincet.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": null
+          }
+        },
+        {
+          "file": "common/characters/ERI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "ERI_duke_vincent_erie",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/ERI/Vincet.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/ERI/Vincet.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/leaders/ERI/Vincet.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "ERI_valens_silverclaw",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Valens Silverclaw",
+      "name_key": "ERI_valens_silverclaw",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/valens-batch02.png",
+      "approved": true,
+      "source_sha256": "07478591815af85a9d6009cef5fff23f8fb16a12bd6578bca1d30845e45e0c63",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/ERI.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "ERI_valens_silverclaw",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/Asia/Unknown_Griffon.dds",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/Asia/Unknown_Griffon.dds",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/ERI_valens_silverclaw_civilian_large.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "7e0d319b1b6af336eb762e49fa9e86ca989dc25eb575537a54a04a4639934697"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EYR_duke_iovinus_eyrie",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Duke Iovinus Eyrie",
+      "name_key": "EYR_duke_iovinus_eyrie",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/iovinus-v3.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "batch01_native_override",
+      "bindings": [
+        {
+          "file": "common/characters/EYR.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "EYR_duke_iovinus_eyrie",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "army",
+              0
+            ],
+            [
+              "small",
+              0
+            ]
+          ],
+          "original": "gfx/interface/ideas/Advisors/EYR/EYR_iovinus.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/interface/ideas/Advisors/EYR/EYR_iovinus.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/EYR/EYR_iovinus.tga",
+            "width": 65,
+            "height": 67,
+            "sha256": null
+          }
+        },
+        {
+          "file": "common/characters/EYR.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "EYR_duke_iovinus_eyrie",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/EYR/Iovinus.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/EYR/Iovinus.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/leaders/EYR/Iovinus.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "EYR_eusebius_nicticorax",
+      "reference_note": "Use the original appearance reference; unknown silhouettes do not establish identity.",
+      "name": "Eusebius Nicticorax",
+      "name_key": "EYR_eusebius_nicticorax",
+      "kind": "leader_or_commander",
+      "source": "art/verenia/eusebius-batch02.png",
+      "approved": true,
+      "source_sha256": "a14665817a1834344c2c22b4513c1bb84f27505cfcdb9ac426a3a77b39e553f2",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/characters/EYR.txt",
+          "selector": [
+            [
+              "characters",
+              0
+            ],
+            [
+              "EYR_eusebius_nicticorax",
+              0
+            ],
+            [
+              "portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/Asia/Unknown_Griffon.dds",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/Asia/Unknown_Griffon.dds",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/EYR_eusebius_nicticorax_civilian_large.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "3490713b5a35432557673397885bf4f909f215bdf5714ab8ba8abed99718c18d"
+          }
+        }
+      ]
+    },
+    {
+      "id": "avithreehousescorp",
+      "name": "Three Houses Corporation",
+      "kind": "manufacturer",
+      "source": "art/verenia/corporation.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "batch01_native_override",
+      "note": "Native unique texture already integrated.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_AVI_ideas.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "industrial_concern",
+              0
+            ],
+            [
+              "avithreehousescorp",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "AVI_threehousescorp",
+          "reference": {
+            "alias": "GFX_idea_AVI_threehousescorp",
+            "path": "gfx/interface/ideas/AVI/AVI_threehousescorp.tga",
+            "root": "EaW",
+            "sprite_definition": "interface/eaw_ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/interface/ideas/AVI/AVI_threehousescorp.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_tank_manufacturer",
+      "name": "Armor Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_tank_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "tank_manufacturer",
+              0
+            ],
+            [
+              "generic_tank_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_tank_manufacturer_1",
+          "reference": {
+            "alias": "GFX_idea_generic_tank_manufacturer_1",
+            "path": "gfx/interface/ideas/idea_generic_tank_manufacturer_1.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_tank_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_naval_manufacturer",
+      "name": "Naval Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_naval_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "naval_manufacturer",
+              0
+            ],
+            [
+              "generic_naval_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_naval_manufacturer_1",
+          "reference": {
+            "alias": "GFX_idea_generic_naval_manufacturer_1",
+            "path": "gfx/interface/ideas/idea_generic_naval_manufacturer_1.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_naval_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_light_aircraft_manufacturer",
+      "name": "Light Air Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_light_aircraft_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "aircraft_manufacturer",
+              0
+            ],
+            [
+              "generic_light_aircraft_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_air_manufacturer_1",
+          "reference": {
+            "alias": "GFX_idea_generic_air_manufacturer_1",
+            "path": "gfx/interface/ideas/idea_generic_air_manufacturer_1.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_light_aircraft_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_medium_aircraft_manufacturer",
+      "name": "Medium Air Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_medium_aircraft_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "aircraft_manufacturer",
+              0
+            ],
+            [
+              "generic_medium_aircraft_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_air_manufacturer_3",
+          "reference": {
+            "alias": "GFX_idea_generic_air_manufacturer_3",
+            "path": "gfx/interface/ideas/idea_generic_air_manufacturer_3.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_medium_aircraft_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_heavy_aircraft_manufacturer",
+      "name": "Heavy Air Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_heavy_aircraft_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "aircraft_manufacturer",
+              0
+            ],
+            [
+              "generic_heavy_aircraft_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_air_manufacturer_2",
+          "reference": {
+            "alias": "GFX_idea_generic_air_manufacturer_2",
+            "path": "gfx/interface/ideas/idea_generic_air_manufacturer_2.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_heavy_aircraft_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_naval_aircraft_manufacturer",
+      "name": "Naval Air Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_naval_aircraft_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "aircraft_manufacturer",
+              0
+            ],
+            [
+              "generic_naval_aircraft_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_naval_manufacturer_2",
+          "reference": {
+            "alias": "GFX_idea_generic_naval_manufacturer_2",
+            "path": "gfx/interface/ideas/idea_generic_naval_manufacturer_2.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_naval_aircraft_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_industrial_concern",
+      "name": "Industrial Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_industrial_concern.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "industrial_concern",
+              0
+            ],
+            [
+              "generic_industrial_concern",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_industrial_concern_1",
+          "reference": {
+            "alias": "GFX_idea_generic_industrial_concern_1",
+            "path": "gfx/interface/ideas/idea_generic_industrial_concern_1.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_industrial_concern.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_electronics_concern",
+      "name": "Electronics Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_electronics_concern.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "industrial_concern",
+              0
+            ],
+            [
+              "generic_electronics_concern",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_electronics_concern_1",
+          "reference": {
+            "alias": "GFX_idea_generic_electronics_concern_1",
+            "path": "gfx/interface/ideas/idea_generic_electronics_concern_1.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_electronics_concern.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_infantry_equipment_manufacturer",
+      "name": "Small Arms Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_infantry_equipment_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "materiel_manufacturer",
+              0
+            ],
+            [
+              "generic_infantry_equipment_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_infantry_equipment_manufacturer_2",
+          "reference": {
+            "alias": "GFX_idea_generic_infantry_equipment_manufacturer_2",
+            "path": "gfx/interface/ideas/idea_generic_infantry_equipment_manufacturer_2.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_infantry_equipment_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_artillery_manufacturer",
+      "name": "Artillery Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_artillery_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "materiel_manufacturer",
+              0
+            ],
+            [
+              "generic_artillery_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_artillery_manufacturer_2",
+          "reference": {
+            "alias": "GFX_idea_generic_artillery_manufacturer_2",
+            "path": "gfx/interface/ideas/idea_generic_artillery_manufacturer_2.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_artillery_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "generic_motorized_equipment_manufacturer",
+      "name": "Motorization Company",
+      "kind": "manufacturer",
+      "source": "art/verenia/generic_motorized_equipment_manufacturer.png",
+      "approved": false,
+      "source_sha256": null,
+      "bindable": false,
+      "status": "blocked_shared_definition",
+      "note": "Shared manufacturers need a separately reviewed country-scoped design; never override their sprites or definitions globally.",
+      "bindings": [
+        {
+          "file": "common/ideas/zzz_generic.txt",
+          "selector": [
+            [
+              "ideas",
+              0
+            ],
+            [
+              "materiel_manufacturer",
+              0
+            ],
+            [
+              "generic_motorized_equipment_manufacturer",
+              0
+            ],
+            [
+              "picture",
+              0
+            ]
+          ],
+          "original": "generic_motorized_equipment_manufacturer_3",
+          "reference": {
+            "alias": "GFX_idea_generic_motorized_equipment_manufacturer_3",
+            "path": "gfx/interface/ideas/idea_generic_motorized_equipment_manufacturer_3.dds",
+            "root": "game",
+            "sprite_definition": "interface/ideas.gfx"
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generic_motorized_equipment_manufacturer.tga",
+            "width": 64,
+            "height": 64,
+            "sha256": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "GRI_emperor_grover_vi_verenia_story",
+      "name": "Grover VI (Verenian story)",
+      "kind": "story_portrait",
+      "source": "art/verenia/grover-batch02.png",
+      "approved": true,
+      "source_sha256": "227a9fc3cc45dfcea454bc49b085af5aa69d8d827a15cb8fb2d91a55f10c5a9b",
+      "bindable": true,
+      "status": "source_and_native_export_reviewed",
+      "bindings": [
+        {
+          "file": "common/scripted_effects/HSM_VER_grover.txt",
+          "selector": [
+            [
+              "HSM_VER_GRO_release_empire",
+              0
+            ],
+            [
+              "if",
+              0
+            ],
+            [
+              "GRI",
+              2
+            ],
+            [
+              "set_portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/GRI/Grover_VI_good.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/GRI/Grover_VI_good.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/grover_story.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "2881236dbdf2e52edfe0d2799233790a0119f31783a054d8369055d42c17a62d"
+          }
+        },
+        {
+          "file": "common/scripted_effects/HSM_VER_regency.txt",
+          "selector": [
+            [
+              "HSM_VER_REG_succeed",
+              0
+            ],
+            [
+              "if",
+              0
+            ],
+            [
+              "AVI",
+              0
+            ],
+            [
+              "set_portraits",
+              0
+            ],
+            [
+              "civilian",
+              0
+            ],
+            [
+              "large",
+              0
+            ]
+          ],
+          "original": "gfx/leaders/GRI/Grover_VI_good.tga",
+          "reference": {
+            "alias": null,
+            "path": "gfx/leaders/GRI/Grover_VI_good.tga",
+            "root": "EaW",
+            "sprite_definition": null
+          },
+          "export": {
+            "path": "mod/HoISubmod/gfx/portraits/HSM_VER/grover_story.tga",
+            "width": 156,
+            "height": 210,
+            "sha256": "2881236dbdf2e52edfe0d2799233790a0119f31783a054d8369055d42c17a62d"
+          }
+        }
+      ]
+    }
+  ]
+}

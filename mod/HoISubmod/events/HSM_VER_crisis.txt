@@ -1,0 +1,250 @@
+add_namespace = hsm_ver_crisis
+
+country_event = {
+	id = hsm_ver_crisis.1
+	title = hsm_ver_crisis.1.t
+	desc = { trigger = { tag = ERI } text = hsm_ver_crisis.1.eri.d }
+	desc = { trigger = { tag = EYR } text = hsm_ver_crisis.1.eyr.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 7
+	trigger = { HSM_VER_CR_aid_choice_valid = yes }
+	option = { name = hsm_ver_crisis.1.c ai_chance = { factor = 35 } custom_effect_tooltip = HSM_VER_EVT_AVI_border_tt hidden_effect = { HSM_VER_CR_guard_border = yes } }
+	option = { name = hsm_ver_crisis.1.a trigger = { has_political_power > 24 } ai_chance = { factor = 40 } custom_effect_tooltip = HSM_VER_EVT_AVI_medics_tt hidden_effect = { HSM_VER_CR_send_medics = yes } }
+	option = { name = hsm_ver_crisis.1.b trigger = { has_political_power > 39 } ai_chance = { factor = 25 } custom_effect_tooltip = HSM_VER_EVT_AVI_loyalist_aid_tt hidden_effect = { HSM_VER_CR_support_loyalists = yes } }
+}
+country_event = {
+	id = hsm_ver_crisis.2
+	title = hsm_ver_crisis.2.t
+	desc = { trigger = { HSM_VER_CR_loyalist_government = yes } text = hsm_ver_crisis.2.loyalist.d }
+	desc = { trigger = { HSM_VER_CR_military_government = yes } text = hsm_ver_crisis.2.military.d }
+	desc = { trigger = { HSM_VER_CR_technocrat_government = yes } text = hsm_ver_crisis.2.technocrat.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { tag = AVI exists = yes has_capitulated = no has_country_flag = HSM_VER_CR_outcome NOT = { has_country_flag = HSM_VER_CR_returns_seen } OR = { HSM_VER_CR_loyalist_government = yes HSM_VER_CR_hostile_government = yes } }
+	option = {
+		name = hsm_ver_crisis.2.a
+		custom_effect_tooltip = HSM_VER_EVT_AVI_aid_report_tt
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_returns_seen
+		if = { limit = { ERI = { has_country_flag = HSM_VER_CR_medics } } custom_effect_tooltip = HSM_VER_CR_erie_medics_tt }
+		if = { limit = { EYR = { has_country_flag = HSM_VER_CR_medics } } custom_effect_tooltip = HSM_VER_CR_eyrie_medics_tt }
+		if = { limit = { ERI = { has_country_flag = HSM_VER_CR_supported_loyalists } } custom_effect_tooltip = HSM_VER_CR_erie_support_tt }
+		if = { limit = { EYR = { has_country_flag = HSM_VER_CR_supported_loyalists } } custom_effect_tooltip = HSM_VER_CR_eyrie_support_tt }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.3
+	title = hsm_ver_crisis.3.t
+	desc = { trigger = { HSM_VER_CR_military_government = yes } text = hsm_ver_crisis.3.military.d }
+	desc = { trigger = { HSM_VER_CR_technocrat_government = yes } text = hsm_ver_crisis.3.technocrat.d }
+	desc = { trigger = { HSM_VER_CR_loyalist_government = yes } text = hsm_ver_crisis.3.loyalist.d }
+	desc = { trigger = { HSM_VER_CR_neutral_government = yes } text = hsm_ver_crisis.3.neutral.d }
+	desc = { trigger = { HSM_VER_CR_foundation_government = yes } text = hsm_ver_crisis.3.foundation.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { tag = AVI FROM = { HSM_VER_CR_reply_valid = yes } }
+	option = {
+		name = hsm_ver_crisis.3.b
+		ai_chance = { factor = 20 modifier = { factor = 3 HSM_VER_CR_hostile_government = yes } }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_compact_refuse_tt
+		hidden_effect = { FROM = { HSM_VER_CR_refuse_compact = yes } }
+	}
+	option = {
+		name = hsm_ver_crisis.3.a
+		ai_chance = { factor = 80 modifier = { factor = 0.5 HSM_VER_CR_hostile_government = yes } }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_compact_accept_tt show_ideas_tooltip = HSM_VER_CR_civilian_transit
+		hidden_effect = { FROM = { HSM_VER_CR_accept_compact = yes } }
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.4
+	title = hsm_ver_crisis.4.t
+	desc = hsm_ver_crisis.4.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_house = yes exists = yes is_subject = no NOT = { has_country_flag = HSM_VER_CR_compact } }
+	option = { name = hsm_ver_crisis.4.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_crisis.5
+	title = hsm_ver_crisis.5.t
+	desc = { trigger = { has_country_flag = HSM_VER_CR_supported_loyalists } text = hsm_ver_crisis.5.support.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_medics } text = hsm_ver_crisis.5.medics.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_CR_supported_loyalists has_country_flag = HSM_VER_CR_medics } } text = hsm_ver_crisis.5.border.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_house = yes exists = yes has_capitulated = no OR = { is_subject = no is_subject_of = AVI } NOT = { has_war_with = AVI has_country_flag = HSM_VER_CR_loyalist_seen } HSM_VER_CR_avian_available = yes HSM_VER_CR_loyalist_government = yes }
+	option = { name = hsm_ver_crisis.5.a ai_chance = { factor = 45 } custom_effect_tooltip = HSM_VER_EVT_AVI_no_compact_tt hidden_effect = { set_country_flag = HSM_VER_CR_loyalist_seen clr_country_flag = HSM_VER_CR_loyalist_pending } }
+	option = {
+		name = hsm_ver_crisis.5.b
+		trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_compact_available_tt HSM_VER_CR_can_offer = yes } }
+		ai_chance = { factor = 55 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_compact_offer_tt show_ideas_tooltip = HSM_VER_CR_civilian_transit
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_loyalist_seen
+		clr_country_flag = HSM_VER_CR_loyalist_pending
+		}
+		HSM_VER_CR_offer_compact = yes
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.6
+	title = hsm_ver_crisis.6.t
+	desc = hsm_ver_crisis.6.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { tag = AVI exists = yes HSM_VER_CR_hostile_government = yes FROM = { exists = yes is_subject = no has_country_flag = HSM_VER_CR_resistance } }
+	option = { name = hsm_ver_crisis.6.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_crisis.7
+	title = hsm_ver_crisis.7.t
+	desc = { trigger = { tag = ERI } text = hsm_ver_crisis.7.eri.d }
+	desc = { trigger = { tag = EYR } text = hsm_ver_crisis.7.eyr.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_contact_context = yes HSM_VER_CR_neutral_government = yes NOT = { has_country_flag = HSM_VER_CR_isolation_seen } }
+	option = {
+		name = hsm_ver_crisis.7.a
+		ai_chance = { factor = 45 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_no_compact_tt
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_isolation_seen
+		clr_country_flag = HSM_VER_CR_isolation_pending
+		}
+	}
+	option = {
+		name = hsm_ver_crisis.7.b
+		trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_compact_available_tt HSM_VER_CR_can_offer = yes } }
+		ai_chance = { factor = 55 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_compact_offer_tt show_ideas_tooltip = HSM_VER_CR_civilian_transit
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_isolation_seen
+		clr_country_flag = HSM_VER_CR_isolation_pending
+		}
+		HSM_VER_CR_offer_compact = yes
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.8
+	title = hsm_ver_crisis.8.t
+	desc = hsm_ver_crisis.8.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_contact_context = yes HSM_VER_CR_foundation_government = yes NOT = { has_country_flag = HSM_VER_CR_foundation_seen } }
+	option = { name = hsm_ver_crisis.8.a ai_chance = { factor = 55 } custom_effect_tooltip = HSM_VER_EVT_AVI_no_compact_tt hidden_effect = { set_country_flag = HSM_VER_CR_foundation_seen clr_country_flag = HSM_VER_CR_foundation_pending } }
+	option = {
+		name = hsm_ver_crisis.8.b
+		trigger = { custom_trigger_tooltip = { tooltip = HSM_VER_EVT_AVI_compact_available_tt HSM_VER_CR_can_offer = yes } }
+		ai_chance = { factor = 45 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_compact_offer_tt show_ideas_tooltip = HSM_VER_CR_civilian_transit
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_foundation_seen
+		clr_country_flag = HSM_VER_CR_foundation_pending
+		}
+		HSM_VER_CR_offer_compact = yes
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.9
+	title = hsm_ver_crisis.9.t
+	desc = { trigger = { tag = ERI } text = hsm_ver_crisis.9.eri.d }
+	desc = { trigger = { tag = EYR } text = hsm_ver_crisis.9.eyr.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_house = yes exists = yes has_capitulated = no OR = { is_subject = no is_subject_of = AVI } NOT = { has_war_with = AVI has_country_flag = HSM_VER_CR_elections_seen } HSM_VER_CR_avian_available = yes HSM_VER_CR_loyalist_government = yes AVI = { has_completed_focus = permit_local_elections has_government = democratic } }
+	option = {
+		name = hsm_ver_crisis.9.a
+		ai_chance = { factor = 65 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_elections_welcome_tt
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_elections_seen
+		set_country_flag = HSM_VER_CR_elections_welcomed
+		clr_country_flag = HSM_VER_CR_elections_pending
+		custom_effect_tooltip = HSM_VER_CR_elections_no_regime_change_tt
+		}
+	}
+	option = {
+		name = hsm_ver_crisis.9.b
+		ai_chance = { factor = 35 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_elections_reserve_tt
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_elections_seen
+		clr_country_flag = HSM_VER_CR_elections_pending
+		custom_effect_tooltip = HSM_VER_CR_elections_no_regime_change_tt
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_crisis.10
+	title = hsm_ver_crisis.10.t
+	desc = hsm_ver_crisis.10.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_compact_operational = yes }
+	option = { name = hsm_ver_crisis.10.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_crisis.11
+	title = hsm_ver_crisis.11.t
+	desc = hsm_ver_crisis.11.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_house = yes exists = yes NOT = { has_country_flag = HSM_VER_CR_compact } }
+	option = { name = hsm_ver_crisis.11.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_crisis.12
+	title = hsm_ver_crisis.12.t
+	desc = hsm_ver_crisis.12.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_house = yes exists = yes is_subject_of = AVI has_country_flag = HSM_VER_CR_submitted }
+	option = { name = hsm_ver_crisis.12.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_crisis.15
+	title = hsm_ver_crisis.15.t
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_military } text = hsm_ver_crisis.15.military.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_technocrat } text = hsm_ver_crisis.15.technocrat.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_loyalist has_country_flag = HSM_VER_CR_elections_welcomed } text = hsm_ver_crisis.15.elections.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_loyalist NOT = { has_country_flag = HSM_VER_CR_elections_welcomed } } text = hsm_ver_crisis.15.loyalist.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_neutral } text = hsm_ver_crisis.15.neutral.d }
+	desc = { trigger = { has_country_flag = HSM_VER_CR_mode_foundation } text = hsm_ver_crisis.15.foundation.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_compact_operational = yes has_country_flag = HSM_VER_CR_report_due NOT = { has_country_flag = HSM_VER_CR_report_wait has_country_flag = HSM_VER_CR_report_seen } }
+	option = { name = hsm_ver_crisis.15.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt hidden_effect = { set_country_flag = HSM_VER_CR_report_seen clr_country_flag = HSM_VER_CR_report_due clr_country_flag = HSM_VER_CR_report_pending } }
+}
+country_event = {
+	id = hsm_ver_crisis.16
+	title = hsm_ver_crisis.16.t
+	desc = { trigger = { tag = ERI } text = hsm_ver_crisis.16.eri.d }
+	desc = { trigger = { tag = EYR } text = hsm_ver_crisis.16.eyr.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_contact_context = yes HSM_VER_CR_hostile_government = yes has_country_flag = HSM_VER_CR_resistance NOT = { has_country_flag = HSM_VER_CR_border_ending_seen has_country_flag = HSM_VER_CR_compact has_country_flag = HSM_VER_CR_offer_pending } }
+	option = { name = hsm_ver_crisis.16.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt hidden_effect = { set_country_flag = HSM_VER_CR_border_ending_seen clr_country_flag = HSM_VER_CR_border_ending_pending } }
+}
+country_event = {
+	id = hsm_ver_crisis.29
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { HSM_VER_CR_house = yes exists = yes has_country_flag = HSM_VER_CR_offer_pending }
+	immediate = { clr_country_flag = HSM_VER_CR_offer_pending country_event = { id = hsm_ver_crisis.4 days = 1 } }
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "id": "muskets_for_magda",
+    "target": "muskets_for_magda",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/muskets_for_magda.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_muskets_for_magda.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painted Hearts of Iron IV / Equestria at War focus icon. Muskets for Magda. Composition: A crowded emergency arms crate containing crude melee weapons and old muskets; equipment quantity rather than modern rifles. Name and prose discuss guns, but the effect adds 3500 melee_equipment_1. Emphasise an emergency mixed low-grade arms stock; do not imply modern rifle procurement. CRITICAL PALETTE: realistic muted military olive green, charcoal gunmetal, pale weathered concrete, natural dark wood, silver edges. Gold only tiny brass hardware, NOT gold outlining every object. No blue/red draped ribbons or gilded weapons. Match restrained original HOI4 visual language. One compact bold silhouette, readable at 99x86 pixels. Transparent exterior, no surrounding medal frame, no text, invented seals, lilies, crowns, people or hands. No flags or invented heraldry. Inanimate game emblem, no combat scene.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "hidden_bunkers",
+    "target": "hidden_bunkers",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/hidden_bunkers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_hidden_bunkers.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painted Hearts of Iron IV / Equestria at War focus icon. Hidden Bunkers. Composition: A concealed machine-gun embrasure beneath a turf-covered mound beside a narrow road.  CRITICAL PALETTE: realistic muted military olive green, charcoal gunmetal, pale weathered concrete, natural dark wood, silver edges. Gold only tiny brass hardware, NOT gold outlining every object. No blue/red draped ribbons or gilded weapons. Match restrained original HOI4 visual language. One compact bold silhouette, readable at 99x86 pixels. Transparent exterior, no surrounding medal frame, no text, invented seals, lilies, crowns, people or hands. No flags or invented heraldry. Inanimate game emblem, no combat scene.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "ehrenreich_redoubt",
+    "target": "ehrenreich_redoubt",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/ehrenreich_redoubt.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_ehrenreich_redoubt.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painted Hearts of Iron IV / Equestria at War focus icon. The Ehrenreich Redoubt. Composition: A concentric capital redoubt with interlocking machine-gun apertures and reinforced gates.  CRITICAL PALETTE: realistic muted military olive green, charcoal gunmetal, pale weathered concrete, natural dark wood, silver edges. Gold only tiny brass hardware, NOT gold outlining every object. No blue/red draped ribbons or gilded weapons. Match restrained original HOI4 visual language. One compact bold silhouette, readable at 99x86 pixels. Transparent exterior, no surrounding medal frame, no text, invented seals, lilies, crowns, people or hands. No flags or invented heraldry. Inanimate game emblem, no combat scene.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "decentralised_arsenal",
+    "target": "decentralised_arsenal",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/decentralised_arsenal.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_decentralised_arsenal.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painted Hearts of Iron IV / Equestria at War focus icon. A Decentralised Arsenal. Composition: Three small ammunition caches separated by terrain, each with a rifle crate under cover.  CRITICAL PALETTE: realistic muted military olive green, charcoal gunmetal, pale weathered concrete, natural dark wood, silver edges. Gold only tiny brass hardware, NOT gold outlining every object. No blue/red draped ribbons or gilded weapons. Match restrained original HOI4 visual language. One compact bold silhouette, readable at 99x86 pixels. Transparent exterior, no surrounding medal frame, no text, invented seals, lilies, crowns, people or hands. No flags or invented heraldry. Inanimate game emblem, no combat scene.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "rivertail_reservist_system",
+    "target": "rivertail_reservist_system",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/rivertail_reservist_system.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_rivertail_reservist_system.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painted Hearts of Iron IV / Equestria at War focus icon. The Avian Reservist System. Composition: A reserve kit chest opened beneath a muster bell, civilian tools resting alongside.  CRITICAL PALETTE: realistic muted military olive green, charcoal gunmetal, pale weathered concrete, natural dark wood, silver edges. Gold only tiny brass hardware, NOT gold outlining every object. No blue/red draped ribbons or gilded weapons. Match restrained original HOI4 visual language. One compact bold silhouette, readable at 99x86 pixels. Transparent exterior, no surrounding medal frame, no text, invented seals, lilies, crowns, people or hands. No flags or invented heraldry. Inanimate game emblem, no combat scene.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_anti_air",
+    "target": "avian_anti_air",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_anti_air.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_anti_air.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One HOI4 painted focus icon: An elevated anti-aircraft gun with a rangefinder aimed above a small rooftop.. Muted olive military cloth, silver steel, charcoal, offwhite stone, natural wood. No gilded outline or colored ribbons. Compact simple readable silhouette at 99x86, transparent exterior. No text, people, crowns, lilies or invented insignia. No flags.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_will_never_fall",
+    "target": "avian_will_never_fall",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_will_never_fall.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_will_never_fall.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One HOI4 painted focus icon: A scarred but upright Avian gate retaining the exact native flag, rubble below its intact lintel.. Muted olive military cloth, silver steel, charcoal, offwhite stone, natural wood. No gilded outline or colored ribbons. Compact simple readable silhouette at 99x86, transparent exterior. No text, people, crowns, lilies or invented insignia. Use attached exact Avian flag with blue field, white edged red cross and central red shield/gold griffin; retain heraldic colors.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_military_act",
+    "target": "avian_military_act",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_military_act.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_military_act.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One HOI4 painted focus icon: A disordered militia kit reorganised into a fitted service chest beside a drill whistle.. Muted olive military cloth, silver steel, charcoal, offwhite stone, natural wood. No gilded outline or colored ribbons. Compact simple readable silhouette at 99x86, transparent exterior. No text, people, crowns, lilies or invented insignia. No flags.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_officer_academy",
+    "target": "avian_officer_academy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_officer_academy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_officer_academy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One HOI4 painted focus icon: An officer's map board with dividers and a classroom lectern, no decorative rank invention.. Muted olive military cloth, silver steel, charcoal, offwhite stone, natural wood. No gilded outline or colored ribbons. Compact simple readable silhouette at 99x86, transparent exterior. No text, people, crowns, lilies or invented insignia. No flags.",
+    "approved": true,
+    "review": "Full-size and 99x86 preview approved. Natural military colors; exact Avian flag preserved where present. Runtime QA pending.",
+    "runtime_verified": false
+  }
+]

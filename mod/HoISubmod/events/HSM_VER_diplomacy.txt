@@ -1,0 +1,642 @@
+add_namespace = hsm_verenia
+
+country_event = {
+	id = hsm_verenia.1
+	title = hsm_verenia.1.t desc = hsm_verenia.1.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.1.a }
+}
+country_event = {
+	id = hsm_verenia.2
+	title = hsm_verenia.2.t desc = hsm_verenia.2.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = {
+		name = hsm_verenia.2.a
+		ai_chance = { factor = 75 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_hearings_tt
+		hidden_effect = {
+			set_country_flag = HSM_VER_public_hearings
+		}
+		add_ideas = HSM_VER_petition_commitments
+	}
+	option = {
+		name = hsm_verenia.2.b
+		ai_chance = { factor = 25 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_private_petitions_tt
+		hidden_effect = {
+			set_country_flag = HSM_VER_private_petitions
+		}
+		add_political_power = -35
+	}
+}
+country_event = {
+	id = hsm_verenia.3
+	title = hsm_verenia.3.t desc = hsm_verenia.3.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	option = {
+		name = hsm_verenia.3.a
+		custom_effect_tooltip = HSM_VER_EUI_ducal_rosaline_tt
+		hidden_effect = {
+			set_country_flag = HSM_VER_rosaline_heard
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.4
+	title = hsm_verenia.4.t desc = hsm_verenia.4.d picture = GFX_event_western_griffon_city
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.4.a }
+}
+country_event = {
+	id = hsm_verenia.20
+	immediate = { log = "[GetDateText]: Verenia: armistice proposal delivered to Eyrie." }
+	title = hsm_verenia.20.t desc = hsm_verenia.20.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_armistice_context = yes ERI = { has_country_flag = HSM_VER_armistice_pending } }
+	option = {
+		name = hsm_verenia.20.a
+		ai_chance = { factor = 100 modifier = { factor = 0 ERI = { NOT = { has_country_flag = HSM_VER_guarantees_prepared } } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_armistice_tt
+		hidden_effect = {
+			if = { limit = { ERI = { has_country_flag = HSM_VER_armistice_pending } } HSM_VER_sign_armistice = yes }
+		}
+	}
+	option = {
+		name = hsm_verenia.20.b
+		ai_chance = { factor = 100 modifier = { factor = 0 ERI = { has_country_flag = HSM_VER_guarantees_prepared } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ask_inspections_tt
+		if = { limit = { hidden_trigger = { HSM_VER_houses_at_peace = yes ERI = { has_country_flag = HSM_VER_armistice_pending } } } ERI = { country_event = { id = hsm_verenia.21 days = 1 } } }
+	}
+	option = {
+		name = hsm_verenia.20.c
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_armistice_tt
+		ERI = { if = { limit = { hidden_trigger = { has_country_flag = HSM_VER_armistice_pending } } hidden_effect = { clr_country_flag = HSM_VER_armistice_pending } hidden_effect = { set_country_flag = HSM_VER_armistice_refused } country_event = { id = hsm_verenia.23 days = 1 } } }
+	}
+}
+country_event = {
+	id = hsm_verenia.21
+	immediate = { log = "[GetDateText]: Verenia: inspection counteroffer delivered to Erie." }
+	title = hsm_verenia.21.t desc = hsm_verenia.21.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_armistice_context = yes has_country_flag = HSM_VER_armistice_pending }
+	option = {
+		name = hsm_verenia.21.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_accept_inspections_tt
+		if = { limit = { hidden_trigger = { HSM_VER_armistice_context = yes has_country_flag = HSM_VER_armistice_pending } } add_political_power = -35 hidden_effect = { set_country_flag = HSM_VER_joint_inspection } hidden_effect = { HSM_VER_sign_armistice = yes } }
+	}
+	option = {
+		name = hsm_verenia.21.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_armistice_tt
+		hidden_effect = {
+			if = { limit = { has_country_flag = HSM_VER_armistice_pending } clr_country_flag = HSM_VER_armistice_pending set_country_flag = HSM_VER_armistice_refused }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.22
+	title = hsm_verenia.22.t desc = hsm_verenia.22.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.22.a }
+}
+country_event = {
+	id = hsm_verenia.23
+	title = hsm_verenia.23.t desc = hsm_verenia.23.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.23.a }
+}
+country_event = {
+	id = hsm_verenia.24
+	title = hsm_verenia.24.t desc = hsm_verenia.24.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_houses_at_peace = yes OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } }
+	option = {
+		name = hsm_verenia.24.a
+		ai_chance = { factor = 90 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_exchange_tt
+		if = {
+			limit = {
+				custom_trigger_tooltip = {
+					tooltip = HSM_VER_EUI_ducal_exchange_open_tt
+					HSM_VER_houses_at_peace = yes
+					OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes }
+					ERI = { NOT = { has_country_flag = HSM_VER_exchange_completed } }
+				}
+			}
+			add_manpower = 500
+			ERI = {
+				hidden_effect = {
+					set_country_flag = HSM_VER_exchange_completed
+				}
+				add_manpower = 500
+				country_event = { id = hsm_verenia.25 days = 1 }
+			}
+		}
+	}
+	option = { name = hsm_verenia.24.b ai_chance = { factor = 10 } }
+}
+country_event = {
+	id = hsm_verenia.25
+	title = hsm_verenia.25.t desc = hsm_verenia.25.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.25.a }
+}
+country_event = {
+	id = hsm_verenia.29
+	# Distinguish a missing reply from a refusal in the next runtime playtest.
+	title = hsm_verenia.29.t desc = hsm_verenia.29.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { has_country_flag = HSM_VER_armistice_pending NOT = { has_country_flag = HSM_VER_armistice_reply_window } }
+	immediate = { log = "[GetDateText]: Verenia: armistice mandate expired without signature." clr_country_flag = HSM_VER_armistice_pending set_country_flag = HSM_VER_armistice_refused }
+	option = { name = hsm_verenia.29.a }
+}
+country_event = {
+	id = hsm_verenia.30
+	title = hsm_verenia.30.t desc = hsm_verenia.30.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_armistice_valid = yes ERI = { has_country_flag = HSM_VER_treaty_pending } }
+	option = {
+		name = hsm_verenia.30.a
+		ai_chance = { factor = 100 modifier = { factor = 0 ERI = { NOT = { has_country_flag = HSM_VER_guarantees_prepared } } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_treaty_tt ERI = { show_ideas_tooltip = HSM_VER_peace_dividend } EYR = { show_ideas_tooltip = HSM_VER_peace_dividend }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_armistice_valid = yes ERI = { has_country_flag = HSM_VER_treaty_pending } } }
+			hidden_effect = { HSM_VER_sign_treaty = yes }
+			ERI = { country_event = { id = hsm_verenia.32 days = 1 } }
+		}
+	}
+	option = {
+		name = hsm_verenia.30.b
+		ai_chance = { factor = 100 modifier = { factor = 0 ERI = { has_country_flag = HSM_VER_guarantees_prepared } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ask_arbitration_tt
+		if = { limit = { hidden_trigger = { HSM_VER_armistice_valid = yes ERI = { has_country_flag = HSM_VER_treaty_pending } } } ERI = { country_event = { id = hsm_verenia.31 days = 1 } } }
+	}
+	option = {
+		name = hsm_verenia.30.c
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_treaty_tt
+		ERI = { if = { limit = { hidden_trigger = { has_country_flag = HSM_VER_treaty_pending } } hidden_effect = { clr_country_flag = HSM_VER_treaty_pending } hidden_effect = { set_country_flag = HSM_VER_treaty_refused } country_event = { id = hsm_verenia.33 days = 1 } } }
+	}
+}
+country_event = {
+	id = hsm_verenia.31
+	title = hsm_verenia.31.t desc = hsm_verenia.31.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_armistice_valid = yes has_country_flag = HSM_VER_treaty_pending }
+	option = {
+		name = hsm_verenia.31.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_accept_arbitration_tt ERI = { show_ideas_tooltip = HSM_VER_peace_dividend } EYR = { show_ideas_tooltip = HSM_VER_peace_dividend }
+		if = { limit = { hidden_trigger = { HSM_VER_armistice_valid = yes has_country_flag = HSM_VER_treaty_pending } } add_political_power = -50 hidden_effect = { set_country_flag = HSM_VER_property_arbitration } hidden_effect = { HSM_VER_sign_treaty = yes } country_event = { id = hsm_verenia.32 days = 1 } }
+	}
+	option = {
+		name = hsm_verenia.31.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_treaty_tt
+		hidden_effect = {
+			if = { limit = { has_country_flag = HSM_VER_treaty_pending } clr_country_flag = HSM_VER_treaty_pending set_country_flag = HSM_VER_treaty_refused }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.32
+	title = hsm_verenia.32.t desc = hsm_verenia.32.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.32.a }
+}
+country_event = {
+	id = hsm_verenia.33
+	title = hsm_verenia.33.t desc = hsm_verenia.33.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.33.a }
+}
+country_event = {
+	id = hsm_verenia.39
+	title = hsm_verenia.39.t desc = hsm_verenia.39.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { has_country_flag = HSM_VER_treaty_pending NOT = { has_country_flag = HSM_VER_treaty_reply_window } }
+	immediate = { clr_country_flag = HSM_VER_treaty_pending set_country_flag = HSM_VER_treaty_refused }
+	option = { name = hsm_verenia.39.a }
+}
+country_event = {
+	id = hsm_verenia.40
+	title = hsm_verenia.40.t desc = hsm_verenia.40.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_negotiated_peace_valid = yes }
+	option = {
+		name = hsm_verenia.40.a
+		ai_chance = { factor = 75 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_civic_delegates_tt show_ideas_tooltip = HSM_VER_public_council
+		hidden_effect = {
+			set_country_flag = HSM_VER_civic_delegates
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = hsm_verenia.40.b
+		ai_chance = { factor = 25 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_household_delegates_tt show_ideas_tooltip = HSM_VER_common_courts
+		hidden_effect = {
+			set_country_flag = HSM_VER_household_delegates
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.50
+	title = hsm_verenia.50.t desc = hsm_verenia.50.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_avian_invitation_valid = yes }
+	option = {
+		name = hsm_verenia.50.a
+		ai_chance = { factor = 70 modifier = { factor = 0.2 has_completed_focus = pursue_true_neutrality } modifier = { factor = 0 has_completed_focus = fascists_win } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_observer_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_avian_invitation_valid = yes } }
+			hidden_effect = { set_country_flag = HSM_VER_congress_observer }
+			ERI = { hidden_effect = { clr_country_flag = HSM_VER_avian_pending } hidden_effect = { clr_country_flag = HSM_VER_avian_declined } country_event = { id = hsm_verenia.51 days = 1 } }
+			hidden_effect = { HSM_VER_offer_avian_charter = yes }
+			if = { limit = { hidden_trigger = { EYR = { has_country_flag = HSM_EYR_campaign_active } } } EYR = { country_event = { id = hsm_ver_eyrie.8 days = 1 } } }
+		}
+	}
+	option = {
+		name = hsm_verenia.50.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_observer_tt
+		if = {
+			limit = { hidden_trigger = { ERI = { has_country_flag = HSM_VER_avian_pending } } }
+			hidden_effect = { clr_country_flag = HSM_VER_congress_observer }
+			ERI = { hidden_effect = { clr_country_flag = HSM_VER_avian_pending } hidden_effect = { set_country_flag = HSM_VER_avian_declined } country_event = { id = hsm_verenia.52 days = 1 } }
+			if = { limit = { hidden_trigger = { EYR = { has_country_flag = HSM_EYR_campaign_active } } } EYR = { country_event = { id = hsm_ver_eyrie.8 days = 1 } } }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.51
+	title = hsm_verenia.51.t desc = hsm_verenia.51.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.51.a }
+}
+country_event = {
+	id = hsm_verenia.52
+	title = hsm_verenia.52.t desc = hsm_verenia.52.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.52.a }
+}
+country_event = {
+	id = hsm_verenia.59
+	title = hsm_verenia.59.t desc = hsm_verenia.59.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { has_country_flag = HSM_VER_avian_pending }
+	immediate = {
+		clr_country_flag = HSM_VER_avian_pending set_country_flag = HSM_VER_avian_declined
+		if = { limit = { EYR = { has_country_flag = HSM_EYR_campaign_active } } EYR = { country_event = { id = hsm_ver_eyrie.8 days = 1 } } }
+	}
+	option = { name = hsm_verenia.59.a }
+}
+country_event = {
+	id = hsm_verenia.60
+	title = hsm_verenia.60.t desc = hsm_verenia.60.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_negotiated_peace_valid = yes has_country_flag = HSM_VER_charter_pending }
+	option = {
+		name = hsm_verenia.60.a
+		ai_chance = { factor = 70 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_offer_equal_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_negotiated_peace_valid = yes has_country_flag = HSM_VER_charter_pending } }
+			hidden_effect = { clr_country_flag = HSM_VER_ducal_presidency }
+			if = { limit = { hidden_trigger = { EYR = { is_ai = yes } } } hidden_effect = { HSM_VER_ratify_charter = yes } }
+			else = { EYR = { country_event = { id = hsm_verenia.61 days = 1 } } }
+		}
+	}
+	option = {
+		name = hsm_verenia.60.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_offer_presidency_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_negotiated_peace_valid = yes has_country_flag = HSM_VER_charter_pending } }
+			hidden_effect = { set_country_flag = HSM_VER_ducal_presidency }
+			if = { limit = { hidden_trigger = { EYR = { is_ai = yes } } } country_event = { id = hsm_verenia.62 days = 1 } }
+			else = { EYR = { country_event = { id = hsm_verenia.61 days = 1 } } }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.61
+	title = hsm_verenia.61.t
+	desc = { trigger = { ERI = { has_country_flag = HSM_VER_ducal_presidency } } text = hsm_verenia.61.ducal.d }
+	desc = { trigger = { ERI = { NOT = { has_country_flag = HSM_VER_ducal_presidency } } } text = hsm_verenia.61.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_negotiated_peace_valid = yes ERI = { has_country_flag = HSM_VER_charter_pending } }
+	option = {
+		name = hsm_verenia.61.a
+		ai_chance = { factor = 100 modifier = { factor = 0 ERI = { has_country_flag = HSM_VER_ducal_presidency } } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ratify_chosen_tt
+		hidden_effect = {
+			HSM_VER_ratify_charter = yes
+		}
+	}
+	option = {
+		name = hsm_verenia.61.b
+		trigger = { ERI = { has_country_flag = HSM_VER_ducal_presidency } }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_equal_counteroffer_tt
+		if = { limit = { hidden_trigger = { HSM_VER_negotiated_peace_valid = yes ERI = { has_country_flag = HSM_VER_charter_pending } } } ERI = { country_event = { id = hsm_verenia.62 days = 1 } } }
+	}
+	option = {
+		name = hsm_verenia.61.c
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_charter_tt
+		ERI = { if = { limit = { hidden_trigger = { has_country_flag = HSM_VER_charter_pending } } hidden_effect = { clr_country_flag = HSM_VER_charter_pending } hidden_effect = { set_country_flag = HSM_VER_charter_refused } country_event = { id = hsm_verenia.65 days = 1 } } }
+	}
+}
+country_event = {
+	id = hsm_verenia.62
+	title = hsm_verenia.62.t desc = hsm_verenia.62.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_negotiated_peace_valid = yes has_country_flag = HSM_VER_charter_pending }
+	option = {
+		name = hsm_verenia.62.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ratify_equal_tt
+		hidden_effect = {
+			if = { limit = { HSM_VER_negotiated_peace_valid = yes has_country_flag = HSM_VER_charter_pending } clr_country_flag = HSM_VER_ducal_presidency HSM_VER_ratify_charter = yes }
+		}
+	}
+	option = {
+		name = hsm_verenia.62.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_charter_tt
+		hidden_effect = {
+			if = { limit = { has_country_flag = HSM_VER_charter_pending } clr_country_flag = HSM_VER_charter_pending set_country_flag = HSM_VER_charter_refused }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.63
+	title = hsm_verenia.63.t desc = hsm_verenia.63.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_avian_ratification_valid = yes }
+	option = {
+		name = hsm_verenia.63.a
+		ai_chance = { factor = 75 modifier = { factor = 0 has_completed_focus = fascists_win } }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_ratify_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_avian_ratification_valid = yes } }
+			hidden_effect = { clr_country_flag = HSM_VER_avian_charter_pending }
+			hidden_effect = { set_country_flag = HSM_VER_charter_signed }
+			HSM_VER_SP_add_HSM_VER_common_courts = yes
+			if = { limit = { hidden_trigger = { ERI = { has_country_flag = HSM_VER_staff_established } } } hidden_effect = { set_country_flag = HSM_VER_staff_established } HSM_VER_SP_add_HSM_VER_joint_staff = yes }
+			if = { limit = { hidden_trigger = { ERI = { has_country_flag = HSM_VER_services_established } } } hidden_effect = { set_country_flag = HSM_VER_services_established } HSM_VER_SP_add_HSM_VER_shared_services = yes }
+			hidden_effect = { HSM_VER_reconcile_charter_suspension = yes }
+		}
+	}
+	option = {
+		name = hsm_verenia.63.b
+		ai_chance = { factor = 25 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_refuse_charter_tt
+		hidden_effect = {
+			if = { limit = { has_country_flag = HSM_VER_avian_charter_pending NOT = { has_country_flag = HSM_VER_charter_signed } } clr_country_flag = HSM_VER_avian_charter_pending clr_country_flag = HSM_VER_congress_observer ERI = { set_country_flag = HSM_VER_avian_declined } }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.64
+	title = hsm_verenia.64.t desc = hsm_verenia.64.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.64.a }
+}
+country_event = {
+	id = hsm_verenia.65
+	title = hsm_verenia.65.t desc = hsm_verenia.65.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.65.a }
+}
+country_event = {
+	id = hsm_verenia.69
+	title = hsm_verenia.69.t desc = hsm_verenia.69.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { has_country_flag = HSM_VER_charter_pending }
+	immediate = { clr_country_flag = HSM_VER_charter_pending set_country_flag = HSM_VER_charter_refused }
+	option = { name = hsm_verenia.69.a }
+}
+country_event = {
+	id = hsm_verenia.70
+	title = hsm_verenia.70.t desc = hsm_verenia.70.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_judgement_unresolved = yes has_country_flag = HSM_VER_judgement_pending }
+	option = {
+		name = hsm_verenia.70.a
+		ai_chance = { factor = 85 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_honour_judgement_tt
+		if = {
+			limit = {
+				custom_trigger_tooltip = {
+					tooltip = HSM_VER_EUI_ducal_judgement_open_tt
+					HSM_VER_judgement_unresolved = yes
+					has_country_flag = HSM_VER_judgement_pending
+				}
+			}
+			hidden_effect = {
+				set_country_flag = HSM_VER_judgement_resolved
+			}
+			hidden_effect = {
+				clr_country_flag = HSM_VER_judgement_pending
+			}
+			hidden_effect = {
+				set_country_flag = HSM_VER_court_respected
+			}
+			add_political_power = -75
+			EYR = { country_event = { id = hsm_verenia.71 days = 1 } }
+		}
+	}
+	option = {
+		name = hsm_verenia.70.b
+		ai_chance = { factor = 15 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_ducal_exception_tt
+		show_ideas_tooltip = HSM_VER_ducal_exception
+		if = {
+			limit = { hidden_trigger = { HSM_VER_judgement_unresolved = yes has_country_flag = HSM_VER_judgement_pending } }
+			hidden_effect = { set_country_flag = HSM_VER_judgement_resolved }
+			hidden_effect = { clr_country_flag = HSM_VER_judgement_pending }
+			hidden_effect = { set_country_flag = HSM_VER_royal_exception }
+			HSM_VER_SP_add_HSM_VER_ducal_exception = yes
+			hidden_effect = { HSM_VER_suspend_charter = yes }
+			EYR = { country_event = { id = hsm_verenia.72 days = 1 } }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.71
+	title = hsm_verenia.71.t desc = hsm_verenia.71.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.71.a }
+}
+country_event = {
+	id = hsm_verenia.72
+	title = hsm_verenia.72.t desc = hsm_verenia.72.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = {
+		name = hsm_verenia.72.a
+	}
+}
+country_event = {
+	id = hsm_verenia.73
+	title = hsm_verenia.73.t desc = hsm_verenia.73.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.73.a }
+}
+country_event = {
+	id = hsm_verenia.80
+	title = hsm_verenia.80.t desc = hsm_verenia.80.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_can_form_defensive_league = yes ERI = { has_country_flag = HSM_VER_defence_pending NOT = { has_country_flag = HSM_VER_defence_accepted } } }
+	option = {
+		name = hsm_verenia.80.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_erie_league_tt
+		hidden_effect = {
+			HSM_VER_form_defensive_league = yes
+		}
+	}
+	option = {
+		name = hsm_verenia.80.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_refuse_league_tt
+		ERI = { if = { limit = { hidden_trigger = { has_country_flag = HSM_VER_defence_pending NOT = { has_country_flag = HSM_VER_defence_accepted } } } hidden_effect = { clr_country_flag = HSM_VER_defence_pending } hidden_effect = { set_country_flag = HSM_VER_defence_declined } country_event = { id = hsm_verenia.81 days = 1 } } }
+	}
+}
+country_event = {
+	id = hsm_verenia.81
+	title = hsm_verenia.81.t desc = hsm_verenia.81.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.81.a }
+}
+country_event = {
+	id = hsm_verenia.82
+	title = hsm_verenia.82.t desc = hsm_verenia.82.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_avian_partner = yes HSM_VER_defence_league_operational = yes is_in_faction = no has_country_flag = HSM_VER_avian_defence_pending }
+	option = {
+		name = hsm_verenia.82.a
+		ai_chance = { factor = 75 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_league_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_avian_partner = yes HSM_VER_defence_league_operational = yes is_in_faction = no has_country_flag = HSM_VER_avian_defence_pending } }
+			if = { limit = { hidden_trigger = { ERI = { is_faction_leader = yes } } } ERI = { add_to_faction = AVI } }
+			else = { EYR = { add_to_faction = AVI } }
+			hidden_effect = { set_country_flag = HSM_VER_defence_accepted }
+			hidden_effect = { clr_country_flag = HSM_VER_avian_defence_pending }
+		}
+	}
+	option = {
+		name = hsm_verenia.82.b
+		ai_chance = { factor = 25 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_avian_refuse_league_tt
+		hidden_effect = {
+			if = { limit = { HSM_VER_avian_partner = yes HSM_VER_defence_league_operational = yes is_in_faction = no has_country_flag = HSM_VER_avian_defence_pending NOT = { has_country_flag = HSM_VER_defence_accepted } } clr_country_flag = HSM_VER_avian_defence_pending set_country_flag = HSM_VER_avian_defence_declined }
+		}
+	}
+}
+country_event = {
+	id = hsm_verenia.90
+	title = hsm_verenia.90.t
+	trigger = { HSM_VER_charter_valid = yes has_war = no has_country_leader = { character = ERI_duke_vincent_erie } }
+	desc = { trigger = { has_country_flag = HSM_VER_public_hearings } text = hsm_verenia.90.public.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_public_hearings } } text = hsm_verenia.90.d }
+	picture = GFX_event_western_griffon_city
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.90.a }
+}
+country_event = {
+	id = hsm_verenia.91
+	title = hsm_verenia.91.t
+	desc = { trigger = { HSM_VER_avian_partner = yes } text = hsm_verenia.91.three.d }
+	desc = { trigger = { NOT = { HSM_VER_avian_partner = yes } } text = hsm_verenia.91.d }
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_charter_valid = yes }
+	option = { name = hsm_verenia.91.a }
+}
+country_event = {
+	id = hsm_verenia.92
+	title = hsm_verenia.92.t desc = hsm_verenia.92.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_verenia.92.a }
+}
+country_event = {
+	id = hsm_verenia.95
+	title = hsm_verenia.95.t
+	desc = { trigger = { HSM_VER_CR_military_government = yes } text = HSM_VER_CR_demand_military_desc }
+	desc = { trigger = { HSM_VER_CR_technocrat_government = yes } text = HSM_VER_CR_demand_technocrat_desc }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_CR_demand_valid = yes }
+	option = {
+		name = hsm_verenia.95.a
+		ai_chance = { factor = 60 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_resist_avian_tt
+		show_ideas_tooltip = HSM_VER_CR_border_watch
+		hidden_effect = {
+			HSM_VER_CR_reject_supremacy = yes
+		}
+	}
+	option = {
+		name = HSM_VER_CR_negotiate_demand_option
+		trigger = { HSM_VER_CR_can_offer = yes }
+		ai_chance = { factor = 35 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_negotiate_avian_tt
+		HSM_VER_CR_negotiate_demand = yes
+	}
+	option = {
+		name = hsm_verenia.95.b
+		trigger = { HSM_VER_CR_can_submit = yes }
+		ai_chance = { factor = 5 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_submit_avian_tt
+		hidden_effect = {
+			HSM_VER_CR_accept_suzerainty = yes
+		}
+	}
+}

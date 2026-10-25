@@ -1,0 +1,277 @@
+# AVI scope. The native battle remains the only selector of the victor.
+HSM_VER_CR_begin = {
+	if = {
+		limit = { tag = AVI exists = yes NOT = { has_country_flag = HSM_VER_CR_started } }
+		set_country_flag = HSM_VER_CR_started
+		set_country_flag = HSM_VER_CR_emergency
+		ERI = { HSM_VER_CR_request_help = yes }
+		EYR = { HSM_VER_CR_request_help = yes }
+	}
+}
+HSM_VER_CR_request_help = {
+	if = {
+		limit = { HSM_VER_CR_emergency_context = yes }
+		set_country_flag = { flag = HSM_VER_CR_aid_pending value = 1 days = 12 }
+		country_event = { id = hsm_ver_crisis.1 }
+	}
+}
+HSM_VER_CR_send_medics = {
+	if = {
+		limit = { HSM_VER_CR_aid_choice_valid = yes has_political_power > 24 }
+		add_political_power = -25
+		set_country_flag = HSM_VER_CR_medics
+		HSM_VER_CR_close_aid_choice = yes
+		AVI = { if = { limit = { NOT = { has_idea = HSM_VER_CR_emergency_hospitals } } add_timed_idea = { idea = HSM_VER_CR_emergency_hospitals days = 120 } } }
+	}
+}
+HSM_VER_CR_support_loyalists = {
+	if = {
+		limit = { HSM_VER_CR_aid_choice_valid = yes has_political_power > 39 }
+		add_political_power = -40
+		set_country_flag = HSM_VER_CR_supported_loyalists
+		HSM_VER_CR_close_aid_choice = yes
+		custom_effect_tooltip = HSM_VER_CR_loyalist_support_tt
+		hidden_effect = { AVI = { add_to_variable = { var = loyalist_effort value = 1 } } }
+	}
+}
+HSM_VER_CR_close_aid_choice = {
+	clr_country_flag = HSM_VER_CR_aid_pending
+	set_country_flag = HSM_VER_CR_aid_answered
+}
+HSM_VER_CR_guard_border = {
+	if = {
+		limit = { HSM_VER_CR_aid_choice_valid = yes }
+		set_country_flag = HSM_VER_CR_guarded_border
+		HSM_VER_CR_close_aid_choice = yes
+	}
+}
+# Separate from bilateral ERI/EYR peace. A changed Avian government has not
+# signed either its predecessor's charter or an unreceived invitation.
+HSM_VER_CR_withdraw_avian = {
+	AVI = {
+		clr_country_flag = HSM_VER_charter_signed
+		clr_country_flag = HSM_VER_congress_observer
+		clr_country_flag = HSM_VER_avian_charter_pending
+		clr_country_flag = HSM_VER_avian_defence_pending
+		HSM_VER_remove_charter_benefits = yes
+	}
+	ERI = { clr_country_flag = HSM_VER_avian_pending }
+	HSM_VER_AVI_void_budget = yes
+}
+HSM_VER_CR_record_outcome = {
+	if = {
+		limit = { tag = AVI NOT = { has_country_flag = HSM_VER_CR_outcome } }
+		set_country_flag = HSM_VER_CR_outcome
+		clr_country_flag = HSM_VER_CR_emergency
+		HSM_VER_CR_withdraw_avian = yes
+		set_country_flag = { flag = HSM_VER_CR_returns_pending value = 1 days = 45 }
+		country_event = { id = hsm_ver_crisis.2 days = 14 }
+		if = {
+			limit = { HSM_VER_CR_loyalist_government = yes }
+			ERI = { HSM_VER_CR_queue_loyalist = yes }
+			EYR = { HSM_VER_CR_queue_loyalist = yes }
+		}
+	}
+}
+HSM_VER_CR_queue_loyalist = {
+	if = {
+		limit = { exists = yes OR = { is_subject = no is_subject_of = AVI } NOT = { has_country_flag = HSM_VER_CR_loyalist_seen has_country_flag = HSM_VER_CR_loyalist_pending } }
+		set_country_flag = { flag = HSM_VER_CR_loyalist_pending value = 1 days = 30 }
+		set_country_flag = HSM_VER_CR_contact_opened
+		country_event = { id = hsm_ver_crisis.5 days = 1 }
+	}
+}
+HSM_VER_CR_remember_government = {
+	clr_country_flag = HSM_VER_CR_mode_military
+	clr_country_flag = HSM_VER_CR_mode_technocrat
+	clr_country_flag = HSM_VER_CR_mode_loyalist
+	clr_country_flag = HSM_VER_CR_mode_foundation
+	clr_country_flag = HSM_VER_CR_mode_neutral
+	if = { limit = { HSM_VER_CR_military_government = yes } set_country_flag = HSM_VER_CR_mode_military }
+	else_if = { limit = { HSM_VER_CR_technocrat_government = yes } set_country_flag = HSM_VER_CR_mode_technocrat }
+	else_if = { limit = { HSM_VER_CR_loyalist_government = yes } set_country_flag = HSM_VER_CR_mode_loyalist }
+	else_if = { limit = { HSM_VER_CR_foundation_government = yes } set_country_flag = HSM_VER_CR_mode_foundation }
+	else_if = { limit = { HSM_VER_CR_neutral_government = yes } set_country_flag = HSM_VER_CR_mode_neutral }
+}
+HSM_VER_CR_offer_compact = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_CR_can_offer = yes } }
+		add_political_power = -35
+		hidden_effect = {
+		set_country_flag = HSM_VER_CR_contact_opened
+		set_country_flag = { flag = HSM_VER_CR_offer_pending value = 1 days = 45 }
+		set_country_flag = { flag = HSM_VER_CR_offer_retry value = 1 days = 90 }
+		HSM_VER_CR_remember_government = yes
+		}
+		AVI = { country_event = { id = hsm_ver_crisis.3 days = 1 } }
+		country_event = { id = hsm_ver_crisis.29 days = 30 }
+	}
+}
+HSM_VER_CR_accept_compact = {
+	if = {
+		limit = { HSM_VER_CR_reply_valid = yes }
+		clr_country_flag = HSM_VER_CR_offer_pending
+		set_country_flag = HSM_VER_CR_compact
+		set_country_flag = HSM_VER_CR_demand_answered
+		clr_country_flag = HSM_VER_CR_resistance
+		remove_ideas = HSM_VER_CR_border_watch
+		if = {
+			limit = { NOT = { has_non_aggression_pact_with = AVI } }
+			diplomatic_relation = { country = AVI relation = non_aggression_pact active = yes }
+		}
+		HSM_VER_CR_refresh_compact = yes
+		AVI = { HSM_VER_CR_refresh_avian = yes }
+		country_event = { id = hsm_ver_crisis.10 days = 1 }
+		if = {
+			limit = { NOT = { has_country_flag = HSM_VER_CR_report_seen } }
+			set_country_flag = HSM_VER_CR_report_due
+			set_country_flag = { flag = HSM_VER_CR_report_wait value = 1 days = 60 }
+		}
+	}
+}
+HSM_VER_CR_refuse_compact = {
+	if = {
+		limit = { HSM_VER_CR_reply_valid = yes }
+		clr_country_flag = HSM_VER_CR_offer_pending
+		country_event = { id = hsm_ver_crisis.4 days = 1 }
+	}
+}
+HSM_VER_CR_reject_supremacy = {
+	if = {
+		limit = { HSM_VER_CR_demand_valid = yes }
+		set_country_flag = HSM_VER_CR_demand_answered
+		set_country_flag = HSM_VER_CR_contact_opened
+		set_country_flag = HSM_VER_CR_resistance
+		add_timed_idea = { idea = HSM_VER_CR_border_watch days = 180 }
+		AVI = { country_event = { id = hsm_ver_crisis.6 days = 1 } }
+		set_country_flag = { flag = HSM_VER_CR_border_ending_wait value = 1 days = 90 }
+	}
+}
+HSM_VER_CR_negotiate_demand = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_CR_demand_valid = yes HSM_VER_CR_can_offer = yes } }
+		hidden_effect = { set_country_flag = HSM_VER_CR_demand_answered }
+		HSM_VER_CR_offer_compact = yes
+	}
+}
+# Called only by the receiving House's explicit event option; ROOT is that House.
+HSM_VER_CR_accept_suzerainty = {
+	if = {
+		limit = { HSM_VER_CR_can_submit = yes }
+		set_country_flag = HSM_VER_CR_demand_answered
+		set_country_flag = HSM_VER_CR_submitted
+		remove_ideas = HSM_VER_CR_border_watch
+		AVI = { set_autonomy = { target = ROOT autonomy_state = autonomy_puppet } }
+		HSM_VER_CR_refresh_compact = yes
+		country_event = { id = hsm_ver_crisis.12 days = 1 }
+	}
+}
+HSM_VER_CR_refresh_compact = {
+	if = {
+		limit = { has_country_flag = HSM_VER_CR_compact NOT = { HSM_VER_CR_compact_legal = yes } }
+		clr_country_flag = HSM_VER_CR_compact
+		clr_country_flag = HSM_VER_CR_report_due
+		clr_country_flag = HSM_VER_CR_report_pending
+		country_event = { id = hsm_ver_crisis.11 days = 1 }
+	}
+	if = { limit = { HSM_VER_CR_compact_operational = yes NOT = { has_idea = HSM_VER_CR_civilian_transit } } add_ideas = HSM_VER_CR_civilian_transit }
+	else_if = { limit = { NOT = { HSM_VER_CR_compact_operational = yes } } remove_ideas = HSM_VER_CR_civilian_transit }
+}
+HSM_VER_CR_refresh_avian = {
+	if = {
+		limit = { OR = { ERI = { HSM_VER_CR_compact_operational = yes } EYR = { HSM_VER_CR_compact_operational = yes } } }
+		if = { limit = { NOT = { has_idea = HSM_VER_CR_civilian_transit } } add_ideas = HSM_VER_CR_civilian_transit }
+	}
+	else = { remove_ideas = HSM_VER_CR_civilian_transit }
+}
+HSM_VER_CR_announce_isolation = {
+	if = {
+		limit = { tag = AVI HSM_VER_CR_neutral_government = yes NOT = { has_country_flag = HSM_VER_CR_isolation_recorded } }
+		set_country_flag = HSM_VER_CR_isolation_recorded
+		HSM_VER_CR_withdraw_avian = yes
+	}
+}
+HSM_VER_CR_maintain_house = {
+	HSM_VER_CR_refresh_compact = yes
+	if = {
+		limit = { has_country_flag = HSM_VER_CR_offer_pending NOT = { HSM_VER_CR_reply_valid = yes } }
+		clr_country_flag = HSM_VER_CR_offer_pending
+	}
+	if = {
+		limit = { HSM_VER_CR_contact_context = yes }
+		if = {
+			limit = { HSM_VER_CR_hostile_government = yes NOT = { has_country_flag = HSM_VER_CR_demand_answered has_country_flag = HSM_VER_CR_demand_pending } }
+			set_country_flag = { flag = HSM_VER_CR_demand_pending value = 1 days = 30 }
+			set_country_flag = HSM_VER_CR_contact_opened
+			country_event = { id = hsm_verenia.95 days = 1 }
+		}
+		if = {
+			limit = { HSM_VER_CR_neutral_government = yes NOT = { has_country_flag = HSM_VER_CR_isolation_seen has_country_flag = HSM_VER_CR_isolation_pending } }
+			set_country_flag = { flag = HSM_VER_CR_isolation_pending value = 1 days = 30 }
+			set_country_flag = HSM_VER_CR_contact_opened
+			country_event = { id = hsm_ver_crisis.7 days = 1 }
+		}
+		if = {
+			limit = { HSM_VER_CR_foundation_government = yes NOT = { has_country_flag = HSM_VER_CR_foundation_seen has_country_flag = HSM_VER_CR_foundation_pending } }
+			set_country_flag = { flag = HSM_VER_CR_foundation_pending value = 1 days = 30 }
+			set_country_flag = HSM_VER_CR_contact_opened
+			country_event = { id = hsm_ver_crisis.8 days = 1 }
+		}
+	}
+	if = {
+		limit = {
+			HSM_VER_CR_loyalist_government = yes
+			exists = yes has_capitulated = no OR = { is_subject = no is_subject_of = AVI }
+			HSM_VER_CR_avian_available = yes NOT = { has_war_with = AVI }
+		}
+		HSM_VER_CR_queue_loyalist = yes
+		if = {
+			limit = { has_country_flag = HSM_VER_CR_loyalist_seen AVI = { has_completed_focus = permit_local_elections has_government = democratic } NOT = { has_country_flag = HSM_VER_CR_elections_seen has_country_flag = HSM_VER_CR_elections_pending } }
+			set_country_flag = { flag = HSM_VER_CR_elections_pending value = 1 days = 30 }
+			country_event = { id = hsm_ver_crisis.9 days = 1 }
+		}
+	}
+	if = {
+		limit = { HSM_VER_CR_compact_operational = yes has_country_flag = HSM_VER_CR_report_due NOT = { has_country_flag = HSM_VER_CR_report_wait has_country_flag = HSM_VER_CR_report_seen has_country_flag = HSM_VER_CR_report_pending } }
+		set_country_flag = { flag = HSM_VER_CR_report_pending value = 1 days = 30 }
+		country_event = { id = hsm_ver_crisis.15 days = 1 }
+	}
+	if = {
+		limit = { HSM_VER_CR_contact_context = yes HSM_VER_CR_hostile_government = yes has_country_flag = HSM_VER_CR_resistance NOT = { has_country_flag = HSM_VER_CR_border_ending_wait has_country_flag = HSM_VER_CR_border_ending_seen has_country_flag = HSM_VER_CR_border_ending_pending has_country_flag = HSM_VER_CR_offer_pending } }
+		set_country_flag = { flag = HSM_VER_CR_border_ending_pending value = 1 days = 30 }
+		country_event = { id = hsm_ver_crisis.16 days = 1 }
+	}
+	if = { limit = { is_subject = yes } remove_ideas = HSM_VER_CR_border_watch }
+}
+HSM_VER_CR_maintain_avian = {
+	HSM_VER_CR_announce_isolation = yes
+	if = {
+		limit = {
+			HSM_VER_CR_known_government = yes
+			OR = { has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_avian_charter_pending has_country_flag = HSM_VER_avian_defence_pending has_country_flag = HSM_AVI_budget_signed }
+		}
+		HSM_VER_CR_withdraw_avian = yes
+	}
+	if = {
+		limit = { exists = yes has_capitulated = no has_country_flag = HSM_VER_CR_outcome NOT = { has_country_flag = HSM_VER_CR_returns_seen has_country_flag = HSM_VER_CR_returns_pending } OR = { HSM_VER_CR_loyalist_government = yes HSM_VER_CR_hostile_government = yes } }
+		set_country_flag = { flag = HSM_VER_CR_returns_pending value = 1 days = 30 }
+		country_event = { id = hsm_ver_crisis.2 days = 1 }
+	}
+	ERI = { HSM_VER_CR_refresh_compact = yes }
+	EYR = { HSM_VER_CR_refresh_compact = yes }
+	HSM_VER_CR_refresh_avian = yes
+}
+HSM_VER_CR_retry_integration = {
+	if = {
+		limit = { HSM_VER_CR_integration_retry_valid = yes }
+		set_country_flag = { flag = HSM_VER_CR_integration_retry value = 1 days = 90 }
+		country_event = { id = avian.5 days = 1 }
+	}
+}
+HSM_VER_CR_end_compact = {
+	clr_country_flag = HSM_VER_CR_compact
+	clr_country_flag = HSM_VER_CR_offer_pending
+	clr_country_flag = HSM_VER_CR_report_due
+	clr_country_flag = HSM_VER_CR_report_pending
+	remove_ideas = HSM_VER_CR_civilian_transit
+}

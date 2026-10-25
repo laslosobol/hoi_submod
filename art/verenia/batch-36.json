@@ -1,0 +1,174 @@
+[
+  {
+    "id": "HSM_EYR_FORCE_break_the_rival_line",
+    "target": "HSM_EYR_FORCE_break_the_rival_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_break_the_rival_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_break_the_rival_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A rival frontier line marked on a campaign board beside an unopened demand case. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_field_liaison",
+    "target": "HSM_EYR_FORCE_field_liaison",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_field_liaison-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_field_liaison.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A dispatch satchel connecting a field telephone to marching-column map markers. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the three modern teardrop location-pin symbols on the paper map into simple small dark-red rectangular military unit counters drawn flat in ink. Preserve connecting dashed route and arrows, fictional terrain, field telephone, leather satchel, colors, painted game icon finish and transparent exterior. No new symbols or text.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_supply_the_columns",
+    "target": "HSM_EYR_FORCE_supply_the_columns",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_supply_the_columns.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_supply_the_columns.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A cargo-loading ramp with a maintained truck wheel and a shortage indicator tray. Palette: Dull olive vehicle paint, dark rubber and exposed gunmetal; wear at edges only. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_victory_and_the_garrison",
+    "target": "HSM_EYR_FORCE_victory_and_the_garrison",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_victory_and_the_garrison.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_victory_and_the_garrison.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A garrison key poised between a civilian town door and a permanent military office. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_montagues_unsent_reply",
+    "target": "HSM_EYR_FORCE_montagues_unsent_reply",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_montagues_unsent_reply.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_montagues_unsent_reply.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An unfinished personal letter beneath a removable inspection shutter, with a civilian postbox nearby. Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_publish_release_schedule",
+    "target": "HSM_EYR_FORCE_publish_release_schedule",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_publish_release_schedule.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_publish_release_schedule.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A release calendar with dated geometric milestones beside returned workshop keys. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_district_commands",
+    "target": "HSM_EYR_FORCE_district_commands",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_district_commands.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_district_commands.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A permanent district headquarters with a fixed radio mast and local supply cabinet. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_useful_trades",
+    "target": "HSM_EYR_FORCE_useful_trades",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_useful_trades.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_useful_trades.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A former soldier's field pack beneath a newly equipped apprentice lathe. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_permanent_district_staff",
+    "target": "HSM_EYR_FORCE_permanent_district_staff",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_permanent_district_staff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_FORCE_permanent_district_staff.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A military district repair shop integrated with a permanent command telephone station. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern location pins replaced with period map counters; restrained military/industry palette.",
+    "runtime_verified": false
+  }
+]

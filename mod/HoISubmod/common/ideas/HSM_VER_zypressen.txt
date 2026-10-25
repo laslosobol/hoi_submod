@@ -1,0 +1,44 @@
+ideas = {
+ country = {
+  HSM_ZYP_imperial_chancery = {
+   picture = HSM_VER_ART_HSM_ZYP_imperial_chancery removal_cost = -1
+   cancel = { NOT = { HSM_ZYP_active = yes } }
+   modifier = { stability_factor = 0.05 political_power_factor = 0.05 }
+  }
+  HSM_ZYP_autonomous_crown = {
+   picture = HSM_VER_ART_HSM_ZYP_autonomous_crown removal_cost = -1
+   cancel = { NOT = { HSM_ZYP_agreement_valid = yes } }
+   modifier = { stability_factor = 0.07 production_speed_industrial_complex_factor = 0.10 political_power_factor = -0.05 }
+  }
+  HSM_ZYP_common_ministries = {
+   picture = HSM_VER_ART_HSM_ZYP_common_ministries removal_cost = -1
+   cancel = { NOT = { HSM_ZYP_agreement_valid = yes } }
+   modifier = { industrial_capacity_factory = 0.10 research_speed_factor = 0.03 political_power_gain = -0.10 }
+  }
+  HSM_ZYP_dynastic_exchange = {
+   picture = HSM_VER_ART_HSM_ZYP_dynastic_exchange removal_cost = -1
+   cancel = { OR = { NOT = { HSM_ZYP_active = yes } NOT = { any_country = { HSM_ZYP_agreement_valid = yes } } } }
+   modifier = { research_speed_factor = 0.05 production_factory_efficiency_gain_factor = 0.08 political_power_factor = -0.05 }
+  }
+  HSM_ZYP_railway_board = {
+   picture = HSM_VER_ART_HSM_ZYP_railway_board removal_cost = -1
+   cancel = { AVI = { NOT = { HSM_ZYP_government = yes } } }
+   modifier = { supply_consumption_factor = -0.10 production_speed_infrastructure_factor = 0.15 }
+  }
+  HSM_ZYP_professional_muster = {
+   picture = HSM_VER_ART_HSM_ZYP_professional_muster removal_cost = -1
+   cancel = { AVI = { NOT = { HSM_ZYP_government = yes } } }
+   modifier = { army_org_factor = 0.08 planning_speed = 0.10 stability_factor = -0.04 }
+  }
+  HSM_ZYP_limited_muster = {
+   picture = HSM_VER_ART_HSM_ZYP_limited_muster removal_cost = -1
+   cancel = { AVI = { NOT = { HSM_ZYP_government = yes } } }
+   modifier = { supply_consumption_factor = -0.10 training_time_factor = -0.10 }
+  }
+  HSM_ZYP_settled_orders = {
+   picture = HSM_VER_ART_HSM_ZYP_settled_orders removal_cost = -1
+   cancel = { AVI = { NOT = { HSM_ZYP_government = yes } } }
+   modifier = { production_factory_max_efficiency_factor = 0.05 production_speed_industrial_complex_factor = 0.10 }
+  }
+ }
+}

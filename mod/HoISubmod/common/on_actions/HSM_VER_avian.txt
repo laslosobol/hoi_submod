@@ -1,0 +1,11 @@
+on_actions = {
+	on_daily_AVI = { effect = { AVI = { HSM_VER_AVI_maintain_union = yes } } }
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = { OR = { tag = AVI tag = ERI tag = EYR } FROM = { OR = { tag = AVI tag = ERI tag = EYR } } }
+				HSM_VER_AVI_void_budget = yes
+			}
+		}
+	}
+}

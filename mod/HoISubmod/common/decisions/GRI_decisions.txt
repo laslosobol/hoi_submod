@@ -132,6 +132,7 @@ GRI_diplomacy = {
 	GRI_demand_land = {
 		icon = infiltrate_state
 		visible = {
+			HSM_VER_GRO_native_ruler_allowed = yes
 			has_completed_focus = GRI_empire_rising
 			is_subject = no
 			FROM = {
@@ -156,6 +157,7 @@ GRI_diplomacy = {
 			}
 		}
 		target_root_trigger = {
+			HSM_VER_GRO_native_ruler_allowed = yes
 			has_completed_focus = GRI_empire_rising
 			is_subject = no
 		}
@@ -192,6 +194,8 @@ GRI_diplomacy = {
 			}
 		}
 		complete_effect = {
+			if = { limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+
 			log = "[GetDateText]: [Root.GetName]: Decision GRI_demand_land target: [From.GetName]"
 			FROM = {
 				set_country_flag = { flag = GRI_demand_awaits_response value = 1 days = 30 }
@@ -211,6 +215,8 @@ GRI_diplomacy = {
 						ROOT = { transfer_state = PREV }
 					}
 				}
+			}
+
 			}
 		}
 	}
@@ -1795,6 +1801,7 @@ foreign_politics = {
 		cost = 75
 		fire_only_once = yes
 		visible = {
+			HSM_VER_GRO_native_ruler_allowed = yes
 			has_country_flag = griffon_can_demand_east_frontier
 			FROM = {
 				exists = yes
@@ -1825,7 +1832,8 @@ foreign_politics = {
 				}
 			}
 		}
-		target_root_trigger = { has_country_flag = griffon_can_demand_east_frontier }
+		target_root_trigger = {
+			HSM_VER_GRO_native_ruler_allowed = yes has_country_flag = griffon_can_demand_east_frontier }
 		target_array = neighbors
 		target_trigger = {
 			FROM = {
@@ -1851,15 +1859,23 @@ foreign_politics = {
 		}
 		ai_will_do = { base = 120 }
 		remove_effect = {
+			if = { limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_demand_frontier target: [From.GetName]"
 			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			FROM = {
 				country_event = imperial.149
 			}
+
+			}
 		}
 
 		complete_effect = {
+			if = { limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+
 			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+
+			}
 		}
 	}
 	GRI_offer_peace = {
@@ -1909,8 +1925,10 @@ foreign_politics = {
 				is_subject = yes
 			}
 		}
-		target_root_trigger = { has_country_flag = griffon_can_demand_east_frontier }
+		target_root_trigger = {
+			HSM_VER_GRO_native_ruler_allowed = yes has_country_flag = griffon_can_demand_east_frontier }
 		visible = {
+			HSM_VER_GRO_native_ruler_allowed = yes
 			has_war_with = FROM
 			has_country_flag = griffon_can_demand_east_frontier
 			FROM = {
@@ -1937,10 +1955,14 @@ foreign_politics = {
 			}
 		}
 		remove_effect = {
+			if = { limit = { hidden_trigger = { HSM_VER_GRO_native_ruler_allowed = yes } }
+
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRI_offer_peace target: [From.GetName]"
 			add_stability = 0.05
 			add_war_support = -0.05
 			FROM = { country_event = imperial.152 }
+
+			}
 		}
 	}
 

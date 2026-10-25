@@ -1,0 +1,152 @@
+# All construction stays in Eyrie's own fully controlled land. A subject's land is not ours to develop by fiat.
+HSM_VER_EYR_FORCE_civilian_workshop = {
+	if = {
+		limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+		if = {
+			limit = { hidden_trigger = { any_owned_state = { is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+			random_owned_state = {
+				limit = { hidden_trigger = { is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_tech_bonus = { name = HSM_EYR_FORCE_workshop_bonus bonus = 1.0 uses = 1 category = industry } }
+	}
+}
+HSM_VER_EYR_FORCE_military_workshop = {
+	if = {
+		limit = { hidden_trigger = { tag = EYR HSM_VER_FORCE_settlement_active = yes } }
+		if = {
+			limit = { hidden_trigger = { any_owned_state = { is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } } } }
+			random_owned_state = {
+				limit = { hidden_trigger = { is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_tech_bonus = { name = HSM_EYR_FORCE_arsenal_bonus bonus = 1.0 uses = 1 category = support_tech } }
+	}
+}
+
+# Historical choices survive a lost settlement; their benefits and liabilities do not operate outside it.
+# Guard additions so daily maintenance never reinstalls an already active permanent idea.
+HSM_VER_EYR_FORCE_refresh_spirits = {
+	if = {
+		limit = { tag = EYR HSM_VER_FORCE_settlement_active = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_civilian_order }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_civilian_release = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_civilian_release = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_civilian_release = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_military_order }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_military_government = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_military_government = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_military_government = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_private_post }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_open_correspondence = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_open_correspondence = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_open_correspondence = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_countersigned_post }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_supervised_correspondence = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_supervised_correspondence = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_supervised_correspondence = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_training_unfunded }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_unplaced_reservists = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_unplaced_reservists = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_unplaced_reservists = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_arms_priority }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_military_production_priority = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_military_production_priority = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_military_production_priority = yes }
+		if = {
+			limit = { has_country_flag = HSM_EYR_FORCE_civilian_contracts }
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_EYR_FORCE_contracted_workshops = yes } } HSM_VER_SP_add_HSM_EYR_FORCE_contracted_workshops = yes }
+		}
+		else = { HSM_VER_SP_remove_HSM_EYR_FORCE_contracted_workshops = yes }
+	}
+	else = {
+		HSM_VER_SP_remove_HSM_EYR_FORCE_civilian_release = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_military_government = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_open_correspondence = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_supervised_correspondence = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_unplaced_reservists = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_military_production_priority = yes
+		HSM_VER_SP_remove_HSM_EYR_FORCE_contracted_workshops = yes
+	}
+}
+
+# The parent owns the daily hook. Every delivery lease expires after the event's shorter timeout;
+# unopened or discarded popups can therefore return without repeating a resolved choice.
+HSM_VER_EYR_FORCE_maintain = {
+	if = {
+		limit = { tag = EYR has_country_flag = HSM_VER_FORCE_campaign }
+		if = {
+			limit = {
+				has_completed_focus = HSM_EYR_FORCE_the_last_campaign HSM_VER_FORCE_can_prepare = yes
+				NOT = { has_country_flag = HSM_EYR_FORCE_campaign_read has_country_flag = HSM_EYR_FORCE_campaign_pending }
+			}
+			set_country_flag = { flag = HSM_EYR_FORCE_campaign_pending value = 1 days = 30 }
+			country_event = { id = hsm_ver_eyr_force.1 days = 1 }
+		}
+		if = {
+			limit = {
+				has_completed_focus = HSM_EYR_FORCE_victory_and_the_garrison HSM_VER_FORCE_settlement_context = yes
+				NOT = { has_country_flag = HSM_VER_FORCE_settlement_started }
+			}
+			HSM_VER_FORCE_open_settlement = yes
+		}
+		HSM_VER_EYR_FORCE_refresh_spirits = yes
+		if = {
+			limit = { HSM_VER_FORCE_settlement_active = yes }
+			if = {
+				limit = { has_completed_focus = HSM_EYR_FORCE_victory_and_the_garrison NOT = { has_country_flag = HSM_EYR_FORCE_order_chosen has_country_flag = HSM_EYR_FORCE_order_pending } }
+				set_country_flag = { flag = HSM_EYR_FORCE_order_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_eyr_force.2 days = 1 }
+			}
+			if = {
+				limit = {
+					has_completed_focus = HSM_EYR_FORCE_montagues_unsent_reply has_country_flag = HSM_EYR_FORCE_order_chosen
+					NOT = { has_country_flag = HSM_EYR_FORCE_correspondence_decided has_country_flag = HSM_EYR_FORCE_correspondence_pending }
+				}
+				set_country_flag = { flag = HSM_EYR_FORCE_correspondence_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_eyr_force.3 days = 1 }
+			}
+			if = {
+				limit = {
+					has_completed_focus = HSM_EYR_FORCE_workshops_after_war has_country_flag = HSM_EYR_FORCE_order_chosen
+					has_country_flag = HSM_EYR_FORCE_correspondence_decided
+					NOT = { has_country_flag = HSM_EYR_FORCE_transition_wait has_country_flag = HSM_EYR_FORCE_workshops_decided has_country_flag = HSM_EYR_FORCE_workshops_pending }
+				}
+				set_country_flag = { flag = HSM_EYR_FORCE_workshops_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_eyr_force.4 days = 1 }
+			}
+			if = {
+				limit = { has_completed_focus = HSM_EYR_FORCE_inspections_not_parades NOT = { has_country_flag = HSM_EYR_FORCE_inspection_started } }
+				set_country_flag = HSM_EYR_FORCE_inspection_started
+				set_country_flag = { flag = HSM_EYR_FORCE_inspection_wait value = 1 days = 30 }
+			}
+			if = {
+				limit = {
+					has_completed_focus = HSM_EYR_FORCE_inspections_not_parades has_country_flag = HSM_EYR_FORCE_workshops_decided
+					has_country_flag = HSM_EYR_FORCE_inspection_started
+					NOT = { has_country_flag = HSM_EYR_FORCE_inspection_wait has_country_flag = HSM_EYR_FORCE_inspection_seen has_country_flag = HSM_EYR_FORCE_inspection_pending }
+				}
+				set_country_flag = { flag = HSM_EYR_FORCE_inspection_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_eyr_force.5 days = 1 }
+			}
+			if = {
+				limit = {
+					has_completed_focus = HSM_EYR_FORCE_road_that_stays_open has_country_flag = HSM_EYR_FORCE_inspection_seen
+					NOT = { has_country_flag = HSM_EYR_FORCE_ending_seen has_country_flag = HSM_EYR_FORCE_ending_pending }
+				}
+				set_country_flag = { flag = HSM_EYR_FORCE_ending_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_eyr_force.6 days = 1 }
+			}
+		}
+	}
+}

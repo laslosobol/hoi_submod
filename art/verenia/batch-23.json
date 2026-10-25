@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_ERI_joint_staff",
+    "target": "HSM_ERI_joint_staff",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_joint_staff.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_joint_staff.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two incompatible supply charts aligned beneath one field ruler and a staff telephone. Palette: Olive canvas, pale packing timber and dark iron; counters differentiated by value rather than heraldic colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_shared_services",
+    "target": "HSM_ERI_shared_services",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_shared_services.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_shared_services.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A threaded bolt from one workshop fitting a nut from another beneath a shared caliper. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_first_judgement",
+    "target": "HSM_ERI_first_judgement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_first_judgement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_first_judgement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Justice scales holding an estate key above a veteran's sheathed sword, law reaching a ducal patron. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_common_defence",
+    "target": "HSM_ERI_common_defence",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_common_defence.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_common_defence.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two defensive lanterns joined by a signal cable beside an unopened invitation for a third partner. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_keep_our_word",
+    "target": "HSM_ERI_keep_our_word",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_keep_our_word.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_keep_our_word.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A completed civilian workshop with its final repair scaffold being removed. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_generation_without_feud",
+    "target": "HSM_ERI_generation_without_feud",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_generation_without_feud.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_generation_without_feud.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A repaired market bridge carrying a school satchel and trade crate, peace becoming everyday habit. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_peace_without_union",
+    "target": "HSM_ERI_peace_without_union",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_peace_without_union.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_peace_without_union.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A domestic school roof being repaired beside a closed unused congress invitation. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_reconstruction",
+    "target": "HSM_ERI_reconstruction",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_reconstruction.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_reconstruction.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A surveyor's level above a roof beam and an organised repair-material crate. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_restore_public_services",
+    "target": "HSM_ERI_restore_public_services",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_restore_public_services.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_restore_public_services.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A restored village well beside a medicine cabinet and maintenance wrench. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_reopen_roads",
+    "target": "HSM_ERI_reopen_roads",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_reopen_roads.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_reopen_roads.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A three-way district road junction with repaired drainage and a small bridge. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Civil reconstruction and precision-metal palettes checked; no invented heraldry. Runtime pending.",
+    "runtime_verified": false
+  }
+]

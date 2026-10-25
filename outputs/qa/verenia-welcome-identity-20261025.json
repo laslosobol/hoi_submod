@@ -1,0 +1,19 @@
+{
+  "scope": "ERI/EYR native welcome pages and cultural-identity continuation under lawful co-rulers",
+  "checks": {
+    "welcome_dispatch": { "passed": 5, "failed": 0 },
+    "package_integration": { "passed": 102, "failed": 0 },
+    "identity_handover": { "passed": 21, "failed": 0 },
+    "consolidated_spirit": { "passed": 29, "failed": 0 },
+    "romance": { "passed": 21, "failed": 0 },
+    "focus_ui": { "analyzer_tests_passed": 17, "focuses_audited": 262, "violations": 0 },
+    "narrative_ui": { "analyzer_tests_passed": 22, "event_options_audited": 308, "decisions_audited": 25, "violations": 0, "mode": "ui-only" },
+    "spirit_generation": { "components": 80, "stale_files": 0 }
+  },
+  "welcome_layout": {
+    "method": "Source text wrapping at 120 columns after localization expansion; not native rendering",
+    "english_rows": { "ERI": 18, "EYR": 18, "region": 20 },
+    "russian_rows": { "ERI": 17, "EYR": 18, "region": 22 }
+  },
+  "runtime_playtest": "Not performed. Restart HOI4 and inspect the native welcome window plus the reported co-ruler save."
+}

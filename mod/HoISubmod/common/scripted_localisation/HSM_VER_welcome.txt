@@ -1,0 +1,34 @@
+# Extend the two country-specific welcome tabs without replacing EaW's GUI,
+# scripted GUI, or country dispatch tables. Other countries keep their native text.
+# original_tag keeps the opening history available after cosmetic-name changes.
+defined_text = {
+	name = GetHSMVereniaWelcomeCountryHeader
+	text = { trigger = { original_tag = ERI } localization_key = HSM_VER_WS_ERI_header }
+	text = { trigger = { original_tag = EYR } localization_key = HSM_VER_WS_EYR_header }
+	text = { localization_key = HSM_VER_WS_original_country_header }
+}
+
+defined_text = {
+	name = GetHSMVereniaWelcomeCountryIntro
+	text = { trigger = { original_tag = ERI } localization_key = HSM_VER_WS_ERI_intro }
+	text = { trigger = { original_tag = EYR } localization_key = HSM_VER_WS_EYR_intro }
+	text = { localization_key = HSM_VER_WS_original_country_intro }
+}
+
+defined_text = {
+	name = GetHSMVereniaWelcomeRegionHeader
+	text = {
+		trigger = { OR = { original_tag = ERI original_tag = EYR } }
+		localization_key = HSM_VER_WS_region_header
+	}
+	text = { localization_key = HSM_VER_WS_original_region_header }
+}
+
+defined_text = {
+	name = GetHSMVereniaWelcomeRegionIntro
+	text = {
+		trigger = { OR = { original_tag = ERI original_tag = EYR } }
+		localization_key = HSM_VER_WS_region_intro
+	}
+	text = { localization_key = HSM_VER_WS_original_region_intro }
+}

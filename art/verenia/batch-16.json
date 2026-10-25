@@ -1,0 +1,215 @@
+[
+  {
+    "id": "bolster_welfare_funding",
+    "target": "bolster_welfare_funding",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/bolster_welfare_funding.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_bolster_welfare_funding.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Bolster Welfare Funding. Composition: A larger public relief chest supplying two filled food baskets.. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "finalise_industrialise",
+    "target": "finalise_industrialise",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/finalise_industrialise.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_finalise_industrialise.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Finalise Industrialisation. Composition: A completed factory powerhouse with an operating flywheel and orderly loading yard.. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "national_armoury",
+    "target": "national_armoury",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/national_armoury.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_national_armoury.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Instate the Avian National Armoury. Composition: A central armoury entrance with a distribution hatch and neatly counted rifle crates.. Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_industry",
+    "target": "avian_industry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_industry-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_industry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Support Avian Industry. Composition: A factory press receiving investment coins through a small funding tray.. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "edit_prompt": "Remove only the pale blank paper labels and empty tables from the green books at the back. Their covers should be solid dark green leather with a small embossed cogwheel, no paper labels or lettering. Preserve press, funding coin tray, metal colors, layout and transparent background.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "hallhaus_aerodrome",
+    "target": "hallhaus_aerodrome",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/hallhaus_aerodrome.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_hallhaus_aerodrome.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for The Hallhaus Aerodrome. Composition: A broad aircraft hangar opening onto an aerodrome apron with a parked plane.. Palette: Satin aluminium, muted olive fabric and charcoal mechanisms; no invented aircraft roundels.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "university_of_lishill",
+    "target": "university_of_lishill",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/university_of_lishill.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_university_of_lishill.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for The University of Lishill. Composition: A university arch framing an electrical teaching instrument and a diagrammed mechanics book.. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "expand_aviaire_metalworks",
+    "target": "expand_aviaire_metalworks",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/expand_aviaire_metalworks-review-v3.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_expand_aviaire_metalworks.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Precise framing edit: zoom this whole steel rolling mill and plate stack OUT about25percent, reconstructing the complete top pipe elbow and any outer edges. All machinery and every pipe must be fully inside the canvas with a wide transparent margin all around, at least8percent. Preserve cooled silver steel rollers and plates, charcoal frames and dull rust. No orange incandescence, new symbols or extra machinery. Same period painted strategy game object icon, transparent exterior.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon for Expand the Aviaire Metalworks. Composition: An expanded rolling mill with a second roller pair and a stack of fresh metal plates.. Palette: Soot-dark iron, silver cut metal and rusty pipework; amber heat only where the brief explicitly has glowing metal.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Precise framing edit: zoom this whole steel rolling mill and plate stack OUT about25percent, reconstructing the complete top pipe elbow and any outer edges. All machinery and every pipe must be fully inside the canvas with a wide transparent margin all around, at least8percent. Preserve cooled silver steel rollers and plates, charcoal frames and dull rust. No orange incandescence, new symbols or extra machinery. Same period painted strategy game object icon, transparent exterior.",
+      "previous_source": "art/verenia/expand_aviaire_metalworks.png",
+      "source_sha256": "38c831841f09fcabac1aea327f6c85b0c5e5f989a45e874c537a2a7e5beb5be7",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/expand_aviaire_metalworks",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "land_clearance",
+    "target": "land_clearance",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/land_clearance.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_land_clearance.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Land Clearances. Composition: A tenant's packed household chest beside uprooted fence posts and a survey stake; show displacement, not vacant land.. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "oil_refineries",
+    "target": "oil_refineries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/oil_refineries-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_oil_refineries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Retain the distillation tower, connected piping and fuel drum. Make every pipe opaque dark iron or restrained rusty copper with neutral silver edge highlights. Remove orange emissive strips and warm reflected bloom; no exposed hot elements. Transparent exterior, compact 99x86 icon. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency. CRITICAL FRAMING: zoom out by about thirty percent from the reference. Entire top pipe elbow and base must be fully visible, with a wide transparent border on every side; the main object should occupy at most 75 percent of canvas height.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon for Build the Lishill Oil Refinery. Composition: An oil distillation tower with connecting pipes and a filled fuel drum.. Palette: Soot-dark iron, silver cut metal and rusty pipework; amber heat only where the brief explicitly has glowing metal.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Retain the distillation tower, connected piping and fuel drum. Make every pipe opaque dark iron or restrained rusty copper with neutral silver edge highlights. Remove orange emissive strips and warm reflected bloom; no exposed hot elements. Transparent exterior, compact 99x86 icon. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency. CRITICAL FRAMING: zoom out by about thirty percent from the reference. Entire top pipe elbow and base must be fully visible, with a wide transparent border on every side; the main object should occupy at most 75 percent of canvas height.",
+      "previous_source": "art/verenia/oil_refineries.png",
+      "source_sha256": "529f8b11d7e6ae2a18eeee725e1d047f30191f0fcd82d446dd34af629e6b32e3",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/oil_refineries",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "finalise_educate",
+    "target": "finalise_educate",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/finalise_educate.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_finalise_educate.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Finalise Education Reform. Composition: A sequence of school primer, technical textbook and laboratory instrument, an organised education pathway.. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.. Bold compact silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornaments, flags, heraldry, crowns or lilies. No people or human silhouettes/anatomy, no animals. Technical pages contain simple component diagrams only, no Earth geography, globes, blank pages or pseudo-writing. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Material/category palettes checked, industrial blank forms repaired. Runtime pending.",
+    "runtime_verified": false
+  }
+]

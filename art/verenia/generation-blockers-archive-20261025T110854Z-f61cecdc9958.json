@@ -1,0 +1,93 @@
+{
+  "HSM_ZYP_western_campaign": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_UNI_unified_command": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_IMP_technical_agreement": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_ERI_FORCE_promises_in_writing": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_FORCE_workshops_after_war": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "resistance_organisation": {
+    "status": "pending_generator_rejection",
+    "attempts": 2,
+    "details": "Latest neutral radio/satchel attempt returned moderation_blocked at output stage, violence category. No replacement approved or bound; original game icon retained.",
+    "latest_prompt_reference": {
+      "file": "art/verenia/neutral-compositions.json",
+      "record_id": "resistance_organisation",
+      "sha256": "a3f702f4665ccd2484f0d6574732a10c54e2aa7fade6c6326f3c76b5a09cf7e5",
+      "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A compact closed field radio with coiled copper cable beside a folded olive canvas satchel. Black bakelite, olive canvas, copper. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes."
+    }
+  },
+  "foundation_military_effort": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "on_site_nuclear_devices": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_ERI_modern_infantry": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_repair_arsenals": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_infantry_drills": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_GRO_joint_defence": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_gfg": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at input stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_das_raubvogel": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_long_arm_of_the_revolution_lar": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_foundation": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "generic_infantry_equipment_manufacturer": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original company retained."
+  }
+}

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "overtures_erie",
+    "target": "overtures_erie",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/overtures_erie.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_overtures_erie.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW focus icon \"Overtures to House Erie\". Main object embassy doorway with diplomatic leather dispatch case at foot. A small upright flag beside doorway must EXACTLY reproduce reference: nearly black field, ivory crescent on left opening to right, ivory flying bird silhouette on right with beak pointing right. NO invented shield, lilies, cross, crown or stars. Accurate flag, not redesigned. Period painted dark iron antiquegold ivory cobalt materials. Readable99x86,99:86aspect,transparent exterior and8%margin, no people/hands/text/emptyseal/frame.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "overtures_eyrie",
+    "target": "overtures_eyrie",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/overtures_eyrie-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_overtures_eyrie.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Fix the bottom edge clipping of this painted game icon. Complete the missing bottom of the stone pillar as a small finished squared plinth and zoom the ENTIRE object group out so everything including bottom base fits with a generous 10 percent transparent margin all around. Retain flag, bell and postbox composition and materials. CRITICAL: preserve exact House Eyrie heraldry without mirroring: blue flag with a gold bird on viewer LEFT facing/beak RIGHT and gold circular disc on viewer RIGHT. No extra crests/crowns/symbols or text. Painterly period HOI4 game icon on genuinely transparent exterior. No scenery or extra objects.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false,
+    "original_prompt": "Single painted HOI4/EaW focus icon \"Overtures to House Eyrie\". Main object a brass court messenger bell and a closed diplomatic letterbox on an ivory stone embassy post. Small upright flag EXACTLY follows reference: royal blue field, golden flying bird silhouette to left of solid golden circular disc, preserve bird orientation and design. NO crescent, no added shield, crown, cross, lilies or stars. Accurate flag, not redesigned. Dark iron antiquegold ivory cobalt, 99:86aspect,readable99x86,transparent exterior8%margin. No people/hands/text/pseudoletters/emptyseal/extra frame. Painted game asset.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Fix the bottom edge clipping of this painted game icon. Complete the missing bottom of the stone pillar as a small finished squared plinth and zoom the ENTIRE object group out so everything including bottom base fits with a generous 10 percent transparent margin all around. Retain flag, bell and postbox composition and materials. CRITICAL: preserve exact House Eyrie heraldry without mirroring: blue flag with a gold bird on viewer LEFT facing/beak RIGHT and gold circular disc on viewer RIGHT. No extra crests/crowns/symbols or text. Painterly period HOI4 game icon on genuinely transparent exterior. No scenery or extra objects.",
+      "previous_source": "art/verenia/overtures_eyrie.png",
+      "source_sha256": "679844e4d630ff15f9c386285a3b22016357b118343b5aaa62fb1ec1f5a978e0",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/overtures_eyrie",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "pursue_economic_cooperation",
+    "target": "pursue_economic_cooperation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/pursue_economic_cooperation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_pursue_economic_cooperation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW focus icon \"Pursue Economic Cooperation\". Three loaded trade wagons converging on one weighing station, with no national insignia. Three small loaded wooden freight wagons converging toward a single large brass weighbridge balance, crates and sacks form one readable group. No horses/creatures. Compact99:86 composition with8%transparent margin, readable99x86, antiquegold darkiron ivory restrained cobalt/crimson. Transparent exterior, no rectangle or repeated badge frame, no text, empty docs, flags, crowns, heraldry, lilies, people or hands. Period painted game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "promote_interhouses_fraternisation",
+    "target": "promote_interhouses_fraternisation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/promote_interhouses_fraternisation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_promote_interhouses_fraternisation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Promote Inter-House Fraternisation\". Visual: Three differently shaped drinking cups sharing a single serving tray at a common table. Meaning only (never render this text): The once Great Houses of the Griffon Heartlands have long since fallen apart into tribalist factionalism that has only served to drive a wedge between our people. We are all griffons, and we are all griffons of the realms of the Three Houses. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "student_exchange_program",
+    "target": "student_exchange_program",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/student_exchange_program.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_student_exchange_program.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Student Exchange Program\". Visual: Two school satchels exchanging places across a small bridge, an illustrated lesson book between them. Meaning only (never render this text): Looking closely at the different schools between the three houses, one is hard-pressed to find significant differences in the way that we teach and what our chicks learn. A way to nip the inter-house disdain would be to show our students just how similar we all are. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "three_houses_corporation",
+    "target": "three_houses_corporation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/three_houses_corporation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_three_houses_corporation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Three Houses Corporation\". Visual: A precision lathe backed by three investment coin stacks and a laboratory measuring instrument. Meaning only (never render this text): Previously one of the better examples of our houses' capacity to cooperate, the Three Houses Corporation can expand its scope into research and development if we encourage further investments from all three houses. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "relax_citizenship_requirements",
+    "target": "relax_citizenship_requirements",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/relax_citizenship_requirements.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_relax_citizenship_requirements.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Relax Citizenship Requirements\". Visual: An unlocked passport barrier above two travel cases, its formerly separated lanes now joined. Meaning only (never render this text): Ancient Heartlands families have been forced apart due to the stringent citizenship requirements and travel permits between the houses' territories. Loosening some of these restrictions is not only morally the right thing, but a pragmatic move on having our people warm up to the idea of a single realm of the Three Houses. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "scientific_exchange_program",
+    "target": "scientific_exchange_program",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/scientific_exchange_program.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_scientific_exchange_program.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Scientific Exchange Program\". Visual: A travelling instrument case opened beside a microscope and a shared circuit diagram. Meaning only (never render this text): Each of the Three Houses have had their own research programmes that diverged and would often be contrary to the betterment of the Heartlands themselves. By allowing free movements of scientists and unifying our efforts, the Heartlands can begin to form a new hub of scholarly endeavours in Griffonia. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "common_markets_agreement",
+    "target": "common_markets_agreement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/common_markets_agreement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_common_markets_agreement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Common Market Agreement\". Visual: Three market awnings joined over one merchant scale, with the old toll chain laid aside. Meaning only (never render this text): With successful deals between the Three Houses bringing in wealth to every griffon, it only stands to reason that further economic integration will allow for greater prosperity among the Houses. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "security_cooperation",
+    "target": "security_cooperation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/security_cooperation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_security_cooperation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Inter-House Security Cooperation\". Visual: Three interlocking defensive shutters enclosing a watch bell, each retaining its own hinge. Meaning only (never render this text): We stand alone against the menace around our realms. Once the storm washes over our lands, the Houses must heed the call to stand as one. One bold unified silhouette, at most two subordinate motifs, darkiron antiquegold ivory cobalt restrainedcrimson. 99:86aspect,8%transparent margin, readable99x86. Transparent exterior, no scene rectangle, no repeated ornate badge frame. No people/humanhands, flags, heraldry, crowns or lilies, no invented seal. No text/pseudoletters; books contain diagrams, not blank paper. Painterly period game asset.",
+    "approved": true,
+    "review": "Full-size source and native 99x86 preview visually reviewed; approved for integration. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

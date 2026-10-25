@@ -1,0 +1,135 @@
+[
+  {
+    "id": "localised_manufacturing_standards",
+    "target": "localised_manufacturing_standards",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/localised_manufacturing_standards-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_localised_manufacturing_standards.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A workshop gauge board with three matching steel cylinders fitted into round sockets. Grey precision steel and muted green enamel. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "guns_for_gilda",
+    "target": "guns_for_gilda",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/guns_for_gilda-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_guns_for_gilda.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: An old rusted gear beside a clean replacement gear in a small wooden parts tray. Iron, walnut and subdued green enamel. Symbol of equipment renewal. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "improved_weapons",
+    "target": "improved_weapons",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/improved_weapons-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_improved_weapons.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A precision micrometer measuring a plain steel cylinder beside a small technical notebook with a simple circle diagram. Blued steel, ivory paper and walnut. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "local_tank_production",
+    "target": "local_tank_production",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/local_tank_production-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_local_tank_production.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A short tracked vehicle undercarriage with three road wheels beneath a factory lifting hook. No vehicle body or armament. Dull olive metal, dark rubber, grey steel. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "tank_licenses",
+    "target": "tank_licenses",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/tank_licenses-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_tank_licenses.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A rolled engineering drawing of a road wheel and suspension spring held with a plain red wax seal. Pale blue paper, grey metal, muted burgundy wax. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "the_strong_arm_of_the_revolution",
+    "target": "the_strong_arm_of_the_revolution",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/the_strong_arm_of_the_revolution-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_the_strong_arm_of_the_revolution.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A closed khaki service backpack standing beside a red-sided muster drum. No weapons. Khaki canvas, burgundy painted wood, dark iron. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "restructure_the_ministry_of_economics",
+    "target": "restructure_the_ministry_of_economics",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/restructure_the_ministry_of_economics-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_restructure_the_ministry_of_economics.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A green industrial allocation ledger beside a balance carrying two small iron ingots. Muted green binding, ivory pages, pewter balance and charcoal iron. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Neutral source and native size reviewed: distinct readable silhouette, thematic material palette, transparent exterior, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

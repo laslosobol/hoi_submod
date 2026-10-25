@@ -1,0 +1,217 @@
+# Imported by the ERI/EYR parent trees. Mechanics belong to HSM_VER_GRO_* effects.
+shared_focus = {
+	id = HSM_VER_GRO_open_court
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_open_court
+	x = 54 y = 0 cost = 10
+	ai_will_do = { factor = 10 }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_can_start_tt HSM_VER_GRO_can_start = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_open_court_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_can_start = yes } HSM_VER_GRO_start = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_household_file
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_household_file
+	prerequisite = { focus = HSM_VER_GRO_open_court }
+	x = 54 y = 1 cost = 10
+	ai_will_do = { factor = 10 }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_active_tt HSM_VER_GRO_active = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_household_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes } HSM_VER_GRO_household = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_mandate
+	icon = GFX_HSM_VER_GRO_mandate
+	prerequisite = { focus = HSM_VER_GRO_household_file }
+	mutually_exclusive = { focus = HSM_VER_GRO_civil_compact }
+	x = 53 y = 2 cost = 10
+	ai_will_do = { factor = 10 }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_can_mandate_tt HSM_VER_GRO_active = yes HSM_VER_GRO_can_mandate = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_mandate_tt
+		if = { limit = { hidden_trigger = { HSM_VER_GRO_local_minor = yes } } effect_tooltip = { add_ideas = HSM_VER_GRO_guardianship } }
+		else_if = { limit = { hidden_trigger = { HSM_VER_GRO_local_adult = yes } } effect_tooltip = { add_ideas = HSM_VER_GRO_transition } }
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_can_mandate = yes } } HSM_VER_GRO_establish = yes }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_lessons
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_lessons
+	prerequisite = { focus = HSM_VER_GRO_mandate }
+	x = 52 y = 3 cost = 10
+	ai_will_do = { factor = 10 }
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_lessons_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes } HSM_VER_GRO_queue_lessons = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_petitions
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_petitions
+	prerequisite = { focus = HSM_VER_GRO_lessons }
+	x = 52 y = 4 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_lessons_done_tt has_country_flag = HSM_VER_GRO_lessons_done }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_petitions_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_done } HSM_VER_GRO_queue_petition = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_registers
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_registers
+	prerequisite = { focus = HSM_VER_GRO_mandate }
+	x = 54 y = 3 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_herzland_held_tt HSM_VER_GRO_herzland_held = yes }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_registers_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes HSM_VER_GRO_herzland_held = yes } } HSM_VER_GRO_core_capital = yes }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_districts
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_districts
+	prerequisite = { focus = HSM_VER_GRO_registers }
+	x = 54 y = 4 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_herzland_held_tt HSM_VER_GRO_herzland_held = yes }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_districts_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes HSM_VER_GRO_herzland_held = yes } } HSM_VER_GRO_core_districts = yes }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_home_workshops
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_home_workshops
+	prerequisite = { focus = HSM_VER_GRO_districts }
+	x = 56 y = 5 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_home_held_tt owns_state = 391 controls_state = 391 owns_state = 401 controls_state = 401 }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_home_workshops_tt
+		effect_tooltip = {
+			if = {
+				limit = { hidden_trigger = { 391 = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+				391 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			else = { add_tech_bonus = { name = HSM_VER_GRO_home_workshops bonus = 1 uses = 1 category = industry } }
+			if = {
+				limit = { hidden_trigger = { 401 = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+				401 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			else = { add_tech_bonus = { name = HSM_VER_GRO_home_workshops bonus = 1 uses = 1 category = industry } }
+		}
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes owns_state = 391 controls_state = 391 owns_state = 401 controls_state = 401 } } HSM_VER_GRO_build_home = yes }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_service
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_service
+	prerequisite = { focus = HSM_VER_GRO_petitions }
+	prerequisite = { focus = HSM_VER_GRO_districts }
+	x = 52 y = 6 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_petition_done_tt has_country_flag = HSM_VER_GRO_petition_done }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_service_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_done } HSM_VER_GRO_queue_service = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_succession_articles
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_succession_articles
+	prerequisite = { focus = HSM_VER_GRO_service }
+	prerequisite = { focus = HSM_VER_GRO_home_workshops }
+	x = 54 y = 7 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_service_done_tt has_country_flag = HSM_VER_GRO_service_done }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_articles_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_done } HSM_VER_GRO_queue_articles = yes } }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_prepared_crown
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_prepared_crown
+	prerequisite = { focus = HSM_VER_GRO_succession_articles }
+	x = 54 y = 8 cost = 10
+	ai_will_do = { factor = 10 }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_regency_live_tt HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_GRO_articles_done_tt has_country_flag = HSM_VER_GRO_articles_done }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_prepare_tt
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_done } } HSM_VER_GRO_prepare = yes }
+	}
+}
+shared_focus = {
+	id = HSM_VER_GRO_civil_compact
+	icon = GFX_HSM_VER_ART_HSM_VER_GRO_civil_compact
+	prerequisite = { focus = HSM_VER_GRO_household_file }
+	mutually_exclusive = { focus = HSM_VER_GRO_mandate }
+	x = 56 y = 2 cost = 10
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 OR = { HSM_VER_GRO_local_minor = yes HSM_VER_GRO_local_adult = yes HSM_VER_GRO_can_recover = yes } }
+	}
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_GRO_civil_available_tt HSM_VER_GRO_active = yes HSM_VER_GRO_civil_available = yes } }
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_GRO_civil_tt
+		effect_tooltip = { add_tech_bonus = { name = HSM_VER_GRO_civil_compact bonus = 1 uses = 2 category = industry } }
+		hidden_effect = { if = { limit = { HSM_VER_GRO_active = yes HSM_VER_GRO_civil_available = yes } } HSM_VER_GRO_civil = yes }
+	}
+}

@@ -1,0 +1,337 @@
+# Import each root only into its respective House tree. Coordinates are absolute.
+# Native AVI language policy supplies the literacy model; these are domestic institutions.
+shared_focus = {
+	id = HSM_VER_ID_ERI_language_question
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_language_question
+	x = 64 y = 0 cost = 3
+	allow_branch = { tag = ERI }
+	available = { tag = ERI custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { tag = ERI HSM_VER_ID_eligible_house = yes NOT = { has_country_flag = HSM_VER_ID_ERI_survey_done } } }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_survey_done }
+			add_political_power = 25
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_aquileian_classrooms
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_aquileian_classrooms
+	prerequisite = { focus = HSM_VER_ID_ERI_language_question }
+	mutually_exclusive = { focus = HSM_VER_ID_ERI_two_living_languages }
+	x = 62 y = 1 cost = 5
+	available = {
+		tag = ERI
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_not_balanced_tt NOT = { has_country_flag = HSM_VER_ID_ERI_balanced } }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_literacy_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_curriculum_tt
+		show_ideas_tooltip = HSM_VER_ID_aquileian_curriculum
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_ERI_survey_done
+				NOT = { has_country_flag = HSM_VER_ID_ERI_aquileian has_country_flag = HSM_VER_ID_ERI_balanced }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_aquileian }
+			hidden_effect = { decrease_illiteracy = yes }
+			HSM_VER_SP_add_HSM_VER_ID_aquileian_curriculum = yes
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_two_living_languages
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_two_living_languages
+	prerequisite = { focus = HSM_VER_ID_ERI_language_question }
+	mutually_exclusive = { focus = HSM_VER_ID_ERI_aquileian_classrooms }
+	x = 66 y = 1 cost = 5
+	available = {
+		tag = ERI
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_not_aquileian_tt NOT = { has_country_flag = HSM_VER_ID_ERI_aquileian } }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_literacy_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_curriculum_tt
+		show_ideas_tooltip = HSM_VER_ID_bilingual_curriculum
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_ERI_survey_done
+				NOT = { has_country_flag = HSM_VER_ID_ERI_aquileian has_country_flag = HSM_VER_ID_ERI_balanced }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_balanced }
+			hidden_effect = { decrease_illiteracy = yes }
+			HSM_VER_SP_add_HSM_VER_ID_bilingual_curriculum = yes
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_translated_journals
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_translated_journals
+	prerequisite = { focus = HSM_VER_ID_ERI_aquileian_classrooms }
+	x = 62 y = 2 cost = 5
+	available = {
+		tag = ERI
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_aquileian_tt has_country_flag = HSM_VER_ID_ERI_aquileian }
+	}
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_ERI_aquileian
+				NOT = { has_country_flag = HSM_VER_ID_ERI_journals_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_journals_done }
+			add_tech_bonus = { name = HSM_VER_ID_journals_bonus bonus = 0.5 uses = 2 category = electronics }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_district_teacher_colleges
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_district_teacher_colleges
+	prerequisite = { focus = HSM_VER_ID_ERI_two_living_languages }
+	x = 66 y = 2 cost = 5
+	available = {
+		tag = ERI
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_balanced_tt has_country_flag = HSM_VER_ID_ERI_balanced }
+	}
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_ERI_balanced
+				NOT = { has_country_flag = HSM_VER_ID_ERI_colleges_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_colleges_done }
+			add_tech_bonus = { name = HSM_VER_ID_colleges_bonus bonus = 0.5 uses = 2 category = electronics category = industry }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_local_histories
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_local_histories
+	prerequisite = { focus = HSM_VER_ID_ERI_translated_journals focus = HSM_VER_ID_ERI_district_teacher_colleges }
+	x = 64 y = 3 cost = 4
+	available = { tag = ERI custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				OR = { has_country_flag = HSM_VER_ID_ERI_journals_done has_country_flag = HSM_VER_ID_ERI_colleges_done }
+				NOT = { has_country_flag = HSM_VER_ID_ERI_histories_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_histories_done }
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_ERI_public_scholarships
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_ERI_public_scholarships
+	prerequisite = { focus = HSM_VER_ID_ERI_local_histories }
+	x = 64 y = 4 cost = 5
+	available = { tag = ERI custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_endowment_tt
+		show_ideas_tooltip = HSM_VER_ID_public_endowment
+		if = {
+			limit = { hidden_trigger = {
+				tag = ERI
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_ERI_histories_done
+				NOT = { has_country_flag = HSM_VER_ID_ERI_scholarships_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_ERI_scholarships_done }
+			HSM_VER_SP_add_HSM_VER_ID_public_endowment = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = HSM_VER_ID_EYR_language_question
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_language_question
+	x = 64 y = 0 cost = 3
+	allow_branch = { tag = EYR }
+	available = { tag = EYR custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { tag = EYR HSM_VER_ID_eligible_house = yes NOT = { has_country_flag = HSM_VER_ID_EYR_survey_done } } }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_survey_done }
+			add_political_power = 25
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_herzland_classrooms
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_herzland_classrooms
+	prerequisite = { focus = HSM_VER_ID_EYR_language_question }
+	mutually_exclusive = { focus = HSM_VER_ID_EYR_two_living_languages }
+	x = 62 y = 1 cost = 5
+	available = {
+		tag = EYR
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_not_balanced_tt NOT = { has_country_flag = HSM_VER_ID_EYR_balanced } }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_literacy_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_curriculum_tt
+		show_ideas_tooltip = HSM_VER_ID_herzland_curriculum
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_EYR_survey_done
+				NOT = { has_country_flag = HSM_VER_ID_EYR_herzland has_country_flag = HSM_VER_ID_EYR_balanced }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_herzland }
+			hidden_effect = { decrease_illiteracy = yes }
+			HSM_VER_SP_add_HSM_VER_ID_herzland_curriculum = yes
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_two_living_languages
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_two_living_languages
+	prerequisite = { focus = HSM_VER_ID_EYR_language_question }
+	mutually_exclusive = { focus = HSM_VER_ID_EYR_herzland_classrooms }
+	x = 66 y = 1 cost = 5
+	available = {
+		tag = EYR
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_not_herzland_tt NOT = { has_country_flag = HSM_VER_ID_EYR_herzland } }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_literacy_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_curriculum_tt
+		show_ideas_tooltip = HSM_VER_ID_bilingual_curriculum
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_EYR_survey_done
+				NOT = { has_country_flag = HSM_VER_ID_EYR_herzland has_country_flag = HSM_VER_ID_EYR_balanced }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_balanced }
+			hidden_effect = { decrease_illiteracy = yes }
+			HSM_VER_SP_add_HSM_VER_ID_bilingual_curriculum = yes
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_technical_lexicon
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_technical_lexicon
+	prerequisite = { focus = HSM_VER_ID_EYR_herzland_classrooms }
+	x = 62 y = 2 cost = 5
+	available = {
+		tag = EYR
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_herzland_tt has_country_flag = HSM_VER_ID_EYR_herzland }
+	}
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_EYR_herzland
+				NOT = { has_country_flag = HSM_VER_ID_EYR_lexicon_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_lexicon_done }
+			add_tech_bonus = { name = HSM_VER_ID_lexicon_bonus bonus = 0.5 uses = 2 category = industry }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_interpreters_college
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_interpreters_college
+	prerequisite = { focus = HSM_VER_ID_EYR_two_living_languages }
+	x = 66 y = 2 cost = 5
+	available = {
+		tag = EYR
+		custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_balanced_tt has_country_flag = HSM_VER_ID_EYR_balanced }
+	}
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_EYR_balanced
+				NOT = { has_country_flag = HSM_VER_ID_EYR_college_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_college_done }
+			add_tech_bonus = { name = HSM_VER_ID_interpreters_bonus bonus = 0.5 uses = 2 category = electronics category = industry }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_parish_archives
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_parish_archives
+	prerequisite = { focus = HSM_VER_ID_EYR_technical_lexicon focus = HSM_VER_ID_EYR_interpreters_college }
+	x = 64 y = 3 cost = 4
+	available = { tag = EYR custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				OR = { has_country_flag = HSM_VER_ID_EYR_lexicon_done has_country_flag = HSM_VER_ID_EYR_college_done }
+				NOT = { has_country_flag = HSM_VER_ID_EYR_archives_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_archives_done }
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+}
+shared_focus = {
+	id = HSM_VER_ID_EYR_civic_fellowships
+	icon = GFX_HSM_VER_ART_HSM_VER_ID_EYR_civic_fellowships
+	prerequisite = { focus = HSM_VER_ID_EYR_parish_archives }
+	x = 64 y = 4 cost = 5
+	available = { tag = EYR custom_trigger_tooltip = { tooltip = HSM_VER_ID_eligible_tt HSM_VER_ID_eligible_house = yes } }
+	cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_endowment_tt
+		show_ideas_tooltip = HSM_VER_ID_public_endowment
+		if = {
+			limit = { hidden_trigger = {
+				tag = EYR
+				HSM_VER_ID_eligible_house = yes
+				has_country_flag = HSM_VER_ID_EYR_archives_done
+				NOT = { has_country_flag = HSM_VER_ID_EYR_fellowships_done }
+			} }
+			hidden_effect = { set_country_flag = HSM_VER_ID_EYR_fellowships_done }
+			HSM_VER_SP_add_HSM_VER_ID_public_endowment = yes
+		}
+	}
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "unified_railroad_network",
+    "target": "unified_railroad_network",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/unified_railroad_network.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_unified_railroad_network.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. A Unified Railroad Network: Three railway tracks converging through a newly fitted junction switch. Lore: Each House's rail network is mainly internal and not connected with another. This needs to be fixed to bring about more unified commerce as well as faster military movement in case one of the Triparte members is attacked. Let's bring our rail together. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "technological_cooperation",
+    "target": "technological_cooperation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/technological_cooperation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_technological_cooperation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Interhouses Technological Cooperation: Three laboratory instruments arranged around one illuminated electrical circuit. Lore: The Houses have been divided technologically for too long. We need scientists from each of the houses to be able to coordinate together to research new scientific breakthroughs that can further help our houses along in modernizing our Pact. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "full_integration",
+    "target": "full_integration",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/full_integration.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_full_integration.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Prepare Constitutional Integration: An unassembled constitutional binding with three fitted clasps beside a convention lectern; union is still being negotiated. Lore: The common markets, colleges and transport agreements have given Intergigantes practical weight. Commission a constitutional settlement to carry this cooperation towards one Verenia. Katrina will open the charter negotiations, test the first common institutions and then bring the question of a united government before a constituent convention. The Houses' authority must pass through agreed laws and ratification. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "northern_defense_line",
+    "target": "northern_defense_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/northern_defense_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_northern_defense_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. The Northern Defense Line: A northern-facing bunker embrasure above a compass with its north point picked out in cobalt. Lore: To the north lay the revanchist Empire and the Republic. Both will have designs on our land. We must be prepared. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "southern_defense_line",
+    "target": "southern_defense_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/southern_defense_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_southern_defense_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. The Southern Defense Line: A southward gun casemate above a compass with its south point picked out in crimson. Lore: To the south lay Wingbardy and her allies. They have already demonstrated their desire for expansion. We will be ready to meet them. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "southeast_defense_line",
+    "target": "southeast_defense_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/southeast_defense_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_southeast_defense_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. The Southeast Defense Line: A southeast-facing angled earthwork with a compass needle pointing southeast and a field telescope. Lore: To the Southeast is where the victor of the Prywhen Civil War is. They may come for us, and we must be ready for them. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "western_defense_line",
+    "target": "western_defense_line",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/western_defense_line.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_western_defense_line.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. The Western Defense Line: A westward stone defensive wall with an iron observation slit and a west-pointing compass. Lore: To the west lay Aquileia, and they too have shown their desire to absorb the rest of Griffonia; they shall meet our walls and be halted by them. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "tripartite_legion",
+    "target": "tripartite_legion",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/tripartite_legion.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_tripartite_legion.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Form the Tripartite Legion: Three infantry rifles standing in one service rack above a common ammunition chest. Lore: After years of division, feuding, hostility, and animosity between House Eyrie and House Erie, we as House Avian have been able put it all aside to work together. Not just work together, but we also have become brothers with the other houses during this turbulent period. Now we will lead both houses into a new future of security and order in which we can further our gains and help our houses prosper further. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "leaders_field_marshalls",
+    "target": "leaders_field_marshalls",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/leaders_field_marshalls.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_leaders_field_marshalls.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. A Common Military Leadership: A central command telephone linking three subordinate field receivers; no imperial regalia. Lore: It's time we unite our military leadership with the other houses and form a new chain of command under House Avian. The other houses will have their own chains of command but it will remain under our direction and guiding claw to make sure military coordination is successful. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "the_second_winterfest_ball",
+    "target": "the_second_winterfest_ball",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/the_second_winterfest_ball.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_the_second_winterfest_ball.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. The Second Winterfest Ball: A large three-branched candelabrum over a festive punch bowl and evergreen garland. Lore: After the success of the first Winterfest Ball, we should make an even bigger one in which all houses are already included, with more food, drink, music, as well as more grand speeches to showcase the common ground that every house has with each other. It's time we make our unity a true tradition to stand the test of time. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. Do not invent heraldic animals. For compasses use arrow directions without letters.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "HSM_ERI_hear_petitions",
+    "target": "HSM_ERI_hear_petitions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_hear_petitions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_hear_petitions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A public petition box containing a property sketch, with a damaged cart wheel beside it.  Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_family_letters",
+    "target": "HSM_ERI_family_letters",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_family_letters.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_family_letters.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two personal envelopes crossing an open family gate; no marriage ring or betrothal seal.  Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_offer_armistice",
+    "target": "HSM_ERI_offer_armistice",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_offer_armistice.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_offer_armistice.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A frontier patrol barrier lowered across a raiding path, with both service rifles laid at rest.  Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_open_roads",
+    "target": "HSM_ERI_open_roads",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_open_roads.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_open_roads.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A laden cart crossing a freshly repaired culvert beneath a raised toll arm.  Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_reciprocal_guarantees",
+    "target": "HSM_ERI_reciprocal_guarantees",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_reciprocal_guarantees.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_reciprocal_guarantees.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A restitution coin chest beside paired patrol lanterns, two possible costs of credible restraint.  Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_friendship_treaty",
+    "target": "HSM_ERI_friendship_treaty",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_friendship_treaty.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_friendship_treaty.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two rival boundary stakes laid down beside an open crossing and balanced treaty clasps.  Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_mandate_for_peace",
+    "target": "HSM_ERI_mandate_for_peace",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_mandate_for_peace.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_mandate_for_peace.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A modest town delegate's chair drawn up beside a formal congress lectern.  Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_avian_association",
+    "target": "HSM_ERI_avian_association",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_avian_association-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_avian_association.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An association invitation case resting beside an unoccupied Avian chair, before any transfer of sovereignty. Localization aliases resolve to the older invitation; this distinct active focus invokes HSM_VER_AVR_offer. Association is not incorporation. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "edit_prompt": "Replace only the ornate bird-shaped stone throne with a modest plain wooden conference chair with grey-green upholstery, no carving or animal motifs. Keep empty chair, invitation case, composition and transparency. No heraldry.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_invite_avian",
+    "target": "HSM_ERI_invite_avian",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_invite_avian-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_invite_avian.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An Avian college key placed beside two municipal charter bindings at an open treaty table. Hidden save-compatibility focus: allow_branch and available are always=no; completion_reward is empty. Retained because inventory marks it PENDING. Active replacement: HSM_ERI_avian_association. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "edit_prompt": "Replace only the bird-shaped key loop with a plain oval iron loop and make the key silver-grey iron. Preserve books, table, cloth and transparent background. No bird motifs or heraldry.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_common_statute",
+    "target": "HSM_ERI_common_statute",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_common_statute.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_common_statute.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A constitutional binding held by equal clasps beside a detachable presiding chair, powers still under negotiation.  Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Carts are unattended without draught animals. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Diplomatic stages distinguished; invented avian furniture/key ornament removed. Runtime pending.",
+    "runtime_verified": false
+  }
+]

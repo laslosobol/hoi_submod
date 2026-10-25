@@ -1,0 +1,716 @@
+ideas = {
+	industrial_concern = {
+		designer = yes
+
+		avithreehousescorp = {
+			picture = AVI_threehousescorp
+
+			allowed = {
+				original_tag = AVI
+			}
+			available = {
+				AVI = { has_completed_focus = three_houses_corporation } 
+			}
+
+			research_bonus = {
+				industry = 0.15
+				electronics = 0.15
+				synth_resources = 0.25
+			}
+			traits = { refinery_concern }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+	}
+
+	country = {
+		### Erie-Eyrie Rivalry - needed for the decisions to initiate border skirmish and wars ###
+		E_E_rivalry = {
+			allowed = {
+				original_tag = EYR 
+				original_tag = ERI 
+			}
+			available = { 
+				country_exists = ERI
+				country_exists = EYR	
+			}
+
+			removal_cost = -1
+			picture = HSM_VER_ART_E_E_rivalry
+			targeted_modifier = {
+				tag = EYR
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = ERI
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+
+			modifier = {
+				war_support_factor = -0.025
+			}
+		}
+
+		### House Avian Stuff ###
+
+		AVI_econcoop = {
+			
+			allowed = { always = no }
+		
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_econcoop
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		AVI_studentexchange = {
+			
+			allowed = { always = no }
+		
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_studentexchange
+			modifier = { research_speed_factor = 0.025 }
+		}
+		AVI_scienceexchange = {
+			
+			allowed = { always = no }
+			
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_scienceexchange
+			modifier = { research_speed_factor = 0.15 drift_defence_factor = -0.025 civilian_intel_to_others = 5 } 
+		}
+		AVI_relaxd_citizenship = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_relaxd_citizenship
+			modifier = { MONTHLY_POPULATION = 0.15 }
+		}
+		AVI_common_markets = {
+		
+			allowed = { always = no }
+			
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_common_markets
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
+				min_export = -0.05
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+		AVI_unified_intelligence_agency = {
+			
+			allowed = { always = no }
+			
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_unified_intelligence_agency
+			modifier = {
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.15
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_unified_intelligence_agency_lar = {
+			
+			allowed = { always = no }
+			
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_unified_intelligence_agency_lar
+			modifier = {
+				crypto_strength = 1
+				decryption_power_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.15
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_annual_military_exercises = {
+			
+			allowed = { always = no }
+			
+			available = { NOT = { has_war_with = AVI } }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_annual_military_exercises
+			modifier = {
+				max_command_power = 20
+				command_power_gain_mult = 0.1
+				mobilization_speed = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				conscription = 0.005
+			}
+		}
+		AVI_agri_1 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_agri_1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		AVI_agri_2 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_agri_2
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		AVI_agri_3 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_agri_3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
+		AVI_coopfarms = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_coopfarms
+			modifier = {
+				consumer_goods_factor = -0.1
+				MONTHLY_POPULATION = 0.05
+			}
+		}	
+		AVI_protectionism = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_protectionism
+			modifier = {
+				min_export = -0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		AVI_sca = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_sca
+			modifier = {
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+			}
+		}
+		AVI_milsoc_1 = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_milsoc_1
+			modifier = {
+				conscription_factor = 0.10
+				training_time_factor = -0.10
+			}
+		}
+		AVI_milsoc_2 = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_milsoc_2
+			modifier = {
+				conscription = 0.025
+				training_time_factor = -0.25
+				army_org_factor = 0.05
+			}
+		}
+		AVI_fortify = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_fortify
+			modifier = {
+				production_speed_bunker_factor = 0.25
+			}
+		}
+		AVI_de_arse = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_de_arse
+			modifier = {
+				out_of_supply_factor = -0.10
+				no_supply_grace = 120
+			}
+		}
+		AVI_gfg = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_gfg
+			modifier = {
+				equipment_conversion_speed = 0.15
+			}
+		}
+		AVI_rrr = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_rrr
+			modifier = {
+				conscription = 0.025
+				land_reinforce_rate = 0.10
+				army_morale_factor = 0.10
+				mobilization_speed = 0.10
+			}
+		}
+		AVI_das_raubvogel = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_das_raubvogel
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				defensive_war_stability_factor = 0.25
+				special_forces_cap = 0.025
+			}
+		}
+		AVI_eternal = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_eternal
+			modifier = {
+				surrender_limit = 0.15
+			}
+		}
+		AVI_off_aca = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_off_aca
+			modifier = {
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				max_command_power = 25
+			}
+		}
+		AVI_off_aca_1 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_off_aca_1
+			modifier = {
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				military_leader_cost_factor = -0.50
+				max_command_power = 25
+			}
+		}
+		
+		AVI_off_aca_2 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_off_aca_2
+			modifier = {
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				army_leader_start_level = 1
+				max_command_power = 25
+			}
+		}
+		AVI_militia = {
+			
+			allowed = { always = no }
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_militia
+			modifier = {
+				conscription = 0.025
+				training_time_factor = 0.1
+				army_org_factor = -0.05
+			}
+		}
+		AVI_regulars = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_regulars
+			modifier = {
+				conscription_factor = -0.015
+				training_time_factor = -0.1
+				army_org_factor = 0.1
+			}
+		}
+		AVI_declared_neutral = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_declared_neutral
+			modifier = {
+				drift_defence_factor = 0.25
+				foreign_subversive_activites = -0.50
+				enemy_operative_detection_chance_factor = 0.1
+				enemy_justify_war_goal_time = 0.25
+				ai_focus_aggressive_factor = -0.50
+			}
+		}
+		AVI_Liberty_idea = {
+			picture = HSM_VER_ART_AVI_Liberty_idea
+			allowed = { always = no }
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				trade_opinion_factor = 0.5
+			}
+		}
+		AVI_linguistic_antagonism = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_linguistic_antagonism
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+		AVI_urbanisation_effort = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_urbanisation_effort
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		AVI_agrarian_reform = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_agrarian_reform
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		AVI_treasury = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_treasury
+			modifier = {
+				license_purchase_cost = -0.25
+				min_export = -0.05
+			}
+		}
+		AVI_livre_1 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_livre_1
+			modifier = {
+				trade_opinion_factor = 0.25
+				license_purchase_cost = -0.05
+			}
+		}
+		AVI_livre_2 = {
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_livre_2
+			modifier = {
+				trade_opinion_factor = 0.5
+				license_purchase_cost = -0.25
+			}
+		}
+		AVI_opposable_thumbs = {
+		
+			allowed = { always = no }
+			
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_opposable_thumbs
+			modifier = {
+			}
+		}
+		AVI_the_strong_arm_of_the_revolution = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_the_strong_arm_of_the_revolution
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+				mobilization_speed = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				conscription = 0.015
+			}
+		}
+		AVI_socialist_economics = {
+		
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_socialist_economics
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
+				min_export = -0.10
+				consumer_goods_factor = -0.20
+				global_building_slots_factor = 0.05
+			}
+		}
+		AVI_long_arm_of_the_revolution = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_long_arm_of_the_revolution
+			modifier = {
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.20
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_long_arm_of_the_revolution_lar = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_long_arm_of_the_revolution_lar
+			modifier = {
+				crypto_strength = 1
+				decryption_power_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.20
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_Kriegsamt = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_Kriegsamt
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+				mobilization_speed = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				conscription = 0.015
+			}
+		}
+		AVI_Wirtschaftsministerium = {
+		
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_Wirtschaftsministerium
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
+				min_export = -0.10
+				consumer_goods_factor = -0.20
+				global_building_slots_factor = 0.05
+			}
+		}
+		AVI_Evidenzbureau = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_Evidenzbureau
+			modifier = {
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.20
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_Evidenzbureau_lar = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_Evidenzbureau_lar
+			modifier = {
+				crypto_strength = 1
+				decryption_power_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				stability_factor = 0.015
+				drift_defence_factor = 0.20
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		AVI_foundation = {
+			
+			allowed = { always = no }
+
+			research_bonus = {
+				decryption_tech = 0.05
+				encryption_tech = 0.05
+			}
+
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_foundation
+			modifier = {
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+				stability_factor = 0.025
+				license_purchase_cost = -0.25
+				army_org_factor = 0.05
+				special_forces_cap = 0.05
+				research_speed_factor = 0.05
+				conscription = 0.015
+			}
+		}
+		AVI_foundation_lar = {
+			
+			allowed = { always = no }
+
+			research_bonus = {
+				decryption_tech = 0.05
+				encryption_tech = 0.05
+			}
+
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_foundation_lar
+			modifier = {
+				crypto_strength = 1
+				decryption_power_factor = 0.05
+				stability_factor = 0.025
+				license_purchase_cost = -0.25
+				army_org_factor = 0.05
+				special_forces_cap = 0.05
+				research_speed_factor = 0.05
+				conscription = 0.015
+			}
+		}
+		AVI_found_hq = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_found_hq
+			modifier = {
+				command_power_gain_mult = 0.05
+				max_planning = 0.05
+				planning_speed = 0.05
+				army_org_factor = 0.05
+				special_forces_cap = 0.025
+				research_speed_factor = 0.15
+				non_core_manpower = 0.025
+				minimum_training_level = -0.05
+			}
+		}
+		AVI_aviation = {
+			
+			allowed = { always = no }
+		
+			removal_cost = -1
+			picture = HSM_VER_ART_AVI_aviation
+			modifier = {
+				experience_gain_air_factor = 0.1
+				air_weather_penalty = -0.1
+				army_bonus_air_superiority_factor = 0.1
+				air_ace_generation_chance_factor = 0.25
+				air_strategic_bomber_bombing_factor = 0.05
+				air_cas_present_factor = 0.1
+			}
+		}
+	}
+}

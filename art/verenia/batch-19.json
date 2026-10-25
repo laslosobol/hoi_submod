@@ -1,0 +1,173 @@
+[
+  {
+    "id": "restructure_the_secret_service",
+    "target": "restructure_the_secret_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/restructure_the_secret_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_restructure_the_secret_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A locked security filing cabinet with a listening receiver and a lens over internal routes. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "restructure_the_war_office",
+    "target": "restructure_the_war_office",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/restructure_the_war_office.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_restructure_the_war_office.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A mobilisation bell above a full kit depot and outward campaign route markers. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "strenghten_military_rule",
+    "target": "strenghten_military_rule",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/strenghten_military_rule.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_strenghten_military_rule.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Parallel ranks of unattended service rifles beneath a parade drum and command baton. Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "artillery_improvement_effort",
+    "target": "artillery_improvement_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/artillery_improvement_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_artillery_improvement_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A field howitzer with an improved recoil mechanism and a single heavy shell. Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "armour_improvement_effort",
+    "target": "armour_improvement_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/armour_improvement_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_armour_improvement_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A heavy tank track and reinforced turret on a test platform. Palette: Dull olive vehicle paint, dark rubber and exposed gunmetal; wear at edges only. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "society_improvement_effort",
+    "target": "society_improvement_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/society_improvement_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_society_improvement_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A workshop clock mechanically linked to a military supply conveyor. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "motorised_improvement_effort",
+    "target": "motorised_improvement_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/motorised_improvement_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_motorised_improvement_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A fast military truck beside a sweeping road-turn marker and a fuel can. Palette: Dull olive vehicle paint, dark rubber and exposed gunmetal; wear at edges only. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "mechanised_improvement_effort",
+    "target": "mechanised_improvement_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/mechanised_improvement_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_mechanised_improvement_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An armoured half-track with its protected troop compartment and driven tracks prominent. Palette: Dull olive vehicle paint, dark rubber and exposed gunmetal; wear at edges only. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "declare_the_kingdom",
+    "target": "declare_the_kingdom",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/declare_the_kingdom.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_declare_the_kingdom.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An elevated vacant royal throne beneath a plain state drape; no invented crown design or arms. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment is unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Unmarked equipment and category-specific palettes checked. Runtime pending.",
+    "runtime_verified": false
+  }
+]

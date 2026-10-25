@@ -1,0 +1,154 @@
+[
+  {
+    "id": "form_mobile_task_forces",
+    "target": "form_mobile_task_forces",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/form_mobile_task_forces.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_form_mobile_task_forces.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A rapid-response truck with a portable radio and sealed equipment container.  Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "centralise_foundation_control",
+    "target": "centralise_foundation_control",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/centralise_foundation_control.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_centralise_foundation_control.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A central control console joining three facility indicator circuits.  Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reassemble_foundation_personnel",
+    "target": "reassemble_foundation_personnel",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reassemble_foundation_personnel.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reassemble_foundation_personnel.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A specialist's instrument case beside a recruitment desk bell and a laboratory access key.  Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "relocate_foundation_labs",
+    "target": "relocate_foundation_labs",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/relocate_foundation_labs.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_relocate_foundation_labs.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A microscope packed in a shock-proof transport crate beside a guarded relocation route.  Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "foundation_scientific_effort",
+    "target": "foundation_scientific_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/foundation_scientific_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_foundation_scientific_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A newly expanded laboratory bench with a spectrometer and additional specimen rack.  Palette: Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "foundation_infrastructure_effort",
+    "target": "foundation_infrastructure_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/foundation_infrastructure_effort.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_foundation_infrastructure_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A service road linking a laboratory building to a guarded facility entrance.  Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_cost_of_feud",
+    "target": "HSM_ERI_cost_of_feud",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_cost_of_feud.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_cost_of_feud.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An unpaid supplier's coin tray beside a splintered bridge beam and an ancestral claim scroll.  Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_diplomatic_settlement",
+    "target": "HSM_ERI_diplomatic_settlement",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI.txt",
+    "source": "art/verenia/HSM_ERI_diplomatic_settlement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_diplomatic_settlement.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two independent gate keys resting equally on a negotiation table, a sheathed sword below.  Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. 1930s mechanical apparatus, no futuristic technology. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Relevant simplified diagrams on documents, never blank pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Science material palette and diplomatic imagery checked. Runtime pending.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "id": "HSM_VER_REG_the_settled_frontier",
+    "target": "HSM_VER_REG_the_settled_frontier",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_regency.txt",
+    "source": "art/verenia/HSM_VER_REG_the_settled_frontier.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_REG_the_settled_frontier.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A carrier's destination marker beside a settled frontier bridge and ordinary market parcel. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_convention",
+    "target": "HSM_VER_UNI_convention",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_convention.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_convention.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Several delegate chairs around a constituent table with a provisional presiding lectern. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_customs_union",
+    "target": "HSM_VER_UNI_customs_union",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_customs_union.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_customs_union.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two customs receipt grids merged into one tariff abacus beside a laden wagon. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_common_works",
+    "target": "HSM_VER_UNI_common_works",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_common_works.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_common_works.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two bridge halves meeting over a river, their matching fittings supplied by a civilian workshop. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_common_administration",
+    "target": "HSM_VER_UNI_common_administration",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_common_administration.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_common_administration.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A common records cabinet with distinct language tabs and a publicly funded office key. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_constitutional_draft",
+    "target": "HSM_VER_UNI_constitutional_draft",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_constitutional_draft.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_constitutional_draft.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A constitutional binding beside separate government keys waiting outside its final clasp. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_UNI_settled_institutions",
+    "target": "HSM_VER_UNI_settled_institutions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_settled_institutions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_settled_institutions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A first ordinary budget abacus funding a school model and a district repair beam. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_victory_roll",
+    "target": "HSM_ZYP_victory_roll",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_victory_roll.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_victory_roll.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An imperial campaign map checked against civic office keys and actual garrison supply crates. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_imperial_coronation",
+    "target": "HSM_ZYP_imperial_coronation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_imperial_coronation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_imperial_coronation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A separate imperial ceremonial dais backed by a functioning chancery cabinet; omit unverified crown designs. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; civic unification motifs and restrained ceremonial dais, no unverified crown.",
+    "runtime_verified": false
+  }
+]

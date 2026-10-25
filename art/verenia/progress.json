@@ -1,0 +1,427 @@
+{
+  "status": "artwork_integrated_runtime_pending",
+  "scope": "Verenia ERI/EYR/AVI artwork",
+  "completed_batches": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63",
+    "64"
+  ],
+  "integrated_sources": 632,
+  "game_exports": 638,
+  "completed_focus_icons": 413,
+  "completed_named_portrait_sources": 24,
+  "completed_institution_sources": 3,
+  "completed_unified_spirit_sources": 1,
+  "pending_original_briefs": [],
+  "additional_native_spirit_briefs": "art/verenia/native-spirit-briefs.json",
+  "additional_native_spirits": 49,
+  "legacy_manufacturers": "11/11 companies approved, hash-verified and bound under preserve-hired-v2; native stats preserved; in-game verification pending",
+  "generated_advisor_templates": "30/30 generated advisor templates approved, hash-verified and bound; separate from named characters; in-game verification pending",
+  "mio_organizations": "10/10 generic MIO organizations bound with country-scoped artwork effects; no global replacements; in-game verification pending",
+  "next_original_brief_index": null,
+  "blockers": "art/verenia/generation-blockers.json",
+  "notes": "All tracked artwork is approved, hash-verified and statically bound. All 24 historically blocked targets are covered; prior failed-attempt records remain in the byte-preserved rejection archives. Generated advisor templates and MIO mappings are counted separately from named characters and unique sources. In-game verification remains pending; this is not a runtime QA claim.",
+  "completed_spirit_icons": 149,
+  "pending_native_spirit_briefs": [],
+  "completed_native_spirit_icons": 49,
+  "batch_progress": {
+    "01": {
+      "records": 8,
+      "integrated_records": 8
+    },
+    "02": {
+      "records": 8,
+      "integrated_records": 8
+    },
+    "03": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "04": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "05": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "06": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "07": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "08": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "09": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "10": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "11": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "12": {
+      "records": 8,
+      "integrated_records": 8
+    },
+    "13": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "14": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "15": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "16": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "17": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "18": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "19": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "20": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "21": {
+      "records": 8,
+      "integrated_records": 8
+    },
+    "22": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "23": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "24": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "25": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "26": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "27": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "28": {
+      "records": 8,
+      "integrated_records": 8
+    },
+    "29": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "30": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "31": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "32": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "33": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "34": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "35": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "36": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "37": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "38": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "39": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "40": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "41": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "42": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "43": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "44": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "45": {
+      "records": 5,
+      "integrated_records": 5
+    },
+    "46": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "47": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "48": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "49": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "50": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "51": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "52": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "53": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "54": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "55": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "56": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "57": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "58": {
+      "records": 9,
+      "integrated_records": 9
+    },
+    "59": {
+      "records": 10,
+      "integrated_records": 10
+    },
+    "60": {
+      "records": 7,
+      "integrated_records": 7
+    },
+    "61": {
+      "records": 7,
+      "integrated_records": 7
+    },
+    "62": {
+      "records": 7,
+      "integrated_records": 7
+    },
+    "63": {
+      "records": 7,
+      "integrated_records": 7
+    },
+    "64": {
+      "records": 2,
+      "integrated_records": 2
+    }
+  },
+  "unintegrated_records": [],
+  "pending_counts": {
+    "focus": 0,
+    "original_spirit": 0,
+    "native_spirit": 0,
+    "company": 0,
+    "mio": 0,
+    "generated_advisor": 0
+  },
+  "explicit_blockers": {},
+  "previous_checkpoint_validation": {
+    "art_batches": "All nine passed --check; 84 sources, 90 exports",
+    "icon_bindings": "Batches04-09 passed --check, zero pending files",
+    "portrait_bindings": "--check: zero pending files;16 unapproved/skipped baseline or generic records",
+    "verenia_tests": 102,
+    "spirit_tests": 29,
+    "spirit_generator": "80 components, 0 stale files",
+    "in_game": "Not tested"
+  },
+  "progress_validation": {
+    "method": "Approved sources and exports with matching SHA256; actual definition/selector and sprite texture bindings. All exports must bind before counting a source.",
+    "legacy_approval": "Only the eight batch01 IDs accept historical review plus matching baseline hashes. Other portraits require portrait-bindings approved=true; other icons require manifest approved=true.",
+    "not_run": "Image resampling comparison, fresh visual review, gameplay tests and in-game QA are not performed by this tool.",
+    "scope": "Pending lists cover main and separate native briefs. Manufacturer/template/MIO notes and explicit blockers are retained; absence of pending icons is not full artwork completion.",
+    "index": "next_original_brief_index is zero-based and includes blocked targets.",
+    "companies": "company-bindings.json approval and inline hashes, native file pin, preserve-hired policy transformation and unique live clone/sprite bindings. Sources/exports deduplicated across batches; company counts are separate from institutions and spirits. Runtime and localization QA remain separate.",
+    "runtime_art": "MIO and generated-advisor manifests require approval, asset hashes, native definition pins, exact selectors and matching generated effect/hooks/sprites. MIO records count separately from new sources; reused company sources are deduplicated. Generated templates never count as named characters. Engine runtime QA pending."
+  },
+  "spirit_progress": {
+    "completed_country_idea_icons": 149,
+    "completed_unified_dynamic_spirit_sources": 1,
+    "completed_spirit_sources_total": 150,
+    "pending_country_idea_icons": 0,
+    "counting_note": "completed_spirit_icons counts separate country ideas only. The preexisting unified dynamic spirit is reported separately and included in integrated_sources and completed_spirit_sources_total; it does not complete its component ideas."
+  },
+  "explicit_blocker_count": 0,
+  "completed_company_icons": 11,
+  "completed_company_sources": 11,
+  "pending_company_records": [],
+  "company_diagnostics": [],
+  "completed_mio_records": 10,
+  "completed_mio_new_sources": 1,
+  "completed_generated_advisor_templates": 30,
+  "completed_generated_advisor_sources": 30,
+  "runtime_art_diagnostics": [],
+  "pending_mio_records": [],
+  "pending_generated_advisor_records": [],
+  "rejection_history_archives": [
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T110026Z-cf5c3e9c6ec3.json",
+      "sha256": "cf5c3e9c6ec383297049afa53da91368993a2220767c98a0bed962a729e05a75",
+      "records": 24
+    },
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T110143Z-cf5c3e9c6ec3.json",
+      "sha256": "cf5c3e9c6ec383297049afa53da91368993a2220767c98a0bed962a729e05a75",
+      "records": 24
+    },
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T110854Z-f61cecdc9958.json",
+      "sha256": "f61cecdc99587709d870eadf8ec379fe81c2ec94bca131d38830f0dd38375a36",
+      "records": 17
+    },
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T111618Z-861cec75dac2.json",
+      "sha256": "861cec75dac22e64908a7fa5aab1eb8722ef442226f6764e5b2fdf28afca9056",
+      "records": 10
+    },
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T111703Z-de94c9e2c215.json",
+      "sha256": "de94c9e2c21512746b8325b9bdfeebe57e95d556853e030ccaefa3c1d4847de9",
+      "records": 9
+    },
+    {
+      "path": "art/verenia/generation-blockers-archive-20261025T111943Z-167e59b47883.json",
+      "sha256": "167e59b478836f65bf05f3e6aed529cadd3b713e5c22a4e5ec2fb60753c8c018",
+      "records": 2
+    }
+  ],
+  "historical_blocked_targets": 24,
+  "resolved_historical_blocked_targets": 24
+}

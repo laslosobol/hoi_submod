@@ -1,0 +1,37 @@
+add_namespace = hsm_ver_routes
+
+country_event = {
+	id = hsm_ver_routes.1
+	title = hsm_ver_routes.1.t desc = hsm_ver_routes.1.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	timeout_days = 13
+	trigger = { HSM_VER_diplomatic_routes_open = yes HSM_VER_houses_at_peace = yes NOT = { HSM_VER_negotiated_peace_valid = yes } }
+	option = {
+		name = hsm_ver_routes.1.a
+		ai_chance = { factor = 70 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_conference_inspections_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_diplomatic_routes_open = yes HSM_VER_houses_at_peace = yes NOT = { HSM_VER_negotiated_peace_valid = yes } ERI = { NOT = { has_country_flag = HSM_VER_conference_terms_chosen } } } }
+			ERI = { hidden_effect = { set_country_flag = HSM_VER_conference_terms_chosen } hidden_effect = { set_country_flag = HSM_VER_joint_inspection } }
+			if = { limit = { hidden_trigger = { HSM_VER_armistice_valid = yes NOT = { HSM_VER_negotiated_peace_valid = yes } } } ERI = { add_ideas = HSM_VER_frontier_inspections } EYR = { add_ideas = HSM_VER_frontier_inspections } }
+		}
+	}
+	option = {
+		name = hsm_ver_routes.1.b
+		ai_chance = { factor = 30 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_conference_arbitration_tt
+		if = {
+			limit = { hidden_trigger = { HSM_VER_diplomatic_routes_open = yes HSM_VER_houses_at_peace = yes NOT = { HSM_VER_negotiated_peace_valid = yes } ERI = { NOT = { has_country_flag = HSM_VER_conference_terms_chosen } } } }
+			add_political_power = -50
+			ERI = { hidden_effect = { set_country_flag = HSM_VER_conference_terms_chosen } hidden_effect = { set_country_flag = HSM_VER_property_arbitration } hidden_effect = { clr_country_flag = HSM_VER_joint_inspection } remove_ideas = HSM_VER_frontier_inspections }
+			EYR = { remove_ideas = HSM_VER_frontier_inspections }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_routes.2
+	title = hsm_ver_routes.2.t desc = hsm_ver_routes.2.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	timeout_days = 13
+	option = { name = hsm_ver_routes.2.a }
+}

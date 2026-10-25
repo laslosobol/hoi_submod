@@ -1,0 +1,5 @@
+HSM_EYR_diplomatic_business = {
+	icon = generic_political_discourse
+	allowed = { original_tag = EYR }
+	visible = { has_country_flag = HSM_EYR_campaign_active }
+}

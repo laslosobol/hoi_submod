@@ -1,0 +1,14 @@
+on_actions = {
+	on_daily_ERI = { effect = { ERI = { HSM_VER_GRO_maintain = yes } } }
+	on_daily_EYR = { effect = { EYR = { HSM_VER_GRO_maintain = yes } } }
+	on_annex = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { OR = { tag = ERI tag = EYR } has_country_flag = HSM_VER_GRO_mandate }
+					HSM_VER_GRO_interrupt = yes
+				}
+			}
+		}
+	}
+}

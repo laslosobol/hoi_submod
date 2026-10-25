@@ -1,0 +1,185 @@
+[
+  {
+    "id": "HSM_VER_CW_reserve_depots",
+    "target": "HSM_VER_CW_reserve_depots",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_reserve_depots.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_reserve_depots.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three dispersed repair-stock sheds linked by alternate roads around one blocked route. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_public_accounts",
+    "target": "HSM_VER_CW_public_accounts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_public_accounts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_public_accounts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An audit balance weighing paid coins against one finished beam and one unfinished fitting. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_ordinary_country",
+    "target": "HSM_VER_CW_ordinary_country",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_ordinary_country-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_ordinary_country.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A village medicine delivery beside a recognised diploma book and an accessible courthouse key. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the modern tablet blister strip in the medicine bag into two small folded cream paper pharmacy packets tied with cotton string, with no lettering. Preserve the glass bottles, bandages, bag, diagrammed book, plain key, colors, composition and painted game icon style. Transparent exterior.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_the_price_of_victory",
+    "target": "HSM_ERI_FORCE_the_price_of_victory",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_the_price_of_victory.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_the_price_of_victory.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A campaign sword laid across a farm's grain account and a patron's credit chest. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_not_a_dowry",
+    "target": "HSM_ERI_FORCE_not_a_dowry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_not_a_dowry-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_not_a_dowry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Show one clearly open, unsealed personal envelope with its letter partly visible, protected inside a shallow grey-green correspondence tray. Outside the tray, a loose iron estate-transfer chain terminates before reaching the letter. Use a small simple diagram on the visible paper, no pseudo-writing. No wax seal, bridal symbols, arms or hands. Ivory paper, restrained burgundy cord lying untied, dark iron chain; transparent compact 99x86 silhouette. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: An unsealed personal letter protected from an estate-transfer chain; no bridal symbols. Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Show one clearly open, unsealed personal envelope with its letter partly visible, protected inside a shallow grey-green correspondence tray. Outside the tray, a loose iron estate-transfer chain terminates before reaching the letter. Use a small simple diagram on the visible paper, no pseudo-writing. No wax seal, bridal symbols, arms or hands. Ivory paper, restrained burgundy cord lying untied, dark iron chain; transparent compact 99x86 silhouette. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+      "previous_source": "art/verenia/HSM_ERI_FORCE_not_a_dowry.png",
+      "source_sha256": "4849ef33259b9e1f3825d71144524503fd5090051d57208738869d9d34e6b59e",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/HSM_ERI_FORCE_not_a_dowry",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_ERI_FORCE_final_ultimatum",
+    "target": "HSM_ERI_FORCE_final_ultimatum",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_final_ultimatum.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_final_ultimatum.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A closed ultimatum case beside a poised but still sheathed sword at the frontier. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_terms_for_the_defeated",
+    "target": "HSM_ERI_FORCE_terms_for_the_defeated",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_terms_for_the_defeated.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_terms_for_the_defeated.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A district office key between a local court bench and a commissioner's command desk. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_district_charters",
+    "target": "HSM_ERI_FORCE_district_charters",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_district_charters.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_district_charters.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A municipal charter lock shielding a property key from a nearby military sword. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_ducal_commissioners",
+    "target": "HSM_ERI_FORCE_ducal_commissioners",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_ducal_commissioners.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_FORCE_ducal_commissioners.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A commissioner's dispatch cabinet connecting district workshop orders to one ducal desk. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; modern medicine packaging corrected, steel/khaki military and linen-green welfare palettes retained.",
+    "runtime_verified": false
+  }
+]

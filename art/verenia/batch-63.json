@@ -1,0 +1,135 @@
+[
+  {
+    "id": "HSM_VER_UNI_unified_command",
+    "target": "HSM_VER_UNI_unified_command",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_unification.txt",
+    "source": "art/verenia/HSM_VER_UNI_unified_command-neutral-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_UNI_unified_command.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One isolated painted strategy game icon, compact and fully opaque objects, generous completely transparent margins and transparent gaps. Composition: One black bakelite telephone connected to a neat three-socket cable junction. Grey-green base and copper plugs. No insignia. No background color, no halo, no glow, no haze, no shadows, no backdrop. No lettering or heraldry. Readable at99x86.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_western_campaign",
+    "target": "HSM_ZYP_western_campaign",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_western_campaign-neutral-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_western_campaign.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One isolated painted strategy game icon, compact and fully opaque objects, generous completely transparent margins and transparent gaps. Composition: A folded fictional inland road map with a broad route bending to the left, beside a simple compass. No real geography, text or battle symbols. Ivory paper, muted green roads, pewter compass. No background color, no halo, no glow, no haze, no shadows, no backdrop. No lettering or heraldry. Readable at99x86.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_joint_defence",
+    "target": "HSM_VER_GRO_joint_defence",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_joint_defence-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_joint_defence.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: Two distinct grey field telephones linked by one copper cable, with separate oval-headed keys. Olive and charcoal casings. No heraldry. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_gfg",
+    "target": "AVI_gfg",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_gfg-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_gfg.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A muted green workshop parts cabinet with one open drawer displaying three clean steel gears. A worn brown gear sits outside. No weapons. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_das_raubvogel",
+    "target": "AVI_das_raubvogel",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_das_raubvogel-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_das_raubvogel.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A small black bakelite radio receiver partly covered by olive canvas, with a copper-wire spool beside it. No tools or weapons. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_long_arm_of_the_revolution_lar",
+    "target": "AVI_long_arm_of_the_revolution_lar",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_long_arm_of_the_revolution_lar-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_long_arm_of_the_revolution_lar.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A closed burgundy document case with a plain grey padlock and a small cipher wheel beside it. No insignia or writing. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_foundation",
+    "target": "AVI_foundation",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_foundation-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_foundation.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A pale enamel scientific specimen cabinet with one thick turquoise observation window and a simple grey analog gauge. No organisms or hazardous devices. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native size reviewed: clear silhouette, thematic palette, clean transparency, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

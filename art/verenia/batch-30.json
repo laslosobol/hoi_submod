@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_AVI_defence_without_a_master",
+    "target": "HSM_AVI_defence_without_a_master",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_defence_without_a_master.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_defence_without_a_master.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A civilian appropriation box above a coordinated defensive sand table and an engineer's tool. Palette: Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_open_minutes",
+    "target": "HSM_AVI_open_minutes",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_open_minutes.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_open_minutes.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An open minutes stand displaying a clear allocation diagram beside an unlocked public reading-room door. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_a_union_worth_keeping",
+    "target": "HSM_AVI_a_union_worth_keeping",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_a_union_worth_keeping.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_a_union_worth_keeping.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A provisional charter binding beside an opened convention doorway, the next constitutional stage still ahead. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_neighbours_without_a_chair",
+    "target": "HSM_AVI_neighbours_without_a_chair",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_neighbours_without_a_chair.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_AVI_neighbours_without_a_chair.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three independent neighbour gates connected by a maintained road, an empty congress chair set aside. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_avian_question",
+    "target": "HSM_ERI_avian_question",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_ERI_avian_question.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_avian_question.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An Avian border key resting between an open negotiation case and a closed neutrality gate. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_avian_customs",
+    "target": "HSM_ERI_avian_customs",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_ERI_avian_customs.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_avian_customs.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A customs balance beside an Avian municipal key and a college instrument, accession arrangements. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_avian_accession",
+    "target": "HSM_ERI_avian_accession",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_ERI_avian_accession.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_avian_accession.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Three administrative keys placed into one constitutional lock, an Avian service kit joining the common rack. Palette: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_avian_question",
+    "target": "HSM_EYR_avian_question",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_EYR_avian_question.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_avian_question.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An Eyrie observation telescope lowered toward an Avian negotiating doorway, separate consent required. Palette: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_avian_customs",
+    "target": "HSM_EYR_avian_customs",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_EYR_avian_customs.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_avian_customs.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A reconciled tariff abacus beside an Avian court appeal case and a college book. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_avian_accession",
+    "target": "HSM_EYR_avian_accession",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_avian_relations.txt",
+    "source": "art/verenia/HSM_EYR_avian_accession.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_avian_accession.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An Avian court key joining a common appeals cabinet beside a unified army supply chest. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only, do not invent their symbols. No heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Any open document has a structured table of dots and simple diagram lines, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: distinct civic, administrative and service palettes; no invented heraldry.",
+    "runtime_verified": false
+  }
+]

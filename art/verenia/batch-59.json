@@ -1,0 +1,239 @@
+[
+  {
+    "id": "AVI_linguistic_antagonism",
+    "target": "AVI_linguistic_antagonism",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_linguistic_antagonism.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_linguistic_antagonism.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two incompatible school readers pulling apart a cracked speaking-trumpet joint. Material palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_urbanisation_effort",
+    "target": "AVI_urbanisation_effort",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_urbanisation_effort-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_urbanisation_effort.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Preserve the unfinished apartment frame, external builder's hoist and small street-corner base. Zoom out so the full highest upright and its cap, entire hoist and complete finite paving base are visible. Leave at least 8 percent transparent margin on all sides. Keep ivory plaster, muted terracotta infill and neutral grey structural steel. No sky, ground extending beyond frame, extra buildings, insignia or text. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A rising apartment frame above a paved street corner and a builder's hoist. Material palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the unfinished apartment frame, external builder's hoist and small street-corner base. Zoom out so the full highest upright and its cap, entire hoist and complete finite paving base are visible. Leave at least 8 percent transparent margin on all sides. Keep ivory plaster, muted terracotta infill and neutral grey structural steel. No sky, ground extending beyond frame, extra buildings, insignia or text. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/AVI_urbanisation_effort.png",
+      "source_sha256": "2bab7bd8963f61ba190ab2f0767ee79803378e20e2ad67809d2502567773fdfc",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/AVI_urbanisation_effort",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "AVI_agrarian_reform",
+    "target": "AVI_agrarian_reform",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_agrarian_reform.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_agrarian_reform.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A repaired ploughshare aligning previously uneven field strips beside a full seed measure. Material palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_treasury",
+    "target": "AVI_treasury",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_treasury-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_treasury.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Preserve the existing imported machine component balanced against pewter coin stacks. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "edit_prompt": "Simplify this icon to ONLY the central balance scale and the objects on its two pans. Remove all background vaults, books, documents, loose papers, keys and seals. Preserve existing pan contents, painted style, material colors and transparent exterior. If a coin carries a letter, replace that letter with a plain circle. No additions.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A treasury counting tray balancing an imported machine component against retained export coins. Material palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the existing imported machine component balanced against pewter coin stacks. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/AVI_treasury-v2.png",
+      "source_sha256": "01e5787a30f9afe131ef3fffa506b41f0f5438e8709ee49b714559fd0454d530",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/AVI_treasury",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "AVI_livre_1",
+    "target": "AVI_livre_1",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_livre_1-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_livre_1.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Preserve the existing single plain livre coin, small iron gear and level merchant balance. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "edit_prompt": "Simplify this icon to ONLY the central balance scale and the objects on its two pans. Remove all background vaults, books, documents, loose papers, keys and seals. Preserve existing pan contents, painted style, material colors and transparent exterior. If a coin carries a letter, replace that letter with a plain circle. No additions.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A single livre coin resting level on a merchant's balance beside a small imported gear. Material palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the existing single plain livre coin, small iron gear and level merchant balance. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/AVI_livre_1-v2.png",
+      "source_sha256": "2ef2dda695a26332771a9984e34d42ad7ea7f53d61b26ffc9e9547de5fd11c96",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/AVI_livre_1",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "AVI_livre_2",
+    "target": "AVI_livre_2",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_livre_2-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_livre_2.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Preserve the existing plain pewter coins, geometric ivory/green banknotes and calibrated exchange scale. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "edit_prompt": "Simplify this icon to ONLY the central balance scale and the objects on its two pans. Remove all background vaults, books, documents, loose papers, keys and seals. Preserve existing pan contents, painted style, material colors and transparent exterior. If a coin carries a letter, replace that letter with a plain circle. No additions.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A livre coin and banknote marked only with geometric denominations beside a calibrated exchange scale. Material palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the existing plain pewter coins, geometric ivory/green banknotes and calibrated exchange scale. Repaint broad weighing pans/trays, arms and supports in dull pewter and dark iron. Reserve muted oxidised brass for small pivot caps or screws only; no polished gold surfaces or gold rim. Preserve all shapes, geometric notation and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/AVI_livre_2-v2.png",
+      "source_sha256": "680a537e31d03425d0e45a57e5d2da61dd8c0f6c762217a6fbb85c62c7c74bf3",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/AVI_livre_2",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "AVI_opposable_thumbs",
+    "target": "AVI_opposable_thumbs",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_opposable_thumbs.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_opposable_thumbs.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A precision tool held by a jointed workshop clamp beside a delicate screw mechanism; represent dexterity without depicting anatomy. Material palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_the_strong_arm_of_the_revolution",
+    "target": "AVI_the_strong_arm_of_the_revolution",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_the_strong_arm_of_the_revolution.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_the_strong_arm_of_the_revolution.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A crimson-wrapped mobilisation drum beneath an evenly aligned People's Army equipment rack. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_socialist_economics",
+    "target": "AVI_socialist_economics",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_socialist_economics.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_socialist_economics.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A collective allocation hopper dividing raw materials between a factory wheel and household supply bins. Material palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_long_arm_of_the_revolution",
+    "target": "AVI_long_arm_of_the_revolution",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_long_arm_of_the_revolution.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_long_arm_of_the_revolution.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A crimson-bound security cabinet clamped shut beneath a listening funnel. Material palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when explicitly requested. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

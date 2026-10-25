@@ -1,0 +1,20 @@
+[
+  {
+    "id": "HSM_VER_MIO_general_aircraft",
+    "prompt": "One painted Hearts of Iron IV / Equestria at War aviation manufacturer emblem, transparent exterior, readable at 64x64. A compact nine-cylinder radial aircraft engine with a broad two-blade propeller mounted at its center, three-quarter view. Brushed aluminium crankcase, charcoal cylinders, varnished walnut propeller with small ivory tips. One coherent mechanical assembly only. Period 1930s construction. Bold simple silhouette and painted edges, no frame, no heraldry, flags, lettering, logo, crowns, people, hands or scenery.",
+    "source": "art/verenia/HSM_VER_MIO_general_aircraft.png",
+    "target": "generic_general_aircraft_organization",
+    "kind": "mio",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_MIO/general_aircraft.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "approved": true,
+    "review": "Source and 64x64 preview approved; aluminium, walnut and charcoal radial engine, transparent exterior, no heraldry.",
+    "runtime_verified": false
+  }
+]

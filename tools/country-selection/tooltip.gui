@@ -1,0 +1,9 @@
+		instantTextBoxType = {
+			name = "hsm_tooltip_override"
+			position = { x = -66 y = 360 }
+			text = ""
+			maxwidth = 93
+			maxheight = 105
+			pdx_tooltip = HSM_CSS_Filter_tt
+		}
+

@@ -1,0 +1,304 @@
+HSM_VER_GRO_start = {
+	if = {
+		limit = { HSM_VER_GRO_can_start = yes }
+		set_country_flag = HSM_VER_GRO_started
+		if = { limit = { tag = ERI has_country_flag = HSM_VER_military_route } set_country_flag = HSM_VER_GRO_eri_military }
+		else_if = { limit = { tag = ERI } set_country_flag = HSM_VER_GRO_eri_diplomatic }
+		else_if = { limit = { has_country_flag = HSM_VER_military_route } set_country_flag = HSM_VER_GRO_eyr_military }
+		else = { set_country_flag = HSM_VER_GRO_eyr_diplomatic }
+		country_event = { id = hsm_ver_grover.1 days = 1 }
+	}
+}
+HSM_VER_GRO_household = {
+	if = {
+		limit = { HSM_VER_GRO_active = yes }
+		if = {
+			limit = { HSM_VER_GRO_can_recover = yes }
+			if = { limit = { tag = ERI } GRI = { remove_ideas = GRI_grover_vi GRI_emperor_grover_vi = { set_nationality = ERI } } }
+			else = { GRI = { remove_ideas = GRI_grover_vi GRI_emperor_grover_vi = { set_nationality = EYR } } }
+		}
+		set_country_flag = { flag = HSM_VER_GRO_household_retry value = 1 days = 90 }
+		country_event = { id = hsm_ver_grover.2 days = 1 }
+	}
+}
+HSM_VER_GRO_establish = {
+	if = {
+		limit = { HSM_VER_GRO_can_mandate = yes }
+		set_country_flag = HSM_VER_GRO_mandate
+		set_cosmetic_tag = HSM_VER_REGENCY
+		if = { limit = { HSM_VER_GRO_local_minor = yes } add_ideas = HSM_VER_GRO_guardianship }
+		else = { add_ideas = HSM_VER_GRO_transition }
+		country_event = { id = hsm_ver_grover.3 days = 1 }
+	}
+}
+HSM_VER_GRO_queue_lessons = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes NOT = { has_country_flag = HSM_VER_GRO_lessons_done has_country_flag = HSM_VER_GRO_lessons_pending } }
+		set_country_flag = { flag = HSM_VER_GRO_lessons_pending value = 1 days = 35 }
+		country_event = { id = hsm_ver_grover.4 days = 1 }
+	}
+}
+HSM_VER_GRO_open_education = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+		set_country_flag = HSM_VER_GRO_lessons_done
+		set_country_flag = HSM_VER_GRO_open_education
+		clr_country_flag = HSM_VER_GRO_lessons_pending
+		add_tech_bonus = { name = HSM_VER_GRO_lessons bonus = 0.75 uses = 2 category = industry }
+	}
+}
+HSM_VER_GRO_filtered_education = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_pending NOT = { has_country_flag = HSM_VER_GRO_lessons_done } }
+		set_country_flag = HSM_VER_GRO_lessons_done
+		set_country_flag = HSM_VER_GRO_filtered_education
+		clr_country_flag = HSM_VER_GRO_lessons_pending
+		add_tech_bonus = { name = HSM_VER_GRO_lessons bonus = 0.75 uses = 2 category = electronics }
+	}
+}
+HSM_VER_GRO_queue_petition = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_lessons_done NOT = { has_country_flag = HSM_VER_GRO_petition_done has_country_flag = HSM_VER_GRO_petition_pending } }
+		set_country_flag = { flag = HSM_VER_GRO_petition_pending value = 1 days = 35 }
+		country_event = { id = hsm_ver_grover.5 days = 1 }
+	}
+}
+HSM_VER_GRO_apply_law = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+		set_country_flag = HSM_VER_GRO_petition_done
+		set_country_flag = HSM_VER_GRO_apply_law
+		clr_country_flag = HSM_VER_GRO_petition_pending
+		add_stability = 0.05
+	}
+}
+HSM_VER_GRO_protect_patron = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_pending NOT = { has_country_flag = HSM_VER_GRO_petition_done } }
+		set_country_flag = HSM_VER_GRO_petition_done
+		set_country_flag = HSM_VER_GRO_protect_patron
+		clr_country_flag = HSM_VER_GRO_petition_pending
+		add_war_support = 0.05
+	}
+}
+# State flags are provenance: pre-existing cores are never marked or removed.
+HSM_VER_GRO_add_core = {
+	if = {
+		limit = { is_owned_and_controlled_by = ERI NOT = { is_core_of = ERI } }
+		add_core_of = ERI set_state_flag = HSM_VER_GRO_core_ERI
+	}
+	else_if = {
+		limit = { is_owned_and_controlled_by = EYR NOT = { is_core_of = EYR } }
+		add_core_of = EYR set_state_flag = HSM_VER_GRO_core_EYR
+	}
+}
+HSM_VER_GRO_core_capital = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes HSM_VER_GRO_herzland_held = yes NOT = { has_country_flag = HSM_VER_GRO_registers_done } }
+		set_country_flag = HSM_VER_GRO_registers_done
+		every_owned_state = { limit = { HSM_VER_GRO_herzland_state = yes region = 164 } HSM_VER_GRO_add_core = yes }
+	}
+}
+HSM_VER_GRO_core_districts = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes HSM_VER_GRO_herzland_held = yes has_country_flag = HSM_VER_GRO_registers_done NOT = { has_country_flag = HSM_VER_GRO_districts_done } }
+		set_country_flag = HSM_VER_GRO_districts_done
+		every_owned_state = { limit = { HSM_VER_GRO_herzland_state = yes } HSM_VER_GRO_add_core = yes }
+	}
+}
+HSM_VER_GRO_home_factory = {
+	if = {
+		limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+	}
+	else = { owner = { add_tech_bonus = { name = HSM_VER_GRO_home_workshops bonus = 1 uses = 1 category = industry } } }
+}
+HSM_VER_GRO_build_home = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes NOT = { has_country_flag = HSM_VER_GRO_home_built } 391 = { is_owned_and_controlled_by = PREV } 401 = { is_owned_and_controlled_by = PREV } }
+		set_country_flag = HSM_VER_GRO_home_built
+		391 = { HSM_VER_GRO_home_factory = yes }
+		401 = { HSM_VER_GRO_home_factory = yes }
+	}
+}
+HSM_VER_GRO_queue_service = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_petition_done NOT = { has_country_flag = HSM_VER_GRO_service_done has_country_flag = HSM_VER_GRO_service_pending } }
+		set_country_flag = { flag = HSM_VER_GRO_service_pending value = 1 days = 35 }
+		country_event = { id = hsm_ver_grover.6 days = 1 }
+	}
+}
+HSM_VER_GRO_logistics = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+		set_country_flag = HSM_VER_GRO_service_done set_country_flag = HSM_VER_GRO_logistics
+		clr_country_flag = HSM_VER_GRO_service_pending
+		add_tech_bonus = { name = HSM_VER_GRO_service bonus = 1 uses = 2 category = support_tech }
+	}
+}
+HSM_VER_GRO_command = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_pending NOT = { has_country_flag = HSM_VER_GRO_service_done } }
+		set_country_flag = HSM_VER_GRO_service_done set_country_flag = HSM_VER_GRO_command
+		clr_country_flag = HSM_VER_GRO_service_pending
+		add_doctrine_cost_reduction = { name = HSM_VER_GRO_service cost_reduction = 0.75 uses = 2 category = land_doctrine }
+	}
+}
+HSM_VER_GRO_queue_articles = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_service_done NOT = { has_country_flag = HSM_VER_GRO_articles_done has_country_flag = HSM_VER_GRO_articles_pending } }
+		set_country_flag = { flag = HSM_VER_GRO_articles_pending value = 1 days = 35 }
+		country_event = { id = hsm_ver_grover.7 days = 1 }
+	}
+}
+HSM_VER_GRO_sign_articles = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_pending NOT = { has_country_flag = HSM_VER_GRO_articles_done } }
+		set_country_flag = HSM_VER_GRO_articles_done clr_country_flag = HSM_VER_GRO_articles_pending
+	}
+}
+HSM_VER_GRO_prepare = {
+	if = {
+		limit = { HSM_VER_GRO_regency_live = yes has_country_flag = HSM_VER_GRO_articles_done has_country_flag = HSM_VER_GRO_districts_done has_country_flag = HSM_VER_GRO_home_built NOT = { has_country_flag = HSM_VER_GRO_prepared } }
+		set_country_flag = HSM_VER_GRO_prepared
+		country_event = { id = hsm_ver_grover.8 days = 1 }
+	}
+}
+HSM_VER_GRO_remove_programme_cores = {
+	if = {
+		limit = { tag = ERI }
+		every_state = { limit = { has_state_flag = HSM_VER_GRO_core_ERI HSM_VER_GRO_herzland_state = yes } remove_core_of = ERI clr_state_flag = HSM_VER_GRO_core_ERI }
+	}
+	else_if = {
+		limit = { tag = EYR }
+		every_state = { limit = { has_state_flag = HSM_VER_GRO_core_EYR HSM_VER_GRO_herzland_state = yes } remove_core_of = EYR clr_state_flag = HSM_VER_GRO_core_EYR }
+	}
+}
+HSM_VER_GRO_interrupt = {
+	if = {
+		limit = { has_country_flag = HSM_VER_GRO_mandate NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_interrupted } }
+		set_country_flag = HSM_VER_GRO_interrupted
+		clr_country_flag = HSM_VER_GRO_mandate
+		remove_ideas = HSM_VER_GRO_guardianship remove_ideas = HSM_VER_GRO_transition
+		HSM_VER_GRO_remove_programme_cores = yes
+		if = { limit = { has_cosmetic_tag = HSM_VER_REGENCY } set_cosmetic_tag = HSM_VER_UNIFIED }
+		country_event = { id = hsm_ver_grover.12 days = 1 }
+	}
+}
+HSM_VER_GRO_civil = {
+	if = {
+		limit = { HSM_VER_GRO_active = yes OR = { HSM_VER_GRO_civil_available = yes has_country_flag = HSM_VER_GRO_interrupted } NOT = { has_country_flag = HSM_VER_GRO_civil_finished } }
+		set_country_flag = HSM_VER_GRO_civil_finished
+		HSM_VER_GRO_remove_programme_cores = yes
+		if = { limit = { has_cosmetic_tag = HSM_VER_REGENCY } set_cosmetic_tag = HSM_VER_UNIFIED }
+		add_tech_bonus = { name = HSM_VER_GRO_civil_compact bonus = 1 uses = 2 category = industry }
+		country_event = { id = hsm_ver_grover.9 days = 1 }
+	}
+}
+# This runs in the old custodian, before moving the one original character.
+HSM_VER_GRO_copy_memories = {
+	if = { limit = { has_country_flag = HSM_VER_GRO_eri_diplomatic } GRI = { set_country_flag = HSM_VER_GRO_eri_diplomatic } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_eri_military } GRI = { set_country_flag = HSM_VER_GRO_eri_military } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_eyr_diplomatic } GRI = { set_country_flag = HSM_VER_GRO_eyr_diplomatic } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_eyr_military } GRI = { set_country_flag = HSM_VER_GRO_eyr_military } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_open_education } GRI = { set_country_flag = HSM_VER_GRO_open_education add_ideas = HSM_VER_GRO_open_court_legacy } }
+	else = { GRI = { set_country_flag = HSM_VER_GRO_filtered_education add_ideas = HSM_VER_GRO_managed_court_legacy } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_apply_law } GRI = { set_country_flag = HSM_VER_GRO_apply_law add_ideas = HSM_VER_GRO_rule_of_law } }
+	else = { GRI = { set_country_flag = HSM_VER_GRO_protect_patron add_ideas = HSM_VER_GRO_patrons_legacy } }
+	if = { limit = { has_country_flag = HSM_VER_GRO_logistics } GRI = { set_country_flag = HSM_VER_GRO_logistics } }
+	else = { GRI = { set_country_flag = HSM_VER_GRO_command } }
+}
+HSM_VER_GRO_release_empire = {
+	if = {
+		limit = { HSM_VER_GRO_can_release = yes }
+		# Set the guard first: country creation must never re-enter native regency.
+		GRI = { set_country_flag = HSM_VER_GRO_restored }
+		if = { limit = { tag = ERI } GRI = { set_country_flag = HSM_VER_GRO_partner_ERI } }
+		else = { GRI = { set_country_flag = HSM_VER_GRO_partner_EYR } }
+		set_country_flag = HSM_VER_GRO_completed
+		HSM_VER_GRO_remove_programme_cores = yes
+		# Explicit state transfer, not release=GRI: old imperial cores outside Herzland stay put.
+		every_owned_state = {
+			limit = { HSM_VER_GRO_herzland_state = yes }
+			add_core_of = GRI
+			transfer_state_to = GRI
+		}
+		GRI = {
+			if = { limit = { is_subject = yes } overlord = { set_autonomy = { target = GRI autonomy_state = autonomy_free } } }
+			drop_cosmetic_tag = yes
+			set_capital = { state = 382 remember_old_capital = no }
+			remove_ideas = GRI_grover_vi
+			inherit_technology = PREV
+			save_global_event_target_as = griffonian_empire
+			set_variable = { global.griffonian_empire_var = THIS }
+		}
+		remove_ideas = GRI_grover_vi
+		GRI_emperor_grover_vi = { set_nationality = GRI }
+		GRI = {
+			# Clear inherited wars of reclamation against the recognised partner.
+			remove_wargoal = { type = annex_everything target = ERI }
+			remove_wargoal = { type = annex_everything target = EYR }
+			remove_wargoal = { type = annex_everything target = AVI }
+			remove_wargoal = { type = take_state_focus target = ERI }
+			remove_wargoal = { type = take_state_focus target = EYR }
+			remove_wargoal = { type = take_state_focus target = AVI }
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			set_popularities = { neutrality = 80 democratic = 15 fascism = 5 communism = 0 }
+			set_portraits = { character = GRI_emperor_grover_vi civilian = { large = "gfx/portraits/HSM_VER/grover_story.tga" } }
+			add_country_leader_role = { character = GRI_emperor_grover_vi promote_leader = yes country_leader = { desc = HSM_VER_GRO_grover_desc expire = "1965.1.1" ideology = constitutional_monarchism traits = { } } }
+			load_focus_tree = { tree = HSM_VER_GRO_restored_empire keep_completed = no }
+		}
+		HSM_VER_GRO_copy_memories = yes
+		if = { limit = { is_in_faction = no } create_faction = HSM_VER_GRO_alliance }
+		if = { limit = { is_faction_leader = yes } add_to_faction = GRI }
+		else = { faction_leader = { add_to_faction = GRI } }
+		# A treaty-defined quarter; officers and all ships remain with Verenia.
+		transfer_units_fraction = { target = GRI size = 0 army_ratio = 0.25 air_ratio = 0.25 navy_ratio = 0 stockpile_ratio = 0.25 keep_unit_leaders_trigger = { always = yes } }
+		GRI = {
+			HSM_VER_SP_add_HSM_VER_GRO_common_market = yes
+			HSM_VER_SP_add_HSM_VER_GRO_joint_defence = yes
+			country_event = { id = hsm_ver_grover.11 days = 2 }
+		}
+		# Recognition is reciprocal, even if the old Empire had already cored Verenia.
+		391 = { remove_core_of = GRI remove_claim_by = GRI }
+		400 = { remove_core_of = GRI remove_claim_by = GRI }
+		401 = { remove_core_of = GRI remove_claim_by = GRI }
+		470 = { remove_core_of = GRI remove_claim_by = GRI }
+		500 = { remove_core_of = GRI remove_claim_by = GRI }
+		673 = { remove_core_of = GRI remove_claim_by = GRI }
+		clr_country_flag = HSM_VER_GRO_mandate
+		remove_ideas = HSM_VER_GRO_guardianship remove_ideas = HSM_VER_GRO_transition
+		set_cosmetic_tag = HSM_VER_UNIFIED
+		if = { limit = { tag = ERI } set_capital = { state = 401 remember_old_capital = no } }
+		else = { set_capital = { state = 391 remember_old_capital = no } }
+		HSM_VER_SP_add_HSM_VER_GRO_common_market = yes
+		HSM_VER_SP_add_HSM_VER_GRO_joint_defence = yes
+		country_event = { id = hsm_ver_grover.10 days = 1 }
+	}
+}
+HSM_VER_GRO_maintain = {
+	if = {
+		limit = { has_country_flag = HSM_VER_GRO_mandate NOT = { has_country_flag = HSM_VER_GRO_completed } }
+		if = {
+			limit = { OR = { NOT = { HSM_VER_GRO_government = yes } NOT = { HSM_VER_GRO_local_alive = yes } GRI = { exists = yes } } }
+			HSM_VER_GRO_interrupt = yes
+		}
+		else_if = {
+			limit = { HSM_VER_GRO_local_adult = yes NOT = { has_country_flag = HSM_VER_GRO_adult_acknowledged } }
+			set_country_flag = HSM_VER_GRO_adult_acknowledged
+			remove_ideas = HSM_VER_GRO_guardianship add_ideas = HSM_VER_GRO_transition
+			country_event = { id = hsm_ver_grover.13 days = 1 }
+		}
+	}
+	if = { limit = { has_completed_focus = HSM_VER_GRO_lessons } HSM_VER_GRO_queue_lessons = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_petitions } HSM_VER_GRO_queue_petition = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_service } HSM_VER_GRO_queue_service = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_succession_articles } HSM_VER_GRO_queue_articles = yes }
+	# Recover interrupted focus effects without replaying factories or core rewards.
+	if = { limit = { has_completed_focus = HSM_VER_GRO_registers } HSM_VER_GRO_core_capital = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_districts } HSM_VER_GRO_core_districts = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_home_workshops } HSM_VER_GRO_build_home = yes }
+	if = { limit = { has_completed_focus = HSM_VER_GRO_prepared_crown } HSM_VER_GRO_prepare = yes }
+	HSM_VER_GRO_release_empire = yes
+}

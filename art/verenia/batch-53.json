@@ -1,0 +1,204 @@
+[
+  {
+    "id": "HSM_VER_GRO_patrons_legacy",
+    "target": "HSM_VER_GRO_patrons_legacy",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_patrons_legacy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_patrons_legacy.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A patron's service sword shielding an estate key while a petition box remains closed. Palette and material constraints: Preserve sword protecting estate key while petition box stays closed. Organisation benefit accompanies stability loss; do not depict equal judicial access or add patron heraldry. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_restored_public_service",
+    "target": "HSM_VER_GRO_restored_public_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover_restored.txt",
+    "source": "art/verenia/HSM_VER_GRO_restored_public_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_restored_public_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A public project register with a building diagram beside a repair crew's accountable office key. Palette and material constraints: Building is a diagram inside the public-project register, not an extra stone building. Use ivory paper with meaningful charcoal construction marks and a metal accountable office key. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_restored_civic_settlement",
+    "target": "HSM_VER_GRO_restored_civic_settlement",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover_restored.txt",
+    "source": "art/verenia/HSM_VER_GRO_restored_civic_settlement.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_restored_civic_settlement.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A working laboratory meter linked to an apprentice machine bench and a civic dispatch drawer. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_aquileian_curriculum",
+    "target": "HSM_VER_ID_aquileian_curriculum",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_aquileian_curriculum.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_ID_aquileian_curriculum.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An Aquileian illustrated school reader opening toward a scientific apparatus; no national heraldry. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_herzland_curriculum",
+    "target": "HSM_VER_ID_herzland_curriculum",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_herzland_curriculum.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_ID_herzland_curriculum.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A Griffish technical primer beside a parish classroom bell and a measuring instrument. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_bilingual_curriculum",
+    "target": "HSM_VER_ID_bilingual_curriculum",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_bilingual_curriculum.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_ID_bilingual_curriculum.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two equally open language books beneath one school lamp, a modest teaching-expense purse below. Palette and material constraints: Retain two equally open books and the briefed modest teaching purse. Use differentiated sage/russet/plum bindings without national identities. The idea definition grants research and stability bonuses, with no ongoing expense modifier; do not turn the purse into an asserted recurring gameplay penalty. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_public_endowment",
+    "target": "HSM_VER_ID_public_endowment",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_public_endowment.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_ID_public_endowment.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An examination key opening an education endowment chest beside a teacher's satchel. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_reconstruction_mandate",
+    "target": "HSM_VER_IMP_reconstruction_mandate",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_reconstruction_mandate.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_IMP_reconstruction_mandate.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A temporary repair commission key attached to an expiry clock and a construction wrench. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_final_programme",
+    "target": "HSM_VER_IMP_final_programme",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_final_programme-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_IMP_final_programme.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A final-year calendar behind reinforced repair tools and a compact research meter. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "edit_prompt": "Edit only the glowing segmented electronic display at bottom right: replace it with a 1930s analog galvanometer, cream dial, black needle and black tick marks under faint turquoise glass, dark metal case with copper terminals. No electronic bars, no glow, no digits. Preserve calendar, tools, composition, painted style, transparent exterior. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_IMP_civilian_legacy",
+    "target": "HSM_VER_IMP_civilian_legacy",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_imperial.txt",
+    "source": "art/verenia/HSM_VER_IMP_civilian_legacy-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_IMP_civilian_legacy.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Fix ONLY framing/edge clipping of this game icon. Recompose a smaller complete group of green tool chest, hammer, adjustable wrench and ivory mechanical drawings on a green metal tray. Every edge of every object, paper corner and tray must be fully visible inside canvas with a generous 10 percent transparent margin on all sides. Preserve green paint, aged steel, brown hammer handle, ivory diagrams and painterly HOI4 rendering. No extra objects, no words or letters, no heraldry, no backdrop. Make the chest dominant and tools readable at 64 pixels.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed. Material-based education and reconstruction palettes, plain seals and no invented heraldry. Final programme v2 uses period analog meter.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A closed commission key case beside still-used workshop tools and published machine diagrams. Palette and material constraints: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Fix ONLY framing/edge clipping of this game icon. Recompose a smaller complete group of green tool chest, hammer, adjustable wrench and ivory mechanical drawings on a green metal tray. Every edge of every object, paper corner and tray must be fully visible inside canvas with a generous 10 percent transparent margin on all sides. Preserve green paint, aged steel, brown hammer handle, ivory diagrams and painterly HOI4 rendering. No extra objects, no words or letters, no heraldry, no backdrop. Make the chest dominant and tools readable at 64 pixels.",
+      "previous_source": "art/verenia/HSM_VER_IMP_civilian_legacy.png",
+      "source_sha256": "aeb5de70233238d816b06131626a221a78b75269160537bcc4a0c5a979c1370f",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/HSM_VER_IMP_civilian_legacy",
+      "runtime_verified": false
+    }
+  }
+]

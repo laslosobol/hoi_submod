@@ -1,0 +1,6 @@
+HSM_VER_diplomatic_business = {
+	icon = generic_political_discourse
+	allowed = { tag = ERI }
+	visible = { has_country_flag = HSM_VER_campaign_active }
+	priority = 80
+}

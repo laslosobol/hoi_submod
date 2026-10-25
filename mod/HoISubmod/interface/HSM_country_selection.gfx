@@ -1,0 +1,32 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_texticon_HSM_CSS_stories_icon"
+		textureFile = "gfx/interface/country_selection_screen/HSM_stories_icon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HSM_CSS_stories_intro"
+		textureFile = "gfx/interface/country_selection_screen/HSM_stories_intro.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HSM_CSS_CYA_map"
+		textureFile = "gfx/interface/country_selection_screen/HSM_CYA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HSM_CSS_ERI_map"
+		textureFile = "gfx/interface/country_selection_screen/HSM_ERI.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HSM_CSS_EYR_map"
+		textureFile = "gfx/interface/country_selection_screen/HSM_EYR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HSM_CSS_AVI_map"
+		textureFile = "gfx/interface/country_selection_screen/HSM_AVI.tga"
+		legacy_lazy_load = no
+	}
+}

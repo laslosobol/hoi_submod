@@ -1,0 +1,7 @@
+on_actions = {
+	on_startup = { effect = { HSM_VER_COOP_coordinate_routes = yes HSM_VER_COOP_sync_history = yes } }
+	on_daily_ERI = { effect = { HSM_VER_COOP_coordinate_routes = yes HSM_VER_COOP_sync_history = yes } }
+	on_daily_EYR = { effect = { HSM_VER_COOP_coordinate_routes = yes HSM_VER_COOP_sync_history = yes } }
+	on_daily_AVI = { effect = { HSM_VER_COOP_sync_history = yes } }
+}
+

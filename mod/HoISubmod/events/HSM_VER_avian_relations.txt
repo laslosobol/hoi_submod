@@ -1,0 +1,57 @@
+add_namespace = hsm_ver_avr
+country_event = {
+ id = hsm_ver_avr.1 title = hsm_ver_avr.1.t desc = hsm_ver_avr.1.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ timeout_days = 30
+ # Silence is not consent, including for a human who leaves this event open.
+ option = {
+		name = hsm_ver_avr.1.b
+		trigger = { HSM_VER_AVR_reply_valid = yes }
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_association_refuse_tt
+		hidden_effect = {
+			if = { limit = { HSM_VER_AVR_reply_valid = yes } FROM = { clr_country_flag = HSM_VER_AVR_pending set_country_flag = HSM_VER_AVR_declined } }
+		}
+	}
+ option = {
+		name = hsm_ver_avr.1.a
+		trigger = { HSM_VER_AVR_reply_valid = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_association_accept_tt
+		hidden_effect = {
+			HSM_VER_AVR_accept = yes
+		}
+	}
+ option = { name = hsm_ver_avr.obsolete trigger = { NOT = { HSM_VER_AVR_reply_valid = yes } } }
+}
+country_event = {
+ id = hsm_ver_avr.2 title = hsm_ver_avr.2.t desc = hsm_ver_avr.2.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ timeout_days = 30
+ option = {
+		name = hsm_ver_avr.2.b
+		trigger = { HSM_VER_AVR_accession_reply_valid = yes }
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_accession_refuse_tt
+		hidden_effect = {
+			if = { limit = { HSM_VER_AVR_accession_reply_valid = yes } FROM = { clr_country_flag = HSM_VER_AVR_accession_pending set_country_flag = HSM_VER_AVR_accession_refused } }
+		}
+	}
+ option = {
+		name = hsm_ver_avr.2.a
+		trigger = { HSM_VER_AVR_accession_reply_valid = yes }
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = HSM_VER_EUI_ducal_accession_accept_tt
+		hidden_effect = {
+			HSM_VER_AVR_ratify = yes
+		}
+	}
+ option = { name = hsm_ver_avr.obsolete trigger = { NOT = { HSM_VER_AVR_accession_reply_valid = yes } } }
+}
+country_event = {
+ id = hsm_ver_avr.3 title = hsm_ver_avr.3.t desc = hsm_ver_avr.3.d
+ picture = GFX_report_event_generic_parliament is_triggered_only = yes
+ option = { name = hsm_ver_avr.3.a }
+}

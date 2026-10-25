@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "countries": [
+    "ERI",
+    "EYR",
+    "AVI"
+  ],
+  "source_file": "EaW/common/military_industrial_organization/organizations/00_generic_organization.txt",
+  "source_file_sha256": "e634e1175b0a073171af0bb2b50613ec647e2575ae5def2712acd0289e662c5a",
+  "runtime_verified": false,
+  "records": [
+    {
+      "id": "generic_tank_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_tank_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_tank_manufacturer",
+      "source": "art/verenia/generic_tank_manufacturer.png",
+      "source_sha256": "0135272494cc44931f65e6cae52113771f3b4c877450a0aea977088d97bc2d36",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_tank_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "38f508a611935008848b800604dbb2557ad2e9ee4f5811b493b7882bab5ac098"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_escort_ship_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_naval_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_naval_manufacturer",
+      "source": "art/verenia/generic_naval_manufacturer.png",
+      "source_sha256": "691b8866f734deea902e09d289e676a956811636541a59be6992370ba20d224b",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "4b7a254c44f1418ed07c57df9aa0852e919fd1441176dddbe907f3864503f3cf"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_light_aircraft_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_light_aircraft_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_light_aircraft_manufacturer",
+      "source": "art/verenia/generic_light_aircraft_manufacturer.png",
+      "source_sha256": "e19a57845cb9dde6974e571bfb35ae8f7d6cce44fa586389f5c46eb8c413ae30",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_light_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "37714ad91533afb2d7351f3bad275336a6d9be387617bdf6a8a0332354d48844"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_medium_aircraft_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_medium_aircraft_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_medium_aircraft_manufacturer",
+      "source": "art/verenia/generic_medium_aircraft_manufacturer.png",
+      "source_sha256": "1d99c39238ef620baae67926d42b59a26377bc11341d1b498375aa2150823611",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_medium_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "a1a965cc8b713e3808db106d4d2252b03d25be590cd44d9533ef86c4eb3de722"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_heavy_aircraft_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_heavy_aircraft_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_heavy_aircraft_manufacturer",
+      "source": "art/verenia/generic_heavy_aircraft_manufacturer.png",
+      "source_sha256": "5f42dc59e44e053c855c7f2dc5a34d116da2fda52e84f275e6ddb32bc4cb4189",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_heavy_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "ae4e70087f9c98eab0eb36035a955eb519cf08f741b2f8a2beda526733077a53"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_naval_aircraft_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_naval_aircraft_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_naval_aircraft_manufacturer",
+      "source": "art/verenia/generic_naval_aircraft_manufacturer.png",
+      "source_sha256": "86de80bcb8d081b7bff1aef2dc2ca3a6c7d8776d8ca5a83a9c9c437194a9c9de",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_aircraft_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "5c267facf62fadb0fef319e475a02c0cfe699457085412501ed82793dc2fa2cc"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_artillery_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_artillery_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_artillery_manufacturer",
+      "source": "art/verenia/generic_artillery_manufacturer.png",
+      "source_sha256": "6e63c8941752b03b0cd1d36eacd7830ddfb483fb5ab96076384c0d5e5ead72f4",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_artillery_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "6b4a7bc724faa5924b7ba114997c94ef80edbbea46766e489d1479d22ff14b3e"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_motorized_mechanized_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_motorized_equipment_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_motorized_equipment_manufacturer",
+      "source": "art/verenia/generic_motorized_equipment_manufacturer.png",
+      "source_sha256": "d2f5b0b58b75bba05e7996d533497f0ef887ce96e3ee7a49e6a276fd1ed68709",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_motorized_equipment_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "b1e82e697ab6818dc57f49589f42ab8fc03aee3acd5e4577c1f4f25c869e2ee4"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names."
+    },
+    {
+      "id": "generic_general_aircraft_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "source": "art/verenia/HSM_VER_MIO_general_aircraft.png",
+      "source_sha256": "c3dc8cd348a45d1cb78969a624a3298ebce27afa216850544f3831cb28b97c2c",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_MIO/general_aircraft.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "29cdb003451ae74077e63950c8dfa807231f9e13eb128ee0290263b0732763a6"
+        }
+      ],
+      "approved": true,
+      "review": "Source and 64x64 preview approved; aluminium, walnut and charcoal radial engine, transparent exterior, no heraldry.",
+      "sprite": "GFX_idea_HSM_VER_MIO_general_aircraft"
+    },
+    {
+      "id": "generic_infantry_equipment_organization",
+      "kind": "mio",
+      "runtime_verified": false,
+      "company_id": "generic_infantry_equipment_manufacturer",
+      "sprite": "GFX_idea_HSM_VER_COMP_generic_infantry_equipment_manufacturer",
+      "source": "art/verenia/generic_infantry_equipment_manufacturer-neutral.png",
+      "source_sha256": "2292ce9800c2fa4f28b19596066e96dd52a83183d29d9d3a6adf6353320f604b",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_infantry_equipment_manufacturer.tga",
+          "width": 64,
+          "height": 64,
+          "sha256": "f71beab78bf6fdf49abd5a5a6634ee06de002817046212cc62c1950cb2baf202"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native64x64 reviewed: workshop silhouette, clear steel caliper, subdued material palette and transparent exterior; no heraldry.",
+      "approval_manifest": "art/verenia/company-neutral-exports.json"
+    }
+  ],
+  "policy": "Existing country-owned MIO instances only; set_mio_icon; no eligibility/tree/identity changes."
+}

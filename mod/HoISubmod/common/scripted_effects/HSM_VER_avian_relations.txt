@@ -1,0 +1,133 @@
+HSM_VER_AVR_offer = {
+ if = {
+  limit = { hidden_trigger = { HSM_VER_AVR_can_offer = yes } }
+  hidden_effect = { set_country_flag = HSM_VER_AVR_opened }
+  hidden_effect = { set_country_flag = { flag = HSM_VER_AVR_pending value = 1 days = 60 } }
+  AVI = { country_event = { id = hsm_ver_avr.1 days = 1 } }
+ }
+}
+HSM_VER_AVR_accept = {
+ if = {
+  limit = { HSM_VER_AVR_reply_valid = yes }
+  if = { limit = { FROM = { tag = ERI } } set_country_flag = HSM_VER_AVR_partner_ERI }
+  if = { limit = { FROM = { tag = EYR } } set_country_flag = HSM_VER_AVR_partner_EYR }
+  FROM = { clr_country_flag = HSM_VER_AVR_pending set_country_flag = HSM_VER_AVR_agreement }
+  # Before unification this also admits Avian into the existing congress.
+  if = {
+   limit = { HSM_VER_charter_valid = yes }
+   set_country_flag = HSM_VER_congress_observer
+   set_country_flag = HSM_VER_charter_signed
+  }
+ }
+}
+HSM_VER_AVR_customs = {
+ if = {
+  limit = { hidden_trigger = { HSM_VER_AVR_accession_context = yes has_political_power > 74 NOT = { has_country_flag = HSM_VER_AVR_customs } } }
+  add_political_power = -75
+  hidden_effect = { set_country_flag = HSM_VER_AVR_customs }
+  add_tech_bonus = { name = HSM_VER_AVR_customs_bonus bonus = 1.0 uses = 1 category = logistics_tech }
+  hidden_effect = { set_country_flag = { flag = HSM_VER_AVR_accession_pending value = 1 days = 90 } }
+  AVI = { country_event = { id = hsm_ver_avr.2 days = 1 } }
+ }
+}
+HSM_VER_AVR_ratify = {
+ if = {
+  limit = { HSM_VER_AVR_accession_reply_valid = yes }
+  if = { limit = { FROM = { tag = ERI } } set_country_flag = HSM_VER_AVR_annex_ERI }
+  if = { limit = { FROM = { tag = EYR } } set_country_flag = HSM_VER_AVR_annex_EYR }
+  FROM = {
+   clr_country_flag = HSM_VER_AVR_accession_pending
+   set_country_flag = HSM_VER_AVR_ratified
+   set_country_flag = { flag = HSM_VER_AVR_transition value = 1 days = 60 }
+  }
+ }
+}
+HSM_VER_AVR_integrate = {
+ if = {
+  limit = { HSM_VER_AVR_can_integrate = yes }
+  set_country_flag = HSM_VER_UNI_absorbed_AVI
+  HSM_VER_AVR_transfer_household = yes
+  HSM_VER_SP_inherit_avian = yes
+  annex_country = { target = AVI transfer_troops = yes }
+  if = { limit = { tag = ERI } 470 = { add_core_of = ERI } }
+  if = { limit = { tag = EYR } 470 = { add_core_of = EYR } }
+  add_tech_bonus = { name = HSM_VER_AVR_colleges_bonus bonus = 1.0 uses = 2 category = electronics }
+  country_event = { id = hsm_ver_avr.3 days = 1 }
+ }
+}
+HSM_VER_AVR_transfer_household = {
+ if = {
+  limit = {
+   AVI = { exists = yes has_character = GRI_emperor_grover_vi }
+   NOT = { has_global_flag = GRI_grover_vi_dead any_country = { NOT = { tag = AVI } has_character = GRI_emperor_grover_vi } }
+  }
+  if = { limit = { tag = ERI } AVI = { GRI_emperor_grover_vi = { set_nationality = ERI } } }
+  if = { limit = { tag = EYR } AVI = { GRI_emperor_grover_vi = { set_nationality = EYR } } }
+ }
+}
+HSM_VER_AVR_maintain = {
+ HSM_VER_AVR_normalize_sponsor = yes
+ if = {
+  limit = {
+   OR = { has_completed_focus = HSM_ERI_avian_association has_completed_focus = HSM_EYR_avian_association }
+   HSM_VER_AVR_can_offer = yes
+  }
+  HSM_VER_AVR_offer = yes
+ }
+ if = {
+  limit = {
+   HSM_VER_AVR_partner_available = yes
+   has_country_flag = HSM_VER_AVR_opened
+   NOT = { has_country_flag = HSM_VER_AVR_agreement has_country_flag = HSM_VER_AVR_declined has_country_flag = HSM_VER_AVR_pending }
+   AVI = { NOT = { has_country_flag = HSM_VER_AVR_partner_ERI has_country_flag = HSM_VER_AVR_partner_EYR } }
+  }
+  # Recover interrupted delivery, never a genuine refusal or another host's treaty.
+  set_country_flag = { flag = HSM_VER_AVR_pending value = 1 days = 60 }
+  AVI = { country_event = { id = hsm_ver_avr.1 days = 1 } }
+ }
+ if = {
+  limit = { has_country_flag = HSM_VER_AVR_pending NOT = { HSM_VER_AVR_partner_available = yes } }
+  clr_country_flag = HSM_VER_AVR_pending
+ }
+ if = {
+  limit = {
+   has_country_flag = HSM_VER_AVR_ratified
+   NOT = { has_country_flag = HSM_VER_UNI_absorbed_AVI }
+   NOT = { HSM_VER_AVR_accession_context = yes }
+  }
+  # A broken political relationship voids consent, not merely its tooltip.
+  clr_country_flag = HSM_VER_AVR_ratified
+  clr_country_flag = HSM_VER_AVR_accession_pending
+  if = { limit = { tag = ERI } AVI = { clr_country_flag = HSM_VER_AVR_annex_ERI } }
+  if = { limit = { tag = EYR } AVI = { clr_country_flag = HSM_VER_AVR_annex_EYR } }
+ }
+ if = {
+  limit = {
+   HSM_VER_AVR_accession_context = yes has_country_flag = HSM_VER_AVR_customs
+   NOT = { has_country_flag = HSM_VER_AVR_accession_pending has_country_flag = HSM_VER_AVR_ratified has_country_flag = HSM_VER_AVR_accession_refused }
+  }
+  set_country_flag = { flag = HSM_VER_AVR_accession_pending value = 1 days = 90 }
+  AVI = { country_event = { id = hsm_ver_avr.2 days = 1 } }
+ }
+}
+HSM_VER_AVR_normalize_sponsor = {
+ # An absorbed government's association cannot reserve Avian against its successor.
+ if = {
+  limit = {
+   ERI = { exists = no }
+   EYR = { HSM_VER_UNI_ducal_land_held = yes has_country_flag = HSM_VER_UNI_absorbed_ERI }
+   AVI = { exists = yes has_country_flag = HSM_VER_AVR_partner_ERI }
+  }
+  AVI = { clr_country_flag = HSM_VER_AVR_partner_ERI clr_country_flag = HSM_VER_AVR_annex_ERI }
+  ERI = { clr_country_flag = HSM_VER_AVR_agreement clr_country_flag = HSM_VER_AVR_ratified clr_country_flag = HSM_VER_AVR_accession_pending }
+ }
+ if = {
+  limit = {
+   EYR = { exists = no }
+   ERI = { HSM_VER_UNI_ducal_land_held = yes has_country_flag = HSM_VER_UNI_absorbed_EYR }
+   AVI = { exists = yes has_country_flag = HSM_VER_AVR_partner_EYR }
+  }
+  AVI = { clr_country_flag = HSM_VER_AVR_partner_EYR clr_country_flag = HSM_VER_AVR_annex_EYR }
+  EYR = { clr_country_flag = HSM_VER_AVR_agreement clr_country_flag = HSM_VER_AVR_ratified clr_country_flag = HSM_VER_AVR_accession_pending }
+ }
+}

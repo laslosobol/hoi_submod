@@ -1,0 +1,110 @@
+# Ordered plans put the opening and chosen campaign before unrelated development.
+# Selection never sets a human route or accepts an invitation/annexation vote.
+HSM_VER_COOP_ERI_opening = {
+	allowed = { tag = ERI has_focus_tree = HSM_ERI_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { HSM_VER_UNI_government = yes NOT = { has_completed_focus = HSM_ERI_cost_of_feud } }
+	abort = { OR = { has_completed_focus = HSM_ERI_cost_of_feud NOT = { HSM_VER_UNI_government = yes } } }
+	ai_national_focuses = { HSM_ERI_cost_of_feud }
+}
+HSM_VER_COOP_ERI_diplomacy = {
+	allowed = { tag = ERI has_focus_tree = HSM_ERI_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_ERI_cost_of_feud has_country_flag = HSM_VER_diplomatic_route NOT = { HSM_VER_COOP_military_choice = yes } }
+	abort = { NOT = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_ERI_cost_of_feud has_country_flag = HSM_VER_diplomatic_route NOT = { HSM_VER_COOP_military_choice = yes } } }
+	ai_national_focuses = {
+		HSM_VER_UNI_convention
+		HSM_VER_UNI_customs_union
+		HSM_VER_UNI_common_works
+		HSM_VER_UNI_common_administration
+		HSM_VER_UNI_unified_command
+		HSM_VER_UNI_constitutional_draft
+		HSM_VER_UNI_constitutional_act
+		HSM_VER_UNI_settled_institutions
+		HSM_ERI_diplomatic_settlement
+		HSM_ERI_hear_petitions
+		HSM_ERI_family_letters
+		HSM_ERI_reciprocal_guarantees
+		HSM_ERI_offer_armistice
+		HSM_ERI_open_roads
+		HSM_ERI_friendship_treaty
+		HSM_ERI_mandate_for_peace
+		HSM_ERI_common_statute
+		HSM_ERI_joint_staff
+		HSM_ERI_shared_services
+		HSM_ERI_first_judgement
+		HSM_ERI_common_defence
+		HSM_ERI_keep_our_word
+		HSM_ERI_generation_without_feud
+		HSM_ERI_peace_without_union
+	}
+	focus_factors = { HSM_ERI_FORCE_the_price_of_victory = 0 }
+}
+HSM_VER_COOP_ERI_military = {
+	allowed = { tag = ERI has_focus_tree = HSM_ERI_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_ERI_cost_of_feud HSM_VER_COOP_military_choice = yes NOT = { HSM_VER_COOP_diplomatic_choice = yes } }
+	abort = { NOT = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_ERI_cost_of_feud HSM_VER_COOP_military_choice = yes NOT = { HSM_VER_COOP_diplomatic_choice = yes } } }
+	ai_national_focuses = { HSM_ERI_FORCE_the_price_of_victory }
+	focus_factors = { HSM_ERI_diplomatic_settlement = 0 }
+}
+HSM_VER_COOP_EYR_opening = {
+	allowed = { tag = EYR has_focus_tree = HSM_EYR_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { HSM_VER_UNI_government = yes NOT = { has_completed_focus = HSM_EYR_the_price_of_vigilance } }
+	abort = { OR = { has_completed_focus = HSM_EYR_the_price_of_vigilance NOT = { HSM_VER_UNI_government = yes } } }
+	ai_national_focuses = { HSM_EYR_the_price_of_vigilance }
+}
+HSM_VER_COOP_EYR_diplomacy = {
+	allowed = { tag = EYR has_focus_tree = HSM_EYR_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_EYR_the_price_of_vigilance has_country_flag = HSM_VER_diplomatic_route NOT = { HSM_VER_COOP_military_choice = yes } }
+	abort = { NOT = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_EYR_the_price_of_vigilance has_country_flag = HSM_VER_diplomatic_route NOT = { HSM_VER_COOP_military_choice = yes } } }
+	ai_national_focuses = {
+		HSM_VER_UNI_convention
+		HSM_VER_UNI_customs_union
+		HSM_VER_UNI_common_administration
+		HSM_VER_UNI_common_works
+		HSM_VER_UNI_unified_command
+		HSM_VER_UNI_constitutional_draft
+		HSM_VER_UNI_constitutional_act
+		HSM_VER_UNI_settled_institutions
+		HSM_EYR_diplomatic_settlement
+		HSM_EYR_audit_the_muster
+		HSM_EYR_montagues_correspondence
+		HSM_EYR_publish_the_rules
+		HSM_EYR_reciprocal_frontier
+		HSM_EYR_inspect_both_sides
+		HSM_EYR_friendship_with_safeguards
+		HSM_EYR_limits_of_command
+		HSM_EYR_a_charter_we_can_sign
+		HSM_EYR_officers_at_one_table
+		HSM_EYR_shared_workshops
+		HSM_EYR_the_return_order
+		HSM_EYR_a_defence_agreement
+		HSM_EYR_workshops_returned
+		HSM_EYR_a_border_without_orders
+		HSM_EYR_neighbours_without_a_council
+	}
+	focus_factors = { HSM_EYR_FORCE_the_last_campaign = 0 }
+}
+HSM_VER_COOP_EYR_military = {
+	allowed = { tag = EYR has_focus_tree = HSM_EYR_negotiated_verenia }
+	name = HSM_VER_COOP_plan_name
+	desc = HSM_VER_COOP_plan_desc
+	weight = { factor = 10 }
+	enable = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_EYR_the_price_of_vigilance HSM_VER_COOP_military_choice = yes NOT = { HSM_VER_COOP_diplomatic_choice = yes } }
+	abort = { NOT = { exists = yes is_subject = no HSM_VER_UNI_government = yes has_completed_focus = HSM_EYR_the_price_of_vigilance HSM_VER_COOP_military_choice = yes NOT = { HSM_VER_COOP_diplomatic_choice = yes } } }
+	ai_national_focuses = { HSM_EYR_FORCE_the_last_campaign }
+	focus_factors = { HSM_EYR_diplomatic_settlement = 0 }
+}

@@ -1,0 +1,533 @@
+# Import both roots into EYR's main tree. Coordinates are absolute.
+# Domestic columns 0..3 and military columns 6..9 remain independent of diplomacy.
+shared_focus = {
+	id = HSM_EYR_borderland_reconstruction
+	icon = GFX_HSM_VER_ART_HSM_EYR_borderland_reconstruction
+	x = 0
+	y = 0
+	cost = 5
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_borderland_reconstruction_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_borderland_reconstruction_paid }
+			add_political_power = 50 HSM_VER_SP_add_HSM_EYR_DEV_public_works = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_EYR_fair_grain_markets
+	icon = GFX_HSM_VER_ART_HSM_EYR_fair_grain_markets
+	prerequisite = { focus = HSM_EYR_borderland_reconstruction }
+	x = 0
+	y = 1
+	cost = 7
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_fair_grain_markets_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_fair_grain_markets_paid }
+			custom_effect_tooltip = HSM_VER_UI_DOM_can_improve_poverty_tt
+			hidden_effect = { set_country_flag = can_improve_poverty }
+			decrease_poverty = yes
+			HSM_VER_SP_add_HSM_EYR_DEV_rural_investment = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_EYR_market_roads
+	icon = GFX_HSM_VER_ART_HSM_EYR_market_roads
+	prerequisite = { focus = HSM_EYR_fair_grain_markets }
+	x = 0
+	y = 2
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_market_roads_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_market_roads_paid }
+			HSM_VER_DEV_ensure_agrarian_society = yes
+			custom_effect_tooltip = HSM_VER_UI_DOM_eyr_roads_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = { OR = { state = 391 state = 400 } is_core_of = ROOT is_fully_controlled_by = ROOT infrastructure < 5 }
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
+			add_tech_bonus = { name = HSM_EYR_DEV_road_methods_bonus bonus = 0.5 uses = 1 category = construction_tech }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_rural_processing
+	icon = GFX_HSM_VER_ART_HSM_EYR_rural_processing
+	prerequisite = { focus = HSM_EYR_market_roads }
+	x = 0
+	y = 3
+	cost = 10
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_DOM_civ_space_tt
+			any_owned_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+		}
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_rural_processing_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_rural_processing_paid }
+			HSM_VER_DEV_ensure_pre_industrial_society = yes
+			custom_effect_tooltip = HSM_VER_UI_DOM_civ_factory_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_EYR_equipment_cooperatives
+	icon = GFX_HSM_VER_ART_HSM_EYR_equipment_cooperatives
+	prerequisite = { focus = HSM_EYR_rural_processing }
+	x = 0
+	y = 4
+	cost = 10
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_DOM_civ_space_tt
+			any_owned_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+		}
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_equipment_cooperatives_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_equipment_cooperatives_paid }
+			HSM_VER_DEV_ensure_pre_industrial_society2 = yes
+			custom_effect_tooltip = HSM_VER_UI_DOM_can_improve_society_development_tt
+			hidden_effect = { set_country_flag = can_improve_society_development }
+			custom_effect_tooltip = HSM_VER_UI_DOM_civ_factory_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+
+			add_tech_bonus = { name = HSM_EYR_DEV_workshop_methods_bonus bonus = 0.5 uses = 2 category = industry }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_seasonal_work_schemes
+	icon = GFX_HSM_VER_ART_HSM_EYR_seasonal_work_schemes
+	prerequisite = { focus = HSM_EYR_equipment_cooperatives }
+	x = 0
+	y = 5
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_seasonal_work_schemes_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_seasonal_work_schemes_paid }
+			decrease_poverty = yes add_political_power = 25
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_EYR_evening_classes
+	icon = GFX_HSM_VER_ART_HSM_EYR_evening_classes
+	prerequisite = { focus = HSM_EYR_borderland_reconstruction }
+	x = 3
+	y = 1
+	cost = 7
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_evening_classes_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_evening_classes_paid }
+			custom_effect_tooltip = HSM_VER_UI_DOM_can_improve_illiteracy_tt
+			hidden_effect = { set_country_flag = can_improve_illiteracy }
+			decrease_illiteracy = yes
+			HSM_VER_SP_add_HSM_EYR_DEV_practical_education = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_practical_science
+	icon = GFX_HSM_VER_ART_HSM_EYR_practical_science
+	prerequisite = { focus = HSM_EYR_public_libraries }
+	prerequisite = { focus = HSM_EYR_rural_processing }
+	x = 3
+	y = 4
+	cost = 10
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_practical_science_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_practical_science_paid }
+			HSM_VER_DEV_ensure_big_science_base = yes
+			custom_effect_tooltip = HSM_VER_UI_DOM_science_unlock_tt
+			add_tech_bonus = { name = HSM_EYR_DEV_instrumentation_bonus bonus = 0.5 uses = 1 category = electronics }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_EYR_district_laboratories
+	icon = GFX_HSM_VER_ART_HSM_EYR_district_laboratories
+	prerequisite = { focus = HSM_EYR_practical_science }
+	prerequisite = { focus = HSM_EYR_equipment_cooperatives }
+	x = 3
+	y = 5
+	cost = 10
+	available = { num_of_owned_factories > 5 has_tech = electronic_mechanical_engineering }
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_district_laboratories_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_district_laboratories_paid }
+			if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+			add_tech_bonus = { name = HSM_EYR_DEV_material_testing_bonus bonus = 0.5 uses = 1 category = industry }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_technical_fellowships
+	icon = GFX_HSM_VER_ART_HSM_EYR_technical_fellowships
+	prerequisite = { focus = HSM_EYR_district_laboratories }
+	prerequisite = { focus = HSM_EYR_seasonal_work_schemes }
+	x = 3
+	y = 6
+	cost = 10
+	available = { num_of_owned_factories > 9 has_tech = basic_machine_tools has_tech = construction1 }
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_technical_fellowships_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_technical_fellowships_paid }
+			HSM_VER_DEV_ensure_proper_science_base = yes
+			custom_effect_tooltip = HSM_VER_UI_DOM_science_full_unlock_tt
+			if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+			add_tech_bonus = { name = HSM_EYR_DEV_fellowship_bonus bonus = 0.5 uses = 1 category = electronics }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_EYR_teacher_training
+	icon = GFX_HSM_VER_ART_HSM_EYR_teacher_training
+	prerequisite = { focus = HSM_EYR_evening_classes }
+	x = 3
+	y = 2
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_teacher_training_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_teacher_training_paid }
+			decrease_illiteracy = yes
+			HSM_VER_DEV_ensure_better_science_base = yes
+			add_tech_bonus = { name = HSM_EYR_DEV_instrumentation_bonus bonus = 0.5 uses = 1 category = electronics }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_public_libraries
+	icon = GFX_HSM_VER_ART_HSM_EYR_public_libraries
+	prerequisite = { focus = HSM_EYR_teacher_training }
+	x = 3
+	y = 3
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_public_libraries_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_public_libraries_paid }
+			decrease_illiteracy = yes
+			add_tech_bonus = { name = HSM_EYR_DEV_electronics_bonus bonus = 0.5 uses = 1 category = electronics }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_universal_schooling
+	icon = GFX_HSM_VER_ART_HSM_EYR_universal_schooling
+	prerequisite = { focus = HSM_EYR_technical_fellowships }
+	prerequisite = { focus = HSM_EYR_public_libraries }
+	x = 3
+	y = 7
+	cost = 10
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_universal_schooling_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_universal_schooling_paid }
+			HSM_VER_DEV_ensure_no_lack_of_scientists = yes
+			add_tech_bonus = { name = HSM_EYR_DEV_common_curriculum_bonus bonus = 0.5 uses = 2 category = electronics category = industry }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_district_housing
+	icon = GFX_HSM_VER_ART_HSM_EYR_district_housing
+	prerequisite = { focus = HSM_EYR_seasonal_work_schemes }
+	x = 0
+	y = 6
+	cost = 7
+	available = { num_of_owned_factories > 5 }
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_district_housing_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_district_housing_paid }
+			decrease_poverty = yes
+			add_stability = 0.03
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_social_insurance
+	icon = GFX_HSM_VER_ART_HSM_EYR_social_insurance
+	prerequisite = { focus = HSM_EYR_district_housing }
+	x = 0
+	y = 7
+	cost = 10
+	available = { num_of_owned_factories > 7 }
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_social_insurance_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_social_insurance_paid }
+			decrease_poverty = yes
+			add_stability = 0.03
+			add_tech_bonus = { name = HSM_EYR_DEV_public_health_bonus bonus = 1.0 uses = 1 category = hospital_tech }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_rural_credit
+	icon = GFX_HSM_VER_ART_HSM_EYR_rural_credit
+	prerequisite = { focus = HSM_EYR_social_insurance }
+	x = 0
+	y = 8
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_rural_credit_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_rural_credit_paid }
+			decrease_poverty = yes
+			add_tech_bonus = { name = HSM_EYR_DEV_industry_bonus bonus = 0.5 uses = 1 category = industry }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_public_utilities
+	icon = GFX_HSM_VER_ART_HSM_EYR_public_utilities
+	prerequisite = { focus = HSM_EYR_universal_schooling }
+	prerequisite = { focus = HSM_EYR_social_insurance }
+	x = 3
+	y = 8
+	cost = 10
+	available = { num_of_owned_factories > 9 has_tech = construction1 }
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_public_utilities_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_public_utilities_paid }
+			HSM_VER_DEV_ensure_outdated_industry = yes
+			add_tech_bonus = { name = HSM_EYR_DEV_construction_bonus bonus = 0.5 uses = 1 category = construction_tech }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_lasting_prosperity
+	icon = GFX_HSM_VER_ART_HSM_EYR_lasting_prosperity
+	prerequisite = { focus = HSM_EYR_rural_credit }
+	prerequisite = { focus = HSM_EYR_public_utilities }
+	x = 0
+	y = 9
+	cost = 10
+	available = { num_of_owned_factories > 11 has_tech = construction2 }
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { NOT = { has_country_flag = HSM_EYR_lasting_prosperity_paid } } }
+			hidden_effect = { set_country_flag = HSM_EYR_lasting_prosperity_paid }
+			HSM_VER_DEV_ensure_no_poverty = yes
+			HSM_VER_DEV_ensure_modern_society = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_defensive_service
+	icon = GFX_HSM_VER_ART_HSM_EYR_defensive_service
+	x = 6
+	y = 0
+	cost = 5
+	ai_will_do = { factor = 15 }
+	completion_reward = { army_experience = 15 }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = HSM_EYR_skilled_reserve
+	icon = GFX_HSM_VER_ART_HSM_EYR_skilled_reserve
+	prerequisite = { focus = HSM_EYR_defensive_service }
+	x = 6
+	y = 1
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = { army_experience = 10 HSM_VER_SP_add_HSM_EYR_DEV_skilled_reserve = yes }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_EYR_engineer_corps
+	icon = GFX_HSM_VER_ART_HSM_EYR_engineer_corps
+	prerequisite = { focus = HSM_EYR_skilled_reserve }
+	x = 6
+	y = 2
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		army_experience = 15
+		HSM_VER_SP_add_HSM_EYR_DEV_field_engineers = yes
+		add_tech_bonus = { name = HSM_EYR_DEV_engineer_bonus bonus = 0.5 uses = 2 category = engineers_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_repair_arsenals
+	icon = GFX_HSM_VER_ART_HSM_EYR_repair_arsenals
+	prerequisite = { focus = HSM_EYR_engineer_corps }
+	x = 6
+	y = 3
+	cost = 10
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_DOM_mil_space_tt
+			any_owned_state = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+		}
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_mil_factory_tt
+		hidden_effect = {
+			random_owned_state = {
+				limit = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		add_tech_bonus = { name = HSM_EYR_DEV_maintenance_bonus bonus = 0.5 uses = 1 category = maintenance_company_tech }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_supply_depots
+	icon = GFX_HSM_VER_ART_HSM_EYR_supply_depots
+	prerequisite = { focus = HSM_EYR_repair_arsenals }
+	x = 6
+	y = 4
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		HSM_VER_SP_add_HSM_EYR_DEV_depot_service = yes
+		add_tech_bonus = { name = HSM_EYR_DEV_logistics_bonus bonus = 1.0 uses = 1 category = logistics_tech }
+		add_tech_bonus = { name = HSM_EYR_DEV_rail_supply_bonus bonus = 0.5 uses = 1 category = train_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_infantry_drills
+	icon = GFX_HSM_VER_ART_HSM_EYR_infantry_drills
+	prerequisite = { focus = HSM_EYR_defensive_service }
+	x = 9
+	y = 1
+	cost = 7
+	ai_will_do = { factor = 15 }
+	completion_reward = { army_experience = 15 add_tech_bonus = { name = HSM_EYR_DEV_infantry_bonus bonus = 0.5 uses = 2 category = infantry_weapons } }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_observation_posts
+	icon = GFX_HSM_VER_ART_HSM_EYR_observation_posts
+	prerequisite = { focus = HSM_EYR_infantry_drills }
+	x = 9
+	y = 3
+	cost = 7
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		HSM_VER_SP_add_HSM_EYR_DEV_observer_sections = yes
+		add_tech_bonus = { name = HSM_EYR_DEV_recon_bonus bonus = 0.5 uses = 2 category = recon_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_EYR_signals_network
+	icon = GFX_HSM_VER_ART_HSM_EYR_signals_network
+	prerequisite = { focus = HSM_EYR_observation_posts }
+	prerequisite = { focus = HSM_EYR_supply_depots }
+	x = 9
+	y = 5
+	cost = 10
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		army_experience = 25
+		effect_tooltip = { swap_ideas = { remove_idea = HSM_EYR_DEV_observer_sections add_idea = HSM_EYR_DEV_coordinated_signals } } hidden_effect = { HSM_VER_SP_remove_HSM_EYR_DEV_observer_sections = yes HSM_VER_SP_add_HSM_EYR_DEV_coordinated_signals = yes }
+		add_tech_bonus = { name = HSM_EYR_DEV_signals_bonus bonus = 0.5 uses = 2 category = signal_company_tech }
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}

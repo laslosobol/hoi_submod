@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		HSM_VER_ID_aquileian_curriculum = {
+			picture = HSM_VER_ART_HSM_VER_ID_aquileian_curriculum
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { OR = { NOT = { tag = ERI } HSM_VER_ID_eligible_house = no NOT = { has_country_flag = HSM_VER_ID_ERI_aquileian } } }
+			modifier = { research_speed_factor = 0.05 }
+		}
+		HSM_VER_ID_herzland_curriculum = {
+			picture = HSM_VER_ART_HSM_VER_ID_herzland_curriculum
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { OR = { NOT = { tag = EYR } HSM_VER_ID_eligible_house = no NOT = { has_country_flag = HSM_VER_ID_EYR_herzland } } }
+			modifier = { research_speed_factor = 0.05 }
+		}
+		HSM_VER_ID_bilingual_curriculum = {
+			picture = HSM_VER_ART_HSM_VER_ID_bilingual_curriculum
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = {
+				OR = {
+					HSM_VER_ID_eligible_house = no
+					NOT = { OR = { AND = { tag = ERI has_country_flag = HSM_VER_ID_ERI_balanced } AND = { tag = EYR has_country_flag = HSM_VER_ID_EYR_balanced } } }
+				}
+			}
+			modifier = { research_speed_factor = 0.03 stability_factor = 0.05 }
+		}
+		HSM_VER_ID_public_endowment = {
+			picture = HSM_VER_ART_HSM_VER_ID_public_endowment
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = {
+				OR = {
+					HSM_VER_ID_eligible_house = no
+					NOT = { OR = { AND = { tag = ERI has_country_flag = HSM_VER_ID_ERI_scholarships_done } AND = { tag = EYR has_country_flag = HSM_VER_ID_EYR_fellowships_done } } }
+				}
+			}
+			modifier = { research_speed_factor = 0.02 political_power_factor = 0.05 }
+		}
+	}
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "id": "support_local_companies",
+    "target": "support_local_companies",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/support_local_companies.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_support_local_companies.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Support Local Companies: A small workshop storefront with an open strongbox supplying its tool bench. Lore: Our House needs to support more local companies in order for our economy to grow. Without healthy companies to keep employment high, as well as exports to keep being moved out, our economy will fall prey to foreign influences from both the Imperials, Aquileians, and even Skyfall. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "indigenous_manufactories",
+    "target": "indigenous_manufactories",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/indigenous_manufactories.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_indigenous_manufactories.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Indigenous Manufactories: A locally built civilian factory press beside a homegrown workshop tool rack and a metal stock bin. Lore: More indigenous_manufactories will not only increase employment, but also strengthen factory output for the many guns and shells needed to equip our growing military. It's time we encourage our own homegrown factories. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "agricultural_sustainability",
+    "target": "agricultural_sustainability",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/agricultural_sustainability.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_agricultural_sustainability.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Agricultural Sustainability: A full grain silo above a carefully fenced crop plot, a reserve sack at its foot. Lore: We need to make sure our food supply is secure without needing to rely as much on trade. When war comes, a hungry populace will be a weak and weary populace. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_protectionism",
+    "target": "avian_protectionism",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_protectionism.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_protectionism.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Avian Protectionism: A customs gate sheltering a local workshop while an imported cargo crate waits outside. Lore: Our industry and economy is still relatively and developing. We should not free our trade to the world at this point, lest we have companies putting our fellow griffons out of business. Let's put some tariffs on goods to protect our populace. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "consolidate_industry",
+    "target": "consolidate_industry",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/consolidate_industry.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_consolidate_industry.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Consolidate Avian Industry: Two small workbenches feeding one larger belt-driven factory machine. Lore: Avian industry is too decentralized at this current point. Artisanry is still dominant in our less developed lands. We should have local industries starting to move and consolidate them in order for manufacturing to become more efficient. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "everygriff_a_farmer",
+    "target": "everygriff_a_farmer",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/everygriff_a_farmer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_everygriff_a_farmer.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Everygriff a Farmer: A seed tray beside a hoe and an illustrated sowing chart, practical farming instruction. Lore: Even as our country becomes more industrialized, we should still encourage more farming in order to achieve our goals of agricultural self-sufficiency. Let's start agricultural education farmers to make sure everygriff knows how to do basic farming. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "material_self_sufficiency",
+    "target": "material_self_sufficiency",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/material_self_sufficiency.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_material_self_sufficiency.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "ONE transparent HOI4/EaW national-focus painted object icon, readable at 99x86. Material Self-sufficiency: A scrap-metal basket feeding a compact smelting crucible, reusable offcuts visible beside it. Lore: We also need to be self-sufficient in raw materials. We should work towards becoming much more effective in conserving needed raw materials as well as producing them more efficiently as to prevent waste for our society to survive. Bold uncluttered single silhouette with maximum two supporting elements; antique gold, dark iron, ivory, cobalt/crimson accents. Illustrated game asset, not photo or shiny 3D. No text/pseudotext/blank documents, no human figures or hands, no invented flags/crests, no fleur-de-lis or lilies or decorative crowns. No surrounding laurel/medal frame. Exterior genuinely alpha transparent. If documents appear, use a simple meaningful geometry diagram. No heraldic animals.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "cooperative_farms",
+    "target": "cooperative_farms",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/cooperative_farms.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_cooperative_farms.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Painted strategy-game interface icon of a shared agricultural threshing machine standing at the junction of three cultivated strips of farmland. Compact unified object group on genuine transparent background. Readable at 99x86 pixels, crisp edges, old brass, steel, golden wheat and green fields. No lettering, heraldry or people. One machine, three small strips of crops, nothing else.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "state_capital_alliance",
+    "target": "state_capital_alliance",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/state_capital_alliance.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_state_capital_alliance.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Painted HOI4 economic focus icon: A treasury strongbox linked by a drive belt to a private factory flywheel. Bold unified silhouette readable at 99x86, antique brass and dark steel with restrained red accents. Transparent background. No people, letters, flags, crests, lilies or crowns. No generic medal frame.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; transparent export verified. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

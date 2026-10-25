@@ -1,0 +1,21 @@
+[
+  {
+    "id": "generic_infantry_equipment_manufacturer",
+    "target": "generic_infantry_equipment_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_infantry_equipment_manufacturer-neutral.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_infantry_equipment_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one painterly 1930s strategy-game UI icon. Exact composition: A compact metalworking bench vise and a steel caliper laid across a small plain gear. Blued steel, walnut and muted green enamel. Workshop emblem, no weapons. Compact strong silhouette, at most the named objects, readable at small size. Transparent background. Material-specific colors, soft painted highlights, clean edges. No frame, writing, logos, invented heraldry, crowns, flags, human anatomy or extra decorative objects. Documents have only the described geometric diagrams. Do not add weapons or combat scenes.",
+    "approved": true,
+    "review": "Source and native64x64 reviewed: workshop silhouette, clear steel caliper, subdued material palette and transparent exterior; no heraldry.",
+    "runtime_verified": false
+  }
+]

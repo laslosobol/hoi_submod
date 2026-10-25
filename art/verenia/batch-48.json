@@ -1,0 +1,193 @@
+[
+  {
+    "id": "HSM_VER_CW_treasury",
+    "target": "HSM_VER_CW_treasury",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_treasury.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_treasury.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A common treasury vault funding a bridge beam and civilian factory wheel. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_district_credit",
+    "target": "HSM_VER_CW_district_credit",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_district_credit-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_district_credit.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A cooperative loan purse beside a supplier's raw-material bin and production gauge. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "edit_prompt": "Remove the entire turquoise circular emblem and its copper outlines from the purse; leave a plain unmarked ivory leather purse. Keep its clasp, raw-material bin, gauge, colors, composition, painted style and transparent exterior unchanged. No logo, lettering or added objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_common_courts",
+    "target": "HSM_VER_CW_common_courts",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_common_courts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_common_courts.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: One balanced scale standing above two identical courthouse thresholds. Palette and material constraints: Override agriculture_food direction with justice_charters: balanced oxidised-bronze/iron judicial scale above two equal pale-stone courthouse thresholds. No crops, straw, food or agricultural decoration. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_local_guarantees",
+    "target": "HSM_VER_CW_local_guarantees",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_local_guarantees.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_local_guarantees.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A common civil-rights lock protecting distinct district keyrings. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_housing_service",
+    "target": "HSM_VER_CW_housing_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_housing_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_housing_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A sound house roof above a connected well pipe and drainage channel. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_interchangeable_parts",
+    "target": "HSM_VER_CW_interchangeable_parts",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_interchangeable_parts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_interchangeable_parts.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two interchangeable machine couplings sliding together without a file. Palette and material constraints: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_professional_service",
+    "target": "HSM_VER_CW_professional_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_professional_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_professional_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A standing army's service bugle beside a precisely aligned formation of equipment lockers. Palette and material constraints: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_territorial_service",
+    "target": "HSM_VER_CW_territorial_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_territorial_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_territorial_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A reserve kit stored beside a home gate and shared depot key. Palette and material constraints: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_accounts_office",
+    "target": "HSM_VER_CW_accounts_office",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_accounts_office.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CW_accounts_office.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An audit lens inspecting an official's own expenditure abacus. Palette and material constraints: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CR_emergency_hospitals",
+    "target": "HSM_VER_CR_emergency_hospitals",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_crisis.txt",
+    "source": "art/verenia/HSM_VER_CR_emergency_hospitals.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_CR_emergency_hospitals.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A field-hospital cot with fresh bandages and a medicine crate; a small hourglass signals temporary emergency service. Palette and material constraints: Ignore crop assignment triggered by field-hospital. Use linen-white bandages/cot fabric, muted medical glass, dark metal supports, timber crate and restrained hourglass fittings. No vegetation, invented red-cross emblem or permanent-service implication. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; judicial, civic, industrial and field-service materials. Credit purse uses v2 without invented emblem.",
+    "runtime_verified": false
+  }
+]

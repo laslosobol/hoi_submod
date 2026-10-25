@@ -1,0 +1,29 @@
+HSM_VER_CW_country = {
+	HSM_VER_UNI_house = yes
+	exists = yes
+	has_country_flag = HSM_VER_UNI_founded
+}
+HSM_VER_CW_ready = {
+	HSM_VER_UNI_founded_homeland = yes
+	has_country_flag = HSM_VER_UNI_settled
+	has_war = no
+}
+HSM_VER_CW_budget_agreed = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_CW_budget_agreed_tt
+		OR = { HSM_VER_SP_has_HSM_VER_CW_treasury = yes HSM_VER_SP_has_HSM_VER_CW_district_credit = yes }
+	}
+}
+HSM_VER_CW_citizens_agreed = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_CW_citizens_agreed_tt
+		OR = { HSM_VER_SP_has_HSM_VER_CW_common_courts = yes HSM_VER_SP_has_HSM_VER_CW_local_guarantees = yes }
+	}
+}
+HSM_VER_CW_service_agreed = {
+	custom_trigger_tooltip = {
+		tooltip = HSM_VER_CW_service_agreed_tt
+		OR = { HSM_VER_SP_has_HSM_VER_CW_professional_service = yes HSM_VER_SP_has_HSM_VER_CW_territorial_service = yes }
+	}
+}
+

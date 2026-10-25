@@ -1,0 +1,180 @@
+[
+  {
+    "id": "AVI_avi5",
+    "target": "AVI_avi5",
+    "source": "art/verenia/AVI_avi5.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi5_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Ancietus von Toltz, commando specialist. Preserve pale white-grey face feathers, black swept brow and crown feathers, amber eyes, ochre beak, dark green-brown field cap and coat with burgundy collar. Three-quarter right, weathered determined expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain muted olive-grey backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi6",
+    "target": "AVI_avi6",
+    "source": "art/verenia/AVI_avi6.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi6_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Feullien von Lishill, logistics specialist. Preserve lavender-grey head feathers, blue eyes, yellow beak, blue-grey soft service cap and grey officer coat. Three-quarter left, observant restrained expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain charcoal muted backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi7",
+    "target": "AVI_avi7",
+    "source": "art/verenia/AVI_avi7.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi7_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Gustave Avian, entrenchment specialist. Preserve pale lavender-grey head feathers and neck, purple eyes, broad yellow beak, very short smooth pale crown feathers, small grey service cap and navy high collar. Three-quarter left, determined dignified expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain charcoal muted backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi3",
+    "target": "AVI_avi3",
+    "source": "art/verenia/AVI_avi3.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi3_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Peter Hardringer, military theorist. Preserve white fluffy head feathers and expressive dark eyebrows, violet eyes with thin round spectacles, orange hooked beak, green formal military jacket and pale shirt. No hat. Three-quarter right, animated intelligent mature expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain charcoal muted backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "convene_the_council",
+    "target": "convene_the_council",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/convene_the_council.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_convene_the_council.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4 / Equestria at War national focus icon for \"Convene the House Council\". Visual brief: Three empty council chairs around a triangular table, with a border-threat map at its centre. Context for meaning only, do not render this text: It is a time of crisis. In the lands of the ailing Empire, unruly vassals connive secession, whilst the Emperor's health grows worse by the day. To the west, Aquileia teeters on the brink of another civil war. To the south, the expansionist Wingbardy and her allies hungrily eye their neighbours. House Avian is surrounded by enemies, and a new strategy is needed if the House is to survive the turbulent years to come. One strong silhouette, at most two subordinate motifs, dark iron antique gold ivory cobalt restrained crimson, 99:86 composition with 8% transparent margin, readable at99x86. Transparent exterior, no opaque scene rectangle, no repetitive circular badge frame. Object-only, no people/humans/hands. No text, pseudoletters, empty paper or empty seal. If map needed draw a schematic diagram, not guessed geography. NO flags, coats of arms, crowns, lilies or invented heraldic marks. Painted period game art not flat vector logo.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "go_with_count_ehrenreich",
+    "target": "go_with_count_ehrenreich",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/go_with_count_ehrenreich.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_go_with_count_ehrenreich.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4 / Equestria at War national focus icon for \"Go with Count Ehrenreich\". Visual brief: A closed border gate braced by a service rifle, representing Ehrenreich's armed neutrality. Context for meaning only, do not render this text: Count Ehrenreich and his policy of armed neutrality is the way forward. Only through isolation will House Avian be safe from the madness outside its borders. One strong silhouette, at most two subordinate motifs, dark iron antique gold ivory cobalt restrained crimson, 99:86 composition with 8% transparent margin, readable at99x86. Transparent exterior, no opaque scene rectangle, no repetitive circular badge frame. Object-only, no people/humans/hands. No text, pseudoletters, empty paper or empty seal. If map needed draw a schematic diagram, not guessed geography. NO flags, coats of arms, crowns, lilies or invented heraldic marks. Painted period game art not flat vector logo.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "go_with_viceroy_joachim",
+    "target": "go_with_viceroy_joachim",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/go_with_viceroy_joachim.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_go_with_viceroy_joachim.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Go with Viceroy Joachim\". Three separate bridge spans meeting at a central pier, Joachim's proposed union between the Houses. Three stone bridge spans from three directions actually connect over a small central pier, a unified compact structure symbolic of negotiated cooperation. Dark iron antique gold ivory cobalt details. 99:86 composition, transparent outside and 8% margin, readable at99x86. No text or blank documents, people, hands, flags, crowns, coats of arms, lilies, invented heraldry. No repetitive badge frame or scene rectangle. Painted period strategy-game asset.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "proclamation_of_neutrality",
+    "target": "proclamation_of_neutrality",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/proclamation_of_neutrality.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_proclamation_of_neutrality.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Proclamation of Avian Neutrality\". An upright sheathed sword beside a closed frontier barrier and a plain ivory signal pennant. A sheathed sword means refusal to wage war, not surrender. The plain ivory pennant is only a small unmarked signal cloth, not national heraldry. Bold compact silhouette, 99:86 composition with 8% transparent margin, dark iron antique gold ivory restrained cobalt and crimson, readable at99x86. Transparent exterior, no scene rectangle, no ornamental badge frame. No text, empty documents, people or hands, no crests/crowns/lilies, no invented national symbols. Painted strategy-game asset.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "intergigantes",
+    "target": "intergigantes",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/intergigantes.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_intergigantes.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Avian Intergigantes\". Three small joined watchtowers enclosed between three looming unmarked fortress walls; the Houses shelter together. Make three small allied watchtowers in front joined by short bridges, three taller dark fortress wall silhouettes behind them exerting pressure, clearly distinguish the small alliance from looming great powers. Unified compact object emblem readable at99x86, 99:86 format 8% margin, ivory stone antique gold dark iron restrained cobalt. Transparent exterior, no rectangular scene, no decorative circular frame. No people, text, coats of arms, flags, crowns, lilies, stars or invented national symbols. Painterly game asset.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "pursue_true_neutrality",
+    "target": "pursue_true_neutrality",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/pursue_true_neutrality.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_pursue_true_neutrality.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4/EaW national focus icon \"Pursue True Neutrality\". A single fortified gate with its drawbridge raised and two unused approach roads ending outside. Isolated fortified medieval gatehouse, central wooden drawbridge raised upright with taut chains, two separate stone approach roads fork and stop before the moat. No alliance bridges, no rifle. Bold compact silhouette 99:86 format, dark iron antique gold ivory stone restrained cobalt, transparent exterior and8%margin, readable at99x86. No flags, heraldry, crowns, lilies, text, people/hands, extra badge frame, opaque rectangle. Painterly period strategy-game asset.",
+    "approved": true,
+    "review": "Source and native-size export visually checked; runtime pending",
+    "runtime_verified": false
+  }
+]

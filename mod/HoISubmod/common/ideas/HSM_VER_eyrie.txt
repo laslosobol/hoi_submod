@@ -1,0 +1,24 @@
+ideas = {
+	country = {
+		HSM_EYR_accountable_muster = {
+			picture = HSM_VER_ART_HSM_EYR_accountable_muster allowed = { always = no } removal_cost = -1
+			modifier = { mobilization_speed = 0.15 stability_factor = 0.05 political_power_factor = -0.05 }
+		}
+		HSM_EYR_officers_confidence = {
+			picture = HSM_VER_ART_HSM_EYR_officers_confidence allowed = { always = no } removal_cost = -1
+			modifier = { training_time_army_factor = -0.10 army_org_factor = 0.05 stability_factor = -0.03 }
+		}
+		HSM_EYR_civic_scrutiny = {
+			picture = HSM_VER_ART_HSM_EYR_civic_scrutiny allowed = { always = no } removal_cost = -1
+			modifier = { stability_factor = 0.07 supply_consumption_factor = -0.08 political_power_gain = -0.10 }
+		}
+		HSM_EYR_professional_command = {
+			picture = HSM_VER_ART_HSM_EYR_professional_command allowed = { always = no } removal_cost = -1
+			modifier = { planning_speed = 0.15 army_org_factor = 0.05 }
+		}
+		HSM_EYR_exceptional_requisitions = {
+			picture = HSM_VER_ART_HSM_EYR_exceptional_requisitions allowed = { always = no } removal_cost = -1
+			modifier = { industrial_capacity_factory = 0.10 stability_factor = -0.07 consumer_goods_factor = 0.05 }
+		}
+	}
+}

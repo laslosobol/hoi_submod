@@ -1,0 +1,192 @@
+[
+  {
+    "id": "generic_tank_manufacturer",
+    "target": "generic_tank_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_tank_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_tank_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Armor Company. Composition: A heavy tank drive sprocket meshing with three broad track links, one exposed axle bearing seated cleanly at the hub. Material colors: track side plates: Muted olive protective paint (#657154); sprocket and track recesses: Dark steel (#424D50); bearing and worn contact faces: Machined steel (#B0B8B3). Squat interlocking tread silhouette; no full vehicle, shared gear border or gold armor. Do not imply an armor-thickness, firepower or heavy-tank bonus; the inspected trait grants reliability.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_naval_manufacturer",
+    "target": "generic_naval_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_naval_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Naval Company. Composition: A broad shipbuilding hull section resting in a two-block dry-dock cradle, with one bronze screw propeller visible beneath the stern. Material colors: hull plates: Weathered steel (#929E9F); lower hull strip: Muted red-oxide primer (#805C50); propeller: Aged bronze (#9E895B); cradle: Dark timber (#665F55). Deep rounded hull section with an exposed bronze screw, not an anchor crest. No fleet ensign, anchor-and-crown badge or invented dockyard history; naval research does not imply a particular ship class.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_light_aircraft_manufacturer",
+    "target": "generic_light_aircraft_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_light_aircraft_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_light_aircraft_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Light Air Company. Composition: A slim single-engine aircraft banking steeply, its narrow fuselage and compact wings forming a sharp diagonal silhouette. Material colors: upper wing and fuselage: Satin aluminium (#CDD3D0); engine cowling: Muted olive paint (#6E7B60); propeller and underwing shadow: Charcoal metal (#3A4345). One engine, steep bank, slender wings; distinct from the medium assembly, heavy frontal silhouette and naval underside. Do not turn this into a jet, racing brand or acrobatic display team; add no combat scene or invented markings.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_medium_aircraft_manufacturer",
+    "target": "generic_medium_aircraft_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_medium_aircraft_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_medium_aircraft_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Medium Air Company. Composition: A twin-engine wing centre-section held level in a compact assembly cradle, its reinforced central spar exposed between the two nacelles. Material colors: wing skins: Dull aluminium (#AAB6B7); internal spar and nacelle primer: Grey-green protective finish (#727F68); cradle contact pads: Pale fibre padding (#D6D1BD); cradle supports: Dark iron (#454D4D). Horizontal two-nacelle assembly with exposed centre spar; retain broad simple geometry readable at 64 pixels. No claims of stronger bombing or longer range; this trait is reliability. Do not render a detailed engineering sheet or tiny rivet diagram.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_heavy_aircraft_manufacturer",
+    "target": "generic_heavy_aircraft_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_heavy_aircraft_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_heavy_aircraft_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Heavy Air Company. Composition: A broad four-engine aircraft seen slightly from below and ahead, with a deep central fuselage and one clearly visible rectangular cargo opening. Material colors: broad wing upper edges: Weathered neutral-grey finish (#858E8A); underside and fuselage: Pale aluminium (#C8CDCA); four engine openings and cargo opening: Deep mechanical shadow (#353D3F). Wide frontal four-engine silhouette and deep cargo fuselage; no assembly jig or naval torpedo. Four engines are an illustrative period large-aircraft cue, not a documented company product. No falling bombs, modern strategic jet or invented unit insignia.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_naval_aircraft_manufacturer",
+    "target": "generic_naval_aircraft_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_naval_aircraft_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_naval_aircraft_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Naval Air Company. Composition: A compact naval aircraft shown from below at a shallow diagonal, one long torpedo secured beneath its fuselage and the wingtips folded upward. Material colors: upper folded wing tips: Muted sea-grey paint (#668284); wing undersides: Pale grey finish (#D3D9D4); torpedo body: Dark steel (#515D60); propeller: Charcoal metal (#3A4243). Underside view with folded tips and one attached torpedo; no propeller-as-logo, floatplane requirement or anchor border. No attack scene, launch wake, naval flag or invented carrier affiliation. This is a generic product emblem, not a claim that a specific aircraft exists.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_industrial_concern",
+    "target": "generic_industrial_concern",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_industrial_concern.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_industrial_concern.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Industrial Company. Composition: A squat coal hopper feeding a broad toothed roller, with three large angular coal pieces visible at the hopper lip. Material colors: coal pieces: Near-black coal with narrow grey facets (#262E30); hopper casing: Worn green machine enamel (#63816D); roller teeth: Bare steel (#9AA6A1); small joint surfaces: Restrained oxidised metal (#A07959). Top-heavy hopper and low roller, clearly different from the existing Three Houses refinery-tower corporation emblem. Do not claim an oil-refining specialization or depict three towers/three houses. No new corporation name, state arms or universal factory cog badge.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_electronics_concern",
+    "target": "generic_electronics_concern",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_electronics_concern.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_electronics_concern.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Electronics Company. Composition: A large glass vacuum valve seated beside a compact laminated transformer, connected by one clearly visible copper winding. Material colors: valve glass: Pale translucent green glass (#B3D0C8); coil: Copper (#AE7753); valve socket: Ivory ceramic (#D9D7C9); transformer laminations: Graphite steel (#454E50). Tall valve next to a squat transformer, linked by one copper coil; avoid extra meter faces or miniature circuit boards. No silicon microchips, glowing energy core, agency insignia or claim of a radar-specific bonus.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_artillery_manufacturer",
+    "target": "generic_artillery_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_artillery_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_artillery_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Artillery Company. Composition: A short, thick artillery breech and barrel sleeve held upright at a diagonal, with a single large recoil spring visible alongside. Material colors: outer barrel sleeve: Muted field-olive paint (#70775C); breech face and spring: Machined steel (#A9B2AE); bore and internal recesses: Dark gunmetal (#353F42). Heavy diagonal tube with oversized breech and one spring; distinguish from the horizontal small-arms vise and tank tread. No firing scene, blast, ammunition crown or unsupported damage/recoil-performance claim. The mechanism is a category cue, not a new gameplay bonus.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  },
+  {
+    "id": "generic_motorized_equipment_manufacturer",
+    "target": "generic_motorized_equipment_manufacturer",
+    "kind": "manufacturer",
+    "file": "EaW/common/ideas/zzz_generic.txt",
+    "source": "art/verenia/generic_motorized_equipment_manufacturer.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_COMP/generic_motorized_equipment_manufacturer.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Create one distinct painted Hearts of Iron IV / Equestria at War company emblem for a 64x64 RGBA game icon. Square composition, transparent exterior, compact bold silhouette with a small clear margin; one dominant object assembly and at most two supporting motifs. Period mechanical materials, restrained painted highlights and readable value separation. No humans or hands, animals, national heraldry, flags, crowns, lilies, invented logos, letters, pseudo-text, blank documents, decorative badge frame, laurel wreath, ribbons or opaque background. Do not outline everything in gold. The company name identifies the target only and must not appear as lettering. Target: Motorization Company. Composition: A sturdy truck wheel attached to a short exposed drive axle, with one stacked leaf spring arching above the hub. Material colors: tyre: Matte charcoal rubber (#303837); axle and hub: Brushed steel (#9AA9A7); wheel rim: Muted sage enamel (#778D79); leaf spring: Tempered dark steel (#555E5B). One round road tyre beneath an arched leaf spring, not a caterpillar track or whole truck scene. Do not imply a speed, fuel-economy or reliability bonus beyond the inspected research role. No manufacturer lettering or invented vehicle badge.",
+    "approved": true,
+    "review": "Source and 64x64 native preview reviewed: distinct category silhouette, appropriate material palette, transparent exterior, no invented heraldry or names.",
+    "runtime_verified": false
+  }
+]

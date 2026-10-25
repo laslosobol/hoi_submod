@@ -1,0 +1,127 @@
+add_namespace = hsm_ver_cw
+
+country_event = {
+	id = hsm_ver_cw.1 title = hsm_ver_cw.1.t desc = hsm_ver_cw.1.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_budget_pending }
+	option = {
+		name = hsm_ver_cw.1.a
+		ai_chance = { factor = 60 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_budget_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_treasury = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_budget_pending }
+		}
+	}
+	option = {
+		name = hsm_ver_cw.1.b
+		ai_chance = { factor = 40 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_budget_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_district_credit = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_budget_pending }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_cw.2 title = hsm_ver_cw.2.t
+	desc = {
+		trigger = { has_country_flag = HSM_VER_UNI_military }
+		text = hsm_ver_cw.2.d.military
+	}
+	desc = {
+		trigger = { NOT = { has_country_flag = HSM_VER_UNI_military } }
+		text = hsm_ver_cw.2.d
+	}
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_citizens_pending }
+	option = {
+		name = hsm_ver_cw.2.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_citizens_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_common_courts = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_citizens_pending }
+		}
+	}
+	option = {
+		name = hsm_ver_cw.2.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_citizens_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_local_guarantees = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_citizens_pending }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_cw.3 title = hsm_ver_cw.3.t desc = hsm_ver_cw.3.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	trigger = { HSM_VER_CW_country = yes }
+	option = { name = hsm_ver_cw.3.a }
+}
+country_event = {
+	id = hsm_ver_cw.4 title = hsm_ver_cw.4.t desc = hsm_ver_cw.4.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	trigger = { HSM_VER_CW_country = yes }
+	option = { name = hsm_ver_cw.4.a }
+}
+country_event = {
+	id = hsm_ver_cw.5 title = hsm_ver_cw.5.t desc = hsm_ver_cw.5.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 30
+	trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_service_pending }
+	option = {
+		name = hsm_ver_cw.5.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_service_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_professional_service = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_service_pending }
+		}
+	}
+	option = {
+		name = hsm_ver_cw.5.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { hidden_trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_service_pending } }
+			HSM_VER_SP_add_HSM_VER_CW_territorial_service = yes
+			hidden_effect = { clr_country_flag = HSM_VER_CW_service_pending }
+		}
+	}
+}
+country_event = {
+	id = hsm_ver_cw.6 title = hsm_ver_cw.6.t
+	desc = {
+		trigger = { HSM_VER_SP_has_HSM_VER_CW_treasury = yes }
+		text = hsm_ver_cw.6.d.treasury
+	}
+	desc = {
+		trigger = { NOT = { HSM_VER_SP_has_HSM_VER_CW_treasury = yes } }
+		text = hsm_ver_cw.6.d.districts
+	}
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	trigger = { HSM_VER_CW_country = yes }
+	option = { name = hsm_ver_cw.6.a }
+}
+country_event = {
+	id = hsm_ver_cw.7 title = hsm_ver_cw.7.t
+	desc = {
+		trigger = { OR = { tag = AVI has_country_flag = HSM_VER_UNI_absorbed_AVI } }
+		text = hsm_ver_cw.7.d.three
+	}
+	desc = {
+		trigger = { NOT = { tag = AVI has_country_flag = HSM_VER_UNI_absorbed_AVI } }
+		text = hsm_ver_cw.7.d
+	}
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	trigger = { HSM_VER_CW_country = yes has_country_flag = HSM_VER_CW_completed }
+	option = { name = hsm_ver_cw.7.a }
+}
+

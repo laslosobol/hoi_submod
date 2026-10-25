@@ -1,4 +1,5 @@
 GRI_has_access_to_reichsmandates = {
+	HSM_VER_GRO_native_ruler_allowed = yes
 	OR = {
 		original_tag = GRI
 		original_tag = BRZ

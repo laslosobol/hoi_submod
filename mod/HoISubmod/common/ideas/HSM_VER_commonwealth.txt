@@ -1,0 +1,68 @@
+ideas = {
+	country = {
+		HSM_VER_CW_treasury = {
+			picture = HSM_VER_ART_HSM_VER_CW_treasury
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { production_speed_industrial_complex_factor = 0.10 production_speed_infrastructure_factor = 0.15 }
+		}
+		HSM_VER_CW_district_credit = {
+			picture = HSM_VER_ART_HSM_VER_CW_district_credit
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { production_factory_efficiency_gain_factor = 0.15 local_resources_factor = 0.10 }
+		}
+		HSM_VER_CW_common_courts = {
+			picture = HSM_VER_ART_HSM_VER_CW_common_courts
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { stability_factor = 0.07 compliance_gain = 0.08 }
+		}
+		HSM_VER_CW_local_guarantees = {
+			picture = HSM_VER_ART_HSM_VER_CW_local_guarantees
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { stability_factor = 0.07 political_power_factor = 0.10 }
+		}
+		HSM_VER_CW_housing_service = {
+			picture = HSM_VER_ART_HSM_VER_CW_housing_service
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { consumer_goods_factor = -0.05 stability_factor = 0.05 }
+		}
+		HSM_VER_CW_interchangeable_parts = {
+			picture = HSM_VER_ART_HSM_VER_CW_interchangeable_parts
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { production_factory_max_efficiency_factor = 0.10 production_factory_efficiency_gain_factor = 0.10 }
+		}
+		HSM_VER_CW_professional_service = {
+			picture = HSM_VER_ART_HSM_VER_CW_professional_service
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { army_org_factor = 0.10 experience_gain_army_factor = 0.10 }
+		}
+		HSM_VER_CW_territorial_service = {
+			picture = HSM_VER_ART_HSM_VER_CW_territorial_service
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { supply_consumption_factor = -0.10 training_time_army_factor = -0.10 }
+		}
+		HSM_VER_CW_accounts_office = {
+			picture = HSM_VER_ART_HSM_VER_CW_accounts_office
+			allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = AVI } }
+			removal_cost = -1
+			cancel = { NOT = { has_country_flag = HSM_VER_UNI_founded } }
+			modifier = { political_power_gain = 0.15 production_speed_buildings_factor = 0.05 }
+		}
+	}
+}
+

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "HSM_EYR_FORCE_unplaced_reservists",
+    "target": "HSM_EYR_FORCE_unplaced_reservists",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_unplaced_reservists.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_FORCE_unplaced_reservists.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An unused apprentice stool beside a discharged soldier's pack and a closed workshop door. Palette and material constraints: Unused stool, discharged pack and closed workshop door must read as exclusion/inactivity. Both stability and civilian construction are penalised. Use worn natural materials and object state, not an arbitrary red danger badge. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_military_production_priority",
+    "target": "HSM_EYR_FORCE_military_production_priority",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_military_production_priority.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_FORCE_military_production_priority.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A production scheduling wheel allocating its largest segment to shells, civilian repairs waiting below. Palette and material constraints: Retain the scheduling wheel largest allocation to shells and waiting civilian repairs. Military output rises while civilian construction slows; distinguish competing allocations, not an unconditional production improvement. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_FORCE_contracted_workshops",
+    "target": "HSM_EYR_FORCE_contracted_workshops",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_eyrie_force.txt",
+    "source": "art/verenia/HSM_EYR_FORCE_contracted_workshops.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_FORCE_contracted_workshops.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A negotiated machine-time dial beside a measured supply crate and a contract clasp. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_guardianship",
+    "target": "HSM_VER_GRO_guardianship",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_guardianship.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_guardianship.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A temporary household key beside a small school satchel and a reconstruction tool; guardianship, not ownership. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_transition",
+    "target": "HSM_VER_GRO_transition",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_transition-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_transition.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Retain the adult office chair, handover key and peace timetable. Replace the entire dove/branch/circle emblem with a final plain square milestone connected to the existing timetable line; no bird, foliage, seal, crest or logo. Make the key grey iron with sparse silver wear and only tiny oxidised-brass fitting edges. Keep natural walnut/leather, ivory paper, pale stone and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A ministry handover key beside an adult-sized office chair and a peace timetable; no childhood symbols. Palette and material constraints: Grey iron locks, weathered wood and pale limestone; small oxidised-brass key edges, no generic blue shield. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Retain the adult office chair, handover key and peace timetable. Replace the entire dove/branch/circle emblem with a final plain square milestone connected to the existing timetable line; no bird, foliage, seal, crest or logo. Make the key grey iron with sparse silver wear and only tiny oxidised-brass fitting edges. Keep natural walnut/leather, ivory paper, pale stone and transparent exterior. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/HSM_VER_GRO_transition.png",
+      "source_sha256": "b412a112635d9f6ddbdafd7d5c95ba9cd9c2181646e2b783a23cc6afe5d4c1be",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/HSM_VER_GRO_transition",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_VER_GRO_common_market",
+    "target": "HSM_VER_GRO_common_market",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_common_market.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_common_market.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two independent market gates connected by a laden trade cart and a technical parts case. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_open_court_legacy",
+    "target": "HSM_VER_GRO_open_court_legacy",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_open_court_legacy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_open_court_legacy.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An open hearing-room door beside a lesson book and an unscreened speaking trumpet. Palette and material constraints: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_managed_court_legacy",
+    "target": "HSM_VER_GRO_managed_court_legacy",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_managed_court_legacy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_managed_court_legacy.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A tightly arranged adviser desk behind a controlled visitor screen, a closed outside book. Palette and material constraints: Keep controlled visitor screen and closed outside book: greater political control accompanies lower research. Natural desk/book materials; no crown or implication of open academic exchange. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_GRO_rule_of_law",
+    "target": "HSM_VER_GRO_rule_of_law",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_grover.txt",
+    "source": "art/verenia/HSM_VER_GRO_rule_of_law.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_rule_of_law.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Justice scales holding a court patron's key at the same height as an ordinary house key. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s analog technology. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos or writing. Wax plain smooth. No people, anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: clear institutional motifs, distinct materials, no invented heraldry. Joint defence omitted after generator rejection.",
+    "runtime_verified": false
+  }
+]

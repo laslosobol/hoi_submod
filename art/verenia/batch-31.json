@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_VER_CW_first_budget",
+    "target": "HSM_VER_CW_first_budget",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_first_budget.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_first_budget.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two overlapping school payment trays reorganised into one treasury counting board. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_citizens",
+    "target": "HSM_VER_CW_citizens",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_citizens.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_citizens.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A common court threshold with a trade licence token and a removed foreign-resident toll chain. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_housing",
+    "target": "HSM_VER_CW_housing",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_housing.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_housing.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Boarded estate shutters opened beside a new workers' house and a drainage pipe. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_clinics",
+    "target": "HSM_VER_CW_clinics",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_clinics.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_clinics.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A rural clinic medicine cabinet paired with a common diagnostic kit and a removed district barrier. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_market_roads",
+    "target": "HSM_VER_CW_market_roads",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_market_roads.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_market_roads.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A route map showing a direct repaired bridge replacing a checkpoint detour, with survey dividers. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_machine_shops",
+    "target": "HSM_VER_CW_machine_shops",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_machine_shops.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_machine_shops.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A disused customs warehouse converted into a machine shop, its old barrier leaning outside. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_standards",
+    "target": "HSM_VER_CW_standards",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_standards.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_standards.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A threaded nut sliding cleanly onto a bolt beneath a standards gauge. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_evening_classes",
+    "target": "HSM_VER_CW_evening_classes",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_evening_classes.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_evening_classes.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A work apron hung beside a lit school desk carrying an illustrated contract lesson. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_institute",
+    "target": "HSM_VER_CW_institute",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_institute.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_institute.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two borrowed scientific instruments meeting beneath a shared institute arch. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_CW_common_service",
+    "target": "HSM_VER_CW_common_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_commonwealth.txt",
+    "source": "art/verenia/HSM_VER_CW_common_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_CW_common_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A common appointment rack holding aligned service batons under a civilian budget clasp. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouettes, distinct housing/clinic/science/education palettes; no invented heraldry.",
+    "runtime_verified": false
+  }
+]

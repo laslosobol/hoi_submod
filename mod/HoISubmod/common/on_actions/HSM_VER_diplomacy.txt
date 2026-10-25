@@ -1,0 +1,26 @@
+on_actions = {
+	on_daily_ERI = { effect = { ERI = { HSM_VER_maintain_agreements = yes } } }
+	on_daily_EYR = { effect = { EYR = { HSM_VER_maintain_agreements = yes } } }
+	on_daily_AVI = { effect = { AVI = { HSM_VER_maintain_agreements = yes } } }
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = { OR = { AND = { tag = ERI FROM = { tag = EYR } } AND = { tag = EYR FROM = { tag = ERI } } } }
+				HSM_VER_void_bilateral_treaty = yes
+			}
+		}
+	}
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = { OR = { AND = { tag = ERI FROM = { tag = EYR } } AND = { tag = EYR FROM = { tag = ERI } } } }
+				HSM_VER_void_bilateral_treaty = yes
+			}
+			if = {
+				limit = { OR = { AND = { tag = AVI FROM = { OR = { tag = ERI tag = EYR } } } AND = { OR = { tag = ERI tag = EYR } FROM = { tag = AVI } } } }
+				ERI = { clr_country_flag = HSM_VER_avian_pending }
+				AVI = { clr_country_flag = HSM_VER_charter_signed clr_country_flag = HSM_VER_congress_observer clr_country_flag = HSM_VER_avian_charter_pending clr_country_flag = HSM_VER_avian_defence_pending HSM_VER_remove_charter_benefits = yes }
+			}
+		}
+	}
+}

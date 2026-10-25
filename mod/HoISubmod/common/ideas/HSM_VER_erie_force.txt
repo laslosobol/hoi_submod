@@ -1,0 +1,44 @@
+ideas = {
+	country = {
+		HSM_VER_FORCE_AVI_transition = {
+			picture = HSM_VER_ART_HSM_VER_FORCE_AVI_transition allowed = { always = no } removal_cost = -1
+			modifier = { political_power_factor = -0.10 production_speed_buildings_factor = -0.05 }
+		}
+		HSM_VER_FORCE_AVI_charter = {
+			picture = HSM_VER_ART_HSM_VER_FORCE_AVI_charter allowed = { always = no } removal_cost = -1
+			modifier = { production_speed_buildings_factor = 0.10 production_factory_efficiency_gain_factor = 0.10 political_power_factor = -0.05 }
+		}
+		HSM_VER_FORCE_AVI_commission = {
+			picture = HSM_VER_ART_HSM_VER_FORCE_AVI_commission allowed = { always = no } removal_cost = -1
+			modifier = { industrial_capacity_factory = 0.10 army_org_factor = 0.05 stability_factor = -0.05 }
+		}
+		HSM_ERI_FORCE_war_obligations = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_war_obligations allowed = { always = no } removal_cost = -1
+			modifier = { planning_speed = 0.15 mobilization_speed = 0.15 political_power_factor = -0.10 }
+		}
+		HSM_ERI_FORCE_defeated_rights = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_defeated_rights allowed = { always = no } removal_cost = -1
+			modifier = { stability_factor = 0.08 production_speed_buildings_factor = 0.08 political_power_factor = -0.05 }
+		}
+		HSM_ERI_FORCE_central_commissions = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_central_commissions allowed = { always = no } removal_cost = -1
+			modifier = { army_org_factor = 0.05 industrial_capacity_factory = 0.08 stability_factor = -0.05 }
+		}
+		HSM_ERI_FORCE_chartered_union = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_chartered_union allowed = { always = no } removal_cost = -1
+			modifier = { stability_factor = 0.10 production_speed_buildings_factor = 0.10 supply_consumption_factor = -0.08 political_power_factor = -0.05 }
+		}
+		HSM_ERI_FORCE_ducal_administration = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_ducal_administration allowed = { always = no } removal_cost = -1
+			modifier = { army_org_factor = 0.05 industrial_capacity_factory = 0.12 political_power_factor = 0.10 stability_factor = -0.05 }
+		}
+		HSM_ERI_FORCE_patron_claims = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_patron_claims allowed = { always = no } removal_cost = -1
+			modifier = { army_attack_factor = 0.05 stability_factor = -0.08 political_power_factor = -0.10 }
+		}
+		HSM_ERI_FORCE_equal_judgement = {
+			picture = HSM_VER_ART_HSM_ERI_FORCE_equal_judgement allowed = { always = no } removal_cost = -1
+			modifier = { production_factory_efficiency_gain_factor = 0.10 stability_factor = 0.05 }
+		}
+	}
+}

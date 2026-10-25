@@ -1,0 +1,60 @@
+shared_focus = {
+ id = HSM_ERI_avian_question icon = GFX_HSM_VER_ART_HSM_ERI_avian_question
+ x = 44 y = 0 cost = 3
+ available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_authority_tt HSM_VER_AVR_regional_authority = yes } }
+ cancel_if_invalid = yes
+ completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_avian_routes_tt }
+}
+shared_focus = {
+ id = HSM_ERI_avian_customs icon = GFX_HSM_VER_ART_HSM_ERI_avian_customs
+ prerequisite = { focus = HSM_ERI_avian_association }
+ x = 42 y = 2 cost = 7
+ available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_accession_context_tt HSM_VER_AVR_accession_context = yes }
+		has_political_power > 74
+	}
+ cancel_if_invalid = yes
+ bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_absorbed_tt HSM_VER_AVR_absorbed = yes } }
+ completion_reward = {
+		HSM_VER_AVR_customs = yes
+	}
+}
+shared_focus = {
+ id = HSM_ERI_avian_accession icon = GFX_HSM_VER_ART_HSM_ERI_avian_accession
+ prerequisite = { focus = HSM_ERI_avian_customs }
+ x = 42 y = 3 cost = 10
+ available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_accession_ready_tt HSM_VER_AVR_can_integrate = yes } }
+ cancel_if_invalid = yes
+ bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_absorbed_tt HSM_VER_AVR_absorbed = yes } }
+ completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_avian_accession_tt hidden_effect = { HSM_VER_AVR_integrate = yes } }
+}
+shared_focus = {
+ id = HSM_EYR_avian_question icon = GFX_HSM_VER_ART_HSM_EYR_avian_question
+ x = 44 y = 0 cost = 3
+ available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_authority_tt HSM_VER_AVR_regional_authority = yes } }
+ cancel_if_invalid = yes
+ completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_avian_routes_tt }
+}
+shared_focus = {
+ id = HSM_EYR_avian_customs icon = GFX_HSM_VER_ART_HSM_EYR_avian_customs
+ prerequisite = { focus = HSM_EYR_avian_association }
+ x = 42 y = 2 cost = 7
+ available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_accession_context_tt HSM_VER_AVR_accession_context = yes }
+		has_political_power > 74
+	}
+ cancel_if_invalid = yes
+ bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_absorbed_tt HSM_VER_AVR_absorbed = yes } }
+ completion_reward = {
+		HSM_VER_AVR_customs = yes
+	}
+}
+shared_focus = {
+ id = HSM_EYR_avian_accession icon = GFX_HSM_VER_ART_HSM_EYR_avian_accession
+ prerequisite = { focus = HSM_EYR_avian_customs }
+ x = 42 y = 3 cost = 10
+ available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_accession_ready_tt HSM_VER_AVR_can_integrate = yes } }
+ cancel_if_invalid = yes
+ bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_absorbed_tt HSM_VER_AVR_absorbed = yes } }
+ completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_avian_accession_tt hidden_effect = { HSM_VER_AVR_integrate = yes } }
+}

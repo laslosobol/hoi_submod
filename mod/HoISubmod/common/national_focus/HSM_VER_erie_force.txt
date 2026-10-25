@@ -1,0 +1,263 @@
+shared_focus = {
+	id = HSM_ERI_FORCE_the_price_of_victory icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_the_price_of_victory
+	prerequisite = { focus = HSM_ERI_cost_of_feud }
+	mutually_exclusive = { focus = HSM_ERI_diplomatic_settlement }
+	x = 34 y = 1 cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_prepare_tt HSM_VER_FORCE_can_prepare = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_military_open_tt NOT = { has_country_flag = HSM_VER_diplomatic_route } }
+	} cancel_if_invalid = yes
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 EYR = { OR = { has_country_flag = HSM_VER_diplomatic_route AND = { is_ai = no NOT = { has_country_flag = HSM_VER_military_route } } } } }
+	}
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_military_route_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_eri_intro_tt
+		show_ideas_tooltip = HSM_ERI_FORCE_war_obligations
+		hidden_effect = { HSM_VER_choose_military = yes HSM_VER_FORCE_prepare = yes HSM_VER_ERI_FORCE_maintain = yes }
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_promises_in_writing icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_promises_in_writing
+	prerequisite = { focus = HSM_ERI_FORCE_the_price_of_victory }
+	x = 32 y = 2 cost = 4 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_prepare_tt HSM_VER_FORCE_can_prepare = yes } } cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_can_prepare = yes } }
+			add_tech_bonus = { name = HSM_ERI_FORCE_supply_bonus bonus = 1.0 uses = 1 category = logistics_tech }
+			hidden_effect = { HSM_VER_ERI_FORCE_maintain = yes }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_not_a_dowry icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_not_a_dowry
+	prerequisite = { focus = HSM_ERI_FORCE_the_price_of_victory }
+	x = 36 y = 2 cost = 3 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_prepare_tt HSM_VER_FORCE_can_prepare = yes } } cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_eri_rosaline_tt hidden_effect = { HSM_VER_ERI_FORCE_maintain = yes } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_final_ultimatum icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_final_ultimatum
+	prerequisite = { focus = HSM_ERI_FORCE_promises_in_writing }
+	prerequisite = { focus = HSM_ERI_FORCE_not_a_dowry }
+	x = 34 y = 3 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_issue_goal_tt HSM_VER_FORCE_can_issue_goal = yes } } cancel_if_invalid = yes
+	bypass = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_rival_bypass_tt OR = { HSM_VER_FORCE_at_war = yes HSM_VER_FORCE_settlement_context = yes } }
+	}
+	completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_goal_eyr_tt hidden_effect = { HSM_VER_FORCE_issue_goal = yes } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_terms_for_the_defeated icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_terms_for_the_defeated
+	prerequisite = { focus = HSM_ERI_FORCE_final_ultimatum }
+	x = 34 y = 4 cost = 5 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_context_tt HSM_VER_FORCE_settlement_context = yes } } cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_eri_terms_tt
+		hidden_effect = { HSM_VER_FORCE_open_settlement = yes HSM_VER_ERI_FORCE_maintain = yes }
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_district_charters icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_district_charters
+	prerequisite = { focus = HSM_ERI_FORCE_terms_for_the_defeated }
+	mutually_exclusive = { focus = HSM_ERI_FORCE_ducal_commissioners }
+	x = 32 y = 5 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_rights_tt has_country_flag = HSM_ERI_FORCE_rights }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_settlement_active = yes } }
+			add_tech_bonus = { name = HSM_ERI_FORCE_district_bonus bonus = 1.0 uses = 1 category = construction_tech }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_ducal_commissioners icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_ducal_commissioners
+	prerequisite = { focus = HSM_ERI_FORCE_terms_for_the_defeated }
+	mutually_exclusive = { focus = HSM_ERI_FORCE_district_charters }
+	x = 36 y = 5 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_central_tt has_country_flag = HSM_ERI_FORCE_central }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_settlement_active = yes } }
+			add_tech_bonus = { name = HSM_ERI_FORCE_commission_bonus bonus = 1.0 uses = 1 category = industry }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_the_first_petition icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_the_first_petition
+	prerequisite = { focus = HSM_ERI_FORCE_district_charters focus = HSM_ERI_FORCE_ducal_commissioners }
+	x = 34 y = 6 cost = 4 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes } } cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_eri_petition_tt hidden_effect = { HSM_VER_ERI_FORCE_maintain = yes } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_reconstruction_contracts icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_reconstruction_contracts
+	prerequisite = { focus = HSM_ERI_FORCE_the_first_petition }
+	x = 32 y = 7 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_claim_decided_tt has_country_flag = HSM_ERI_FORCE_claim_decided }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_settlement_active = yes } }
+			401 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_tech_bonus = { name = HSM_ERI_FORCE_reconstruction_bonus bonus = 0.75 uses = 2 category = industry }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_a_regular_levy icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_a_regular_levy
+	prerequisite = { focus = HSM_ERI_FORCE_the_first_petition }
+	x = 36 y = 7 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_claim_decided_tt has_country_flag = HSM_ERI_FORCE_claim_decided }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		if = {
+			limit = { hidden_trigger = { HSM_VER_FORCE_settlement_active = yes } }
+			army_experience = 25
+			add_tech_bonus = { name = HSM_ERI_FORCE_levy_bonus bonus = 1.0 uses = 2 category = infantry_weapons }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_the_third_house icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_the_third_house
+	prerequisite = { focus = HSM_ERI_FORCE_reconstruction_contracts }
+	prerequisite = { focus = HSM_ERI_FORCE_a_regular_levy }
+	x = 34 y = 8 cost = 3 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes } } cancel_if_invalid = yes
+	completion_reward = { add_tech_bonus = { name = HSM_VER_AVR_records_bonus bonus = 1.0 uses = 1 category = electronics } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_a_bound_duke icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_a_bound_duke
+	prerequisite = { focus = HSM_ERI_FORCE_the_third_house }
+	mutually_exclusive = { focus = HSM_ERI_FORCE_a_single_chancery }
+	x = 32 y = 9 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_rights_tt has_country_flag = HSM_ERI_FORCE_rights }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_consequence_tt has_country_flag = HSM_ERI_FORCE_consequence_seen }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_eri_bound_tt
+		show_ideas_tooltip = HSM_ERI_FORCE_chartered_union
+		show_ideas_tooltip = HSM_ERI_FORCE_equal_judgement
+		hidden_effect = {
+			if = {
+				limit = { HSM_VER_FORCE_settlement_active = yes }
+				set_country_flag = HSM_ERI_FORCE_bound_duke
+				if = { limit = { has_country_flag = HSM_ERI_FORCE_patron_award } set_country_flag = HSM_ERI_FORCE_reversed_award }
+				clr_country_flag = HSM_ERI_FORCE_patron_award
+				set_country_flag = HSM_ERI_FORCE_court_upheld
+				HSM_VER_ERI_FORCE_maintain = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_a_single_chancery icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_a_single_chancery
+	prerequisite = { focus = HSM_ERI_FORCE_the_third_house }
+	mutually_exclusive = { focus = HSM_ERI_FORCE_a_bound_duke }
+	x = 36 y = 9 cost = 5 available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_central_tt has_country_flag = HSM_ERI_FORCE_central }
+		custom_trigger_tooltip = { tooltip = HSM_ERI_FORCE_consequence_tt has_country_flag = HSM_ERI_FORCE_consequence_seen }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_eri_chancery_tt
+		show_ideas_tooltip = HSM_ERI_FORCE_ducal_administration
+		hidden_effect = {
+			if = { limit = { HSM_VER_FORCE_settlement_active = yes } set_country_flag = HSM_ERI_FORCE_single_chancery HSM_VER_ERI_FORCE_maintain = yes }
+		}
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_inheritance_without_feud icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_inheritance_without_feud
+	prerequisite = { focus = HSM_ERI_FORCE_a_bound_duke focus = HSM_ERI_FORCE_a_single_chancery }
+	x = 34 y = 10 cost = 3 available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_settlement_active_tt HSM_VER_FORCE_settlement_active = yes } } cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_eri_ending_tt hidden_effect = { HSM_VER_ERI_FORCE_maintain = yes } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_avian_claim icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_avian_claim
+	prerequisite = { focus = HSM_ERI_avian_question }
+	mutually_exclusive = { focus = HSM_ERI_avian_association }
+	x = 46 y = 1 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_claim_avian_tt HSM_VER_FORCE_can_claim_avian = yes } } cancel_if_invalid = yes
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_UI_DOM_avian_bypass_tt
+			OR = { AND = { HSM_VER_AVR_regional_authority = yes has_war_with = AVI has_country_flag = HSM_VER_FORCE_AVI_war } HSM_VER_FORCE_avian_victory = yes }
+		}
+	}
+	completion_reward = { custom_effect_tooltip = HSM_VER_UI_DOM_avian_goal_tt hidden_effect = { HSM_VER_FORCE_claim_avian = yes } }
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_avian_articles icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_avian_articles
+	prerequisite = { focus = HSM_ERI_FORCE_avian_claim }
+	x = 46 y = 2 cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_authority_tt HSM_VER_AVR_regional_authority = yes }
+		has_war = no
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_avian_war_settled_tt has_country_flag = HSM_VER_FORCE_AVI_war has_country_flag = HSM_VER_FORCE_AVI_defeated has_country_flag = HSM_VER_FORCE_AVI_peace }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_FORCE_avian_settling_complete_tt
+			has_country_flag = HSM_VER_FORCE_AVI_peace
+			NOT = { has_country_flag = HSM_VER_FORCE_AVI_settling }
+		}
+		custom_trigger_tooltip = { tooltip = HSM_VER_FORCE_avian_lands_held_tt HSM_VER_FORCE_avian_lands = yes }
+		has_political_power > 74
+	} cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_avian_terms_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_avian_transition_tt
+		hidden_effect = { HSM_VER_FORCE_open_avian_terms = yes }
+	}
+}
+shared_focus = {
+	id = HSM_ERI_FORCE_avian_integration icon = GFX_HSM_VER_ART_HSM_ERI_FORCE_avian_integration
+	prerequisite = { focus = HSM_ERI_FORCE_avian_articles }
+	x = 46 y = 3 cost = 10
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_authority_tt HSM_VER_AVR_regional_authority = yes }
+		has_war = no
+		custom_trigger_tooltip = { tooltip = HSM_VER_UI_DOM_avian_war_settled_tt has_country_flag = HSM_VER_FORCE_AVI_war has_country_flag = HSM_VER_FORCE_AVI_defeated has_country_flag = HSM_VER_FORCE_AVI_peace }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_FORCE_avian_settling_complete_tt
+			has_country_flag = HSM_VER_FORCE_AVI_peace
+			NOT = { has_country_flag = HSM_VER_FORCE_AVI_settling }
+		}
+		custom_trigger_tooltip = { tooltip = HSM_VER_FORCE_avian_lands_held_tt HSM_VER_FORCE_avian_lands = yes }
+		custom_trigger_tooltip = { tooltip = HSM_VER_FORCE_avian_articles_ratified_tt has_country_flag = HSM_VER_FORCE_AVI_terms_chosen }
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_FORCE_avian_transition_complete_tt
+			has_country_flag = HSM_VER_FORCE_AVI_terms_chosen
+			NOT = { has_country_flag = HSM_VER_FORCE_AVI_transition }
+		}
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_FORCE_avian_current_consent_tt
+			OR = {
+				AVI = { exists = no }
+				AND = { tag = ERI AVI = { has_country_flag = HSM_VER_FORCE_AVI_consent_ERI } }
+				AND = { tag = EYR AVI = { has_country_flag = HSM_VER_FORCE_AVI_consent_EYR } }
+			}
+		}
+		custom_trigger_tooltip = { tooltip = HSM_VER_FORCE_avian_not_integrated_tt NOT = { has_country_flag = HSM_VER_FORCE_AVI_integrated } }
+	} cancel_if_invalid = yes
+	completion_reward = {
+		custom_effect_tooltip = HSM_VER_UI_DOM_avian_integration_tt
+		custom_effect_tooltip = HSM_VER_UI_DOM_avian_spirit_tt
+		if = {
+			limit = {
+				hidden_trigger = { has_country_flag = HSM_VER_FORCE_AVI_terms_chosen has_country_flag = HSM_VER_FORCE_AVI_charter }
+			}
+			custom_effect_tooltip = HSM_VER_UI_DOM_avian_charter_bonuses_tt
+		}
+		else_if = {
+			limit = {
+				hidden_trigger = { has_country_flag = HSM_VER_FORCE_AVI_terms_chosen NOT = { has_country_flag = HSM_VER_FORCE_AVI_charter } }
+			}
+			custom_effect_tooltip = HSM_VER_UI_DOM_avian_commission_bonuses_tt
+		}
+		hidden_effect = { HSM_VER_FORCE_integrate_avian = yes }
+	}
+}

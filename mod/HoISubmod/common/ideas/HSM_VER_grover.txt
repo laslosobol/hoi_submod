@@ -1,0 +1,40 @@
+ideas = {
+	country = {
+		HSM_VER_GRO_guardianship = {
+			picture = HSM_VER_ART_HSM_VER_GRO_guardianship allowed = { OR = { original_tag = ERI original_tag = EYR } } removal_cost = -1
+			cancel = { OR = { NOT = { HSM_VER_GRO_regency_live = yes } NOT = { HSM_VER_GRO_local_minor = yes } } }
+			modifier = { stability_factor = 0.08 political_power_gain = -0.15 industry_repair_factor = 0.20 }
+		}
+		HSM_VER_GRO_transition = {
+			picture = HSM_VER_ART_HSM_VER_GRO_transition allowed = { OR = { original_tag = ERI original_tag = EYR } } removal_cost = -1
+			cancel = { NOT = { HSM_VER_GRO_regency_live = yes } }
+			modifier = { stability_factor = 0.05 industry_repair_factor = 0.20 }
+		}
+		HSM_VER_GRO_common_market = {
+			picture = HSM_VER_ART_HSM_VER_GRO_common_market allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = GRI } } removal_cost = -1
+			cancel = { NOT = { HSM_VER_GRO_partnership = yes } }
+			modifier = { production_speed_industrial_complex_factor = 0.10 production_factory_efficiency_gain_factor = 0.10 research_speed_factor = 0.05 }
+		}
+		HSM_VER_GRO_joint_defence = {
+			picture = HSM_VER_ART_HSM_VER_GRO_joint_defence allowed = { OR = { original_tag = ERI original_tag = EYR original_tag = GRI } } removal_cost = -1
+			cancel = { NOT = { HSM_VER_GRO_partnership = yes } }
+			modifier = { supply_consumption_factor = -0.10 planning_speed = 0.10 }
+		}
+		HSM_VER_GRO_open_court_legacy = {
+			picture = HSM_VER_ART_HSM_VER_GRO_open_court_legacy allowed = { original_tag = GRI } removal_cost = -1
+			modifier = { stability_factor = 0.08 research_speed_factor = 0.05 }
+		}
+		HSM_VER_GRO_managed_court_legacy = {
+			picture = HSM_VER_ART_HSM_VER_GRO_managed_court_legacy allowed = { original_tag = GRI } removal_cost = -1
+			modifier = { political_power_factor = 0.15 research_speed_factor = -0.05 }
+		}
+		HSM_VER_GRO_rule_of_law = {
+			picture = HSM_VER_ART_HSM_VER_GRO_rule_of_law allowed = { original_tag = GRI } removal_cost = -1
+			modifier = { stability_factor = 0.05 production_factory_efficiency_gain_factor = 0.15 }
+		}
+		HSM_VER_GRO_patrons_legacy = {
+			picture = HSM_VER_ART_HSM_VER_GRO_patrons_legacy allowed = { original_tag = GRI } removal_cost = -1
+			modifier = { army_org_factor = 0.10 stability_factor = -0.05 }
+		}
+	}
+}

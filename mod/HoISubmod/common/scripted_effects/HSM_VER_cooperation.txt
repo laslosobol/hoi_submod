@@ -1,0 +1,250 @@
+# A joint focus's originator may be a member. All costs and stage rewards remain on the president.
+HSM_VER_COOP_complete_customs_union = {
+	if = { limit = { HSM_VER_COOP_member_of_ERI = yes } ERI = { HSM_VER_UNI_establish_customs = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_EYR = yes } EYR = { HSM_VER_UNI_establish_customs = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_AVI = yes } AVI = { HSM_VER_UNI_establish_customs = yes } }
+	HSM_VER_COOP_sync_history = yes
+}
+HSM_VER_COOP_complete_common_works = {
+	if = { limit = { HSM_VER_COOP_member_of_ERI = yes } ERI = { HSM_VER_UNI_build_common_works = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_EYR = yes } EYR = { HSM_VER_UNI_build_common_works = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_AVI = yes } AVI = { HSM_VER_UNI_build_common_works = yes } }
+	HSM_VER_COOP_sync_history = yes
+}
+HSM_VER_COOP_complete_common_administration = {
+	if = { limit = { HSM_VER_COOP_member_of_ERI = yes } ERI = { HSM_VER_UNI_establish_administration = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_EYR = yes } EYR = { HSM_VER_UNI_establish_administration = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_AVI = yes } AVI = { HSM_VER_UNI_establish_administration = yes } }
+	HSM_VER_COOP_sync_history = yes
+}
+HSM_VER_COOP_complete_unified_command = {
+	if = { limit = { HSM_VER_COOP_member_of_ERI = yes } ERI = { HSM_VER_UNI_establish_command = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_EYR = yes } EYR = { HSM_VER_UNI_establish_command = yes } }
+	if = { limit = { HSM_VER_COOP_member_of_AVI = yes } AVI = { HSM_VER_UNI_establish_command = yes } }
+	HSM_VER_COOP_sync_history = yes
+}
+# History-only completion repairs old saves and late accepted members without replaying rewards.
+HSM_VER_COOP_sync_history = {
+	HSM_VER_COOP_release_shared_history = yes
+	ERI = {
+		if = {
+			limit = { HSM_VER_UNI_operational = yes }
+			ERI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_ERI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = ERI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_ERI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = ERI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_ERI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = ERI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { ERI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+		}
+	}
+	EYR = {
+		if = {
+			limit = { HSM_VER_UNI_operational = yes }
+			ERI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_EYR = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = EYR } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_EYR = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = EYR } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_EYR = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = EYR } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { EYR = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+		}
+	}
+	AVI = {
+		if = {
+			limit = { HSM_VER_UNI_operational = yes }
+			ERI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_AVI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = AVI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			EYR = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_AVI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = AVI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+			AVI = {
+				if = {
+					limit = { HSM_VER_COOP_member_of_AVI = yes }
+					if = {
+						limit = { NOT = { has_completed_focus = HSM_VER_UNI_convention } }
+						if = { limit = { NOT = { tag = AVI } } set_country_flag = HSM_VER_COOP_shared_history }
+						unlock_national_focus = HSM_VER_UNI_convention
+					}
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_customs } NOT = { has_completed_focus = HSM_VER_UNI_customs_union } } unlock_national_focus = HSM_VER_UNI_customs_union }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_works } NOT = { has_completed_focus = HSM_VER_UNI_common_works } } unlock_national_focus = HSM_VER_UNI_common_works }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_administration } NOT = { has_completed_focus = HSM_VER_UNI_common_administration } } unlock_national_focus = HSM_VER_UNI_common_administration }
+					if = { limit = { AVI = { has_country_flag = HSM_VER_UNI_command } NOT = { has_completed_focus = HSM_VER_UNI_unified_command } } unlock_national_focus = HSM_VER_UNI_unified_command }
+				}
+			}
+		}
+	}
+}
+# The resolver writes only an uncommitted AI's existing route flag; human choices are never manufactured.
+# Shared completion records are not an application for the next vacant presidency.
+HSM_VER_COOP_release_shared_history = {
+	ERI = {
+		if = {
+			limit = { exists = yes has_country_flag = HSM_VER_COOP_shared_history NOT = { has_country_flag = HSM_VER_UNI_leader has_country_flag = HSM_VER_UNI_founded HSM_VER_COOP_has_live_membership = yes } }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_convention }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_customs_union }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_works }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_administration }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_unified_command }
+			clr_country_flag = HSM_VER_COOP_shared_history
+		}
+	}
+	EYR = {
+		if = {
+			limit = { exists = yes has_country_flag = HSM_VER_COOP_shared_history NOT = { has_country_flag = HSM_VER_UNI_leader has_country_flag = HSM_VER_UNI_founded HSM_VER_COOP_has_live_membership = yes } }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_convention }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_customs_union }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_works }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_administration }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_unified_command }
+			clr_country_flag = HSM_VER_COOP_shared_history
+		}
+	}
+	AVI = {
+		if = {
+			limit = { exists = yes has_country_flag = HSM_VER_COOP_shared_history NOT = { has_country_flag = HSM_VER_UNI_leader has_country_flag = HSM_VER_UNI_founded HSM_VER_COOP_has_live_membership = yes } }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_convention }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_customs_union }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_works }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_common_administration }
+			uncomplete_national_focus = { focus = HSM_VER_UNI_unified_command }
+			clr_country_flag = HSM_VER_COOP_shared_history
+		}
+	}
+}
+HSM_VER_COOP_coordinate_routes = {
+	ERI = {
+		if = {
+			limit = {
+				exists = yes is_ai = yes is_subject = no
+				HSM_VER_UNI_government = yes
+				NOT = { HSM_VER_COOP_military_choice = yes HSM_VER_COOP_diplomatic_choice = yes }
+			}
+			if = {
+				limit = { EYR = { exists = yes HSM_VER_COOP_military_choice = yes } }
+				set_country_flag = HSM_VER_military_route
+			}
+			else_if = {
+				limit = {
+					HSM_VER_diplomatic_routes_open = yes
+					EYR = { exists = yes is_subject = no HSM_VER_UNI_government = yes NOT = { HSM_VER_COOP_military_choice = yes } OR = { is_ai = yes HSM_VER_COOP_diplomatic_choice = yes } }
+				}
+				set_country_flag = HSM_VER_diplomatic_route
+			}
+		}
+	}
+	EYR = {
+		if = {
+			limit = {
+				exists = yes is_ai = yes is_subject = no
+				HSM_VER_UNI_government = yes
+				NOT = { HSM_VER_COOP_military_choice = yes HSM_VER_COOP_diplomatic_choice = yes }
+			}
+			if = {
+				limit = { ERI = { exists = yes HSM_VER_COOP_military_choice = yes } }
+				set_country_flag = HSM_VER_military_route
+			}
+			else_if = {
+				limit = {
+					HSM_VER_diplomatic_routes_open = yes
+					ERI = { exists = yes is_subject = no HSM_VER_UNI_government = yes NOT = { HSM_VER_COOP_military_choice = yes } OR = { is_ai = yes HSM_VER_COOP_diplomatic_choice = yes } }
+				}
+				set_country_flag = HSM_VER_diplomatic_route
+			}
+		}
+	}
+}
+

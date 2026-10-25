@@ -1,0 +1,147 @@
+[
+  {
+    "id": "AVI_Kriegsamt",
+    "target": "AVI_Kriegsamt",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_Kriegsamt.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_Kriegsamt.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A mobilisation alarm mounted above a war-office planning wheel and a reserve kit rack. Material palette only (do not add objects mentioned in this palette): Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_Wirtschaftsministerium",
+    "target": "AVI_Wirtschaftsministerium",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_Wirtschaftsministerium-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_Wirtschaftsministerium.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A ministry allocation lever directing ore into a factory conveyor behind an export stop gate. Material palette only (do not add objects mentioned in this palette): Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "edit_prompt": "Remove the foreground safe, all coins, books and papers. Keep ONLY the lever, ore conveyor, factory silhouette and striped stop barrier. Preserve painted style, existing material colors and transparent exterior. No additions.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_Evidenzbureau",
+    "target": "AVI_Evidenzbureau",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_Evidenzbureau.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_Evidenzbureau.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: An innocuous registry drawer opened to reveal a hidden listening receiver beneath its filing grid. Material palette only (do not add objects mentioned in this palette): Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_Evidenzbureau_lar",
+    "target": "AVI_Evidenzbureau_lar",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_Evidenzbureau_lar.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_Evidenzbureau_lar.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A registry card cabinet with a concealed cipher drum and a small surveillance aperture. Material palette only (do not add objects mentioned in this palette): Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_foundation_lar",
+    "target": "AVI_foundation_lar",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_foundation_lar.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_foundation_lar.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A shielded observation console connected to a sealed containment vessel and a cipher relay. Material palette only (do not add objects mentioned in this palette): Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_found_hq",
+    "target": "AVI_found_hq",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_found_hq.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_found_hq.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A central facility console linking a laboratory instrument to a special-task equipment locker. Material palette only (do not add objects mentioned in this palette): Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_aviation",
+    "target": "AVI_aviation",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_aviation-review-v3.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_aviation.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Precise object edit: change ONLY every glass pane of the aircraft cockpit canopy. Replace all existing interior detail behind those panes with flat opaque desaturated slate-blue glass and one broad pale reflection streak. The glass must be COMPLETELY OPAQUE, hiding the whole interior. Remove every brown/tan shape, seat-like dark silhouette and face-like mark within the cockpit. The metal canopy frame stays unchanged. Preserve the entire plane, cloud, stopwatch, sight, all other colors, composition and transparency. This is a miniature aircraft game icon with an opaque glazed cockpit, no occupants visible.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: readable silhouette, appropriate material palette, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Exact subject objects: A fighter banking through a broken cloud beside a flight-training stopwatch and a ground-support sight. Material palette only (do not add objects mentioned in this palette): Satin aluminium, muted olive fabric and charcoal mechanisms; no invented aircraft roundels. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments only when requested by subject. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Precise object edit: change ONLY every glass pane of the aircraft cockpit canopy. Replace all existing interior detail behind those panes with flat opaque desaturated slate-blue glass and one broad pale reflection streak. The glass must be COMPLETELY OPAQUE, hiding the whole interior. Remove every brown/tan shape, seat-like dark silhouette and face-like mark within the cockpit. The metal canopy frame stays unchanged. Preserve the entire plane, cloud, stopwatch, sight, all other colors, composition and transparency. This is a miniature aircraft game icon with an opaque glazed cockpit, no occupants visible.",
+      "previous_source": "art/verenia/AVI_aviation.png",
+      "source_sha256": "97a78360e39baf7a507f76635c482ca113f33a64646c5ea12af41d32b8eaed47",
+      "backup": "art/verenia/final-review/replaced/20261025T115123Z-08fe05a9/AVI_aviation",
+      "runtime_verified": false
+    }
+  }
+]

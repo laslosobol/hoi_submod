@@ -1,0 +1,193 @@
+[
+  {
+    "id": "reclaim_griffonstone",
+    "target": "reclaim_griffonstone",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reclaim_griffonstone.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reclaim_griffonstone.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A siege ladder leaning toward a ruined ancestral stone citadel, marking a claim on Griffonstone.  Palette: Cool aggregate grey and turf green against dark iron; rubble remains stone, not gilded. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reclaim_flowena",
+    "target": "reclaim_flowena",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reclaim_flowena.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reclaim_flowena.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A fortified bank vault with a campaign sword across its threshold, the claim on Flowena.  Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reclaim_pomovarra",
+    "target": "reclaim_pomovarra",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reclaim_pomovarra.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reclaim_pomovarra.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A small walled settlement approached by a military route arrow, the claim on Pomovarra.  Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reclaim_adelart",
+    "target": "reclaim_adelart",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reclaim_adelart.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reclaim_adelart.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A woodland roadblock dismantled beside confiscated weapons, the campaign against Adelart's bandits.  Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "form_the_archduchy",
+    "target": "form_the_archduchy",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/form_the_archduchy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_form_the_archduchy.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An archducal administrative seat linking several district gates by roads; no fabricated coronet.  Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "integrate_copperhill",
+    "target": "integrate_copperhill",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/integrate_copperhill.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_integrate_copperhill.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A Copperhill civic gate opened beside a service key and a repaired street lamp.  Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reform_the_kingdom_of_griffonstone",
+    "target": "reform_the_kingdom_of_griffonstone",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reform_the_kingdom_of_griffonstone.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reform_the_kingdom_of_griffonstone.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A restored ancestral stone hall with a newly repaired throne dais; no invented Griffonstone heraldry.  Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "a_zypressen_on_the_imperial_throne",
+    "target": "a_zypressen_on_the_imperial_throne",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/a_zypressen_on_the_imperial_throne.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_a_zypressen_on_the_imperial_throne.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A military sword resting across the vacant imperial throne, a contested Zypressen claim rather than Grover's regalia. Creates a war goal; the throne is an objective, not an accomplished imperial coronation. Do not borrow Grover's personal regalia. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "foundation_allowed",
+    "target": "foundation_allowed",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/foundation_allowed-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_foundation_allowed.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A guarded facility key laid beside a laboratory case, admitting the Foundation without inventing its insignia. Keep the Foundation visually anonymous. No invented containment-agency emblem, named anomaly, or imported franchise logo. Palette: Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "edit_prompt": "Keep the same laboratory case with inert stone sample and key composition, transparency and pale enamel/grey steel palette, but change the equipment into authentic 1930s mechanical laboratory apparatus: simple riveted steel glass specimen box, ordinary round-loop mechanical warded key, no luminous strips, futuristic panels, electronics or advanced materials. No symbols or text.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "establish_secure_facilities",
+    "target": "establish_secure_facilities",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/establish_secure_facilities.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_establish_secure_facilities.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A reinforced laboratory door with two locking bars and a shielded observation window.  Palette: Pale laboratory enamel and graphite shielding; small copper contacts, no agency insignia. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. All equipment unmarked. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. No invented heraldry/regalia; laboratory case revised to period mechanical materials. Runtime pending.",
+    "runtime_verified": false
+  }
+]

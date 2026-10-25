@@ -1,0 +1,196 @@
+[
+  {
+    "id": "local_dialects",
+    "target": "local_dialects",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/local_dialects-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_local_dialects.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Local Dialects. Composition: Several small dialect notebooks fanned around a recording horn, each with distinct geometric cover marks.. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "edit_prompt": "Replace all cover illustrations on the four notebooks with distinct simple geometric sound-wave patterns: concentric arcs, a sine wave, pairs of circles and zigzag wave. Remove human lips and ear entirely. Keep recording horn, book colors, composition and transparent exterior unchanged.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "imperial_dialect",
+    "target": "imperial_dialect",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/imperial_dialect-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_imperial_dialect.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Codify the Imperial Dialect. Composition: A standard school reader beside aligned classroom slates, a displaced alternative textbook closed below.. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "edit_prompt": "Replace only the Earth globe/orbit diagram on the open right page with a simple illustrated leaf cross-section. Replace the triangle-circle chalk symbol on the upper slate with a rectangle divided into four equal squares. No maps or planets. Preserve other books, plant lesson, material colors and transparency.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "adopt_imperial_drill",
+    "target": "adopt_imperial_drill",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/adopt_imperial_drill.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_adopt_imperial_drill.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Adopt Imperial Drill. Composition: An offensive drill sand table with forward-moving formation blocks and an instructor's baton.. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "adopt_aquelian_drill",
+    "target": "adopt_aquelian_drill",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/adopt_aquelian_drill-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_adopt_aquelian_drill.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Adopt Aquileian Drill. Composition: An orderly regiment layout on a drill board beside a metronome and aligned equipment racks.. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "edit_prompt": "Replace every human silhouette on the large drill board and the book cover with simple rectangular military unit blocks with an X inside. Preserve their rows and arrows. Keep metronome, equipment racks, materials, composition and transparency unchanged. No people.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "avian_welfare_act",
+    "target": "avian_welfare_act",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/avian_welfare_act.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_avian_welfare_act.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Avian Welfare Act. Composition: A welfare basket of bread and medicine under an opened public-service window.. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "agrarian_reform",
+    "target": "agrarian_reform",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/agrarian_reform.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_agrarian_reform.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Legislate Agrarian Reform. Composition: A repaired plough beside surveyed field boundaries and a seed sack.. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "urbanisation_effort",
+    "target": "urbanisation_effort",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/urbanisation_effort-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_urbanisation_effort.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Implement Urbanisation Policies. Composition: A farm cart approaching newly built workers' housing and a factory chimney.. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "edit_prompt": "Remove the horse and its harness entirely. Keep the cart as an unattended farm cart with a plain wooden drawbar, standing on the road before the workers' houses. Preserve buildings, cart, grain, palette and transparency. No animals or people.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "every_village_a_manufactory",
+    "target": "every_village_a_manufactory",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/every_village_a_manufactory.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_every_village_a_manufactory.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Every Village a Manufactory. Composition: A village millhouse fitted with a small belt-driven machine visible through its open door.. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "aviaire_alloys",
+    "target": "aviaire_alloys",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/aviaire_alloys.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_aviaire_alloys.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Aviaire Alloys. Composition: A glowing alloy crucible pouring into an ingot mould beside mineral samples.. Palette: Soot-dark iron, silver cut metal and rusty pipework; amber heat only where the brief explicitly has glowing metal.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "agricultural_mechanisation",
+    "target": "agricultural_mechanisation",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/agricultural_mechanisation.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_agricultural_mechanisation.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon for Agricultural Mechanisation. Composition: A tractor wheel dominating a furrowed field, an old hoe laid aside.. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden.. Bold simple silhouette at99x86, maximum two subordinate motifs. Transparent exterior. No extra objects, gold outlines, ornamental frames, national flags, heraldry, crowns, lilies, human hands. Books contain illustrated lessons or closed covers, not empty pages or pseudo-writing. No invented geographical outlines; generic diagrams only. Natural materials.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Four targeted lore repairs remove human silhouettes/anatomy, Earth globe and draught horse. Category palettes preserved; runtime pending.",
+    "runtime_verified": false
+  }
+]

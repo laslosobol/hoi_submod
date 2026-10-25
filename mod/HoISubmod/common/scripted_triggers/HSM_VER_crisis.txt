@@ -1,0 +1,153 @@
+HSM_VER_CR_house = { OR = { tag = ERI tag = EYR } }
+HSM_VER_CR_avian_available = {
+	AVI = { exists = yes is_subject = no has_capitulated = no }
+}
+HSM_VER_CR_emergency_context = {
+	HSM_VER_CR_house = yes
+	exists = yes
+	has_capitulated = no
+	OR = { is_subject = no is_subject_of = AVI }
+	NOT = { has_war_with = AVI }
+	HSM_VER_CR_avian_available = yes
+	AVI = { has_country_flag = HSM_VER_CR_emergency NOT = { has_country_flag = HSM_VER_CR_outcome } }
+}
+HSM_VER_CR_aid_choice_valid = {
+	HSM_VER_CR_emergency_context = yes
+	has_country_flag = HSM_VER_CR_aid_pending
+	NOT = { has_country_flag = HSM_VER_CR_aid_answered }
+}
+HSM_VER_CR_military_government = {
+	AVI = { has_completed_focus = fascists_win has_government = fascism has_country_leader = { character = AVI_trubach_von_zypressen ruling_only = yes } }
+}
+HSM_VER_CR_technocrat_government = {
+	AVI = { has_completed_focus = communists_win has_government = communism has_country_leader = { character = AVI_aaron_redtail ruling_only = yes } }
+}
+HSM_VER_CR_loyalist_government = {
+	AVI = {
+		has_completed_focus = loyalists_win
+		has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes }
+		OR = { has_government = neutrality has_government = democratic }
+		NOT = { has_completed_focus = fascists_win has_completed_focus = communists_win }
+	}
+}
+HSM_VER_CR_foundation_government = {
+	AVI = {
+		has_completed_focus = foundation_allowed
+		has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes }
+		NOT = { has_completed_focus = fascists_win has_completed_focus = communists_win has_completed_focus = loyalists_win }
+	}
+}
+HSM_VER_CR_neutral_government = {
+	AVI = {
+		has_completed_focus = pursue_true_neutrality
+		has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes }
+		NOT = { has_completed_focus = foundation_allowed has_completed_focus = fascists_win has_completed_focus = communists_win has_completed_focus = loyalists_win }
+	}
+}
+HSM_VER_CR_known_government = {
+	OR = {
+		HSM_VER_CR_military_government = yes
+		HSM_VER_CR_technocrat_government = yes
+		HSM_VER_CR_loyalist_government = yes
+		HSM_VER_CR_foundation_government = yes
+		HSM_VER_CR_neutral_government = yes
+	}
+}
+HSM_VER_CR_hostile_government = {
+	OR = { HSM_VER_CR_military_government = yes HSM_VER_CR_technocrat_government = yes }
+}
+# The signature records a political route, not only a ruling ideology.
+HSM_VER_CR_same_government = {
+	OR = {
+		AND = { has_country_flag = HSM_VER_CR_mode_military HSM_VER_CR_military_government = yes }
+		AND = { has_country_flag = HSM_VER_CR_mode_technocrat HSM_VER_CR_technocrat_government = yes }
+		AND = { has_country_flag = HSM_VER_CR_mode_loyalist HSM_VER_CR_loyalist_government = yes }
+		AND = { has_country_flag = HSM_VER_CR_mode_foundation HSM_VER_CR_foundation_government = yes }
+		AND = { has_country_flag = HSM_VER_CR_mode_neutral HSM_VER_CR_neutral_government = yes }
+	}
+}
+HSM_VER_CR_contact_context = {
+	HSM_VER_CR_house = yes
+	exists = yes
+	is_subject = no
+	has_capitulated = no
+	has_war = no
+	HSM_VER_CR_avian_available = yes
+	AVI = { has_war = no NOT = { has_country_flag = HSM_VER_CR_emergency } }
+	HSM_VER_CR_known_government = yes
+}
+HSM_VER_CR_can_offer = {
+	HSM_VER_CR_contact_context = yes
+	NOT = { has_country_flag = HSM_VER_military_route }
+	has_political_power > 34
+	NOT = { has_country_flag = HSM_VER_CR_offer_pending has_country_flag = HSM_VER_CR_offer_retry has_country_flag = HSM_VER_CR_compact }
+}
+HSM_VER_CR_reply_valid = {
+	HSM_VER_CR_contact_context = yes
+	NOT = { has_country_flag = HSM_VER_military_route }
+	has_country_flag = HSM_VER_CR_offer_pending
+	HSM_VER_CR_same_government = yes
+}
+HSM_VER_CR_demand_valid = {
+	HSM_VER_CR_house = yes
+	exists = yes
+	is_subject = no
+	has_capitulated = no
+	has_country_flag = HSM_VER_CR_demand_pending
+	NOT = { has_war_with = AVI has_country_flag = HSM_VER_CR_demand_answered }
+	HSM_VER_CR_avian_available = yes
+	HSM_VER_CR_hostile_government = yes
+}
+HSM_VER_CR_can_submit = {
+	HSM_VER_CR_demand_valid = yes
+	has_war = no
+	AVI = { has_war = no }
+	OR = { is_in_faction = no AND = { is_in_faction_with = AVI is_faction_leader = no } }
+}
+HSM_VER_CR_compact_legal = {
+	HSM_VER_CR_house = yes
+	exists = yes
+	is_subject = no
+	AVI = { exists = yes is_subject = no }
+	NOT = { has_war_with = AVI }
+	has_country_flag = HSM_VER_CR_compact
+	HSM_VER_CR_same_government = yes
+}
+HSM_VER_CR_compact_operational = {
+	HSM_VER_CR_compact_legal = yes
+	has_capitulated = no
+	AVI = { has_capitulated = no }
+}
+# Retain bilateral Erie/Eyrie peace, but do not turn a new Avian regime or its
+# declared isolation into the old three-House council through a queued offer.
+HSM_VER_CR_union_government = {
+	AVI = {
+		NOT = {
+			has_completed_focus = pursue_true_neutrality
+			has_completed_focus = foundation_allowed
+			has_completed_focus = fascists_win
+			has_completed_focus = communists_win
+			has_completed_focus = loyalists_win
+			has_country_flag = HSM_VER_CR_emergency
+		}
+	}
+}
+HSM_VER_CR_integration_retry_valid = {
+	HSM_VER_CR_house = yes
+	exists = yes is_subject = no has_capitulated = no has_war = no
+	is_in_faction_with = AVI
+	NOT = { has_country_flag = HSM_VER_CR_integration_retry has_country_flag = HSM_VER_avian_vassalisation_accepted }
+	HSM_VER_CR_avian_available = yes
+	AVI = { has_completed_focus = full_integration has_war = no NOT = { has_completed_focus = HSM_AVI_three_separate_seals } }
+	HSM_VER_CR_union_government = yes
+}
+HSM_VER_CR_native_integration_context = {
+	AVI = { NOT = { has_completed_focus = HSM_AVI_three_separate_seals } }
+	HSM_VER_CR_house = yes
+	exists = yes is_subject = no has_capitulated = no
+	NOT = { has_war_with = AVI }
+	OR = { is_in_faction = no is_in_faction_with = AVI }
+	HSM_VER_CR_avian_available = yes
+	AVI = { has_completed_focus = full_integration }
+	HSM_VER_CR_union_government = yes
+}

@@ -1,0 +1,64 @@
+{
+  "reviewedAtUtc": "2026-10-25T11:41:32.9891493Z",
+  "reviewed": 5,
+  "clippingResolved": 5,
+  "visibleDefects": 0,
+  "flagReference": "art/verenia/references/EYR_neutrality.png",
+  "flagResult": "Eyrie blue field, gold bird left of gold disc, bird orientation/design visually preserved against reference and original. No added heraldic motifs.",
+  "method": "All five source PNGs actually opened using view_image detail=original. Inspection-only native contain/LANCZOS resamples checked on neutral grey, near-black and light backdrops.",
+  "alphaNote": "Three files (union_without_a_throne, avian_association, civilian_legacy) retain isolated alpha=1 edge residue; no alpha>=32 reaches the source boundary, no visible haze/halo on inspection composites. Crown_and_countries and overtures_eyrie outer boundaries are alpha=0. Some transparent margins remain narrow, but complete silhouettes are visible.",
+  "contact": "art/verenia/final-review/inspection-replacements-5/contact.png",
+  "writes": "Inspection artifacts and this report only; no game assets or manifests modified.",
+  "assets": [
+    {
+      "id": "HSM_VER_REG_a_union_without_a_throne",
+      "source": "art/verenia/HSM_VER_REG_a_union_without_a_throne-review-v2.png",
+      "sha256": "183e1328a9a61b07f7c3932633cac5f481cc0d2fc59cea0ab7d3811c4dc7f216",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "clippingResolved": true,
+      "visibleAlphaDefect": false,
+      "result": "pass"
+    },
+    {
+      "id": "HSM_EYR_avian_association",
+      "source": "art/verenia/HSM_EYR_avian_association-review-v2.png",
+      "sha256": "ba7a1341609f53ea9f50636a583c8d00f890e86894625f899963038858bad29f",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "clippingResolved": true,
+      "visibleAlphaDefect": false,
+      "result": "pass"
+    },
+    {
+      "id": "HSM_VER_IMP_civilian_legacy",
+      "source": "art/verenia/HSM_VER_IMP_civilian_legacy-review-v2.png",
+      "sha256": "aeb5de70233238d816b06131626a221a78b75269160537bcc4a0c5a979c1370f",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "clippingResolved": true,
+      "visibleAlphaDefect": false,
+      "result": "pass"
+    },
+    {
+      "id": "HSM_ZYP_crown_and_countries",
+      "source": "art/verenia/HSM_ZYP_crown_and_countries-review-v2.png",
+      "sha256": "4844277194b83a08f2e9cf046c294a17fd94e7810420eb470abd39e09a0a3f12",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "clippingResolved": true,
+      "visibleAlphaDefect": false,
+      "result": "pass"
+    },
+    {
+      "id": "overtures_eyrie",
+      "source": "art/verenia/overtures_eyrie-review-v2.png",
+      "sha256": "679844e4d630ff15f9c386285a3b22016357b118343b5aaa62fb1ec1f5a978e0",
+      "fullsizeInspected": true,
+      "nativeInspected": true,
+      "clippingResolved": true,
+      "visibleAlphaDefect": false,
+      "result": "pass"
+    }
+  ]
+}

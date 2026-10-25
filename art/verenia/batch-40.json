@@ -1,0 +1,194 @@
+[
+  {
+    "id": "HSM_VER_ID_ERI_translated_journals",
+    "target": "HSM_VER_ID_ERI_translated_journals",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_ERI_translated_journals.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_ERI_translated_journals.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A scientific journal with circuit diagrams passing through a translation desk toward a school instrument. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_ERI_district_teacher_colleges",
+    "target": "HSM_VER_ID_ERI_district_teacher_colleges",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_ERI_district_teacher_colleges.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_ERI_district_teacher_colleges.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A district teacher-college gate framing paired lesson slates and an electrical demonstration. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_ERI_local_histories",
+    "target": "HSM_VER_ID_ERI_local_histories",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_ERI_local_histories.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_ERI_local_histories.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A village song cylinder beside a family-record binding and an open library shelf. Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_ERI_public_scholarships",
+    "target": "HSM_VER_ID_ERI_public_scholarships",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_ERI_public_scholarships-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_ERI_public_scholarships.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A public examination slate unlocking a scholarship chest beside a laboratory stool. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the red wax seal: remove every embossed symbol, ornament and pseudo-letter from its face, leave smooth plain red wax within the existing raised rim. Keep all other objects, colors, dimensions, composition and transparent background unchanged.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_language_question",
+    "target": "HSM_VER_ID_EYR_language_question",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_language_question.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_language_question.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An imperial-style lesson book beside a pupil's unanswered arithmetic slate and a teacher's petition box. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_herzland_classrooms",
+    "target": "HSM_VER_ID_EYR_herzland_classrooms",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_herzland_classrooms.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_herzland_classrooms.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A Griffish primer connected by a bookmark to an older scholarly volume and parish school bell. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_two_living_languages",
+    "target": "HSM_VER_ID_EYR_two_living_languages",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_two_living_languages.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_two_living_languages.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Two differently bound language readers sharing one public-examination abacus. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_technical_lexicon",
+    "target": "HSM_VER_ID_EYR_technical_lexicon",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_technical_lexicon.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_technical_lexicon.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An illustrated machine-parts lexicon beside a matching real gear and measuring caliper. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_interpreters_college",
+    "target": "HSM_VER_ID_EYR_interpreters_college",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_interpreters_college.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_interpreters_college.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An interpreter's lectern holding paired technical diagrams beside a working electrical coil. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_ID_EYR_parish_archives",
+    "target": "HSM_VER_ID_EYR_parish_archives",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_identity.txt",
+    "source": "art/verenia/HSM_VER_ID_EYR_parish_archives-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_VER_ID_EYR_parish_archives.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A conserved parish register in an archival cradle beside a catalogue drawer and recording quill. Palette: Ivory paper and grey-green storage with restrained burgundy binding or cord; no blank papers or pseudo-text. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. All seals plain undecorated wax; medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional terrain diagrams without labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "edit_prompt": "Change only the red wax seal: remove every embossed symbol, ornament and pseudo-letter from its face, leave smooth plain red wax within the existing raised rim. Keep all other objects, colors, dimensions, composition and transparent background unchanged.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; invented seal motifs removed; differentiated education/science palettes.",
+    "runtime_verified": false
+  }
+]

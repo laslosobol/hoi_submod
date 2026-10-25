@@ -1,0 +1,204 @@
+[
+  {
+    "id": "HSM_VER_ducal_exception",
+    "target": "HSM_VER_ducal_exception",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_diplomacy.txt",
+    "source": "art/verenia/HSM_VER_ducal_exception.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_ducal_exception.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A ducal key forcing open a judicial clasp beside an unbalanced scale. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_FORCE_AVI_transition",
+    "target": "HSM_VER_FORCE_AVI_transition",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_VER_FORCE_AVI_transition.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_FORCE_AVI_transition.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An unfinished administrative bridge between two registers, with a clock and temporary barrier. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_FORCE_AVI_charter",
+    "target": "HSM_VER_FORCE_AVI_charter",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_VER_FORCE_AVI_charter.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_FORCE_AVI_charter.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A local courthouse key securing a reconstruction contract board with a workshop plan. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_VER_FORCE_AVI_commission",
+    "target": "HSM_VER_FORCE_AVI_commission",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_VER_FORCE_AVI_commission-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_FORCE_AVI_commission.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Preserve the order lever, steel workshop gear and tightly shut civic gate. Use matte charcoal iron, neutral grey stone and a subdued dark red lever grip under neutral diffuse light. Apply sparse silver wear only to exposed steel edges. No gold/orange rim, cobalt edge light, glow or enclosing outline. Keep a clean transparent exterior and the same compact silhouette. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "edit_prompt": "Edit this painted national spirit icon. Remove both colored floating arrows, all bar chart columns, and the gauge dial completely. Keep only the closed stone-and-iron gate, steel gear and red wooden lever. Preserve their painted style, shapes, material colors and transparent exterior. Do not add anything.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW national spirit icon. Subject: A commission's central order lever driving a workshop gear above a tense, closed civic gate. Palette and material constraints: Keep tense closed civic gate beneath central lever and workshop gear. Military/industrial gains accompany a stability loss. Order denotes command, not a new storage object; workshop does not authorize added masonry scenery. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the order lever, steel workshop gear and tightly shut civic gate. Use matte charcoal iron, neutral grey stone and a subdued dark red lever grip under neutral diffuse light. Apply sparse silver wear only to exposed steel edges. No gold/orange rim, cobalt edge light, glow or enclosing outline. Keep a clean transparent exterior and the same compact silhouette. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/HSM_VER_FORCE_AVI_commission-v2.png",
+      "source_sha256": "0c31831bdb9d081a771cb72d71111e992878de25cb3913f35a21031e82757665",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/HSM_VER_FORCE_AVI_commission",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_ERI_FORCE_war_obligations",
+    "target": "HSM_ERI_FORCE_war_obligations",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_war_obligations.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_war_obligations.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A supply wagon harness tied to a credit chest and mobilisation clock. Palette and material constraints: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_defeated_rights",
+    "target": "HSM_ERI_FORCE_defeated_rights",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_defeated_rights.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_defeated_rights.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A defeated district's undamaged property key protected beneath a legal arch. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_central_commissions",
+    "target": "HSM_ERI_FORCE_central_commissions",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_central_commissions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_central_commissions.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A ducal dispatch rod linking an arsenal and factory wheel above a closed petition hatch. Palette and material constraints: Retain closed petition hatch beneath dispatch rod and arsenal/factory machinery. Organisation/output gains coexist with lower stability; no triumphant crown, added regalia or unqualified welfare framing. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_chartered_union",
+    "target": "HSM_ERI_FORCE_chartered_union",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_chartered_union.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_chartered_union.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A ducal key restrained inside district charter clasps above an orderly supply crate. Palette and material constraints: Oxidised bronze mechanisms, ivory legal bindings and charcoal iron; no royal or national seal invention. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_ducal_administration",
+    "target": "HSM_ERI_FORCE_ducal_administration",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_ducal_administration.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_ducal_administration.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: One central administrative spindle driving factory and army gears, with a narrow civic-access slot. Palette and material constraints: Preserve narrow civic-access slot beneath central spindle/gears: political/output/military gains accompany a stability cost. Natural machine metal/paint, not an invented ducal emblem. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_FORCE_patron_claims",
+    "target": "HSM_ERI_FORCE_patron_claims",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_erie_force.txt",
+    "source": "art/verenia/HSM_ERI_FORCE_patron_claims.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_ERI_FORCE_patron_claims.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An estate key resting on a patron's campaign sword above a displaced claimant's closed case. Palette and material constraints: Keep displaced claimant case closed beneath estate key and patron sword. Attack benefit carries stability and political costs; no invented noble crest or impartial-justice framing. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed; clear silhouette, material palette and no invented heraldry. Commission v2 removes effect charts.",
+    "runtime_verified": false
+  }
+]

@@ -1,0 +1,153 @@
+[
+  {
+    "id": "vincent",
+    "source": "art/verenia/vincent-v2.png",
+    "target": "ERI_duke_vincent_erie",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/ERI/Vincet.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/ERI/ERI_vincet.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4 / Equestria at War country leader portrait. Reference is Duke Vincent Erie; faithfully preserve this griffon's tan plumage, long cream swept forelock, red eye, hooked yellow beak, red pillbox cap with cream band and pearl, red coat and grey fur collar. Polished painted detail, serious dignified expression, three-quarter head and upper chest, vertical 156:210 composition filling frame. Dark subdued plain interior backdrop instead of flag. No flags, no coat of arms, no invented heraldry, no crown, no human anatomy, no lettering, no frame. Keep his recognizable identity rather than making a generic eagle.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "iovinus",
+    "source": "art/verenia/iovinus-v3.png",
+    "target": "EYR_duke_iovinus_eyrie",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/EYR/Iovinus.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/EYR/EYR_iovinus.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4 / Equestria at War leader portrait of Duke Iovinus Eyrie from reference. Preserve brown head feathers, cream patches around ice-blue eye, determined angular face, hooked gold beak, chainmail collar and polished steel shoulder plate. Three-quarter facing left as reference. Vertical 156:210 head and shoulders portrait, painterly detailed but readable at small size. Plain charcoal interior background, no flags or crests or crown or additional insignia. No human anatomy, no lettering, no border. Maintain recognizable character, not photorealistic wildlife.",
+    "correction": "Precise object edit. Remove ONLY the yellow upward feather/crest behind the top of the head. It is an erroneous fragment of a background flag, NOT part of this character. Fill its former area with matching plain charcoal background, leave a normal rounded brown feathered head silhouette. Preserve all facial features, eyes, beak, chainmail, shoulder armour, framing, lighting and every other part unchanged. No replacement crest, insignia or flag.",
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "katrina",
+    "source": "art/verenia/katrina-v2.png",
+    "target": "AVI_lady_katrina_avian",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/AVI/Princess_Rivertail.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "Identity-preserving painted Equestria at War / HOI4 portrait of Lady Katrina Avian. Reference is identity and clothing: blue-grey face feathers, violet eyes, chestnut side-swept forelock, small golden beak, blue pillbox cap, sober blue high-collared coat with silver brooch. Keep her adult identity and restrained confident expression. Head and shoulders, vertical 156:210 aspect, painterly refined detail readable at game size. Plain dark interior backdrop, NO flag, NO heraldic symbols, no crown, no new jewelry, no human anatomy, no lettering or border.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "trubach",
+    "source": "art/verenia/trubach-v2.png",
+    "target": "AVI_trubach_von_zypressen",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/leaders/AVI/general_trubach.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/Advisors/AVI/idea_general_trubach.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted Equestria at War / HOI4 military advisor portrait, identity-preserving remake of Trubach von Zypressen from reference. Brown-russet feathered head, cream upturned forelock, green eyes with ivory eye patches, hooked orange beak, dark uniform with narrow gold collar piping, red cravat and oval gold tie pin. Self-possessed experienced officer, not angry caricature. Head and shoulders, vertical 156:210 composition filling frame. Dark desaturated olive headquarters background. Painterly crisp feather textures, visible brushwork. No heraldry, no medals invented, no flags, no crown, no human hands, no text or frame.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "corporation",
+    "source": "art/verenia/corporation.png",
+    "target": "avithreehousescorp",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/AVI/AVI_threehousescorp.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Single isolated painted HOI4 industrial-concern icon for Avian Three Houses Corporation, an industrial/electronics/synthetic-refining company. Transparent outside silhouette. Dominant bold steel cogwheel enclosing THREE distinct stepped refinery towers connected by a copper pipeline, tiny ivory ceramic electrical insulator at base. Antique brass edging, iron charcoal, ivory highlights, restrained cobalt enamel. Compact horizontal 99:86 composition with 7% transparent margin, readable at 64 pixels. No text, no letters, no numbers, no shield, no crown, no flags, no invented heraldry. This is a corporate mechanical emblem, not a state coat of arms. Period 1930s painted game inventory art, not flat vector or glossy 3D logo. One image only.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "union",
+    "source": "art/verenia/union-v2.png",
+    "target": "HSM_VER_UNI_constitutional_act",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_UNI_constitutional_act.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Painted HOI4 national focus badge for 'One Verenian State'. Image1 is EXACT approved Verenian flag heraldry reference; image2 is painted HOI4 icon style reference only, not subject. Main object: a single upright crimson shield carrying the exact ivory rampant winged griffon facing left from Image1, surmounted by exactly THREE small gold SIX-point stars arranged horizontally. Behind shield a modest emerald cloth with horizontal ivory stripe edged gold, echoing flag. Low antique-gold laurel sprigs cradle the shield, dark iron backing. Strong compact silhouette, 99:86 aspect, 8% clear margin, transparent outside. No crown, no crosses, no lilies, no new heraldic creatures, no extra stars, no text, no documents, no human anatomy. Reproduce canonical flag design, do not redesign coat of arms. Crisp painted aged-metal EaW focus icon, not glossy vector logo.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "regency",
+    "source": "art/verenia/regency.png",
+    "target": "HSM_VER_GRO_mandate",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_GRO_mandate.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Single painted HOI4 focus icon 'The Verenian Regency': TEMPORARY stewardship, not usurping Grover's throne. Main object is an elegant EMPTY high-backed dark wooden throne draped with a folded purple ceremonial cloak, with a large antique-gold administrative key resting across its seat. One small brass hourglass at foot symbolizes finite mandate. NO crown anywhere, NO fleur-de-lis, no crosses or coat of arms, no heraldry or flags, no text, no people. Narrow antique gold and dark iron badge surround, compact strong silhouette with 8% transparent margin, wide 99:86 format, readable at 99x86. Painted HOI4 aesthetic matching reference in material and rendering only. Transparent background outside object.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  },
+  {
+    "id": "spirit",
+    "source": "art/verenia/spirit.png",
+    "target": "HSM_VER_SP_united_verenia",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_SP_united_verenia.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "Single small national spirit icon for United Verenia, painted HOI4 game inventory art. The reference image is the exact canonical Verenian flag: emerald field, ivory horizontal band with narrow gold edging, crimson central shield with ivory left-facing rampant winged griffon, THREE GOLD SIX-POINT STARS above the shield, NO crown. Dominant object: a compact folded ceremonial banner reproducing that flag, standing over one small dark-steel cogwheel and an open ivory account ledger with visibly ruled rows and filled ink marks, not blank paper, not legible words. Banner is main shape; cog and ledger symbolize inherited factories and shared administration. NO extra flags, lilies, crosses, crowns or invented seals. Readable at 64x64, large simple shapes, centered square with 8% transparent margin. Transparent background outside badge, painterly antique-gold edging, no text labels, no 3D glossy logo.",
+    "correction": null,
+    "review": "Source and native-size export visually checked; runtime verification pending",
+    "runtime_verified": false
+  }
+]

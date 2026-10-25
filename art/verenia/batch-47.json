@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_EYR_DEV_practical_education",
+    "target": "HSM_EYR_DEV_practical_education",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_practical_education.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_practical_education.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An evening-study lamp illuminating a technical gear diagram and arithmetic counters. Palette and material constraints: Gear is drawn in the technical diagram, not an extra physical metal gear. Ivory diagram surface, meaningful charcoal marks and natural counters; the explicitly illuminating study lamp permits a small warm light. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_skilled_reserve",
+    "target": "HSM_EYR_DEV_skilled_reserve",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_skilled_reserve.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_skilled_reserve.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A reserve cartridge belt coiled around a workshop spanner. Palette and material constraints: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_field_engineers",
+    "target": "HSM_EYR_DEV_field_engineers",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_field_engineers.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_field_engineers.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A trench shovel cutting a clean defensive earthwork profile. Palette and material constraints: Defensive earthwork is cut soil and turf, not stone/concrete. Use muted umber soil, restrained sage turf and steel shovel with a natural wood handle. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_depot_service",
+    "target": "HSM_EYR_DEV_depot_service",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_depot_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_depot_service.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A depot shelf with matching cargo-count counters and a sealed ration case. Palette and material constraints: Textile applies only to ration wrapping or case lining, not food. Keep the sealed ration case closed as briefed; natural timber shelf, restrained storage finish and matching tally counters. Do not add exposed food merely to demonstrate its palette. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_observer_sections",
+    "target": "HSM_EYR_DEV_observer_sections",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_observer_sections.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_observer_sections.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A field telescope focused across a carefully sketched ridge. Palette and material constraints: Field means deployed telescope, not crops. Use dark metal optics and restrained grey-green glass. Ridge is carefully sketched: use drawing marks, not added vegetation or a physical landscape backdrop. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_DEV_coordinated_signals",
+    "target": "HSM_EYR_DEV_coordinated_signals",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_DEV_coordinated_signals.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_EYR_DEV_coordinated_signals.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An observer's binoculars connected by signal wire to a reserve alarm bell. Palette and material constraints: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_translation_office",
+    "target": "HSM_AVI_translation_office",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_translation_office.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_AVI_translation_office.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A translator's desk lens joining two equivalent technical diagrams, a small administrative coin tray below. Palette and material constraints: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_local_clerks",
+    "target": "HSM_AVI_local_clerks",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_local_clerks.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_AVI_local_clerks.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A local clerk's service window with familiar district keys and an indexed records drawer. Palette and material constraints: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_common_budget",
+    "target": "HSM_AVI_common_budget",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_common_budget.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_AVI_common_budget.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Separate contribution trays feeding a shared infrastructure abacus through individually closed assent clasps. Palette and material constraints: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_AVI_exceptional_levy",
+    "target": "HSM_AVI_exceptional_levy",
+    "kind": "spirit",
+    "file": "mod/HoISubmod/common/ideas/HSM_VER_avian.txt",
+    "source": "art/verenia/HSM_AVI_exceptional_levy.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_AVI_exceptional_levy.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A military supply hook lifting a civilian materials crate beyond a broken agreement lock. Palette and material constraints: Keep the broken agreement lock and civilian crate being lifted clearly visible. Military output benefit accompanies lower stability and greater consumer-goods burden; do not portray consensual or cost-free cooperation. Compact bold silhouette readable at only 64x64 pixels, one primary object and at most one supporting motif. Transparent exterior. 1930s technology, analog instruments only. Broad material colors and strong edges, very few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, writing. Plain smooth wax if any seal. No people, human anatomy, silhouettes, animals, Earth maps or globes. Documents use simple geometric diagrams. Keys plain oval. No extra objects.",
+    "approved": true,
+    "review": "Source and 64x64 preview reviewed; corrected contextual material guidance, distinct military/civic silhouettes and no invented heraldry.",
+    "runtime_verified": false
+  }
+]

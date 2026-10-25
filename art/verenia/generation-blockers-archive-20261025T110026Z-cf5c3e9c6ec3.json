@@ -1,0 +1,123 @@
+{
+  "HSM_ZYP_western_campaign": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_UNI_unified_command": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_IMP_technical_agreement": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_ERI_FORCE_promises_in_writing": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_FORCE_workshops_after_war": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "guns_for_gilda": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen rejected inanimate equipment replacement icon with moderation_blocked, output-stage violence category. No source/export produced or bound."
+  },
+  "localised_manufacturing_standards": {
+    "status": "pending_generator_rejection",
+    "attempts": 2,
+    "details": "Built-in imagegen rejected original mechanical gauge composition and a benign caliper/shaft/bolts alternative with moderation_blocked, output-stage violence category. No source/export produced or bound.",
+    "fallback": "CLI/API generation requires explicit user approval and OPENAI_API_KEY; not used."
+  },
+  "resistance_organisation": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage. No source or export produced; original game icon retained."
+  },
+  "improved_weapons": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage. No source or export produced; original game icon retained."
+  },
+  "local_tank_production": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage. No source or export produced; original game icon retained."
+  },
+  "the_strong_arm_of_the_revolution": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage. No source or export produced; original game icon retained."
+  },
+  "restructure_the_ministry_of_economics": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "foundation_military_effort": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "on_site_nuclear_devices": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_ERI_modern_infantry": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_repair_arsenals": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_EYR_infantry_drills": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "HSM_VER_GRO_joint_defence": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_gfg": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at input stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_das_raubvogel": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_long_arm_of_the_revolution_lar": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "AVI_foundation": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original game icon retained."
+  },
+  "generic_infantry_equipment_manufacturer": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage, violence category. No source or export produced; original company retained."
+  },
+  "tank_licenses": {
+    "status": "pending_generator_rejection",
+    "attempts": 1,
+    "details": "Built-in imagegen returned moderation_blocked at output stage. No source or export produced; original game icon retained."
+  }
+}

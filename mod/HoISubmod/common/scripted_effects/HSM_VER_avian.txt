@@ -1,0 +1,183 @@
+HSM_VER_AVI_begin_integration = {
+	if = {
+		limit = { HSM_VER_AVI_entry_available = yes }
+		AVI = {
+			# Completing the root also closes native integration retry decisions immediately.
+			complete_national_focus = HSM_AVI_three_separate_seals
+			HSM_VER_AVI_start_campaign = yes
+		}
+	}
+}
+HSM_VER_AVI_start_campaign = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_entry_available = yes AVI = { NOT = { has_country_flag = HSM_AVI_preserved_union } } } }
+		hidden_effect = { HSM_VER_enable_negotiated_campaign = yes }
+		AVI = {
+			hidden_effect = { set_country_flag = HSM_AVI_preserved_union }
+			hidden_effect = { set_country_flag = HSM_VER_congress_observer }
+			country_event = { id = hsm_ver_avian.1 days = 1 }
+		}
+		ERI = { hidden_effect = { clr_country_flag = HSM_VER_avian_vassalisation_accepted } }
+		EYR = { hidden_effect = { clr_country_flag = HSM_VER_avian_vassalisation_accepted } }
+		hidden_effect = { HSM_VER_offer_avian_charter = yes }
+	}
+}
+HSM_VER_AVI_finish_first_settlement = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_settlement_ready = yes NOT = { has_country_flag = HSM_AVI_settlement_completed } } }
+		hidden_effect = { set_country_flag = HSM_AVI_settlement_completed }
+		country_event = { id = hsm_ver_avian.50 days = 1 }
+	}
+}
+HSM_VER_AVI_sponsor_charter = {
+	if = {
+		limit = { HSM_VER_AVI_route_active = yes }
+		AVI = { set_country_flag = HSM_AVI_charter_requested }
+		HSM_VER_offer_charter = yes
+		HSM_VER_offer_avian_charter = yes
+	}
+}
+HSM_VER_AVI_reaffirm_membership = {
+	if = {
+		limit = {
+			HSM_VER_AVI_route_active = yes HSM_VER_charter_valid = yes
+			AVI = { NOT = { has_country_flag = HSM_VER_charter_signed has_country_flag = HSM_VER_congress_observer has_country_flag = HSM_VER_avian_charter_pending has_country_flag = HSM_AVI_membership_retry } }
+		}
+		AVI = { set_country_flag = HSM_VER_congress_observer set_country_flag = { flag = HSM_AVI_membership_retry value = 1 days = 90 } }
+		HSM_VER_offer_avian_charter = yes
+	}
+}
+# Runs in each invited House's scope; state and consent never depend on FROM.
+HSM_VER_AVI_offer_budget_to_house = {
+	if = {
+		limit = {
+			HSM_VER_AVI_three_party_charter = yes
+			AVI = { has_country_flag = HSM_AVI_budget_prepared }
+			OR = { tag = ERI tag = EYR }
+			NOT = { has_country_flag = HSM_AVI_budget_signed has_country_flag = HSM_AVI_budget_pending has_country_flag = HSM_AVI_budget_retry }
+		}
+		set_country_flag = { flag = HSM_AVI_budget_pending value = 1 days = 45 }
+		clr_country_flag = HSM_AVI_budget_answered
+		set_country_flag = { flag = HSM_AVI_budget_retry value = 1 days = 90 }
+		country_event = { id = hsm_ver_avian.20 days = 1 }
+		country_event = { id = hsm_ver_avian.29 days = 30 }
+	}
+}
+HSM_VER_AVI_offer_budget = {
+	if = {
+		limit = { HSM_VER_AVI_three_party_charter = yes }
+		AVI = { set_country_flag = HSM_AVI_budget_prepared set_country_flag = HSM_AVI_budget_signed }
+		ERI = { HSM_VER_AVI_offer_budget_to_house = yes }
+		EYR = { HSM_VER_AVI_offer_budget_to_house = yes }
+	}
+}
+HSM_VER_AVI_accept_budget = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_budget_reply_valid = yes } }
+		add_political_power = -35
+		hidden_effect = {
+		clr_country_flag = HSM_AVI_budget_pending
+		set_country_flag = HSM_AVI_budget_answered
+		set_country_flag = HSM_AVI_budget_signed
+		HSM_VER_AVI_refresh_budget = yes
+		}
+		AVI = { hidden_effect = { HSM_VER_AVI_refresh_budget = yes } country_event = { id = hsm_ver_avian.21 days = 1 } }
+	}
+}
+HSM_VER_AVI_decline_budget = {
+	if = {
+		limit = { HSM_VER_AVI_budget_reply_valid = yes }
+		clr_country_flag = HSM_AVI_budget_pending
+		set_country_flag = HSM_AVI_budget_answered
+		AVI = { country_event = { id = hsm_ver_avian.21 days = 1 } }
+	}
+}
+HSM_VER_AVI_refresh_budget = {
+	if = {
+		limit = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } }
+		if = { limit = { HSM_VER_AVI_budget_in_force = yes NOT = { HSM_VER_SP_has_HSM_AVI_common_budget = yes } } HSM_VER_SP_add_HSM_AVI_common_budget = yes }
+		else_if = { limit = { NOT = { HSM_VER_AVI_budget_in_force = yes } } HSM_VER_SP_remove_HSM_AVI_common_budget = yes }
+	}
+}
+# If annexation prevented the deadline event from arriving, silence still expires.
+HSM_VER_AVI_reconcile_budget_answer = {
+	if = {
+		limit = {
+			AVI = { has_country_flag = HSM_AVI_budget_prepared has_country_flag = HSM_AVI_budget_signed }
+			OR = { tag = ERI tag = EYR }
+			NOT = { has_country_flag = HSM_AVI_budget_pending has_country_flag = HSM_AVI_budget_signed has_country_flag = HSM_AVI_budget_answered }
+		}
+		set_country_flag = HSM_AVI_budget_answered
+	}
+}
+HSM_VER_AVI_void_budget = {
+	ERI = { clr_country_flag = HSM_AVI_budget_pending clr_country_flag = HSM_AVI_budget_signed clr_country_flag = HSM_AVI_budget_answered if = { limit = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } } HSM_VER_SP_remove_HSM_AVI_common_budget = yes } }
+	EYR = { clr_country_flag = HSM_AVI_budget_pending clr_country_flag = HSM_AVI_budget_signed clr_country_flag = HSM_AVI_budget_answered if = { limit = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } } HSM_VER_SP_remove_HSM_AVI_common_budget = yes } }
+	AVI = { clr_country_flag = HSM_AVI_budget_signed if = { limit = { NOT = { has_country_flag = HSM_VER_UNI_founded has_country_flag = HSM_VER_UNI_committing } } HSM_VER_SP_remove_HSM_AVI_common_budget = yes } }
+}
+HSM_VER_AVI_queue_scenes = {
+	if = {
+		limit = { HSM_VER_AVI_route_active = yes }
+		AVI = {
+			if = {
+				limit = { has_completed_focus = HSM_AVI_two_legible_copies NOT = { has_country_flag = HSM_AVI_language_resolved has_country_flag = HSM_AVI_language_pending } }
+				set_country_flag = { flag = HSM_AVI_language_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_avian.2 days = 1 }
+			}
+			if = {
+				limit = { has_completed_focus = HSM_AVI_the_first_common_budget HSM_VER_AVI_three_party_charter = yes HSM_VER_AVI_budget_answers_complete = yes NOT = { has_country_flag = HSM_AVI_budget_reviewed has_country_flag = HSM_AVI_budget_scene_pending } }
+				set_country_flag = { flag = HSM_AVI_budget_scene_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_avian.10 days = 1 }
+			}
+			if = {
+				limit = { HSM_VER_AVI_levy_unresolved = yes NOT = { has_country_flag = HSM_AVI_levy_pending } }
+				set_country_flag = { flag = HSM_AVI_levy_pending value = 1 days = 30 }
+				country_event = { id = hsm_ver_avian.30 days = 1 }
+			}
+		}
+	}
+}
+HSM_VER_AVI_withdraw_levy = {
+	if = {
+		limit = { HSM_VER_AVI_route_active = yes AVI = { has_country_flag = HSM_AVI_levy_exception } }
+		AVI = {
+			clr_country_flag = HSM_AVI_levy_exception
+			set_country_flag = HSM_AVI_levy_settled
+			HSM_VER_SP_remove_HSM_AVI_exceptional_levy = yes
+			country_event = { id = hsm_ver_avian.32 days = 1 }
+		}
+		HSM_VER_reconcile_charter_suspension = yes
+	}
+}
+HSM_VER_AVI_civilian_works = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_settlement_ready = yes NOT = { has_country_flag = HSM_AVI_works_awarded } } }
+		hidden_effect = { set_country_flag = HSM_AVI_works_awarded }
+		if = {
+			limit = { hidden_trigger = { any_owned_state = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+			random_owned_state = {
+				limit = { hidden_trigger = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_tech_bonus = { name = HSM_AVI_construction_bonus bonus = 1 uses = 1 category = construction_tech } }
+	}
+}
+HSM_VER_AVI_maintain_union = {
+	if = {
+		limit = {
+			AVI = { has_country_flag = HSM_AVI_budget_prepared }
+			OR = {
+				AVI = { OR = { has_war_with = ERI has_war_with = EYR has_completed_focus = communists_win has_completed_focus = loyalists_win has_completed_focus = fascists_win has_completed_focus = the_second_winterfest_ball } }
+				ERI = { has_war_with = EYR }
+				NOT = { AVI = { OR = { has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } HSM_VER_REG_successor_government = yes } } }
+			}
+		}
+		HSM_VER_AVI_void_budget = yes
+	}
+	ERI = { HSM_VER_AVI_reconcile_budget_answer = yes HSM_VER_AVI_refresh_budget = yes }
+	EYR = { HSM_VER_AVI_reconcile_budget_answer = yes HSM_VER_AVI_refresh_budget = yes }
+	AVI = { HSM_VER_AVI_refresh_budget = yes }
+	HSM_VER_AVI_queue_scenes = yes
+}

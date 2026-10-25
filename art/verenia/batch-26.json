@@ -1,0 +1,203 @@
+[
+  {
+    "id": "HSM_ERI_supply_service",
+    "target": "HSM_ERI_supply_service",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_supply_service.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_supply_service.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A loaded supply truck beneath a depot scheduling clock, counted cargo in its bed. Palette: Dull olive vehicle paint, dark rubber and exposed gunmetal; wear at edges only. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ERI_integrated_staff",
+    "target": "HSM_ERI_integrated_staff",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_ERI_development.txt",
+    "source": "art/verenia/HSM_ERI_integrated_staff-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ERI_integrated_staff.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Preserve the coordinated fictional planning board, infantry counter and supply-cart marker. Replace the medical bag's red-cross face with plain linen fabric; show one rolled bandage and a small muted-green bottle to communicate medical support. No replacement logo, pseudo-text or human silhouette. Transparent exterior, 99x86 readable. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: A planning board linking an infantry marker, medical bag and supply route through one coordinated diagram. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Preserve the coordinated fictional planning board, infantry counter and supply-cart marker. Replace the medical bag's red-cross face with plain linen fabric; show one rolled bandage and a small muted-green bottle to communicate medical support. No replacement logo, pseudo-text or human silhouette. Transparent exterior, 99x86 readable. All objects fully within canvas with generous transparent margin on all sides. Period painted HOI4/EaW game icon; preserve transparency.",
+      "previous_source": "art/verenia/HSM_ERI_integrated_staff.png",
+      "source_sha256": "254c0529b75d8d792ca14132c36cbe948a0ac922c4cf92fb7cb761a33aa1b103",
+      "backup": "art/verenia/final-review/replaced/20261025T120146Z-0e1648cb/HSM_ERI_integrated_staff",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_EYR_borderland_reconstruction",
+    "target": "HSM_EYR_borderland_reconstruction",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_borderland_reconstruction.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_borderland_reconstruction.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A borderland public building supported by repair scaffolding and a local crew's tool chest. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_fair_grain_markets",
+    "target": "HSM_EYR_fair_grain_markets",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_fair_grain_markets.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_fair_grain_markets.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A grain measure balanced against calibrated weights beneath a weatherproof storage roof. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_market_roads",
+    "target": "HSM_EYR_market_roads",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_market_roads.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_market_roads.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A harvest wagon crossing a drained all-weather bridge above a swollen stream. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_rural_processing",
+    "target": "HSM_EYR_rural_processing",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_rural_processing.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_rural_processing.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A millstone beside sealed produce jars and a packing crate. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_equipment_cooperatives",
+    "target": "HSM_EYR_equipment_cooperatives",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_equipment_cooperatives.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_equipment_cooperatives.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A shared tractor repair bench with pooled spare gears and a farm-tool rack. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_seasonal_work_schemes",
+    "target": "HSM_EYR_seasonal_work_schemes",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_seasonal_work_schemes.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_seasonal_work_schemes.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A seasonal calendar wheel connecting a harvest sickle to winter workshop tools. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_evening_classes",
+    "target": "HSM_EYR_evening_classes",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_evening_classes.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_evening_classes.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A night-school slate with arithmetic counters beneath a shaded evening lamp. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_practical_science",
+    "target": "HSM_EYR_practical_science",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_practical_science.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_practical_science.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A teaching circuit connected to a test bulb beside labelled-by-shape material samples. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Wagons are unhitched with no draught animals. Any map is a simple fictional road sketch without labels or known geography. No blank open documents; use closed bindings or relevant simple diagrams. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: agriculture straw/sage, field olive/steel, education bindings and laboratory material samples; no invented heraldry.",
+    "runtime_verified": false
+  }
+]

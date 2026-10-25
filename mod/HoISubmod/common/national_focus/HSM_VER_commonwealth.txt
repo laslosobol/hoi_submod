@@ -1,0 +1,281 @@
+# Post-unification domestic continuation. Inherits the existing common root.
+# Columns 21/24/27 below y9; native Avian applies the same +34 offset as UNI.
+shared_focus = {
+	id = HSM_VER_CW_first_budget
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_first_budget
+	x = 24 y = 10 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_UNI_settled_institutions }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		hidden_effect = { set_country_flag = HSM_VER_CW_budget_pending }
+		country_event = { id = hsm_ver_cw.1 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_citizens
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_citizens
+	x = 21 y = 11 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_first_budget }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		hidden_effect = { set_country_flag = HSM_VER_CW_citizens_pending }
+		country_event = { id = hsm_ver_cw.2 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_housing
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_housing
+	x = 21 y = 12 cost = 10
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_citizens }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+		HSM_VER_CW_citizens_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		decrease_poverty = yes
+		HSM_VER_SP_add_HSM_VER_CW_housing_service = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_clinics
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_clinics
+	x = 21 y = 13 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_housing }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		decrease_poverty = yes
+		add_tech_bonus = { name = HSM_VER_CW_clinical_training bonus = 1.0 uses = 1 category = hospital_tech }
+		country_event = { id = hsm_ver_cw.3 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_market_roads
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_market_roads
+	x = 24 y = 11 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_first_budget }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		every_owned_state = {
+			limit = { OR = { state = 401 state = 391 state = 470 } is_core_of = ROOT is_fully_controlled_by = ROOT infrastructure < 5 }
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+		add_tech_bonus = { name = HSM_VER_CW_public_works bonus = 0.5 uses = 1 category = construction_tech }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_machine_shops
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_machine_shops
+	x = 24 y = 12 cost = 10
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_market_roads }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_CW_civilian_space_tt
+			any_owned_state = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 1 include_locked = yes } }
+		}
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		random_owned_state = {
+			limit = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = industrial_complex size > 1 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		increase_society_development = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_standards
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_standards
+	x = 24 y = 13 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_machine_shops }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		HSM_VER_SP_add_HSM_VER_CW_interchangeable_parts = yes
+		add_tech_bonus = { name = HSM_VER_CW_precision_tools bonus = 1.0 uses = 1 category = industry }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_evening_classes
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_evening_classes
+	x = 27 y = 11 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_first_budget }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		decrease_illiteracy = yes
+		add_tech_bonus = { name = HSM_VER_CW_technical_training bonus = 0.5 uses = 1 category = electronics }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_institute
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_institute
+	x = 27 y = 13 cost = 10
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_evening_classes }
+	prerequisite = { focus = HSM_VER_CW_machine_shops }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		hidden_effect = { set_country_flag = big_science_base_unlocked set_country_flag = proper_science_base_unlocked }
+		increase_science_base = yes
+		if = { limit = { amount_research_slots < 5 } add_research_slot = 1 }
+		add_tech_bonus = { name = HSM_VER_CW_joint_research bonus = 0.5 uses = 2 category = electronics category = industry }
+		country_event = { id = hsm_ver_cw.4 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_common_service
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_common_service
+	x = 27 y = 14 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_institute }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		army_experience = 30
+		hidden_effect = { set_country_flag = HSM_VER_CW_service_pending }
+		country_event = { id = hsm_ver_cw.5 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_reserve_depots
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_reserve_depots
+	x = 24 y = 15 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_standards }
+	prerequisite = { focus = HSM_VER_CW_common_service }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+		HSM_VER_CW_service_agreed = yes
+		custom_trigger_tooltip = {
+			tooltip = HSM_VER_CW_military_space_tt
+			any_owned_state = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+		}
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		random_owned_state = {
+			limit = { is_core_of = ROOT is_fully_controlled_by = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+		add_tech_bonus = { name = HSM_VER_CW_reserve_supply bonus = 1.0 uses = 1 category = logistics_tech }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_public_accounts
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_public_accounts
+	x = 21 y = 15 cost = 7
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_clinics }
+	prerequisite = { focus = HSM_VER_CW_standards }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		HSM_VER_SP_add_HSM_VER_CW_accounts_office = yes
+		country_event = { id = hsm_ver_cw.6 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = HSM_VER_CW_ordinary_country
+	icon = GFX_HSM_VER_ART_HSM_VER_CW_ordinary_country
+	x = 24 y = 16 cost = 10
+	offset = { x = 34 y = 0 trigger = { tag = AVI } }
+	prerequisite = { focus = HSM_VER_CW_public_accounts }
+	prerequisite = { focus = HSM_VER_CW_reserve_depots }
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_VER_CW_ready_tt HSM_VER_CW_ready = yes }
+		HSM_VER_CW_budget_agreed = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = no
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		increase_society_development = yes
+		decrease_poverty = yes
+		hidden_effect = { set_country_flag = HSM_VER_CW_completed }
+		country_event = { id = hsm_ver_cw.7 days = 1 }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+}
+

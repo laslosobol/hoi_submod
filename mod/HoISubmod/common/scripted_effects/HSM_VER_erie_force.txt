@@ -1,0 +1,45 @@
+HSM_VER_ERI_FORCE_remove_settlement_spirits = {
+	HSM_VER_SP_remove_HSM_ERI_FORCE_defeated_rights = yes HSM_VER_SP_remove_HSM_ERI_FORCE_central_commissions = yes
+	HSM_VER_SP_remove_HSM_ERI_FORCE_chartered_union = yes HSM_VER_SP_remove_HSM_ERI_FORCE_ducal_administration = yes
+	HSM_VER_SP_remove_HSM_ERI_FORCE_patron_claims = yes HSM_VER_SP_remove_HSM_ERI_FORCE_equal_judgement = yes
+}
+HSM_VER_ERI_FORCE_maintain = {
+	if = {
+		limit = { has_completed_focus = HSM_ERI_FORCE_terms_for_the_defeated HSM_VER_FORCE_settlement_context = yes NOT = { has_country_flag = HSM_VER_FORCE_settlement_started } }
+		HSM_VER_FORCE_open_settlement = yes
+	}
+	if = {
+		limit = { HSM_VER_FORCE_can_prepare = yes NOT = { has_country_flag = HSM_VER_FORCE_settlement_started } }
+		if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_war_obligations = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_war_obligations = yes }
+	}
+	else = { HSM_VER_SP_remove_HSM_ERI_FORCE_war_obligations = yes }
+	if = {
+		limit = { HSM_VER_FORCE_can_prepare = yes }
+		if = { limit = { has_completed_focus = HSM_ERI_FORCE_the_price_of_victory NOT = { has_country_flag = HSM_ERI_FORCE_intro_seen has_country_flag = HSM_ERI_FORCE_intro_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_intro_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.1 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_ERI_FORCE_promises_in_writing NOT = { has_country_flag = HSM_ERI_FORCE_promises_seen has_country_flag = HSM_ERI_FORCE_promises_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_promises_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.2 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_ERI_FORCE_not_a_dowry NOT = { has_country_flag = HSM_ERI_FORCE_rosaline_seen has_country_flag = HSM_ERI_FORCE_rosaline_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_rosaline_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.3 days = 1 } }
+	}
+	if = {
+		limit = { HSM_VER_FORCE_settlement_active = yes }
+		if = { limit = { NOT = { has_country_flag = HSM_ERI_FORCE_terms_decided has_country_flag = HSM_ERI_FORCE_terms_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_terms_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.4 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_ERI_FORCE_the_first_petition NOT = { has_country_flag = HSM_ERI_FORCE_claim_decided has_country_flag = HSM_ERI_FORCE_claim_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_claim_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.5 days = 1 } }
+		if = { limit = { has_country_flag = HSM_ERI_FORCE_claim_decided NOT = { has_country_flag = HSM_ERI_FORCE_consequence_wait has_country_flag = HSM_ERI_FORCE_consequence_seen has_country_flag = HSM_ERI_FORCE_consequence_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_consequence_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.6 days = 1 } }
+		if = { limit = { OR = { has_country_flag = HSM_ERI_FORCE_bound_duke has_country_flag = HSM_ERI_FORCE_single_chancery } NOT = { has_country_flag = HSM_ERI_FORCE_order_seen has_country_flag = HSM_ERI_FORCE_order_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_order_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.7 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_ERI_FORCE_inheritance_without_feud NOT = { has_country_flag = HSM_ERI_FORCE_epilogue_seen has_country_flag = HSM_ERI_FORCE_epilogue_delivery } } set_country_flag = { flag = HSM_ERI_FORCE_epilogue_delivery value = 1 days = 30 } country_event = { id = hsm_ver_eri_force.8 days = 1 } }
+		if = {
+			limit = { has_country_flag = HSM_ERI_FORCE_bound_duke }
+			HSM_VER_SP_remove_HSM_ERI_FORCE_defeated_rights = yes HSM_VER_SP_remove_HSM_ERI_FORCE_central_commissions = yes HSM_VER_SP_remove_HSM_ERI_FORCE_ducal_administration = yes
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_chartered_union = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_chartered_union = yes }
+		}
+		else_if = {
+			limit = { has_country_flag = HSM_ERI_FORCE_single_chancery }
+			HSM_VER_SP_remove_HSM_ERI_FORCE_central_commissions = yes HSM_VER_SP_remove_HSM_ERI_FORCE_defeated_rights = yes HSM_VER_SP_remove_HSM_ERI_FORCE_chartered_union = yes
+			if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_ducal_administration = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_ducal_administration = yes }
+		}
+		else_if = { limit = { has_country_flag = HSM_ERI_FORCE_rights } HSM_VER_SP_remove_HSM_ERI_FORCE_central_commissions = yes if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_defeated_rights = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_defeated_rights = yes } }
+		else_if = { limit = { has_country_flag = HSM_ERI_FORCE_central } HSM_VER_SP_remove_HSM_ERI_FORCE_defeated_rights = yes if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_central_commissions = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_central_commissions = yes } }
+		if = { limit = { has_country_flag = HSM_ERI_FORCE_patron_award } HSM_VER_SP_remove_HSM_ERI_FORCE_equal_judgement = yes if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_patron_claims = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_patron_claims = yes } }
+		else_if = { limit = { has_country_flag = HSM_ERI_FORCE_court_upheld } HSM_VER_SP_remove_HSM_ERI_FORCE_patron_claims = yes if = { limit = { NOT = { HSM_VER_SP_has_HSM_ERI_FORCE_equal_judgement = yes } } HSM_VER_SP_add_HSM_ERI_FORCE_equal_judgement = yes } }
+	}
+	else = { HSM_VER_ERI_FORCE_remove_settlement_spirits = yes }
+}

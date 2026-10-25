@@ -1,0 +1,192 @@
+[
+  {
+    "id": "E_E_rivalry",
+    "target": "E_E_rivalry",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/E_E_rivalry.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_E_E_rivalry.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Two duelling swords locked across a cracked boundary stone, one grip ivory and the other cobalt. Material palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_econcoop",
+    "target": "AVI_econcoop",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_econcoop.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_econcoop.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Three different construction beams fitted into one load-bearing joint, with a mineral basket beneath. Material palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_studentexchange",
+    "target": "AVI_studentexchange",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_studentexchange.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_studentexchange.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A travelling school satchel opened to an illustrated geometry book, with two differently coloured destination tags. Material palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_scienceexchange",
+    "target": "AVI_scienceexchange",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_scienceexchange.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_scienceexchange.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A conference microscope between three delegate stools, with its instrument case left visibly unlocked. Material palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_relaxd_citizenship",
+    "target": "AVI_relaxd_citizenship",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_relaxd_citizenship.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_relaxd_citizenship.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: An open residence gate framing a family travel trunk and a newly lit home window. Material palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_common_markets",
+    "target": "AVI_common_markets",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_common_markets.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_common_markets.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A three-stall market enclosed by one outer tariff rail, its internal toll chains laid aside. Material palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_unified_intelligence_agency",
+    "target": "AVI_unified_intelligence_agency",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_unified_intelligence_agency.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_unified_intelligence_agency.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A listening headset over a three-line cable junction, a brass cipher wheel beneath. Material palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_unified_intelligence_agency_lar",
+    "target": "AVI_unified_intelligence_agency_lar",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_unified_intelligence_agency_lar.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_unified_intelligence_agency_lar.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A cipher-rotor machine fed by three separate signal leads, with a compact surveillance lens beside it. Material palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_annual_military_exercises",
+    "target": "AVI_annual_military_exercises",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_annual_military_exercises.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_annual_military_exercises.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: Three manoeuvre blocks converging around a sand-table bridge beside an exercise stopwatch. Material palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_agri_1",
+    "target": "AVI_agri_1",
+    "kind": "spirit",
+    "file": "EaW/common/ideas/zzz_AVI_ideas.txt",
+    "source": "art/verenia/AVI_agri_1.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_agri_1.tga",
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "prompt": "One painted HOI4/EaW national spirit icon. Subject: A stout grain bin with a carefully fitted lid and a single ripe sheaf at its base. Material palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Explicit subject colors take precedence. Compact bold silhouette readable at 64x64 pixels, one main object with at most two supports. Transparent exterior. 1930s analog instruments with cream dials and needles only. Broad material colors, strong edges, few tiny details. No golden frame. No invented heraldry, flags, crowns, lilies, insignia, logos, writing. Plain wax seals and oval keys only. No people, human anatomy, animals, Earth maps or globes. Documents carry simple geometric diagrams. No floating arrows, bonus charts, extra gauges or unrelated objects.",
+    "approved": true,
+    "review": "Source and native 64x64 reviewed: distinct silhouettes, period materials, ivory/cobalt rivalry grips, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

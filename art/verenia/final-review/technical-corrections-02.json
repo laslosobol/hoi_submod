@@ -1,0 +1,421 @@
+{
+  "transaction": "art\\verenia\\final-review\\replaced\\20261025T115123Z-08fe05a9\\receipt.json",
+  "status": "applied",
+  "checks": [
+    {
+      "tool": "Build-VereniaArt.py",
+      "manifest": "art/verenia/batch-52.json",
+      "exit_code": 0,
+      "output": "9 sources, 9 exports: verified"
+    },
+    {
+      "tool": "Bind-VereniaIcons.py",
+      "manifest": "art/verenia/batch-52.json",
+      "exit_code": 0,
+      "output": "9 approved, 0 skipped; 0 pending files"
+    },
+    {
+      "tool": "Build-VereniaArt.py",
+      "manifest": "art/verenia/batch-59.json",
+      "exit_code": 0,
+      "output": "10 sources, 10 exports: verified"
+    },
+    {
+      "tool": "Bind-VereniaIcons.py",
+      "manifest": "art/verenia/batch-59.json",
+      "exit_code": 0,
+      "output": "10 approved, 0 skipped; 0 pending files"
+    },
+    {
+      "tool": "Build-VereniaArt.py",
+      "manifest": "art/verenia/batch-60.json",
+      "exit_code": 0,
+      "output": "7 sources, 7 exports: verified"
+    },
+    {
+      "tool": "Bind-VereniaIcons.py",
+      "manifest": "art/verenia/batch-60.json",
+      "exit_code": 0,
+      "output": "7 approved, 0 skipped; 0 pending files"
+    }
+  ],
+  "records": [
+    {
+      "id": "HSM_VER_GRO_transition",
+      "source": "art/verenia/HSM_VER_GRO_transition-review-v2.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_HSM_VER_GRO_transition.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.30063,
+        "semi_transparent_fraction": 0.69853,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.00019,
+        "enclosed_transparent_fraction": 0.01102,
+        "alpha_bbox": [
+          0,
+          17,
+          1254,
+          1240
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.20605,
+        "semi_transparent_fraction": 0.72534,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.00813,
+        "enclosed_transparent_fraction": 0.00806,
+        "alpha_bbox": [
+          0,
+          0,
+          64,
+          64
+        ]
+      },
+      "heuristic_flags": []
+    },
+    {
+      "id": "AVI_urbanisation_effort",
+      "source": "art/verenia/AVI_urbanisation_effort-review-v2.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_urbanisation_effort.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.48277,
+        "semi_transparent_fraction": 0.51684,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.01336,
+        "enclosed_transparent_fraction": 0.01059,
+        "alpha_bbox": [
+          53,
+          25,
+          1202,
+          1224
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.40869,
+        "semi_transparent_fraction": 0.54248,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.04872,
+        "enclosed_transparent_fraction": 0.00586,
+        "alpha_bbox": [
+          3,
+          0,
+          61,
+          64
+        ]
+      },
+      "heuristic_flags": []
+    },
+    {
+      "id": "AVI_aviation",
+      "source": "art/verenia/AVI_aviation-review-v3.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_aviation.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.33694,
+        "semi_transparent_fraction": 0.66286,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.0,
+        "enclosed_transparent_fraction": 0.0,
+        "alpha_bbox": [
+          27,
+          19,
+          1244,
+          1222
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.2605,
+        "semi_transparent_fraction": 0.69971,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.0009,
+        "enclosed_transparent_fraction": 0.0,
+        "alpha_bbox": [
+          0,
+          0,
+          64,
+          64
+        ]
+      },
+      "heuristic_flags": []
+    },
+    {
+      "id": "AVI_livre_1",
+      "source": "art/verenia/AVI_livre_1-review-v2.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_livre_1.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.63633,
+        "semi_transparent_fraction": 0.36237,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.00192,
+        "enclosed_transparent_fraction": 0.00191,
+        "alpha_bbox": [
+          33,
+          82,
+          1248,
+          1169
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.52393,
+        "semi_transparent_fraction": 0.41528,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.01847,
+        "enclosed_transparent_fraction": 0.00806,
+        "alpha_bbox": [
+          0,
+          2,
+          64,
+          62
+        ]
+      },
+      "heuristic_flags": []
+    },
+    {
+      "id": "AVI_livre_2",
+      "source": "art/verenia/AVI_livre_2-review-v2.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_livre_2.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.66332,
+        "semi_transparent_fraction": 0.33558,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.00431,
+        "enclosed_transparent_fraction": 0.05578,
+        "alpha_bbox": [
+          0,
+          25,
+          1254,
+          1220
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.54443,
+        "semi_transparent_fraction": 0.38672,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.02276,
+        "enclosed_transparent_fraction": 0.08765,
+        "alpha_bbox": [
+          0,
+          6,
+          64,
+          60
+        ]
+      },
+      "heuristic_flags": [
+        "enclosed_gaps_review_may_be_intentional"
+      ]
+    },
+    {
+      "id": "AVI_treasury",
+      "source": "art/verenia/AVI_treasury-review-v2.png",
+      "stable_export": "mod/HoISubmod/gfx/interface/ideas/HSM_VER_ART_AVI_treasury.tga",
+      "source_metrics": {
+        "size": [
+          1254,
+          1254
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.63535,
+        "semi_transparent_fraction": 0.36383,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.01382,
+        "enclosed_transparent_fraction": 0.03102,
+        "alpha_bbox": [
+          0,
+          41,
+          1249,
+          1254
+        ]
+      },
+      "export_metrics": {
+        "size": [
+          64,
+          64
+        ],
+        "original_mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_fraction": 0.54175,
+        "semi_transparent_fraction": 0.39722,
+        "edge_opaque_fraction": 0.0,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "interior_semi_fraction": 0.04372,
+        "enclosed_transparent_fraction": 0.0271,
+        "alpha_bbox": [
+          0,
+          9,
+          64,
+          54
+        ]
+      },
+      "heuristic_flags": [
+        "enclosed_gaps_review_may_be_intentional"
+      ]
+    }
+  ],
+  "runtime_verified": false
+}

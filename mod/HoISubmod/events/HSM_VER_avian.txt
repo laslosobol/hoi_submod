@@ -1,0 +1,160 @@
+add_namespace = hsm_ver_avian
+
+country_event = {
+	id = hsm_ver_avian.1
+	title = hsm_ver_avian.1.t desc = hsm_ver_avian.1.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes }
+	option = { name = hsm_ver_avian.1.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.2
+	title = hsm_ver_avian.2.t desc = hsm_ver_avian.2.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes NOT = { has_country_flag = HSM_AVI_language_resolved } }
+	option = {
+		name = hsm_ver_avian.2.a ai_chance = { factor = 65 }
+
+		if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_route_active = yes NOT = { has_country_flag = HSM_AVI_language_resolved } } }
+		hidden_effect = { set_country_flag = HSM_AVI_language_resolved } hidden_effect = { set_country_flag = HSM_AVI_translation_office } hidden_effect = { clr_country_flag = HSM_AVI_language_pending }
+		add_political_power = -50 HSM_VER_SP_add_HSM_AVI_translation_office = yes
+	}
+	}
+	option = {
+		name = hsm_ver_avian.2.b ai_chance = { factor = 35 }
+
+		if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_route_active = yes NOT = { has_country_flag = HSM_AVI_language_resolved } } }
+		hidden_effect = { set_country_flag = HSM_AVI_language_resolved } hidden_effect = { set_country_flag = HSM_AVI_local_clerks } hidden_effect = { clr_country_flag = HSM_AVI_language_pending }
+		HSM_VER_SP_add_HSM_AVI_local_clerks = yes
+	}
+	}
+}
+country_event = {
+	id = hsm_ver_avian.3
+	title = hsm_ver_avian.3.t desc = hsm_ver_avian.3.d picture = GFX_event_western_griffon_city
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes }
+	option = { name = hsm_ver_avian.3.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.4
+	title = hsm_ver_avian.4.t desc = hsm_ver_avian.4.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_three_party_charter = yes }
+	option = { name = hsm_ver_avian.4.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.10
+	title = hsm_ver_avian.10.t
+	desc = { trigger = { ERI = { has_country_flag = HSM_AVI_budget_signed } EYR = { has_country_flag = HSM_AVI_budget_signed } } text = hsm_ver_avian.10.both.d }
+	desc = {
+		trigger = {
+			OR = { ERI = { has_country_flag = HSM_AVI_budget_signed } EYR = { has_country_flag = HSM_AVI_budget_signed } }
+			NOT = { AND = { ERI = { has_country_flag = HSM_AVI_budget_signed } EYR = { has_country_flag = HSM_AVI_budget_signed } } }
+		}
+		text = hsm_ver_avian.10.one.d
+	}
+	desc = { trigger = { ERI = { NOT = { has_country_flag = HSM_AVI_budget_signed } } EYR = { NOT = { has_country_flag = HSM_AVI_budget_signed } } } text = hsm_ver_avian.10.d }
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_three_party_charter = yes HSM_VER_AVI_budget_answers_complete = yes NOT = { has_country_flag = HSM_AVI_budget_reviewed } }
+	option = {
+		name = hsm_ver_avian.10.a
+		custom_effect_tooltip = HSM_VER_EVT_AVI_review_tt
+		hidden_effect = { if = { limit = { HSM_VER_AVI_three_party_charter = yes HSM_VER_AVI_budget_answers_complete = yes NOT = { has_country_flag = HSM_AVI_budget_reviewed } } set_country_flag = HSM_AVI_budget_reviewed clr_country_flag = HSM_AVI_budget_scene_pending } }
+	}
+}
+country_event = {
+	id = hsm_ver_avian.20
+	title = hsm_ver_avian.20.t desc = hsm_ver_avian.20.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_budget_reply_valid = yes }
+	option = { name = hsm_ver_avian.20.a ai_chance = { factor = 70 } custom_effect_tooltip = HSM_VER_EVT_AVI_budget_accept_tt show_ideas_tooltip = HSM_AVI_common_budget HSM_VER_AVI_accept_budget = yes }
+	option = { name = hsm_ver_avian.20.b ai_chance = { factor = 30 } custom_effect_tooltip = HSM_VER_EVT_AVI_budget_decline_tt hidden_effect = { HSM_VER_AVI_decline_budget = yes } }
+}
+country_event = {
+	id = hsm_ver_avian.21
+	title = hsm_ver_avian.21.t desc = hsm_ver_avian.21.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes }
+	option = { name = hsm_ver_avian.21.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.29
+	title = hsm_ver_avian.29.t desc = hsm_ver_avian.29.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { OR = { tag = ERI tag = EYR } has_country_flag = HSM_AVI_budget_pending NOT = { has_country_flag = HSM_AVI_budget_signed } }
+	immediate = { clr_country_flag = HSM_AVI_budget_pending set_country_flag = HSM_AVI_budget_answered }
+	option = { name = hsm_ver_avian.29.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.30
+	title = hsm_ver_avian.30.t desc = hsm_ver_avian.30.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_levy_unresolved = yes has_country_flag = HSM_AVI_levy_pending }
+	option = {
+		name = hsm_ver_avian.30.a ai_chance = { factor = 85 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_levy_settle_tt
+		if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_levy_unresolved = yes has_country_flag = HSM_AVI_levy_pending } }
+		add_political_power = -75
+		hidden_effect = { set_country_flag = HSM_AVI_levy_resolved } hidden_effect = { set_country_flag = HSM_AVI_levy_settled } hidden_effect = { clr_country_flag = HSM_AVI_levy_pending }
+		ERI = { country_event = { id = hsm_ver_avian.31 days = 1 } }
+		EYR = { country_event = { id = hsm_ver_avian.31 days = 1 } }
+	}
+	}
+	option = {
+		name = hsm_ver_avian.30.b ai_chance = { factor = 15 }
+		custom_effect_tooltip = HSM_VER_EVT_AVI_levy_defy_tt
+		if = {
+		limit = { hidden_trigger = { HSM_VER_AVI_levy_unresolved = yes has_country_flag = HSM_AVI_levy_pending } }
+		add_political_power = 100 HSM_VER_SP_add_HSM_AVI_exceptional_levy = yes
+		hidden_effect = { set_country_flag = HSM_AVI_levy_resolved } hidden_effect = { set_country_flag = HSM_AVI_levy_exception } hidden_effect = { set_country_flag = HSM_AVI_levy_previously_defied } hidden_effect = { clr_country_flag = HSM_AVI_levy_pending }
+		hidden_effect = { HSM_VER_suspend_charter = yes }
+		ERI = { country_event = { id = hsm_ver_avian.31 days = 1 } }
+		EYR = { country_event = { id = hsm_ver_avian.31 days = 1 } }
+	}
+	}
+}
+country_event = {
+	id = hsm_ver_avian.31
+	title = hsm_ver_avian.31.t
+	desc = { trigger = { AVI = { has_country_flag = HSM_AVI_levy_exception } } text = hsm_ver_avian.31.breach.d }
+	desc = { trigger = { AVI = { NOT = { has_country_flag = HSM_AVI_levy_exception } } } text = hsm_ver_avian.31.d }
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_avian.31.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.32
+	title = hsm_ver_avian.32.t desc = hsm_ver_avian.32.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes }
+	option = { name = hsm_ver_avian.32.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.41
+	title = hsm_ver_avian.41.t
+	desc = { trigger = { has_country_flag = HSM_AVI_levy_previously_defied } text = hsm_ver_avian.41.breach.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_AVI_levy_previously_defied } } text = hsm_ver_avian.41.d }
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_settlement_ready = yes }
+	option = { name = hsm_ver_avian.41.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.50
+	title = hsm_ver_avian.50.t desc = hsm_ver_avian.50.d picture = GFX_event_western_griffon_city
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_settlement_ready = yes has_country_flag = HSM_AVI_settlement_completed }
+	option = { name = hsm_ver_avian.50.a custom_effect_tooltip = HSM_VER_EVT_AVI_convention_ack_tt }
+}
+country_event = {
+	id = hsm_ver_avian.51
+	title = hsm_ver_avian.51.t desc = hsm_ver_avian.51.d picture = GFX_event_western_griffon_city
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_AVI_route_active = yes }
+	option = { name = hsm_ver_avian.51.a custom_effect_tooltip = HSM_VER_EVT_AVI_ack_tt }
+}

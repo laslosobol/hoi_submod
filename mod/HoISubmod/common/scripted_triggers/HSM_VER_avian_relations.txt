@@ -1,0 +1,83 @@
+# The common proclamation precedes BOTH Avian routes; only these focuses decide.
+HSM_VER_AVI_intergigantes_route = {
+ HSM_VER_AVI_government_available = yes
+ AVI = { has_completed_focus = intergigantes NOT = { has_completed_focus = pursue_true_neutrality } }
+}
+HSM_VER_AVI_neutral_route = {
+ AVI = { exists = yes has_completed_focus = pursue_true_neutrality NOT = { has_completed_focus = intergigantes } }
+}
+HSM_VER_UNI_ducal_land_held = {
+ exists = yes is_subject = no has_capitulated = no
+ has_country_flag = HSM_VER_UNI_founded
+ OR = {
+  AND = { tag = ERI owns_state = 391 owns_state = 400 owns_state = 401 owns_state = 500 owns_state = 673 391 = { is_fully_controlled_by = ERI } 400 = { is_fully_controlled_by = ERI } 401 = { is_fully_controlled_by = ERI } 500 = { is_fully_controlled_by = ERI } 673 = { is_fully_controlled_by = ERI } }
+  AND = { tag = EYR owns_state = 391 owns_state = 400 owns_state = 401 owns_state = 500 owns_state = 673 391 = { is_fully_controlled_by = EYR } 400 = { is_fully_controlled_by = EYR } 401 = { is_fully_controlled_by = EYR } 500 = { is_fully_controlled_by = EYR } 673 = { is_fully_controlled_by = EYR } }
+  AND = { tag = AVI owns_state = 391 owns_state = 400 owns_state = 401 owns_state = 500 owns_state = 673 391 = { is_fully_controlled_by = AVI } 400 = { is_fully_controlled_by = AVI } 401 = { is_fully_controlled_by = AVI } 500 = { is_fully_controlled_by = AVI } 673 = { is_fully_controlled_by = AVI } }
+ }
+}
+HSM_VER_AVR_regional_authority = {
+ OR = { HSM_VER_FORCE_eligible_house = yes HSM_VER_ROM_government = yes }
+ OR = { HSM_VER_FORCE_settlement_active = yes HSM_VER_charter_valid = yes HSM_VER_UNI_ducal_land_held = yes }
+}
+HSM_VER_AVR_partner_available = {
+ HSM_VER_AVR_regional_authority = yes has_war = no
+ HSM_VER_AVI_intergigantes_route = yes
+ AVI = { has_war = no owns_state = 470 470 = { is_fully_controlled_by = AVI } }
+ NOT = { has_war_with = AVI }
+ OR = {
+  AND = { is_in_faction = no AVI = { is_in_faction = no } }
+  AND = { is_faction_leader = yes AVI = { is_in_faction = no } }
+  AND = { is_in_faction_with = ERI ERI = { is_faction_leader = yes } AVI = { is_in_faction = no } }
+  AND = { is_in_faction_with = EYR EYR = { is_faction_leader = yes } AVI = { is_in_faction = no } }
+  AND = { tag = ERI AVI = { is_in_faction_with = ERI } }
+  AND = { tag = EYR AVI = { is_in_faction_with = EYR } }
+ }
+}
+HSM_VER_AVR_can_offer = {
+ HSM_VER_AVR_partner_available = yes
+ NOT = { has_country_flag = HSM_VER_AVR_opened has_country_flag = HSM_VER_AVR_pending }
+ AVI = { NOT = { has_country_flag = HSM_VER_AVR_partner_ERI has_country_flag = HSM_VER_AVR_partner_EYR } }
+}
+HSM_VER_AVR_reply_valid = {
+ tag = AVI
+ FROM = { HSM_VER_AVR_partner_available = yes has_country_flag = HSM_VER_AVR_pending }
+ AVI = { NOT = { has_country_flag = HSM_VER_AVR_partner_ERI has_country_flag = HSM_VER_AVR_partner_EYR } }
+}
+HSM_VER_AVR_agreement_live = {
+ HSM_VER_AVR_partner_available = yes
+ has_country_flag = HSM_VER_AVR_agreement
+ OR = {
+  AND = { tag = ERI AVI = { has_country_flag = HSM_VER_AVR_partner_ERI } }
+  AND = { tag = EYR AVI = { has_country_flag = HSM_VER_AVR_partner_EYR } }
+ }
+}
+HSM_VER_AVR_accession_context = {
+ HSM_VER_AVR_agreement_live = yes
+ HSM_VER_UNI_ducal_land_held = yes
+ NOT = { has_country_flag = HSM_VER_UNI_absorbed_AVI }
+}
+HSM_VER_AVR_accession_reply_valid = {
+ tag = AVI
+ FROM = {
+  HSM_VER_AVR_accession_context = yes
+  has_country_flag = HSM_VER_AVR_accession_pending
+  has_country_flag = HSM_VER_AVR_customs
+ }
+}
+HSM_VER_AVR_can_integrate = {
+ HSM_VER_AVR_accession_context = yes
+ has_country_flag = HSM_VER_AVR_customs
+ has_country_flag = HSM_VER_AVR_ratified
+ NOT = { has_country_flag = HSM_VER_AVR_transition }
+ OR = {
+  AND = { tag = ERI AVI = { has_country_flag = HSM_VER_AVR_annex_ERI } }
+  AND = { tag = EYR AVI = { has_country_flag = HSM_VER_AVR_annex_EYR } }
+ }
+}
+HSM_VER_AVR_absorbed = {
+ HSM_VER_UNI_ducal_land_held = yes
+ has_country_flag = HSM_VER_UNI_absorbed_AVI
+ AVI = { exists = no }
+ owns_state = 470
+ OR = { AND = { tag = ERI 470 = { is_fully_controlled_by = ERI } } AND = { tag = EYR 470 = { is_fully_controlled_by = EYR } } }
+}

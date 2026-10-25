@@ -1,0 +1,145 @@
+[
+  {
+    "id": "aaron",
+    "target": "AVI_aaron_redtail",
+    "source": "art/verenia/aaron-batch02.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aaron_redtail_civilian_large.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "Identity-preserving painted Equestria at War HOI4 leader portrait of Aaron Redtail from reference. Preserve grey head feathers, gold eye, large hooked ochre beak, small grey chin feather fringe, dark green formal suit, white shirt and red tie, small red/gold star lapel badge as reference. Mature serious reformist politician, relaxed closed beak. Three-quarter facing right, head and shoulders, vertical 156:210 composition, refined painterly brushwork coherent with HOI4 portraits. Subdued plain charcoal backdrop. No additional insignia, no flags, no invented heraldry, no crown, no human anatomy, no text, no border.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "kalra",
+    "target": "AVI_lady_kalra_blackclaw",
+    "source": "art/verenia/kalra-batch02.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_lady_kalra_blackclaw_army_large.tga",
+        "width": 156,
+        "height": 210
+      },
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_lady_kalra_blackclaw_army_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted Equestria at War / HOI4 military portrait of Lady Kalra Blackclaw from reference. Preserve grey-brown feathers, very dark black hooked beak with pale cere, bright amber golden eyes with bold dark lashes, long brown side feathers, broad burgundy military hat tilted across brow and its single narrow feather, grey-blue chainmail and dark collar. Confident female griffon officer. Three-quarter looking left, head and shoulders, vertical 156:210 framing, detailed painterly brush strokes, mature not cute/chibi. Plain muted teal-grey background. No flags or heraldry, no crown, no extra medals, no human features or hands, no text or frame. Keep distinctive face and hat recognizable.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "grover",
+    "target": "GRI_emperor_grover_vi_verenia_story",
+    "source": "art/verenia/grover-batch02.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/grover_story.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "Identity-preserving painted Equestria at War HOI4 adult Emperor Grover VI portrait for Verenian restored-empire story. Reference defines his ivory feathers, blue eyes, thin round spectacles, swept cream forelock, pale golden hooked beak, purple high-collared court tunic, red sash and gold shoulder trim. Calm earnest young ADULT, not a child. Gold OPEN coronet with simple tall pointed finials and small colored inset jewels, NO fleur-de-lis, NO arches or orb or cross, no Aquileian lilies. Dark quiet palace interior backdrop, NO flags, no new coat of arms or invented medals. Head and shoulders vertical156:210 composition with complete crown visible and headroom. Painterly HOI4 style, not photoreal wildlife, no hands, no text, no border.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "valens",
+    "target": "ERI_valens_silverclaw",
+    "source": "art/verenia/valens-batch02.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/ERI_valens_silverclaw_civilian_large.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "New character portrait for Valens Silverclaw, the communist alternate griffon ruler of House Erie in Equestria at War. Existing game has only anonymous placeholder, design a distinct credible adult male griffon politician, not a human. Slate-grey feathered head with silver cheek feathers, tawny eyes, strong modest ochre hooked beak, short swept-back crown feathers, dark charcoal civilian wool jacket over ivory shirt and burgundy waistcoat. No hat. Composed serious practical organizer, NOT military dictator. Three-quarter facing right head and shoulders, vertical156:210. Refined painted HOI4/EaW art readable at small size, dark muted library interior backdrop. No flags, no national arms, no crown, no insignia, no hammer-and-sickle, no human hands or humanface, no text, no frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "eusebius",
+    "target": "EYR_eusebius_nicticorax",
+    "source": "art/verenia/eusebius-batch02.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/EYR_eusebius_nicticorax_civilian_large.tga",
+        "width": 156,
+        "height": 210
+      }
+    ],
+    "prompt": "Painted Equestria at War / HOI4 new portrait for Eusebius Nicticorax, alternate communist griffon leader of House Eyrie, presently generic placeholder. Design a distinct adult male griffon with warm dark brown head feathers, pale cream brow and throat patches, hazel green eyes behind thin oval reading glasses, moderately long ivory-gold hooked beak. Burgundy civilian high collar jacket with dark lapels, no medals. Thoughtful stern provincial intellectual, different from slate-grey Valens Silverclaw. Three-quarter facing left, head and shoulders, 156:210 portrait composition, painterly slightly stylized game character, not human nor photographic bird. Plain dark muted green-grey background. No flag, no heraldry, no crown, no revolutionary symbols invented, no human hands, no lettering, no frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "chamber",
+    "target": "AVI_avichamberofcommerce",
+    "source": "art/verenia/chamber-batch02.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      },
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_1_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      },
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avichamberofcommerce_2_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted HOI4 / Equestria at War advisor INSTITUTION emblem for Avian Chamber of Commerce. Not a person. A large antique brass mercantile balance above an open ledger with clearly filled ruled accounts and a single dark wooden freight crate below. One cobalt enamel arch at back, worn brass and ivory, dark iron, 1930s economic institution. Compact square silhouette, readable at65x67 pixels, transparent exterior and 8 percent margin. No flags, no state coat of arms, no crown, no lilies, no invented seals, no blank document, no literal readable text, no human hands. Strong clear simple forms, painterly sculptural game icon not modern flatvector.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "college",
+    "target": "AVI_avitripartitecolleges",
+    "source": "art/verenia/college-batch02.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avitripartitecolleges_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted HOI4/EaW institution advisor emblem: Tripartite College of Science, foremost academic institution of the Three Houses. Central large brass optical microscope on an open scientific notebook filled with a clearly drawn lens diagram and short ink lines. Behind microscope three narrow ivory stone academic pillars joined by one arch, the three partners of this scientific institution. Restrained cobalt detail, antique brass, dark iron, ivory paper. Crisp simple shapes readable at65x67 pixels, square composition, 8% transparent margin, transparent outside. No flags or heraldry, no crown or lily, no national arms, no invented seals, no text labels, no human hands, no empty notebook. Hand-painted 1930s strategy-game icon.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "ehrenreich",
+    "target": "AVI_aviehrenreich",
+    "source": "art/verenia/AVI_aviehrenreich.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aviehrenreich_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted Equestria at War HOI4 advisor portrait for Count Ehrenreich of Avian using reference. Black-feathered male griffon, narrow amber eye, long dark hooked beak, black fedora, black high-collared overcoat. Preserve reference's discreet intimidating intelligence official identity; no smoke/cigarette needed. Three-quarter facing left, head and shoulders filling vertical156:210 frame, face clearly lit enough for65x67 reduction. Muted charcoal office background, painted sharp game art, not human. No flag, heraldic insignia, crown, lilies, medals or readable text. No hands.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

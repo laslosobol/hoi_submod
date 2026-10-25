@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "countries": [
+    "ERI",
+    "EYR",
+    "AVI"
+  ],
+  "source_file": "EaW/history/general/generic_advisors.txt",
+  "source_file_sha256": "81a98c7389c7e334380158d9c7ddde0d57137e163e33b4637af6ec761807c120",
+  "runtime_verified": false,
+  "records": [
+    {
+      "id": "generic_communist_revolutionary",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "communist_revolutionary",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_communist_revolutionary.png",
+      "source_sha256": "4fabdc5cbaf61a67a2acfea9574f5dfd857234c00c0e1f3987e546ce3c12f25f",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_communist_revolutionary.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "b624b1a82cd59821a2d943d201126a48ee9ec74935e5e24a65fe10829180321b"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_democratic_reformer",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "democratic_reformer",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_democratic_reformer.png",
+      "source_sha256": "28ce72f30e24ee79234f1b9922fc7d16fda88856bca78ed94dc09ac472321693",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_democratic_reformer.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "42cc8b444262a2797ea1aa13c001c35852a0a580aa3bd0ddbb2d2fe9e58d6d53"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_fascist_demagogue",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "fascist_demagogue",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_fascist_demagogue.png",
+      "source_sha256": "4d73da21ad6c8b3562723ad6c4e0c979a14a0613f5971a7a2c82cda1abb9d5f1",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_fascist_demagogue.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "982a30245fbdd58bf5e37f32a7505d980fdc855af66afe2d318f5b9d32ead089"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_captain_of_industry",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "captain_of_industry",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_captain_of_industry.png",
+      "source_sha256": "54eb22a41de3c3e273c60d586d282aa28bf6826cd34103eca47796a1629a61d0",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_captain_of_industry.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "1e4e8aa817e7bf4ce2f4bb5e1097944a67695451e8dcecce0add5338b8ab7cbb"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_fortification_engineer",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "fortification_engineer",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_fortification_engineer.png",
+      "source_sha256": "49a98f935f8429560454abe4aa597634aae33cc47d90695b899f55efcdafa3a0",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_fortification_engineer.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "ad75a998d80242d87b033b3e907fe49c5471ed6f6fa0335d865a4e68e80e35a8"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_war_industrialist",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "war_industrialist",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_war_industrialist.png",
+      "source_sha256": "a2f3b2b08b59cd54bdcbbc517e39cde3923346654f5dfb43f581c52e9a75796c",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_war_industrialist.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "098c68ce57d36999ae8ebb677ce54022712002ef44afc081cd7f9a15a44c6260"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_backroom_backstabber",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "backroom_backstabber",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_backroom_backstabber.png",
+      "source_sha256": "5241c2638e9c8c2862d57e455822f3176a62a06c4a986ca2fc0f99a8e7abd94b",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_backroom_backstabber.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "870d7173933653c38c375d350725e9b9426d393d06de8fce49543e7eaf0980d8"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_military_theorist",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "theorist",
+        "trait": "military_theorist",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_military_theorist.png",
+      "source_sha256": "0bd10444d00987a5a47ddcbadfdd10a6db7726c9648a08b24d07644769c41938",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_military_theorist.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "1363b6b7ac6e8919ccea9180ef6ddeafad72b163371b82fb5180ecfeda09a929"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_military_theorist_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "theorist",
+        "trait": "military_theorist",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_military_theorist_female.png",
+      "source_sha256": "0652348724385d1cc16c299ea7d6a5193dfcb5c3d2337c1438d8a67c1502084e",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_military_theorist_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "f838d0c3881bf5af1b37d7975eb3676dbc889bb484b4e924585bbde18d24945b"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_naval_theorist",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "theorist",
+        "trait": "naval_theorist",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_naval_theorist.png",
+      "source_sha256": "15b90dc5a9585f0c60606338066f9ceaa0c7081abb15875ec45b3872ef8ee98a",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_naval_theorist.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "c2df82512d9c17e10256029f4d685624d47dc0e1de6feefefd811b23654bf193"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-01.json"
+    },
+    {
+      "id": "generic_naval_theorist_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "theorist",
+        "trait": "naval_theorist",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_naval_theorist_female.png",
+      "source_sha256": "77c5dea764c61409042418e19ea354287d5c144f12324dfbe4e0d49a364b0982",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_naval_theorist_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "a0812ac90d510d5264cfc7a1418bfb84d29798cafd0495ae1e9e2a613c8a24bf"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_air_warfare_theorist",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "theorist",
+        "trait": "air_warfare_theorist",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_air_warfare_theorist.png",
+      "source_sha256": "cb8cd41301965e5ccf4c5c7ae8bdc6ec36c42b3d977621218141edd0264d951b",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_warfare_theorist.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "620d6e25a368695666477649a50360befc8550a23f30acf480f7e4fb367b5104"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_army_chief_off",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "army_chief",
+        "trait": "army_chief_offensive_1",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_chief_off.png",
+      "source_sha256": "6a11c57b2ef542f5d37167fbebb464a3d9c53e1081e5593b3addecea09943281",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_chief_off.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "c1f6c17c99347891db9418066423655de1087693bdb8a4d156fd9b1899010707"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_army_chief_off_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "army_chief",
+        "trait": "army_chief_offensive_1",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_chief_off_female.png",
+      "source_sha256": "14b5a3c6ba2ccd6a417eae49cc977f952fade97e5fcad758ad66eb7f079635a7",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_chief_off_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "bf1a5d46ee167bb185970b89d0a80c14718d851194cb69ccb5371ff69127ec1d"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_army_chief_def",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "army_chief",
+        "trait": "army_chief_defensive_1",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_chief_def.png",
+      "source_sha256": "569c1af75d29467786949d8872f0dc0307ddb5da1d0b5ffd75e7d82fec96c6b1",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_chief_def.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "d4a64004dca91dff6ae8cd26a39b60d3e1365e8bae5255cf5ef65b9cbbda43d9"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_army_chief_def_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "army_chief",
+        "trait": "army_chief_defensive_1",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_chief_def_female.png",
+      "source_sha256": "d08f6cc82423d77ade4476c118be6ccbd1a1e0bb21d56b2d048bf3e7be081e39",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_chief_def_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "49bff836c35d9f931b86517c677bf8c1e2c7f9f33ad7372effbce9d6121edf80"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_navy_chief_decisive_bat",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "navy_chief",
+        "trait": "navy_chief_decisive_battle_2",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_chief_decisive_bat.png",
+      "source_sha256": "b16eac0024cd451553dd0c7273a6e660b28f7b1329a547ec255fa6f817e5df75",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_chief_decisive_bat.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "380c4fda2c75cb3c28f678ed1d051a0f641d66edad992f5b5477d7cc90f9cff3"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_navy_chief_decisive_bat_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "navy_chief",
+        "trait": "navy_chief_decisive_battle_2",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_chief_decisive_bat_female.png",
+      "source_sha256": "2d494bb8baba09f40b019dc67e2fe23095272fbac08ef45ab6aa22900dbe7e5e",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_chief_decisive_bat_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "121679f8dd1201b33cd18ebe11ce2dba9d1f0cc779692a601292cb823441d3ea"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_navy_anti_submarine",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "navy_chief",
+        "trait": "alt_navy_anti_submarine_2",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_anti_submarine.png",
+      "source_sha256": "358e6cf97d347f2740a8288007339a5794b224a9a07fb6e4e5a0397b03f24235",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_anti_submarine.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "d042e45587821d5b3a1486e07753ac51f4f3c02dbdec5fbf29b4d0e93bb7e719"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_navy_anti_submarine_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "navy_chief",
+        "trait": "alt_navy_anti_submarine_2",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_anti_submarine_female.png",
+      "source_sha256": "aaca67b6b1dd8c9533a940efbcd49934506a095ad56cc536378f7a096a28e4d4",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_anti_submarine_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "20c562340f398a1377bf23dd0cc04d30b84a101e5f36993c8363b6ff19819fa9"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-02.json"
+    },
+    {
+      "id": "generic_air_close_air_sup",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "air_chief",
+        "trait": "alt_air_close_air_support_2",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_air_close_air_sup.png",
+      "source_sha256": "6325d0d8a515e7f53534f1371cc2edee8f81994482e6d3b4910d6aea426119df",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_close_air_sup.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "dbd63113998e4ae84bf3d0771afe0637b9c2ad8c6170879e9c7380203b9e282b"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_air_chief_all_weather",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "air_chief",
+        "trait": "air_chief_all_weather_2",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_air_chief_all_weather.png",
+      "source_sha256": "648532c456eae25d78dabe498bc01ea8d93391756337ffa5f16257611e14769a",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_chief_all_weather.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "7c6fe0d8773dab4e3d3375cb7f74aecf6fdc7713efb892980a484670f6919409"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_army_art",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "army_artillery_1",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_art.png",
+      "source_sha256": "638dcd313337ddd14ec24391ced514c3d5619c2dbe963d7c42f9bf236e3b5e81",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_art.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "8183a892607d213d6244ea82880be393982fc0482b5f0b7051fa4efd91681eb5"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_army_art_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "army_artillery_1",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_art_female.png",
+      "source_sha256": "574935516ea8871ac3e081998d58c0d4f42df18c8d7af2d75d1f86504853a307",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_art_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "e867babc058c379421de210c44fa52fe8305396fbc6a1701b62e605283ab938f"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_army_log",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "army_logistics_2",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_log.png",
+      "source_sha256": "e75e887b056014209c6063800a95e8ec1ee350cf1225230ba96caaf536698c5a",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_log.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "c8161a1a0c5230f5ada2472cca762135ef086cc4e78b7211b7c0b0e05c8f1048"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_army_log_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "army_logistics_2",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_army_log_female.png",
+      "source_sha256": "2cfed530414c1bbd150eb2c0599f67b45919bc0729b1f41a19a6ee48fb1ecede",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_army_log_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "b34d899a919a5b85f6c867d2ab791b7a5d16fe6f86470bc6205fba65f0108974"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_navy_fleet_log",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "navy_fleet_logistics_1",
+        "gender": "male"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_fleet_log.png",
+      "source_sha256": "afe741406273b91bf5a5880b8ea3946b9b238989be392f171cb00450fed2696f",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_fleet_log.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "2214d24d22eeac2a7f643a4ce685cff3469ef8931124e55e60a1724518430c7a"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_navy_fleet_log_female",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "navy_fleet_logistics_1",
+        "gender": "female"
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_navy_fleet_log_female.png",
+      "source_sha256": "09a06aeee33b7b038d78b2258a71d2bc8af0f1ada6f475bca77d071855f46251",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_navy_fleet_log_female.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "49a61619cdd216415badca04ebfe325b909617ed625885cac7608ec328f137eb"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_air_air_combat_trainer",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "high_command",
+        "trait": "air_air_combat_training_2",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_air_air_combat_trainer.png",
+      "source_sha256": "fef2015a14ea9636c2668089c37ba4bb8ff36e82498fe5816721407f6162f42e",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_air_air_combat_trainer.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "67034ef7f0feb47010136e897d09e9ba77631c29c208225734d8a6f6902320aa"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    },
+    {
+      "id": "generic_head_of_intelligence",
+      "kind": "generated_advisor",
+      "selector": {
+        "flag": "is_generic",
+        "slot": "political_advisor",
+        "trait": "head_of_intelligence",
+        "gender": null
+      },
+      "source": "art/verenia/HSM_VER_GEN_generic_head_of_intelligence.png",
+      "source_sha256": "bb6314ad80de7905e67c8fe3998377c7c6c3a22d6ec6b316bf2464afb14bbb93",
+      "exports": [
+        {
+          "path": "mod/HoISubmod/gfx/portraits/HSM_VER/generated/generic_head_of_intelligence.tga",
+          "width": 65,
+          "height": 67,
+          "sha256": "36de5e106daa757536bed1f794bd9bf0a998b129351fb87f40f8c7d333284d59"
+        }
+      ],
+      "approved": true,
+      "review": "Source and native 65x67 approved: distinct griffon faces, plain role-appropriate clothing, no invented heraldry or human anatomy.",
+      "runtime_verified": false,
+      "approval_manifest": "art/verenia/generated-advisors-03.json"
+    }
+  ],
+  "counting_note": "30 generated advisor templates, not named characters. Null gender means no gender predicate; use neutral portrait. Male/female alternatives retain native selection."
+}

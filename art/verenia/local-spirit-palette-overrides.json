@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "brief_file": "art/verenia/icon-briefs.json",
+    "base_guidance": "art/verenia/palette-guidance.json",
+    "record_indices": {
+      "first": 411,
+      "last": 510,
+      "indexing": "zero_based_inclusive"
+    },
+    "scope_count": 100,
+    "status": "contextual_overrides_only",
+    "input_sha256": {
+      "art/verenia/icon-briefs.json": "932de63f78b094ad15fd6466aad96cdccf967bcb30ffb5229906ca2ae0d12bfd",
+      "art/verenia/palette-guidance.json": "4c8b6d5ba135c614052d1d526db8d06662ed119abdcfb658937baedbf03c49f2"
+    }
+  },
+  "notes": [
+    "Apply each matching direction as a contextual correction to palette-guidance.json; preserve the original brief and compatible material colors. Unlisted IDs retain base guidance. This is guidance, not art approval or a generation manifest.",
+    "None of the 100 local spirit briefs requires new flags, crowns, national arms, party insignia or aircraft roundels. National cases, Aquileian/Griffish language books, imperial offices and autonomous_crown IDs do not authorize heraldry. No invented lilies, seals, logos, humans/hands, pseudo-text or blank documents.",
+    "Keep diagram-only roofs, buildings, gears and maps as meaningful marks within their paper/slate surface. A keyword material assignment must not create extra physical props. Workshop, factory, field, order and binding can describe context rather than a separate object.",
+    "Rations and provisions keep natural food colors only when visible in the unchanged brief; cloth rules cover wrapping. Earthworks use soil/turf. Metal equipment stays metal; no universal gold outline or cobalt shadow wash.",
+    "Communicate benefits, penalties and mixed effects through the briefed open/closed, aligned/broken, used/unused or constrained object states. Negative numeric costs or training-time modifiers can be beneficial. Do not use automatic red=bad or green=good.",
+    "Preserve separate keys, explicit assent clasps, finite guardianship, independent institutions and bounded presidential authority. Imperial/dynastic terminology is not permission for annexation imagery or invented crowns.",
+    "64x64 readability, transparent exterior and distinct silhouettes remain required. Use one dominant assembly and only supporting motifs already in the brief.",
+    "The first ten local spirits are already in generation and have user-reported visual review, including the officer slate. This file does not revoke approvals or request regeneration; apply corrections where needed, based on actual reviewed pixels."
+  ],
+  "records": [
+    {
+      "id": "HSM_ERI_DEV_officer_corps",
+      "direction": "Training slate is dark slate #515B59 with readable pale tactical marks, not ivory paper. Baton uses natural wood or restrained metal fittings. Retain the existing brief; this clarification alone does not require regenerating visually reviewed art."
+    },
+    {
+      "id": "HSM_ERI_DEV_supply_service",
+      "direction": "Use logistics material balance: pale packing timber crate, dark iron fittings and a restrained clock face/rim. The civil_access category does not authorize gates, keys or additional civic props."
+    },
+    {
+      "id": "HSM_EYR_DEV_public_works",
+      "direction": "Roof/building is a diagram in the maintenance register, not a separate stone roof prop. Ivory pages with meaningful charcoal diagram, fabric tool carrier and metal tools; no extra architecture."
+    },
+    {
+      "id": "HSM_EYR_DEV_practical_education",
+      "direction": "Gear is drawn in the technical diagram, not an extra physical metal gear. Ivory diagram surface, meaningful charcoal marks and natural counters; the explicitly illuminating study lamp permits a small warm light."
+    },
+    {
+      "id": "HSM_EYR_DEV_field_engineers",
+      "direction": "Defensive earthwork is cut soil and turf, not stone/concrete. Use muted umber soil, restrained sage turf and steel shovel with a natural wood handle."
+    },
+    {
+      "id": "HSM_EYR_DEV_depot_service",
+      "direction": "Textile applies only to ration wrapping or case lining, not food. Keep the sealed ration case closed as briefed; natural timber shelf, restrained storage finish and matching tally counters. Do not add exposed food merely to demonstrate its palette."
+    },
+    {
+      "id": "HSM_EYR_DEV_observer_sections",
+      "direction": "Field means deployed telescope, not crops. Use dark metal optics and restrained grey-green glass. Ridge is carefully sketched: use drawing marks, not added vegetation or a physical landscape backdrop."
+    },
+    {
+      "id": "HSM_AVI_exceptional_levy",
+      "direction": "Keep the broken agreement lock and civilian crate being lifted clearly visible. Military output benefit accompanies lower stability and greater consumer-goods burden; do not portray consensual or cost-free cooperation."
+    },
+    {
+      "id": "HSM_VER_CW_common_courts",
+      "direction": "Override agriculture_food direction with justice_charters: balanced oxidised-bronze/iron judicial scale above two equal pale-stone courthouse thresholds. No crops, straw, food or agricultural decoration."
+    },
+    {
+      "id": "HSM_VER_CR_emergency_hospitals",
+      "direction": "Ignore crop assignment triggered by field-hospital. Use linen-white bandages/cot fabric, muted medical glass, dark metal supports, timber crate and restrained hourglass fittings. No vegetation, invented red-cross emblem or permanent-service implication."
+    },
+    {
+      "id": "HSM_VER_CR_border_watch",
+      "direction": "New earthworks are soil/turf rather than concrete bunkers. Keep lookout shelter and temporary clock distinct; muted earth and natural shelter materials with dark metal fittings, not a solid stone fort."
+    },
+    {
+      "id": "HSM_VER_common_courts",
+      "direction": "Binding describes judicial authority, not cloth: omit the burgundy cloth assignment. Use metal keys and a balanced bronze/iron scale, preserving two independent keys at equal status."
+    },
+    {
+      "id": "HSM_VER_joint_staff",
+      "direction": "Field telephone is charcoal bakelite/iron with restrained copper connectors, not crops. Map cases retain natural leather/storage materials and ivory calculations. National describes the two separate cases, not permission to add flags or national colors."
+    },
+    {
+      "id": "HSM_VER_limited_presidency",
+      "direction": "Use civic_deliberation material balance: modest walnut chair and bounded council rail, with restrained metal fittings. Rail is civic furniture, not railway track. No throne, crown or sovereign emblem."
+    },
+    {
+      "id": "HSM_VER_FORCE_AVI_commission",
+      "direction": "Keep tense closed civic gate beneath central lever and workshop gear. Military/industrial gains accompany a stability loss. Order denotes command, not a new storage object; workshop does not authorize added masonry scenery."
+    },
+    {
+      "id": "HSM_ERI_FORCE_central_commissions",
+      "direction": "Retain closed petition hatch beneath dispatch rod and arsenal/factory machinery. Organisation/output gains coexist with lower stability; no triumphant crown, added regalia or unqualified welfare framing."
+    },
+    {
+      "id": "HSM_ERI_FORCE_ducal_administration",
+      "direction": "Preserve narrow civic-access slot beneath central spindle/gears: political/output/military gains accompany a stability cost. Natural machine metal/paint, not an invented ducal emblem."
+    },
+    {
+      "id": "HSM_ERI_FORCE_patron_claims",
+      "direction": "Keep displaced claimant case closed beneath estate key and patron sword. Attack benefit carries stability and political costs; no invented noble crest or impartial-justice framing."
+    },
+    {
+      "id": "HSM_EYR_exceptional_requisitions",
+      "direction": "Keep military chain retaining the civilian workshop wheel despite the arrived release key. Military output benefits carry stability/consumer-goods costs. Workshop is context for the metal wheel, not permission to add a stone building."
+    },
+    {
+      "id": "HSM_EYR_FORCE_civilian_release",
+      "direction": "Open garrison lock and returning workshop key express civilian recovery, while army organisation falls. Preserve that tradeoff; no universal military-upgrade treatment or additional workshop building."
+    },
+    {
+      "id": "HSM_EYR_FORCE_military_government",
+      "direction": "Textile applies only to provisions wrapping, not household food. Keep basket woven and constrained beneath the command tower. Organisation/planning benefits coexist with stability and consumer-goods costs; preserve the restrictive composition."
+    },
+    {
+      "id": "HSM_EYR_FORCE_unplaced_reservists",
+      "direction": "Unused stool, discharged pack and closed workshop door must read as exclusion/inactivity. Both stability and civilian construction are penalised. Use worn natural materials and object state, not an arbitrary red danger badge."
+    },
+    {
+      "id": "HSM_EYR_FORCE_military_production_priority",
+      "direction": "Retain the scheduling wheel largest allocation to shells and waiting civilian repairs. Military output rises while civilian construction slows; distinguish competing allocations, not an unconditional production improvement."
+    },
+    {
+      "id": "HSM_VER_GRO_joint_defence",
+      "direction": "Allied field radios require charcoal radio housings, copper contacts and restrained instrument glass; ignore crop assignment. Keep defensive map as a diagram and preserve each radio own key, without flags or implied annexation."
+    },
+    {
+      "id": "HSM_VER_GRO_managed_court_legacy",
+      "direction": "Keep controlled visitor screen and closed outside book: greater political control accompanies lower research. Natural desk/book materials; no crown or implication of open academic exchange."
+    },
+    {
+      "id": "HSM_VER_GRO_patrons_legacy",
+      "direction": "Preserve sword protecting estate key while petition box stays closed. Organisation benefit accompanies stability loss; do not depict equal judicial access or add patron heraldry."
+    },
+    {
+      "id": "HSM_VER_GRO_restored_public_service",
+      "direction": "Building is a diagram inside the public-project register, not an extra stone building. Use ivory paper with meaningful charcoal construction marks and a metal accountable office key."
+    },
+    {
+      "id": "HSM_VER_ID_bilingual_curriculum",
+      "direction": "Retain two equally open books and the briefed modest teaching purse. Use differentiated sage/russet/plum bindings without national identities. The idea definition grants research and stability bonuses, with no ongoing expense modifier; do not turn the purse into an asserted recurring gameplay penalty."
+    },
+    {
+      "id": "HSM_VER_REG_joint_logistics",
+      "direction": "Use logistics direction rather than civil_access: timber ration crate, clock and metal planning compass. Field is not crops; textile applies only to packaging, not ration contents. Do not add gates, vegetation or exposed food."
+    },
+    {
+      "id": "HSM_VER_REG_territorial_reserves",
+      "direction": "Home-terrain earthwork is soil/turf, not stone bunker. Keep khaki reserve kit and metal canteen distinct. Defence/recovery benefits coexist with slower planning; avoid presenting this as an unconditional command upgrade."
+    },
+    {
+      "id": "HSM_VER_UNI_constitutional_state",
+      "direction": "Government keyring is metal, not records-storage enamel or wood. Keep unfinished budget abacus visibly distinct from the factory wheel; new government is not yet the fully settled institutional stage."
+    },
+    {
+      "id": "HSM_ZYP_railway_board",
+      "direction": "Railway/logistics direction fits the dispatch lever, track-maintenance diagram and military cargo better than a whole-icon field-service tint. Dark iron lever, ivory meaningful plan and natural packing materials; no authority over another crown railways is implied."
+    },
+    {
+      "id": "HSM_ZYP_professional_muster",
+      "direction": "Kit can be khaki cloth, rack/basket natural timber or woven fibre; household provisions are not textile except their wrapping. Preserve visibly strained household provision alongside organised officer kit: military gains carry a stability cost."
+    },
+    {
+      "id": "HSM_ZYP_limited_muster",
+      "direction": "Use logistics/field-service materials rather than civil_access: compact khaki pack, restrained clock and practical supply case. Reduced training time and supply consumption are benefits; rationed provision does not make this a penalty icon."
+    }
+  ]
+}

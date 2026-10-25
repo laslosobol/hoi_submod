@@ -1,0 +1,162 @@
+[
+  {
+    "id": "AVI_avijoachim",
+    "target": "AVI_avijoachim",
+    "source": "art/verenia/AVI_avijoachim.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avijoachim_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted HOI4 / Equestria at War advisor portrait of Viceroy Joachim, compassionate civilian statesman. Preserve golden-yellow head feathers, cream cheek and throat, teal eyes, orange hooked beak, green formal jacket and white shirt with dark tie. Calm attentive expression, three-quarter right. Use provided original small portrait as identity reference, not as layout: remove its document border. Refined painted character art, adult griffon anatomy, vertical156:210 head and shoulders, readable at65x67. Plain charcoal background. No text, flags, invented heraldry, crown, extra medals, human hands or humanface.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi1",
+    "target": "AVI_avi1",
+    "source": "art/verenia/AVI_avi1.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi1_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted HOI4 / Equestria at War advisor portrait of Maximilian Avian, industrial organizer. Preserve russet red head feathers and swept back darker forelock, bright cyan eye, gold beak, monocle on one eye, dark formal suit and white collar. Confident thoughtful expression, three-quarter right. Use provided original small portrait as identity reference, not as layout: remove its document border. Refined painted character art, adult griffon anatomy, vertical156:210 head and shoulders, readable at65x67. Plain charcoal background. No text, flags, invented heraldry, crown, extra medals, human hands or humanface.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi2",
+    "target": "AVI_avi2",
+    "source": "art/verenia/AVI_avi2.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi2_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Painted HOI4 / Equestria at War advisor portrait of Erich Flugel, career bureaucrat. Preserve russet head, heavy dark grey brow feathers, orange-gold hooked beak, grey top hat and round dark spectacles, dark formal jacket. Stern mature expression, three-quarter front. No cigarette. Use provided original small portrait as identity reference, not as layout: remove its document border. Refined painted character art, adult griffon anatomy, vertical156:210 head and shoulders, readable at65x67. Plain charcoal background. No text, flags, invented heraldry, crown, extra medals, human hands or humanface.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avijohannesvondross",
+    "target": "AVI_avijohannesvondross",
+    "source": "art/verenia/AVI_avijohannesvondross.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avijohannesvondross_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Johannes von Dross, army chief. Pale golden tan griffon, turquoise eyes, orange beak, short burgundy fez-like service cap with no symbols, darkgreen officer coat. Front three-quarter, sturdy seasoned expression. Original reference supplies appearance; REMOVE reference's border/documents. Adult griffon head and shoulders in vertical156:210, readable at65x67, detailed brushwork, plain dark desaturated olive background. No flags, new insignia, heraldry, crown, medals, human anatomy/hands or text.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_aviphilipperemy",
+    "target": "AVI_aviphilipperemy",
+    "source": "art/verenia/AVI_aviphilipperemy.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_aviphilipperemy_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Philippe Remy, army chief of Avian. Dark charcoal feathered griffon, sharp grey eye, darkgrey beak, dark military kepi and high-collared black uniform with narrow brass trim. Three-quarter facing left, organized austere expression. Original reference supplies appearance; REMOVE reference's border/documents. Adult griffon head and shoulders in vertical156:210, readable at65x67, detailed brushwork, plain dark desaturated olive background. No flags, new insignia, heraldry, crown, medals, human anatomy/hands or text.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi10",
+    "target": "AVI_avi10",
+    "source": "art/verenia/AVI_avi10.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi10_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Tobias Hellcrest, air force reformer. Bright blue head feathers, angular tall blue forelock, cream cheek strip, yellow beak, narrow determined pale eye, green peaked service cap and green uniform. Three-quarter facing left. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, textured painterly game art. Plain charcoal muted backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi11",
+    "target": "AVI_avi11",
+    "source": "art/verenia/AVI_avi11.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi11_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Staffan Marie Stormfeather, aviation specialist. Warm brown head feathers, amber-red eyes behind thin round glasses, ochre beak, brown service cap and brown flying-service jacket. Front three-quarter serious expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, textured painterly game art. Plain charcoal muted backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi8",
+    "target": "AVI_avi8",
+    "source": "art/verenia/AVI_avi8.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi8_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Elias Yellowplume, naval logistics advisor. Preserve blue-grey feathers, narrowed brown eye, charcoal beak, dark naval peaked cap with plain gold band and tiny plain gold button, dark navy officer coat. Three-quarter facing left. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain muted blue-grey backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi9",
+    "target": "AVI_avi9",
+    "source": "art/verenia/AVI_avi9.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi9_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Hubert Stossbeak, submarine specialist. Preserve pale ivory head feathers, light blue eyes, yellow hooked beak, swept-back pale forelock, brown-black naval civilian suit and white shirt. No hat. Front three-quarter confident mature expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain muted blue-grey backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "AVI_avi4",
+    "target": "AVI_avi4",
+    "source": "art/verenia/AVI_avi4.png",
+    "portrait": true,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/portraits/HSM_VER/AVI_avi4_civilian_small.tga",
+        "width": 65,
+        "height": 67
+      }
+    ],
+    "prompt": "Identity-preserving painted HOI4/EaW advisor portrait: Patrice de Celles, army regrouping advisor. Preserve russet red head feathers, teal eyes, long gold beak, darkgrey peaked cap, navy-blue officer coat. Three-quarter facing right, composed mature expression. Reference is original appearance only; remove its frame and paper. Adult griffon head and shoulders vertical156:210 readable at65x67, detailed painterly game art. Plain muted olive-grey backdrop. No flags, invented heraldry or badges, crown, new medals, human anatomy/hands, lettering or frame.",
+    "review": "Source and native-size preview reviewed and approved; scoped portrait/institution bindings applied. Runtime verification pending.",
+    "runtime_verified": false
+  }
+]

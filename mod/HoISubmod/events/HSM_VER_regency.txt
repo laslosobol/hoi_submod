@@ -1,0 +1,152 @@
+add_namespace = hsm_ver_regency
+country_event = {
+	id = hsm_ver_regency.16 title = hsm_ver_regency.16.t desc = hsm_ver_regency.16.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_estates_ERI_reply_valid = yes }
+	option = { name = hsm_ver_regency.16.a ai_chance = { factor = 80 } custom_effect_tooltip = HSM_VER_EVT_estates_sign_tt hidden_effect = { HSM_VER_REG_estates_ERI_sign = yes } }
+	option = { name = hsm_ver_regency.16.b ai_chance = { factor = 20 } custom_effect_tooltip = HSM_VER_EVT_void_pact_tt hidden_effect = { if = { limit = { HSM_VER_REG_estates_ERI_reply_valid = yes } HSM_VER_REG_void_pact = yes } } }
+}
+country_event = {
+	id = hsm_ver_regency.17 title = hsm_ver_regency.17.t desc = hsm_ver_regency.17.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_estates_EYR_reply_valid = yes }
+	option = { name = hsm_ver_regency.17.a ai_chance = { factor = 80 } custom_effect_tooltip = HSM_VER_EVT_estates_sign_tt hidden_effect = { HSM_VER_REG_estates_EYR_sign = yes } }
+	option = { name = hsm_ver_regency.17.b ai_chance = { factor = 20 } custom_effect_tooltip = HSM_VER_EVT_void_pact_tt hidden_effect = { if = { limit = { HSM_VER_REG_estates_EYR_reply_valid = yes } HSM_VER_REG_void_pact = yes } } }
+}
+country_event = {
+	id = hsm_ver_regency.1 title = hsm_ver_regency.1.t desc = hsm_ver_regency.1.d picture = GFX_event_griffenheim
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_context = yes }
+	option = { name = hsm_ver_regency.1.a }
+}
+country_event = {
+	id = hsm_ver_regency.2 title = hsm_ver_regency.2.t picture = GFX_report_event_generic_read_write
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_ver_regency.2.dead.d }
+	desc = { trigger = { HSM_VER_REG_local_minor = yes } text = hsm_ver_regency.2.minor.d }
+	desc = { trigger = { HSM_VER_REG_local_adult = yes } text = hsm_ver_regency.2.adult.d }
+	desc = { trigger = { HSM_VER_REG_foreign_household = yes } text = hsm_ver_regency.2.foreign.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead HSM_VER_REG_local_minor = yes HSM_VER_REG_local_adult = yes HSM_VER_REG_foreign_household = yes } } text = hsm_ver_regency.2.unknown.d }
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.2.a }
+}
+country_event = {
+	id = hsm_ver_regency.3 title = hsm_ver_regency.3.t desc = hsm_ver_regency.3.d picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_can_propose = yes }
+	option = {
+		name = hsm_ver_regency.3.a trigger = { HSM_VER_REG_local_minor = yes } ai_chance = { factor = 80 }
+		custom_effect_tooltip = HSM_VER_EVT_propose_regency_tt
+		show_ideas_tooltip = HSM_VER_REG_joint_guardianship
+		hidden_effect = { if = { limit = { HSM_VER_REG_can_propose = yes HSM_VER_REG_local_minor = yes } set_country_flag = HSM_VER_REG_proposal_seen HSM_VER_REG_propose_regency = yes } }
+	}
+	option = {
+		name = hsm_ver_regency.3.b ai_chance = { factor = 20 }
+		custom_effect_tooltip = HSM_VER_EVT_propose_civil_tt
+		show_ideas_tooltip = HSM_VER_REG_civil_settlement
+		hidden_effect = { if = { limit = { HSM_VER_REG_can_propose = yes } set_country_flag = HSM_VER_REG_proposal_seen HSM_VER_REG_propose_civil = yes } }
+	}
+}
+country_event = {
+	id = hsm_ver_regency.4 title = hsm_ver_regency.4.t picture = GFX_report_event_generic_read_write
+	desc = { trigger = { HSM_VER_REG_local_minor = yes } text = hsm_ver_regency.4.child.d }
+	desc = { trigger = { NOT = { HSM_VER_REG_local_minor = yes } } text = hsm_ver_regency.4.d }
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_school_seen } }
+	option = {
+		name = hsm_ver_regency.4.a
+		custom_effect_tooltip = HSM_VER_EVT_school_tt
+		hidden_effect = { if = { limit = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_school_seen } } set_country_flag = HSM_VER_REG_school_seen if = { limit = { HSM_VER_REG_local_minor = yes } set_country_flag = HSM_VER_REG_school_memory } } }
+	}
+}
+country_event = {
+	id = hsm_ver_regency.5 title = hsm_ver_regency.5.t desc = hsm_ver_regency.5.d picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_defence_resolved } }
+	option = {
+		name = hsm_ver_regency.5.a ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_EVT_logistics_tt
+		show_ideas_tooltip = HSM_VER_REG_joint_logistics
+		if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_defence_resolved } } } hidden_effect = { set_country_flag = HSM_VER_REG_defence_resolved } hidden_effect = { set_country_flag = HSM_VER_REG_logistics } remove_ideas = HSM_VER_REG_territorial_reserves hidden_effect = { HSM_VER_REG_refresh_ideas = yes } }
+	}
+	option = {
+		name = hsm_ver_regency.5.b ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_VER_EVT_reserves_tt
+		show_ideas_tooltip = HSM_VER_REG_territorial_reserves
+		if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_defence_resolved } } } hidden_effect = { set_country_flag = HSM_VER_REG_defence_resolved } hidden_effect = { set_country_flag = HSM_VER_REG_reserves } remove_ideas = HSM_VER_REG_joint_logistics hidden_effect = { HSM_VER_REG_refresh_ideas = yes } }
+	}
+}
+country_event = {
+	id = hsm_ver_regency.6 title = hsm_ver_regency.6.t picture = GFX_report_event_generic_parliament
+	desc = { trigger = { HSM_VER_REG_local_minor = yes } text = hsm_ver_regency.6.child.d }
+	desc = { trigger = { NOT = { HSM_VER_REG_local_minor = yes } } text = hsm_ver_regency.6.d }
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_petition_seen } }
+	option = {
+		name = hsm_ver_regency.6.a
+		custom_effect_tooltip = HSM_VER_EVT_petitions_tt
+		hidden_effect = { if = { limit = { HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_petition_seen } } set_country_flag = HSM_VER_REG_petition_seen if = { limit = { HSM_VER_REG_local_minor = yes } set_country_flag = HSM_VER_REG_petition_memory } } }
+	}
+}
+country_event = {
+	id = hsm_ver_regency.7 title = hsm_ver_regency.7.t picture = GFX_event_gothic_interior
+	desc = { trigger = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes } text = hsm_ver_regency.7.d }
+	desc = { trigger = { NOT = { AND = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes } } } text = hsm_ver_regency.7.after.d }
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.7.a }
+}
+country_event = {
+	id = hsm_ver_regency.8 title = hsm_ver_regency.8.t picture = GFX_report_event_generic_parliament
+	desc = { trigger = { has_global_flag = GRI_grover_vi_dead } text = hsm_ver_regency.8.dead.d }
+	desc = { trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } } text = hsm_ver_regency.8.d }
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.8.a }
+}
+country_event = {
+	id = hsm_ver_regency.9 title = hsm_ver_regency.9.t picture = GFX_event_griffenheim
+	desc = { trigger = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes } text = hsm_ver_regency.9.regency.d }
+	desc = { trigger = { HSM_VER_REG_successor_government = yes } text = hsm_ver_regency.9.adult.d }
+	desc = { trigger = { NOT = { AND = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_local_minor = yes } HSM_VER_REG_successor_government = yes } } text = hsm_ver_regency.9.d }
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.9.a }
+}
+country_event = {
+	id = hsm_ver_regency.10 title = hsm_ver_regency.10.t picture = GFX_event_griffon_diplomacy
+	desc = { trigger = { AVI = { has_country_flag = HSM_VER_REG_propose_regency } } text = hsm_ver_regency.10.regency.d }
+	desc = { trigger = { AVI = { has_country_flag = HSM_VER_REG_propose_civil } } text = hsm_ver_regency.10.d }
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_reply_valid = yes }
+	option = { name = hsm_ver_regency.10.a ai_chance = { factor = 80 } custom_effect_tooltip = HSM_VER_EVT_regency_sign_tt hidden_effect = { HSM_VER_REG_sign = yes } }
+	option = { name = hsm_ver_regency.10.b ai_chance = { factor = 20 } custom_effect_tooltip = HSM_VER_EVT_regency_decline_tt hidden_effect = { HSM_VER_REG_decline = yes } }
+}
+country_event = {
+	id = hsm_ver_regency.11 title = hsm_ver_regency.11.t picture = GFX_report_event_generic_parliament
+	desc = { trigger = { has_country_flag = HSM_VER_REG_refused } text = hsm_ver_regency.11.refused.d }
+	desc = { trigger = { NOT = { has_country_flag = HSM_VER_REG_refused } } text = hsm_ver_regency.11.d }
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.11.a }
+}
+country_event = {
+	id = hsm_ver_regency.12 title = hsm_ver_regency.12.t desc = hsm_ver_regency.12.d picture = GFX_event_gothic_interior
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_custody_reply_valid = yes }
+	option = { name = hsm_ver_regency.12.a ai_chance = { factor = 65 } custom_effect_tooltip = HSM_VER_EVT_custody_transfer_tt hidden_effect = { HSM_VER_REG_receive_household = yes } }
+	option = { name = hsm_ver_regency.12.b ai_chance = { factor = 35 } custom_effect_tooltip = HSM_VER_EVT_custody_decline_tt hidden_effect = { if = { limit = { HSM_VER_REG_custody_reply_valid = yes } clr_country_flag = HSM_VER_REG_custody_pending } } }
+}
+country_event = {
+	id = hsm_ver_regency.13 title = hsm_ver_regency.13.t desc = hsm_ver_regency.13.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.13.a }
+}
+country_event = {
+	id = hsm_ver_regency.14 title = hsm_ver_regency.14.t picture = GFX_event_gothic_interior
+	desc = { trigger = { has_country_flag = HSM_VER_REG_school_memory has_country_flag = HSM_VER_REG_petition_memory } text = hsm_ver_regency.14.memory.d }
+	desc = { trigger = { NOT = { AND = { has_country_flag = HSM_VER_REG_school_memory has_country_flag = HSM_VER_REG_petition_memory } } } text = hsm_ver_regency.14.d }
+	is_triggered_only = yes timeout_days = 13
+	trigger = { HSM_VER_REG_can_succeed = yes }
+	option = { name = hsm_ver_regency.14.a custom_effect_tooltip = HSM_VER_EVT_succession_tt hidden_effect = { HSM_VER_REG_succeed = yes } }
+}
+country_event = {
+	id = hsm_ver_regency.15 title = hsm_ver_regency.15.t desc = hsm_ver_regency.15.d picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes timeout_days = 13
+	option = { name = hsm_ver_regency.15.a }
+}

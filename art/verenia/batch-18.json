@@ -1,0 +1,193 @@
+[
+  {
+    "id": "liberalising_the_government",
+    "target": "liberalising_the_government",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/liberalising_the_government.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_liberalising_the_government.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An old locked government door replaced by an open parliamentary entrance and a ballot box. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "support_harmonic_institutions",
+    "target": "support_harmonic_institutions",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/support_harmonic_institutions.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_support_harmonic_institutions.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A courthouse portico with balanced scales and a small elected assembly bench. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "promote_freedoms",
+    "target": "promote_freedoms",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/promote_freedoms.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_promote_freedoms.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An unlocked printing press with an open speaking trumpet and a civic meeting bell. Palette: Walnut civic furniture, pale paper and subdued green painted fittings; civic accents are not party colors.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "permit_local_elections",
+    "target": "permit_local_elections",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/permit_local_elections.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_permit_local_elections.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A village ballot box receiving a clearly marked ballot, with a modest town-hall roof behind. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "fascists_win",
+    "target": "fascists_win",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/fascists_win.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_fascists_win.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A military baton laid across a seized government key beneath a plain crimson drape. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Keep the explicitly requested plain crimson drape. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "purging_the_army1",
+    "target": "purging_the_army1",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/purging_the_army1.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_purging_the_army1.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An officer's sword rack with rival blades removed and broken command cords below. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "purging_the_aristocracy1",
+    "target": "purging_the_aristocracy1",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/purging_the_aristocracy1.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_purging_the_aristocracy1.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A row of estate keys confiscated into a military lockbox. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "adopt_the_stahlhaube",
+    "target": "adopt_the_stahlhaube",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/adopt_the_stahlhaube-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_adopt_the_stahlhaube.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A griffon-fitted Stahlhaube helmet dominating the icon, with a shovel and binoculars beneath. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "edit_prompt": "Remove only the painted golden griffin emblem from the helmet, replacing it with uninterrupted worn dark olive-grey painted steel matching surrounding surface. Preserve helmet shape, shovel, binoculars, composition, palette and transparent background. No insignia.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reintegrate_haustruppen_auxiliaries",
+    "target": "reintegrate_haustruppen_auxiliaries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reintegrate_haustruppen_auxiliaries.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reintegrate_haustruppen_auxiliaries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Separate auxiliary cartridge belts fastened into a single common equipment rack. Palette: Blued steel and worn walnut with small cartridge-brass details; no uniform gold weapon finish.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  },
+  {
+    "id": "reform_military_organisation_structure",
+    "target": "reform_military_organisation_structure",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/AVI.txt",
+    "source": "art/verenia/reform_military_organisation_structure.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_reform_military_organisation_structure.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A command telephone switchboard with short, orderly connections replacing tangled leads. Palette: Black bakelite and grey metal, copper wire and restrained green instrument glass; no blue glow wash.  Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, party insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, Earth maps or globes. Documents if present carry relevant simple diagrams, not empty pages. No extra objects.",
+    "approved": true,
+    "review": "Source and native99x86 approved. Category/material palettes checked; invented helmet insignia removed. Runtime pending.",
+    "runtime_verified": false
+  }
+]

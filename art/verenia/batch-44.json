@@ -1,0 +1,184 @@
+[
+  {
+    "id": "HSM_ZYP_household_register",
+    "target": "HSM_ZYP_household_register",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_household_register.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_household_register.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A split archive drawer separating machine diagrams from indexed household evidence, under a careful lens. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_rolls_of_the_crowns",
+    "target": "HSM_ZYP_rolls_of_the_crowns",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_rolls_of_the_crowns.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_rolls_of_the_crowns.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Several independent treasury boxes arranged around an optional shared technical cabinet. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_repair_the_arteries",
+    "target": "HSM_ZYP_repair_the_arteries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_repair_the_arteries.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_repair_the_arteries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A freight bridge under repair beside an engineer's kit and a dispatch scheduling wheel. Palette: Grey stone and steel, restrained brickwork and weathered timber; water is muted river green where present. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_commissions_not_orders",
+    "target": "HSM_ZYP_commissions_not_orders",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_commissions_not_orders-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_commissions_not_orders.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Recreate the same negotiating table, two separate chairs and revised geometric ministry diagram. Zoom out until both complete chairs, all tabletop corners and all table feet are fully visible. Leave at least 8 percent transparent breathing room on every side. Preserve slate iron, natural walnut, muted green upholstery and ivory diagrams. No new objects, emblems, lettering or background. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: A common ministry plan with visibly revised diagram sections beside separate negotiating chairs. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Recreate the same negotiating table, two separate chairs and revised geometric ministry diagram. Zoom out until both complete chairs, all tabletop corners and all table feet are fully visible. Leave at least 8 percent transparent breathing room on every side. Preserve slate iron, natural walnut, muted green upholstery and ivory diagrams. No new objects, emblems, lettering or background. Preserve transparent background. Period painted HOI4/EaW game icon. No text or watermark.",
+      "previous_source": "art/verenia/HSM_ZYP_commissions_not_orders.png",
+      "source_sha256": "b9eca3ff9f7d3f4284ce3b64820ada001b6b2796facf12eaaa2162b464cabef6",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/HSM_ZYP_commissions_not_orders",
+      "runtime_verified": false
+    }
+  },
+  {
+    "id": "HSM_ZYP_arsenals_and_workshops",
+    "target": "HSM_ZYP_arsenals_and_workshops",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_arsenals_and_workshops.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_arsenals_and_workshops.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A military production press producing interchangeable components beside a transport-ready parts crate. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_common_colleges",
+    "target": "HSM_ZYP_common_colleges",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_common_colleges.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_common_colleges.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Matching laboratory demonstrations on two separate college benches, a shared drawing between them. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_the_muster_dispute",
+    "target": "HSM_ZYP_the_muster_dispute",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_the_muster_dispute.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_the_muster_dispute.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A mobilisation calendar colliding with a harvest sickle beside a limited-rotation clock. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_reconstruction_contracts",
+    "target": "HSM_ZYP_reconstruction_contracts",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_reconstruction_contracts.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_reconstruction_contracts.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A damaged western street rebuilt with paid timber and a civilian contractor's tool box. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_northern_campaign",
+    "target": "HSM_ZYP_northern_campaign",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_northern_campaign.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_northern_campaign.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A north-pointing compass above a staged campaign route and a maintained transport depot. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; material palettes, readable silhouettes, no invented heraldry.",
+    "runtime_verified": false
+  }
+]

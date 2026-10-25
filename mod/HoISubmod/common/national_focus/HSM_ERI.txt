@@ -1,0 +1,206 @@
+focus_tree = {
+	id = HSM_ERI_negotiated_verenia
+	country = { factor = 0 modifier = { add = 50 tag = ERI } }
+	default = no
+	continuous_focus_position = { x = 0 y = 1500 }
+	shared_focus = HSM_ERI_reconstruction
+	shared_focus = HSM_ERI_army_for_a_country
+	shared_focus = HSM_VER_GRO_open_court
+	shared_focus = HSM_ERI_FORCE_the_price_of_victory
+	shared_focus = HSM_ERI_avian_question
+	shared_focus = HSM_VER_UNI_convention
+	shared_focus = HSM_VER_ID_ERI_language_question
+	focus = {
+		id = HSM_ERI_cost_of_feud
+		icon = GFX_HSM_VER_ART_HSM_ERI_cost_of_feud
+		x = 24 y = 0 cost = 3
+		ai_will_do = { factor = 1000 }
+		available = { has_country_leader = { character = ERI_duke_vincent_erie } }
+		completion_reward = { HSM_VER_start_campaign = yes }
+	}
+	focus = {
+		id = HSM_ERI_diplomatic_settlement
+		icon = GFX_HSM_VER_ART_HSM_ERI_diplomatic_settlement
+		prerequisite = { focus = HSM_ERI_cost_of_feud }
+		mutually_exclusive = { focus = HSM_ERI_FORCE_the_price_of_victory }
+		x = 14 y = 1 cost = 3
+		ai_will_do = {
+			factor = 100
+			modifier = { factor = 0 EYR = { is_ai = no NOT = { has_country_flag = HSM_VER_diplomatic_route has_country_flag = HSM_VER_military_route } } }
+		}
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_diplomacy_tt HSM_VER_diplomatic_routes_open = yes HSM_VER_COOP_no_military_choice = yes NOT = { has_country_flag = HSM_VER_military_route } } }
+		cancel_if_invalid = yes
+		completion_reward = { custom_effect_tooltip = HSM_VER_UI_ducal_choose_diplomacy_tt hidden_effect = { if = { limit = { HSM_VER_COOP_no_military_choice = yes } HSM_VER_choose_diplomacy = yes } } }
+	}
+	focus = {
+		id = HSM_ERI_hear_petitions
+		icon = GFX_HSM_VER_ART_HSM_ERI_hear_petitions
+		prerequisite = { focus = HSM_ERI_diplomatic_settlement }
+		x = 12 y = 2 cost = 4
+		completion_reward = { country_event = { id = hsm_verenia.2 days = 1 } }
+	}
+	focus = {
+		id = HSM_ERI_family_letters
+		icon = GFX_HSM_VER_ART_HSM_ERI_family_letters
+		prerequisite = { focus = HSM_ERI_diplomatic_settlement }
+		x = 16 y = 2 cost = 3
+		completion_reward = { country_event = { id = hsm_verenia.3 days = 1 } }
+	}
+	focus = {
+		id = HSM_ERI_offer_armistice
+		icon = GFX_HSM_VER_ART_HSM_ERI_offer_armistice
+		prerequisite = { focus = HSM_ERI_reciprocal_guarantees }
+		x = 14 y = 4 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_armistice_context_tt HSM_VER_armistice_context = yes } }
+		cancel_if_invalid = yes
+		bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_peace_tt OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } } }
+		completion_reward = { custom_effect_tooltip = HSM_VER_UI_ducal_armistice_reward_tt hidden_effect = { HSM_VER_conclude_armistice = yes } }
+	}
+	focus = {
+		id = HSM_ERI_open_roads
+		icon = GFX_HSM_VER_ART_HSM_ERI_open_roads
+		prerequisite = { focus = HSM_ERI_offer_armistice }
+		x = 14 y = 5 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_peace_tt OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } } }
+		completion_reward = {
+			if = { limit = { hidden_trigger = { owns_state = 401 controls_state = 401 } } 401 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+			country_event = { id = hsm_verenia.4 days = 1 }
+		}
+	}
+	focus = {
+		id = HSM_ERI_reciprocal_guarantees
+		icon = GFX_HSM_VER_ART_HSM_ERI_reciprocal_guarantees
+		prerequisite = { focus = HSM_ERI_hear_petitions }
+		prerequisite = { focus = HSM_ERI_family_letters }
+		x = 14 y = 3 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_guarantees_tt OR = { HSM_VER_armistice_context = yes HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } } }
+		completion_reward = { HSM_VER_prepare_guarantees = yes }
+	}
+	focus = {
+		id = HSM_ERI_friendship_treaty
+		icon = GFX_HSM_VER_ART_HSM_ERI_friendship_treaty
+		prerequisite = { focus = HSM_ERI_open_roads }
+		x = 14 y = 6 cost = 7
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_peace_tt OR = { HSM_VER_armistice_valid = yes HSM_VER_negotiated_peace_valid = yes } } }
+		bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_treaty_tt HSM_VER_negotiated_peace_valid = yes } }
+		completion_reward = {
+			custom_effect_tooltip = HSM_VER_UI_ducal_treaty_reward_tt
+			custom_effect_tooltip = HSM_VER_UI_ducal_treaty_recipients_tt
+			show_ideas_tooltip = HSM_VER_peace_dividend
+			hidden_effect = { HSM_VER_conclude_treaty = yes }
+		}
+	}
+	focus = {
+		id = HSM_ERI_mandate_for_peace
+		icon = GFX_HSM_VER_ART_HSM_ERI_mandate_for_peace
+		prerequisite = { focus = HSM_ERI_friendship_treaty }
+		x = 14 y = 7 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_treaty_tt HSM_VER_negotiated_peace_valid = yes } }
+		completion_reward = { country_event = { id = hsm_verenia.40 days = 1 } }
+	}
+	focus = {
+		id = HSM_ERI_avian_association
+		icon = GFX_HSM_VER_ART_HSM_ERI_avian_association
+		prerequisite = { focus = HSM_ERI_avian_question }
+		mutually_exclusive = { focus = HSM_ERI_FORCE_avian_claim }
+		x = 42 y = 1 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_avian_available_tt HSM_VER_AVR_can_offer = yes } }
+		cancel_if_invalid = yes
+		bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_avian_bypass_tt OR = { HSM_VER_AVR_agreement_live = yes HSM_VER_AVR_absorbed = yes } } }
+		completion_reward = { custom_effect_tooltip = HSM_VER_UI_ducal_avian_offer_tt HSM_VER_AVR_offer = yes }
+	}
+	# Keep old save history without locking the new Avian route to an old invitation.
+	focus = {
+		id = HSM_ERI_invite_avian icon = GFX_HSM_VER_ART_HSM_ERI_invite_avian
+		x = 72 y = 18 cost = 3
+		allow_branch = { always = no }
+		available = { always = no }
+		completion_reward = { }
+	}
+	focus = {
+		id = HSM_ERI_common_statute
+		icon = GFX_HSM_VER_ART_HSM_ERI_common_statute
+		prerequisite = { focus = HSM_ERI_mandate_for_peace }
+		x = 14 y = 8 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_treaty_tt HSM_VER_negotiated_peace_valid = yes } }
+		bypass = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_charter_tt HSM_VER_charter_valid = yes } }
+		completion_reward = { custom_effect_tooltip = HSM_VER_UI_ducal_erie_charter_reward_tt hidden_effect = { HSM_VER_offer_charter = yes } }
+	}
+	focus = {
+		id = HSM_ERI_joint_staff
+		icon = GFX_HSM_VER_ART_HSM_ERI_joint_staff
+		prerequisite = { focus = HSM_ERI_common_statute }
+		x = 12 y = 9 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_charter_tt HSM_VER_charter_valid = yes } }
+		completion_reward = { HSM_VER_apply_joint_staff = yes army_experience = 25 }
+	}
+	focus = {
+		id = HSM_ERI_shared_services
+		icon = GFX_HSM_VER_ART_HSM_ERI_shared_services
+		prerequisite = { focus = HSM_ERI_common_statute }
+		x = 16 y = 9 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_charter_tt HSM_VER_charter_valid = yes } }
+		completion_reward = {
+			HSM_VER_apply_shared_services = yes
+			add_tech_bonus = { name = HSM_VER_common_standards_bonus bonus = 1 uses = 1 category = industry }
+			EYR = { add_tech_bonus = { name = HSM_VER_common_standards_bonus bonus = 1 uses = 1 category = industry } }
+		}
+	}
+	focus = {
+		id = HSM_ERI_first_judgement
+		icon = GFX_HSM_VER_ART_HSM_ERI_first_judgement
+		prerequisite = { focus = HSM_ERI_joint_staff }
+		prerequisite = { focus = HSM_ERI_shared_services }
+		x = 14 y = 10 cost = 3
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_charter_tt HSM_VER_charter_valid = yes } }
+		completion_reward = { HSM_VER_queue_judgement = yes }
+	}
+	focus = {
+		id = HSM_ERI_common_defence
+		icon = GFX_HSM_VER_ART_HSM_ERI_common_defence
+		prerequisite = { focus = HSM_ERI_first_judgement }
+		x = 12 y = 11 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_erie_settlement_tt HSM_VER_charter_valid = yes has_country_flag = HSM_VER_court_respected } }
+		completion_reward = {
+			custom_effect_tooltip = HSM_VER_UI_ducal_erie_defence_tt
+			hidden_effect = { set_country_flag = HSM_VER_defence_prepared }
+			add_tech_bonus = { name = HSM_VER_defence_bonus bonus = 1 uses = 1 category = support_tech }
+			if = { limit = { hidden_trigger = { HSM_VER_can_offer_defence = yes } } hidden_effect = { HSM_VER_offer_defence = yes } }
+			else_if = { limit = { hidden_trigger = { NOT = { HSM_VER_defence_league_operational = yes has_country_flag = HSM_VER_defence_pending has_country_flag = HSM_VER_defence_retry } } } country_event = { id = hsm_verenia.81 days = 1 } }
+		}
+	}
+	focus = {
+		id = HSM_ERI_keep_our_word
+		icon = GFX_HSM_VER_ART_HSM_ERI_keep_our_word
+		prerequisite = { focus = HSM_ERI_first_judgement }
+		x = 16 y = 11 cost = 5
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_erie_settlement_tt HSM_VER_charter_valid = yes has_country_flag = HSM_VER_court_respected } }
+		completion_reward = {
+			remove_ideas = HSM_VER_petition_commitments
+			if = { limit = { hidden_trigger = { owns_state = 401 controls_state = 401 } } 401 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+			country_event = { id = hsm_verenia.90 days = 30 }
+		}
+	}
+	focus = {
+		id = HSM_ERI_generation_without_feud
+		icon = GFX_HSM_VER_ART_HSM_ERI_generation_without_feud
+		prerequisite = { focus = HSM_ERI_common_defence }
+		prerequisite = { focus = HSM_ERI_keep_our_word }
+		x = 14 y = 12 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_erie_settlement_tt HSM_VER_charter_valid = yes has_country_flag = HSM_VER_court_respected } }
+		completion_reward = { hidden_effect = { set_country_flag = HSM_VER_union_established } country_event = { id = hsm_verenia.91 days = 1 } }
+	}
+	focus = {
+		id = HSM_ERI_peace_without_union
+		icon = GFX_HSM_VER_ART_HSM_ERI_peace_without_union
+		prerequisite = { focus = HSM_ERI_diplomatic_settlement }
+		x = 20 y = 5 cost = 4
+		available = { custom_trigger_tooltip = { tooltip = HSM_VER_UI_ducal_failed_conference_tt HSM_VER_conference_failed = yes } }
+		completion_reward = {
+			hidden_effect = { set_country_flag = HSM_VER_independent_settlement }
+			remove_ideas = HSM_VER_petition_commitments
+			add_tech_bonus = { name = HSM_VER_peaceful_development_bonus bonus = 1 uses = 1 category = construction_tech }
+			country_event = { id = hsm_ver_routes.2 days = 1 }
+		}
+	}
+}

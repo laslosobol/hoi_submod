@@ -1,0 +1,214 @@
+HSM_VER_REG_recover_household = {
+	if = {
+		limit = { HSM_VER_REG_can_recover_household = yes }
+		GRI = { remove_ideas = GRI_grover_vi GRI_emperor_grover_vi = { set_nationality = AVI } }
+		AVI = { set_country_flag = HSM_VER_REG_household_received }
+	}
+}
+HSM_VER_REG_request_household = {
+	if = {
+		limit = { HSM_VER_REG_context = yes AVI = { has_country_flag = HSM_VER_REG_started NOT = { has_country_flag = HSM_VER_REG_custody_retry has_country_flag = HSM_VER_REG_compact } } any_country = { HSM_VER_REG_house_host = yes } }
+		AVI = { set_country_flag = { flag = HSM_VER_REG_custody_retry value = 1 days = 90 } }
+		every_country = {
+			limit = { HSM_VER_REG_house_host = yes }
+			set_country_flag = { flag = HSM_VER_REG_custody_pending value = 1 days = 45 }
+			country_event = { id = hsm_ver_regency.12 days = 1 }
+		}
+	}
+}
+HSM_VER_REG_receive_household = {
+	if = {
+		limit = { HSM_VER_REG_custody_reply_valid = yes }
+		clr_country_flag = HSM_VER_REG_custody_pending
+		remove_ideas = GRI_grover_vi
+		GRI_emperor_grover_vi = { set_nationality = AVI }
+		AVI = { set_country_flag = HSM_VER_REG_household_received country_event = { id = hsm_ver_regency.2 days = 1 } }
+	}
+}
+HSM_VER_REG_open_proposal = {
+	AVI = {
+		set_country_flag = { flag = HSM_VER_REG_pending value = 1 days = 45 }
+		set_country_flag = { flag = HSM_VER_REG_retry value = 1 days = 90 }
+		clr_country_flag = HSM_VER_REG_refused
+		clr_country_flag = HSM_VER_REG_estates_ERI_signed
+		clr_country_flag = HSM_VER_REG_estates_EYR_signed
+		clr_country_flag = HSM_VER_REG_estates_ERI_pending
+		clr_country_flag = HSM_VER_REG_estates_EYR_pending
+		clr_country_flag = HSM_VER_REG_estates_retry
+	}
+	every_country = {
+		limit = { OR = { tag = ERI tag = EYR } HSM_VER_IMP_actual_signatory = yes is_subject = no has_capitulated = no has_war = no }
+		clr_country_flag = HSM_VER_REG_signed
+		set_country_flag = { flag = HSM_VER_REG_vote_pending value = 1 days = 45 }
+		country_event = { id = hsm_ver_regency.10 days = 1 }
+	}
+	AVI = { HSM_VER_REG_queue_estates = yes }
+}
+HSM_VER_REG_propose_regency = {
+	if = {
+		limit = { HSM_VER_REG_can_propose = yes HSM_VER_REG_local_minor = yes }
+		AVI = { set_country_flag = HSM_VER_REG_propose_regency clr_country_flag = HSM_VER_REG_propose_civil }
+		HSM_VER_REG_open_proposal = yes
+	}
+}
+HSM_VER_REG_propose_civil = {
+	if = {
+		limit = { HSM_VER_REG_can_propose = yes }
+		AVI = { set_country_flag = HSM_VER_REG_propose_civil clr_country_flag = HSM_VER_REG_propose_regency }
+		HSM_VER_REG_open_proposal = yes
+	}
+}
+HSM_VER_REG_sign = {
+	if = {
+		limit = { HSM_VER_REG_reply_valid = yes }
+		clr_country_flag = HSM_VER_REG_vote_pending
+		set_country_flag = HSM_VER_REG_signed
+		HSM_VER_REG_finish_proposal = yes
+	}
+}
+HSM_VER_REG_finish_proposal = {
+	if = {
+		limit = { HSM_VER_REG_context = yes HSM_VER_REG_both_consents = yes AVI = { has_country_flag = HSM_VER_REG_pending } }
+		AVI = {
+			clr_country_flag = HSM_VER_REG_pending
+			if = { limit = { has_country_flag = HSM_VER_REG_propose_regency HSM_VER_REG_local_minor = yes } set_country_flag = HSM_VER_REG_regency }
+			else = { set_country_flag = HSM_VER_REG_compact }
+			clr_country_flag = HSM_VER_REG_propose_regency
+			clr_country_flag = HSM_VER_REG_propose_civil
+			country_event = { id = hsm_ver_regency.11 days = 1 }
+			HSM_VER_REG_refresh_ideas = yes
+		}
+	}
+}
+HSM_VER_REG_cancel_proposal = {
+	AVI = {
+		clr_country_flag = HSM_VER_REG_pending set_country_flag = HSM_VER_REG_refused
+		clr_country_flag = HSM_VER_REG_estates_ERI_pending clr_country_flag = HSM_VER_REG_estates_EYR_pending
+		clr_country_flag = HSM_VER_REG_estates_ERI_signed clr_country_flag = HSM_VER_REG_estates_EYR_signed
+	}
+	ERI = { clr_country_flag = HSM_VER_REG_vote_pending clr_country_flag = HSM_VER_REG_signed }
+	EYR = { clr_country_flag = HSM_VER_REG_vote_pending clr_country_flag = HSM_VER_REG_signed }
+}
+HSM_VER_REG_decline = {
+	if = { limit = { HSM_VER_REG_reply_valid = yes } HSM_VER_REG_cancel_proposal = yes AVI = { country_event = { id = hsm_ver_regency.11 days = 1 } } }
+}
+HSM_VER_REG_refresh_ideas = {
+	if = {
+		limit = { HSM_VER_REG_agreement_live = yes }
+		if = { limit = { has_country_flag = HSM_VER_REG_regency NOT = { has_idea = HSM_VER_REG_joint_guardianship } } add_ideas = HSM_VER_REG_joint_guardianship }
+		if = { limit = { has_country_flag = HSM_VER_REG_compact NOT = { has_idea = HSM_VER_REG_civil_settlement } } add_ideas = HSM_VER_REG_civil_settlement }
+		if = { limit = { has_country_flag = HSM_VER_REG_guarantees NOT = { has_idea = HSM_VER_REG_reserved_rights } } add_ideas = HSM_VER_REG_reserved_rights }
+		if = { limit = { has_country_flag = HSM_VER_REG_logistics NOT = { has_idea = HSM_VER_REG_joint_logistics } } add_ideas = HSM_VER_REG_joint_logistics }
+		if = { limit = { has_country_flag = HSM_VER_REG_reserves NOT = { has_idea = HSM_VER_REG_territorial_reserves } } add_ideas = HSM_VER_REG_territorial_reserves }
+	}
+	else = { remove_ideas = HSM_VER_REG_joint_guardianship remove_ideas = HSM_VER_REG_civil_settlement remove_ideas = HSM_VER_REG_reserved_rights remove_ideas = HSM_VER_REG_joint_logistics remove_ideas = HSM_VER_REG_territorial_reserves }
+}
+HSM_VER_REG_build_city = {
+	if = {
+		limit = { hidden_trigger = { HSM_VER_REG_context = yes NOT = { has_country_flag = HSM_VER_REG_city_built } } }
+		hidden_effect = { set_country_flag = HSM_VER_REG_city_built }
+		if = {
+			limit = { hidden_trigger = { 382 = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } } }
+			382 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+		else = { add_tech_bonus = { name = HSM_VER_REG_reconstruction_bonus bonus = 1 uses = 2 category = industry } }
+	}
+}
+HSM_VER_REG_end_regency = {
+	clr_country_flag = HSM_VER_REG_regency
+	remove_ideas = HSM_VER_REG_joint_guardianship
+	set_country_flag = HSM_VER_REG_ended
+	country_event = { id = hsm_ver_regency.13 days = 1 }
+}
+HSM_VER_REG_void_pact = {
+	AVI = {
+		if = { limit = { has_country_flag = HSM_VER_REG_regency } HSM_VER_REG_end_regency = yes }
+		clr_country_flag = HSM_VER_REG_compact
+		clr_country_flag = HSM_VER_REG_majority_due
+	}
+	HSM_VER_REG_cancel_proposal = yes
+	AVI = { HSM_VER_REG_refresh_ideas = yes }
+}
+HSM_VER_REG_succeed = {
+	if = {
+		limit = { HSM_VER_REG_can_succeed = yes }
+		AVI = {
+			clr_country_flag = HSM_VER_REG_majority_due
+			clr_country_flag = HSM_VER_REG_majority_pending
+			set_country_flag = HSM_VER_REG_majority
+			remove_ideas = GRI_grover_vi
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			set_portraits = { character = GRI_emperor_grover_vi civilian = { large = "gfx/portraits/HSM_VER/grover_story.tga" } }
+			add_country_leader_role = { character = GRI_emperor_grover_vi promote_leader = yes country_leader = { desc = HSM_VER_REG_grover_desc expire = "1965.1.1" ideology = constitutional_monarchism traits = { } } }
+			HSM_VER_REG_refresh_ideas = yes
+		}
+	}
+}
+HSM_VER_REG_queue_scenes = {
+	if = {
+		limit = { HSM_VER_REG_context = yes }
+		if = { limit = { has_completed_focus = HSM_VER_REG_agreement_for_herzland HSM_VER_REG_can_propose = yes NOT = { has_country_flag = HSM_VER_REG_proposal_seen has_country_flag = HSM_VER_REG_proposal_scene } } set_country_flag = { flag = HSM_VER_REG_proposal_scene value = 1 days = 30 } country_event = { id = hsm_ver_regency.3 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_VER_REG_defence_articles HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_defence_resolved has_country_flag = HSM_VER_REG_defence_pending } } set_country_flag = { flag = HSM_VER_REG_defence_pending value = 1 days = 30 } country_event = { id = hsm_ver_regency.5 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_VER_REG_schools_and_witnesses HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_school_seen has_country_flag = HSM_VER_REG_school_pending } } set_country_flag = { flag = HSM_VER_REG_school_pending value = 1 days = 30 } country_event = { id = hsm_ver_regency.4 days = 1 } }
+		if = { limit = { has_completed_focus = HSM_VER_REG_petitions_to_the_council HSM_VER_REG_agreement_live = yes NOT = { has_country_flag = HSM_VER_REG_petition_seen has_country_flag = HSM_VER_REG_petition_pending } } set_country_flag = { flag = HSM_VER_REG_petition_pending value = 1 days = 30 } country_event = { id = hsm_ver_regency.6 days = 1 } }
+	}
+}
+HSM_VER_REG_maintain = {
+	HSM_VER_REG_queue_estates = yes
+	# A lost deadline event must not leave either House's assent permanently pending.
+	if = {
+		limit = { has_country_flag = HSM_VER_REG_started NOT = { has_country_flag = HSM_VER_REG_pending has_country_flag = HSM_VER_REG_regency has_country_flag = HSM_VER_REG_compact has_country_flag = HSM_VER_REG_majority has_country_flag = HSM_VER_REG_refused has_country_flag = HSM_VER_REG_majority_due } OR = { has_country_flag = HSM_VER_REG_propose_regency has_country_flag = HSM_VER_REG_propose_civil } }
+		HSM_VER_REG_cancel_proposal = yes
+		country_event = { id = hsm_ver_regency.15 days = 1 }
+	}
+	if = {
+		limit = { has_country_flag = HSM_VER_REG_regency }
+		if = {
+			limit = { HSM_VER_REG_local_adult = yes }
+			clr_country_flag = HSM_VER_REG_regency remove_ideas = HSM_VER_REG_joint_guardianship
+			set_country_flag = HSM_VER_REG_majority_due
+		}
+		else_if = { limit = { NOT = { HSM_VER_REG_local_minor = yes } } HSM_VER_REG_end_regency = yes }
+		else_if = { limit = { OR = { NOT = { has_government = neutrality } NOT = { has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } } has_completed_focus = the_second_winterfest_ball has_completed_focus = communists_win has_completed_focus = loyalists_win has_completed_focus = fascists_win } } HSM_VER_REG_end_regency = yes }
+	}
+	if = { limit = { HSM_VER_REG_can_succeed = yes NOT = { has_country_flag = HSM_VER_REG_majority_pending } } set_country_flag = { flag = HSM_VER_REG_majority_pending value = 1 days = 30 } country_event = { id = hsm_ver_regency.14 days = 1 } }
+	if = { limit = { has_country_flag = HSM_VER_REG_majority_due OR = { has_global_flag = GRI_grover_vi_dead NOT = { has_character = GRI_emperor_grover_vi } NOT = { has_government = neutrality } NOT = { has_country_leader = { character = AVI_lady_katrina_avian ruling_only = yes } } has_completed_focus = the_second_winterfest_ball has_completed_focus = communists_win has_completed_focus = loyalists_win has_completed_focus = fascists_win } } clr_country_flag = HSM_VER_REG_majority_due HSM_VER_REG_end_regency = yes }
+	HSM_VER_REG_refresh_ideas = yes
+	HSM_VER_REG_queue_scenes = yes
+}
+
+# Each absorbed House speaks through its own estate sitting in AVI, never a dead tag.
+HSM_VER_REG_queue_estates = {
+	if = {
+		limit = { HSM_VER_REG_estates_reply_context = yes NOT = { has_country_flag = HSM_VER_REG_estates_retry } }
+		if = {
+			limit = { has_country_flag = HSM_VER_UNI_absorbed_ERI NOT = { has_country_flag = HSM_VER_REG_estates_ERI_signed } }
+			set_country_flag = { flag = HSM_VER_REG_estates_ERI_pending value = 1 days = 45 }
+			country_event = { id = hsm_ver_regency.16 days = 1 }
+		}
+		if = {
+			limit = { has_country_flag = HSM_VER_UNI_absorbed_EYR NOT = { has_country_flag = HSM_VER_REG_estates_EYR_signed } }
+			set_country_flag = { flag = HSM_VER_REG_estates_EYR_pending value = 1 days = 45 }
+			country_event = { id = hsm_ver_regency.17 days = 1 }
+		}
+		set_country_flag = { flag = HSM_VER_REG_estates_retry value = 1 days = 90 }
+	}
+}
+HSM_VER_REG_estates_ERI_sign = {
+	if = {
+		limit = { HSM_VER_REG_estates_ERI_reply_valid = yes }
+		clr_country_flag = HSM_VER_REG_estates_ERI_pending
+		set_country_flag = HSM_VER_REG_estates_ERI_signed
+		HSM_VER_REG_finish_proposal = yes
+		HSM_VER_REG_refresh_ideas = yes
+	}
+}
+HSM_VER_REG_estates_EYR_sign = {
+	if = {
+		limit = { HSM_VER_REG_estates_EYR_reply_valid = yes }
+		clr_country_flag = HSM_VER_REG_estates_EYR_pending
+		set_country_flag = HSM_VER_REG_estates_EYR_signed
+		HSM_VER_REG_finish_proposal = yes
+		HSM_VER_REG_refresh_ideas = yes
+	}
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "HSM_EYR_district_laboratories",
+    "target": "HSM_EYR_district_laboratories",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_district_laboratories.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_district_laboratories.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A shared laboratory cabinet opened to electrical instruments borrowed from a workshop. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_technical_fellowships",
+    "target": "HSM_EYR_technical_fellowships",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_technical_fellowships.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_technical_fellowships.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A dedicated research bench with a stipend coin tray and an apprentice's spare stool. Palette: Zinc-white enamel, grey precision steel and copper contacts; restrained turquoise glass. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_teacher_training",
+    "target": "HSM_EYR_teacher_training",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_teacher_training.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_teacher_training.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A residential teacher-college doorway with a packed teaching satchel and classroom bell. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_public_libraries",
+    "target": "HSM_EYR_public_libraries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_public_libraries.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_public_libraries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A lending shelf mounted on a village book cart, with an open illustrated manual. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_universal_schooling",
+    "target": "HSM_EYR_universal_schooling",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_universal_schooling.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_universal_schooling.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A school attendance board of simple counters beside an adult-sized writing desk. Palette: Ivory pages with differentiated muted green, russet or plum bindings; no national colors inferred from language. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_district_housing",
+    "target": "HSM_EYR_district_housing",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_district_housing.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_district_housing.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A workshop-side housing terrace with repaired guttering and a household key. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_social_insurance",
+    "target": "HSM_EYR_social_insurance",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_social_insurance.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_social_insurance.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A local insurance payment hatch dispensing coins beside a bandaged medical kit. Palette: Linen-white care materials, muted sea-green glass and iron fittings; food keeps natural colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_rural_credit",
+    "target": "HSM_EYR_rural_credit",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_rural_credit.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_rural_credit.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A cooperative credit balance holding a farm tool against a measured coin loan. Palette: Ripe straw, living sage-green and weathered timber; machinery remains iron, not golden. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_public_utilities",
+    "target": "HSM_EYR_public_utilities",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_public_utilities.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_public_utilities.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A municipal pumping wheel feeding a water main beneath newly wired lighting. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_EYR_lasting_prosperity",
+    "target": "HSM_EYR_lasting_prosperity",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_EYR_development.txt",
+    "source": "art/verenia/HSM_EYR_lasting_prosperity.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_EYR_lasting_prosperity.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A village doorstep with a delivery basket, sound roof beam and steady lamp. Palette: Lime-plaster ivory, terracotta tiles and grey structural metal; no gold architecture. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and vacuum tubes, no modern screens. Material-specific colors, no gold outline or decorative badge frame. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Any open book has a simple geometric or botanical diagram, no blank documents or fictitious writing. Keys have simple oval heads, no figurative ornament. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed: enamel/steel/turquoise science, differentiated education bindings, plaster/terracotta housing; no invented national heraldry.",
+    "runtime_verified": false
+  }
+]

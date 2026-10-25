@@ -1,0 +1,31 @@
+HSM_VER_eyr_government_available = {
+	EYR = { exists = yes is_subject = no has_capitulated = no has_country_leader = { character = EYR_duke_iovinus_eyrie } }
+}
+HSM_VER_eyr_armistice_reply_valid = {
+	HSM_VER_armistice_context = yes
+	ERI = { has_country_flag = HSM_VER_armistice_pending has_country_flag = HSM_VER_armistice_from_eyrie }
+}
+HSM_VER_eyr_treaty_reply_valid = {
+	HSM_VER_armistice_valid = yes
+	HSM_VER_eyr_government_available = yes
+	ERI = { has_country_flag = HSM_VER_treaty_pending has_country_flag = HSM_VER_treaty_from_eyrie }
+}
+HSM_VER_eyr_charter_reply_valid = {
+	HSM_VER_negotiated_peace_valid = yes
+	HSM_VER_eyr_government_available = yes
+	ERI = { has_country_flag = HSM_VER_charter_pending has_country_flag = HSM_VER_charter_from_eyrie NOT = { has_country_flag = HSM_VER_charter_signed } }
+}
+HSM_VER_eyr_defence_reply_valid = {
+	HSM_VER_can_form_defensive_league = yes
+	ERI = { has_country_flag = HSM_VER_defence_pending has_country_flag = HSM_VER_defence_host_eyrie NOT = { has_country_flag = HSM_VER_defence_accepted } }
+}
+HSM_VER_eyr_command_case_unresolved = {
+	HSM_VER_charter_valid = yes
+	HSM_VER_eyr_government_available = yes
+	EYR = { has_completed_focus = HSM_EYR_the_return_order NOT = { has_country_flag = HSM_EYR_command_case_resolved } }
+}
+HSM_VER_eyr_settlement_ready = {
+	HSM_VER_charter_valid = yes
+	HSM_VER_eyr_government_available = yes
+	EYR = { has_country_flag = HSM_EYR_command_settled NOT = { has_country_flag = HSM_EYR_command_dispute } }
+}

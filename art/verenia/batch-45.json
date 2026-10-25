@@ -1,0 +1,108 @@
+[
+  {
+    "id": "HSM_ZYP_southern_campaign",
+    "target": "HSM_ZYP_southern_campaign",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_southern_campaign.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_southern_campaign.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: A south-pointing campaign arrow beside a furnace and industrial rail siding. Palette: Khaki canvas, dark steel and muted field green; warm leather only on existing straps or grips. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; distinguishable campaign and administrative subjects, restrained palettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_eastern_campaign",
+    "target": "HSM_ZYP_eastern_campaign",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_eastern_campaign.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_eastern_campaign.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An eastward sequence of supply waypoints beside a marching-route compass and packed provisions. Palette: Olive canvas, pale packing timber and dark iron; counters differentiated by value rather than heraldic colors. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; distinguishable campaign and administrative subjects, restrained palettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_seats_for_new_crowns",
+    "target": "HSM_ZYP_seats_for_new_crowns",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_seats_for_new_crowns.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_seats_for_new_crowns.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: An additional negotiating chair beside an independent treasury key and a conditional shared-office clasp. Palette: Pewter coins and iron vaults, green account bindings and ivory slips; brass limited to real fittings. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; distinguishable campaign and administrative subjects, restrained palettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_accounts_after_campaign",
+    "target": "HSM_ZYP_accounts_after_campaign",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_accounts_after_campaign.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_accounts_after_campaign.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "One painted HOI4/EaW focus icon. Subject: Separate responsibility trays dividing owned, dependent and allied workshop orders beneath an audit lens. Palette: Work-worn iron and zinc, subdued green machine enamel and copper or wood only where applicable. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; distinguishable campaign and administrative subjects, restrained palettes, no invented heraldry.",
+    "runtime_verified": false
+  },
+  {
+    "id": "HSM_ZYP_crown_and_countries",
+    "target": "HSM_ZYP_crown_and_countries",
+    "kind": "focus",
+    "file": "mod/HoISubmod/common/national_focus/HSM_VER_zypressen.txt",
+    "source": "art/verenia/HSM_ZYP_crown_and_countries-review-v2.png",
+    "portrait": false,
+    "exports": [
+      {
+        "path": "mod/HoISubmod/gfx/interface/goals/HSM_VER_ART_HSM_ZYP_crown_and_countries.tga",
+        "width": 99,
+        "height": 86
+      }
+    ],
+    "prompt": "Recompose this cropped council desk icon as a compact isolated complete tabletop OBJECT group. Replace the huge cropped desk with one small oval dark-brown council desk and a single burgundy upholstered chair behind it; show ALL desk sides, complete legs/base, and entire chair. Keep a folded schematic road map, one strapped map folder, open plain compass and closed brown travel satchel on desk; remove the extra open ledger and binoculars to keep silhouette legible at 99x86. Preserve period painted HOI4 rendering, brown wood, muted burgundy leather, ivory paper, sparse real brass fittings. Map has schematic inland lines only, not Earth. No crowns, figures, flags, heraldry, letters or backdrop. All objects fully contained within central 80 percent of canvas, generous alpha margin.",
+    "approved": true,
+    "review": "Source and native-size preview reviewed; distinguishable campaign and administrative subjects, restrained palettes, no invented heraldry.",
+    "runtime_verified": false,
+    "original_prompt": "One painted HOI4/EaW focus icon. Subject: An imperial administration desk with bounded jurisdiction maps and an experienced field-service kit; no universal annexation imagery. Palette: Burgundy upholstery, dark wood and pale stone; narrow aged-brass fittings only, never automatic crown or lilies. Compact bold silhouette readable at 99x86, one primary object and at most two subordinate motifs. Transparent exterior. Period 1930s technology only, analog dials and valves, no modern screens. Material-specific colors, no gold outline or decorative badge frame. Country names describe context only. No invented heraldry, flags, crowns, lilies, insignia, text or pseudo-writing. No embossed symbols on wax seals: their centers are smooth plain wax. Medal tokens show plain reverse. No people, human anatomy, human silhouettes, animals, Earth maps or globes. Maps are simple fictional inland river/road diagrams without coastlines, labels or modern location pins. Open documents show structured tables of dots or geometric diagrams, not blank pages. Keys have plain oval heads. No extra objects.",
+    "final_review": {
+      "approved": true,
+      "review": "Main approved corrected source/native artwork; runtime QA pending.",
+      "correction_manifest": "art/verenia/final-review/corrections.json",
+      "correction_prompt": "Recompose this cropped council desk icon as a compact isolated complete tabletop OBJECT group. Replace the huge cropped desk with one small oval dark-brown council desk and a single burgundy upholstered chair behind it; show ALL desk sides, complete legs/base, and entire chair. Keep a folded schematic road map, one strapped map folder, open plain compass and closed brown travel satchel on desk; remove the extra open ledger and binoculars to keep silhouette legible at 99x86. Preserve period painted HOI4 rendering, brown wood, muted burgundy leather, ivory paper, sparse real brass fittings. Map has schematic inland lines only, not Earth. No crowns, figures, flags, heraldry, letters or backdrop. All objects fully contained within central 80 percent of canvas, generous alpha margin.",
+      "previous_source": "art/verenia/HSM_ZYP_crown_and_countries.png",
+      "source_sha256": "4844277194b83a08f2e9cf046c294a17fd94e7810420eb470abd39e09a0a3f12",
+      "backup": "art/verenia/final-review/replaced/20261025T114541Z-cb76c21b/HSM_ZYP_crown_and_countries",
+      "runtime_verified": false
+    }
+  }
+]

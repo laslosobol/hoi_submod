@@ -1,0 +1,99 @@
+shared_focus = {
+	id = HSM_VER_REG_after_defence icon = GFX_HSM_VER_ART_HSM_VER_REG_after_defence
+	x = 50 y = 12 cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_context_tt HSM_VER_REG_context = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_context = yes } } hidden_effect = { set_country_flag = HSM_VER_REG_started } country_event = { id = hsm_ver_regency.1 days = 1 } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_household_file icon = GFX_HSM_VER_ART_HSM_VER_REG_household_file
+	prerequisite = { focus = HSM_VER_REG_after_defence }
+	x = 48 y = 13 cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_context_tt HSM_VER_REG_context = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_context = yes } } custom_effect_tooltip = HSM_VER_REG_custody_tt hidden_effect = { HSM_VER_REG_recover_household = yes } hidden_effect = { HSM_VER_REG_request_household = yes } country_event = { id = hsm_ver_regency.2 days = 2 } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_civilian_contracts icon = GFX_HSM_VER_ART_HSM_VER_REG_civilian_contracts
+	prerequisite = { focus = HSM_VER_REG_after_defence }
+	x = 52 y = 13 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_context_tt HSM_VER_REG_context = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_context = yes } } HSM_VER_REG_build_city = yes } }
+}
+shared_focus = {
+	id = HSM_VER_REG_agreement_for_herzland icon = GFX_HSM_VER_ART_HSM_VER_REG_agreement_for_herzland
+	prerequisite = { focus = HSM_VER_REG_household_file }
+	prerequisite = { focus = HSM_VER_REG_civilian_contracts }
+	x = 50 y = 14 cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_context_tt HSM_VER_REG_context = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_FUI_reg_agreement_effect_tt hidden_effect = { if = { limit = { HSM_VER_REG_context = yes } custom_effect_tooltip = HSM_VER_REG_consent_tt HSM_VER_REG_queue_scenes = yes } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_schools_and_witnesses icon = GFX_HSM_VER_ART_HSM_VER_REG_schools_and_witnesses
+	prerequisite = { focus = HSM_VER_REG_agreement_for_herzland }
+	x = 48 y = 15 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_FUI_reg_schools_effect_tt if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes } } add_tech_bonus = { name = HSM_VER_REG_industry_bonus bonus = 0.75 uses = 2 category = industry } hidden_effect = { HSM_VER_REG_queue_scenes = yes } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_defence_articles icon = GFX_HSM_VER_ART_HSM_VER_REG_defence_articles
+	prerequisite = { focus = HSM_VER_REG_agreement_for_herzland }
+	x = 52 y = 15 cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_FUI_reg_defence_effect_tt hidden_effect = { if = { limit = { HSM_VER_REG_agreement_live = yes } HSM_VER_REG_queue_scenes = yes } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_petitions_to_the_council icon = GFX_HSM_VER_ART_HSM_VER_REG_petitions_to_the_council
+	prerequisite = { focus = HSM_VER_REG_schools_and_witnesses }
+	prerequisite = { focus = HSM_VER_REG_defence_articles }
+	x = 50 y = 16 cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_prior_hearings_tt has_country_flag = HSM_VER_REG_defence_resolved has_country_flag = HSM_VER_REG_school_seen } }
+	cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_FUI_reg_petitions_effect_tt hidden_effect = { if = { limit = { HSM_VER_REG_agreement_live = yes has_country_flag = HSM_VER_REG_defence_resolved has_country_flag = HSM_VER_REG_school_seen } HSM_VER_REG_queue_scenes = yes } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_rebuilding_the_quarters icon = GFX_HSM_VER_ART_HSM_VER_REG_rebuilding_the_quarters
+	prerequisite = { focus = HSM_VER_REG_petitions_to_the_council }
+	x = 48 y = 17 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_petitions_heard_tt has_country_flag = HSM_VER_REG_petition_seen } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes has_country_flag = HSM_VER_REG_petition_seen } } army_experience = 25 add_tech_bonus = { name = HSM_VER_REG_reconstruction_bonus bonus = 1 uses = 2 category = construction_tech } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_reserved_house_rights icon = GFX_HSM_VER_ART_HSM_VER_REG_reserved_house_rights
+	prerequisite = { focus = HSM_VER_REG_petitions_to_the_council }
+	x = 52 y = 17 cost = 5
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_petitions_heard_tt has_country_flag = HSM_VER_REG_petition_seen } }
+	cancel_if_invalid = yes
+	completion_reward = { custom_effect_tooltip = HSM_VER_FUI_reg_rights_effect_tt show_ideas_tooltip = HSM_VER_REG_reserved_rights hidden_effect = { if = { limit = { HSM_VER_REG_agreement_live = yes has_country_flag = HSM_VER_REG_petition_seen } set_country_flag = HSM_VER_REG_guarantees HSM_VER_REG_refresh_ideas = yes } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_a_finite_guardianship icon = GFX_HSM_VER_ART_HSM_VER_REG_a_finite_guardianship
+	prerequisite = { focus = HSM_VER_REG_rebuilding_the_quarters }
+	prerequisite = { focus = HSM_VER_REG_reserved_house_rights }
+	x = 48 y = 18 cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_guardianship_tt OR = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_successor_government = yes } } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes OR = { has_country_flag = HSM_VER_REG_regency HSM_VER_REG_successor_government = yes } } } country_event = { id = hsm_ver_regency.7 days = 1 } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_a_union_without_a_throne icon = GFX_HSM_VER_ART_HSM_VER_REG_a_union_without_a_throne
+	prerequisite = { focus = HSM_VER_REG_rebuilding_the_quarters }
+	prerequisite = { focus = HSM_VER_REG_reserved_house_rights }
+	x = 52 y = 18 cost = 3
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_civil_compact_tt has_country_flag = HSM_VER_REG_compact } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes has_country_flag = HSM_VER_REG_compact } } country_event = { id = hsm_ver_regency.8 days = 1 } } }
+}
+shared_focus = {
+	id = HSM_VER_REG_the_settled_frontier icon = GFX_HSM_VER_ART_HSM_VER_REG_the_settled_frontier
+	prerequisite = { focus = HSM_VER_REG_a_finite_guardianship focus = HSM_VER_REG_a_union_without_a_throne }
+	x = 50 y = 19 cost = 4
+	available = { custom_trigger_tooltip = { tooltip = HSM_VER_FUI_reg_agreement_tt HSM_VER_REG_agreement_live = yes } }
+	cancel_if_invalid = yes
+	completion_reward = { if = { limit = { hidden_trigger = { HSM_VER_REG_agreement_live = yes } } hidden_effect = { set_country_flag = HSM_VER_REG_settlement_finished } country_event = { id = hsm_ver_regency.9 days = 1 } } }
+}
