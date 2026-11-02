@@ -1,0 +1,142 @@
+﻿l_english:
+ HSM_AET_opening:0 "Letters Without an Answer"
+ HSM_AET_opening_desc:0 "The imperial seal still appears on old agreements in Cloudet's cabinet, but the couriers bring no dependable reply. Greifwald cannot settle every quarrel beyond its borders. It can decide whether the obligations once written in those letters still mean something to the families now asking for help."
+ HSM_AET_focus_opening_effect_tt:0 "Opens the relief correspondence and establishes Greifwald's responsibility towards those displaced by the imperial crisis."
+
+ HSM_AET_refuge:0 "Rooms for the Displaced"
+ HSM_AET_refuge_desc:0 "The arrivals carry tools, account books and addresses that may no longer exist. Beds must be found before their names can be entered neatly in a register. The imperial household deserves an honest inquiry into its whereabouts; an empty room is no evidence that its intended occupant has arrived."
+ HSM_AET_focus_refuge_effect_tt:0 "Receives refugees and investigates the household's whereabouts. Grover can be rescued from the dissolved imperial court after securing Griffenheim, provided he has no other surviving custodian."
+
+ HSM_AET_home_budget:0 "The County's Own Table"
+ HSM_AET_home_budget_desc:0 "The village deputations have brought their own lists: roof tiles, seed grain, unpaid bills. They have heard much about duties to the crown and little about duties to their neighbours. Before another promise leaves the chancery, the county must agree who will pay for it and who may inspect the accounts."
+ HSM_AET_focus_home_budget_effect_tt:0 "Chooses between a public relief budget and private credit, with different obligations for the county."
+
+ HSM_AET_congress:0 "A Congress of Those Present"
+ HSM_AET_congress_desc:0 "The delegates have travelled from places our officials can actually reach. Some speak for old communities, others for towns still repairing their gates. Their signatures must describe the authority they are willing to entrust to a common administration, and the boundaries beyond which that authority does not run."
+ HSM_AET_focus_congress_effect_tt:0 "Convenes representatives of the lands actually administered by Greifwald to approve a limited territorial administration."
+
+ HSM_AET_mandate:0 "A Duty Accepted Freely"
+ HSM_AET_mandate_desc:0 "Shelter does not by itself confer the right to govern in another's name. Grover's place in the household and his wishes must be heard before any public mandate is proclaimed. Whether the task is guardianship or a transition to adult responsibility, it begins with consent and a clear account of its limits."
+ HSM_AET_focus_mandate_effect_tt:0 "Offers lawful guardianship or an adult transition mandate. Grover may instead remain a protected private guest."
+
+ HSM_AET_household:0 "Beyond the Palace Door"
+ HSM_AET_household_desc:0 "The household has its timetable, its tutors and its carefully chosen visitors. Beyond the door are classrooms, workshops and neighbours with less carefully prepared opinions. The way Grover meets them will shape what he learns about the country, whether those meetings belong to an education or to the duties of an adult."
+ HSM_AET_focus_household_effect_tt:0 "Chooses an open civic education or a court-centred upbringing; adult Grover receives the corresponding programme of public visits."
+
+ HSM_AET_court_accounts:0 "The Household Ledger"
+ HSM_AET_court_accounts_desc:0 "A court requires more than a roof. Someone must pay its teachers, servants and suppliers, and those who pay will expect to be heard. The ledger can lie open beside the county's accounts, or it can remain in the hands of benefactors whose generosity carries obligations of its own."
+ HSM_AET_focus_court_accounts_effect_tt:0 "Chooses public court accounts or patron financing, establishing the obligations later examined at the working table."
+
+ HSM_AET_service:0 "An Oath with Limits"
+ HSM_AET_service_desc:0 "The officers want to know whose orders will survive the next change of government. The communities want to know who may call their sons and daughters away from home. Both deserve an answer written in terms that can be enforced when a celebrated commander decides that custom gives him a freer hand."
+ HSM_AET_focus_service_effect_tt:0 "Settles military service through constitutional rules or agreements with officers. The oath concerns the administered country."
+
+ HSM_AET_working_table:0 "The Papers Between Us"
+ HSM_AET_working_table_desc:0 "A complaint against a court financier has reached the same desk as the service agreements. The signatures are familiar; so are the promises made to obtain them. Grover will have questions about what the government has protected, and the answer must reckon with the bargains already struck."
+ HSM_AET_focus_working_table_effect_tt:0 "Opens the financier's case, followed by Grover's response to the judgement and earlier service agreements. Both conversations must be resolved before the handover terms can be signed."
+
+ HSM_AET_prepare:0 "The Keys Held in Trust"
+ HSM_AET_prepare_desc:0 "The drafts are ready to leave the chancery. They describe the places being administered, the obligations owed to their inhabitants and the terms on which the keys will eventually change hands. A promise made for Grover's future must bind those making it as firmly as those expected to inherit it."
+ HSM_AET_focus_prepare_effect_tt:0 "Opens the handover agreement. Signing prepares the transfer; it waits until after §Y21 May 1021§!, with Grover alive and present, peace and the treaty’s territorial and legal conditions met.\nOnly after the actual handover, Greifwald’s compact permanently gains §G+10%§! production efficiency cap and §G+5%§! research speed."
+
+ HSM_AET_obituary:0 "The Name in the Black Border"
+ HSM_AET_obituary_desc:0 "The report has been checked against the surviving records. There can be no comfort now in waiting for another courier. Whatever Greifwald once hoped to do for Grover, it must first speak his name honestly, honour the life that has ended and hear those whose own memories do not fit a proclamation."
+ HSM_AET_focus_obituary_effect_tt:0 "Confirms the mourning for Grover and opens a civil continuation, including when his death interrupts an existing guardianship."
+
+ HSM_AET_interim:0 "Until the Assembly Meets"
+ HSM_AET_interim_desc:0 "The offices must open tomorrow while the administered lands decide how they will be governed after Grover’s death. Clerks need instructions and villages need someone who can answer a petition. An interim administration can keep those obligations alive while leaving the permanent settlement to the representatives."
+ HSM_AET_focus_interim_effect_tt:0 "Establishes a limited interim administration pending the constituent settlement, without claiming Grover’s crown."
+
+ HSM_AET_delegates:0 "Every District at the Table"
+ HSM_AET_delegates_desc:0 "The county is small, but its chancery has become the meeting place for a much wider country. Old communities ask for an equal voice; populous districts ask that their inhabitants be counted. The order of seats will determine whose objections the new union must learn to hear."
+ HSM_AET_focus_delegates_effect_tt:0 "Chooses equal territorial representation or representation by population for the constituent assembly."
+
+ HSM_AET_union:0 "A Union by Consent"
+ HSM_AET_union_desc:0 "The charter has returned from the districts with corrections in several different hands. Its authority will rest on those signatures and on the administration's willingness to observe them. Cloudet's county may keep its history and its title; the common state must find its own foundations among the people who have agreed to build it."
+ HSM_AET_focus_union_effect_tt:0 "Ratifies a state union by consent of the administered lands, with its own civil institutions and a distinct place for the county."
+
+ HSM_AET_revenues:0 "What the Districts Keep"
+ HSM_AET_revenues_desc:0 "The first common accounts have arrived with requests written in the margins. A bridge matters urgently to the district beside it; a dependable treasury matters to every district at once. The union must decide how much discretion belongs near the work and how much responsibility belongs at the centre."
+ HSM_AET_focus_revenues_effect_tt:0 "Chooses local budget discretion or a central revenue administration for the union."
+
+ HSM_AET_succession:0 "The Office Beyond the Name"
+ HSM_AET_succession_desc:0 "The constitution needs an answer to a question no prudent ruler enjoys asking: who takes the chair when it is empty? The county has its own inheritance, but the chair of the union carries obligations entrusted by its members. The rules for choosing that officeholder must be clear enough for a future assembly to follow without awaiting a family decision."
+ HSM_AET_focus_succession_effect_tt:0 "Separates the hereditary county from the elective chair of the union, choosing election through an assembly or a territorial council."
+
+ HSM_AET_winter:0 "The First Winter Budget"
+ HSM_AET_winter_desc:0 "The roads are harder now, and every late delivery has a name attached to it. The treasury's promises must reach workshops, classrooms and households before the weather closes in. This is the first season in which the union will be judged by the institutions it has built and the ordinary obligations they can fulfil."
+ HSM_AET_focus_winter_effect_tt:0 "Concludes the union's founding programme with its first winter budget, testing the political settlement and all four domestic projects."
+
+ HSM_AET_workshops:0 "Tools Brought out of Storage"
+ HSM_AET_workshops_desc:0 "Behind the shuttered shop fronts are lathes that can still turn and benches waiting for skilled claws. Refugee craftsmen and local apprentices have begun comparing what each can offer. The administration can give their arrangements a dependable place in the county's rebuilding."
+ HSM_AET_focus_workshops_effect_tt:0 "Builds a civilian workshop in an eligible homeland state, or supports industrial research when construction is unavailable. The compact gains §G+10%§! construction speed."
+
+ HSM_AET_roads:0 "Roads That Reach a Door"
+ HSM_AET_roads_desc:0 "A line on the map is of little use when the last bridge has washed away. Surveyors have begun following the routes that bring food, letters and spare parts to an actual destination. Their reports start with the county's roads and the approaches to Griffenheim, where promised deliveries become real obligations."
+ HSM_AET_focus_roads_effect_tt:0 "Improves roads in eligible, fully controlled states in the county and Griffenheim. The compact gains §G−10%§! supply consumption."
+
+ HSM_AET_scholars:0 "A Place for the Scholars"
+ HSM_AET_scholars_desc:0 "The displaced teachers have brought fragments of libraries, lecture notes and habits of argument. Local schools can offer rooms, but a lasting welcome requires colleagues, pupils and work worth doing. Let the workshops and classrooms become places where an interrupted vocation can begin again."
+ HSM_AET_focus_scholars_effect_tt:0 "Supports electronics research and improves literacy where the existing education conditions allow it. The compact gains §G+5%§! research speed."
+
+ HSM_AET_demobilisation:0 "A Trade after Service"
+ HSM_AET_demobilisation_desc:0 "The discharge papers are only the beginning of a journey home. Some veterans have no workshop to return to; others need a trade they can practise with the injuries they carry. The county must make room for them in its ordinary life, while preserving the useful experience they can pass to those still serving."
+ HSM_AET_focus_demobilisation_effect_tt:0 "Preserves military experience and relieves poverty where existing conditions allow it. The compact gains §G−10%§! army training time."
+
+ HSM_AET_letters:0 "A Different Hand"
+ HSM_AET_letters_desc:0 "The signature is almost familiar. The promise above it is not the promise remembered by those who heard it made. Older correspondence lies beside the new orders, waiting for someone with standing to ask why the handwriting and the recollections have begun to diverge."
+ HSM_AET_focus_letters_effect_tt:0 "Begins an open or discreet investigation into the ruler's identity. A discreet inquiry leaves a later cost when the truth is disclosed."
+
+ HSM_AET_audience:0 "Behind the Closed Door"
+ HSM_AET_audience_desc:0 "The audience has been arranged without the usual procession of attendants. Letters are laid out in the order they were written, and questions are asked without supplying the answers. Whoever stands behind Cloudet's public name must now answer for the promises attached to it."
+ HSM_AET_focus_audience_effect_tt:0 "Confronts the impostor and records Trimmel’s true identity, preparing the evidence for a public hearing."
+
+ HSM_AET_hearing:0 "The Name before the Assembly"
+ HSM_AET_hearing_desc:0 "The record can no longer remain inside the palace. Witnesses bring memories of decisions that changed their lives, and the assembly must decide what those decisions mean once the speaker's identity is known. Any authority granted after this hearing must carry an honest name and enforceable limits."
+ HSM_AET_focus_hearing_effect_tt:0 "Allows the available Count to return, or a civic council to take responsibility if he is absent; alternatively, publicly ratifies Trimmel as a constrained protector."
+
+ HSM_AET_signature:0 "Under One's Own Name"
+ HSM_AET_signature_desc:0 "The final document leaves no room for an assumed signature. It must acknowledge who now answers for the government, what is owed to those deceived and which obligations remain binding. When it is read aloud, every listener should know exactly whose promise has been placed before them."
+ HSM_AET_focus_signature_effect_tt:0 "Signs the identity settlement appropriate to the hearing's outcome, resolves compensation and ends the suspension of lawful ratification."
+
+ HSM_AET_focus_can_open_tt:0 "Independent Greifwald has not capitulated and retains its pragmatic government."
+ HSM_AET_focus_active_tt:0 "Greifwald's common administration remains in force."
+ HSM_AET_focus_can_congress_tt:0 "Greifwald’s relief administration is active; any impersonation crisis has been lawfully settled."
+ HSM_AET_focus_can_mandate_tt:0 "Grover is alive and present under Greifwald’s protection."
+ HSM_AET_focus_regency_tt:0 "The lawful mandate for the living Grover remains in force."
+ HSM_AET_focus_can_union_tt:0 "Grover’s death has been confirmed."
+ HSM_AET_focus_union_work_tt:0 "Mourning has concluded and the lawful civil settlement can proceed."
+ HSM_AET_focus_can_prepare_tt:0 "The mandate, hearings and domestic projects permit a peaceful handover agreement."
+ HSM_AET_focus_can_finish_union_tt:0 "The succession settlement and domestic projects are ready for the first winter budget."
+ HSM_AET_focus_crisis_tt:0 "The ruler's substitution remains an unresolved public matter."
+ HSM_AET_focus_can_hear_tt:0 "Trimmel's identity has been recorded and awaits public judgement."
+ HSM_AET_focus_can_sign_tt:0 "The hearing has ended and its settlement awaits a signature."
+
+ HSM_AET_focus_opening_done_tt:0 "The relief correspondence has been answered."
+ HSM_AET_focus_refuge_done_tt:0 "The refugees' reception has been settled."
+ HSM_AET_focus_home_budget_done_tt:0 "The county has chosen how to fund relief."
+ HSM_AET_focus_congress_done_tt:0 "The congress has approved the common administration."
+ HSM_AET_focus_mandate_done_tt:0 "The household has answered the proposal of a public mandate."
+ HSM_AET_focus_household_done_tt:0 "Grover's education or civic visits have been agreed."
+ HSM_AET_focus_court_accounts_done_tt:0 "The financing of the court has been settled."
+ HSM_AET_focus_service_done_tt:0 "The terms of military service have been agreed."
+ HSM_AET_focus_judgement_done_tt:0 "The financier's case has received a judgement."
+ HSM_AET_focus_working_table_done_tt:0 "Grover's questions about the judgement and agreements have been answered."
+ HSM_AET_focus_obituary_done_tt:0 "Grover has been mourned and his death acknowledged."
+ HSM_AET_focus_interim_done_tt:0 "The interim administration has been accepted."
+ HSM_AET_focus_delegates_done_tt:0 "The representation of the constituent lands has been agreed."
+ HSM_AET_focus_union_done_tt:0 "The union charter has been signed."
+ HSM_AET_focus_revenues_done_tt:0 "The division of public revenues has been agreed."
+ HSM_AET_focus_succession_done_tt:0 "The rules for choosing the chair of the union have been settled."
+ HSM_AET_focus_letters_done_tt:0 "The method of investigating the altered letters has been chosen."
+ HSM_AET_focus_audience_done_tt:0 "The private audience has established the ruler's identity."
+ HSM_AET_focus_hearing_done_tt:0 "The public hearing has chosen who will govern."
+
+ HSM_AET_focus_relief_not_started_tt:0 "The relief programme has not begun."
+ HSM_AET_focus_empire_absent_tt:0 "The Griffonian Empire no longer exists."
+ HSM_AET_focus_empire_capitulated_tt:0 "The Griffonian Empire has capitulated."
+ HSM_AET_focus_wartime_capital_tt:0 "Greifwald is at war and owns and controls Griffenheim."
+ HSM_AET_focus_peace_tt:0 "Greifwald is at peace."
+ HSM_AET_focus_capital_held_tt:0 "Greifwald owns and controls Griffenheim."
+ HSM_AET_focus_mandate_offer_tt:0 "No public mandate or union has been established, and the mandate proposal has not been declined."
+ HSM_AET_focus_settlement_unfinished_tt:0 "The final union or restoration settlement has not been completed."

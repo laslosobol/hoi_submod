@@ -1,0 +1,7 @@
+characters = {
+ HSM_AET_civic_council = {
+  name = HSM_AET_civic_council
+  portraits = { civilian = { large = "gfx/leaders/Asia/portrait_griffon_generic_land_2.dds" } }
+  country_leader = { ideology = despotism expire = "1965.1.1" }
+ }
+}

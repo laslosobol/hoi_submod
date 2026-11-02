@@ -1,0 +1,875 @@
+# Narrative interface: docs/GREIFWALD_IMPLEMENTATION.md.
+# Every choice repeats its event context and completion guard at execution.
+# Cost gates reject balances below the exact cost, including fractions.
+# Every paid internal choice can be deferred without choosing a policy.
+# Existing queue timers retry it; deferral grants nothing and changes no flags.
+# Foreign custody IDs 40-42 are retained for old saves; their transfer callbacks are retired.
+add_namespace = HSM_AET
+
+country_event = {
+	id = HSM_AET.1
+	title = HSM_AET.1.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } has_completed_focus = AET_align_imperial NOT = { AND = { has_character = AET_count_cloudet has_country_leader = { character = AET_count_cloudet ruling_only = yes } } } } text = HSM_AET.1.imperial.d }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } has_completed_focus = AET_align_imperial has_character = AET_count_cloudet has_country_leader = { character = AET_count_cloudet ruling_only = yes } } text = HSM_AET.1.imperial_cloudet.d }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } NOT = { has_completed_focus = AET_align_imperial } NOT = { AND = { has_character = AET_count_cloudet has_country_leader = { character = AET_count_cloudet ruling_only = yes } } } } text = HSM_AET.1.changed.d }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } NOT = { has_completed_focus = AET_align_imperial } has_character = AET_count_cloudet has_country_leader = { character = AET_count_cloudet ruling_only = yes } } text = HSM_AET.1.changed_cloudet.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.1.a
+		trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.1.a.tt
+		effect_tooltip = { add_political_power = 25 }
+		hidden_effect = { if = { limit = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } } HSM_AET_accept_relief = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_opening_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.2
+	title = HSM_AET.2.t
+	picture = GFX_event_griffon_mountain
+	is_triggered_only = yes
+	trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } HSM_AET_minor = yes } text = HSM_AET.2.minor.d }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } HSM_AET_adult = yes } text = HSM_AET.2.adult.d }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } HSM_AET_local_alive = no NOT = { has_global_flag = GRI_grover_vi_dead } } text = HSM_AET.2.absent.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } } } } text = HSM_AET_context_lost_desc }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } has_global_flag = GRI_grover_vi_dead } text = HSM_AET.2.dead.d }
+	option = {
+		name = HSM_AET.2.a
+		trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.2.a.tt
+		effect_tooltip = { add_tech_bonus = { name = HSM_AET_refuge bonus = 0.5 uses = 1 category = industry } }
+		hidden_effect = { if = { limit = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } } HSM_AET_receive_refugees = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_refuge_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.3
+	title = HSM_AET.3.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } }
+	desc = { trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } } text = HSM_AET.3.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.3.a
+		trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_50 NOT = { has_political_power < 50 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.3.a.tt
+		effect_tooltip = { add_political_power = -50 }
+		effect_tooltip = { add_stability = 0.05 }
+		hidden_effect = { if = { limit = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } NOT = { has_political_power < 50 } } HSM_AET_home_public = yes } }
+	}
+	option = {
+		name = HSM_AET.3.b
+		trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_25 NOT = { has_political_power < 25 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.3.b.tt
+		effect_tooltip = { add_political_power = -25 }
+		effect_tooltip = { add_stability = -0.03 }
+		hidden_effect = { if = { limit = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } NOT = { has_political_power < 25 } } HSM_AET_home_credit = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 50 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.3.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_home_budget_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.4
+	title = HSM_AET.4.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } }
+	desc = { trigger = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } } text = HSM_AET.4.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.4.a
+		trigger = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.4.a.tt
+		effect_tooltip = { add_political_power = 35 }
+		hidden_effect = { if = { limit = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } } HSM_AET_sign_congress = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_congress = yes NOT = { has_country_flag = HSM_AET_congress_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.10
+	title = HSM_AET.10.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } }
+	desc = { trigger = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } HSM_AET_minor = yes } text = HSM_AET.10.minor.d }
+	desc = { trigger = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } HSM_AET_adult = yes } text = HSM_AET.10.adult.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.10.a
+		trigger = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.10.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } } HSM_AET_accept_mandate = yes } }
+	}
+	option = {
+		name = HSM_AET.10.b
+		trigger = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.10.b.tt
+		hidden_effect = { if = { limit = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } } HSM_AET_decline_mandate = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_mandate = yes NOT = { has_country_flag = HSM_AET_mandate_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.11
+	title = HSM_AET.11.t
+	picture = GFX_event_school
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } HSM_AET_minor = yes } text = HSM_AET.11.minor.d }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } HSM_AET_adult = yes } text = HSM_AET.11.adult.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.11.a
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.11.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } } HSM_AET_school_open = yes } }
+	}
+	option = {
+		name = HSM_AET.11.b
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.11.b.tt
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } } HSM_AET_school_court = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_household_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.12
+	title = HSM_AET.12.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } } text = HSM_AET.12.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.12.a
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_50 NOT = { has_political_power < 50 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.12.a.tt
+		effect_tooltip = { add_political_power = -50 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } NOT = { has_political_power < 50 } } HSM_AET_accounts_public = yes } }
+	}
+	option = {
+		name = HSM_AET.12.b
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_25 NOT = { has_political_power < 25 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.12.b.tt
+		effect_tooltip = { add_political_power = -25 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } NOT = { has_political_power < 25 } } HSM_AET_accounts_patron = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 50 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.12.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_court_accounts_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.13
+	title = HSM_AET.13.t
+	picture = GFX_event_griffon_back
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } } text = HSM_AET.13.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.13.a
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.13.a.tt
+		effect_tooltip = { army_experience = 40 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } } HSM_AET_service_law = yes } }
+	}
+	option = {
+		name = HSM_AET.13.b
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.13.b.tt
+		effect_tooltip = { army_experience = 60 add_stability = -0.03 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } } HSM_AET_service_contract = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_service_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.14
+	title = HSM_AET.14.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } has_country_flag = HSM_AET_accounts_patron } text = HSM_AET.14.patron.d }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } NOT = { has_country_flag = HSM_AET_accounts_patron } } text = HSM_AET.14.public.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.14.a
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_75 NOT = { has_political_power < 75 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.14.a.tt
+		effect_tooltip = { add_political_power = -75 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } NOT = { has_political_power < 75 } } HSM_AET_judge_patron = yes } }
+	}
+	option = {
+		name = HSM_AET.14.b
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.14.b.tt
+		effect_tooltip = { add_political_power = 35 add_stability = -0.05 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } } HSM_AET_protect_patron = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 75 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.14.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_judgement_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.15
+	title = HSM_AET.15.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_minor = yes NOT = { has_country_flag = HSM_AET_protect_patron } NOT = { has_country_flag = HSM_AET_service_contract } } text = HSM_AET.15.minor_judged_law.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_minor = yes NOT = { has_country_flag = HSM_AET_protect_patron } has_country_flag = HSM_AET_service_contract } text = HSM_AET.15.minor_judged_contract.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_minor = yes has_country_flag = HSM_AET_protect_patron NOT = { has_country_flag = HSM_AET_service_contract } } text = HSM_AET.15.minor_protected_law.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_minor = yes has_country_flag = HSM_AET_protect_patron has_country_flag = HSM_AET_service_contract } text = HSM_AET.15.minor_protected_contract.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_adult = yes NOT = { has_country_flag = HSM_AET_protect_patron } NOT = { has_country_flag = HSM_AET_service_contract } } text = HSM_AET.15.adult_judged_law.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_adult = yes NOT = { has_country_flag = HSM_AET_protect_patron } has_country_flag = HSM_AET_service_contract } text = HSM_AET.15.adult_judged_contract.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_adult = yes has_country_flag = HSM_AET_protect_patron NOT = { has_country_flag = HSM_AET_service_contract } } text = HSM_AET.15.adult_protected_law.d }
+	desc = { trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_adult = yes has_country_flag = HSM_AET_protect_patron has_country_flag = HSM_AET_service_contract } text = HSM_AET.15.adult_protected_contract.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.15.a
+		trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_revision HSM_AET_can_pay_revision = yes } }
+		ai_chance = { factor = 50 }
+		effect_tooltip = {
+			if = {
+				limit = { hidden_trigger = { has_country_flag = HSM_AET_protect_patron } }
+				custom_effect_tooltip = HSM_AET.15.a.protected.tt
+				add_political_power = -100
+			}
+			else = { custom_effect_tooltip = HSM_AET.15.a.tt add_political_power = -50 }
+		}
+		effect_tooltip = { add_stability = 0.05 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } HSM_AET_can_pay_revision = yes } HSM_AET_revise_contracts = yes } }
+	}
+	option = {
+		name = HSM_AET.15.b
+		trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.15.b.tt
+		effect_tooltip = { add_political_power = 25 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } } HSM_AET_uphold_contracts = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 HSM_AET_can_pay_revision = yes } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.15.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.16
+	title = HSM_AET.16.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } }
+	desc = { trigger = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } HSM_AET_minor = yes } text = HSM_AET.16.minor.d }
+	desc = { trigger = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } HSM_AET_adult = yes } text = HSM_AET.16.adult.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.16.a
+		trigger = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_50 NOT = { has_political_power < 50 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.16.a.tt
+		effect_tooltip = { add_political_power = -50 }
+		hidden_effect = { if = { limit = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } NOT = { has_political_power < 50 } } HSM_AET_sign_handover = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 50 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.16.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_prepare = yes NOT = { has_country_flag = HSM_AET_prepare_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.17
+	title = HSM_AET.17.t
+	picture = GFX_event_griffenheim
+	is_triggered_only = yes
+	trigger = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } }
+	desc = { trigger = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } } text = HSM_AET.17.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.17.a
+		trigger = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.17.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } } HSM_AET_acknowledge_handover = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_restored_pair = yes NOT = { has_country_flag = HSM_AET_handover_seen } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.20
+	title = HSM_AET.20.t
+	picture = GFX_event_winter_forest
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } }
+	desc = { trigger = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } has_country_flag = HSM_AET_ever_guardian } text = HSM_AET.20.guardian.d }
+	desc = { trigger = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } NOT = { has_country_flag = HSM_AET_ever_guardian } } text = HSM_AET.20.distant.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.20.a
+		trigger = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.20.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } } HSM_AET_acknowledge_death = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_union = yes NOT = { has_country_flag = HSM_AET_obituary_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.21
+	title = HSM_AET.21.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } has_country_flag = HSM_AET_ever_guardian } text = HSM_AET.21.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } } } } text = HSM_AET_context_lost_desc }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } NOT = { has_country_flag = HSM_AET_ever_guardian } } text = HSM_AET.21.direct.d }
+	option = {
+		name = HSM_AET.21.a
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.21.a.tt
+		effect_tooltip = { add_stability = 0.03 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } } HSM_AET_accept_interim = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_interim_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.22
+	title = HSM_AET.22.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } } text = HSM_AET.22.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.22.a
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.22.a.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } NOT = { has_political_power < 35 } } HSM_AET_delegates_equal = yes } }
+	}
+	option = {
+		name = HSM_AET.22.b
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.22.b.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } NOT = { has_political_power < 35 } } HSM_AET_delegates_population = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 35 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.22.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_delegates_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.23
+	title = HSM_AET.23.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } } text = HSM_AET.23.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.23.a
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.23.a.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } NOT = { has_political_power < 35 } } HSM_AET_sign_union = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 35 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.23.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_union_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.24
+	title = HSM_AET.24.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } } text = HSM_AET.24.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.24.a
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.24.a.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } NOT = { has_political_power < 35 } } HSM_AET_revenues_local = yes } }
+	}
+	option = {
+		name = HSM_AET.24.b
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.24.b.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } NOT = { has_political_power < 35 } } HSM_AET_revenues_central = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 35 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.24.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_revenues_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.25
+	title = HSM_AET.25.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } }
+	desc = { trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } } text = HSM_AET.25.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.25.a
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.25.a.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } NOT = { has_political_power < 35 } } HSM_AET_succession_assembly = yes } }
+	}
+	option = {
+		name = HSM_AET.25.b
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.25.b.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } NOT = { has_political_power < 35 } } HSM_AET_succession_council = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 35 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.25.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_union_work = yes NOT = { has_country_flag = HSM_AET_succession_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.26
+	title = HSM_AET.26.t
+	picture = GFX_event_winter_forest
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } }
+	desc = { trigger = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } has_country_flag = HSM_AET_revenues_local } text = HSM_AET.26.local.d }
+	desc = { trigger = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } NOT = { has_country_flag = HSM_AET_revenues_local } } text = HSM_AET.26.central.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.26.a
+		trigger = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.26.a.tt
+		effect_tooltip = { add_stability = 0.08 }
+		hidden_effect = { if = { limit = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } } HSM_AET_conclude_union = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_finish_union = yes NOT = { has_country_flag = HSM_AET_completed } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.27
+	title = HSM_AET.27.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } HSM_AET_minor = yes } text = HSM_AET.27.minor.d }
+	desc = { trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } HSM_AET_adult = yes } text = HSM_AET.27.adult.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.27.a
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.27.a.tt
+		effect_tooltip = { add_stability = 0.03 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } } HSM_AET_gift_private = yes } }
+	}
+	option = {
+		name = HSM_AET.27.b
+		trigger = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.27.b.tt
+		effect_tooltip = { add_political_power = 25 }
+		hidden_effect = { if = { limit = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } } HSM_AET_gift_public = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_regency = yes NOT = { has_country_flag = HSM_AET_gift_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.30
+	title = HSM_AET.30.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_minor = yes has_country_flag = HSM_AET_protect_patron } text = HSM_AET.30.minor_patron.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_minor = yes NOT = { has_country_flag = HSM_AET_protect_patron } has_country_flag = HSM_AET_service_law } text = HSM_AET.30.minor_law.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_minor = yes NOT = { has_country_flag = HSM_AET_protect_patron has_country_flag = HSM_AET_service_law } } text = HSM_AET.30.minor_other.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_adult = yes has_country_flag = HSM_AET_protect_patron } text = HSM_AET.30.adult_patron.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_adult = yes NOT = { has_country_flag = HSM_AET_protect_patron } has_country_flag = HSM_AET_service_law } text = HSM_AET.30.adult_law.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_adult = yes NOT = { has_country_flag = HSM_AET_protect_patron has_country_flag = HSM_AET_service_law } } text = HSM_AET.30.adult_other.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_local_alive = no has_country_flag = HSM_AET_protect_patron } text = HSM_AET.30.secretary_patron.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_local_alive = no NOT = { has_country_flag = HSM_AET_protect_patron } has_country_flag = HSM_AET_service_law } text = HSM_AET.30.secretary_law.d }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } HSM_AET_local_alive = no NOT = { has_country_flag = HSM_AET_protect_patron has_country_flag = HSM_AET_service_law } } text = HSM_AET.30.secretary_other.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.30.a
+		trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_25 NOT = { has_political_power < 25 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.30.a.tt
+		effect_tooltip = { add_political_power = -25 }
+		hidden_effect = { if = { limit = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } NOT = { has_political_power < 25 } } HSM_AET_investigate_open = yes } }
+	}
+	option = {
+		name = HSM_AET.30.b
+		trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_10 NOT = { has_political_power < 10 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.30.b.tt
+		effect_tooltip = { add_political_power = -10 }
+		hidden_effect = { if = { limit = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } NOT = { has_political_power < 10 } } HSM_AET_investigate_quiet = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 25 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.30.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_letters_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.31
+	title = HSM_AET.31.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } }
+	desc = { trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } } text = HSM_AET.31.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.31.a
+		trigger = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.31.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } } HSM_AET_record_identity = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_crisis = yes NOT = { has_country_flag = HSM_AET_audience_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.32
+	title = HSM_AET.32.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } }
+	desc = { trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } has_character = AET_count_cloudet } text = HSM_AET.32.count.d }
+	desc = { trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } NOT = { has_character = AET_count_cloudet } } text = HSM_AET.32.council.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.32.a
+		trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_50 NOT = { has_political_power < 50 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.32.a.tt
+		effect_tooltip = { add_political_power = -50 }
+		effect_tooltip = { add_stability = 0.03 }
+		hidden_effect = { if = { limit = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } NOT = { has_political_power < 50 } } HSM_AET_dismiss_impostor = yes } }
+	}
+	option = {
+		name = HSM_AET.32.b
+		trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_75 NOT = { has_political_power < 75 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.32.b.tt
+		effect_tooltip = { add_political_power = -75 }
+		effect_tooltip = { add_stability = -0.05 }
+		hidden_effect = { if = { limit = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } NOT = { has_political_power < 75 } } HSM_AET_ratify_trimmel = yes } }
+	}
+	option = {
+		name = HSM_AET.32.c
+		trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } NOT = { NOT = { has_political_power < 50 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.32.c.tt
+		effect_tooltip = { add_stability = -0.08 }
+		hidden_effect = { if = { limit = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } NOT = { NOT = { has_political_power < 50 } } } HSM_AET_dismiss_without_compensation = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 75 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.32.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_hear = yes NOT = { has_country_flag = HSM_AET_hearing_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.33
+	title = HSM_AET.33.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } HSM_AET_trimmel = yes has_country_flag = HSM_AET_trimmel_ratified NOT = { has_country_flag = HSM_AET_investigate_quiet } NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.trimmel_open.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } HSM_AET_trimmel = yes has_country_flag = HSM_AET_trimmel_ratified has_country_flag = HSM_AET_investigate_quiet NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.trimmel_quiet.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = AET_count_cloudet ruling_only = yes } NOT = { has_country_flag = HSM_AET_investigate_quiet } NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.count_open.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = AET_count_cloudet ruling_only = yes } NOT = { has_country_flag = HSM_AET_investigate_quiet } has_country_flag = HSM_AET_dismiss_without_compensation } text = HSM_AET.33.count_open_unpaid.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = AET_count_cloudet ruling_only = yes } has_country_flag = HSM_AET_investigate_quiet NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.count_quiet.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = AET_count_cloudet ruling_only = yes } has_country_flag = HSM_AET_investigate_quiet has_country_flag = HSM_AET_dismiss_without_compensation } text = HSM_AET.33.count_quiet_unpaid.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = HSM_AET_civic_council ruling_only = yes } NOT = { has_country_flag = HSM_AET_investigate_quiet } NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.council_open.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = HSM_AET_civic_council ruling_only = yes } NOT = { has_country_flag = HSM_AET_investigate_quiet } has_country_flag = HSM_AET_dismiss_without_compensation } text = HSM_AET.33.council_open_unpaid.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = HSM_AET_civic_council ruling_only = yes } has_country_flag = HSM_AET_investigate_quiet NOT = { has_country_flag = HSM_AET_dismiss_without_compensation } } text = HSM_AET.33.council_quiet.d }
+	desc = { trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } has_country_leader = { character = HSM_AET_civic_council ruling_only = yes } has_country_flag = HSM_AET_investigate_quiet has_country_flag = HSM_AET_dismiss_without_compensation } text = HSM_AET.33.council_quiet_unpaid.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.33.a
+		trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } custom_trigger_tooltip = { tooltip = HSM_AET_story_afford_35 NOT = { has_political_power < 35 } } }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.33.a.tt
+		effect_tooltip = { add_political_power = -35 }
+		hidden_effect = { if = { limit = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } NOT = { has_political_power < 35 } } HSM_AET_settle_identity = yes } }
+	}
+	option = {
+		name = HSM_AET_postpone
+		trigger = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } }
+		ai_chance = { factor = 100 modifier = { factor = 0 NOT = { has_political_power < 35 } } }
+		custom_effect_tooltip = HSM_AET_postpone_tt
+		custom_effect_tooltip = HSM_AET.33.choices_tt
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_can_sign = yes NOT = { has_country_flag = HSM_AET_signature_done } } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.40
+	timeout_days = 10
+	title = HSM_AET.40.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_host_can_offer = yes }
+	desc = { trigger = { HSM_AET_host_can_offer = yes NOT = { date > 1021.5.21 } } text = HSM_AET.40.minor.d }
+	desc = { trigger = { HSM_AET_host_can_offer = yes date > 1021.5.21 } text = HSM_AET.40.adult.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_host_can_offer = yes } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.40.b
+		trigger = { HSM_AET_host_can_offer = yes }
+		ai_chance = { factor = 35 }
+		custom_effect_tooltip = HSM_AET.40.b.tt
+		hidden_effect = { if = { limit = { HSM_AET_host_can_offer = yes } HSM_AET_refuse_custody = yes } }
+	}
+	option = {
+		name = HSM_AET.40.a
+		trigger = { HSM_AET_host_can_offer = yes }
+		ai_chance = { factor = 65 }
+		custom_effect_tooltip = HSM_AET.40.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_host_can_offer = yes } HSM_AET_offer_custody = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_host_can_offer = yes } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.41
+	title = HSM_AET.41.t
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	trigger = { HSM_AET_active = yes }
+	desc = { trigger = { HSM_AET_active = yes } text = HSM_AET.41.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_active = yes } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.41.a
+		trigger = { HSM_AET_active = yes }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.41.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_active = yes } HSM_AET_acknowledge_reply = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_active = yes } } }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = HSM_AET.42
+	title = HSM_AET.42.t
+	picture = GFX_event_gothic_interior
+	is_triggered_only = yes
+	trigger = { HSM_AET_active = yes }
+	desc = { trigger = { HSM_AET_active = yes HSM_AET_minor = yes } text = HSM_AET.42.minor.d }
+	desc = { trigger = { HSM_AET_active = yes HSM_AET_adult = yes } text = HSM_AET.42.adult.d }
+	desc = { trigger = { HSM_AET_active = yes HSM_AET_local_alive = no } text = HSM_AET.42.changed.d }
+	desc = { trigger = { NOT = { AND = { HSM_AET_active = yes } } } text = HSM_AET_context_lost_desc }
+	option = {
+		name = HSM_AET.42.a
+		trigger = { HSM_AET_active = yes }
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = HSM_AET.42.a.tt
+		hidden_effect = { if = { limit = { HSM_AET_active = yes } HSM_AET_acknowledge_reply = yes } }
+	}
+	option = {
+		name = HSM_AET_context_lost
+		trigger = { NOT = { AND = { HSM_AET_active = yes } } }
+		ai_chance = { factor = 100 }
+	}
+}

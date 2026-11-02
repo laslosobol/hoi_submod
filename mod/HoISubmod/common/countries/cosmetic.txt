@@ -3982,3 +3982,9 @@ HSM_VER_REGENCY = {
 	color = rgb { 62 137 124 }
 	color_ui = rgb { 62 137 124 }
 }
+
+# Expanded Stories: royal Aquileian successor, including harmonic monarchies.
+HSM_AQR_KINGDOM = {
+	color = rgb { 152 60 85 }
+	color_ui = rgb { 152 60 85 }
+}

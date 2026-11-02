@@ -1,0 +1,13 @@
+on_actions = {
+ on_daily = {
+  effect = {
+   if = { limit = { tag = AET } HSM_AET_maintain = yes }
+   if = { limit = { tag = GRI } HSM_AET_restored_maintain = yes }
+  }
+ }
+ on_annex = {
+  effect = {
+   FROM = { if = { limit = { tag = AET } HSM_AET_interrupt = yes } }
+  }
+ }
+}

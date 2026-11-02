@@ -1,0 +1,272 @@
+{
+  "tag": "JRR",
+  "routes": [
+    {
+      "id": "JRR_absolutist",
+      "title": [
+        "The Marquise's Authority",
+        "Власть маркизы"
+      ],
+      "native_hint": [
+        "Jeanne has chosen the nobles and loyal officers against Colette. Their support can restore her authority, but it comes with expectations of its own.",
+        "Жанна выбрала союз с дворянством и верными офицерами против Колетт. Их поддержка поможет вернуть ей власть, но у самих союзников есть свои ожидания."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "The Marquise's Own Chancery",
+            "Собственная канцелярия маркизы"
+          ],
+          "desc": [
+            "A village petition has reached Jeanne after three visits to military offices. The bridge it concerns is still broken. She will appoint her own clerks and receive the petitioners herself, giving the court work that can be judged outside its walls. An administration capable of answering such requests would make her authority more than a title on a letter.",
+            "Сельское прошение попало к Жанне после трёх посещений военных учреждений. Мост, о котором в нём говорится, по-прежнему разрушен. Маркиза намерена назначить собственных служащих и лично принять просителей. У двора появится работа, о результатах которой смогут судить за его стенами. Канцелярия должна научиться отвечать за исполнение обещаний: одной красивой подписи на письме для возвращения власти недостаточно."
+          ]
+        },
+        {
+          "title": [
+            "The Officers Answer to the Court",
+            "Офицеры отвечают перед двором"
+          ],
+          "desc": [
+            "Victory has left Jeanne with officers who expect their wartime promises to become permanent privileges. She will summon them to explain which duties belong to the court and which require a soldier's judgement. Their commissions must answer to public authority before she can offer this settlement to Aquileia. Replacing one military patron with another would leave the marquise dependent.",
+            "Победа оставила Жанне офицеров, ожидающих превращения военных договорённостей в постоянные привилегии. Она созовёт их, чтобы определить, какие обязанности принадлежат двору, а какие требуют военного решения. Прежде чем предложить такое устройство Аквелии, необходимо подчинить офицерские полномочия государственной власти. Замена одного военного покровителя другим оставила бы маркизу зависимой. Их заслуги получат признание, но не право распоряжаться каждой должностью в мирное время."
+          ]
+        },
+        {
+          "title": [
+            "Oaths from the Estates",
+            "Клятвы земельных собраний"
+          ],
+          "desc": [
+            "The fighting has ended, and the nobles arrive with the promises they made to Jeanne. Some expect appointments before damaged villages receive assistance. She will summon their delegates to settle the obligations of her government. Westkeep must show what her royal leadership could offer Aquileia beyond a family name, beginning with duties that bind the court's own supporters.",
+            "Боевые действия закончились, и дворяне напоминают об обещаниях, данных Жанне. Некоторые ждут назначений раньше, чем помощь получат пострадавшие деревни. Маркиза созовёт представителей, чтобы определить обязательства своего правительства. Весткипу предстоит показать, что её монархическое руководство способно предложить Аквелии помимо родового имени. Начать придётся с обязанностей, связывающих собственных сторонников двора. Претендовать на более широкое доверие можно лишь после исполнения обещаний дома."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Price of Their Signatures",
+          "Цена их подписей"
+        ],
+        "desc": [
+          "A noble places his family's seal beside the proposed commission for his nephew. Across the table, a village delegate lays down a plank from the unrepaired bridge. Both helped Jeanne's cause; both have come to collect. Jeanne asks the officers to remain while the obligations of her new government are read aloud. One draft preserves petitions and local guarantees that the court must answer before demanding further service. The other gives her appointed governors authority to direct reconstruction across the march, with the nobles supplying labour and transport. Neither restores the old military masters. Her supporters must decide whether their signatures bind them as firmly as they bind the marquise.",
+          "Дворянин кладёт семейную печать рядом с проектом назначения для своего племянника. Напротив сельский представитель ставит доску от так и не починенного моста. Оба поддержали Жанну; оба пришли за обещанным. Маркиза просит офицеров остаться, пока читают обязательства её нового правительства. Первый проект сохраняет право прошений и местные гарантии, на которые двор должен ответить прежде, чем требовать новой службы. Второй даёт назначенным ею наместникам право руководить восстановлением по всей марке, а дворян обязывает предоставить работников и подводы. Прежних военных хозяев не возвращает ни один проект. Сторонникам предстоит решить, связывают ли подписи их самих столь же крепко, как маркизу."
+        ],
+        "a": [
+          "The court will answer its petitioners.",
+          "Двор будет отвечать своим просителям."
+        ],
+        "b": [
+          "Give the governors authority to finish the work.",
+          "Дать наместникам власть завершить работу."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The First Aquileian Audience",
+          "Первая аквелийская аудиенция"
+        ],
+        "a_desc": [
+          "The first delegation to arrive at the reunited capital carries a petition bound in plain cloth. Its members have heard that Jeanne once took a village's grievance past the soldiers at her door. Now they want the same hearing for their province. Experience in Westkeep prepared her for this national mandate; the delegates' agreement, rather than her family name alone, sustains it. She orders a place prepared for their witnesses. Behind them wait nobles who expected the new court to spare them the inconveniences of the old promises.",
+          "Первая делегация прибывает в объединённую столицу с прошением в простой полотняной обложке. Её участники слышали, что Жанна когда-то провела сельскую жалобу мимо солдат у своих дверей. Теперь такого же рассмотрения требует их провинция. Опыт управления Весткипом подготовил её к общегосударственным обязанностям; её мандат опирается на согласие представителей, а не одно лишь родовое имя. Она велит приготовить места для свидетелей. Позади ждут дворяне, надеявшиеся, что новый двор избавит их от неудобных прежних обещаний. Просителей принимают первыми, и никто не предлагает убрать их скромную папку со стола."
+        ],
+        "b_desc": [
+          "The capital's receiving hall is crowded with governors awaiting Jeanne's instructions. A provincial envoy brings the authority granted by his own assembly and asks where it ends beside theirs. The marquise has won agreement to a common government, not inherited every local office with her title. She marks the powers assigned to the governors and returns the remaining questions to the envoy. Outside, their transport officers are already sharing wagons. The machinery that helped recover her march must now serve a country whose support was negotiated.",
+          "Приёмный зал столицы заполнен наместниками, ожидающими распоряжений Жанны. Посланник провинции приносит полномочия, данные местным собранием, и спрашивает, где проходит граница между его властью и их властью. Маркиза добилась соглашения об общем правительстве, но не унаследовала вместе с титулом каждую местную должность. Она отмечает полномочия наместников, а остальные вопросы возвращает посланнику. Во дворе их обозные офицеры уже распределяют подводы между собой. Порядок, помогший вернуть её марку, теперь должен служить стране, с которой пришлось договариваться. Следующее распоряжение отправят лишь после сверки обеих грамот."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Victorious Generals",
+          "Победоносные генералы"
+        ],
+        "a_desc": [
+          "At the newly agreed frontier, a general asks Jeanne to place the neighbouring dependent monarchy under his permanent supervision. He presents the request as the natural reward for securing the border. The local delegates have brought a different understanding: their ruler retains the courts and appointments promised in the settlement. Jeanne orders both documents read before the officers. She once needed noble allies to escape military tutelage; extending the same protection to a smaller neighbour now costs her the gratitude of a successful commander.",
+          "У новой согласованной границы генерал просит Жанну передать соседнюю зависимую монархию под его постоянный надзор. Он называет это естественной наградой за обеспечение безопасности. Местные представители привезли другое толкование договора: их правитель сохраняет обещанные суды и право назначать должностных лиц. Жанна велит прочесть оба документа перед офицерами. Когда-то ей понадобился союз с дворянством, чтобы избавиться от военной опеки; защита меньшего соседа теперь стоит ей благодарности победоносного командира. Он забирает прошение, но не отводит взгляд. После победы спорить с генералами не стало легче."
+        ],
+        "b_desc": [
+          "The frontier governors report that the agreed districts can be supplied without extending military authority farther into Herzland. One commander nevertheless sends a map with another river marked as the necessary line of defence. Jeanne remembers officers who once found similar reasons to govern her own household. She returns the map with the negotiated boundary intact and commissions a joint inspection of the depots. Her government retains firm control of its borderlands, while the dependent monarchy beyond them keeps its separate administration. Victory has supplied no warrant for another province.",
+          "Пограничные наместники докладывают, что согласованные округа можно снабжать без расширения военной власти вглубь Герцланда. Один командир всё же присылает карту, объявляя следующий речной рубеж необходимой линией обороны. Жанна помнит офицеров, находивших подобные причины распоряжаться её собственным двором. Она возвращает карту с неизменной договорной границей и назначает совместную проверку складов. Её правительство сохраняет твёрдый контроль над своими пограничными землями, а соседняя зависимая монархия — отдельное управление. Победа не дала полномочий занять ещё одну провинцию. Генералу придётся обосновать снабжение в пределах уже принятого соглашения."
+        ]
+      }
+    },
+    {
+      "id": "JRR_coalition",
+      "title": [
+        "Jeanne's Provincial Compact",
+        "Провинциальное соглашение Жанны"
+      ],
+      "native_hint": [
+        "Jeanne has sought moderate republican support against military rule. Their coalition opens a constitutional question; it has not already answered it.",
+        "Жанна обратилась к умеренным республиканцам за поддержкой против власти военных. Их коалиция поставила вопрос о будущем устройстве, но ещё не разрешила его."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Publish the Coalition Pledge",
+            "Опубликовать соглашение коалиции"
+          ],
+          "desc": [
+            "Royal victory has brought Jeanne's republican allies back to the printers with their original pledge. They ask that the promised municipal seats appear before the signatures. The revised compact will keep the marquise at the head of a royal coalition while giving the towns a lasting voice. Publishing its terms will show Aquileia what their unlikely partnership can offer.",
+            "Победа монархистов привела республиканских союзников Жанны обратно к печатникам с первоначальным соглашением. Они просят поставить обещание мест для городских представителей прежде подписей. Пересмотренный договор сохранит маркизу во главе королевской коалиции и даст городам постоянный голос. Публикация условий покажет Аквелии, что способен предложить этот необычный союз. Теперь партнёрам предстоит отвечать за общее устройство после победы, а не только за прежние обещания."
+          ]
+        },
+        {
+          "title": [
+            "A Bench beyond the Barracks",
+            "Суд за пределами казармы"
+          ],
+          "desc": [
+            "A shopkeeper still needs an officer's permission to challenge a wartime requisition. The coalition's lawyers propose a hearing outside the garrison, where witnesses can speak without their former commandant's approval. Jeanne will protect its right to convene. Her allies helped secure victory; a royal government worthy of their continued support must now hear complaints against its own officers.",
+            "Лавочнику всё ещё нужно разрешение офицера, чтобы оспорить реквизицию военного времени. Юристы коалиции предлагают слушание вне гарнизона, где свидетели смогут говорить без согласия прежнего коменданта. Жанна обеспечит право суда собраться. Союзники помогли одержать победу; теперь королевское правительство должно заслужить их дальнейшую поддержку, принимая жалобы на собственных офицеров. Независимость суда начнётся с дела, неудобного для тех, кто ещё недавно требовал верности."
+          ]
+        },
+        {
+          "title": [
+            "Civilian Warrants",
+            "Гражданские полномочия"
+          ],
+          "desc": [
+            "Peace has returned, but the commandant still signs the permits for town meetings. Municipal delegates bring Jeanne the coalition's printed compact and ask who will sign tomorrow. Their settlement must place the garrisons under civilian authority while preserving her royal leadership. Before proposing it to the wider Aquileian movement, they must show how a town can challenge a lawful order.",
+            "Мир восстановлен, но разрешения на городские собрания по-прежнему подписывает комендант. Делегаты приносят Жанне напечатанный договор коалиции и спрашивают, кто будет подписывать их завтра. Соглашение должно подчинить гарнизоны гражданской власти, сохранив её монархическое руководство. Прежде чем предложить это устройство общему аквелийскому движению, необходимо показать, как город сможет оспорить законный приказ. Для этого ему не должно требоваться нового тайного союза против собственного правительства."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Seat beside Jeanne",
+          "Место рядом с Жанной"
+        ],
+        "desc": [
+          "The chair beside Jeanne has been left empty until the coalition decides who may occupy it. A republican delegate proposes a council drawn from the towns, able to question appointments and withhold consent to new burdens. An officer answers that separate permissions will leave every damaged road waiting on another meeting. The alternative is a common cabinet, appointed by Jeanne but required to defend its programme before the representatives. It could direct the work across municipal boundaries while the courts hear complaints. The marquise places the original appeal between the drafts. Her return to government will depend on a bargain her partners can still recognise when their immediate enemy is gone.",
+          "Кресло рядом с Жанной оставили пустым, пока коалиция не решит, кто вправе его занять. Делегат-республиканец предлагает совет от городов, который сможет оспаривать назначения и отказывать в согласии на новые повинности. Офицер возражает: из-за отдельных разрешений каждая разбитая дорога будет ждать очередного заседания. Другой проект создаёт общий кабинет, назначенный Жанной, но обязанный защитить свою программу перед представителями. Он сможет руководить работами через муниципальные границы, а суды будут принимать жалобы. Маркиза кладёт между проектами первоначальное обращение. Её возвращение к управлению зависит от соглашения, в котором партнёры узнают прежние обещания и после исчезновения общего врага."
+        ],
+        "a": [
+          "Let the towns fill the council.",
+          "Пусть города сформируют совет."
+        ],
+        "b": [
+          "A common cabinet, answerable to the representatives.",
+          "Общий кабинет, подотчётный представителям."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "Seats from beyond Westkeep",
+          "Места для делегатов за пределами Весткипа"
+        ],
+        "a_desc": [
+          "The provincial delegates arrive with chairs borrowed from their own meeting halls. One is too broad for the space assigned to it. The resulting argument concerns neither upholstery nor protocol: the province wants assurance that its institutions will fit inside the new Aquileian settlement. Jeanne asks its delegates to explain the powers they were sent to preserve. Her national mandate builds on the provincial coalition's experience, but no hereditary claim could have supplied their consent. By evening the seating plan has changed, and the compact records a local court that the first draft omitted.",
+          "Провинциальные делегаты привозят стулья из своих залов заседаний. Один слишком широк для отведённого места. Последовавший спор касается не обивки и не церемониала: провинция хочет убедиться, что её учреждения найдут место в новом аквелийском устройстве. Жанна просит объяснить, какие полномочия делегатам поручили сохранить. Её общегосударственный мандат опирается на опыт провинциальной коалиции, но никакое наследственное притязание не заменило бы их согласия. К вечеру схема мест изменилась, а в договор внесли местный суд, забытый в первом проекте. Делегация оставляет свой широкий стул там, где сможет заседать и завтра."
+        ],
+        "b_desc": [
+          "The first common cabinet receives two competing instructions for the same railway junction. Each bears a valid provincial seal. Its minister lays both before the representatives and asks for a single authority to reopen the line. Jeanne supports the request, but the coalition insists on an account of whose traffic will wait and why. The cabinet wins permission for a common schedule. It must return to defend the results next session. Aquileia has gained a government capable of acting across its regions without treating the agreement that formed it as a completed formality.",
+          "Первый общий кабинет получает два противоречивых распоряжения об одном железнодорожном узле. На обоих стоят действительные провинциальные печати. Министр предъявляет их представителям и просит единых полномочий для открытия линии. Жанна поддерживает просьбу, но коалиция требует объяснить, чьи грузы будут ждать и почему. Кабинет получает разрешение составить общее расписание. На следующей сессии ему предстоит отвечать за результат. У Аквелии появилось правительство, способное действовать поверх региональных границ, однако соглашение, благодаря которому оно возникло, не стало пустой формальностью. Представители оставляют обе прежние инструкции в материалах предстоящего отчёта."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Neighbour's Own Cabinet",
+          "Собственный кабинет соседа"
+        ],
+        "a_desc": [
+          "Representatives of the dependent Herzland state attend their first joint meeting without a military escort inside the chamber. They ask when the protective arrangement can be reviewed and who will hear disputes over the newly settled border. Jeanne's provincial allies recognise the questions: they once asked much the same of her. The defence agreement is read alongside guarantees for the neighbour's civilian government and local courts. The frontier remains as negotiated. A clerk reserves space for a later review, and this time the smaller delegation helps choose the date.",
+          "Представители зависимого государства Герцланда приходят на первое совместное заседание без военного сопровождения внутри зала. Они спрашивают, когда можно пересмотреть отношения покровительства и кто рассмотрит споры о новой границе. Провинциальные союзники Жанны узнают эти вопросы: когда-то они задавали ей почти те же самые. Оборонное соглашение читают вместе с гарантиями гражданскому правительству соседа и его местным судам. Граница остаётся согласованной. Секретарь отводит место для будущего пересмотра, и теперь меньшая делегация участвует в выборе даты. Её министрам предстоит вернуться домой с ответом, который они смогут защитить перед собственным собранием."
+        ],
+        "b_desc": [
+          "A common defence schedule is ready, but the neighbouring Herzland cabinet refuses the clause allowing officers to redirect civilian trains without notice. Our ministers warn that another negotiation will delay the depots. Jeanne returns the disputed page to the joint committee rather than approving it alone. The revised schedule gives military transport priority within agreed limits and leaves the neighbour's government responsible for civilian service. Coordination will be firmer than the provinces first preferred, yet its terms remain reviewable. The cabinet must explain the compromise to the same representatives who authorised it.",
+          "Общий оборонный график готов, но кабинет соседнего государства Герцланда отвергает статью, позволяющую офицерам без предупреждения перенаправлять гражданские поезда. Наши министры предупреждают: новые переговоры задержат оборудование складов. Жанна возвращает спорную страницу совместной комиссии, вместо того чтобы утвердить её единолично. Исправленный график даёт военным перевозкам преимущество в согласованных пределах, оставляя соседнему правительству ответственность за гражданское сообщение. Координация будет жёстче, чем первоначально хотели провинции, но её условия подлежат пересмотру. Кабинету предстоит объяснить компромисс тем же представителям, которые наделили его полномочиями. График не изменяет ни границ, ни устройства соседней страны."
+        ]
+      }
+    },
+    {
+      "id": "JRR_colette",
+      "title": [
+        "Colette's National Revolution",
+        "Национальная революция Колетт"
+      ],
+      "native_hint": [
+        "Colette has rallied the revolutionary military network and courted the underground left. Their common enemy does not settle who will govern after victory.",
+        "Колетт сплотила революционную военную сеть и обратилась к левому подполью. Общий противник ещё не определяет, кому достанется власть после победы."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "The Timetable after Victory",
+            "Расписание после победы"
+          ],
+          "desc": [
+            "The railway worker returns to Colette's headquarters with the timetable used during the rising. Its reverse carries promises to the civilian organisers who kept the trains moving. Now the fighting has ended, he asks which will be honoured. Colette will bring officers and railway delegates together to turn their wartime cooperation into a proposal for Aquileia's reconstruction.",
+            "Железнодорожник возвращается в штаб Колетт с расписанием, использованным во время восстания. На обороте записаны обещания гражданским организаторам, поддерживавшим движение поездов. Теперь, после окончания боёв, он спрашивает, какие из них выполнят. Колетт соберёт офицеров и представителей железных дорог, чтобы превратить военное сотрудничество в предложение по восстановлению Аквелии. Рабочий ждёт ответа для товарищей, которым предстоит обслуживать те же пути в мирное время."
+          ]
+        },
+        {
+          "title": [
+            "The Workers' Liaison",
+            "Связь с рабочими"
+          ],
+          "desc": [
+            "The former underground delegates now bring their demands through the headquarters' front door. They want representation and an answer about the hours worked by those supplying the recovering towns. Colette's officers would still prefer to discuss military deliveries first. A regular civilian liaison must give both a hearing before their reconstruction programme can claim support beyond the garrisons.",
+            "Бывшие подпольные делегаты теперь приносят требования через парадный вход штаба. Им нужны представительство и ответ о продолжительности труда тех, кто снабжает восстанавливающиеся города. Офицеры Колетт по-прежнему предпочитают сперва обсуждать военные поставки. Постоянное гражданское представительство должно обеспечить обсуждение обоих вопросов, прежде чем программа восстановления сможет рассчитывать на поддержку за пределами гарнизонов. Делегаты намерены записывать ответы и передавать их товарищам на предприятиях."
+          ]
+        },
+        {
+          "title": [
+            "One Operational Command",
+            "Единое оперативное командование"
+          ],
+          "desc": [
+            "With peace restored, the headquarters receives its first request to surrender a factory requisition. Colette's quartermaster still needs the machinery; the workers want to reopen ordinary production. The improvised wartime command requires a political settlement before either side will yield. The delegates are coming to decide which powers remain with the officers, and which belong to the revolution's civilian partners.",
+            "После восстановления мира штаб впервые получает требование отменить заводскую реквизицию. Интенданту Колетт по-прежнему нужны станки, а рабочие хотят возобновить обычное производство. Импровизированному военному командованию необходимо политическое соглашение, прежде чем стороны согласятся уступить. Делегаты собираются определить, какие полномочия останутся у офицеров, а какие перейдут гражданским участникам революции. Завод не должен простаивать лишь потому, что победители ещё не договорились, кто вправе открыть его ворота."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Allies Bring Their Programme",
+          "Союзники приносят свою программу"
+        ],
+        "desc": [
+          "Colette recognises the railway worker before he reaches the table. He carries the timetable used during the rising, with the promises to civilian organisers written on its reverse. The officers have brought a plan for national reconstruction under her direction. Their allies answer with a council that would approve military expenditure and place civilian ministers over the workshops. Colette can accept that division of authority, retaining command under the council's mandate. Or she can establish a stronger national executive, keeping the army at the centre of reconstruction while admitting organised civilian representation. The worker leaves the old timetable between them. Cooperation carried the revolution through its danger; its terms must now survive peace.",
+          "Колетт узнаёт железнодорожника ещё до того, как он подходит к столу. Он принёс расписание, использованное во время восстания; на обороте записаны обещания гражданским организаторам. Офицеры представили план национального восстановления под её руководством. Союзники отвечают проектом совета, который будет утверждать военные расходы и поставит гражданских министров над мастерскими. Колетт может принять такое разделение власти, сохранив командование по поручению совета. Либо она создаст более сильную национальную исполнительную власть, оставив армию в центре восстановления, но допустив организованное гражданское представительство. Рабочий кладёт старое расписание между ними. Сотрудничество провело революцию через опасность; теперь его условия должны выдержать мир."
+        ],
+        "a": [
+          "Give the civilian partners their share of authority.",
+          "Передать гражданским союзникам их долю власти."
+        ],
+        "b": [
+          "Keep a national command for reconstruction.",
+          "Сохранить национальное командование для восстановления."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The First Civilian Appointment",
+          "Первое гражданское назначение"
+        ],
+        "a_desc": [
+          "A former underground organiser arrives at the capital's supply ministry with an appointment approved by the council. The colonel at the entrance directs her to the visitors' queue. She asks him to read the signature again. Colette comes down from the meeting room and introduces the new minister to the staff herself. Unification has enlarged the army's responsibilities, but it has also brought the civilian partners the authority they were promised. That evening, the minister refuses a requisition which lacks an explanation. The officers must learn to give one.",
+          "Бывшая подпольщица приходит в столичное ведомство снабжения с назначением, утверждённым советом. Полковник у входа отправляет её в очередь посетителей. Она просит ещё раз прочесть подпись. Колетт спускается из зала заседаний и сама представляет нового министра служащим. Объединение увеличило обязанности армии, но принесло гражданским партнёрам обещанные полномочия. Вечером министр отклоняет реквизицию, к которой не приложено объяснение. Офицерам предстоит научиться его давать. На прежних тайных встречах её просили достать недостающие грузы; теперь она вправе спросить, кому они понадобились и почему нельзя обойтись без них."
+        ],
+        "b_desc": [
+          "Colette's reconstruction headquarters has linked the provincial workshops into one supply programme. The first train arrives on time, carrying tools that three towns could not have obtained separately. At the platform, a workers' delegate points to a consignment made during compulsory overtime and asks when the promised civilian hearing will take place. Colette gives him a date and orders the responsible officer to attend. The national executive has kept its command, and its achievements are visible. So are the people bearing the cost of its urgency.",
+          "Штаб восстановления Колетт включил провинциальные мастерские в общую программу снабжения. Первый поезд приходит вовремя, доставляя инструменты, которые три города не смогли бы получить порознь. На платформе рабочий делегат указывает на груз, изготовленный во время обязательных сверхурочных работ, и спрашивает, когда состоится обещанное гражданское слушание. Колетт называет дату и приказывает ответственному офицеру явиться. Национальная исполнительная власть сохранила командование, и её достижения видны каждому. Видны и те, кто оплачивает эту спешку своим трудом. Делегат забирает копию распоряжения, чтобы на заводе знали, кого готовить к выступлению."
+        ]
+      },
+      "border": {
+        "title": [
+          "Who Gives the Advisers Their Orders?",
+          "Кто отдаёт приказы советникам?"
+        ],
+        "a_desc": [
+          "The Herzland delegation objects to an adviser who has begun approving appointments in its railway service. Our civilian minister asks the officer to produce the clause granting that power. He has none. Colette supports his recall and sends a replacement with written duties confined to the agreed defence arrangement. The border districts already transferred remain under our administration; the neighbouring state retains its civilian government. The left-wing partners who once carried coded messages between garrisons now watch whether liberation abroad means the same restraint they demanded at home.",
+          "Делегация Герцланда возражает против советника, который начал утверждать назначения в её железнодорожной службе. Наш гражданский министр просит офицера предъявить статью, дающую такое право. Её нет. Колетт поддерживает отзыв и отправляет замену с письменными обязанностями в пределах согласованного оборонного устройства. Переданные пограничные округа остаются под нашим управлением, соседнее государство сохраняет гражданское правительство. Левые партнёры, когда-то переносившие шифрованные сообщения между гарнизонами, теперь следят, означает ли освобождение за границей ту же сдержанность, которой они добивались дома. Новый советник начинает работу с визита к местному министру, а не с распоряжения начальнику станции."
+        ],
+        "b_desc": [
+          "The frontier staff presents Colette with a schedule for bases, instructors and railway access in the dependent Herzland state. Its commanders want the arrangement to outlast every foreseeable emergency. A civilian delegate asks what remains for the neighbour's government to decide. Colette draws the limits around the agreed installations and leaves the rest of the administration to its ministers. The military partnership will be close, but it does not authorise a march into the next province. Back at headquarters, the officers must plan demobilisation without assuming that another campaign will postpone it.",
+          "Пограничный штаб представляет Колетт график размещения баз, инструкторов и использования железных дорог зависимого государства Герцланда. Командиры хотят, чтобы порядок пережил любую мыслимую чрезвычайную ситуацию. Гражданский делегат спрашивает, что остаётся решать соседнему правительству. Колетт очерчивает пределы согласованных объектов, оставляя остальное управление его министрам. Военное сотрудничество будет тесным, но не даёт права идти в следующую провинцию. Вернувшись в штаб, офицеры должны составить план демобилизации, не рассчитывая, что новая кампания позволит его отложить. У гражданских союзников уже есть вопросы о том, когда домой вернутся железнодорожники и заводские рабочие."
+        ]
+      }
+    }
+  ]
+}

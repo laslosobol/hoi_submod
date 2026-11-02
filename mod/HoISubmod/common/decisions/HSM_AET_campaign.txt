@@ -1,0 +1,26 @@
+HSM_AET_category = {
+ HSM_AET_household_review = {
+  icon = generic_political_discourse cost = 0 fire_only_once = no
+  visible = { NOT = { has_global_flag = GRI_grover_vi_dead has_country_flag = HSM_AET_completed } }
+  available = { custom_trigger_tooltip = { tooltip = HSM_AET_review_tt HSM_AET_active = yes NOT = { has_country_flag = HSM_AET_review_cooldown } } }
+  complete_effect = {
+   custom_effect_tooltip = HSM_AET_review_effect_tt
+   hidden_effect = {
+    set_country_flag = { flag = HSM_AET_review_cooldown days = 30 value = 1 }
+    HSM_AET_recover = yes
+    clr_country_flag = HSM_AET_declined
+    if = { limit = { NOT = { has_country_flag = HSM_AET_mandate } } clr_country_flag = HSM_AET_mandate_done clr_country_flag = HSM_AET_queued_mandate }
+    if = { limit = { has_completed_focus = HSM_AET_mandate } HSM_AET_finish_mandate = yes }
+    country_event = { id = HSM_AET_system.6 days = 1 }
+   }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ HSM_AET_end_mission = {
+  icon = generic_political_discourse cost = 0 fire_only_once = no
+  visible = { NOT = { has_country_flag = HSM_AET_mandate has_country_flag = HSM_AET_completed has_country_flag = HSM_AET_union_done } }
+  available = { custom_trigger_tooltip = { tooltip = HSM_AET_end_mission_tt HSM_AET_active = yes has_war = no NOT = { has_country_flag = HSM_AET_mandate } } }
+  complete_effect = { country_event = { id = HSM_AET_system.7 days = 1 } }
+  ai_will_do = { factor = 0 }
+ }
+}

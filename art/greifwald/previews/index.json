@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "page_size": 18,
+  "scales": [
+    1,
+    3
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "note": "Technical preview only. No visual approval is inferred. Listed pages are current; unlisted older files are not review evidence.",
+  "assets": [
+    {
+      "id": "opening",
+      "kind": "focus",
+      "source_sha256": "5a9df3281cdb3c4890994144a600dc2c52532864250b011ef3ddc9ce8226b10e",
+      "export_sha256": "aaf4985175faf1e35049f363a12a1660ca61ace2a253207b93b379e684651cf2",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 0,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "refuge",
+      "kind": "focus",
+      "source_sha256": "68802419d65b1ebe68eade805c97bd2bba97a647c5c1bacad9cd6f8a144234c6",
+      "export_sha256": "121a0fc956fa33b31b8ecdad6bea91692b74b5a7c7b934c1eebbaa243900675a",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 1,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "home_budget",
+      "kind": "focus",
+      "source_sha256": "de06057e2aed2b2700f658ef4a9815537abbeac3cf6a7e51c7c815125ca3a2b7",
+      "export_sha256": "01acad3f734ecf85120edc7b148a9f8a7d25b61f6c26dfb5100d32821172dc33",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 2,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "congress",
+      "kind": "focus",
+      "source_sha256": "918764e354524fec67da398a513ca9cb274a4ec9823e034dbdee5675cc76df8a",
+      "export_sha256": "d62baa4dd30ae0809dc3335097bd8578e3c8c5ebdfac61567f70e15ddef225f0",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 3,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "mandate",
+      "kind": "focus",
+      "source_sha256": "1ff7487e25d1b60db213cd550979ab2a7ebb5c8e2359a8119f5bcaa8ffc77cae",
+      "export_sha256": "5d3bdb5b9a8b6d8d3d67f0c568abd1dfc2094fd61fd3ee646ba21034fb2be361",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 4,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "household",
+      "kind": "focus",
+      "source_sha256": "eeb9058e1e23897b102b72d08057d95306227ecd01f234566d0df0df9a846616",
+      "export_sha256": "767fcf1fe4839d9bc49c1c04066904bd94aa8bbcbec34257d4610eb6b97ed9dc",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 5,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "court_accounts",
+      "kind": "focus",
+      "source_sha256": "981c758f4813e6a4f419d10ef4ceeaafc7696440cc1bb99c5f3196bb831042e0",
+      "export_sha256": "214ed63153d31949bce610d62b965663afb826a063afea4867a63a7d91368020",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 6,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "service",
+      "kind": "focus",
+      "source_sha256": "9e1f69ec2926ae7c3c71d02a8f9749ea28878ab18d57224e0945dfa9d40fd496",
+      "export_sha256": "70ca50c23b58698e21d4a36f16d8d561ae9e91d30d495d0a0cb272f0b1c40b18",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 7,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "working_table",
+      "kind": "focus",
+      "source_sha256": "062da47c546865a59a1ffe0c55b8d46b53ba2f4dff735d64971bcbda304573e1",
+      "export_sha256": "bcee08e1524a87bafc90568fa656de35928a7490a0197e3b42029d9cb018ec2f",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 8,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "prepare",
+      "kind": "focus",
+      "source_sha256": "b2a6a80cce5645cfecffc3819a9692cf4a6ba9e86213be38ad063c0f4da62a28",
+      "export_sha256": "c71c6d38a8423246c639bbf3c0a7f89ae43e26ee924db20d3acba933a36d00ea",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 9,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "obituary",
+      "kind": "focus",
+      "source_sha256": "485bc22826a5bc27ebfec6b0b59d71427df5eea269bf2107314c62be22d097c2",
+      "export_sha256": "af93aad05c4add8adf2b9ec47fe3a9646c83573687b25e81085d38fb303db945",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 10,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "interim",
+      "kind": "focus",
+      "source_sha256": "c76165d5d11716c84bd8b046680a70d06ba5e3c33d813c47c98beb8dc1b15548",
+      "export_sha256": "ded44ea0e190dd2e4c4359371f3113877c02629a5e1b1b6f8ec7c7134872f52d",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 11,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "delegates",
+      "kind": "focus",
+      "source_sha256": "d900b7c9507930011e8c1cff330c0fccfd8078bba5eeb97824549f53a30ac37b",
+      "export_sha256": "e42d5a3c7262c11837a1c95c7174f1402b3c24f20276776b00e5548af7669931",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 12,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "union",
+      "kind": "focus",
+      "source_sha256": "a4eb3aa16ed158e327676f6b12cdb1fd6a2420b430690a0f5969d7671adf0767",
+      "export_sha256": "cd197d24bc2f9d29412e5f10f0e5e2ceb3ecdf3129ecaef3b6438fe641cd22e4",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 13,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "revenues",
+      "kind": "focus",
+      "source_sha256": "25fe8a02f9ec52025d6e778e2bfa8e8e21129d1cafcef793b2c6a11fe0ca2794",
+      "export_sha256": "3b6ab7e0272eb60ad057f03778378665d3765911a82150f613c3360086ea81fd",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 14,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "succession",
+      "kind": "focus",
+      "source_sha256": "8345f397e754f7590f22984d3f4a5684dc40c964f7b3ec4bad391cb692eccd7b",
+      "export_sha256": "77535ba9425ac2a29a8a713389c07240b43d6bca7259e8a0f78b9ff805a4a4da",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 15,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "winter",
+      "kind": "focus",
+      "source_sha256": "f78a368a6e792fe84d9fd7e0e65716906ea91dce4b317946317ba87d4bd45f30",
+      "export_sha256": "4c0f47646b67ee6bf5a27362ef63cd49e43673bbdb2f6a5e524967851a94add7",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 16,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "workshops",
+      "kind": "focus",
+      "source_sha256": "7148becd2a97707567cab425fa0a07004fa0cb7631a969a87eeb39fdb40060ae",
+      "export_sha256": "1112c2eba1b8fde31b1146daf5f2b7739fdcd63aecc8493e0876c8d2db0ac0ec",
+      "page": "art/greifwald/previews/focus-01.png",
+      "cell": 17,
+      "page_sha256": "629774bb4ce3512fc394a5c19c3577d851f3907152ec43f8d19f1a411ab00c40"
+    },
+    {
+      "id": "roads",
+      "kind": "focus",
+      "source_sha256": "b7ea0822cd97c46ef1f2b287acf7b6a381ef50126076f8632791952ca226aad7",
+      "export_sha256": "d03db334a1a6d8ca690855a3d7d62907df5659c8eb7e7b033904c69162e95f83",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 0,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "scholars",
+      "kind": "focus",
+      "source_sha256": "5c3a16ee1e56f1d875a23ca5caf5a0a38394e8286f3ec6dc509c926cd3edee03",
+      "export_sha256": "aa7802941a70acf088e25c5fe67150629532957e99f6bec5b07892d8ea41356f",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 1,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "demobilisation",
+      "kind": "focus",
+      "source_sha256": "ab93efa06ffa7c493a2e0df36bffa02624f5cd9861023218d4df8c7406d4cb32",
+      "export_sha256": "e6850e39a01c2433da11ab46f450622d91850d9dc46fa2b1e78ab5ca9cc4bbb1",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 2,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "letters",
+      "kind": "focus",
+      "source_sha256": "83fa3fe00587b3a42e0cae7843c86c276666819a4017a61f1b8296422b3e64d1",
+      "export_sha256": "90ee30aeb86e2e3d01fad19695302ea622fefda166f4e14102ad0cf68ae6ee2b",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 3,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "audience",
+      "kind": "focus",
+      "source_sha256": "13a7e0a1a7d5038262d750d963f02f34050fa5eb35757e2cf2b78428808aa597",
+      "export_sha256": "1e50e28ffb0ad69fb59d3b500e7d453c9fb4ebd2a759eaae76fa2951b11cd87e",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 4,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "hearing",
+      "kind": "focus",
+      "source_sha256": "587c92e4eb719ac1e2ca8be644ff1cbee6a146c02465c6f79cf7bc60225bdb92",
+      "export_sha256": "8877d58b35e524322a5bcbed67cd75bfcc7cdd97b6cf825d3e9150c848fb1b2b",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 5,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "signature",
+      "kind": "focus",
+      "source_sha256": "127c689b2ad161df92f9c8042438875a13cc19875bf87022556d12f3719fa1e0",
+      "export_sha256": "4f5815724f4ba93a7c041dfbec78e7962e3489613442ed178f46b5002c2a1133",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 6,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_oath",
+      "kind": "focus",
+      "source_sha256": "f0576d54883144bf9e12d9c77be08e1ef028c5ac1f8ca8d90afd2ac2fcc1f04b",
+      "export_sha256": "732baa54b44f0def4afbf418f294224cee8856e8ba6cc1978a79f2c4b7f4776c",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 7,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_towns",
+      "kind": "focus",
+      "source_sha256": "bc40ece9ca599e29b9af08870864ec62cb98fec2a4fa7962aa91ae5dddf015a4",
+      "export_sha256": "56de82fbf28692775ce7290451575c536015d8adb526ad945f1c6430203caae2",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 8,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_army",
+      "kind": "focus",
+      "source_sha256": "a31698650b7e5982a6a5085d9cf4f4d8648b0d5d06469e2839108f13c4cebdaa",
+      "export_sha256": "3d78a2b22a43ec4d25e149b6a3aa342cb87b5d81309d53af8c3c010a2b7fbcdc",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 9,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_schools",
+      "kind": "focus",
+      "source_sha256": "8263766e351acd3e2d3adcc64f0096572b55c1668d02e15e04791210452c5af1",
+      "export_sha256": "dc882b0643ad914900f96196d6c5b1b6ac7b0439c0784c46cbdb05ecc11de0b2",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 10,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_debts",
+      "kind": "focus",
+      "source_sha256": "5f95ea3314e3c8f9aadc01e5543fe2c00aa50cb3c84485b21efa8fbb1b1b2acb",
+      "export_sha256": "1845d2219a6aac27b428430f506ad354756e790f1ae703837c2b97aab59e3933",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 11,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "GRI_settlement",
+      "kind": "focus",
+      "source_sha256": "0a50cefc7353636e8e170c509b34d201d44f15236aca6923dc54e3726a7298dc",
+      "export_sha256": "9c7cdca43ac3574df7d9d67aed7b42f30ea88eeae868610ab526857858c92db1",
+      "page": "art/greifwald/previews/focus-02.png",
+      "cell": 12,
+      "page_sha256": "ab14bf71437a4fd9218515d55d64be1d91da9e1912a00c444814f9bc29c9d2a9"
+    },
+    {
+      "id": "compact",
+      "kind": "dynamic",
+      "source_sha256": "9cfb01aafa593034c51e8a7ad27ad65932802df6363b295a5372fd080858f913",
+      "export_sha256": "bc6ea4793b161b8080af29a49cdabe827f8628e1a08f21f2b1876ae200f68c9a",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 0,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "imperial_compact",
+      "kind": "spirit",
+      "source_sha256": "8b24b34204a148d00f1dba3af4ad2644c36e7af582e6911418f7940873889da5",
+      "export_sha256": "f25c0843d8b8c14d3e2eea6120b257ec88e4560e66c333816142641d9258c160",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 1,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "imperial_settlement",
+      "kind": "spirit",
+      "source_sha256": "6bfa2ea62b239a3b30f4078689aed08677bdf1f69b2a9bd20b1fcf51d087d897",
+      "export_sha256": "022b0800a1e3742eea43c3f7125a77d814a8717768eb89d5c85affdc82a44d17",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 2,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_revanchism",
+      "kind": "spirit",
+      "source_sha256": "5a378da5e926c6f07c37cd64038789a6674ab4d70569462e597e72d12863d9c7",
+      "export_sha256": "49742dd188f6426beaaac3995aefad3cc3720df1b3c92b97e085e08863a2f20a",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 3,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_realism",
+      "kind": "spirit",
+      "source_sha256": "d180c0ec672738b14ee06ce5d1e23f4761d83f4e673d10f24385ba2f2e3d9c79",
+      "export_sha256": "ff67dad06d975265a953b5ec531b9387b125ad3cf4bfc6ee4a725e772c9cabb8",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 4,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_true_neutrality",
+      "kind": "spirit",
+      "source_sha256": "b4bb1f72b987b8a48493a87610d414407f57cc5f72a1f6fe1dd81a1a623b07fa",
+      "export_sha256": "8a057e98eddc8d4c175dc0c86b1cbaf40780e87287bbe7432451dcccb06464bb",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 5,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_military_advisors_JER",
+      "kind": "spirit",
+      "source_sha256": "0f5e5f6898f5238ae565f5aebb9fa3f793ac95e7fff76f3b9e44b5b890b015f1",
+      "export_sha256": "71ab3fe5708fdd0ec5c58285e7c3e1d5bf77722f499557e11be5795c44414ef9",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 6,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_military_advisors_GRI",
+      "kind": "spirit",
+      "source_sha256": "5a3be80879db0f09972a7a1e63080306cf724fe9520230d68b8c92cf1d2df16c",
+      "export_sha256": "62de86877f938e0e459fc6544cf9015838d304814dc46c55d28742f7081a4c83",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 7,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_new_county_politics",
+      "kind": "spirit",
+      "source_sha256": "093043d2be18071821fbf5c400ad1d1a63bbef19843de228b0f84d25135aeb02",
+      "export_sha256": "13a9abac7e2fd4500236b37eed180c8af2a1c89c206230ce0e469093c6032000",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 8,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_agriculture_reform",
+      "kind": "spirit",
+      "source_sha256": "c4da5c51d15d18fef9f4f9a6d29c0b5f5217b3ed661658593b423aa5a1dadb67",
+      "export_sha256": "af3c76249650c82a099c8a39a1a37981ffcf903c38497a92e4d3f8be9752366b",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 9,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_greifwaldian_army",
+      "kind": "spirit",
+      "source_sha256": "dc604220a33f3aef900e568ce93c488abb4b1b8ae10e640551fb939bd890edfe",
+      "export_sha256": "b9e1d8d4eeb12a69add832b0dfc15853acbc184b4050366f63e536869485bfae",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 10,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_anarchists",
+      "kind": "spirit",
+      "source_sha256": "3f4eed80b2605b4cc66f9a92e2e6ff69517fdfd1045f2a1964c444867c713e3d",
+      "export_sha256": "f6e8d563d8a93124bb8bafb367ac58dbabada796b45f73d604c764d372ee5507",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 11,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_anarchists_2",
+      "kind": "spirit",
+      "source_sha256": "eeb18a807bdd492adab13cc229428411403cceeca9319ec009d2fd0b18880177",
+      "export_sha256": "ecd548299be00be889a2fe83b83d4982d5999bbee3c847284e5fab7f398bab60",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 12,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_black_army",
+      "kind": "spirit",
+      "source_sha256": "598ec4ae9ebde78dadba52b92775fdc30368d15488fc7b8932fd528f28952752",
+      "export_sha256": "1918a3c02533fb2a694bd0244dc515535d0fddff0677af814da8faf48c0f5a79",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 13,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_land_given_away",
+      "kind": "spirit",
+      "source_sha256": "1b51f8767019fd9c6e8f8c9f4380ed8aaf5445a8025a4cc48f7ffe18ef75817e",
+      "export_sha256": "2d6ecdf76fdae3e564f0cb83851f51fdecee766365612c8d175584ca4c0ae930",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 14,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_factory_control",
+      "kind": "spirit",
+      "source_sha256": "a872196f02515d039c2946a665ebe115affc1f101f8b8aa0778a69752eb60c09",
+      "export_sha256": "143e68e9a93c760c156e387e3237a4f9f943dde4a4b9b54bf325d9fe22ef0cc2",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 15,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_teacher_control",
+      "kind": "spirit",
+      "source_sha256": "89946a257d6504a91cf82595ffb4ebc654e03f16b2f1fd9df2a0c33b525014cb",
+      "export_sha256": "75aabda204ea714c105da9c4a301861cabe4c59c75bf199261882b8dea8e6aa3",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 16,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_mother_anarchy",
+      "kind": "spirit",
+      "source_sha256": "f9a044b9c4d2bd8c375b7febab6c1875e47b8a381525f36fff37cd77118e403c",
+      "export_sha256": "33a94ee019bb55e86bb5708ef1f035b7d15522b7ca5aad4e46c586fec8e46a77",
+      "page": "art/greifwald/previews/spirit-01.png",
+      "cell": 17,
+      "page_sha256": "6443b510cfe0bf32b63d38787c563d891247c6a26dc09fe21297d21e9aec85d6"
+    },
+    {
+      "id": "native_militias",
+      "kind": "spirit",
+      "source_sha256": "b51217623fb742ce6b7433fcf68f888508216ed14c83a7263d2bbb75f2bb882b",
+      "export_sha256": "df1fd8dd6ca0c7508338b4314115f4d418588dab117d3743458aa1a2e8ee6ddb",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 0,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_militias_2",
+      "kind": "spirit",
+      "source_sha256": "223d9f8744224e858c17f76b473aed4167ab64bb7a085650f74adda3870cec3c",
+      "export_sha256": "b737b52075e608314482a482e106508bdc0d6f3e277f1d273ba755dfc7a8f621",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 1,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_one_language",
+      "kind": "spirit",
+      "source_sha256": "3f29f877a3057d3726c829245a02331c2257f3170e24c1cafae365fc0b9f32e8",
+      "export_sha256": "0b786f2910dd5a43013c31a9d48a6f3ef914f23a9343e4e7cc405ea1e90fe6ff",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 2,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_the_idol",
+      "kind": "spirit",
+      "source_sha256": "9f09097715e81e01abb670846cfe53236578e33bb4f7e527ae62f65715aab36d",
+      "export_sha256": "0bab054677f0865d9aa679a3522a1fe58368b140ce15832a8b6ce12a03fb9bc3",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 3,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_militias_3",
+      "kind": "spirit",
+      "source_sha256": "d7a61a409e590bdbdb1e7259645b4da5a7299e216de1be86c0e8a7dee2d279a7",
+      "export_sha256": "d6d75abbd259ea412302ac6f1131875df861376d09b917164742ae13b9d190a5",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 4,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_slavery",
+      "kind": "spirit",
+      "source_sha256": "d4f8f0eda6d5f0c3b429b0e352a37a2eb59a04967c8fe3d72d3d8c8e1da40065",
+      "export_sha256": "397e08dc0b8f17e9e8c6fa2c7dd519f1b954ab93d3708a0b3e8aec9302f0063e",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 5,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_one_will",
+      "kind": "spirit",
+      "source_sha256": "588a477214caeaaed76950c9e7b18fac43b9f490e5412de00bb2f80333883038",
+      "export_sha256": "f528c62833fef46056d1d24bdedbcc45f8dcfbd2d062572507ae333ccdbca8e0",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 6,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_mechanise_agriculture",
+      "kind": "spirit",
+      "source_sha256": "7d1cc31cf5dabfe5e2bb77960f784acf6401860279125dc45605f402b5fb79e6",
+      "export_sha256": "38f3a4fbe7e1980d69a2808ab2312b5202656942702da900867bee79983fcaf5",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 7,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_oil_production",
+      "kind": "spirit",
+      "source_sha256": "200e7ddda55ca122cbb623a86cd8d690994442216c53cb3bd6928e340eb312bc",
+      "export_sha256": "c4739dd3e55fca87bcdfd1526e1c9855381d89b2503c11f936bfde760ea22eef",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 8,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_recylce_muskets",
+      "kind": "spirit",
+      "source_sha256": "916e8a4dc34853698b456bc806072f29b8b06f351958b75c4442ca55cdbfb878",
+      "export_sha256": "3dbcb9e178bdc3da139ee480a63ec20cf299ac6d49eab1398b205d76c431c074",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 9,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_exclude_scientists",
+      "kind": "spirit",
+      "source_sha256": "9e866e21e9598624e194db2992e10b00fe67453f35f24362e51564a45dd5278a",
+      "export_sha256": "7410aaa90314fb0746e7070219b9f4189152595fbd1ba80738bbf5ff1ea3e62a",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 10,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_heaven",
+      "kind": "spirit",
+      "source_sha256": "f9a0d3dfe82f9f6a1408374aa4a1ec345e0c5a7f53a4f2a1dabddc4c42235911",
+      "export_sha256": "51c4221f00804c2e131d438b1bc74f15a758f99eb3090aec8256a7ea495bcca3",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 11,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_immigration",
+      "kind": "spirit",
+      "source_sha256": "ad3cda236a415b4e847232a3eda53acb896f69b0c72a88fc5e6793e17950e4d8",
+      "export_sha256": "7ed7ef1183c57ec58e118609e16dd6943cdf1b7e61457e9a90860cd1e1940afd",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 12,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_changeling_scientists",
+      "kind": "spirit",
+      "source_sha256": "c076069a5c079b7ee41358cbea8fcc92e15ab8033522f1b96be1d7cf22af121b",
+      "export_sha256": "f21bf667bf21867dcccfa76e4c4544b619cb5540bd416e6a53b122ee804c83c3",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 13,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_ratlines",
+      "kind": "spirit",
+      "source_sha256": "f281e3077e4ea0ac11525e3de2d552bb0561bf14342db5b226499017c7f4e59d",
+      "export_sha256": "9c0f8dd0a9c18627e329f42736a0ebff4ee75dc645e44d9d70673be441f63e36",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 14,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_officer_core",
+      "kind": "spirit",
+      "source_sha256": "19f89925b19f8b5b549cc458c613223f801fe1dea125f5b4dd737e84fceb7ed6",
+      "export_sha256": "dc065e75e2e75611bea35a56575ccde2cbb1e1159254a9de07d5fc39303e1a3d",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 15,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_aether_travel_idea",
+      "kind": "spirit",
+      "source_sha256": "83631f034400d7c87e27fc6dc03d875dfd3ad8fa87c0f169c0f33b549e823e39",
+      "export_sha256": "75fcba26ee1b216836133bea8c9c453669bb322c1955dd52d94f9dd6e8a987c4",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 16,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_hellfire_forge_idea",
+      "kind": "spirit",
+      "source_sha256": "e1cbb7f9f6084335b17d8fc6584ba25420c7ea0d8ed6d7ee7a9dc680c37dd3a1",
+      "export_sha256": "189280d01a89d8b23754a733cc5adb805bfeb8c153baef4044e065f762708a6c",
+      "page": "art/greifwald/previews/spirit-02.png",
+      "cell": 17,
+      "page_sha256": "2094c9e2d3274095a2edb6d3e432123fd56f690eb8c78df8abd51fd31663b752"
+    },
+    {
+      "id": "native_raise_dead_idea",
+      "kind": "spirit",
+      "source_sha256": "80fc9277108632fc582c2dca983a6100145880b4183ab61bb6ccca907283c69e",
+      "export_sha256": "4726dff397072c23d9c3bd46edae910c8e6323ef8dec26edfbcdc8058ee2d769",
+      "page": "art/greifwald/previews/spirit-03.png",
+      "cell": 0,
+      "page_sha256": "30cd73d19d18225d2a658dce61ceac984275db27287b18cb969d7411d2f69b93"
+    },
+    {
+      "id": "native_madness_and_despair",
+      "kind": "spirit",
+      "source_sha256": "151cf24ebb9b29d26a99aeddbca4f0bf043581f6338567d363ff2ea8fdd3cc25",
+      "export_sha256": "b2840e7b77beb644072478ae79d0e56f44f8de44f99ffe271188e04219500bd2",
+      "page": "art/greifwald/previews/spirit-03.png",
+      "cell": 1,
+      "page_sha256": "30cd73d19d18225d2a658dce61ceac984275db27287b18cb969d7411d2f69b93"
+    },
+    {
+      "id": "native_the_weak",
+      "kind": "spirit",
+      "source_sha256": "859490054072a45823042b8d4b3dbf963958169593be37b0cbfbe8a0115487d8",
+      "export_sha256": "1211b72cdc8b2957b4cdfa54418c582629494a1574ed0dbaf1557df92d8bca1d",
+      "page": "art/greifwald/previews/spirit-03.png",
+      "cell": 2,
+      "page_sha256": "30cd73d19d18225d2a658dce61ceac984275db27287b18cb969d7411d2f69b93"
+    },
+    {
+      "id": "native_blessing_of_war_god",
+      "kind": "spirit",
+      "source_sha256": "af761645cb0c5e7132955b77d2072fcac671a69727a2184062ac3bd249047cd6",
+      "export_sha256": "f504216462f197bfb68e4f423a38a03c55a2b7b5e97096108c01e82f4d3ccef2",
+      "page": "art/greifwald/previews/spirit-03.png",
+      "cell": 3,
+      "page_sha256": "30cd73d19d18225d2a658dce61ceac984275db27287b18cb969d7411d2f69b93"
+    },
+    {
+      "id": "native_blessing_of_production_god",
+      "kind": "spirit",
+      "source_sha256": "9778e429dea322ba6286bc1abd3c286273aa4065fad9be7779d6a930aca9b56e",
+      "export_sha256": "8868e635b072e307327d5bb6301d43029ab90612f226a657b3ece62d9bc8707a",
+      "page": "art/greifwald/previews/spirit-03.png",
+      "cell": 4,
+      "page_sha256": "30cd73d19d18225d2a658dce61ceac984275db27287b18cb969d7411d2f69b93"
+    }
+  ]
+}

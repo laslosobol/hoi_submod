@@ -1,0 +1,5 @@
+HSM_AET_category = {
+ icon = generic_political_discourse
+ allowed = { original_tag = AET }
+ visible = { has_country_flag = HSM_AET_started NOT = { has_country_flag = HSM_AET_closed } }
+}

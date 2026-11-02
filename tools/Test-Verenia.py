@@ -177,7 +177,10 @@ def package_files():
 
 def definitions(folder):
     result = {}
-    for path in (MOD / "common" / folder).glob("HSM_VER*.txt"):
+    # Native Grover guards delegate to the real Greifwald household predicate.
+    for path in sorted((MOD / "common" / folder).glob("*.txt")):
+        if not path.name.startswith(("HSM_VER", "HSM_AET")):
+            continue
         for node in read(path):
             if node.key in result:
                 raise ValueError(f"Duplicate {node.key}")
@@ -215,6 +218,7 @@ class Country:
 class World:
     def __init__(self):
         self.countries = {tag: Country(tag) for tag in ("ERI", "EYR", "AVI", "GRI")}
+        self.countries["AET"] = Country("AET", exists=False)
         self.countries["ERI"].leader = "ERI_duke_vincent_erie"
         self.countries["EYR"].leader = "EYR_duke_iovinus_eyrie"
         self.countries["AVI"].leader = "AVI_lady_katrina_avian"

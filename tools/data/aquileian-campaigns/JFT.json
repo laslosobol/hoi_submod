@@ -1,0 +1,555 @@
+{
+  "tag": "JFT",
+  "foundations": [
+    {
+      "slot": "f1",
+      "title": ["The Harbour Clock", "Портовые часы"],
+      "desc": ["Pridea's fish carts and grain wagons meet beneath the same harbour clock, although their owners appear to keep different hours. Pilots know when a vessel can enter the gulf; market porters know when its cargo must reach the stalls. Bringing their timetables together will spare the city another morning of empty baskets beside a crowded quay.", "Рыбные телеги и зерновые подводы Придеи встречаются под одними портовыми часами, хотя их владельцы словно живут в разном времени. Лоцманы знают, когда судно сможет войти в залив, а носильщики — когда его груз нужен на рынке. Общее расписание избавит город от утра, когда у переполненного причала стоят пустые корзины, а покупатели напрасно ждут торговцев."],
+      "days": 35,
+      "reward": "pp50"
+    },
+    {
+      "slot": "f2",
+      "title": ["From Quay to Granary", "От причала до зернохранилища"],
+      "desc": ["The road between Pridea's quays and the surrounding grain stores carries more than the harbour map suggests. A broken culvert strands the same wagons in every heavy rain, leaving sailors to unload sacks that cannot go anywhere. Road crews will work outward from that crossing, following the cart drivers who know where the next wheel will sink.", "Дорога между причалами Придеи и окрестными зернохранилищами важнее, чем можно заключить по портовой карте. После каждого ливня повреждённый водосток задерживает подводы, а моряки продолжают выгружать мешки, которые некуда везти. Дорожные рабочие начнут с этого переезда и пойдут дальше вместе с возчиками: те хорошо знают, где увязнет следующее колесо и какой объезд выдержит тяжёлый груз."],
+      "days": 35,
+      "reward": "infrastructure"
+    },
+    {
+      "slot": "f3",
+      "title": ["Salt in the Rifle Racks", "Соль на оружейных стойках"],
+      "desc": ["Salt air reaches the harbour armouries as readily as it reaches a ship's rigging. The armourers have collected serviceable barrels beneath a roof that no longer keeps them dry. Repairing the racks and matching these scattered parts will put neglected weapons back into orderly stores, where a quartermaster can find them without opening every rusted chest.", "Морской воздух проникает в портовые оружейные склады так же легко, как добирается до корабельного такелажа. Оружейники собрали пригодные стволы под крышей, давно переставшей защищать их от сырости. Починив стойки и подобрав недостающие детали, они вернут забытое оружие на своё место. Тогда снабженцу не придётся вскрывать каждый проржавевший ящик, чтобы собрать нужную партию винтовок."],
+      "days": 35,
+      "reward": "rifles500"
+    },
+    {
+      "slot": "f4",
+      "title": ["A Gangway Wide Enough", "Достаточно широкий трап"],
+      "desc": ["A harbour exercise has left the stretcher bearers waiting behind ammunition carts on the narrowest gangway. Pridea has sailors who understand boats and soldiers who understand marching, but the moment between shore and deck belongs to neither profession alone. Repeating the loading drill together will teach the crews where to leave room before anyone needs it under fire.", "На портовых учениях носильщики с ранеными застряли за тележками с боеприпасами у самого узкого трапа. В Придее хватает моряков, понимающих суда, и солдат, умеющих маршировать, но переход с берега на палубу требует согласованной работы. Совместная погрузка покажет каждому расчёту, где следует оставить свободный проход, прежде чем через него придётся нести кого-нибудь под обстрелом."],
+      "days": 35,
+      "reward": "army_xp20"
+    }
+  ],
+  "routes": [
+    {
+      "id": "JFT_dennis",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": ["The Admiral's Repair Book", "Ремонтная книга адмирала"],
+          "desc": ["Dennis can remember which captain owes him a favour, but the dockyard cannot repair a hull with recollections. Its masters have begun a book of damaged vessels, promised timber and unfinished work. The admiral wants his old acquaintances served promptly. They will discover that even an acquaintance must bring the carpenter something more useful than a familiar name.", "Деннис помнит, какой капитан обязан ему услугой, но воспоминаниями корпус судна не починишь. Верфяные мастера завели книгу повреждений, обещанных поставок леса и незаконченных работ. Адмирал хочет поскорее помочь старым знакомым. Теперь им придётся принести плотнику кое-что полезнее известного имени: точный заказ и сведения о том, где взять дерево для очередного ремонта."],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": ["A Berth for the Coasters", "Место для каботажных судов"],
+          "desc": ["The great naval hulls take every convenient berth while the small coasters wait with split planks and leaking seams. Their captains carry the cargoes that keep Pridea's markets open. A repair slip reserved for these uncelebrated vessels will test whether Dennis's maritime friendships can serve the harbour beyond the ships whose officers dine at his table.", "Крупные военные корабли занимают все удобные места, пока небольшие каботажные суда ждут с треснувшими досками и разошедшимися швами. Именно их капитаны доставляют товары на рынки Придеи. Отдельный ремонтный стапель станет проверкой морских связей Денниса: смогут ли они помочь всей гавани, включая суда, чьих офицеров никогда не приглашали к адмиральскому столу на торжественный ужин."],
+          "days": 42,
+          "reward": "dockyard"
+        },
+        {
+          "slot": "e3",
+          "title": ["Patterns from the Master Shipwrights", "Образцы корабельных мастеров"],
+          "desc": ["Every yard keeps its own patterns, and every apprentice learns which neighbouring yard supposedly cuts them wrong. Dennis has asked the masters to lay their templates together beside a dismantled winch. Agreement comes slowly, with much pointing and swearing. Once the same replacement fits on either quay, the admiral will have something worth sending to other royal ports.", "На каждой верфи хранят собственные лекала и учат подмастерьев, почему соседи всё делают неправильно. Деннис велел мастерам разложить образцы возле разобранной лебёдки. Договориться трудно: вокруг деталей разгораются споры и звучит ругань. Когда одна запасная часть подойдёт механизмам на обоих причалах, адмирал наконец сможет отправить другим королевским портам полезный образец вместе с привычным дружеским письмом."],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": ["The Crown's Inland Cargo", "Королевский груз для внутренних областей"],
+          "desc": ["A national shipping agreement has carried Dennis's promises farther inland than any of his boats can sail. Wagons must now connect the quays to towns that have never known his captains. The admiral will send road surveyors with the first consignments, making his contribution to the crown visible wherever a broken bridge would otherwise swallow it.", "Общее соглашение о перевозках унесло обещания Денниса дальше от моря, чем способен пройти любой его корабль. Теперь подводы должны связать причалы с городами, где никто не знает адмиральских капитанов. С первыми грузами отправятся дорожные землемеры. Там, где разбитый мост мог поглотить всё обещанное снабжение, появится зримое свидетельство того, что Придея приносит пользу короне."],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e5",
+          "title": ["Orders Beyond the Quarterdeck", "Заказы за пределами палубы"],
+          "desc": ["The shipwrights' common patterns have found customers among millers and warehouse keepers. A workshop beside the harbour can supply them without interrupting repairs at sea. Dennis likes the thought of inland merchants depending on Pridea, though his craftsmen insist that dependable deliveries will win more contracts than another invitation to drink with the admiral.", "Общие образцы корабельных мастеров заинтересовали мельников и владельцев складов. Мастерская возле гавани сможет выполнять их заказы, не задерживая морской ремонт. Деннису нравится мысль, что внутренние области будут нуждаться в Придее. Ремесленники, однако, убеждают его: исправные поставки принесут больше заказов, чем ещё одно приглашение выпить с адмиралом и вспомнить давние походы за его столом."],
+          "days": 56,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "m1",
+          "title": ["Muster the Old Boat Crews", "Собрать старые шлюпочные команды"],
+          "desc": ["Dennis's old sailors know every landing in the gulf, but years ashore have scattered them among taverns, workshops and fishing boats. The muster will distinguish those ready to serve again from those whose strength now lies in teaching. The admiral needs both, and neither group intends to accept another promise of pay remembered only by its captain.", "Старые моряки Денниса знают каждое место высадки в заливе, но годы на берегу разбросали их по тавернам, мастерским и рыбацким лодкам. Сбор покажет, кто ещё способен служить, а кому лучше учить молодых. Адмиралу нужны и те и другие. Никто из них, однако, больше не согласен довольствоваться обещанием жалованья, которое помнит только собственный капитан."],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": ["Fleur's Embarkation Tables", "Погрузочные таблицы Флёр"],
+          "desc": ["Fleur Bloom has arranged the landing stores in the order soldiers will need them ashore. The marines complain that her tables leave less room for their favourite equipment. She asks them to carry a wounded comrade through their preferred arrangement. Dennis watches the attempt before telling the boatswains to leave her chalk marks where they are.", "Флёр Блум разложила припасы в том порядке, в каком они понадобятся солдатам на берегу. Морские пехотинцы жалуются, что её таблицы оставляют меньше места любимому снаряжению. Она предлагает пронести раненого через укладку, которую они считают правильной. Деннис наблюдает за попыткой и велит боцманам сохранить меловую разметку: на этот раз привычка уступит место проверке делом."],
+          "days": 42,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m3",
+          "title": ["Signals across the Gulf", "Сигналы через залив"],
+          "desc": ["The shore watchers recognise Dennis's flagship instantly; they are less certain what its lamps are asking them to do. Merchant escorts and landing parties need a language that survives fog and unfamiliar officers. Fleur will bring the signal crews together, while the admiral supplies the impatient captains who must learn to wait for an answer.", "Береговые наблюдатели сразу узнают флагман Денниса, но не всегда понимают приказ, переданный его огнями. Торговому охранению и десантным отрядам нужен язык, который выдержит туман и смену офицеров. Флёр соберёт сигнальщиков для совместных занятий. Адмирал приведёт нетерпеливых капитанов, которым тоже предстоит учиться: прежде чем отправляться вперёд, нужно убедиться, что на берегу приняли сообщение."],
+          "days": 42,
+          "reward": "navy_xp15"
+        },
+        {
+          "slot": "m4",
+          "title": ["Marines on Unfamiliar Ground", "Морская пехота на незнакомой земле"],
+          "desc": ["The crown has uses for Pridea's marines beyond guarding Dennis's quays. Inland exercises reveal how quickly a landing column loses its bearings without a visible coast. Marie Anne d'Armond brings her officers back to the map, asking them to explain how a formation built for the shore will hold a village until its support arrives.", "Короне нужна придейская морская пехота и за пределами причалов Денниса. На учениях вдали от моря десантная колонна быстро теряет ориентиры, когда берег исчезает из виду. Мари-Анн д'Армонд снова собирает офицеров над картой. Им предстоит объяснить, как привычное к высадкам подразделение удержит деревню до подхода поддержки и по какой дороге доставит туда необходимые припасы."],
+          "days": 49,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m5",
+          "title": ["Stores for a Royal Relief Column", "Припасы для королевской колонны"],
+          "desc": ["The harbour stores contain enough mismatched weapons to embarrass every quartermaster who has signed for them. Fleur wants a reserve that an arriving column can actually use. Dennis orders his captains to open their private caches as well. Old naval loyalties will be measured by what reaches the soldiers, not by how loudly their owners salute.", "На портовых складах скопилось столько разномастного оружия, что любому снабженцу стыдно показать свои расписки. Флёр нужен резерв, пригодный для прибывающей колонны. Деннис велит капитанам открыть и личные запасы, прежде считавшиеся неприкосновенными. Теперь давняя морская верность будет измеряться тем, что получат солдаты на дороге, а громкие приветствия владельцев тайников уже не заменят исправных винтовок."],
+          "days": 56,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "c1",
+          "title": ["The Auxiliaries' Home Addresses", "Домашние адреса вспомогательных частей"],
+          "desc": ["The pony auxiliaries have families in streets where their uniforms recall raids and searches. Fleur brings Dennis a bundle of complaints, some against his men and some against those threatening their children. She asks him to distinguish service from collective innocence, and grievance from collective guilt. The admiral cannot settle these streets by marching through them once more.", "У пони из вспомогательных частей есть семьи на улицах, где их форма напоминает об обысках и облавах. Флёр приносит Деннису жалобы на его солдат и на тех, кто угрожает их детям. Она просит отличать службу от всеобщего оправдания, а обиду — от обвинения целого народа. Ещё один марш через эти кварталы не разрешит накопившиеся противоречия."],
+          "days": 35,
+          "reward": "stability5"
+        },
+        {
+          "slot": "c2",
+          "title": ["A Sailor's Place beside the Crown", "Место моряка рядом с короной"],
+          "desc": ["The national settlement gives Pridea's admiral a place from which to argue for his harbour. Dennis arrives with charts, freight complaints and a deep suspicion that someone wants his keys. Royal service still binds him to the dynasty. Making that service useful will require him to speak for his sailors without treating every Aquileian shore as his possession.", "Общегосударственное соглашение даёт адмиралу Придеи возможность защищать интересы гавани. Деннис прибывает с картами, жалобами перевозчиков и стойким подозрением, что кто-то намерен забрать его ключи. Служба короне по-прежнему связывает его с династией. Чтобы приносить ей пользу, придётся говорить от имени своих моряков, не обращаясь при этом с каждым аквелийским берегом как с личным владением."],
+          "days": 42,
+          "reward": "pp75"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {"title": ["The Shipwrights' Book", "Книга корабельных мастеров"], "desc": ["Pridea's masters have begun putting promised repairs in writing. Even an old shipmate of the admiral must explain what his vessel needs.", "Придейские мастера начали записывать обещанный ремонт. Даже старому товарищу адмирала приходится объяснять, что именно нужно его судну."], "modifiers": {"production_speed_dockyard_factor": 0.05}},
+          {"title": ["Patterns Shared between Quays", "Общие лекала причалов"], "desc": ["Shipwrights exchange patterns and reserve space for work their neighbours cannot finish. The harbour's quarrels now produce usable fittings.", "Корабельные мастера обмениваются лекалами и принимают работу, которую соседи не успевают закончить. Портовые споры начали приносить пригодные детали."], "modifiers": {"production_speed_dockyard_factor": 0.1}},
+          {"title": ["Pridea's Maritime Undertaking", "Морское предприятие Придеи"], "desc": ["The admiral's harbour links repair slips to inland customers. Its promises travel with craftsmen and road crews, as well as captains.", "Адмиральская гавань связывает ремонтные стапели с заказчиками внутренних областей. Её обещания несут не только капитаны, но и мастера с дорожными рабочими."], "modifiers": {"production_speed_dockyard_factor": 0.15, "production_speed_infrastructure_factor": 0.05}}
+        ],
+        "military": [
+          {"title": ["The Returning Boat Crews", "Вернувшиеся шлюпочные команды"], "desc": ["Veteran sailors are teaching younger crews the routines that kept them together at sea. Familiar voices help a battered watch begin again.", "Старые моряки учат молодые команды порядкам, которые помогали держаться вместе в море. Знакомые голоса помогают потрёпанной вахте вернуться к службе."], "modifiers": {"naval_morale_factor": 0.05}},
+          {"title": ["Answer the Shore Signal", "Ответить на береговой сигнал"], "desc": ["Fleur's tables and shared signals connect the marines to the crews carrying them. Pridea's officers are learning to expect an answer before moving.", "Таблицы Флёр и общие сигналы связывают морскую пехоту с перевозящими её командами. Придейские офицеры учатся ждать ответа перед движением."], "modifiers": {"naval_morale_factor": 0.1, "army_org_factor": 0.05}},
+          {"title": ["The Admiral's Service Squadron", "Служебная эскадра адмирала"], "desc": ["The harbour's old loyalties sustain a force able to carry and supply royal troops beyond familiar waters. Its reserve chests are finally open.", "Старые портовые связи поддерживают силы, способные перевозить и снабжать королевские войска за пределами знакомых вод. Резервные сундуки наконец открыты."], "modifiers": {"naval_morale_factor": 0.1, "army_org_factor": 0.05, "supply_consumption_factor": -0.05}}
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": ["The First Hull on the Slip", "Первый корпус на стапеле"],
+          "desc": ["Dennis recognises the captain before the harbour clerk announces him. The two exchange a sea story while a coaster's carpenter waits beside the new slip with a cracked plank under his wing. The captain wants an escort vessel brought forward for repair; the carpenter's grain carrier has already been promised the berth.\n\nFleur places both orders on the desk. The escort's machinery can be inspected afloat, she explains, but doing so will occupy the naval repair party. Keeping the grain carrier first would honour the public schedule and reassure merchants who still expect the admiral's friends to pass them. Bringing in the escort would instead let its crew practise a complete repair alongside the yard workers. Neither ship can have the slip twice.\n\nDennis stops the story halfway through. His old friend looks offended when the carpenter is invited closer. Outside, the crane crew waits for a single hull number. The admiral reaches for the order book.", "Деннис узнаёт капитана раньше, чем портовый писарь успевает его представить. Они обмениваются морской историей, а у нового стапеля ждёт плотник каботажного судна, держащий треснувшую доску под крылом. Капитан просит пропустить вперёд корабль охранения. Плотнику уже обещали место для его зерновоза.\n\nФлёр кладёт оба заказа на стол. Механизмы корабля охранения можно осмотреть на плаву, объясняет она, но это займёт флотскую ремонтную бригаду. Если первым останется зерновоз, купцы увидят, что опубликованному расписанию можно доверять и знакомство с адмиралом не отменяет очередь. Если принять военный корабль, его команда пройдёт весь ремонт вместе с верфяными рабочими и освоит незнакомые операции. Одновременно поставить оба корпуса на стапель невозможно.\n\nДеннис обрывает воспоминание на середине. Старый товарищ выглядит оскорблённым, когда плотника приглашают подойти ближе. Тот молча кладёт свою доску рядом с двумя заказами. На улице крановщики ждут единственного номера судна, которое следует подтянуть к берегу. Адмирал тянется к книге, где его подпись будет видна каждому мастеру."],
+          "options": [
+            {"title": ["Keep the grain carrier's promised berth.", "Сохранить обещанное место зерновозу."], "reward": "stability5"},
+            {"title": ["Use the escort repair to train its crew.", "Обучить команду на ремонте корабля охранения."], "reward": "navy_xp15"}
+          ]
+        },
+        {
+          "after": "m3",
+          "title": ["The Launch in the Fog", "Катер в тумане"],
+          "desc": ["A launch emerges from the morning fog carrying the wrong landing party. Its captain followed a signal he remembers from Dennis's earlier service; the shore station used the newly agreed code. No one has been hurt, but Fleur finds the missing medical panniers aboard a different boat.\n\nThe captain offers to repeat the voyage with his own signals. Dennis begins to agree, then sees Fleur put the two signal books side by side. She asks which book the next young lieutenant is supposed to know. The captain falls silent. His experience is real, and so is the mistake.\n\nThere is time before the boats return to their ordinary duties for one extended exercise. Dennis can take the signal crews through the gulf again, rehearsing recognition and replies until both shores understand. Fleur can instead keep the landing parties ashore and make them unload, sort and carry the scattered equipment together. The fog has exposed two weaknesses; today's daylight will cover only one lesson.", "Из утреннего тумана выходит катер с чужим десантным отрядом. Капитан последовал сигналу, который помнил по прежней службе у Денниса; береговой пост использовал недавно согласованный код. Никто не пострадал, но Флёр обнаруживает пропавшие медицинские сумки на другом судне.\n\nКапитан предлагает повторить переход со своими сигналами. Деннис уже собирается согласиться, когда Флёр кладёт рядом две сигнальные книги. Она спрашивает, какую из них должен знать следующий молодой лейтенант. Капитан умолкает. Его опыт вполне настоящий, но ошибка от этого не исчезает. Матросы ждут у причала, стараясь не смотреть в сторону адмирала.\n\nДо возвращения к обычной службе лодки успеют провести ещё одно большое учение. Деннис может снова провести сигнальщиков через залив, заставляя оба берега повторять запросы и подтверждения. Флёр предлагает оставить десант на суше: вместе выгрузить разбросанное снаряжение, разобраться в нём и перенести его к условному месту сбора. Туман обнаружил две разные слабости. Дневного света хватит только на один подробный урок, и командиры должны выбрать его сейчас."],
+          "options": [
+            {"title": ["Dennis will repeat the signal exercise.", "Деннис повторит сигнальное учение."], "reward": "navy_xp15"},
+            {"title": ["Fleur will rehearse the landing supply drill.", "Флёр отработает снабжение десанта."], "reward": "army_xp20"}
+          ]
+        },
+        {
+          "after": "c2",
+          "title": ["The Key on the Chart", "Ключ на карте"],
+          "desc": ["The crown's representative has asked for the harbour key to be displayed beside the new national shipping chart. Dennis hears a demand for surrender and lays his claw over the key before the sentence is finished. Fleur quietly turns the chart around. It marks shared sailings and naval stores, not a transfer of his home.\n\nThe representative needs a public sign that the admiral's undertakings can be trusted outside Pridea. Dennis insists that his captains must still be heard when distant offices promise more than their ships can carry. Neither objection is frivolous, though the waiting clerks have begun examining the floor.\n\nA ceremony at the quay could bring the merchants and sailors together around the actual shipping agreement, with their complaints heard before the key is displayed. Alternatively, Dennis could lead a review of the harbour reserve, presenting his service to the crown through crews who know him. He lifts his claw at last. Someone must now explain the gesture to the city.", "Представитель короны просит положить портовый ключ рядом с новой общегосударственной картой перевозок. Деннис слышит требование сдаться и накрывает ключ когтями ещё до конца фразы. Флёр молча разворачивает карту. На ней отмечены совместные рейсы и флотские склады, а передачи его дома кому-либо здесь нет.\n\nПредставителю нужен публичный знак того, что обещаниям адмирала можно доверять за пределами Придеи. Деннис настаивает: капитанов обязаны выслушивать, когда далёкие канцелярии обещают перевезти больше, чем способны вместить корабли. Оба возражения серьёзны, хотя ожидающие писари уже предпочитают изучать пол.\n\nНа причале можно собрать купцов и моряков, прочитать настоящее соглашение и принять жалобы до того, как ключ выставят перед публикой. Другой путь — смотр портового резерва, который Деннис проведёт лично, показав свою службу короне через знакомые ему команды. Флёр не пытается выбрать за него. Она только убирает край карты из-под ключа, чтобы названия городов снова были видны. Адмирал наконец разжимает когти. Теперь этот жест ещё предстоит объяснить жителям гавани."],
+          "options": [
+            {"title": ["Read the shipping agreement before the harbour.", "Прочитать соглашение перед жителями гавани."], "reward": "stability5"},
+            {"title": ["Let Dennis present the reserve in royal service.", "Пусть Деннис представит резерв на королевской службе."], "reward": "war_support5"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JFT_communes",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": ["The Workshops Keep the Keys", "Ключи остаются у мастерских"],
+          "desc": ["The workshops have elected their own delegates, but their locked storerooms still divide tools needed for the same job. Louis asks each assembly to send a keeper who can promise a loan and answer for its return. Common ownership will acquire meaning when a neighbouring workshop can borrow a lathe attachment without first winning a speech contest.", "Мастерские выбрали делегатов, но за запертыми дверями по-прежнему лежат инструменты, нужные для одной общей работы. Луи просит каждое собрание прислать хранителя, способного разрешить выдачу и отвечать за возврат. Общая собственность обретёт смысл, когда соседняя мастерская сможет одолжить приспособление для станка без долгого состязания ораторов и без опасения, что её собственный заказ останется невыполненным."],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": ["A Foundry Owned by Its Shifts", "Литейная, принадлежащая её сменам"],
+          "desc": ["The communal workshops need castings more urgently than they need another declaration about labour. An idle foundry offers space for a shared undertaking, provided its shifts can agree who repairs the furnace and who receives the first pour. Pierre carries the proposals between assemblies, returning each evening with soot on the same pages that record their objections.", "Коммунальным мастерским нужны отливки, а очередная декларация о труде не заменит металла. Пустующая литейная годится для общего предприятия, если смены договорятся, кто починит печь и кому достанется первая плавка. Пьер носит предложения между собраниями. Каждый вечер он возвращается с копотью на тех самых страницах, где аккуратно записаны возражения соседей и их обещания прислать работников."],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": ["Drawings without a Master's Seal", "Чертежи без хозяйской печати"],
+          "desc": ["An apprentice has copied a useful casting pattern, only to discover that the original remains guarded as a former proprietor's secret. The foundry assembly will open its drawing cupboard to neighbouring workshops. Experienced moulders must explain the marks on the paper, and the apprentices must be allowed to ask why the old method sometimes fails.", "Подмастерье скопировал полезный литейный образец и обнаружил, что оригинал до сих пор охраняют как тайну прежнего владельца. Собрание литейной откроет шкаф с чертежами соседним мастерским. Опытным формовщикам придётся объяснять обозначения, а ученикам позволят спрашивать, почему старый способ иногда подводит. Общее знание начинается там, где никто не требует хозяйской печати за право понять собственную работу."],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": ["The Road Agreed between Communes", "Дорога по согласию коммун"],
+          "desc": ["Newly joined communes have brought the federation a practical dispute: the shortest freight road crosses fields whose owners will not accept another requisition. Delegates walk the proposed route with the farmers and cart crews. Their revised plan takes longer to draw, but each village will know which work it promised and where its neighbours' responsibility begins.", "Присоединившиеся коммуны принесли федерации простой на вид спор: кратчайшая грузовая дорога проходит через поля, владельцы которых не согласны на новую реквизицию. Делегаты обходят маршрут вместе с земледельцами и возчиками. На исправленный план уйдёт больше времени, зато каждая деревня будет знать, какую работу она обещала выполнить и где начинается ответственность соседей, которым тоже нужна эта дорога."],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e5",
+          "title": ["A Wire between Open Stores", "Провод между общими складами"],
+          "desc": ["A commune can promise surplus bearings in the morning and discover a broken pump before the courier returns. The federation's workshops want direct messages between their stores, with each assembly still responsible for the promises sent. A repaired telephone exchange will carry those conversations farther, allowing disagreements to reach the neighbours before an empty wagon does.", "Утром коммуна обещает лишние подшипники, а до возвращения связного обнаруживает сломанный насос. Мастерские федерации хотят обмениваться сообщениями напрямую, сохраняя ответственность каждого собрания за отправленные обещания. Починенная телефонная станция позволит говорить с далёкими соседями. Тогда известие о возникшем споре успеет дойти раньше пустой подводы, напрасно проделавшей весь путь ради деталей, которые уже потребовались на месте."],
+          "days": 56,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "m1",
+          "title": ["The Assembly's Arms Chest", "Оружейный сундук собрания"],
+          "desc": ["Militia weapons have followed their owners home, leaving some districts well supplied and others asking favours at every alarm. Pierre proposes communal arms chests entrusted to keepers chosen by the assemblies. Volunteers will still know where their rifles are, but the right to defend a street will no longer depend on knowing the right veteran.", "Оружие ополчения разошлось по домам: одни кварталы обеспечены, другим приходится просить об одолжении при каждой тревоге. Пьер предлагает общие оружейные сундуки под надзором хранителей, избранных собраниями. Добровольцы будут знать, где лежат их винтовки, а возможность защитить свою улицу перестанет зависеть от знакомства с нужным ветераном и его готовности открыть дверь поздно ночью."],
+          "days": 35,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m2",
+          "title": ["Barricades with a Way Through", "Баррикады с проходом"],
+          "desc": ["The veterans remember where the first commune's defenders made their stand. Younger volunteers have begun copying those barricades, including mistakes that trapped the wounded behind their own furniture. The militia will study the streets with residents who carried stretchers through them. A position must shelter its defenders while leaving them a route to reinforce a neighbour.", "Ветераны помнят, где держались защитники первой коммуны. Молодые добровольцы копируют прежние баррикады вместе с ошибками, из-за которых раненые оказывались заперты за собственной мебелью. Ополчение изучит улицы вместе с жителями, носившими по ним носилки. Позиция должна укрывать защитников и оставлять путь к соседям, чтобы помощь не застряла там же, где когда-то остановилось отступление."],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": ["A Common Watch, a Recallable Command", "Общий дозор, сменяемое командование"],
+          "desc": ["Two assemblies have recalled their militia delegates on the same afternoon, leaving a relief column waiting for instructions. Louis refuses to make military service an exemption from communal control. The neighbouring watches will rehearse a handover that preserves the route and supplies while a new delegate takes the old one's place at the map.", "Два собрания отозвали делегатов ополчения в один день, оставив сменную колонну без распоряжений. Луи не согласен освобождать военную службу от контроля коммун. Соседние дозоры отработают передачу обязанностей: маршрут и снабжение должны сохраниться, пока новый делегат занимает место прежнего над картой. Право сменить представителя не должно заставлять караульных гадать, когда к ним наконец придёт помощь."],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": ["Depots Held in Common", "Общие склады обороны"],
+          "desc": ["Federation patrols now travel beyond the streets where every baker knows them. Their supplies must follow agreements between communes rather than the appetite of whichever column arrives first. Storekeepers will prepare marked loads for neighbouring units and accompany the first journeys. A militia defending collective freedom must learn to leave a community's winter grain untouched.", "Патрули федерации уходят за пределы улиц, где их знает каждый пекарь. Снабжение должно следовать соглашениям коммун, а не аппетиту первой прибывшей колонны. Хранители подготовят подписанные грузы для соседних отрядов и сами сопроводят первые перевозки. Ополчению, защищающему общую свободу, придётся научиться проходить через деревню, оставляя её зимнее зерно там, где жители договорились его хранить."],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m5",
+          "title": ["An Arsenal with Assembly Windows", "Арсенал с окнами для собраний"],
+          "desc": ["The shared foundry can cast the fittings needed by a dedicated arms workshop. Its delegates insist that military orders must remain visible to the workers whose evenings they consume. The federation will establish an arsenal where repair crews and elected keepers work together, supplying common defence without handing the armoury keys to an unanswerable commander.", "Общая литейная может изготовлять детали для отдельной оружейной мастерской. Её делегаты настаивают: военные заказы должны оставаться открытыми для работников, чьи вечера они занимают. Федерация создаст арсенал, где ремонтники работают вместе с избранными хранителями. Общая оборона получит нужное оружие, а ключи от него не окажутся у командира, которому больше не нужно отвечать перед собранием."],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "c1",
+          "title": ["Read the Motion Aloud", "Прочитать предложение вслух"],
+          "desc": ["The assembly's papers are passed around faster than some workers can read them. Louis notices a neighbour agreeing to a motion after asking the wrong question about it. Evening reading circles will use the actual workshop notices and communal proposals. Nobody should need a patron to discover what has been put forward in their name.", "Бумаги собрания передают быстрее, чем некоторые рабочие успевают их прочесть. Луи замечает соседа, поддержавшего предложение после вопроса, который явно касается другого дела. Вечерние кружки чтения займутся настоящими объявлениями мастерских и проектами коммун. Никому не должен требоваться покровитель, чтобы узнать, что именно выдвинуто от его имени и под чем ему предлагают поставить собственную подпись."],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": ["No President at the Long Table", "За длинным столом нет президента"],
+          "desc": ["Delegates arriving from across Aquileia ask who chairs the federation when its communes disagree. Louis points to the empty seat awaiting the next assembly's speaker. The shared mandate requires someone to conduct business, but it gives nobody ownership of the table. Pridea must now practise among strangers the freedom it first promised to its neighbours.", "Делегаты со всей Аквелии спрашивают, кто возглавляет федерацию, когда её коммуны спорят. Луи показывает пустое место, приготовленное для ведущего от следующего собрания. Общее поручение требует того, кто проведёт заседание, но никому не отдаёт стол в собственность. Теперь Придее предстоит соблюдать среди незнакомых общин ту свободу, которую она впервые обещала своим ближайшим соседям."],
+          "days": 42,
+          "reward": "pp75"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {"title": ["Borrowed Tools, Shared Work", "Общие инструменты и труд"], "desc": ["Workshop assemblies lend equipment through keepers who answer for its return. Repair work can cross a district boundary without crossing a patron's doorstep.", "Собрания мастерских передают инструменты через хранителей, отвечающих за возврат. Ремонт больше не останавливается на границе квартала в ожидании влиятельного покровителя."], "modifiers": {"production_speed_buildings_factor": 0.05}},
+          {"title": ["The Foundry's Open Drawings", "Открытые чертежи литейной"], "desc": ["Shared casting patterns connect the communal workshops. Skilled workers teach neighbours how to make parts that used to arrive behind a proprietor's seal.", "Общие литейные образцы связывают коммунальные мастерские. Опытные рабочие учат соседей делать детали, которые прежде поступали за печатью владельца."], "modifiers": {"production_speed_buildings_factor": 0.1, "industrial_capacity_factory": 0.05}},
+          {"title": ["The Federation of Working Shops", "Федерация работающих мастерских"], "desc": ["Road agreements and direct messages give the communes a working exchange of tools, castings and labour. Their stores remain answerable to their assemblies.", "Дорожные соглашения и прямые сообщения обеспечивают обмен инструментами, отливками и трудом. Склады коммун по-прежнему отвечают перед своими собраниями."], "modifiers": {"production_speed_buildings_factor": 0.15, "industrial_capacity_factory": 0.05}}
+        ],
+        "military": [
+          {"title": ["Rifles Entrusted by the Street", "Винтовки, доверенные улицей"], "desc": ["Communal keepers distribute arms for local defence. Volunteers know the streets they guard and the neighbours who entrusted the weapons to them.", "Коммунальные хранители выдают оружие для местной обороны. Добровольцы знают улицы, которые охраняют, и соседей, доверивших им винтовки."], "modifiers": {"army_defence_factor": 0.05}},
+          {"title": ["The Watch Survives Its Delegate", "Дозор переживёт смену делегата"], "desc": ["Rehearsed handovers let assemblies replace military representatives without abandoning the common watch. Neighbouring units know where to find each other.", "Отработанная передача обязанностей позволяет сменять военных представителей, не оставляя общий дозор. Соседние отряды знают, где искать друг друга."], "modifiers": {"army_defence_factor": 0.1, "army_org_factor": 0.05}},
+          {"title": ["Defence by Mutual Undertaking", "Оборона по взаимному обязательству"], "desc": ["Common depots and an accountable arsenal sustain the federation's militia beyond its home streets. A march no longer requires taking a village's winter stores.", "Общие склады и подотчётный арсенал снабжают ополчение за пределами родных улиц. Поход больше не требует отнимать у деревни зимние запасы."], "modifiers": {"army_defence_factor": 0.1, "army_org_factor": 0.05, "supply_consumption_factor": -0.05}}
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": ["The Crane Belongs to Two Promises", "Кран и два обещания"],
+          "desc": ["Pierre reaches the foundry with a borrowed crane and discovers two assemblies waiting for it. The first has promised to lift a furnace door; the second needs to move the timber blocking its damaged meeting room. Each keeper carries a paper signed by someone entitled to lend the machine.\n\nLouis begins by asking which promise came first. A foundry worker answers that this will not make either job disappear. The room falls quiet, and Pierre unfolds the crane crew's working notes instead. The furnace lift would allow the workers to finish a batch of castings and pay closer attention to the machinery together. Clearing the meeting room would give the displaced assembly its own place again before another evening's arguments spill into the street.\n\nNeither commune proposes taking the crane permanently. The difficulty is the ordinary one of deciding whose urgent work waits until tomorrow. Louis puts both papers where the crews can see them and asks for a decision they can explain on returning home.", "Пьер доставляет к литейной одолженный кран и обнаруживает два собрания, которые его ждут. Одно обещало поднять дверцу печи; другому нужно убрать брёвна, перегородившие повреждённый зал заседаний. У каждого хранителя есть бумага с подписью того, кто действительно вправе выдать машину.\n\nЛуи начинает с вопроса, какое обещание было первым. Рабочий литейной отвечает, что от этого ни одна работа не исчезнет. В комнате становится тихо, и Пьер разворачивает записи крановой бригады. Поднятая дверца позволит закончить партию отливок и вместе разобраться в неполадках оборудования. Освобождённый зал вернёт второй коммуне своё место для встреч прежде, чем очередной вечерний спор снова выплеснется на улицу.\n\nНикто не предлагает забрать кран навсегда. Трудность гораздо обыденнее: чья срочная работа может подождать до завтра. Луи кладёт обе бумаги перед бригадами и просит принять решение, которое каждый сумеет объяснить дома. Пьер перестаёт держать ключ в когтях и оставляет его рядом с записями. До начала смены ещё есть немного времени для ответа."],
+          "options": [
+            {"title": ["Finish the furnace job and secure the common order.", "Закончить работу у печи и укрепить общее дело."], "reward": "pp50"},
+            {"title": ["Give the displaced assembly its room back today.", "Сегодня вернуть собранию его зал."], "reward": "stability5"}
+          ]
+        },
+        {
+          "after": "m3",
+          "title": ["A Recall at the Crossing", "Отзыв на перекрёстке"],
+          "desc": ["The messenger finds Pierre beside a militia column whose delegate has just been recalled. The assembly's replacement is expected by evening. Until then, nobody is certain whether the old instructions to relieve the neighbouring watch remain valid. A tired volunteer asks whether the right to recall also means the right to go home.\n\nLouis arrives with the assembly's actual message. It challenges the delegate's conduct, not the promise to relieve their neighbours. The distinction settles the immediate order, but the volunteers remain around the map. Several residents have offered to take a temporary watch if someone shows them the route. The experienced militia could train these replacements and bring fresh volunteers into service.\n\nAlternatively, Pierre proposes using the afternoon to practise the entire handover with the existing units, including a deliberately missing messenger. Both choices honour the recall. One spreads the burden to more willing neighbours; the other teaches those already carrying it how to keep a change of representative from becoming an empty crossing.", "Связной находит Пьера возле колонны ополчения, чей делегат только что отозван. Замена от собрания прибудет вечером. Пока никто не уверен, остаётся ли в силе прежнее поручение сменить соседний дозор. Усталый доброволец спрашивает, означает ли право отзыва ещё и право наконец пойти домой.\n\nЛуи приносит настоящее сообщение собрания. Оно оспаривает поведение делегата, но не обещание помочь соседям. Это различие решает вопрос с ближайшим приказом, однако добровольцы остаются у карты. Несколько жителей предлагают временно выйти в дозор, если им покажут дорогу. Опытные ополченцы могли бы обучить смену и принять новых добровольцев, которым прежде не находилось проводника.\n\nПьер предлагает другой вариант: посвятить день передаче обязанностей между нынешними отрядами, включая случай, когда один из связных намеренно не приходит. Оба решения сохраняют силу отзыва. Первое распределяет службу между большим числом согласных соседей. Второе учит тех, кто уже несёт её, менять представителя, не оставляя пустым перекрёсток. Ожидающие караульные просят только передать им выбранный ответ до наступления темноты."],
+          "options": [
+            {"title": ["Train the neighbours offering to take a watch.", "Обучить соседей, готовых выйти в дозор."], "reward": "manpower1500"},
+            {"title": ["Rehearse the handover with the serving militia.", "Отработать передачу службы с действующим ополчением."], "reward": "army_xp20"}
+          ]
+        },
+        {
+          "after": "c2",
+          "title": ["An Empty Chair for Louis", "Пустой стул для Луи"],
+          "desc": ["A visiting commune has placed a decorated chair at the head of the federation's long table. Its delegate calls it a courtesy to Louis, whose speech against kings and presidents has travelled farther than he has. Louis moves the chair into the circle and asks who will report the meeting to the absent night shift.\n\nThe gesture earns laughter, then a harder question. A rural commune wants time to explain the new mutual defence undertaking before volunteering its people. Others fear that repeated delays will leave their neighbours unprepared. Neither a ceremonial chair nor an inspiring speech can decide what those absent residents consent to do.\n\nThe federation can send speakers to hold open meetings and return with the communes' answers, demonstrating that joining a common undertaking does not surrender their voice. It can also call a voluntary defence gathering in Pridea, asking those already convinced to make their willingness visible. Louis offers to speak at either. He will not sign the answer for the others.", "Приехавшая коммуна поставила украшенный стул во главе длинного федерального стола. Её делегат называет это знаком уважения к Луи, чья речь против королей и президентов разошлась дальше, чем успел доехать сам оратор. Луи переставляет стул в круг и спрашивает, кто расскажет о заседании отсутствующей ночной смене.\n\nСначала все смеются, затем возникает трудный вопрос. Сельская коммуна просит время, чтобы объяснить новое обязательство взаимной обороны прежде, чем приглашать добровольцев. Другие опасаются, что отсрочки оставят соседей неподготовленными. Ни почётный стул, ни вдохновляющая речь не решат за отсутствующих жителей, на что именно они согласны.\n\nФедерация может отправить выступающих на открытые собрания и дождаться ответов, показывая, что общее обязательство не отнимает голоса у вступившей общины. Можно также провести в Придее добровольный оборонный сбор, предложив уже согласным публично заявить о готовности помогать соседям. Луи готов выступить в обоих случаях. Подписывать ответ за остальных он не станет. Перед ним освобождают место для записей следующего ведущего заседания."],
+          "options": [
+            {"title": ["Hear the communes before seeking their answer.", "Выслушать коммуны, прежде чем ждать ответа."], "reward": "stability5"},
+            {"title": ["Call those willing to defend one another.", "Созвать готовых защищать друг друга."], "reward": "war_support5"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JFT_enfants",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": ["Metal for the Forgotten Children", "Металл для забытых детей"],
+          "desc": ["Les Enfants Terribles have promised that Aquileia will never again wait helplessly for another country's goodwill. Their collectors now face a less stirring task: sorting scrap boilers, broken rails and salvage from the harbour. The movement's workshops need metal they can actually use. Patriotic speeches will accompany the carts, but the foundry workers will decide what enters the furnace.", "Les Enfants Terribles обещали, что Аквелия больше не станет беспомощно ждать чужого благоволения. Их сборщикам досталось менее торжественное дело: сортировать старые котлы, сломанные рельсы и портовый лом. Мастерским движения нужен пригодный металл. Патриотические речи будут сопровождать подводы, но последнее слово останется за литейщиками, которым предстоит решить, что можно отправить в печь, а что только испортит плавку."],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": ["Turn the Storehouse into a Machine Hall", "Превратить склад в машинный зал"],
+          "desc": ["A requisitioned storehouse contains machinery collected by different revolutionary cells, much of it still wrapped for journeys that never happened. The movement will bring the scattered mechanics together under its roof. Every working machine will need a named keeper and a real task; possession of a sealed warehouse has too often been mistaken for control of production.", "В реквизированном складе стоит оборудование, собранное разными революционными ячейками; многое ещё упаковано для поездок, которые так и не состоялись. Движение соберёт под одной крышей разрозненных механиков. Каждому исправному станку потребуются ответственный мастер и настоящая работа. Слишком долго владение запертым складом принимали за власть над производством, хотя за его дверями никто не слышал шума работающих машин."],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": ["One Gauge for Every Cell", "Единый калибр для всех ячеек"],
+          "desc": ["The underground's secrecy once protected its workshops; now it protects incompatible parts and duplicated work. Les Enfants Terribles will collect their gauges and drawings in the machine hall. The old organisers dislike exposing their methods to rivals, but a revolutionary state cannot arm itself with components whose only guarantee is the loyalty of the cell that made them.", "Тайна подполья прежде защищала мастерские, а теперь скрывает несовместимые детали и повторяющуюся работу. Les Enfants Terribles соберут калибры и чертежи в машинном зале. Старым организаторам неприятно открывать свои методы соперникам, однако революционное государство не вооружить деталями, чьей единственной гарантией служит преданность изготовившей их ячейки. Мастерам придётся доказать пригодность каждой партии перед теми, кто будет её использовать."],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": ["The Instruments Aquileia Must Make", "Приборы, которые должна делать Аквелия"],
+          "desc": ["The national programme's promise of independence has reached a cupboard of imported electrical instruments. Nobody in the machine hall can repair several of them without instructions from abroad. Technicians will begin with the simpler pieces, tracing each connection before attempting a substitute. The movement's suspicion of foreign suppliers must produce patient work if it is to produce anything lasting.", "Обещание самостоятельности из общенациональной программы дошло до шкафа с привозными электрическими приборами. Некоторые из них никто в машинном зале не умеет чинить без зарубежной инструкции. Техники начнут с простейших устройств, прослеживая соединения прежде, чем делать замену. Подозрительность движения к иностранным поставщикам должна обернуться терпеливым трудом, иначе за громкими словами так и останутся неработающие приборы."],
+          "days": 49,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "e5",
+          "title": ["The National Arsenal Order", "Заказ национальному арсеналу"],
+          "desc": ["Orders from across Aquileia now reach the same machine hall that once sheltered rival cells' unopened crates. A dedicated armaments works will turn its common patterns into a sustained undertaking. Les Enfants Terribles intend this arsenal to embody a revolution able to defend itself, and its supervisors will answer for weapons delivered rather than promises shouted beneath a flag.", "Заказы со всей Аквелии приходят в машинный зал, где прежде стояли нераспакованные ящики соперничающих ячеек. Отдельное оружейное предприятие превратит общие образцы в постоянное производство. Les Enfants Terribles видят в арсенале воплощение революции, способной защитить себя. Его руководителям придётся отвечать за переданное войскам оружие: одних обещаний, выкрикнутых под знаменем перед собравшимися товарищами, больше не хватит."],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m1",
+          "title": ["A Muster beneath the Revolutionary Flag", "Сбор под революционным знаменем"],
+          "desc": ["The movement's speakers demand that every willing defender of Aquileia step forward. At the muster tables, enthusiasm meets questions about trade, experience and the family left behind. Les Enfants Terribles will turn declarations into assigned duties, giving recruits somewhere to report and veterans someone to teach before another procession ends with everyone returning separately home.", "Ораторы движения призывают выйти вперёд всех, кто готов защищать Аквелию. За столами сбора пыл сталкивается с вопросами о ремесле, опыте и семье, оставшейся дома. Les Enfants Terribles превратят заявления в назначенные обязанности: новобранцы получат место явки, ветераны — тех, кого нужно учить, прежде чем очередное шествие закончится обычным разбродом по домам и повторением прежних обещаний."],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": ["Beyond the Cell's Own Street", "За пределами улицы своей ячейки"],
+          "desc": ["A revolutionary cell knows every door on its own street and almost nothing about the formation advancing beside it. The new service battalions will practise crossing the warehouse district together. Their instructors must preserve initiative while teaching recruits when a sudden dash merely leaves a neighbour exposed. Courage needs a common direction before it can defend a country.", "Революционная ячейка знает каждую дверь на собственной улице и почти ничего о подразделении, которое движется рядом. Новые батальоны будут вместе проходить складской район. Инструкторам предстоит сохранить инициативу и научить новобранцев замечать, когда стремительный рывок лишь подставляет соседа. Мужеству необходимо общее направление, прежде чем оно сможет защищать целую страну, а не один знакомый перекрёсток возле своего дома."],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": ["A Plan That Reaches the Last Company", "План, дошедший до последней роты"],
+          "desc": ["Berty Albatros has watched an exercise stall because the last company received yesterday's instructions. The organisers blame a careless messenger; he asks why nobody checked what the company understood. The movement's forces will repeat their orders back through the chain, tracing each intended move to the soldiers expected to carry it out before declaring the plan complete.", "Берти Альбатрос видел, как учение остановилось из-за того, что последняя рота получила вчерашнее распоряжение. Организаторы винят небрежного связного; он спрашивает, почему никто не проверил, что поняли солдаты. Силы движения будут передавать приказы обратно по цепочке, прослеживая каждый задуманный манёвр до исполнителей. Лишь после этого командиры смогут назвать план законченным и отправить людей на исходные позиции."],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": ["Eyes above the National Coast", "Глаза над побережьем страны"],
+          "desc": ["The revolutionary executive receives coastal sightings faster than it can separate fishing boats from imagined invasions. Pilots and shore observers will compare their reports over the same charts. Les Enfants Terribles distrust the world beyond Aquileia; learning what actually moves over its waters will give that vigilance a task more demanding than repeating rumours from every watch post.", "Революционное руководство получает береговые донесения быстрее, чем успевает отличать рыбацкие лодки от воображаемых вторжений. Лётчики и наблюдатели сверят сообщения над общими картами. Les Enfants Terribles не доверяют миру за пределами Аквелии. Наблюдение за тем, что действительно движется над её водами, даст этой настороженности более трудное занятие, чем бесконечное повторение слухов с каждого сторожевого поста."],
+          "days": 49,
+          "reward": "research_air"
+        },
+        {
+          "slot": "m5",
+          "title": ["Shells Matched to the Fire Plan", "Снаряды по огневому плану"],
+          "desc": ["The arsenal can make shells that the batteries cannot yet use confidently together. Gunners will return damaged fuses and firing notes to the workshops, then test the corrected batches alongside the infantry they support. The movement wants an army whose resolve is unmistakable. Its batteries will express that resolve through deliberate fire, with each promised salvo accounted for.", "Арсенал способен делать снаряды, которыми батареи ещё не научились уверенно пользоваться вместе. Артиллеристы вернут мастерским повреждённые взрыватели и записи стрельб, затем испытают исправленные партии рядом с пехотой, которую поддерживают. Движению нужна армия с несомненной решимостью. Батареи выразят её продуманным огнём, отвечая за каждый обещанный залп перед солдатами, которым под этим огнём предстоит идти вперёд."],
+          "days": 56,
+          "reward": "research_artillery"
+        },
+        {
+          "slot": "c1",
+          "title": ["The Witness beside the Accusation", "Свидетель рядом с обвинением"],
+          "desc": ["A workshop stoppage has entered the security files as sabotage before anyone has inspected the broken drive shaft. The movement's investigators will bring the mechanic's account beside the accuser's report. Les Enfants Terribles still expect enemies to strike at the revolution. They cannot afford a service that confuses an inconvenient witness with the danger it was sent to uncover.", "Остановку мастерской записали в дела безопасности как саботаж прежде, чем кто-либо осмотрел сломанный приводной вал. Следователи движения приложат объяснение механика к донесению обвинителя. Les Enfants Terribles по-прежнему ждут удара по революции. Им нельзя полагаться на службу, которая принимает неудобного свидетеля за ту опасность, которую ей поручили найти, оставляя настоящую причину остановки без проверки и ремонта."],
+          "days": 35,
+          "reward": "stability5"
+        },
+        {
+          "slot": "c2",
+          "title": ["The Children Address Aquileia", "Дети обращаются к Аквелии"],
+          "desc": ["The revolutionary flag now hangs above a platform meant for listeners from every province. Les Enfants Terribles have won the chance to carry their national programme beyond Pridea. Their speakers must explain what survival asks of those who did not attend the old clandestine meetings, and why the burdens of defending Aquileia should be borne together.", "Революционное знамя теперь висит над трибуной для слушателей из всех провинций. Les Enfants Terribles получили возможность вынести национальную программу за пределы Придеи. Ораторам придётся объяснить требования выживания тем, кто не бывал на прежних подпольных встречах. Нужно убедить их разделить бремя защиты Аквелии, а не просто повторить слова, с которыми когда-то соглашались тесным кругом товарищей."],
+          "days": 42,
+          "reward": "war_support5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {"title": ["The Movement's Salvage Trains", "Обозы металла для движения"], "desc": ["The cells are collecting usable metal for their workshops. Sorting the loads has given their promise of national endurance a material beginning.", "Ячейки собирают пригодный металл для мастерских. Сортировка грузов дала обещанию национальной стойкости материальное начало."], "modifiers": {"industrial_capacity_factory": 0.05}},
+          {"title": ["Common Gauges of the Revolution", "Общие калибры революции"], "desc": ["Former underground workshops make parts to shared patterns. Rival organisers can no longer conceal poor work behind the secrecy of their cells.", "Бывшие подпольные мастерские делают детали по общим образцам. Соперничающим организаторам труднее скрыть плохую работу за тайной собственных ячеек."], "modifiers": {"industrial_capacity_factory": 0.1}},
+          {"title": ["Aquileia's Own Machine Hall", "Собственный машинный зал Аквелии"], "desc": ["The national arsenal carries workshop knowledge into sustained production. The movement's demand for independence is taking the form of machines its own mechanics understand.", "Национальный арсенал переносит знания мастерских в постоянное производство. Требование самостоятельности обретает форму машин, понятных собственным механикам движения."], "modifiers": {"industrial_capacity_factory": 0.15, "production_factory_efficiency_gain_factor": 0.05}}
+        ],
+        "military": [
+          {"title": ["The Muster Has an Address", "У сбора есть адрес"], "desc": ["Recruits report to assigned units and veterans prepare their instruction. The movement's military promises have begun to acquire a common timetable.", "Новобранцы прибывают в назначенные части, ветераны готовят обучение. Военные обещания движения начинают подчиняться общему расписанию."], "modifiers": {"max_planning_factor": 0.05}},
+          {"title": ["Orders Returned and Understood", "Приказы приняты и поняты"], "desc": ["The service battalions check instructions through the entire formation. Their resolve can now follow a plan understood beyond its author's desk.", "Батальоны проверяют распоряжения по всей цепочке. Теперь их решимость следует плану, понятному не только за столом его составителя."], "modifiers": {"max_planning_factor": 0.1, "army_org_factor": 0.05}},
+          {"title": ["The Revolution's Deliberate Defence", "Продуманная оборона революции"], "desc": ["Observed threats, rehearsed orders and tested fire plans turn the movement's vigilance into coordinated defence. Patriotism remains its language; preparation gives that language weight.", "Наблюдение, отработанные приказы и проверенные огневые планы превращают настороженность движения в согласованную оборону. Оно говорит языком патриотизма; подготовка придаёт этим словам вес."], "modifiers": {"max_planning_factor": 0.15, "army_org_factor": 0.05, "army_defence_factor": 0.05}}
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": ["The Crate beneath the Flag", "Ящик под знаменем"],
+          "desc": ["The bearded speaker with the black eyepatch stands beneath the revolutionary flag while mechanics open a crate from the reclaimed storehouse. Someone has chalked a foreign bank's name across its lid as proof of an enemy connection. Inside are rifle parts bought through an ordinary intermediary, with several receipts that the security cell never unfolded.\n\nThe speaker asks whether the parts work. A mechanic assembles a bolt and passes it across the table. They can finish the usable rifles now and send them to the new battalions. Alternatively, the same stock would let instructors give recruits a thorough course in stripping, identifying and repairing weapons before issuing them. The workshop cannot provide both courses of work today.\n\nAn organiser starts repeating the accusation about the bank. The older griffon interrupts him and points to the assembled bolt. Aquileia needs defenders who understand what they carry. Whatever the final allocation, the unopened receipts must first be read by someone capable of explaining them.", "Бородатый оратор с чёрной повязкой стоит под революционным знаменем, пока механики вскрывают ящик из занятого склада. На крышке мелом написано название иностранного банка: кто-то счёл его доказательством вражеской связи. Внутри лежат винтовочные детали, купленные через обычного посредника, и расписки, которые группа безопасности даже не развернула.\n\nОратор спрашивает, работают ли детали. Механик собирает затвор и передаёт его через стол. Исправные винтовки можно закончить сейчас и отправить новым батальонам. Другой вариант — использовать тот же запас на занятиях, чтобы новобранцы научились разбирать, распознавать и чинить оружие прежде, чем получат его для службы. Сегодня мастерская не успеет выполнить обе задачи.\n\nОрганизатор снова начинает говорить о банке. Пожилой грифон прерывает его и показывает на собранный затвор. Аквелии нужны защитники, понимающие, что они держат в когтях. Как бы ни распределили детали, расписки сначала должен прочитать тот, кто способен их объяснить. Механики раскладывают инструменты и ждут, будет ли следующая смена собирать оружие или учить будущих солдат."],
+          "options": [
+            {"title": ["Assemble the rifles for immediate issue.", "Собрать винтовки для немедленной выдачи."], "reward": "rifles500"},
+            {"title": ["Teach the recruits to service their weapons.", "Научить новобранцев обслуживать оружие."], "reward": "army_xp20"}
+          ]
+        },
+        {
+          "after": "m3",
+          "title": ["Albatros Leaves the Arrow Unfinished", "Альбатрос не дорисовал стрелку"],
+          "desc": ["Berty Albatros stops drawing the advance where the waterfront warehouses hide the next street. An organiser asks why the arrow does not reach the objective. Albatros asks who has seen the far side of the buildings. The answer is a report copied twice from the same untested observer.\n\nThe organiser reminds him that hesitation can also cost lives. Albatros agrees and places the infantry schedule beside the report. A column waiting blindly is vulnerable; so is a column sent forward to satisfy a slogan. They have enough daylight to conduct one additional exercise before the training ground must be cleared.\n\nThe infantry can practise taking and holding the warehouse passage, learning how adjacent companies cover the blind corners. The pilots can instead fly a reconnaissance exercise and practise sending observations to the troops below, making the unseen street part of the plan. Albatros leaves the arrow unfinished until the organisers choose which uncertainty they intend to remove first.", "Берти Альбатрос перестаёт рисовать наступление там, где портовые склады скрывают следующую улицу. Организатор спрашивает, почему стрелка не доходит до цели. Альбатрос отвечает вопросом: кто видел пространство за зданиями? Выясняется, что дважды переписанное донесение восходит к одному непроверенному наблюдателю.\n\nОрганизатор напоминает, что промедление тоже стоит жизней. Альбатрос соглашается и кладёт рядом с донесением пехотное расписание. Колонна, ожидающая вслепую, уязвима; то же верно для колонны, которую отправили вперёд ради красивого лозунга. До освобождения учебного участка хватит света ещё на одно дополнительное занятие.\n\nПехота может отработать захват и удержание прохода между складами, проверяя, как соседние роты прикрывают невидимые углы. Лётчики предлагают разведывательный вылет с передачей наблюдений наземным отрядам, чтобы скрытая улица наконец появилась в общем плане. У обоих решений есть исполнители, уже ожидающие приказа у выхода. Альбатрос оставляет стрелку незаконченной, пока организаторы не решат, какую неизвестность следует устранить первой. Начинать упражнение только ради уверенного вида законченной карты он отказывается."],
+          "options": [
+            {"title": ["Rehearse the infantry passage and mutual cover.", "Отработать пехотный проход и взаимное прикрытие."], "reward": "army_xp20"},
+            {"title": ["Practise aerial observation and ground reports.", "Отработать воздушное наблюдение и передачу донесений."], "reward": "air_xp15"}
+          ]
+        },
+        {
+          "after": "c2",
+          "title": ["The Flag and the Empty Sleeves", "Знамя и пустые рукава"],
+          "desc": ["The older griffon with the eyepatch has prepared the same warning he once delivered in a shuttered room: Aquileia has enemies, and its forgotten children must stand ready. The new audience includes factory shifts, country delegates and veterans whose empty sleeves move in the sea wind. A worker asks when readiness will leave an evening for visiting the wounded.\n\nThe speaker looks toward the national flag. He has no intention of retracting the warning. He also recognises that another parade will not carry a meal up the stairs to a veteran's room. The local organisers have gathered enough volunteers for one large undertaking this week.\n\nThey can turn the gathering into a patriotic reserve rally, making defence of the revolutionary state a public pledge shared beyond the original cells. They can instead lead the volunteers to the hospitals and bereaved households, showing that the movement remembers people after they leave the ranks. The speaker folds the last page of his address and waits for the organisers' answer.", "Пожилой грифон с повязкой подготовил прежнее предупреждение, когда-то звучавшее в комнате за закрытыми ставнями: у Аквелии есть враги, и её забытые дети должны быть готовы. Теперь перед ним заводские смены, сельские делегаты и ветераны, чьи пустые рукава колышет морской ветер. Рабочий спрашивает, когда готовность оставит вечер для посещения раненых.\n\nОратор смотрит на национальное знамя. Отказываться от предупреждения он не собирается. Но понимает и другое: очередной парад не поднимет еду по лестнице в комнату ветерана. Местные организаторы собрали добровольцев, которых на этой неделе хватит на одно большое общее дело.\n\nМожно превратить встречу в патриотический сбор резерва, сделав защиту революционного государства публичным обязательством за пределами старых ячеек. Можно повести добровольцев в больницы и дома потерявших близких, показывая, что движение помнит людей после их ухода из строя. На площади ждут и желающие записаться, и те, кто принёс адреса нуждающихся. Оратор складывает последнюю страницу выступления и ждёт ответа организаторов, прежде чем снова подойти к краю трибуны."],
+          "options": [
+            {"title": ["Let Aquileia hear the reserve's pledge.", "Пусть Аквелия услышит обещание резерва."], "reward": "war_support5"},
+            {"title": ["Take the volunteers to the wounded and bereaved.", "Отправить добровольцев к раненым и потерявшим близких."], "reward": "stability5"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JFT_fja",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": ["Wages Written beside the Orders", "Жалованье рядом с заказами"],
+          "desc": ["The coalition receives workshop orders with delivery dates carefully recorded and wage promises left in the margins. Its FJA representatives and communard partners will bring employers and shift delegates to the same table. Reopening production must include an agreement workers can read on payday, otherwise the partnership born in the forest will meet its next argument at a locked gate.", "Коалиция получает заказы мастерским с аккуратными сроками поставки и обещаниями жалованья, оставленными на полях. Представители МАФ и их коммунарские союзники соберут работодателей и делегатов смен за одним столом. Возобновление производства должно сопровождаться соглашением, которое рабочие смогут прочитать в день расчёта. Иначе союз, родившийся в лесу, встретит следующий спор возле запертых ворот предприятия."],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": ["Builders Paid by the Municipality", "Строители на муниципальном заказе"],
+          "desc": ["Pridea's building crews move between damaged homes, waiting for householders who cannot pay them. A municipal works yard can gather tools and place repair orders large enough to keep the crews employed. The coalition's partners agree on the work; their argument concerns whose street comes first and how tenants will share in the improvement they helped finance.", "Строительные бригады Придеи переходят от одного повреждённого дома к другому, ожидая хозяев, которым нечем платить. Муниципальный строительный двор соберёт инструменты и даст достаточно ремонтных заказов для постоянной работы. Партнёры коалиции согласны с самой задачей. Спор идёт о первой улице в очереди и о том, что получат жильцы от улучшений, которые они тоже помогают оплачивать."],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": ["The Inspector Walks with the Shift", "Инспектор идёт вместе со сменой"],
+          "desc": ["An inspector arrives after the accident and finds that the workers warned about the belt weeks earlier. The coalition will pair technical inspection with accounts from the people who stand beside the machines. Workshop councils need a hearing, while the FJA's legislators need evidence that can become enforceable rules rather than another argument about who loves labour most.", "Инспектор приходит после несчастного случая и узнаёт, что рабочие предупреждали о ремне несколько недель назад. Коалиция соединит технический осмотр с рассказами тех, кто стоит возле станков. Производственным советам нужно быть услышанными, а законодателям МАФ — получить сведения для исполнимых правил. Очередной спор о том, кто сильнее любит трудящихся, не остановит опасный привод перед следующей сменой."],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": ["The Porters' National Petition", "Общенациональное прошение носильщиков"],
+          "desc": ["Porters from other provinces have brought the national coalition accounts of the same broken approaches and flooded loading yards. Pridea's works crews can offer methods that their representatives have already had to defend in public. The petition will become a programme of connected repairs, with local testimony following each contract beyond the offices that approved it.", "Носильщики из других провинций принесли национальной коалиции рассказы о тех же разбитых подъездах и затопленных погрузочных дворах. Придейские бригады могут предложить методы, которые их представители уже защищали публично. Прошение станет программой связанных между собой ремонтов. Свидетельства жителей будут сопровождать каждый договор за пределами утвердившей его канцелярии, напоминая подрядчикам, для кого именно открывают дорогу."],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e5",
+          "title": ["An Evening Bench for the Technicians", "Вечерний стол для техников"],
+          "desc": ["The inspection reports describe electrical faults that local technicians have been solving separately after their shifts. The coalition will give them a shared bench and time to compare their work. FJA delegates want practical findings for national legislation; communard partners want workers to keep a voice in the experiments. The first demonstration must satisfy both demands.", "В отчётах инспекторов описаны электрические неисправности, которые местные техники поодиночке устраняли после смены. Коалиция предоставит им общий рабочий стол и время для сравнения решений. Делегатам МАФ нужны практические выводы для общенациональных законов, коммунарским союзникам — участие рабочих в опытах. Первая демонстрация должна ответить на оба требования и показать мастерам, зачем они принесли сюда свои записи."],
+          "days": 56,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "m1",
+          "title": ["The Reservist's Return Ticket", "Обратный билет резервиста"],
+          "desc": ["Volunteers ask whether joining the reserve means losing the workshop places they have only just recovered. The coalition will negotiate service arrangements with employers and workers' delegates before opening the enrolment desks. A citizen army needs people who can leave their families without fearing that the uniform will cost them their livelihood when they return.", "Добровольцы спрашивают, означает ли вступление в резерв потерю места в мастерской, которое удалось вернуть совсем недавно. Коалиция обсудит условия службы с работодателями и рабочими делегатами до открытия записи. Гражданской армии нужны люди, способные оставить семьи без страха, что надетая форма лишит их заработка после возвращения и превратит обещанную службу в бессрочное расставание с домом."],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": ["Militia Rifles in Public Stores", "Винтовки ополчения на общих складах"],
+          "desc": ["The coalition's wartime partners have brought different weapons and different memories to the reserve depots. Their armourers will repair the serviceable rifles and record which stores hold them. FJA organisers need a force parliament can supply; communard delegates need assurance that handing over a weapon does not hand every future argument to whoever commands the depot gate.", "Военные союзники коалиции принесли на резервные склады разное оружие и разные воспоминания. Оружейники починят пригодные винтовки и запишут, где они хранятся. Организаторам МАФ нужны силы, которые парламент сможет снабжать. Коммунарские делегаты хотят уверенности, что передача оружия не отдаёт каждый будущий спор тому, кто командует стражей у складских ворот и решает, кого пропускать внутрь."],
+          "days": 42,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m3",
+          "title": ["Levé's Ambulance Route", "Санитарный маршрут Леве"],
+          "desc": ["Pain Levé has traced the reserve's exercise route to a bridge too narrow for the ambulance carts. He asks the civilian supply committee to walk it with his instructors. The coalition's military settlement will be judged by these meetings: whether an officer can obtain practical help, and whether civilians can question his plan before the first casualty needs it.", "Пейн Леве проследил учебный маршрут резерва до моста, слишком узкого для санитарных повозок. Он приглашает гражданский комитет снабжения пройти дорогой вместе с инструкторами. По таким встречам будут судить о военном устройстве коалиции: способен ли офицер получить практическую помощь и вправе ли гражданские оспорить его план до того, как по этому мосту повезут первого раненого."],
+          "days": 42,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m4",
+          "title": ["Training That Survives an Election", "Подготовка, переживающая выборы"],
+          "desc": ["Reserve officers from several provinces ask whether a change of parliamentary majority will discard their training arrangements. The coalition will put common instruction before the elected representatives, allowing objections without turning each company into a party club. Soldiers must learn to hold a position together even when the citizens who sent them disagree over the next ministry.", "Резервные офицеры нескольких провинций спрашивают, отменит ли смена парламентского большинства установленный порядок подготовки. Коалиция представит общую программу избранным депутатам, позволяя возражать и не превращая каждую роту в партийный клуб. Солдатам предстоит вместе удерживать позиции даже тогда, когда отправившие их граждане спорят о следующем кабинете. Учебная площадка не должна заново делиться после каждого подсчёта голосов."],
+          "days": 49,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m5",
+          "title": ["An Arsenal in the Published Budget", "Арсенал в открытом бюджете"],
+          "desc": ["The national reserve needs a dependable source of weapons, and the proposed arsenal competes with civilian claims on the same builders. The coalition will defend its order before the elected assembly and accept inspection of the finished works. Labour representatives want safe shifts; officers want reliable deliveries. Both must be able to explain the expense to the households paying it.", "Общенациональному резерву нужен надёжный источник оружия, но будущий арсенал соперничает с гражданскими заказами тем же строителям. Коалиция защитит заказ перед избранным собранием и допустит осмотр готового предприятия. Рабочие представители требуют безопасных смен, офицеры — исправных поставок. И тем и другим придётся объяснить расходы семьям, которые оплачивают их и ждут выполнения других обещаний общего бюджета."],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "c1",
+          "title": ["The Clinic Keeps Its Place", "Лечебница сохраняет своё место"],
+          "desc": ["The clinic attendant who once asked the coalition for flour returns with families unable to pay for treatment. Workplace collections have helped, but they stop when a workshop closes. Municipal relief will connect those scattered efforts to the coalition's social commitments, giving the sick somewhere to turn without requiring a party recommendation at the door.", "Работница лечебницы, когда-то просившая у коалиции муку, возвращается с семьями, которым нечем платить за лечение. Сборы в мастерских помогали, но прекращались вместе с работой предприятия. Муниципальная помощь свяжет разрозненные усилия с социальными обязательствами коалиции. Заболевшим будет куда обратиться без партийной рекомендации у дверей и без необходимости доказывать, что их прежние товарищи ещё способны собрать деньги."],
+          "days": 35,
+          "reward": "poverty"
+        },
+        {
+          "slot": "c2",
+          "title": ["The Forest Agreement Faces the Ballot", "Лесное соглашение перед голосованием"],
+          "desc": ["The partners who once postponed their quarrels in a Vinovian forest now carry them into national electoral meetings. Pridea's FJA delegates remain part of their wider party; the communards have not forgotten why they distrusted it. The coalition must make room for that argument while asking voters to judge a shared record of wages, relief and public works.", "Партнёры, когда-то отложившие ссоры в виновийском лесу, теперь несут их на общенациональные предвыборные собрания. Придейские делегаты МАФ остаются частью своей партии; коммунары не забыли причин недоверия к ней. Коалиции предстоит дать место этому спору и одновременно предложить избирателям оценить общий опыт соглашений о жалованье, помощи больным и общественных работ, за который отвечают оба движения."],
+          "days": 42,
+          "reward": "pp75"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {"title": ["The Signed Workshop Wage", "Подписанное жалованье мастерских"], "desc": ["Delivery orders now travel with wage agreements negotiated by the coalition's partners. Work can resume on terms the shifts recognise.", "Заказы сопровождаются соглашениями о жалованье, заключёнными партнёрами коалиции. Работа возобновляется на условиях, понятных сменам."], "modifiers": {"production_speed_buildings_factor": 0.05}},
+          {"title": ["Inspection from the Workshop Floor", "Проверка с рабочего места"], "desc": ["Technical inspectors hear the workers who know each dangerous machine. Repairs and safer routines are becoming part of the coalition's industrial practice.", "Технические инспекторы слушают рабочих, знакомых с каждым опасным станком. Ремонт и безопасный порядок входят в промышленную практику коалиции."], "modifiers": {"production_speed_buildings_factor": 0.1, "production_factory_efficiency_gain_factor": 0.05}},
+          {"title": ["The Coalition's Working Demonstration", "Работающий пример коалиции"], "desc": ["Municipal repairs and shared technical work give the national FJA a programme its Pridean partners can defend from experience. Workplace voices remain part of its delivery.", "Муниципальные ремонты и совместная техническая работа дают национальному МАФ программу, которую придейские партнёры защищают собственным опытом. Рабочие продолжают участвовать в её исполнении."], "modifiers": {"production_speed_buildings_factor": 0.15, "production_factory_efficiency_gain_factor": 0.1}}
+        ],
+        "military": [
+          {"title": ["Service with a Place to Return", "Служба с правом вернуться"], "desc": ["Reserve arrangements protect a recruit's connection to civilian employment. Instructors can plan training for volunteers who know what their absence means.", "Условия резерва сохраняют связь новобранца с гражданской работой. Инструкторы могут планировать занятия для добровольцев, понимающих условия своего отсутствия."], "modifiers": {"training_time_army_factor": -0.05}},
+          {"title": ["The Civilian Committee's Route Map", "Маршрутная карта гражданского комитета"], "desc": ["Officers and civilian suppliers have walked the reserve routes together. Their preparations connect training to transport, medical care and clear responsibilities.", "Офицеры и гражданские снабженцы вместе прошли резервными маршрутами. Подготовка связала обучение с перевозками, медицинской помощью и ясной ответственностью."], "modifiers": {"training_time_army_factor": -0.1, "army_org_factor": 0.05}},
+          {"title": ["A Reserve Answerable to the Assembly", "Резерв, отвечающий перед собранием"], "desc": ["Common training and inspected supply contracts sustain a national reserve through ordinary parliamentary disputes. Its officers can serve without deciding who deserves to govern.", "Общая подготовка и проверяемые договоры снабжения поддерживают национальный резерв во время парламентских споров. Офицеры могут служить, не решая, кто достоин править."], "modifiers": {"training_time_army_factor": -0.1, "army_org_factor": 0.1, "supply_consumption_factor": -0.05}}
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": ["The Rent beneath the New Roof", "Плата под новой крышей"],
+          "desc": ["Pierre brings Louis to a house repaired by the municipal crews. The roof no longer leaks, but the tenants have received a rent demand treating the publicly supported work as the owner's private improvement. The FJA representative arrives with the repair agreement and discovers that its wording never settled this point.\n\nLouis wants the coalition to answer in front of the tenants. He recalls how easily grand promises used to disappear between a meeting and a doorstep. The representative agrees that the claim needs an answer, but also sees the same omission in several pending contracts. A local settlement could reassure the affected families immediately; a carefully argued case could give the national party a concrete demand to carry into its legislative work.\n\nThe builders are waiting for their next assignment, and neither partner wants to leave them idle while the argument spreads. Pierre clears a space on the repaired staircase for the papers. Someone must decide whether today's effort belongs with the tenants or with the coalition's wider campaign.", "Пьер приводит Луи к дому, отремонтированному муниципальной бригадой. Крыша больше не течёт, но жильцам выставили новую плату, словно оплаченные обществом работы были личным улучшением владельца. Представитель МАФ приходит с ремонтным соглашением и обнаруживает, что именно этот вопрос в нём не решён.\n\nЛуи требует ответа перед жильцами. Он помнит, как легко большие обещания исчезали на пути от собрания до чужой двери. Представитель согласен разобраться с требованием, однако видит такое же упущение в нескольких ожидающих договорах. Местное соглашение сразу успокоит пострадавшие семьи; тщательно подготовленное дело даст национальной партии конкретное предложение для законодательной работы.\n\nСтроители ждут следующего назначения, и ни один союзник не хочет оставлять их без дела, пока спор распространяется по городу. Пьер освобождает место для бумаг на починенной лестнице. Сегодня придётся сосредоточить усилия либо на разговоре с жильцами и владельцем, либо на обращении к более широкому партийному кругу. Луи просит записать выбранный ответ здесь, где семьи смогут увидеть его, возвращаясь домой с работы."],
+          "options": [
+            {"title": ["Settle the tenants' claim at the house today.", "Сегодня разобрать требование жильцов прямо в доме."], "reward": "stability5"},
+            {"title": ["Make this case the coalition's national demand.", "Сделать это дело общенациональным требованием коалиции."], "reward": "pp50"}
+          ]
+        },
+        {
+          "after": "m3",
+          "title": ["Levé Waits for the Committee", "Леве ждёт комитет"],
+          "desc": ["Pain Levé waits at the narrow bridge while the civilian committee measures the ambulance cart. A young volunteer mutters that Pridea has already seen enough ponies telling griffons where to stand. Pierre, carrying the rear stretcher pole, asks him to take the other end before finishing the complaint. Together they discover that the turn cannot be made safely.\n\nLevé does not demand an apology. He asks the committee to mark a better approach, then explains why the bearers must practise it with a loaded stretcher. Several onlookers step forward to help. Some have been reluctant to volunteer for a force they feared would inherit the old divisions of the city.\n\nThe afternoon can become a full rescue exercise for the existing companies, turning the committee's criticism into a lesson everyone rehearses. It can also become an open induction for the willing newcomers, with veterans showing what service will actually require. Pierre rests the stretcher on the grass. The next group is waiting for a task.", "Пейн Леве ждёт у узкого моста, пока гражданский комитет измеряет санитарную повозку. Молодой доброволец бормочет, что Придея уже видела достаточно пони, указывающих грифонам, где стоять. Пьер, несущий задний конец носилок, просит его взять передний, прежде чем продолжать жалобу. Вместе они обнаруживают, что безопасно повернуть здесь невозможно.\n\nЛеве не требует извинений. Он просит комитет наметить лучший подход и объясняет, почему носильщикам нужно пройти его с настоящей нагрузкой. Несколько наблюдателей вызываются помочь. Прежде они не решались вступать в силы, которые, как они опасались, унаследуют прежние городские разделения и подозрения.\n\nОстаток дня можно посвятить полноценному санитарному учению нынешних рот, превратив замечание комитета в общий практический урок. Можно устроить открытое вводное занятие для новых добровольцев, поручив ветеранам показать настоящие обязанности будущей службы. Пьер опускает носилки на траву и разминает затёкшее плечо. Следующая группа уже ждёт задания, а измеренная повозка остаётся у моста напоминанием о том, с чего начался сегодняшний спор."],
+          "options": [
+            {"title": ["Run the complete rescue exercise with the companies.", "Провести полное санитарное учение с ротами."], "reward": "army_xp20"},
+            {"title": ["Welcome and instruct the new volunteers.", "Принять и обучить новых добровольцев."], "reward": "manpower1500"}
+          ]
+        },
+        {
+          "after": "c2",
+          "title": ["Two Leaflets at the Same Door", "Две листовки у одной двери"],
+          "desc": ["Louis finds two leaflets waiting at the coalition's meeting hall. One asks voters to support the FJA's national programme; the other argues that workplace councils must keep powers no parliamentary majority should casually remove. The party organiser wants them distributed on different days. Louis asks why the disagreement should be hidden from people expected to vote on it.\n\nPierre brings chairs out for the gathering crowd. Some workers want to question both sides together. Others have come to help the coalition carry its record of wages and municipal repairs to districts that still know it only through old accusations. The partners cannot organise a substantial hearing and send the same volunteers across the city tonight.\n\nA joint meeting would let the public hear the argument without mistaking disagreement for the end of the alliance. A shared canvass would put their achieved work before new voters while leaving each partner's leaflet in circulation. Neither choice settles the next election. The doors remain open while they decide where to put their effort.", "Луи находит у коалиционного зала две листовки. Одна призывает поддержать общенациональную программу МАФ; другая требует сохранить за производственными советами полномочия, которые парламентское большинство не должно легко отменять. Партийный организатор предлагает раздавать листовки в разные дни. Луи спрашивает, зачем скрывать разногласие от тех, кому предстоит голосовать.\n\nПьер выносит стулья к собирающимся жителям. Одни рабочие хотят задать вопросы обеим сторонам вместе. Другие пришли помочь коалиции рассказать о соглашениях по жалованью и муниципальных ремонтах в кварталах, где её знают лишь по старым обвинениям. Сегодня невозможно провести обстоятельное обсуждение и отправить тех же добровольцев обходить весь город.\n\nСовместное собрание позволит услышать спор, не принимая разногласие за конец союза. Общий обход донесёт результаты работы до новых избирателей, сохраняя за каждой стороной собственную листовку. Ни один вариант не решает исход следующих выборов и не запрещает дальнейшего спора. Двери остаются открытыми, пока партнёры выбирают, куда направить усилия. Луи кладёт оба листка рядом, чтобы вошедшие могли прочитать их самостоятельно."],
+          "options": [
+            {"title": ["Hold the joint meeting and answer together.", "Провести общее собрание и вместе отвечать на вопросы."], "reward": "stability5"},
+            {"title": ["Take the coalition's record to new voters.", "Рассказать новым избирателям о работе коалиции."], "reward": "pp50"}
+          ]
+        }
+      ]
+    }
+  ]
+}

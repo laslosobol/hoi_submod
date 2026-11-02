@@ -1,0 +1,361 @@
+{
+  "tag": "JFT",
+  "routes": [
+    {
+      "id": "JFT_dennis",
+      "title": [
+        "The Admiral's City",
+        "Город адмирала"
+      ],
+      "native_hint": [
+        "Dennis Discret has chosen to hold Pridea for the monarchy. His marines, pony auxiliaries and old naval connections give him strength without resolving the city's grievances.",
+        "Деннис Дискрет решил удержать Придею за монархией. Морская пехота, вспомогательные части пони и давние флотские связи укрепляют его власть, но не разрешают городских противоречий."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Keep the Harbour Open",
+            "Не закрывать гавань"
+          ],
+          "desc": [
+            "The fighting has ended, but a flour ship still waits outside Pridea while its captain argues with the patrol boat. Dennis knows the captain and distrusts the delay more than the cargo. He will give the quay guards instructions suited to peace. His claim to lead Aquileia must begin with a harbour that feeds its people without another personal intervention.",
+            "Боевые действия закончились, но судно с мукой всё ещё ждёт перед Придеей, пока капитан спорит с патрульным катером. Деннис знает капитана и больше подозревает задержку, чем груз. Он даст портовой страже инструкции для мирного времени. Его притязание на руководство Аквелией должно начаться с гавани, способной кормить жителей без очередного личного вмешательства адмирала. Придея станет проверкой того, что он предлагает всей стране."
+          ]
+        },
+        {
+          "title": [
+            "The Marines' Old Comrades",
+            "Старые товарищи морской пехоты"
+          ],
+          "desc": [
+            "The veterans recognise Dennis before the harbour guard announces him. Some served at sea; others fought beside the pony auxiliaries when the first commune fell. He needs their knowledge of the quays and their influence over younger sailors. Calling on those loyalties will also revive old claims for pay and wounds, and memories the workers have never agreed to share.",
+            "Ветераны узнают Денниса раньше, чем портовая стража объявляет о его приходе. Одни служили в море, другие сражались рядом со вспомогательными частями пони при падении первой коммуны. Ему нужны их знание причалов и влияние на молодых моряков. Обращение к прежней верности вернёт и старые требования о жалованье и помощи раненым, и воспоминания, которые рабочие никогда не считали общей славой города."
+          ]
+        },
+        {
+          "title": [
+            "Terms for the Dockyards",
+            "Условия для верфей"
+          ],
+          "desc": [
+            "A patrol still accompanies every shift into the dockyard. Dennis receives a petition from foremen who cannot repair ships under arrangements made for a siege. His veterans fear losing the harbour; the workers want ordinary working conditions restored. Before advancing his claim to lead Aquileia, the admiral must decide which parts of his command belong in a civilian government.",
+            "Каждую смену на верфь всё ещё сопровождает патруль. Деннис получает прошение мастеров, которые не могут ремонтировать суда по правилам осады. Его ветераны боятся потерять гавань, рабочие требуют вернуть обычные условия труда. Прежде чем выдвинуть притязание на руководство Аквелией, адмиралу предстоит решить, какие части его командования уместны в гражданском правительстве. Придея должна стать основанием общегосударственной программы, способной действовать далеко за пределами порта."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Whistle after the Fighting",
+          "Гудок после боёв"
+        ],
+        "desc": [
+          "The dockyard whistle sounds while Dennis is hearing the petition. Nobody rises: the foremen have agreed that this meeting matters more than the first shift. They propose a harbour council where workers and merchants can challenge requisitions and bring complaints against the guards. His captains offer a unified port command, responsible for freight, repairs and security, with appointed civilian officers to hear disputes. Dennis taps an old scar against the chair's arm. He knows how to take a harbour, and the city knows what that cost. His government must now decide whether ordinary work rests on a bargain with its inhabitants or on a command capable of keeping every quay moving.",
+          "Верфяной гудок звучит, пока Деннис слушает прошение. Никто не встаёт: мастера договорились, что это заседание важнее первой смены. Они предлагают портовый совет, где рабочие и купцы смогут оспаривать реквизиции и подавать жалобы на стражу. Капитаны предлагают единое управление портом, отвечающее за грузы, ремонт и безопасность, с назначенными гражданскими чиновниками для разрешения споров. Деннис проводит старым шрамом по подлокотнику. Он знает, как захватить гавань, а город знает, какой ценой это делается. Теперь его правительству предстоит решить, будет ли обычная работа опираться на соглашение с жителями или на командование, способное обеспечить движение у каждого причала."
+        ],
+        "a": [
+          "Let the harbour council hear the city.",
+          "Пусть портовый совет выслушает город."
+        ],
+        "b": [
+          "One port command, with duties plainly assigned.",
+          "Единое управление портом с ясными обязанностями."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "More than an Admiral's Promise",
+          "Больше, чем обещание адмирала"
+        ],
+        "a_desc": [
+          "Delegates from an inland province watch a dockworker challenge a naval requisition before the harbour council. They had expected Dennis to settle the matter with a shouted order. Instead, the council asks which civilian cargo would be delayed and sends the officer back for an answer. The agreement that joined their provinces to Aquileia promised something similar. Experience governing Pridea prepared Dennis for national responsibilities; the new mandate did not make every town his quarterdeck. The delegates leave with the council's procedure, intending to demand a hearing of their own.",
+          "Делегаты внутренней провинции наблюдают, как докер оспаривает флотскую реквизицию перед портовым советом. Они ожидали, что Деннис решит дело одним окриком. Вместо этого совет спрашивает, какой гражданский груз задержат, и отправляет офицера за ответом. Соглашение, объединившее их провинции в Аквелию, обещало нечто подобное. Опыт управления Придеей подготовил Денниса к общегосударственным обязанностям; новый мандат не превратил каждый город в палубу его корабля. Делегаты забирают порядок слушаний, собираясь потребовать такой же возможности для своих жителей. Адмирал замечает это, но не велит вернуть документ."
+        ],
+        "b_desc": [
+          "The first national convoy schedule hangs where Dennis once kept a chart of familiar coastal waters. Its inland connections were negotiated with provinces that accepted his leadership after the old political arrangement broke apart. A veteran captain claims priority for a ship belonging to an old comrade. The new port director refuses: another cargo has already been promised to the northern workshops. Dennis studies the schedule and lets the refusal stand. Central direction will accomplish little if every personal friendship can overrule the officers appointed to carry it out.",
+          "Первое общегосударственное расписание перевозок висит там, где Деннис прежде держал карту знакомых прибрежных вод. Связи с внутренними областями согласованы с провинциями, принявшими его руководство после распада прежнего политического порядка. Капитан-ветеран требует первоочередного обслуживания судна старого товарища. Новый начальник порта отказывает: другой груз уже обещан северным мастерским. Деннис изучает расписание и оставляет отказ в силе. Централизованное управление мало чего добьётся, если любая личная дружба сможет отменить решение назначенного чиновника. Капитан уходит недовольным, но порт впервые исполняет обещание, которое подкреплено не личным знакомством с адмиралом."
+        ]
+      },
+      "border": {
+        "title": [
+          "A Harbour without Water",
+          "Гавань без воды"
+        ],
+        "a_desc": [
+          "The Herzland transport delegation calls its railway depot an inland harbour. Dennis approves the comparison, then asks who may complain when our military freight takes every available wagon. Their answer names a civilian board established under the border settlement. Our own harbour council sends representatives to agree on access and compensation. The dependent partner will carry goods across the continent without surrendering its ordinary administration. Dennis leaves the ceremonial map folded. What matters today is whether a farmer can get his grain through the depot after the soldiers have unloaded.",
+          "Транспортная делегация Герцланда называет свой железнодорожный склад сухопутной гаванью. Деннису нравится сравнение; затем он спрашивает, кому жаловаться, когда наши военные грузы займут все свободные вагоны. В ответ называют гражданскую комиссию, созданную по пограничному соглашению. Наш портовый совет направляет представителей договориться о доступе и возмещении убытков. Зависимый партнёр будет перевозить товары через континент, сохраняя обычное управление своими делами. Деннис оставляет церемониальную карту сложенной. Сегодня важно, сможет ли земледелец провести своё зерно через склад после разгрузки солдат. Без ответа на этот вопрос договор останется красивой бумагой."
+        ],
+        "b_desc": [
+          "The new transport director brings Dennis a timetable joining the controlled frontier districts to the dependent Herzland partner's depots. It can move supplies without another territorial demand. A captain objects that local inspectors will slow the trains. The director produces the agreed inspection hours and a signed undertaking from the neighbouring government. Dennis tells the captain to meet the schedule. The network must work when the admiral is absent, through officials whose powers are understood on both sides. A naval reputation can win an audience; it cannot dispatch every train.",
+          "Новый начальник перевозок приносит Деннису расписание, связывающее контролируемые пограничные округа со складами зависимого партнёра в Герцланде. Оно позволяет доставлять грузы без новых территориальных требований. Капитан возражает, что местные проверяющие будут задерживать поезда. Начальник предъявляет согласованные часы осмотра и подписанное обязательство соседнего правительства. Деннис велит капитану соблюдать график. Сеть должна работать и в отсутствие адмирала, через чиновников, чьи полномочия понятны обеим сторонам. Флотская слава может обеспечить приём у министра, но не отправит каждый поезд. Капитан получает адрес служащего, который ответит за задержку следующего состава."
+        ]
+      }
+    },
+    {
+      "id": "JFT_communes",
+      "title": [
+        "The Communes Keep Their Promise",
+        "Коммуны держат слово"
+      ],
+      "native_hint": [
+        "The communards seek self-government beyond Pridea and beyond Aquileia. Their continuation must explain how common defence can serve communities without ruling over them.",
+        "Коммунары стремятся к самоуправлению за пределами Придеи и Аквелии. Их продолжению предстоит показать, как общая оборона сможет служить общинам, не становясь властью над ними."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Assemblies by District",
+            "Собрания по кварталам"
+          ],
+          "desc": [
+            "Victory has filled the meeting room before the last shift reaches it. Older communards insist that the new order cannot be entrusted to speakers nobody can replace. Each district will choose delegates bound by instructions from its assembly. Pridea must show how such accountability could work across an Aquileian federation, beginning with a hearing for the night shift.",
+            "Победа заполнила зал ещё до прихода последней смены. Старые коммунары настаивают: новый порядок нельзя поручать ораторам, которых никто не вправе сменить. Каждый квартал выберет делегатов, связанных поручениями своего собрания. Придея должна показать, как такая подотчётность сможет работать в федерации всей Аквелии. Начать предстоит с права голоса для ночной смены: без неё собрание представляет лишь тех, кому удобно прийти вовремя."
+          ]
+        },
+        {
+          "title": [
+            "The Militias Answer to the Assemblies",
+            "Ополчение отвечает перед собраниями"
+          ],
+          "desc": [
+            "Militia patrols still follow their wartime orders, holding up bread carts at a crossing nobody needs to defend. Delegates spread a city plan across the bakery table and ask which duties remain necessary. The assemblies must agree how to supervise the units and replace commanders who disregard them. A federation's common defence must answer to the communities it serves.",
+            "Патрули ополчения всё ещё исполняют военные приказы, задерживая хлебные подводы на перекрёстке, который больше не нужно защищать. Делегаты раскладывают план города на столе пекарни и спрашивают, какие обязанности сохранили смысл. Собрания должны договориться о надзоре за отрядами и смене командиров, игнорирующих их решения. Общая оборона федерации обязана отвечать перед общинами, которым служит. Пекарь просит освободить дорогу до выхода следующего обоза."
+          ]
+        },
+        {
+          "title": [
+            "Bread through Common Stores",
+            "Хлеб из общих запасов"
+          ],
+          "desc": [
+            "Peace has returned the militia's flour carts to districts with very different needs. One assembly wants its stores back; another has lost its ovens. Their delegates must settle how shared supplies are governed before offering the same arrangement to communes throughout Aquileia. Pridea will be the starting point for a wider federation, and this hungry morning its first practical test.",
+            "Мир вернул мучные обозы ополчения в кварталы с совершенно разными нуждами. Одно собрание требует вернуть запасы, другое лишилось печей. Делегатам предстоит определить порядок общего снабжения, прежде чем предложить такое устройство коммунам всей Аквелии. Придея станет отправной точкой более широкой федерации, а это голодное утро — её первым практическим испытанием. Нужно решить, кто вправе распорядиться мукой до очередного собрания в каждом квартале."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "Who Keeps the Bakery Key?",
+          "У кого останется ключ от пекарни?"
+        ],
+        "desc": [
+          "The baker has brought the key used for the militia's storehouse. He asks which assembly should receive it now. One delegate proposes a federation council whose members remain bound by local instructions and can be recalled before the next session. Another points to the waiting bread carts: a joint secretariat needs authority to allocate supplies and organise defence without seeking permission for every journey. Its mandate would still come from the communes, but their disagreements would be settled after common orders had been issued. The room grows quiet when the baker places the key on the table. They promised a revolution without masters. They also promised that the hungry districts would not be left to fend for themselves.",
+          "Пекарь принёс ключ от склада ополчения. Он спрашивает, какому собранию его теперь передать. Один делегат предлагает федеральный совет, участники которого связаны местными поручениями и могут быть отозваны до следующей сессии. Другой указывает на ожидающие хлебные подводы: совместному секретариату нужны полномочия распределять припасы и организовывать оборону без отдельного разрешения на каждую поездку. Его мандат по-прежнему будет исходить от коммун, но разногласия придётся разбирать уже после выдачи общих распоряжений. В комнате становится тихо, когда пекарь кладёт ключ на стол. Они обещали революцию без хозяев. Они также обещали не оставлять голодные кварталы наедине с нуждой. Сейчас оба обещания требуют ответа."
+        ],
+        "a": [
+          "The communes retain the right to recall.",
+          "Коммуны сохранят право отзыва."
+        ],
+        "b": [
+          "Give the common secretariat a working mandate.",
+          "Дать общему секретариату рабочие полномочия."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "A Delegate Sent Home",
+          "Делегата отправляют домой"
+        ],
+        "a_desc": [
+          "The newly federated communes send a replacement for a delegate who approved an unwanted supply levy. He protests that his place in the common council was earned during the fighting. His own assembly sends the instructions he disregarded. The council admits the replacement before continuing its business. Beyond Pridea, the promise of recall has become something a smaller community can actually use. The dismissed delegate leaves angry, but the bread carts still depart that afternoon. The federation has survived a change of representative without declaring the dissenting district an enemy.",
+          "Коммуны новой федерации присылают замену делегату, одобрившему нежелательный сбор припасов. Он возражает: место в общем совете заслужено во время боёв. Его собственное собрание предъявляет поручения, которыми он пренебрёг. Совет принимает замену и продолжает работу. За пределами Придеи обещанное право отзыва стало возможностью, которой действительно пользуется небольшая община. Отозванный делегат уходит сердитым, однако хлебные подводы отправляются в путь тем же днём. Федерация пережила смену представителя, не объявляя несогласный квартал врагом. Его преемнице передают карту перевозок и объясняют, за какое поручение ей предстоит отвечать перед собранием."
+        ],
+        "b_desc": [
+          "The common secretariat has redirected flour to a flooded district before the neighbouring assemblies could meet. Its decision saved the day's baking, but one commune now finds its reserves lower than promised. At the federal gathering, its delegate insists on an explanation in front of everyone. The secretariat presents the damaged road reports and accepts a repayment schedule. Aquileia's communes have given their centre real coordinating power. Keeping that power from becoming a permanent superiority will require more than good intentions whenever an urgent order leaves somebody else short.",
+          "Общий секретариат перенаправил муку в затопленный квартал раньше, чем смогли собраться соседние общины. Решение спасло дневную выпечку, но одна коммуна обнаружила, что её запасы ниже обещанных. На федеральном собрании делегат требует объяснения перед всеми. Секретариат предъявляет донесения о повреждённых дорогах и принимает график восполнения запасов. Коммуны Аквелии дали центру настоящие координационные полномочия. Чтобы они не превратились в постоянное превосходство, добрых намерений будет недостаточно всякий раз, когда срочный приказ оставит кого-то без припасов. Делегат увозит домой график, который его соседи смогут проверить по прибывающим подводам."
+        ]
+      },
+      "border": {
+        "title": [
+          "Guests at the Same Table",
+          "Гости за общим столом"
+        ],
+        "a_desc": [
+          "Delegates from the Herzland communes arrive wearing the travelling coats in which they crossed the new frontier. They ask why the defence arrangement still makes them dependent on a larger federation that speaks of equality. Our delegates cannot answer by pointing to the map. They invite them to place the review of that relationship on the common agenda, beside the guarantees already agreed for border communities. The present settlement remains in force, but its temporary nature must mean something. Nobody is asked to surrender a local language or assembly to earn a hearing.",
+          "Делегаты коммун Герцланда приезжают в дорожных плащах, в которых пересекли новую границу. Они спрашивают, почему оборонное устройство всё ещё ставит их в зависимость от большой федерации, говорящей о равенстве. Наши представители не могут ответить указанием на карту. Они предлагают внести пересмотр отношений в общую повестку рядом с уже согласованными гарантиями пограничным общинам. Нынешнее соглашение продолжает действовать, но его временный характер должен что-то значить. Ради права быть услышанным никто не обязан отказываться от местного языка или собрания. Гости занимают места и сами зачитывают свой первый вопрос."
+        ],
+        "b_desc": [
+          "The joint headquarters requests another season of authority over the Herzland communes' supply routes. It argues that hostile governments elsewhere still threaten the revolution. A visiting delegate asks whether a distant enemy can renew its mandate forever. The secretariat keeps the agreed defence coordination, but must present the request to the participating communes with its costs and limits exposed. The controlled borderlands do not expand with the officers' map. Those who carried the promise of liberation beyond Aquileia now have to explain why common protection still requires unequal powers.",
+          "Объединённый штаб просит ещё на один сезон сохранить власть над путями снабжения коммун Герцланда. По его словам, враждебные правительства за пределами региона всё ещё угрожают революции. Приглашённый делегат спрашивает, может ли далёкий враг продлевать этот мандат бесконечно. Секретариат сохраняет согласованную координацию обороны, но должен предъявить участвующим коммунам просьбу с ясными издержками и пределами. Контролируемое пограничье не расширяется вместе с офицерской картой. Тем, кто понёс обещание освобождения за пределы Аквелии, теперь приходится объяснять, почему общая защита всё ещё требует неравных полномочий. Делегат остаётся ждать ответа до конца заседания."
+        ]
+      }
+    },
+    {
+      "id": "JFT_enfants",
+      "title": [
+        "The Forgotten Children of Aquileia",
+        "Забытые дети Аквелии"
+      ],
+      "native_hint": [
+        "Les Enfants Terribles place Aquileian strength and the survival of the revolution first. Their national programme differs from the communards' federation and the FJA's parliamentary coalition.",
+        "Les Enfants Terribles ставят на первое место силу Аквелии и выживание революции. Их национальная программа отличается и от федерации коммунаров, и от парламентской коалиции МАФ."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Bring the Cells into Daylight",
+            "Вывести ячейки из подполья"
+          ],
+          "desc": [
+            "Two former couriers arrive with contradictory instructions, each bearing a signature trusted during the fighting. Victory has brought the cells into public offices without settling who may speak for the movement. Their organisers will compare records and establish responsibilities before presenting a programme for Aquileia. Wartime secrecy cannot remain an excuse for orders that nobody will defend in person.",
+            "Двое бывших связных приходят с противоречивыми распоряжениями; под каждым стоит подпись, которой доверяли во время боёв. Победа привела ячейки в публичные учреждения, не определив, кто вправе говорить от имени движения. Организаторы сверят записи и установят ответственность, прежде чем представить программу для Аквелии. Военная тайна больше не может оправдывать приказы, которые никто не готов защитить лично перед товарищами и гражданскими представителями."
+          ]
+        },
+        {
+          "title": [
+            "Account for Every Shipment",
+            "Проверить каждую поставку"
+          ],
+          "desc": [
+            "A shipment lost during the fighting has been traced to a sale under a forged collection order. The dockside organisers bring a witness and the merchant's duplicate receipt. Former underground cells must now cooperate openly to establish what happened. Their common supply office will examine the records before making accusations, beginning the work of governing without treating suspicion as proof.",
+            "Поставку, потерянную во время боёв, удалось проследить до продажи по поддельному распоряжению на выдачу. Портовые организаторы приводят свидетеля и приносят второй экземпляр купеческой расписки. Бывшим подпольным ячейкам теперь придётся открыто сотрудничать, чтобы установить случившееся. Общее бюро снабжения проверит записи прежде, чем выдвигать обвинения. Управление начинается с умения отличать подозрение от доказательства, даже когда среди подозреваемых оказываются знакомые участники движения."
+          ]
+        },
+        {
+          "title": [
+            "Examine the Wartime Files",
+            "Проверить дела военного времени"
+          ],
+          "desc": [
+            "The fighting is over, and the security cell brings its wartime files to the provisional assembly. One suspect helped sell the missing shipment; another merely disputed an organiser's orders. Their names appear on the same page. Before offering its programme to Aquileia, the movement must decide who may investigate opponents and what evidence separates disagreement from betrayal.",
+            "Бои закончились, и группа безопасности приносит временному собранию дела военного времени. Один подозреваемый помог продать исчезнувший груз, другой лишь оспаривал распоряжения организатора. Их имена стоят на одной странице. Прежде чем предложить свою программу Аквелии, движению предстоит определить, кто вправе расследовать действия противников и какие доказательства отличают несогласие от предательства. Без ответа на этот вопрос список продолжит расти и после победы."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "Two Names on One Page",
+          "Два имени на одной странице"
+        ],
+        "desc": [
+          "The investigator reads the merchant's testimony, then turns to a speech made by a fellow revolutionary. A delegate interrupts: the first describes a stolen shipment, the second a disagreement about command. The movement's founders insist that Aquileia cannot survive by trusting every declared friend. Some nevertheless propose a national council with public hearings and a right to challenge security orders. Others want a directorate able to coordinate industry and defence, with its own inspectors checking abuses after urgent decisions are carried out. Both intend to build a strong revolutionary state. The question is whether its citizens can question an accusation before the machinery set in motion against them has finished its work.",
+          "Следователь читает показания купца, затем переходит к речи товарища по революции. Делегат прерывает его: первое касается украденной поставки, второе — разногласия о командовании. Основатели движения настаивают, что Аквелия не выживет, доверяя каждому, кто объявит себя другом. Некоторые всё же предлагают национальный совет с открытыми слушаниями и правом оспаривать распоряжения безопасности. Другие хотят директорию, способную координировать промышленность и оборону; её собственные инспекторы будут проверять злоупотребления после исполнения срочных решений. Обе стороны намерены строить сильное революционное государство. Вопрос в том, смогут ли жители оспорить обвинение прежде, чем запущенные против них учреждения закончат свою работу и вынесут решение."
+        ],
+        "a": [
+          "A strong state must hear a challenge.",
+          "Сильное государство должно выслушать возражение."
+        ],
+        "b": [
+          "Give the directorate authority to act together.",
+          "Дать директории полномочия действовать согласованно."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "An Accusation in the Capital",
+          "Обвинение в столице"
+        ],
+        "a_desc": [
+          "At the first national hearing, a workshop delegate is accused of undermining the revolution by opposing an allocation order. He asks the council to hear the workers who elected him. Their testimony concerns damaged machinery and an impossible delivery date, not a foreign plot. The accusation is withdrawn and the order revised. The movement still speaks of Aquileia's enemies, but its new institutions have refused to turn a practical objection into proof of treachery. Outside the chamber, the delegate answers questions from comrades who had expected him not to return.",
+          "На первом общегосударственном слушании делегата мастерских обвиняют в подрыве революции за возражение против распределительного приказа. Он просит совет выслушать рабочих, которые его избрали. Их показания касаются сломанных станков и невозможного срока поставки, а не иностранного заговора. Обвинение снимают, приказ пересматривают. Движение по-прежнему говорит о врагах Аквелии, но новые учреждения отказались превращать практическое возражение в доказательство измены. За дверями зала делегат отвечает на вопросы товарищей, не ожидавших его возвращения. Он показывает исправленное распоряжение: теперь его подпись означает согласие с работой, которую действительно можно выполнить."
+        ],
+        "b_desc": [
+          "The directorate's common orders have brought the provincial foundries onto the same production schedule. For the first time, a workshop can obtain a missing component without appealing to three rival committees. The security office also requires permits for meetings that once needed only an available room. A former courier waits outside with a petition from her own cell. The directorate has made the reunited country's industry easier to command, but it has made familiar comrades harder to trust. Its inspectors will have to investigate a complaint about the very rules they enforce.",
+          "Общие распоряжения директории включили провинциальные литейные предприятия в единый производственный график. Впервые мастерская получает недостающую деталь без обращений в три соперничающих комитета. Одновременно ведомство безопасности требует разрешений на собрания, которым прежде было достаточно свободной комнаты. Бывшая связная ждёт снаружи с прошением от собственной ячейки. Директория облегчила управление промышленностью объединённой страны, но затруднила доверие между знакомыми товарищами. Её инспекторам предстоит разобрать жалобу на правила, которые они сами применяют. Связная узнаёт дежурного и всё равно должна предъявить пропуск, прежде чем тот согласится принять её письмо."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Limits of Encirclement",
+          "Пределы доктрины окружения"
+        ],
+        "a_desc": [
+          "The frontier commission reports that the agreed Herzland buffer is functioning. A security officer asks to extend its powers to newspapers critical of our advisers. The national council instead summons the advisers to answer those criticisms. The dependent neighbour remains bound by the defence settlement, while its inhabitants retain the guarantees negotiated for their own institutions. Aquileia has secured the strategic districts named in the agreement. The council refuses to treat every argument beyond that boundary as another encirclement, or every local custom as an obstacle to national survival.",
+          "Пограничная комиссия докладывает, что согласованное буферное государство в Герцланде выполняет свои обязанности. Офицер безопасности просит распространить его полномочия на газеты, критикующие наших советников. Национальный совет вместо этого вызывает советников ответить на замечания. Зависимый сосед сохраняет обязательства по оборонному договору, а его жители — гарантии собственным учреждениям, установленные на переговорах. Аквелия обеспечила контроль над стратегическими округами, названными в соглашении. Совет отказывается считать каждый спор за этой границей новым окружением, а каждый местный обычай — препятствием национальному выживанию. Газеты получают приглашение направить представителей на слушание вместе с советниками."
+        ],
+        "b_desc": [
+          "With the principal frontier threat contained, the directorate receives a proposal to keep the emergency transport controls indefinitely. Its authors point to possible enemies farther beyond the buffer. The neighbouring Herzland government asks instead when its civilian factories will recover the promised railway slots. Our commissioners retain central direction of the agreed defence network, but cannot satisfy both requests without another political decision. The border remains fixed. At the depot, workers wait beside finished goods while an inspector studies the permits. The doctrine of permanent danger now has an ordinary economic cost.",
+          "После сдерживания главной пограничной угрозы директория получает предложение бессрочно сохранить чрезвычайный контроль перевозок. Авторы указывают на возможных врагов за пределами буфера. Соседнее правительство Герцланда вместо этого спрашивает, когда его гражданские заводы получат обещанные места в расписании поездов. Наши комиссары сохраняют централизованное управление согласованной оборонной сетью, но не могут удовлетворить обе просьбы без нового политического решения. Граница остаётся неизменной. На складе рабочие ждут рядом с готовыми товарами, пока инспектор изучает разрешения. У доктрины постоянной опасности теперь есть повседневная хозяйственная цена. Завершённая военная задача ещё не вернула привычную работу станции."
+        ]
+      }
+    },
+    {
+      "id": "JFT_fja",
+      "title": [
+        "The Coalition before the Voters",
+        "Коалиция перед избирателями"
+      ],
+      "native_hint": [
+        "The Pridean FJA and the communards agreed to postpone their differences until victory. A parliamentary social republic must now negotiate the questions they left unanswered.",
+        "Придейские сторонники МАФ и коммунары договорились отложить разногласия до победы. Теперь парламентской социальной республике предстоит обсудить вопросы, оставшиеся без ответа."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Renew the Forest Agreement",
+            "Подтвердить лесное соглашение"
+          ],
+          "desc": [
+            "The first public meeting after victory begins with the paper once carried into the forest. Nobody recorded who could speak for the neighbourhood groups beyond the emergency. The FJA and the communards must renew their agreement for ordinary political life. Their proposal for Aquileia will need representatives able to disagree in public while still building a common parliamentary programme.",
+            "Первая открытая встреча после победы начинается с бумаги, которую прежде несли в лес. Никто не записал, кто сможет говорить от имени квартальных групп после чрезвычайных обстоятельств. МАФ и коммунарам предстоит обновить соглашение для обычной политической жизни. Предложению для Аквелии нужны представители, способные спорить открыто и при этом создавать общую парламентскую программу. Прежних тайных договорённостей для такой работы уже недостаточно."
+          ]
+        },
+        {
+          "title": [
+            "Civilian Supply Committees",
+            "Гражданские комитеты снабжения"
+          ],
+          "desc": [
+            "A militia organiser claims the flour reserved for his units during the fighting. A clinic attendant asks why the hospital must still wait now that peace has returned. Joint civilian committees will review those wartime allocations and publish the distribution agreed with the neighbourhoods. Their work must make the coalition's social programme credible before it seeks a wider Aquileian mandate.",
+            "Организатор ополчения требует муку, выделенную его отрядам во время боёв. Работница лечебницы спрашивает, почему после возвращения мира больница всё ещё должна ждать. Совместные гражданские комитеты пересмотрят военное распределение и опубликуют порядок снабжения, согласованный с кварталами. Их работа должна придать социальной программе коалиции убедительность, прежде чем та обратится за более широкими полномочиями в Аквелии. Оставленный у лечебницы мешок станет первым подтверждением обещаний."
+          ]
+        },
+        {
+          "title": [
+            "A Provisional Coalition Cabinet",
+            "Временный коалиционный кабинет"
+          ],
+          "desc": [
+            "Peace has ended the reason for postponing every disagreement. The communards bring proposals for workplace councils; the FJA brings an electoral timetable and a programme of social legislation. Both need a government able to reopen the factories and keep the hospitals supplied. Their provisional cabinet must establish how decisions are made now, and how the voters may replace its members later.",
+            "Мир лишил смысла привычку откладывать каждое разногласие. Коммунары приносят предложения о советах на предприятиях; МАФ — избирательный календарь и программу социальных законов. Обоим нужно правительство, способное открыть заводы и снабжать больницы. Временному кабинету предстоит установить, как принимать решения сейчас и как избиратели смогут сменить его участников позднее. Срок следующего обсуждения должен означать подготовку к голосованию, а не очередную отсрочку."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Questions Left in the Forest",
+          "Вопросы, оставленные в лесу"
+        ],
+        "desc": [
+          "A communard unfolds the paper carried from the meeting in the forest. Its last sentence postpones the argument about property until victory. The FJA representative places a draft labour law beside it and points out that victory has arrived. One proposal would give municipal and workplace councils a continuing part in social policy, with the elected assembly settling disputes. The other would entrust reconstruction to a stronger coalition cabinet, responsible to parliament for a common industrial programme. Both retain contested elections, lawful opposition and the possibility of losing office. The clinic attendant waits with the next supply request. A government must be formed, but the partners will not be asked to sign away the right to disagree with it.",
+          "Коммунар разворачивает бумагу, привезённую с лесной встречи. Последняя строка откладывает спор о собственности до победы. Представитель МАФ кладёт рядом проект трудового закона и напоминает: победа уже наступила. Один вариант даёт муниципальным и производственным советам постоянное участие в социальной политике, а избранному собранию поручает разрешать споры. Другой доверяет восстановление более сильному коалиционному кабинету, отвечающему перед парламентом за общую промышленную программу. Оба сохраняют выборы с соперниками, законную оппозицию и возможность потерять должность. Работница лечебницы ждёт с новой заявкой на припасы. Правительство необходимо сформировать, но партнёров не попросят отказаться от права спорить с ним. Лесное соглашение должно пережить первое открытое разногласие."
+        ],
+        "a": [
+          "Bring the councils into the parliamentary settlement.",
+          "Включить советы в парламентское соглашение."
+        ],
+        "b": [
+          "Give the elected coalition a firm executive mandate.",
+          "Дать избранной коалиции твёрдые исполнительные полномочия."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Opposition Hires a Hall",
+          "Оппозиция снимает зал"
+        ],
+        "a_desc": [
+          "The first municipal contest in the reunited country gives a former communard ally enough seats to challenge the coalition's housing plan. Our organisers arrive at the hired hall expecting an attack on everything they built together. Instead, they find a proposal to change the rents and the order in which damaged homes are repaired. The disagreement is sharp, and it remains legal. Aquileia's parliamentary settlement has brought the old partners into institutions where cooperation does not require permanent agreement. The coalition must win the argument before it can win the vote.",
+          "Первое муниципальное голосование в объединённой стране даёт бывшему союзнику-коммунару достаточно мест, чтобы оспорить жилищный план коалиции. Наши организаторы приходят в арендованный зал, ожидая нападок на всё, что строили вместе. Вместо этого они находят предложение изменить квартирную плату и очередность ремонта повреждённых домов. Спор остаётся острым и законным. Парламентское устройство Аквелии привело прежних партнёров в учреждения, где сотрудничество не требует постоянного согласия. Коалиции предстоит выиграть спор прежде, чем голосование. У входа висит объявление о следующей встрече, и никто не требует снять его после окончания заседания."
+        ],
+        "b_desc": [
+          "The coalition cabinet has directed reconstruction funds to the factories serving several provinces at once. Production has recovered, but a town left waiting for its housing programme invites an opposition speaker to explain a different budget. A minister suggests delaying the meeting until the cabinet's work is better understood. His parliamentary colleagues refuse. The government has authority to coordinate investment, not to suspend the contest over its choices. Its candidates will have to defend the common programme at the next election, including the promises that central priorities postponed.",
+          "Коалиционный кабинет направил средства восстановления заводам, обслуживающим сразу несколько провинций. Производство ожило, но город, оставшийся ждать жилищной программы, приглашает оппозиционного оратора представить другой бюджет. Министр предлагает отложить собрание, пока работу кабинета не станут лучше понимать. Его парламентские коллеги отказывают. Правительство получило полномочия координировать вложения, а не прекращать спор о собственном выборе. На следующих выборах его кандидатам придётся защищать общую программу, включая обещания, отложенные ради центральных приоритетов. Городской зал останется открыт, и министр тоже сможет выступить, если придёт отвечать на вопросы жителей на общих основаниях."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Budget after Demobilisation",
+          "Бюджет после демобилизации"
+        ],
+        "a_desc": [
+          "The neighbouring Herzland social republic sends a delegation concerned about the cost of the security agreement. Its ministers want to reopen schools before maintaining the wartime supply quotas. Our labour representatives support their request, while returning soldiers ask when their own housing will be ready. The parliamentary commission must consider both alongside the guarantees for the integrated border districts. Dependence is still part of the present settlement, but the partner's civilian priorities have a place in the negotiations. Neither delegation accepts that another emergency can indefinitely postpone the social promises made to its voters.",
+          "Соседняя социальная республика Герцланда направляет делегацию, обеспокоенную ценой оборонного соглашения. Её министры хотят открыть школы прежде, чем сохранять нормы военного снабжения. Наши рабочие представители поддерживают просьбу, а вернувшиеся солдаты спрашивают, когда будет готово их жильё. Парламентской комиссии предстоит рассмотреть оба вопроса вместе с гарантиями включённым пограничным округам. Зависимость пока остаётся частью соглашения, но гражданские приоритеты партнёра получили место на переговорах. Ни одна делегация не согласна, чтобы очередная чрезвычайная ситуация бесконечно откладывала социальные обещания её избирателям. Комиссия приглашает обе стороны на открытое обсуждение расходов."
+        ],
+        "b_desc": [
+          "The cabinet proposes a common reconstruction schedule linking our border factories to workshops in the dependent Herzland republic. Its counterpart accepts coordinated orders but asks parliament to preserve funds for local hospitals. The agreement comes before both legislatures with the disputed figures still visible. Our government can argue for concentrating resources; it cannot describe every objection as disloyalty to the alliance. The frontier settlement has provided a partner and a limited border, not an excuse to abandon elections. The ministers prepare to defend the budget before representatives who may vote it down.",
+          "Кабинет предлагает общий график восстановления, связывающий наши пограничные заводы с мастерскими зависимой республики Герцланда. Её правительство принимает согласованные заказы, но просит парламент сохранить средства для местных больниц. Соглашение поступает в оба законодательных собрания с открыто обозначенными спорными цифрами. Наше правительство может доказывать необходимость сосредоточения ресурсов, но не вправе объявлять каждое возражение нелояльностью союзу. Пограничное урегулирование дало партнёра и ограниченную границу, а не повод отказаться от выборов. Министры готовятся защищать бюджет перед представителями, которые могут его отклонить. Коалиция должна убедить их, даже если это задержит исполнение её общего плана."
+        ]
+      }
+    }
+  ]
+}

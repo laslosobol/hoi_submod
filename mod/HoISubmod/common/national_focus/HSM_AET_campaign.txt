@@ -1,0 +1,625 @@
+# Greifwald: Debt to the Crown. Focus/UI ownership only.
+# Contract: docs/GREIFWALD_IMPLEMENTATION.md; core scripts checked 2026-10-27.
+# Main imports BOTH roots HSM_AET_opening and HSM_AET_letters into all three
+# native greifwald_* trees. Absolute coordinates, no native-root prerequisite.
+# HSM_AET_active intentionally survives a completed programme, allowing a later
+# Trimmel crisis. Development uses active + congress_done, never regency/custody.
+# The obituary root follows congress independently of mandate or any life choices.
+#
+# Choice barriers use core *_done flags (not focus completion or chosen policy):
+# 1 opening; 2 refuge; 3 home_budget; 4 congress; 10 mandate; 11 household;
+# 12 court_accounts; 13 service; 14 judgement; 15 working_table; 16 prepare;
+# 20 obituary; 21 interim; 22 delegates; 23 union; 24 revenues; 25 succession;
+# 26 winter (+ completed); 30 letters; 31 audience; 32 hearing; 33 signature.
+# Working_table queues 14; its resolved judgement queues 15. BOTH done flags
+# gate prepare. Gift 27 and foreign replies 40-42 are not progression barriers.
+# Either policy choice satisfies its common done flag. Mandate additionally
+# needs regency; main owns recovery decisions after custody/mandate refusals.
+#
+# Every actual reward calls its guarded/idempotent HSM_AET_finish_<suffix>.
+# effect_tooltip blocks are previews ONLY: narrative previews mirror the core
+# one-day event queues; direct previews mirror the four current development
+# helpers. Main must keep these previews aligned if integration changes rewards.
+# Helpers recheck context and own event queues, flags, dynamic spirit and retries.
+# No bypass/branch hiding: a delayed choice is not a completed choice.
+# Cost is native days/7. Both finales have five separate AND prerequisites.
+
+shared_focus = {
+	id = HSM_AET_opening
+	icon = GFX_HSM_AET_opening
+	x = 64
+	y = 0
+	cost = 3
+	available = {
+		hidden_trigger = { HSM_AET_can_open = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_open_tt HSM_AET_government = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_relief_not_started_tt NOT = { has_country_flag = HSM_AET_started } }
+		OR = {
+			custom_trigger_tooltip = { tooltip = HSM_AET_focus_empire_absent_tt GRI = { exists = no } }
+			custom_trigger_tooltip = { tooltip = HSM_AET_focus_empire_capitulated_tt GRI = { exists = yes has_capitulated = yes } }
+			custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_union_tt has_global_flag = GRI_grover_vi_dead }
+			custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_mandate_tt HSM_AET_local_alive = yes }
+			custom_trigger_tooltip = { tooltip = HSM_AET_focus_wartime_capital_tt has_war = yes 382 = { is_owned_and_controlled_by = PREV } }
+		}
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_opening_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.1 days = 1 } }
+		hidden_effect = { HSM_AET_finish_opening = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_refuge
+	icon = GFX_HSM_AET_refuge
+	prerequisite = { focus = HSM_AET_opening }
+	x = 64
+	y = 1
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_opening_done_tt has_country_flag = HSM_AET_opening_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_refuge_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.2 days = 1 } }
+		hidden_effect = { HSM_AET_finish_refuge = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_home_budget
+	icon = GFX_HSM_AET_home_budget
+	prerequisite = { focus = HSM_AET_refuge }
+	x = 64
+	y = 2
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_refuge_done_tt has_country_flag = HSM_AET_refuge_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_home_budget_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.3 days = 1 } }
+		hidden_effect = { HSM_AET_finish_home_budget = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_congress
+	icon = GFX_HSM_AET_congress
+	prerequisite = { focus = HSM_AET_home_budget }
+	x = 64
+	y = 3
+	cost = 7
+	available = {
+		hidden_trigger = { HSM_AET_can_congress = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_congress_tt HSM_AET_active = yes HSM_AET_legitimate = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_peace_tt has_war = no }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_capital_held_tt 382 = { is_owned_and_controlled_by = PREV } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_empire_absent_tt GRI = { exists = no } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_home_budget_done_tt has_country_flag = HSM_AET_home_budget_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_congress_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.4 days = 1 } }
+		hidden_effect = { HSM_AET_finish_congress = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_mandate
+	icon = GFX_HSM_AET_mandate
+	prerequisite = { focus = HSM_AET_congress }
+	x = 58
+	y = 4
+	cost = 5
+	available = {
+		hidden_trigger = { HSM_AET_can_mandate = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_congress_tt HSM_AET_active = yes HSM_AET_legitimate = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_peace_tt has_war = no }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_capital_held_tt 382 = { is_owned_and_controlled_by = PREV } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_empire_absent_tt GRI = { exists = no } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_mandate_tt HSM_AET_local_alive = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_mandate_offer_tt NOT = { has_country_flag = HSM_AET_mandate has_country_flag = HSM_AET_declined has_country_flag = HSM_AET_union_done } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_mandate_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.10 days = 1 } }
+		hidden_effect = { HSM_AET_finish_mandate = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_household
+	icon = GFX_HSM_AET_household
+	prerequisite = { focus = HSM_AET_mandate }
+	x = 56
+	y = 5
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_regency_tt HSM_AET_regency = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_mandate_done_tt has_country_flag = HSM_AET_mandate_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_household_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.11 days = 1 } }
+		hidden_effect = { HSM_AET_finish_household = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_AET_court_accounts
+	icon = GFX_HSM_AET_court_accounts
+	prerequisite = { focus = HSM_AET_mandate }
+	x = 60
+	y = 5
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_regency_tt HSM_AET_regency = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_mandate_done_tt has_country_flag = HSM_AET_mandate_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_court_accounts_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.12 days = 1 } }
+		hidden_effect = { HSM_AET_finish_court_accounts = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_service
+	icon = GFX_HSM_AET_service
+	prerequisite = { focus = HSM_AET_household }
+	prerequisite = { focus = HSM_AET_court_accounts }
+	x = 58
+	y = 6
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_regency_tt HSM_AET_regency = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_household_done_tt has_country_flag = HSM_AET_household_done }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_court_accounts_done_tt has_country_flag = HSM_AET_court_accounts_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_service_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.13 days = 1 } }
+		hidden_effect = { HSM_AET_finish_service = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+}
+
+shared_focus = {
+	id = HSM_AET_working_table
+	icon = GFX_HSM_AET_working_table
+	prerequisite = { focus = HSM_AET_service }
+	x = 58
+	y = 7
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_regency_tt HSM_AET_regency = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_service_done_tt has_country_flag = HSM_AET_service_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_working_table_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.14 days = 1 } }
+		hidden_effect = { HSM_AET_finish_working_table = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_prepare
+	icon = GFX_HSM_AET_prepare
+	prerequisite = { focus = HSM_AET_working_table }
+	prerequisite = { focus = HSM_AET_workshops }
+	prerequisite = { focus = HSM_AET_roads }
+	prerequisite = { focus = HSM_AET_scholars }
+	prerequisite = { focus = HSM_AET_demobilisation }
+	x = 58
+	y = 11
+	cost = 7
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_prepare_tt HSM_AET_can_prepare = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_judgement_done_tt has_country_flag = HSM_AET_judgement_done }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_working_table_done_tt has_country_flag = HSM_AET_working_table_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_prepare_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.16 days = 1 } }
+		hidden_effect = { HSM_AET_finish_prepare = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_obituary
+	icon = GFX_HSM_AET_obituary
+	prerequisite = { focus = HSM_AET_congress }
+	x = 70
+	y = 4
+	cost = 3
+	available = {
+		hidden_trigger = { HSM_AET_can_union = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_congress_tt HSM_AET_active = yes HSM_AET_legitimate = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_peace_tt has_war = no }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_capital_held_tt 382 = { is_owned_and_controlled_by = PREV } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_empire_absent_tt GRI = { exists = no } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_union_tt has_global_flag = GRI_grover_vi_dead }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_settlement_unfinished_tt NOT = { has_country_flag = HSM_AET_completed } }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_obituary_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.20 days = 1 } }
+		hidden_effect = { HSM_AET_finish_obituary = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_interim
+	icon = GFX_HSM_AET_interim
+	prerequisite = { focus = HSM_AET_obituary }
+	x = 70
+	y = 5
+	cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_work_tt HSM_AET_union_work = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_obituary_done_tt has_country_flag = HSM_AET_obituary_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_interim_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.21 days = 1 } }
+		hidden_effect = { HSM_AET_finish_interim = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_delegates
+	icon = GFX_HSM_AET_delegates
+	prerequisite = { focus = HSM_AET_interim }
+	x = 70
+	y = 6
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_work_tt HSM_AET_union_work = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_interim_done_tt has_country_flag = HSM_AET_interim_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_delegates_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.22 days = 1 } }
+		hidden_effect = { HSM_AET_finish_delegates = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_union
+	icon = GFX_HSM_AET_union
+	prerequisite = { focus = HSM_AET_delegates }
+	x = 70
+	y = 7
+	cost = 7
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_work_tt HSM_AET_union_work = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_delegates_done_tt has_country_flag = HSM_AET_delegates_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_union_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.23 days = 1 } }
+		hidden_effect = { HSM_AET_finish_union = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_revenues
+	icon = GFX_HSM_AET_revenues
+	prerequisite = { focus = HSM_AET_union }
+	x = 70
+	y = 8
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_work_tt HSM_AET_union_work = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_done_tt has_country_flag = HSM_AET_union_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_revenues_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.24 days = 1 } }
+		hidden_effect = { HSM_AET_finish_revenues = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_succession
+	icon = GFX_HSM_AET_succession
+	prerequisite = { focus = HSM_AET_revenues }
+	x = 70
+	y = 9
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_union_work_tt HSM_AET_union_work = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_revenues_done_tt has_country_flag = HSM_AET_revenues_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_succession_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.25 days = 1 } }
+		hidden_effect = { HSM_AET_finish_succession = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_winter
+	icon = GFX_HSM_AET_winter
+	prerequisite = { focus = HSM_AET_succession }
+	prerequisite = { focus = HSM_AET_workshops }
+	prerequisite = { focus = HSM_AET_roads }
+	prerequisite = { focus = HSM_AET_scholars }
+	prerequisite = { focus = HSM_AET_demobilisation }
+	x = 70
+	y = 11
+	cost = 7
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_finish_union_tt HSM_AET_can_finish_union = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_succession_done_tt has_country_flag = HSM_AET_succession_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 40 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_winter_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.26 days = 1 } }
+		hidden_effect = { HSM_AET_finish_winter = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_workshops
+	icon = GFX_HSM_AET_workshops
+	prerequisite = { focus = HSM_AET_congress }
+	x = 63
+	y = 5
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 30 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_workshops_effect_tt
+		if = {
+			limit = {
+				hidden_trigger = {
+					any_owned_state = {
+						is_core_of = AET
+						is_fully_controlled_by = PREV
+						OR = { state = 495 state = 496 }
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+				}
+			}
+			effect_tooltip = {
+				random_owned_state = {
+					limit = {
+						is_core_of = AET
+						is_fully_controlled_by = PREV
+						OR = { state = 495 state = 496 }
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+		}
+		else = {
+			effect_tooltip = {
+				add_tech_bonus = { name = HSM_AET_workshops bonus = 1 uses = 1 category = industry }
+			}
+		}
+		hidden_effect = { HSM_AET_finish_workshops = yes }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_AET_roads
+	icon = GFX_HSM_AET_roads
+	prerequisite = { focus = HSM_AET_congress }
+	x = 65
+	y = 5
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 30 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_roads_effect_tt
+		effect_tooltip = {
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					OR = { state = 495 state = 496 state = 382 }
+					infrastructure < 5
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		hidden_effect = { HSM_AET_finish_roads = yes }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = HSM_AET_scholars
+	icon = GFX_HSM_AET_scholars
+	prerequisite = { focus = HSM_AET_workshops }
+	x = 63
+	y = 7
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 30 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_scholars_effect_tt
+		effect_tooltip = {
+			add_tech_bonus = { name = HSM_AET_scholars bonus = 1 uses = 2 category = electronics }
+			decrease_illiteracy = yes
+		}
+		hidden_effect = { HSM_AET_finish_scholars = yes }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = HSM_AET_demobilisation
+	icon = GFX_HSM_AET_demobilisation
+	prerequisite = { focus = HSM_AET_roads }
+	x = 65
+	y = 7
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_active_tt HSM_AET_active = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_congress_done_tt has_country_flag = HSM_AET_congress_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 30 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_demobilisation_effect_tt
+		effect_tooltip = {
+			army_experience = 50
+			decrease_poverty = yes
+		}
+		hidden_effect = { HSM_AET_finish_demobilisation = yes }
+	}
+	search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = HSM_AET_letters
+	icon = GFX_HSM_AET_letters
+	x = 76
+	y = 0
+	cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_crisis_tt HSM_AET_crisis = yes }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 200 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_letters_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.30 days = 1 } }
+		hidden_effect = { HSM_AET_finish_letters = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_audience
+	icon = GFX_HSM_AET_audience
+	prerequisite = { focus = HSM_AET_letters }
+	x = 76
+	y = 1
+	cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_crisis_tt HSM_AET_crisis = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_letters_done_tt has_country_flag = HSM_AET_letters_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 200 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_audience_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.31 days = 1 } }
+		hidden_effect = { HSM_AET_finish_audience = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_hearing
+	icon = GFX_HSM_AET_hearing
+	prerequisite = { focus = HSM_AET_audience }
+	x = 76
+	y = 2
+	cost = 5
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_hear_tt HSM_AET_can_hear = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_audience_done_tt has_country_flag = HSM_AET_audience_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 200 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_hearing_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.32 days = 1 } }
+		hidden_effect = { HSM_AET_finish_hearing = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = HSM_AET_signature
+	icon = GFX_HSM_AET_signature
+	prerequisite = { focus = HSM_AET_hearing }
+	x = 76
+	y = 3
+	cost = 3
+	available = {
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_can_sign_tt HSM_AET_can_sign = yes }
+		custom_trigger_tooltip = { tooltip = HSM_AET_focus_hearing_done_tt has_country_flag = HSM_AET_hearing_done }
+	}
+	cancel_if_invalid = yes
+	ai_will_do = { factor = 200 }
+	completion_reward = {
+		custom_effect_tooltip = HSM_AET_focus_signature_effect_tt
+		effect_tooltip = { country_event = { id = HSM_AET.33 days = 1 } }
+		hidden_effect = { HSM_AET_finish_signature = yes }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}

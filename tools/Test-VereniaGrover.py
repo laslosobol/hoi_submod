@@ -1050,6 +1050,23 @@ def without_native_guards(nodes):
 
 
 class NativeProtection(Fixtures):
+    def test_real_greifwald_guard_is_loaded_and_absent_country_does_not_protect(self):
+        w = self.world()
+        self.assertIn("HSM_AET_protected_household", w.triggers)
+        self.assertFalse(w.countries["AET"].exists)
+        self.assertFalse(w.test("HSM_AET_protected_household", "ERI"))
+        aet = w.countries["AET"]
+        aet.exists = True
+        aet.leader = "AET_count_cloudet"
+        aet.focuses.add("AET_realpolitik")
+        aet.flags.add("HSM_AET_started")
+        w.countries["GRI"].characters.discard(GROVER)
+        aet.characters.add(GROVER)
+        self.assertTrue(w.test("HSM_AET_protected_household", "ERI"))
+        self.assertFalse(w.test(P + "native_household_allowed", "CYA"))
+        aet.characters.clear()
+        self.assertTrue(w.test(P + "native_household_allowed", "CYA"))
+
     def native_events(self, path):
         return {n.get("id"): n for n in read(MOD / path) if n.key == "country_event"}
 

@@ -1,0 +1,361 @@
+{
+  "tag": "JEB",
+  "routes": [
+    {
+      "id": "JEB_royal",
+      "title": [
+        "Michel's Loyalists",
+        "Лоялисты Мишеля"
+      ],
+      "native_hint": [
+        "Choose Michel's loyalist programme. Ratification requires the monarchist camp to prevail and the country to be at peace.",
+        "Выберите лоялистскую программу Мишеля. Её утверждение требует победы монархистов и мира в стране."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Protect the Streets",
+            "Защитить улицы"
+          ],
+          "desc": [
+            "The royalists have held Rila, but the shutters still close when a patrol approaches. Michel watches a shopkeeper wait for the soldiers to pass before opening his door. The duke will bring their captains together and ask what victory has changed for that family. Service to the crown must now mean more than finding another enemy in the street.",
+            "Роялисты удержали Рилу, но при появлении патруля ставни по-прежнему захлопываются. Мишель наблюдает, как лавочник ждёт ухода солдат, прежде чем открыть дверь. Герцог соберёт капитанов и спросит, что победа изменила для этой семьи. Теперь служба короне должна означать нечто большее, чем поиски очередного врага на улице, где жители наконец хотят вернуться к обычной жизни."
+          ]
+        },
+        {
+          "title": [
+            "Hear the Moderates",
+            "Выслушать умеренных"
+          ],
+          "desc": [
+            "The palace chairs are being uncovered for guests who stayed away throughout the fighting. Several courtiers object to inviting critics so soon after a royal victory. Michel asks whether they intend to govern Rila without hearing it. A crown that has survived the revolution still needs people willing to speak honestly beneath its roof, including those who wanted it reformed.",
+            "Во дворце снимают чехлы с кресел для гостей, не приходивших сюда во время боёв. Некоторые придворные возражают против приглашения критиков сразу после победы роялистов. Мишель спрашивает, собираются ли они управлять Рилой, не выслушав её жителей. Короне, пережившей революцию, нужны люди, готовые говорить правду под её крышей, в том числе и сторонники давно назревших реформ."
+          ]
+        },
+        {
+          "title": [
+            "Bound Emergency Powers",
+            "Ограничить чрезвычайную власть"
+          ],
+          "desc": [
+            "On Michel's desk lie wartime orders whose authors can scarcely explain the powers they granted. The captains want clear instructions; the magistrates want an end to searches without warrants. Settling their dispute will give Rila a government fit for peace. Michel intends its work to strengthen the Discret crown, beginning with subjects who can trust the next royal signature.",
+            "На столе Мишеля лежат военные приказы, составители которых затрудняются объяснить предоставленные полномочия. Капитаны требуют ясных распоряжений, судьи — прекращения обысков без ордера. Разрешив этот спор, Рила получит управление, пригодное для мирной жизни. Мишель намерен укрепить корону Дискретов делами своего правительства, начиная с доверия подданных к следующей королевской подписи под решением, касающимся их домов."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Orders on Michel's Desk",
+          "Приказы на столе Мишеля"
+        ],
+        "desc": [
+          "Michel places a confiscated schoolbook beside the reports of the last fighting. Its owner was arrested for a margin full of arguments about royal authority. The captain responsible insists that hesitation would have cost lives. Across the table, a magistrate asks which sentence in the book gave the order to shoot.\n\nThe duke has heard both arguments before, often from friends. Now the war is over and the decision will carry his seal. He can make emergency orders answerable to local courts, or retain a single executive command responsible directly to him. Either course will disappoint men who believed victory had settled the matter.",
+          "Мишель кладёт рядом со сводками последних боёв конфискованный учебник. Его владельца арестовали за заметки на полях, посвящённые королевской власти. Ответственный капитан настаивает, что промедление стоило бы жизней. Сидящий напротив судья спрашивает, какая именно фраза в книге приказывала стрелять.\n\nГерцог уже слышал эти доводы, нередко от друзей. Но теперь война окончена, а решение скрепят его печатью. Можно подчинить чрезвычайные распоряжения проверке местных судов. Можно сохранить единое исполнительное командование, отвечающее перед самим Мишелем. Выбор разочарует тех, кто считал, что победа уже разрешила спор. Герцог поворачивает учебник к себе и ещё раз читает подчёркнутую строку."
+        ],
+        "a": [
+          "Let the courts hear the complaints.",
+          "Пусть суды рассмотрят жалобы."
+        ],
+        "b": [
+          "The captains will answer directly to me.",
+          "Капитаны будут отвечать непосредственно передо мной."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "A Crown's New Responsibility",
+          "Новая ответственность короны"
+        ],
+        "a_desc": [
+          "Rila's charter has travelled with its delegates to the national assembly. Entrusted with a mandate for the reunited country, Michel opens it before him. A delegate asks whether its protections will travel beyond the duke's former borders. Michel invites her to mark the passage she wants preserved.\n\nThe clerks will need another clean copy. For once, nobody suggests that a royal signature should spare them the trouble. The government taking shape around the table must hear complaints from places Michel has never visited.",
+          "Рильская хартия прибыла в общегосударственное собрание вместе с делегатами провинции. Получив мандат говорить от имени вновь объединённой страны, Мишель раскрывает её перед собой. Делегатка спрашивает, будут ли её гарантии действовать за прежними границами герцогства. Мишель предлагает ей отметить нужный пункт.\n\nПисцам потребуется ещё один чистовик. На этот раз никто не предлагает обойтись королевской подписью без обсуждения. Правительству за столом предстоит выслушивать жалобы из мест, где Мишель никогда не бывал. Перед выходом делегатка забирает черновик: дома ей придётся объяснить каждое исправление."
+        ],
+        "b_desc": [
+          "The habits Michel learned governing Rila now face the demands of an entire country. Provincial representatives have entrusted Michel with a national mandate, and his first cabinet meets over a map stained by spilled tea. Couriers need roads reopened; commanders need to know whose orders bind them.\n\nMichel draws a line through a request for indefinite emergency powers. His government will issue one set of instructions, but every minister must sign the orders for which he answers. The court discovers that proximity to the duke also brings responsibility.",
+          "Опыт управления Рилой теперь предстоит применить к нуждам целой страны. Представители провинций доверили Мишелю общегосударственный мандат, и его первый кабинет собирается над картой, залитой чаем. Курьерам нужны открытые дороги, командирам необходимо знать, чьи распоряжения обязательны.\n\nМишель вычёркивает просьбу о бессрочных чрезвычайных полномочиях. Правительство будет отдавать согласованные приказы, но каждый министр подпишет те, за которые отвечает лично. Придворные обнаруживают, что близость к герцогу приносит обязанности. Когда заседание заканчивается, один из них остаётся проверять список задержанных обозов: теперь жалобы возчиков поступают прямо к нему."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Boundary and the Seal",
+          "Граница и печать"
+        ],
+        "a_desc": [
+          "The settlement concerns the Herzland territory presently in our hands. Border districts join Aquileia, while the remaining holdings pass to a dependent government. At the first hearing, a village representative produces two tax demands carrying different seals. He wants to know which authority will answer when both collectors return.\n\nMichel's commissioner sits down beside the interpreter. Local courts must be able to hear disputes arising from the new boundary, and the dependent government must have room to settle its own affairs. The document remains unsigned until the village receives an intelligible answer.",
+          "Урегулирование касается тех земель Герцланда, которые сейчас находятся в наших руках. Пограничные округа входят в Аквелию, остальные владения передаются зависимому правительству. На первом слушании сельский представитель предъявляет два налоговых требования с разными печатями. Он хочет знать, к кому обращаться, когда вернутся оба сборщика.\n\nУполномоченный Мишеля садится рядом с переводчиком. Местные суды должны рассматривать споры о новой границе, а зависимому правительству необходимо пространство для собственных решений. Документ остаётся неподписанным, пока деревня не получит понятного ответа. Представитель терпеливо ждёт, положив оба требования на край стола."
+        ],
+        "b_desc": [
+          "A courier brings Michel the proposed division of the Herzland lands under our control. The border districts will be administered by Aquileia; the remaining holdings will support a dependent government. Beside the map lies a request to let every garrison negotiate its own arrangements with neighbouring towns.\n\nMichel refuses that convenience. The cabinet must issue common instructions and name the officers responsible for carrying them out. Local petitions will reach those officers through an interpreter, rather than being passed from one headquarters to another. The new frontier needs an authority that can give a definite answer.",
+          "Курьер доставляет Мишелю проект раздела земель Герцланда под нашим контролем. Пограничными округами будет управлять Аквелия, остальные владения составят территорию зависимого государства. Рядом с картой лежит просьба разрешить каждому гарнизону самостоятельно договариваться с соседними городами.\n\nМишель отклоняет это удобное решение. Кабинет должен дать общие указания и назначить отвечающих за них офицеров. Прошения местных жителей будут поступать к этим офицерам через переводчика, а не путешествовать между штабами. Новой границе нужна власть, способная дать определённый ответ. Герцог возвращает карту курьеру только после того, как на ней появляются имена ответственных."
+        ]
+      }
+    },
+    {
+      "id": "JEB_constitutional",
+      "title": [
+        "Michel's Constitutional Settlement",
+        "Конституционный договор Мишеля"
+      ],
+      "native_hint": [
+        "Choose a constitutional settlement within Rila's revolutionary camp. Ratification requires revolutionary victory and peace.",
+        "Выберите конституционное соглашение в революционном лагере Рилы. Его утверждение требует победы революции и мира."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Convene Court and Clubs",
+            "Собрать двор и клубы"
+          ],
+          "desc": [
+            "Michel fled when the revolution took Rila. Now the fighting has ended, his former allies propose inviting him back to negotiate with the victorious clubs. Their letter offers safe passage, not the restoration of his old powers. If he accepts, the first meeting will be in a borrowed hall, where the delegates who authorised his return can question him.",
+            "Когда революция победила в Риле, Мишель бежал. Теперь бои закончились, и прежние союзники предлагают пригласить его на переговоры с победившими клубами. Письмо обещает безопасное возвращение, но не восстановление прежней власти. Если герцог согласится, первая встреча пройдёт в предоставленном для неё зале, где делегаты, разрешившие его приезд, смогут задать вопросы без придворных церемоний."
+          ]
+        },
+        {
+          "title": [
+            "Recognise the Assembly",
+            "Признать собрание"
+          ],
+          "desc": [
+            "Michel returns with the clubs' letter folded inside his coat. On the table lies a charter giving the elected assembly authority to reject ministerial proposals. His former secretary reaches for a clean copy, but Michel asks to read the corrections first. The invitation ended his exile; only an agreement with the assembly can give him a place in Rila's government.",
+            "Мишель возвращается с письмом клубов во внутреннем кармане. На столе лежит хартия, позволяющая выборному собранию отклонять предложения министров. Прежний секретарь тянется за чистым экземпляром, но герцог просит сначала прочесть поправки. Приглашение положило конец изгнанию; лишь соглашение с собранием может дать ему место в правительстве Рилы, и подпись под ним теперь не заменяет согласия остальных."
+          ]
+        },
+        {
+          "title": [
+            "A Responsible Ministry",
+            "Ответственное министерство"
+          ],
+          "desc": [
+            "The charter negotiated since Michel's return still leaves one question unsettled: what may ministers do between meetings of the assembly? Delegates bring examples from the first weeks of peace, when delayed decisions left petitions unanswered. Their agreement must work in Rila before its advocates can present it to Aquileia. Michel will have to earn that wider hearing alongside them.",
+            "В хартии, обсуждаемой после возвращения Мишеля, остаётся открытым вопрос: что вправе делать министры между заседаниями собрания? Делегаты приводят примеры первых мирных недель, когда промедление оставляло прошения без ответа. Соглашение должно доказать свою пригодность в Риле, прежде чем его сторонники представят проект всей Аквелии. Мишелю предстоит вместе с ними заслужить право быть выслушанным за пределами герцогства."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Chair Left Empty",
+          "Незанятое кресло"
+        ],
+        "desc": [
+          "The chair reserved for Michel stands beside the delegates' benches. He leaves it empty while a printer reads the proposed oath aloud. A minister would be obliged to explain a disputed order before the assembly, but the draft says little about what happens while that explanation is awaited.\n\nA veteran of the clubs wants local representatives to suspend contested measures until a hearing. Another delegate recalls a supply train held up while three committees exchanged letters. She proposes a cabinet able to act promptly, with ministers facing questioning afterwards. Michel asks for the final wording. He will sign a constitution that can inconvenience its government, provided everyone understands how it works.",
+          "Кресло, отведённое Мишелю, стоит рядом со скамьями делегатов. Герцог остаётся на ногах, пока печатник читает проект присяги. Министр обязан объяснить спорное распоряжение собранию, однако в тексте почти ничего не сказано о времени до этих объяснений.\n\nВетеран клубов предлагает дать местным представителям право приостанавливать спорные меры до слушания. Другая делегатка вспоминает поезд с припасами, задержанный перепиской трёх комитетов. Она выступает за кабинет, способный действовать сразу, а затем отвечать на вопросы депутатов. Мишель просит подготовить окончательную формулировку. Он готов подписать конституцию, которая будет доставлять неудобства правительству, если каждый участник соглашения понимает, как именно она действует."
+        ],
+        "a": [
+          "Give the representatives an effective right of review.",
+          "Дать представителям действенное право пересмотра."
+        ],
+        "b": [
+          "Let the cabinet act, then answer to the assembly.",
+          "Пусть кабинет действует, а затем отвечает собранию."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Charter Travels",
+          "Хартия выходит за пределы Рилы"
+        ],
+        "a_desc": [
+          "Delegates from the reunited Aquileia arrive carrying their own amendments to Rila's charter. Michel cannot settle their claims by invoking his ducal title; the national assembly must decide what place a crown will have in the new order. He takes a seat while a provincial speaker challenges the draft before them.\n\nThe dispute lasts well into the evening. When the lamps are lit, the visitors are still arguing, and nobody has ordered the doors closed. The agreement that once restrained one duke is becoming a promise made between provinces.",
+          "Делегаты объединённой Аквелии привозят собственные поправки к рильской хартии. Мишель не может разрешить их спор ссылкой на герцогский титул: место короны в новом устройстве должно определить общегосударственное собрание. Он занимает кресло, пока представитель провинции оспаривает лежащий перед депутатами проект.\n\nПрения затягиваются до вечера. Когда зажигают лампы, приезжие всё ещё спорят, и никто не приказывает закрыть двери. Соглашение, прежде ограничивавшее одного герцога, становится обещанием провинций друг другу. Мишель передаёт секретарю записку с просьбой принести ещё бумаги. Его собственной речи придётся подождать до следующего заседания."
+        ],
+        "b_desc": [
+          "The new Aquileian cabinet inherits Rila's habit of acting first and defending its decisions before the assembly afterwards. Its first railway order crosses several provincial boundaries and brings an angry delegation to the chamber. Michel sits through their questions alongside the ministers who signed it.\n\nHis ducal title has not settled the national crown's position; that remains the assembly's decision. For today, the argument concerns freight wagons. A constitution proves its strength in such ordinary disputes, when an executive accustomed to giving orders must remain in the room for the answers.",
+          "Новый аквелийский кабинет наследует рильский порядок: сначала действовать, затем защищать решение перед собранием. Первое распоряжение о железных дорогах затрагивает несколько провинций и приводит в зал разгневанную делегацию. Мишель выслушивает её вопросы рядом с министрами, подписавшими приказ.\n\nЕго герцогский титул не определяет положение общегосударственной короны: это по-прежнему предстоит решить собранию. Сегодня же спор идёт о товарных вагонах. Прочность конституции проверяется в подобных будничных столкновениях, когда исполнительная власть должна оставаться в зале и отвечать. Министр уже встал, но, заметив взгляд Мишеля, снова садится и раскрывает свои бумаги."
+        ]
+      },
+      "border": {
+        "title": [
+          "A Charter Across the Boundary",
+          "Хартия по обе стороны границы"
+        ],
+        "a_desc": [
+          "The Herzland settlement divides only the territory now held by our country. Aquileia takes responsibility for the border districts, and the remaining holdings receive a dependent government. Its delegates arrive with a demand familiar to Michel: no agreement should leave their assembly with nothing to discuss but orders already issued elsewhere.\n\nThe negotiating table soon fills with amended pages. Rila's experience gives the Aquileian representatives little excuse to object to every correction. The dependent government's powers must be written clearly, and the incorporated districts must have a voice in the state they have joined.",
+          "Герцландское урегулирование разделяет только земли, которыми сейчас владеет наша страна. Аквелия принимает пограничные округа, остальные владения получают зависимое правительство. Его делегаты приезжают со знакомым Мишелю требованием: соглашение не должно оставлять местному собранию лишь обсуждение приказов, уже изданных в чужой столице.\n\nСтол вскоре покрывается исправленными страницами. Опыт Рилы не даёт аквелийским представителям убедительных оснований отвергать каждую поправку. Полномочия зависимого правительства необходимо изложить ясно, а присоединённым округам предоставить голос в новой стране. Один из делегатов узнаёт формулировку из рильской хартии и просит прочитать её вслух до конца."
+        ],
+        "b_desc": [
+          "The cabinet lays the division of our Herzland holdings before the assembly. It proposes a common administration for the border districts joining Aquileia and a dependent government for the remaining territory. Trains and customs posts cannot wait for every disputed clause, the responsible minister argues.\n\nThe deputies allow the work to proceed, then demand his return with the agreements signed locally. Michel watches the minister mark the date in his notebook. Executive freedom has a familiar companion: the obligation to explain what was done with it to representatives who were absent when the order went out.",
+          "Кабинет представляет собранию раздел наших герцландских владений. Он предлагает общее управление пограничными округами, входящими в Аквелию, и зависимое правительство на оставшейся территории. Ответственный министр объясняет, что поезда и таможенные посты не могут ждать разрешения каждого спора о формулировках.\n\nДепутаты разрешают приступить к работе, затем требуют его возвращения с соглашениями, подписанными на местах. Мишель смотрит, как министр записывает дату в блокнот. Свободу исполнительной власти сопровождает знакомая обязанность: объяснять свои действия представителям, которых не было рядом при издании приказа. Для этого заседания секретарь заранее заказывает переводчика."
+        ]
+      }
+    },
+    {
+      "id": "JEB_moderate",
+      "title": [
+        "The Moderate Clubs",
+        "Умеренные клубы"
+      ],
+      "native_hint": [
+        "Choose the moderate clubs' programme. Ratification requires Rila's revolutionary camp to prevail and the country to be at peace.",
+        "Выберите программу умеренных клубов. Её утверждение требует победы революционного лагеря Рилы и мира в стране."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Form the Common Committee",
+            "Создать общий комитет"
+          ],
+          "desc": [
+            "The clubs won the streets together; their messengers now arrive at three different offices with the same petition. A widow has followed one of them all morning, trying to discover who can answer her. The moderates will bring the offices together. Before joining the arguments over Aquileia's future, they should be able to give one neighbour a reliable address.",
+            "Клубы вместе отвоевали улицы, но теперь их посыльные разносят одно прошение по трём разным конторам. Вдова всё утро следует за одним из них, пытаясь узнать, кто вправе ей ответить. Умеренные объединят приёмные. Прежде чем участвовать в спорах о будущем Аквелии, им стоит дать хотя бы одной соседке адрес, по которому её действительно выслушают."
+          ]
+        },
+        {
+          "title": [
+            "Safeguard the Ballot",
+            "Защитить голосование"
+          ],
+          "desc": [
+            "The printer has begun the ballot papers, but an armed veteran insists on watching every sheet leave the press. He calls it protection. The moderates remember how readily that word became an excuse before the revolution. They will find observers trusted outside the clubs and ask the veteran to leave his rifle elsewhere when he comes to cast his vote.",
+            "Печатник уже готовит бюллетени, однако вооружённый ветеран требует следить за каждым листом, выходящим из станка. Он называет это защитой. Умеренные помнят, как охотно этим словом оправдывали произвол до революции. Они найдут наблюдателей, которым доверяют за пределами клубов, а ветерана попросят оставить винтовку в другом месте, когда он придёт голосовать вместе с остальными жителями."
+          ]
+        },
+        {
+          "title": [
+            "Amnesty Through Courts",
+            "Амнистия через суд"
+          ],
+          "desc": [
+            "The committee's waiting room remains full long after the fighting. Families seek prisoners; former enemies offer to surrender weapons; witnesses name those responsible for killings. The moderates must distinguish political defeat from a charge that belongs before a court. When their delegates join the national republican movement, this record will matter more than another speech about the rule of law.",
+            "Приёмная комитета остаётся переполненной и после окончания боёв. Семьи разыскивают заключённых, бывшие противники предлагают сдать оружие, свидетели называют виновников убийств. Умеренным предстоит отличить политическое поражение от обвинения, которое должен рассмотреть суд. Когда их делегаты присоединятся к общему республиканскому движению, эти дела будут значить больше очередной речи о законности и покажут, чего стоят обещания клубов."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Name Beneath the Accusation",
+          "Имя под обвинением"
+        ],
+        "desc": [
+          "A clerk has placed two petitions in the same folder. One demands the release of a detained royalist; the other accuses him of ordering a neighbour's death. The committee member reading them recognises both signatures. He fought beside one petitioner and borrowed a printing press from the other.\n\nThe clubs cannot keep settling such cases through friendship or applause. Some delegates want local courts and elected committees to examine complaints in public. Others propose a common executive with the means to investigate quickly and apply the same rules throughout Rila. Both promise trials. The argument is over who may begin acting before the whole committee has heard the evidence.",
+          "Писарь вложил в одну папку два прошения. В первом требуют освободить задержанного роялиста, во втором обвиняют его в приказе убить соседа. Член комитета узнаёт обе подписи. С одним просителем он сражался рядом, у другого одалживал печатный станок.\n\nКлубы больше не могут решать такие дела по дружбе или громкости одобрительных возгласов. Часть делегатов предлагает открытое рассмотрение жалоб местными судами и выборными комитетами. Другие требуют общего исполнительного органа, способного быстро расследовать дела и применять одинаковые правила по всей Риле. Обе стороны обещают судебное разбирательство. Спор идёт о том, кто вправе начать действовать прежде, чем весь комитет заслушает доказательства."
+        ],
+        "a": [
+          "Let local hearings establish the facts.",
+          "Пусть местные слушания установят факты."
+        ],
+        "b": [
+          "Give the common executive authority to investigate.",
+          "Дать общему исполнительному органу полномочия для расследования."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Opposition Takes Its Seat",
+          "Оппозиция занимает места"
+        ],
+        "a_desc": [
+          "The first assembly of reunited Aquileia contains speakers who opposed the clubs throughout the revolution. One asks for the floor and receives it, to the audible displeasure of several veterans. His complaint concerns a provincial newspaper whose editor has been threatened for criticising the new government.\n\nThe chair calls the responsible delegate forward. Victory has given the clubs a larger country to govern, and far more people who will disagree with them. By the end of the hearing, the visitors know where to bring a complaint. The veterans know that the hearing will not always be comfortable.",
+          "В первом собрании объединённой Аквелии заседают те, кто спорил с клубами на протяжении всей революции. Один из них просит слова и получает его к явному недовольству нескольких ветеранов. Он рассказывает о провинциальной газете, редактору которой угрожают за критику нового правительства.\n\nПредседатель вызывает ответственного делегата. Победа дала клубам большую страну и множество граждан, готовых с ними спорить. К концу слушания приезжие понимают, куда обращаться с жалобами. Ветераны узнают, что такие заседания не всегда будут приятными. Газетчик тем временем записывает ответ, который собирается напечатать полностью."
+        ],
+        "b_desc": [
+          "Aquileia's common executive receives its first demand for a coordinated reopening of the provincial railways. It issues the order before the assembly has finished debating the timetable. Within days, an opposition newspaper calls the decision an insult to the towns whose freight has been left waiting.\n\nThe minister arrives at the next sitting with the dispatch book under his arm. The government has chosen to act decisively, and must now defend the priorities it imposed. The clubs have neither dissolved the opposition nor promised to agree with it. They have given it someone who must answer.",
+          "Общий исполнительный орган Аквелии получает первое требование согласованно открыть провинциальные железные дороги. Приказ выходит прежде, чем собрание заканчивает обсуждать расписание. Через несколько дней оппозиционная газета называет решение оскорблением городов, чьи грузы остались ждать.\n\nМинистр приходит на следующее заседание с журналом отправленных распоряжений. Правительство выбрало решительные действия и теперь должно защищать установленные приоритеты. Клубы не распустили оппозицию и не обещали соглашаться с ней. Они дали ей того, кто обязан отвечать. Редактор занимает место у прохода, чтобы хорошо слышать, и раскрывает блокнот на чистой странице."
+        ]
+      },
+      "border": {
+        "title": [
+          "A Hearing at the Customs House",
+          "Слушание на таможне"
+        ],
+        "a_desc": [
+          "The new boundary divides the Herzland territory held by Aquileia between incorporated border districts and a dependent republic. At a customs house, a council from one of the districts asks whether its school may keep teaching in the language the children speak at home.\n\nThe Aquileian delegates have spent years demanding a voice for provinces. They invite the council to record its objections and bring representatives from the dependent republic into the discussion. Agreement will require more than translating a proclamation. The people affected must be able to change what the document says.",
+          "Новая граница разделяет герцландские земли во владении Аквелии между присоединёнными пограничными округами и зависимой республикой. На таможне совет одного из округов спрашивает, сможет ли школа продолжать обучение на языке, на котором дети говорят дома.\n\nАквелийские делегаты годами требовали голоса для провинций. Они предлагают совету изложить возражения и приглашают представителей зависимой республики к обсуждению. Для соглашения недостаточно перевести воззвание. Жители должны получить возможность изменить сам текст. Учительница просит оставить ей копию проекта: вечером её будут читать родители учеников, ещё не уверенные, что их действительно готовы выслушать."
+        ],
+        "b_desc": [
+          "The executive orders a single procedure for administering the Herzland border districts now joining Aquileia. The remaining lands under our control are assigned to a dependent republic. Its officials arrive at the frontier to find three different instructions on the movement of food carts.\n\nAn Aquileian commissioner withdraws the contradictory orders and gives both administrations a common timetable. Complaints will go to a named office, with written decisions open to challenge. The moderate clubs have chosen coordination over a separate negotiation at every crossing. They still owe the travellers an explanation they can understand.",
+          "Исполнительный орган устанавливает единый порядок управления герцландскими пограничными округами, входящими в Аквелию. Оставшиеся земли под нашим контролем передаются зависимой республике. Её служащие прибывают на границу и обнаруживают три разных распоряжения о проезде продовольственных телег.\n\nАквелийский комиссар отзывает противоречащие приказы и выдаёт обеим администрациям общее расписание. Жалобы будут поступать в определённое учреждение, а письменные решения можно оспорить. Умеренные клубы предпочли координацию отдельным переговорам у каждого переезда. Но путникам по-прежнему полагается понятное объяснение. Комиссар выходит к ожидающим возчикам с переводчиком и исправленным расписанием в руках."
+        ]
+      }
+    },
+    {
+      "id": "JEB_cocardiers",
+      "title": [
+        "The Cocardiers",
+        "Кокардьеры"
+      ],
+      "native_hint": [
+        "Choose the Cocardiers' revolutionary programme. Ratification requires revolutionary victory and peace in Rila.",
+        "Выберите революционную программу кокардьеров. Её утверждение требует победы революции и мира в Риле."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Establish the Emergency Committee",
+            "Создать чрезвычайный комитет"
+          ],
+          "desc": [
+            "Victory has left the Cocardiers with a committee built to receive warnings before dawn. Its messengers still hurry through Rila, although the barricades are coming down. The movement wants to defend the republic throughout Aquileia. First it must decide which emergency duties remain necessary here, and who can question an order issued in the name of a danger nobody else has seen.",
+            "После победы у кокардьеров остался комитет, привыкший получать тревожные донесения перед рассветом. Его посыльные всё ещё спешат по Риле, хотя баррикады уже разбирают. Движение намерено защищать республику по всей Аквелии. Сначала предстоит решить, какие чрезвычайные обязанности ещё нужны здесь и кто вправе оспорить приказ, отданный во имя опасности, которой больше никто не заметил."
+          ]
+        },
+        {
+          "title": [
+            "Convene Revolutionary Tribunals",
+            "Созвать революционные трибуналы"
+          ],
+          "desc": [
+            "An accusation left over from the fighting has reached a tribunal without a witness attached. The Cocardiers cannot promise Aquileia a republic secure against its enemies while letting an unsigned paper decide a neighbour's fate. They will gather the evidence and hear the defence. The courtroom must show what their revolutionary government means when the crowd outside demands an answer.",
+            "До трибунала дошло обвинение времён боёв, к которому не приложено ни одного свидетельства. Кокардьеры не могут обещать Аквелии защищённую республику, позволяя неподписанной бумаге решать судьбу соседа. Им предстоит собрать доказательства и выслушать защиту. Зал суда должен показать, что означает их революционная власть, когда толпа за дверями требует немедленного ответа и заранее уверена в виновности обвиняемого."
+          ]
+        },
+        {
+          "title": [
+            "Unite the Commands",
+            "Объединить командование"
+          ],
+          "desc": [
+            "Two orders have reached the same workshop, each bearing a different committee's seal. The Cocardiers will settle who speaks for their government and who answers when that voice is wrong. They intend to offer this programme to the whole republic. Rila must first show that a common executive can protect a victory without leaving its citizens permanently under siege.",
+            "В одну мастерскую пришли два приказа с печатями разных комитетов. Кокардьеры решат, кто говорит от имени их правительства и кто отвечает, когда это решение ошибочно. Они намерены предложить свою программу всей республике. Сначала Рила должна показать, что общее руководство способно защитить победу, не оставляя граждан навсегда в положении жителей осаждённого города."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "When the Barricade Comes Down",
+          "Когда разбирают баррикаду"
+        ],
+        "desc": [
+          "Outside the meeting hall, workers are carrying the last paving stones back into the street. Inside, a Cocardier speaker warns that the enemies of the republic have merely changed their coats. A delegate from a smaller club holds up an unsigned detention order. Her brother carried messages for the committee; now a guard has taken him away.\n\nNobody proposes returning power to the old court. The question is whether the committee will submit its orders to elected civilian scrutiny, or retain a stronger executive able to direct workshops and armed forces together. The speaker looks towards the window. The barricade protected this hall. It cannot remain across the street forever.",
+          "Перед залом заседаний рабочие возвращают на мостовую последние камни баррикады. Внутри оратор кокардьеров предупреждает, что враги республики лишь сменили одежду. Делегатка небольшого клуба поднимает неподписанный приказ о задержании. Её брат носил донесения для комитета, а теперь стража увела его неизвестно куда.\n\nНикто не предлагает вернуть власть старому двору. Спорят о том, должен ли комитет подчинить свои распоряжения контролю выборных гражданских представителей или сохранить сильную исполнительную власть, способную совместно направлять мастерские и вооружённые силы. Оратор смотрит в окно. Баррикада защищала этот зал, но не может навсегда перегородить улицу. Делегатка всё ещё стоит с поднятым листом, ожидая ответа."
+        ],
+        "a": [
+          "Bring the committee before elected representatives.",
+          "Поставить комитет перед выборными представителями."
+        ],
+        "b": [
+          "Keep a strong executive to defend the settlement.",
+          "Сохранить сильную исполнительную власть для защиты нового порядка."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Republic Beyond the Barricades",
+          "Республика за пределами баррикад"
+        ],
+        "a_desc": [
+          "The assembly of reunited Aquileia asks the revolutionary committee to surrender an authority it once exercised without question. Its delegates arrive with the original emergency orders tied in a bundle. Some regard the handover as a victory; others fear that men who never faced the old regime will waste what was won.\n\nA provincial deputy asks to inspect the bundle before making a speech. The committee agrees. The republic is extending equal law across its territories, and that law must reach the people who guarded its first meeting rooms as well.",
+          "Собрание объединённой Аквелии требует от революционного комитета передать полномочия, которыми тот прежде пользовался беспрепятственно. Делегаты приносят связку первоначальных чрезвычайных приказов. Одни считают передачу победой, другие опасаются, что люди, не сражавшиеся со старым режимом, растратят завоёванное.\n\nПровинциальный депутат просит изучить бумаги, прежде чем выступать с речью. Комитет соглашается. Республика распространяет равенство перед законом на свои земли, и этот закон должен касаться тех, кто охранял её первые собрания. Депутат развязывает бечёвку осторожно: несколько подписей ему знакомы, а одно из дел касается его родного города."
+        ],
+        "b_desc": [
+          "The committee's dispatch room now serves a reunited Aquileia. Factory representatives wait beside officers for decisions on the same crowded railway lines. A common executive can choose priorities quickly, and its members have grown accustomed to doing so. Beyond the doorway, former allies are asking when they will be invited to argue those priorities.\n\nThe chair orders another bench brought into the room. Keeping the committee's authority has not made every critic a monarchist. Its hardest task will be hearing a republican objection without treating the delay it causes as proof of treachery.",
+          "Теперь диспетчерская комитета обслуживает объединённую Аквелию. Представители заводов ждут рядом с офицерами решений о тех же перегруженных железных дорогах. Общая исполнительная власть быстро определяет приоритеты, и её участники уже привыкли к этому. За дверью прежние союзники спрашивают, когда им позволят обсуждать принятые решения.\n\nПредседатель велит принести ещё одну скамью. Сохранение власти комитета не превратило каждого критика в монархиста. Самым трудным будет выслушивать республиканские возражения, не принимая вызванную ими задержку за доказательство измены. Первым садится делегат клуба, который когда-то предоставил комитету свой единственный печатный станок."
+        ]
+      },
+      "border": {
+        "title": [
+          "Republicans Across the Table",
+          "Республиканцы напротив"
+        ],
+        "a_desc": [
+          "The division of our Herzland holdings brings local republicans to the negotiating table. Border districts are entering Aquileia; the remaining territory receives a dependent republic. One visitor says he fought his old rulers to stop distant officials deciding everything for his town. He recognises the language of our proclamations, and asks whether we recognise his claim.\n\nThe committee's civilian delegates leave space for amendments. Their own surrender of emergency powers would mean little if a neighbouring republic were allowed only to obey. The frontier agreement must give local representatives something they can defend before their towns.",
+          "Раздел наших герцландских владений приводит за стол переговоров местных республиканцев. Пограничные округа входят в Аквелию, оставшаяся территория получает зависимую республику. Один из гостей говорит, что боролся с прежними правителями, чтобы далёкие чиновники перестали решать всё за его город. Ему знаком язык наших воззваний. Теперь он спрашивает, признаём ли мы его требование.\n\nГражданские делегаты комитета оставляют место для поправок. Отказ от чрезвычайных полномочий мало значит, если соседней республике позволено лишь повиноваться. Пограничный договор должен дать местным представителям то, что они смогут защитить перед своими городами."
+        ],
+        "b_desc": [
+          "The executive considers the Herzland lands under our control a frontier that must be organised without competing commands. Border districts will join Aquileia, while the remaining holdings form a dependent republic. Its republican delegates accept the need for cooperation but object when an officer treats their council as another branch of his headquarters.\n\nThe committee must settle the dispute it has created. Shared security arrangements require a clear chain of responsibility, yet the dependent government needs room to govern. The officer is told to return with an agreement, not merely a copy of his orders.",
+          "Исполнительная власть считает земли Герцланда под нашим контролем рубежом, которому необходимо согласованное управление. Пограничные округа войдут в Аквелию, остальные владения образуют зависимую республику. Её делегаты признают необходимость сотрудничества, но возражают, когда офицер обращается с их советом как с отделом собственного штаба.\n\nКомитету предстоит разрешить созданный им спор. Общая безопасность требует ясной ответственности, однако зависимому правительству нужно пространство для управления. Офицеру поручают вернуться с соглашением, а не с копией собственных приказов. На следующее заседание он приносит карту, где впервые отмечены предложения местного совета."
+        ]
+      }
+    }
+  ]
+}

@@ -71,6 +71,7 @@ form_griffon_empire_category = {
 		NOT = { original_tag = EYR }
 	}
 	visible = {
+		NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 		NOT = { original_tag = ERI }
 		NOT = { original_tag = EYR }
 	}
@@ -109,6 +110,7 @@ form_aquileia_category = {
 		}
 	}
 	visible = {
+		NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 		NOT = { original_tag = ERI }
 		NOT = { original_tag = AVI }
 	}

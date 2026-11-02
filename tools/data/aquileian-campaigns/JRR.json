@@ -1,0 +1,1056 @@
+{
+  "tag": "JRR",
+  "foundations": [
+    {
+      "slot": "f1",
+      "title": [
+        "The March's Road Book",
+        "Дорожная книга марки"
+      ],
+      "desc": [
+        "Westkeep's military offices possess excellent maps of approaches to their barracks, yet a village carrier still discovers broken culverts by driving into them. Road keepers and postal clerks will assemble a common book of crossings, repair materials and dependable stopping places. Civilian journeys deserve a route that exists outside an officer's pencilled campaign plan.",
+        "В военных конторах Весткипа хранятся подробные карты подступов к казармам, однако сельский возчик по-прежнему узнаёт о разрушенном водостоке, провалившись в него колесом. Дорожные смотрители и почтовые служащие составят общую книгу переправ, ремонтных запасов и надёжных мест для ночлега. Для обычной поездки через марку нужен путь, который существует не только на полевой карте очередного офицера."
+      ],
+      "days": 35,
+      "reward": "pp50"
+    },
+    {
+      "slot": "f2",
+      "title": [
+        "A Passage for the Mail Cart",
+        "Проезд для почтовой повозки"
+      ],
+      "desc": [
+        "A military wagon can find helpers at the nearest garrison. The cart carrying letters, medicine and replacement millstones has no such privilege. The march's road crews will repair narrow crossings and mark places where heavy traffic must wait. Merchants and village carriers can then arrange their journeys around the seasons instead of yesterday's stranded convoy.",
+        "Военный фургон найдёт помощников в ближайшем гарнизоне. У повозки с письмами, лекарствами и запасными мельничными жерновами такой привилегии нет. Дорожные артели марки починят узкие переезды и обозначат места, где тяжёлым обозам следует уступать дорогу. Торговцы и сельские возчики смогут соразмерять поездки с временем года, а не с затором, который вчера оставила за собой чужая колонна."
+      ],
+      "days": 35,
+      "reward": "infrastructure"
+    },
+    {
+      "slot": "f3",
+      "title": [
+        "What the Armourers Can Mend",
+        "Что могут починить оружейники"
+      ],
+      "desc": [
+        "The march's armouries contain rifles whose labels describe their former owners more accurately than their ammunition. Armourers will sort serviceable weapons from salvage and collect scattered spare parts at working benches. The job requires patience, gauges and honest inventories. It gives the garrisons usable equipment without another officer discovering that his newest delivery cannot be fired.",
+        "В арсеналах марки лежат винтовки, на ярлыках которых прежние владельцы указаны точнее, чем подходящие патроны. Оружейники отделят пригодное оружие от лома и соберут разбросанные запасные части на рабочих верстаках. Для этого нужны терпение, мерные инструменты и честная опись. Гарнизоны получат исправное снаряжение, а следующему начальнику склада не придётся обнаруживать, что из только что доставленного оружия невозможно стрелять."
+      ],
+      "days": 35,
+      "reward": "rifles500"
+    },
+    {
+      "slot": "f4",
+      "title": [
+        "The Wagon Must Reach the Field",
+        "Обоз должен дойти до поля"
+      ],
+      "desc": [
+        "Westkeep has trained officers for wars far beyond its villages, but a polished map exercise cannot replace a loaded wagon on a muddy road. The military instructors will take clerks, drivers and runners into the field together. Their task is to deliver a practice consignment, report its arrival and discover which assumptions failed along the way.",
+        "Весткип готовил офицеров для войн далеко за пределами своих деревень, однако безупречное занятие над картой не заменяет гружёную повозку на размытой дороге. Военные инструкторы выведут в поле писарей, возчиков и связных вместе. Им предстоит доставить учебный груз, сообщить о его прибытии и выяснить, какие кабинетные расчёты не выдержали настоящего пути между складом и местом назначения."
+      ],
+      "days": 35,
+      "reward": "army_xp20"
+    }
+  ],
+  "routes": [
+    {
+      "id": "JRR_absolutist",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Estates Must Deliver",
+            "Поместья обязаны поставить"
+          ],
+          "desc": [
+            "The nobles who sustained Jeanne's cause offer pledges of timber, stone and wagons. Her steward has begun accepting the pledges as if the materials were already outside. Jeanne sends the papers back. Each estate will name the yard from which its contribution can actually be collected; noble service must leave something more substantial than a seal.",
+            "Дворяне, поддержавшие Жанну, обещают лес, камень и подводы. Управляющий уже принимает эти обещания так, словно материалы лежат за воротами. Маркиза возвращает бумаги. Каждое поместье должно указать двор, откуда действительно можно забрать обещанное. Дворянская служба оставит после себя не только печать: каменщикам нужны целые блоки, возчикам нужны исправные колёса, а деревням надоело ждать исполнения торжественных заверений."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "Bonds for the Estate Roads",
+            "Поручительства за усадебные дороги"
+          ],
+          "desc": [
+            "An estate road reaches the manor in excellent condition and becomes a ditch before the tenant villages. Jeanne's surveyors will require the landowner's bond to cover the entire route used by his produce. The court can enforce that obligation without surrendering its authority to the garrisons that once decided which complaints deserved an escort.",
+            "Усадебная дорога в прекрасном состоянии доведена до господского дома, а перед деревнями арендаторов превращается в канаву. Землемеры Жанны потребуют поручительства владельца за весь путь, которым вывозят его урожай. Двор способен добиться исполнения этой обязанности собственными распоряжениями. Ему незачем возвращать дело гарнизонам, которые прежде сами решали, чья жалоба заслуживает внимания и кому положен вооружённый сопровождающий."
+          ],
+          "days": 42,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Patterns Kept under the Seal",
+            "Образцы под придворной печатью"
+          ],
+          "desc": [
+            "Three estate workshops have supplied three incompatible fittings for the same bridge. Their masters each insist that old custom vindicates their work. Jeanne's purchasing office will keep approved patterns and lend them to every contractor serving the court. Reputation may win a craftsgriffon an audience, but the finished piece must still fit the engineer's drawing.",
+            "Три усадебные мастерские поставили для одного моста три несовместимых крепления. Каждый мастер уверяет, что за его работой стоит многолетний обычай. Закупочная контора Жанны будет хранить проверенные образцы и выдавать их подрядчикам двора. Доброе имя поможет ремесленнику получить заказ, но готовая деталь всё равно должна соответствовать чертежу инженера, которому предстоит отвечать за переправу перед маркизой."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "Westkeep's Credit at Court",
+            "Кредит Весткипа при дворе"
+          ],
+          "desc": [
+            "With Aquileia's national settlement proclaimed, Jeanne carries the march's contracts into royal negotiations. She seeks guarantees for productive work, not a competing crown. The creditors expect her noble supporters to honour the same delivery terms they accepted at home. A provincial reputation can purchase wider confidence, provided its owners remain answerable for the signatures beneath it.",
+            "После провозглашения общенационального устройства Жанна представляет при дворе договоры марки. Она добивается гарантий для полезных предприятий, связывая своё дело с законной аквелийской короной. Кредиторы требуют, чтобы её дворянские сторонники соблюдали условия поставок, принятые дома. Провинциальная репутация поможет заслужить более широкое доверие лишь тогда, когда её обладатели продолжают отвечать за собственные подписи и вдали от Весткипа."
+          ],
+          "days": 49,
+          "reward": "pp75"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "A Works on the Royal Road",
+            "Мастерские на королевском тракте"
+          ],
+          "desc": [
+            "The court's orders now reach farther than the manor workshops can serve. Jeanne sponsors a permanent works beside the road that carries Westkeep's deliveries into Aquileia. Its founders bring estate capital and royal contracts; its foregriffons bring the patterns that survived inspection. The doors will bear the marquise's patronage, and the invoices will bear her obligations.",
+            "Заказы двора теперь поступают из мест, которых усадебные мастерские не могут обслужить. Жанна покровительствует созданию постоянного предприятия у тракта, по которому идут поставки Весткипа в Аквелию. Учредители приносят поместные капиталы и королевские договоры, мастера — проверенные образцы. Над воротами появится имя покровительницы, а в счетах останутся её обязательства перед теми, кто доверил этому начинанию труд и деньги."
+          ],
+          "days": 56,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "Service beyond the Household",
+            "Служба за пределами усадьбы"
+          ],
+          "desc": [
+            "The loyal officers arrive with companies whose first allegiance remains to the households that equipped them. Jeanne requires a roll of service owed to the march and, through it, the crown. An estate may recommend a recruit, but cannot recall him whenever its owner quarrels with the officer responsible for a neighbouring stretch of road.",
+            "Верные офицеры приводят роты, чья первая верность по-прежнему принадлежит снарядившим их домам. Жанна требует составить списки службы, которую несут перед маркой, а через неё перед короной. Поместье может рекомендовать новобранца, но не вправе отзывать его всякий раз, когда хозяин поссорится с офицером соседнего участка дороги. Воинские обязанности должны переживать личные обиды тех, кто обещал их исполнять."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "The Court Armourer's Receipt",
+            "Расписка придворного оружейника"
+          ],
+          "desc": [
+            "A noble donor presents a handsome rifle case and requests a captaincy for his son. Jeanne asks the armourer to examine the weapons before anyone discusses commissions. Court patronage will supply usable arms to the companies on duty. Gifts can be acknowledged in the audience book without allowing their donors to choose who commands the recipients.",
+            "Знатный даритель приносит красивый оружейный ящик и просит капитанский чин для сына. Жанна предлагает оружейнику проверить винтовки прежде, чем начнётся разговор о назначении. Покровительство двора должно обеспечивать исправным оружием роты, несущие службу. Благодарность дарителям найдётся в книге аудиенций, но из неё не следует право назначать командиров тем, кто будет пользоваться полученным даром на настоящем посту."
+          ],
+          "days": 35,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Relief at the Last Depot",
+            "Смена у последнего склада"
+          ],
+          "desc": [
+            "A convoy can cross half the march before discovering that the next estate's escort considers its duty complete. Jeanne orders the loyal officers to practise relief at the depots themselves. The arriving commander must see his replacement accept the loads. Household honour will be measured by deliveries completed, rather than by how promptly a company marches home.",
+            "Обоз пересекает половину марки и обнаруживает, что охрана очередного поместья считает службу законченной. Жанна приказывает верным офицерам отрабатывать смену непосредственно у складов. Прибывший командир должен увидеть, как его преемник принимает груз. Честь дворянского дома станут оценивать по завершённым поставкам, а не по тому, насколько быстро рота вернулась к хозяйским воротам, оставив подводы и возчиков без сопровождения."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "Posts in the Crown's Line",
+            "Посты в королевской линии"
+          ],
+          "desc": [
+            "Westkeep's service obligations now meet those of neighbouring provinces. A defended crossing means little if the next post expects its relief from somewhere else. Jeanne sends officers with written instructions to agree stores, signals and responsibilities with the royal command. The march will hold its assigned ground without turning every dispute over provisions into a contest of family precedence.",
+            "Служебные обязательства Весткипа теперь соприкасаются с обязанностями соседних провинций. Защищённая переправа мало значит, если ближайший пост ждёт смену совсем с другой стороны. Жанна направляет офицеров с письменными поручениями согласовать запасы, сигналы и ответственность с королевским командованием. Марка будет удерживать порученные рубежи, не превращая каждый спор о провианте в состязание родовитости между владельцами соседних поместий."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "The Crown's Westkeep Arsenal",
+            "Весткипский арсенал короны"
+          ],
+          "desc": [
+            "The old household armouries cannot sustain companies serving throughout Aquileia. Jeanne brings their repair contracts into a permanent arsenal, where court inspectors follow each order from raw stock to finished weapon. The nobles retain the distinction of supplying the crown. They must accept that the weapons leave according to service needs, even when their own retainers are waiting.",
+            "Старые усадебные оружейные не способны содержать роты, служащие по всей Аквелии. Жанна объединяет их ремонтные заказы в постоянном арсенале, где придворные инспекторы проследят путь от заготовки до готового оружия. Дворяне сохранят почёт поставщиков короны. Им придётся согласиться, что оружие отправляют по нуждам службы, даже когда собственные дружинники ожидают снаряжения у ворот и напоминают о заслугах своего господина."
+          ],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Widows at the Audience Door",
+            "Вдовы у дверей аудиенции"
+          ],
+          "desc": [
+            "The families of the fallen have learned the route between an estate office and a military paymaster, with neither accepting the final responsibility. Jeanne sets aside an audience for their claims and binds relief to the obligations promised by her supporters. The court's protection acquires a difficult audience: petitioners who can remember exactly what was pledged.",
+            "Семьи погибших выучили дорогу между поместной конторой и военным казначеем, однако никто не принимает окончательной ответственности. Жанна отводит отдельную аудиенцию для их требований и связывает помощь с обязанностями, обещанными её сторонниками. У придворного покровительства появляются неудобные просители: они хорошо помнят каждое заверение, знают имена давших его господ и готовы снова прийти к дверям маркизы за ответом."
+          ],
+          "days": 35,
+          "reward": "poverty"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "The Marquise before the Crown",
+            "Маркиза перед короной"
+          ],
+          "desc": [
+            "Aquileia's national proclamation gives Jeanne a place among the crown's supporters. Her nobles would like the occasion to erase every provincial grievance beneath a single splendid oath. She will bring their obligations with her. Loyalty is a service she offers to the legitimate sovereign, carrying Westkeep's standing into the royal settlement without mistaking her march for a hereditary national throne.",
+            "Общенациональное провозглашение даёт Жанне место среди сторонников короны. Её дворяне хотели бы скрыть все провинциальные жалобы за одной торжественной клятвой. Маркиза возьмёт их обязательства с собой. Она предлагает службу законному монарху и приносит в общее королевское устройство заслуженное положение Весткипа. Титул маркизы не превращается от этого в наследственное право на аквелийский престол, а местные обещания сохраняют силу."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "Pledged Estate Deliveries",
+              "Обещанные поместные поставки"
+            ],
+            "desc": [
+              "Jeanne has made noble contributions collectible. The road crews can finally name the estate responsible for the stone they are awaiting.",
+              "Жанна превратила дворянские обещания в обязательные поставки. Дорожные артели наконец знают, какое поместье отвечает за камень, которого они ждут."
+            ],
+            "modifiers": {
+              "production_speed_infrastructure_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Court's Approved Patterns",
+              "Утверждённые придворные образцы"
+            ],
+            "desc": [
+              "Common patterns and enforceable bonds tie the estate workshops to Jeanne's purchasing office. Patronage now comes with an inspection.",
+              "Общие образцы и обязательные поручительства связывают поместные мастерские с закупочной конторой Жанны. Покровительство теперь сопровождается проверкой."
+            ],
+            "modifiers": {
+              "production_speed_infrastructure_factor": 0.075,
+              "production_speed_industrial_complex_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Royal Contracts through Westkeep",
+              "Королевские заказы через Весткип"
+            ],
+            "desc": [
+              "Estate capital, inspected workmanship and obligations recognised at court sustain Westkeep's works. Jeanne's royal service has acquired workshops and delivery dates.",
+              "Поместные капиталы, проверенное мастерство и признанные при дворе обязательства поддерживают предприятия Весткипа. Королевская служба Жанны обрела мастерские и сроки поставок."
+            ],
+            "modifiers": {
+              "production_speed_infrastructure_factor": 0.1,
+              "production_speed_industrial_complex_factor": 0.1
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "The March's Service Roll",
+              "Служебный список марки"
+            ],
+            "desc": [
+              "The loyal companies owe service beyond their patrons' gates. Named duties make their stores easier to assemble and their movements harder to evade.",
+              "Верные роты несут службу за пределами ворот своих покровителей. Определённые обязанности позволяют собирать припасы и пресекать уклонение от похода."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "Reliefs under the Marquise's Seal",
+              "Смены под печатью маркизы"
+            ],
+            "desc": [
+              "The companies have learned to hand over a depot before going home. Supplies and defended crossings no longer depend on an argument between households.",
+              "Роты научились сдавать склад смене прежде, чем возвращаться домой. Припасы и защита переправ больше не зависят от ссоры между дворянскими домами."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.075,
+              "army_defence_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Westkeep in the Royal Line",
+              "Весткип в королевском строю"
+            ],
+            "desc": [
+              "The crown can rely on Westkeep's assigned posts, repaired weapons and scheduled reliefs. Noble service has become a duty that neighbouring units can plan around.",
+              "Корона может положиться на посты Весткипа, исправное оружие и назначенные смены. Дворянская служба стала обязанностью, на которую рассчитывают соседние части."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.1,
+              "army_defence_factor": 0.075
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Stone beneath the Seal",
+            "Камень под печатью"
+          ],
+          "desc": [
+            "Jeanne's surveyor rolls a fragment of rotten timber onto the audience carpet. The noble whose bond paid for the crossing objects to the mud before he objects to the evidence. His steward insists that the estate delivered everything promised; the village carrier says the wagons stopped at the manor and never reached the stream.\n\nJeanne asks for the delivery book. Its receipt bears a familiar household seal, but no signature from the road crew. The noble offers to settle quietly by sending labourers tomorrow. The surveyor wants the receipt read aloud before the other estates, warning that several have used the same convenient form.\n\nThe bridge can be repaired either way. A public examination would establish that the marquise's summons reaches even her oldest supporters. Accepting an immediate settlement would get the village's grain moving before the next rain. Jeanne lays the broken timber across the disputed receipt. Her ally can no longer call the matter a misunderstanding between servants.",
+            "Землемер Жанны кладёт кусок гнилого бруса на ковёр приёмной. Дворянин, чьё поручительство обеспечивало ремонт переправы, сначала возмущается грязью и лишь затем представленным доказательством. Управляющий уверяет, что поместье доставило всё обещанное. Сельский возчик отвечает: подводы остановились у господского дома и до ручья так и не добрались.\n\nЖанна просит книгу поставок. На расписке стоит знакомая родовая печать, но подписи дорожной артели нет. Дворянин предлагает уладить дело без огласки и завтра же прислать работников. Землемер хочет прочесть расписку перед другими владельцами: несколько поместий пользуются точно таким же удобным бланком, и их дороги тоже ещё ждут ремонта.\n\nМост можно восстановить при любом решении. Публичный разбор покажет, что вызов маркизы обязателен даже для её старейших сторонников. Немедленное соглашение позволит вывезти деревенское зерно до следующего дождя. Жанна кладёт обломок поверх спорной расписки. Союзник больше не сможет назвать случившееся недоразумением между слугами. За дверью ждут возчики, которым придётся объяснить, когда они снова смогут отправиться в путь."
+          ],
+          "options": [
+            {
+              "title": [
+                "Read the bond before the assembled estates.",
+                "Прочесть поручительство перед собравшимися дворянами."
+              ],
+              "reward": "pp50"
+            },
+            {
+              "title": [
+                "Accept the repairs; let the village send its grain.",
+                "Принять ремонт и пропустить деревенское зерно."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Escort That Would Not Leave",
+            "Охрана, которая не уходила"
+          ],
+          "desc": [
+            "The practice convoy has reached its last depot, but two companies remain outside the gate. The departing captain refuses to surrender ammunition bought by his patron. His replacement has brought rifles of another pattern and cannot use it anyway. The instructors report a successful journey followed by an entirely unsuccessful relief.\n\nJeanne summons the captains with their armourers. One proposes recalling serviceable rifles from household stores so the depot can issue matched weapons. The other asks to repeat the exercise with mixed companies until officers learn to account for every crate before setting out. Both are embarrassed by the court's clerk recording their explanations.\n\nThere is time for one immediate remedy before the companies return to their posts. A collection of compatible weapons would equip the escorts now. Another field exercise would teach the officers why a full wagon is not necessarily a useful delivery. Jeanne will require the patrons to cooperate with whichever remedy she chooses; their private quarrel has already detained the convoy long enough.",
+            "Учебный обоз достиг последнего склада, но перед воротами стоят две роты. Уходящий капитан отказывается передавать патроны, купленные его покровителем. Сменщик привёл солдат с винтовками другого образца и всё равно не может ими воспользоваться. Инструкторы докладывают об удачно завершённом переходе, за которым последовала совершенно неудачная передача поста.\n\nЖанна вызывает капитанов вместе с оружейниками. Один предлагает собрать исправные винтовки из усадебных запасов, чтобы склад выдавал совместимое оружие. Другой просит повторить учения смешанными ротами, пока офицеры не научатся проверять каждый ящик перед выходом. Обоим неприятно, что придворный писарь записывает объяснения и уточняет фамилии ответственных за погрузку.\n\nДо возвращения рот на посты времени хватит на одно срочное исправление. Сбор подходящих винтовок позволит сразу вооружить охрану. Ещё один полевой выход научит офицеров понимать, почему полная повозка не всегда означает полезный груз. Жанна потребует содействия покровителей при любом решении. Их частный спор уже достаточно задержал обоз, а возчики стоят у ворот с утра и рассчитывают получить ясное распоряжение до темноты."
+          ],
+          "options": [
+            {
+              "title": [
+                "Collect compatible rifles from the household stores.",
+                "Собрать совместимые винтовки из усадебных запасов."
+              ],
+              "reward": "rifles500"
+            },
+            {
+              "title": [
+                "Repeat the relief with mixed companies.",
+                "Повторить смену смешанными ротами."
+              ],
+              "reward": "army_xp20"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "An Oath with an Address",
+            "Клятва с адресом"
+          ],
+          "desc": [
+            "The royal delegation's secretary asks Jeanne where the march's oath should be delivered. A noble answers with the name of her residence. Jeanne corrects him: the address is that of the recognised Aquileian court. The distinction leaves the room quiet enough to hear the secretary sharpen his pencil.\n\nHer supporters have brought two offerings for the occasion. Veterans and estate volunteers are ready to accompany the delegation and enter the crown's service. The parish and market messengers instead propose carrying the oath through Westkeep, with public gatherings to affirm the royal settlement and explain the march's duties within it.\n\nJeanne cannot spare the same escorts for both journeys this week. The first would place willing recruits where the crown can receive them. The second would turn a private assurance between great households into an undertaking heard by the communities that must sustain it. She asks the secretary to leave space beneath her signature for the chosen arrangements. Nobody again proposes sending the oath back to her own door.",
+            "Секретарь королевской делегации спрашивает Жанну, куда следует доставить клятву марки. Один дворянин называет её резиденцию. Жанна поправляет его: адрес должен принадлежать признанному аквелийскому двору. В комнате становится достаточно тихо, чтобы услышать, как секретарь затачивает карандаш. Его вопрос неожиданно напомнил собравшимся, кому именно они собираются предложить службу.\n\nСторонники маркизы подготовили два дара к торжеству. Ветераны и добровольцы из поместий готовы сопровождать делегацию и поступить на службу короне. Посыльные от приходов и рынков предлагают вместо этого провезти текст по Весткипу, созывая собрания в поддержку королевского устройства и объясняя обязанности марки перед общей страной.\n\nНа этой неделе Жанна не может выделить одну и ту же охрану для обеих поездок. Первая доставит желающих служить туда, где корона сможет принять их. Вторая превратит частное заверение знатных домов в обязательство, услышанное общинами, которым предстоит его поддерживать. Маркиза просит секретаря оставить под её подписью место для выбранных распоряжений. Никто больше не предлагает отправить клятву обратно к её собственным воротам."
+          ],
+          "options": [
+            {
+              "title": [
+                "Escort the volunteers to the crown's muster.",
+                "Проводить добровольцев к королевскому сбору."
+              ],
+              "reward": "manpower1500"
+            },
+            {
+              "title": [
+                "Carry the royal oath through the march.",
+                "Провезти королевскую клятву по марке."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JRR_coalition",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "A Tender in the Town Square",
+            "Подряд на городской площади"
+          ],
+          "desc": [
+            "The court's old suppliers know which antechamber to visit. The towns supporting Jeanne's coalition want a place where an unfamiliar workshop can offer its work without a patron's introduction. Contracts will be posted beside the market notices, with samples examined before witnesses. The marquise keeps her signature, but must explain why it falls beneath one offer rather than another.",
+            "Старые поставщики двора знают, в какую приёмную следует заглянуть. Города, поддержавшие коалицию Жанны, требуют места, где незнакомая мастерская предложит работу без рекомендации покровителя. Условия подрядов вывешивают рядом с рыночными объявлениями, образцы проверяют при свидетелях. Подпись остаётся за маркизой, но теперь ей предстоит объяснять, почему она поставлена под одним предложением, а соседний мастер со своей работой получил отказ."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Requisition Bench",
+            "Суд по реквизициям"
+          ],
+          "desc": [
+            "A workshop cannot accept a civilian order while the garrison still claims its lathe. Municipal lawyers will hear the disputed receipts beside representatives of the court and the suppliers. Jeanne's coalition has promised a life beyond military permission. Settling who may use a machine tomorrow will test that promise more severely than another proclamation on the printer's wall.",
+            "Мастерская не может принять гражданский заказ, пока гарнизон считает её токарный станок своим. Муниципальные юристы разберут спорные расписки вместе с представителями двора и поставщиков. Коалиция Жанны обещала жизнь без постоянного военного разрешения. Решение о том, кто сможет пользоваться станком завтра, проверит это обещание серьёзнее очередного воззвания, которое печатник вывесит на стене среди уже пожелтевших листов."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Gauges Shared between Workshops",
+            "Мерки для соседних мастерских"
+          ],
+          "desc": [
+            "Small suppliers have won their first contracts and discovered that their neighbours measure the same fitting differently. The coalition's town delegates propose lending gauges and keeping a shared bench for disputed work. Skilled masters can teach the common practice without surrendering their shops. Jeanne's purchasing clerks will accept the agreed measurements even when an older court supplier objects.",
+            "Небольшие поставщики получили первые заказы и обнаружили, что соседи по-разному измеряют одну и ту же деталь. Городские делегаты коалиции предлагают выдавать общие мерки и устроить проверочный верстак для спорных изделий. Опытные мастера смогут обучать согласованным приёмам, сохраняя собственные мастерские. Закупщики Жанны будут принимать утверждённые размеры даже тогда, когда старый придворный поставщик потребует исключения для своей привычной работы."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "A Contract the Other Towns Can Sign",
+            "Договор для других городов"
+          ],
+          "desc": [
+            "The national settlement has opened markets beyond Westkeep, but its towns cannot live by privileges negotiated for one march. Jeanne's coalition brings its tender rules and appeals procedure to other royal municipalities. They will join through contracts their own representatives can defend. The first difficult customer may do more for the agreement than a room of courteous admirers.",
+            "Общенациональное устройство открыло рынки за пределами Весткипа, но его города не могут жить привилегиями, выговоренными для одной марки. Коалиция Жанны предлагает другим городам королевства свои правила подрядов и порядок обжалования. Партнёры присоединятся через договоры, которые смогут защитить перед собственными жителями. Первый требовательный заказчик окажется для соглашения полезнее целой комнаты любезных почитателей, согласных хвалить каждый его пункт."
+          ],
+          "days": 49,
+          "reward": "pp75"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "The Workshops' Common Yard",
+            "Общий двор мастерских"
+          ],
+          "desc": [
+            "Several workshops can build a machine together, yet none can afford the heavy equipment needed to finish it. The coalition arranges a common industrial yard financed by participating towns and private subscriptions. Jeanne opens the premises beside the municipal delegates. Orders will be divided by the published contract, leaving room for the small suppliers who first demanded it.",
+            "Несколько мастерских способны вместе построить машину, но ни одна не может приобрести тяжёлое оборудование для окончательной обработки. Коалиция устраивает общий промышленный двор на средства участвующих городов и частных подписчиков. Жанна открывает его рядом с муниципальными делегатами. Заказы распределят по опубликованному договору, сохранив место для небольших поставщиков, которые первыми добивались этих правил и теперь рассчитывают ими воспользоваться."
+          ],
+          "days": 56,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "A Muster with a Return Date",
+            "Сбор с датой возвращения"
+          ],
+          "desc": [
+            "Municipal delegates arrive with lists of willing reservists and a question the recruiting officer has never liked: when will they return? Jeanne's coalition will recognise service terms that towns and commanders can both enforce. The volunteers owe real training and real duty. Their employers and families deserve something firmer than an assurance that the garrison will remember them.",
+            "Муниципальные делегаты приносят списки желающих служить в резерве и задают неприятный для вербовщика вопрос: когда они вернутся? Коалиция Жанны закрепит сроки, соблюдения которых смогут требовать и города, и командиры. Добровольцам предстоят настоящая подготовка и настоящая служба. Их нанимателям и семьям нужно нечто прочнее заверения, что гарнизон когда-нибудь вспомнит об обещанном возвращении и отпустит людей домой."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Arms against a Civilian Receipt",
+            "Оружие под гражданскую расписку"
+          ],
+          "desc": [
+            "The town armourer will supply the reserve, but refuses another requisition signed by an officer who cannot be found afterwards. Jeanne orders the purchasing office to acknowledge every delivery and name the unit receiving it. Civilians can equip soldiers without surrendering their right to payment. The reserve's first discipline begins with the promises made to its suppliers.",
+            "Городской оружейник готов снабжать резерв, но отказывается принимать очередную реквизицию с подписью офицера, которого потом невозможно найти. Жанна поручает закупочной конторе подтверждать каждую поставку и указывать получающую часть. Гражданские могут вооружать солдат, сохраняя право на оплату труда. Первое правило дисциплины для нового резерва начинается с обещаний, данных поставщикам, которым завтра снова придётся открывать свои мастерские."
+          ],
+          "days": 35,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Drill between Market Days",
+            "Учения между рыночными днями"
+          ],
+          "desc": [
+            "The reserve cannot learn to move as a unit if every workshop releases its apprentices on a different afternoon. Town delegates and instructors will agree training gatherings around local work, then hold everyone to the arrangement. A shorter, properly attended exercise can teach more than a magnificent parade whose absent ranks are explained away as unavoidable civilian inconvenience.",
+            "Резерв не научится действовать подразделением, если каждая мастерская отпускает учеников в разные дни. Городские делегаты и инструкторы согласуют сборы с местной работой, а затем потребуют соблюдения договорённости от всех участников. Непродолжительные учения при полном составе дадут больше, чем великолепный парад, на котором пустые места в строю оправдывают неизбежными неудобствами гражданской жизни и занятостью чужих работников."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "The Service Warrant Travels",
+            "Служебное предписание в пути"
+          ],
+          "desc": [
+            "The royal command now requests Westkeep's reservists for duties outside their home towns. Their agreed service cannot disappear at the provincial boundary. Jeanne's officers and municipal representatives will prepare arrangements for relief, medical care and messages home. The coalition can answer a national call while making clear who remains responsible for the volunteers after their train departs.",
+            "Королевское командование теперь просит резервистов Весткипа для службы за пределами родных городов. Согласованные условия не должны исчезать на провинциальной границе. Офицеры Жанны и муниципальные представители подготовят порядок смены, медицинской помощи и отправки вестей домой. Коалиция сможет ответить на общенациональный призыв, ясно установив, кто отвечает за добровольцев после того, как их поезд уйдёт со знакомой станции."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "An Arsenal with Open Accounts",
+            "Арсенал с открытыми счетами"
+          ],
+          "desc": [
+            "The coalition's reserve needs steady deliveries that scattered repair shops cannot promise. Municipal subscribers and the court will finance an arsenal whose accounts remain open to the representatives who approved the order. Its managers must meet military specifications and civilian payment dates. Jeanne expects reliable weapons; her partners expect to see how the promises were paid for.",
+            "Резерву коалиции нужны регулярные поставки, которых отдельные ремонтные мастерские обещать не могут. Муниципальные подписчики и двор оплатят арсенал с отчётностью, доступной представителям, утвердившим заказ. Управляющим придётся соблюдать военные требования к оружию и гражданские сроки расчётов. Жанна рассчитывает на надёжное вооружение; её партнёры хотят знать, как оплачены обещания и кто ответит перед рабочими, если очередной платёж задержится."
+          ],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Read the Compact after Work",
+            "Прочесть соглашение после работы"
+          ],
+          "desc": [
+            "The coalition's printed pledge hangs above a workshop door, beyond the understanding of several workers it claims to protect. Republican volunteers and parish teachers offer evening readings with room for questions. Jeanne lends the assembly rooms. Learning to read the promise also means learning to recognise the clause a magistrate has conveniently omitted when explaining it.",
+            "Напечатанное обещание коалиции висит над дверью мастерской, хотя некоторые работники, которых оно должно защищать, не умеют его прочесть. Добровольцы-республиканцы и приходские учителя предлагают вечерние занятия с обсуждением. Жанна предоставляет залы для собраний. Научиться читать обещание означает также заметить статью, которую судейский чиновник удобно пропустил в объяснениях, и суметь самостоятельно найти её в выданном домой листке."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "Republicans in the Royal Delegation",
+            "Республиканцы в королевской делегации"
+          ],
+          "desc": [
+            "Jeanne's municipal allies enter national politics beside the marquise without pretending that they have become monarchists. Their compact binds them to a royal settlement whose promises they intend to enforce. The delegation will carry dissenting signatures alongside loyal ones. Cooperation must survive an honest introduction before it can claim to offer Aquileia anything beyond another temporary bargain against soldiers.",
+            "Муниципальные союзники Жанны выходят в общенациональную политику рядом с маркизой, не притворяясь убеждёнными монархистами. Соглашение связывает их с королевским устройством, исполнения обещаний которого они намерены требовать. Делегация привезёт подписи несогласных вместе с подписями верных короне. Сотрудничеству предстоит выдержать честное представление участников, прежде чем оно сможет предложить Аквелии нечто большее, чем очередную временную сделку против власти военных."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "Tenders beyond the Antechamber",
+              "Подряды за пределами приёмной"
+            ],
+            "desc": [
+              "Published offers let Westkeep's smaller workshops compete for the coalition's orders. Work reaches benches that court patronage previously overlooked.",
+              "Опубликованные условия позволяют небольшим мастерским Весткипа бороться за заказы коалиции. Работа приходит на верстаки, которые прежде обходило придворное покровительство."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Towns' Common Measures",
+              "Общие мерки городов"
+            ],
+            "desc": [
+              "Shared gauges and civilian settlement of disputed receipts help independent workshops keep their promises to one another.",
+              "Общие мерки и гражданский разбор спорных расписок помогают самостоятельным мастерским выполнять обязательства друг перед другом."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.075,
+              "production_factory_max_efficiency_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Municipal Suppliers' Compact",
+              "Соглашение городских поставщиков"
+            ],
+            "desc": [
+              "The common yard gives small contractors access to heavy equipment, while published terms let their cooperation survive disagreements between towns.",
+              "Общий двор открывает небольшим подрядчикам доступ к тяжёлому оборудованию, а опубликованные условия позволяют сотрудничать вопреки разногласиям городов."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.1,
+              "production_factory_max_efficiency_factor": 0.075
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "A Place Kept for the Reservist",
+              "Место, сохранённое резервисту"
+            ],
+            "desc": [
+              "Agreed service terms give volunteers a reason to return to their units without fearing that every summons will cost them their civilian livelihood.",
+              "Согласованные условия позволяют добровольцам возвращаться в части без опасения, что каждый новый вызов лишит их гражданского заработка."
+            ],
+            "modifiers": {
+              "army_morale_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Towns Keep Their Training Days",
+              "Города соблюдают дни учений"
+            ],
+            "desc": [
+              "Employers and instructors honour the same calendar. The reserve can practise together and recover between duties without constantly bargaining for attendance.",
+              "Наниматели и инструкторы соблюдают общее расписание. Резерв занимается вместе и восстанавливается между выходами, не торгуясь каждый раз за присутствие солдат."
+            ],
+            "modifiers": {
+              "army_morale_factor": 0.075,
+              "training_time_army_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Coalition's Accountable Reserve",
+              "Подотчётный резерв коалиции"
+            ],
+            "desc": [
+              "Reliable training, civilian accounts and arrangements for relief allow the towns' volunteers to serve throughout Aquileia while retaining the compact that brought them together.",
+              "Регулярная подготовка, гражданская отчётность и порядок смены позволяют городским добровольцам служить по всей Аквелии, сохраняя объединившее их соглашение."
+            ],
+            "modifiers": {
+              "army_morale_factor": 0.1,
+              "training_time_army_factor": -0.075
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Lathe with Two Owners",
+            "Станок с двумя владельцами"
+          ],
+          "desc": [
+            "The workshop owner arrives at the hearing carrying a requisition receipt. The garrison clerk brings a second document, declaring the same lathe indispensable to military repairs. Neither disputes that the machine belonged to the workshop before the soldiers took it. They disagree over whether a promise to return it can survive an officer's insistence that he still needs it.\n\nJeanne listens while the coalition's lawyer reads the original terms. The military office has missed the date it wrote itself. The owner wants a public ruling and has neighbours ready to testify. His foregriffon would rather accept an immediate arrangement: the lathe returns today, while a civilian contract reserves agreed repair hours for the garrison.\n\nBoth approaches recognise the workshop's ownership. A formal judgement would give the coalition a precedent it could cite against other overdue requisitions. The practical settlement would reopen a bench whose workers have been waiting outside since morning. Jeanne asks the owner which papers he wants signed first, and then turns to the assembled representatives for their decision.",
+            "Хозяин мастерской приходит на слушание с реквизиционной распиской. Гарнизонный писарь приносит другую бумагу, объявляющую тот же станок незаменимым для военного ремонта. Никто не оспаривает, что до появления солдат машина принадлежала мастерской. Спорят о другом: сохраняет ли силу обещание вернуть её, когда офицер продолжает настаивать, что она ему нужна.\n\nЖанна слушает, пока юрист коалиции читает первоначальные условия. Военная контора пропустила срок, который назначила сама. Владелец требует публичного решения; соседи готовы выступить свидетелями. Старший мастер предпочёл бы немедленное соглашение: станок возвращается сегодня, а гражданский договор отводит гарнизону оговорённые часы ремонта. Тогда работники смогут наконец снова приступить к обычным заказам.\n\nОба решения признают право собственности мастерской. Судебное постановление даст коалиции прецедент для других просроченных реквизиций. Практическое соглашение откроет верстак, у которого рабочие ждут с утра. Жанна спрашивает владельца, какие бумаги он хочет подписать первыми, затем обращается к собравшимся представителям. Гарнизонному писарю придётся поставить подпись под их решением, хотя прежний начальник велел ему просто забрать обе папки обратно."
+          ],
+          "options": [
+            {
+              "title": [
+                "Establish the precedent in an open judgement.",
+                "Закрепить прецедент открытым судебным решением."
+              ],
+              "reward": "pp50"
+            },
+            {
+              "title": [
+                "Return the lathe under the repair agreement today.",
+                "Сегодня вернуть станок по договору о ремонте."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Empty Rank at Noon",
+            "Пустое место в полдень"
+          ],
+          "desc": [
+            "At noon the instructor dismisses a reserve company and discovers that several soldiers have already left. Their employers promised them the morning, but the exercise ran late. The mayor insists that the officers knew the terms; the captain replies that a company cannot learn a difficult movement by stopping whenever the market bell rings.\n\nJeanne has the timetable brought into the room. It shows a longer exercise that nobody explained to the workshops. The municipal delegates offer to recruit a fresh contingent whose employers can guarantee full training days. The instructors propose using the next gathering to teach section leaders how to divide the work into reliable sessions, bringing the existing reservists back under the terms already agreed.\n\nNeither offer excuses the unauthorised departures. One would put more willing volunteers on the rolls without extending anyone's obligation. The other would make the present company easier to train. Jeanne asks the captain to erase his accusation of civilian sabotage before she considers either remedy. The coalition cannot teach punctual service with an unpublished timetable.",
+            "В полдень инструктор распускает резервную роту и обнаруживает, что несколько солдат уже ушли. Наниматели отпустили их на утро, но занятие затянулось. Городской глава утверждает, что офицеры знали условия; капитан отвечает, что рота не освоит сложный манёвр, если будет останавливаться по каждому удару рыночного колокола. Оставшиеся солдаты ждут во дворе, не понимая, закончена ли служба.\n\nЖанна требует принести расписание. В нём указано продолжительное занятие, о котором мастерским никто не сообщил. Муниципальные делегаты предлагают набрать новый отряд из тех, чьи наниматели гарантируют полные учебные дни. Инструкторы хотят посвятить следующий сбор подготовке младших командиров: научить их делить работу на надёжные занятия и вернуть нынешних резервистов к уже согласованным условиям.\n\nНи одно предложение не оправдывает самовольный уход. Первое приведёт новых добровольцев, не увеличивая чужих обязанностей. Второе поможет лучше обучить существующую роту. Прежде чем рассматривать решения, Жанна просит капитана убрать обвинение в гражданском саботаже из своего рапорта. Коалиция не сможет научить точной службе по расписанию, которое забыла опубликовать."
+          ],
+          "options": [
+            {
+              "title": [
+                "Enrol volunteers available for complete training days.",
+                "Принять добровольцев, свободных на полные учебные дни."
+              ],
+              "reward": "manpower1500"
+            },
+            {
+              "title": [
+                "Teach the section leaders to honour the timetable.",
+                "Научить младших командиров соблюдать расписание."
+              ],
+              "reward": "army_xp20"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "A Republican Signs beside the Marquise",
+            "Республиканец подписывает рядом с маркизой"
+          ],
+          "desc": [
+            "The national delegation's clerk has prepared a clean copy of Westkeep's address. In it, every signatory professes lifelong devotion to the crown. A municipal republican pushes the sheet back across the table. He promised to uphold the coalition's royal settlement, he says, not to acquire a childhood he never had.\n\nJeanne reads the offending line and strikes it out. The clerk worries that an honest disagreement will spoil the public ceremony. Outside, veterans have assembled to accompany the delegation; a smaller crowd wants to hear whether republican complaints can still be voiced under the agreement.\n\nThe marquise has time for one public appearance before departure. She could open a hearing with her dissenting partners, showing that their signatures do not require silence. Or she could join the veterans and explain why different convictions can sustain a common defence of the agreed settlement. Neither gathering will decide Aquileia's throne. They will decide what the towns believe their representatives meant when they placed their names beside Jeanne's.",
+            "Писарь общенациональной делегации подготовил чистовой текст обращения Весткипа. В нём каждый подписант признаётся в пожизненной преданности короне. Городской республиканец возвращает лист через стол. Он обещал соблюдать королевское соглашение коалиции, говорит делегат, но не собирается приобретать детство, которого у него никогда не было. Его товарищи молча придвигают свои неподписанные экземпляры следом.\n\nЖанна читает спорную строку и вычёркивает её. Писарь тревожится, что честное разногласие испортит публичную церемонию. Снаружи собрались ветераны, готовые сопровождать делегацию; рядом стоят жители, желающие узнать, позволено ли республиканцам по-прежнему высказывать претензии при новом соглашении. Они пришли услышать ответ до отъезда представителей, а не после их возвращения.\n\nДо отправления маркиза успеет выступить только перед одним собранием. Она может открыть слушание с несогласными партнёрами, показав, что подпись не требует молчания. Либо присоединиться к ветеранам и объяснить, почему разные убеждения допускают общую защиту принятого устройства. Ни одно собрание не решает судьбу аквелийского престола. Они покажут горожанам, что имели в виду их представители, ставя имена рядом с именем Жанны."
+          ],
+          "options": [
+            {
+              "title": [
+                "Hear the republican signatories before departure.",
+                "Выслушать республиканских подписантов до отъезда."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Stand with the veterans for the common settlement.",
+                "Выступить с ветеранами в защиту общего соглашения."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JRR_colette",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Workshops behind the Posters",
+            "Мастерские за плакатами"
+          ],
+          "desc": [
+            "Colette's recruiting posters once carried messages that only the underground could read. The workshops behind those messages now receive ordinary orders, stamped by officers impatient for deliveries. She will bring their foregriffons into the scheduling room. The military network can direct production, but it must discover what the benches can actually make before announcing another indispensable demand.",
+            "Вербовочные плакаты Колетт когда-то несли послания, понятные только подполью. Мастерские, скрывавшиеся за этими сообщениями, теперь получают обычные заказы с печатями офицеров, торопящих поставки. Она пригласит старших мастеров в комнату планирования. Военная сеть способна руководить производством, однако прежде очередного неотложного требования ей придётся выяснить, что действительно можно изготовить на имеющихся верстаках и кто будет выполнять эту работу."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Shift after the Bugle",
+            "Смена после горна"
+          ],
+          "desc": [
+            "A garrison order tells the workshop to continue until the work is finished. The workers' delegate asks which work, and who will replace the exhausted night shift. Colette requires a schedule that names both deliveries and reliefs. Command retains its urgency, but an officer who conceals impossible hours will have to explain the empty benches himself.",
+            "Гарнизонный приказ велит мастерской работать до завершения задания. Рабочий делегат спрашивает, какого именно и кто сменит измотанную ночную бригаду. Колетт требует расписание, в котором указаны и поставки, и сменщики. Командование сохраняет право торопить работу, однако офицеру, скрывшему невыполнимую продолжительность труда, придётся самому объяснять пустые верстаки. Бывшие подпольщики уже знают, насколько дорого обходятся обещания людей, не знакомых с мастерской."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Sort the Revolution's Scrap",
+            "Разобрать лом революции"
+          ],
+          "desc": [
+            "Captured stores have supplied the workshops with metal of uncertain origin and uncertain quality. Colette's engineers will separate useful stock from material that merely looks impressive on a requisition form. Workers who repaired weapons in hiding know which substitutions survive use. Their knowledge belongs at the testing bench, even when it contradicts a quartermaster's report of abundant supplies.",
+            "Захваченные склады снабдили мастерские металлом сомнительного происхождения и качества. Инженеры Колетт отделят пригодные запасы от материала, который внушительно выглядит только в реквизиционном бланке. Рабочие, тайно чинившие оружие, знают, какие замены выдерживают службу. Этим знаниям место у испытательного верстака, даже когда они противоречат рапорту интенданта об изобилии припасов. Ведомость с красивым итогом ещё не сделает испорченную деталь прочнее."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "The Republican Repair Circuit",
+            "Республиканская ремонтная сеть"
+          ],
+          "desc": [
+            "The MPA connections Colette helped build with Rodier now carry lists of damaged machinery between provinces. Westkeep can offer repair teams and tested spares to the national republican effort. She will send workshop delegates alongside the officers arranging deliveries. Their task is to negotiate work that can be completed, before military enthusiasm promises the same lathe to three distant customers.",
+            "Связи MPA, которые Колетт помогала создавать вместе с Родье, теперь передают между провинциями списки повреждённых машин. Весткип предложит ремонтные бригады и проверенные детали общему республиканскому делу. Вместе с офицерами, договаривающимися о поставках, отправятся представители мастерских. Им предстоит согласовать выполнимую работу прежде, чем военное рвение обещает один и тот же станок трём далёким заказчикам, каждому из которых уже назначен срок."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "From Salvage Yard to Machine Works",
+            "Из разборочного двора в механический завод"
+          ],
+          "desc": [
+            "Repair teams have kept the machinery moving, but salvaged fittings cannot meet every new order. Colette assembles a permanent machine works around the best surviving benches and the specialists who kept them alive. Military purchasers bring national contracts; civilian delegates bring the agreed working arrangements. The factory's first test will be whether either side can keep its promises without the other's silence.",
+            "Ремонтные бригады поддерживали машины в работе, но восстановленные детали не покрывают каждый новый заказ. Колетт создаёт постоянное механическое предприятие вокруг лучших уцелевших верстаков и специалистов, сохранивших их. Военные закупщики приносят общенациональные договоры, гражданские представители — согласованные условия труда. Первой проверкой завода станет способность обеих сторон выполнять обещания, не требуя молчания партнёра при каждом неудобном вопросе о сроках или сменах."
+          ],
+          "days": 56,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "Through the Garrison's Front Gate",
+            "Через главные ворота гарнизона"
+          ],
+          "desc": [
+            "The garrison captains who once received secret approaches from guerrillas now face volunteers demanding recognised service. Colette will admit experienced fighters through the front gate and assess what they can teach regular units. Their clandestine courage does not settle questions of command. It does make them worth hearing before a career officer dismisses everyone without an academy certificate.",
+            "Гарнизонные капитаны, прежде тайно принимавшие связных партизан, теперь встречают добровольцев, требующих признанной службы. Колетт впустит опытных бойцов через главные ворота и проверит, чему они способны научить регулярные части. Подпольная храбрость не решает вопросов командования. Она даёт право быть выслушанным прежде, чем кадровый офицер отвергнет всех, кто не может предъявить академическое свидетельство и назвать привычного ему наставника."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "The Caches Come into Daylight",
+            "Тайники выходят на свет"
+          ],
+          "desc": [
+            "Weapons hidden for the uprising still lie behind false walls while neighbouring companies report shortages. Former couriers know the addresses, but distrust demands made without acknowledgement. Colette orders the receiving officers to record each surrender and return the signed receipt. The revolution's arsenals will enter regular service through the people who guarded them, rather than another rumour of confiscation.",
+            "Оружие, спрятанное для восстания, остаётся за ложными стенами, пока соседние роты жалуются на нехватку. Бывшие связные знают адреса, но не доверяют требованиям, не оставляющим подтверждения. Колетт приказывает принимающим офицерам записывать каждую передачу и возвращать подписанную расписку. Революционные запасы поступят на регулярную службу через тех, кто их охранял. Иначе очередной слух о конфискации снова закроет двери, которые едва удалось открыть."
+          ],
+          "days": 35,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "An Ambush Becomes an Order",
+            "Засада становится приказом"
+          ],
+          "desc": [
+            "A former guerrilla explains a successful ambush with gestures the staff cannot put on its map. The officers answer with symbols his scouts have never learned. Colette brings both groups to the ground they are describing. They must turn practical knowledge into orders another unit can follow, retaining the scouts' initiative without allowing every patrol to fight its own private battle.",
+            "Бывший партизан объясняет удачную засаду жестами, которые штаб не умеет нанести на карту. Офицеры отвечают знаками, незнакомыми его разведчикам. Колетт выводит обе группы на местность, о которой они спорят. Им предстоит превратить опыт в приказ, понятный другому подразделению, сохранив инициативу дозоров. Каждый патруль должен видеть свою задачу в общем замысле, а не вести собственный бой по личному воспоминанию."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "Reports That Can Change the Plan",
+            "Донесения, способные изменить план"
+          ],
+          "desc": [
+            "Westkeep's officers now work with republican formations beyond the march. A scout's warning must travel through their staffs without becoming a polite note attached to an unchanged order. Colette establishes exchanges between runners, signals specialists and planners. Her insistence on a common command will mean little if that command cannot hear what its forward units have already discovered.",
+            "Офицеры Весткипа теперь действуют вместе с республиканскими соединениями за пределами марки. Предупреждение разведчика должно пройти через штабы, не превратившись в вежливую записку к неизменённому приказу. Колетт организует совместную работу связных, специалистов связи и составителей планов. Её требование единого командования мало значит, если оно не способно услышать то, что передовые подразделения уже выяснили на местности собственными силами."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "An Arsenal for the Republican Line",
+            "Арсенал для республиканского фронта"
+          ],
+          "desc": [
+            "The republic's units need weapons whose parts can be exchanged without a workshop argument. Colette brings military repair contracts into an arsenal using the patterns accepted by the receiving commands. Former clandestine armourers will work beside army inspectors. Their shared task is to send dependable equipment into national service, with civilian representatives able to question the hours demanded to make it.",
+            "Республиканским частям нужно оружие, детали которого можно заменить без спора между мастерскими. Колетт объединяет военные ремонтные заказы в арсенале с образцами, принятыми получающими штабами. Бывшие подпольные оружейники будут работать рядом с армейскими инспекторами. Их общая задача — отправлять на общенациональную службу надёжное снаряжение, сохраняя за гражданскими представителями возможность спрашивать, сколько труда требуют поставки и кто согласовал очередную смену."
+          ],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Read without the Cipher",
+            "Читать без шифра"
+          ],
+          "desc": [
+            "Some former messengers could recognise a coded sign on a poster without reading the ordinary notice around it. Workers' groups offer lessons using the orders now governing their workshops. Colette allows the rooms to open, knowing that better readers will bring more precise objections. The civilians who helped carry her revolution intend to understand the instructions it leaves behind.",
+            "Некоторые бывшие связные узнавали условный знак на плакате, не умея прочесть обычное объявление вокруг него. Рабочие группы предлагают занятия по приказам, которые теперь определяют жизнь мастерских. Колетт разрешает открыть помещения, понимая, что грамотные читатели принесут более точные возражения. Гражданские, помогавшие нести её революцию, намерены разобраться в оставленных ею распоряжениях и самостоятельно проверять то, что им объясняют офицеры."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "Delegates without a Secret Message",
+            "Делегаты без тайного послания"
+          ],
+          "desc": [
+            "Colette sends Westkeep's representatives into the national republican movement through doors the MPA once approached in secret. Her officers expect a disciplined delegation; the civilian allies intend to speak in their own names. She must carry their partnership into wider politics without claiming that her local victory appoints Aquileia's leader. The old network can arrange introductions, but cannot write everyone's answer.",
+            "Колетт направляет представителей Весткипа в общенациональное республиканское движение через двери, к которым MPA прежде подходила тайно. Офицеры ждут дисциплинированной делегации; гражданские союзники намерены говорить от собственного имени. Ей предстоит перенести сотрудничество в более широкую политику, не объявляя местную победу правом назначить лидера Аквелии. Прежняя сеть поможет устроить встречи, однако не сможет заранее написать ответы за всех приглашённых участников."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "Orders Heard at the Bench",
+              "Приказы, услышанные у верстака"
+            ],
+            "desc": [
+              "Colette's officers now hear the foregriffons before issuing workshop schedules. Urgent demands have begun to correspond to work that can actually be done.",
+              "Офицеры Колетт выслушивают мастеров перед составлением расписаний. Срочные требования начинают соответствовать работе, которую действительно можно выполнить."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.05
+            }
+          },
+          {
+            "title": [
+              "Tested Salvage, Agreed Shifts",
+              "Проверенный лом, согласованные смены"
+            ],
+            "desc": [
+              "Testing recovered material and naming relief crews keep the revolutionary workshops working through shortages without hiding every difficulty in a quartermaster's report.",
+              "Проверка восстановленных материалов и назначение сменщиков помогают революционным мастерским работать при нехватке припасов, не пряча трудности в интендантских рапортах."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.075,
+              "production_lack_of_resource_penalty_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "Westkeep's Republican Machine Works",
+              "Республиканские механические предприятия Весткипа"
+            ],
+            "desc": [
+              "The repair network has become a durable manufacturing effort. Military orders and organised civilian labour meet over tested materials, delivery dates and contested working hours.",
+              "Ремонтная сеть превратилась в постоянное производство. Военные заказы и организованный гражданский труд сходятся в вопросах качества материалов, сроков поставок и спорных рабочих часов."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.1,
+              "production_lack_of_resource_penalty_factor": -0.1
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "Experience through the Garrison Gate",
+              "Опыт, принятый в гарнизоне"
+            ],
+            "desc": [
+              "Experienced irregulars help the officers prepare practical orders. Colette's common command has gained knowledge that military schooling alone could not supply.",
+              "Опытные бойцы нерегулярных отрядов помогают офицерам готовить выполнимые приказы. Единое командование Колетт получило знания, которых не даст одна военная школа."
+            ],
+            "modifiers": {
+              "planning_speed": 0.05
+            }
+          },
+          {
+            "title": [
+              "Scouts on the Staff Map",
+              "Разведчики на штабной карте"
+            ],
+            "desc": [
+              "Scouts and regular officers share the language of orders. Ground knowledge can reach the planning table without losing its meaning along the way.",
+              "Разведчики и кадровые офицеры освоили общий язык приказов. Знание местности доходит до стола планирования, не теряя смысла по пути."
+            ],
+            "modifiers": {
+              "planning_speed": 0.1,
+              "recon_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "A Command That Hears the Patrol",
+              "Командование, которое слышит дозор"
+            ],
+            "desc": [
+              "Westkeep's republican formations connect reconnaissance, orders and dependable supply. A common command can change its plan when the patrol brings better evidence.",
+              "Республиканские части Весткипа связывают разведку, приказы и надёжное снабжение. Единое командование способно изменить план, когда дозор приносит более точные сведения."
+            ],
+            "modifiers": {
+              "planning_speed": 0.15,
+              "recon_factor": 0.1,
+              "supply_consumption_factor": -0.05
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "One Lathe, Two Urgent Orders",
+            "Один станок, два срочных заказа"
+          ],
+          "desc": [
+            "Colette arrives while the night shift is still arguing with the quartermaster. His order calls for rifle bolts; the civilian foregriffon has already promised bearings for a stalled delivery cart. Both jobs require the same lathe. The quartermaster calls the delay disloyal. A worker points to the faded recruitment poster above his head and asks whether the allies it summoned were expected to grow another pair of claws.\n\nColette tells the officer to withdraw the accusation and has both orders placed on the bench. The agreed shift can finish one batch. Completing the bolts would return repaired rifles to service. Making the bearings would release the cart bringing ordinary supplies to waiting households.\n\nNobody proposes working the exhausted crew through another night. The dispute is over whose urgent need comes first within the hours already promised. Colette can insist on the military delivery or recognise the civilian commitment. Either way, the foregriffon wants her decision written down so the next officer cannot claim that the unfinished order was simply forgotten.",
+            "Колетт приходит, когда ночная смена ещё спорит с интендантом. Его приказ требует винтовочных затворов; старший мастер уже обещал подшипники для остановившейся развозной повозки. Обе работы требуют одного станка. Интендант называет задержку нелояльностью. Рабочий указывает на выцветший вербовочный плакат над его головой и спрашивает, предполагалось ли, что призванные им союзники отрастят ещё одну пару когтей.\n\nКолетт велит офицеру взять обвинение назад и положить оба заказа на верстак. За согласованную смену можно закончить одну партию. Готовые затворы вернут в строй отремонтированные винтовки. Подшипники позволят отправить повозку с обычными припасами для семей, которые уже ждут её прибытия. Возчик оставил у ворот список адресов и обещал прийти за ответом вечером.\n\nНикто не предлагает заставлять измотанную бригаду работать ещё одну ночь. Спор идёт о том, чья срочная нужда получит место в уже обещанных часах. Колетт может настоять на военной поставке или признать гражданское обязательство. В любом случае мастер просит записать решение, чтобы следующий офицер не объявил незавершённый заказ просто забытым."
+          ],
+          "options": [
+            {
+              "title": [
+                "Finish the bolts and return the rifles to service.",
+                "Закончить затворы и вернуть винтовки в строй."
+              ],
+              "reward": "rifles500"
+            },
+            {
+              "title": [
+                "Honour the civilian delivery promised for today.",
+                "Выполнить обещанную на сегодня гражданскую поставку."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Map Is Missing a Hedge",
+            "На карте не хватает изгороди"
+          ],
+          "desc": [
+            "The scout refuses to follow the route marked by the staff. There is a hedge across it, he says, and the ground beyond will not carry the supply wagons. The instructor answers that the exercise concerns obedience to orders. Colette asks whether the wagons have been informed of this distinction.\n\nOn the ground, both officers and former guerrillas discover mistakes. The map misses the obstacle, while the scout's alternative passes through a yard whose occupants have never agreed to receive a military column. Local knowledge needs checking as much as a printed diagram. The company returns with scratched paint and a useful set of arguments.\n\nColette can give the next exercise to mixed scouting and staff teams, requiring them to produce an order another company can execute. Alternatively, the quartermaster offers to spend the available day collecting usable rifles from nearby caches whose keepers the scouts still know. One choice develops the officers' judgement; the other turns surviving underground connections into immediately usable equipment. Neither permits the instructor to dismiss the hedge.",
+            "Разведчик отказывается идти по маршруту штаба. Поперёк него стоит изгородь, говорит он, а дальше почва не выдержит обозных повозок. Инструктор отвечает, что упражнение посвящено исполнению приказов. Колетт спрашивает, сообщили ли повозкам об этом различии. Несколько солдат отворачиваются, пока офицер пытается объяснить, почему условное препятствие не должно останавливать учебную колонну.\n\nНа местности ошибки обнаруживаются у обеих сторон. На карте нет преграды, а обходной путь разведчика проходит через двор, жители которого никогда не соглашались принимать военный обоз. Знание окрестностей требует проверки не меньше печатной схемы. Рота возвращается с поцарапанными повозками и полезным набором взаимных претензий.\n\nКолетт может поручить следующее занятие смешанным группам разведчиков и штабистов, потребовав приказ, который сумеет выполнить другая рота. Либо интендант потратит свободный день на сбор исправных винтовок из ближайших тайников, чьих хранителей ещё знают дозорные. Первый выбор развивает офицерское суждение; второй превращает уцелевшие подпольные связи в пригодное снаряжение. Ни один не позволяет инструктору снова вычеркнуть изгородь из объяснения произошедшего на учениях."
+          ],
+          "options": [
+            {
+              "title": [
+                "Let scouts and staff write the next order together.",
+                "Поручить разведчикам и штабу совместный приказ."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Use the local contacts to recover the cached rifles.",
+                "Через местные связи собрать винтовки из тайников."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "No Cipher on the Delegate's Card",
+            "На карточке делегата нет шифра"
+          ],
+          "desc": [
+            "The officer preparing Westkeep's delegation has entered the civilian organisers as assistants to the military representatives. Colette recognises a former courier studying his card. He points to the word beneath his name and asks whether the national revolution has finally found a polite way to tell him to wait outside.\n\nShe orders the cards corrected. The MPA's republican connections secured the meeting, but they did not supply every voice that kept Westkeep working. Her officers accept the change and ask what message the delegation should carry. The civilian organisers have brought accounts of cooperation and complaints about requisitions. Veterans waiting at the station want an appeal for service to the republic.\n\nThere is room for either emphasis in the opening address. Colette can have the delegates present the grievances publicly, demonstrating that civilian participation has substance. Or she can ask them to speak together beside the veterans, affirming their commitment to defend the national republican settlement. Neither choice appoints her to Aquileia's highest office. It determines what her allies hear when she speaks in their name.",
+            "Офицер, готовящий делегацию Весткипа, записал гражданских организаторов помощниками военных представителей. Колетт узнаёт бывшего связного, разглядывающего свою карточку. Он показывает на слово под именем и спрашивает, не нашла ли национальная революция наконец вежливый способ велеть ему подождать за дверью. Несколько товарищей достают собственные карточки: там напечатано то же самое.\n\nОна приказывает исправить записи. Республиканские связи MPA обеспечили встречу, но не заменили всех, кто поддерживал жизнь Весткипа. Офицеры принимают изменение и спрашивают, какое послание должна привезти делегация. Гражданские организаторы подготовили рассказы о сотрудничестве и жалобы на реквизиции. Ветераны, ожидающие на станции, хотят услышать призыв служить республике.\n\nВступительное обращение допускает любой из этих акцентов. Колетт может поручить делегатам публично изложить претензии, показав, что гражданское участие имеет содержание. Либо попросить их выступить вместе с ветеранами в поддержку защиты общенационального республиканского устройства. Ни один выбор не назначает её на высший пост Аквелии. Он определяет, что услышат союзники, когда она заговорит от их имени перед собравшимися представителями других провинций."
+          ],
+          "options": [
+            {
+              "title": [
+                "Open with the civilian delegates' grievances.",
+                "Начать с претензий гражданских делегатов."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Speak together for the republic's defence.",
+                "Вместе выступить в защиту республики."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

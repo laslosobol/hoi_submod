@@ -2,6 +2,8 @@ form_griffon_empire_category = {
 	form_griffon_empire = {
 		icon = griffon
 		allowed = {
+			# Regional Aquileia uses its own Herzland settlement, not imperial succession.
+			NOT = { OR = { original_tag = JEB original_tag = JRR original_tag = JFT original_tag = VIN } }
 			NOT = {
 				original_tag = ERI
 				original_tag = EYR
@@ -24,6 +26,7 @@ form_griffon_empire_category = {
 			}
 		}
 		visible = {
+			NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 			NOT = { original_tag = ERI }
 			NOT = { original_tag = EYR }
 			NOT = { country_exists = GRD }
@@ -62,6 +65,7 @@ form_griffon_empire_category = {
 			}
 		}
 		available = {
+			NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 			is_subject = no
 			owns_state = 382
 		}
@@ -4343,10 +4347,13 @@ form_aquileia_category = {
 	form_aquileia = {
 		icon = griffon
 		allowed = {
+			# The regional proclamation focus replaces this decision's unconditional annexations.
+			NOT = { OR = { original_tag = JEB original_tag = JRR original_tag = JFT original_tag = VIN } }
 			NOT = { original_tag = ERI }
 			NOT = { original_tag = AVI }
 		}
 		visible = {
+			NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 			NOT = { original_tag = ERI }
 			NOT = { original_tag = AVI }
 			if = {
@@ -4362,6 +4369,7 @@ form_aquileia_category = {
 			}
 		}
 		available = {
+			NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }
 			NOT = { country_exists = JER }
 			is_subject = no
 			if = {
@@ -4496,6 +4504,8 @@ form_aquileia_category = {
 	unite_aquileia_proper = {
 		icon = griffon
 		allowed = {
+			# Regional accession and its explicit war response replace the timed mass declaration.
+			NOT = { OR = { original_tag = JEB original_tag = JRR original_tag = JFT original_tag = VIN } }
 			OR = {
 				original_tag = JFT
 				original_tag = JEB

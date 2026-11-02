@@ -1,0 +1,361 @@
+{
+  "tag": "VIN",
+  "routes": [
+    {
+      "id": "VIN_gadiffer",
+      "title": [
+        "Gadiffer's Loyal Duchy",
+        "Верное герцогство Гадиффера"
+      ],
+      "native_hint": [
+        "Choose Gadiffer's loyalist programme. Ratification requires the monarchist camp to prevail and Vinovia to be at peace.",
+        "Выберите лоялистскую программу Гадиффера. Её утверждение требует победы монархистов и мира в Виновии."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Relieve Hardship",
+            "Облегчить тяготы"
+          ],
+          "desc": [
+            "The fighting is over, but Gadiffer's carriage still passes a bread queue where nobody cheers the ducal colours. A miller has sent three letters about a bridge damaged during the unrest. The duke wants the fourth brought directly to him. Restoring confidence in the crown begins with flour reaching the streets, not another appeal to the patience of hungry families.",
+            "Бои закончились, но экипаж Гадиффера по-прежнему проезжает мимо очереди за хлебом, где никто не приветствует герцогские цвета. Мельник уже отправил три письма о мосте, повреждённом во время волнений. Герцог требует принести четвёртое прямо ему. Возвращение доверия к короне начинается с доставки муки, а не с очередного призыва к терпению семей, которым сегодня снова нечем ужинать."
+          ]
+        },
+        {
+          "title": [
+            "Meet Local Associations",
+            "Встретиться с местными обществами"
+          ],
+          "desc": [
+            "An association once described as a revolutionary cell has kept its kitchen open throughout the fighting. Its organiser arrives at Gadiffer's palace carrying the unpaid bills. The duke will hear her before the official who wrote the warning. If Vinovia is to speak credibly in the royal settlement, its government must know whose work actually held its communities together.",
+            "Общество, которое прежде называли революционным кружком, не закрывало столовую на протяжении боёв. Его распорядительница приходит во дворец Гадиффера с неоплаченными счетами. Герцог выслушает её прежде чиновника, составившего донос. Если Виновия хочет убедительно говорить об общем устройстве королевства, её правительство должно знать, чьим трудом держались общины в те дни, когда обещаний помощи было особенно много."
+          ]
+        },
+        {
+          "title": [
+            "Limit Royal Requisitions",
+            "Установить предел реквизиций"
+          ],
+          "desc": [
+            "Royal victory has not cleared the villages' accounts. Wagons still arrive carrying demands written for armies that no longer need to march. Gadiffer will bring the receipts before his advisers and establish how Vinovia should answer future requests. He intends to serve the Discret crown with a province able to keep its promises, rather than exhaust it with impossible ones.",
+            "Победа роялистов не закрыла деревенские счета. Обозы по-прежнему привозят требования, составленные для армий, которым уже незачем выступать в поход. Гадиффер представит расписки советникам и определит, как Виновии отвечать на будущие запросы. Он намерен служить короне Дискретов, управляя провинцией, способной исполнять обещания, а не истощать её обязательствами, которые невозможно выполнить даже после возвращения мира."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Duke's Own Cart",
+          "Собственная телега герцога"
+        ],
+        "desc": [
+          "A village carter has brought the palace a broken wheel and a royal requisition receipt. His team was taken during the fighting. He wants to know whether loyalty will plough his field this spring. Gadiffer's steward offers compensation, but the carter points to the receipt: that was promised already.\n\nAn officer warns that letting each village refuse a demand would leave the duchy unable to support any common defence. The local delegates ask for a binding right to challenge what they cannot provide. Gadiffer can place those hearings between the crown and his subjects, or make his own government responsible for coordinating demands and answering for the burden.",
+          "Деревенский возчик привёз во дворец сломанное колесо и расписку о королевской реквизиции. Его упряжку забрали во время боёв. Теперь он спрашивает, вспашет ли верность его поле весной. Управляющий Гадиффера предлагает возмещение, но возчик указывает на расписку: это уже обещали.\n\nОфицер предупреждает, что право каждой деревни отклонять требования лишит герцогство возможности участвовать в общей обороне. Местные делегаты просят законного способа оспаривать то, чего они не могут предоставить. Гадиффер может поставить такие слушания между короной и подданными либо поручить своему правительству согласовывать требования и лично отвечать за тяжесть повинностей. Возчик ждёт, прислонив колесо к стене."
+        ],
+        "a": [
+          "Give the communities a right to challenge demands.",
+          "Дать общинам право оспаривать требования."
+        ],
+        "b": [
+          "My government will coordinate and answer for them.",
+          "Моё правительство будет согласовывать требования и отвечать за них."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "Loyalty Beyond Vinovia",
+          "Верность за пределами Виновии"
+        ],
+        "a_desc": [
+          "In Vinovia, Gadiffer learned that loyalty had to be answered with protection when royal demands reached a village. Representatives of the reunited country have now entrusted him with a national mandate, bringing the dispute he once heard in Vinovia to a much larger table.\n\nA provincial speaker asks whether the protections granted to the duke's own villages apply to hers. Gadiffer recognises the question before she finishes it. The promise that helped hold his duchy together must survive the moment when he becomes the authority other provinces need protection from.",
+          "В Виновии Гадиффер научился отвечать на верность деревень защитой от непосильных королевских требований. Теперь представители объединённой страны доверили ему общегосударственный мандат, перенеся знакомый виновийский спор за гораздо больший стол.\n\nДелегатка провинции спрашивает, действуют ли гарантии герцогских деревень и для её земляков. Гадиффер узнаёт вопрос прежде, чем она заканчивает. Обещание, помогавшее удержать герцогство, должно пережить момент, когда он сам становится властью, от которой другим провинциям нужна защита. Герцог просит принести прежний текст соглашения и оставляет для делегатки место рядом с собой."
+        ],
+        "b_desc": [
+          "The experience of governing Vinovia has brought Gadiffer before provincial representatives, who have entrusted him with a mandate to govern the reunited country. The letters on his desk now come from places whose names his steward must locate on a map. Each asks for a decision, and several demand the same wagons.\n\nThe duke forms a common executive on the principle he applied in Vinovia: an authority that makes demands must answer for their consequences. Family loyalty brought him into the struggle, but it cannot settle these claims. His ministers will have to learn the country they have accepted responsibility for.",
+          "Опираясь на опыт управления Виновией, Гадиффер получил от представителей провинций мандат на управление объединённой Аквелией. Письма на его столе теперь приходят из мест, которые управляющему приходится искать на карте. Каждое требует решения, а нескольким просителям нужны одни и те же вагоны.\n\nГерцог создаёт общее исполнительное управление по виновийскому принципу: власть, предъявляющая требования, отвечает за их последствия. Верность семье привела его к этой борьбе, но не разрешит нынешних споров. Министрам предстоит узнать страну, за которую они взялись отвечать. Гадиффер отдаёт им карту, оставив письма у себя для вечернего чтения."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Promise Reaches the Frontier",
+          "Обещание доходит до границы"
+        ],
+        "a_desc": [
+          "The Herzland settlement assigns our border holdings to Aquileia and the remaining territory in our possession to a dependent government. Gadiffer's delegates encounter an old concern in a new language: villagers want to know whether the next army passing through may take whatever it needs.\n\nThe duke sends the safeguards first written for Vinovia. They will require local interpretation and negotiation, but their purpose remains recognisable. A dependent neighbour must retain a government capable of speaking for its communities. Gadiffer's representatives cannot promise respect at home and treat the same demand abroad as insolence.",
+          "Герцландское урегулирование передаёт наши пограничные владения Аквелии, а оставшуюся территорию в нашем распоряжении — зависимому правительству. Делегаты Гадиффера встречают знакомую тревогу на другом языке: жители хотят знать, вправе ли следующая проходящая армия забрать всё необходимое.\n\nГерцог присылает гарантии, первоначально составленные для Виновии. Их потребуется обсудить и приспособить к местным условиям, но смысл остаётся понятным. У зависимого соседа должно быть правительство, способное говорить от имени общин. Представители Гадиффера не могут обещать уважение дома и считать то же требование за границей дерзостью. Переговоры начинаются с рассказа о последней реквизиции."
+        ],
+        "b_desc": [
+          "Gadiffer asks for a single report on the Herzland territories under our control. The border districts will join Aquileia, while the remaining holdings receive a dependent government. His officers propose separate supply arrangements for every garrison, each negotiated according to immediate need.\n\nThe duke remembers the carter who brought a broken wheel to his palace. He orders his ministers to coordinate the arrangements with the dependent government and identify who will answer for disputed demands. Firmer direction must make responsibility easier to find. Otherwise the frontier will inherit every excuse he once heard from royal quartermasters.",
+          "Гадиффер требует единый доклад о землях Герцланда под нашим контролем. Пограничные округа войдут в Аквелию, остальные владения получат зависимое правительство. Офицеры предлагают отдельные правила снабжения каждого гарнизона, согласуемые по мере возникновения нужды.\n\nГерцог вспоминает возчика, доставившего сломанное колесо во дворец. Он поручает министрам согласовать общий порядок с зависимым правительством и определить, кто ответит за спорные требования. Твёрдое руководство должно помогать находить ответственного. Иначе граница унаследует все отговорки, прежде звучавшие из уст королевских квартирмейстеров. Офицеры забирают доклад, чтобы вписать туда имена вместо названий ведомств."
+        ]
+      }
+    },
+    {
+      "id": "VIN_abc",
+      "title": [
+        "Les Amis des ABC",
+        "Les Amis des ABC"
+      ],
+      "native_hint": [
+        "Choose the ABC programme through an explicit commitment. Ratification requires Vinovia's revolutionary camp to prevail and peace to return.",
+        "Выберите программу ABC отдельным решением. Её утверждение требует победы революционного лагеря Виновии и возвращения мира."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Join Campus and Workshop",
+            "Связать университет и мастерскую"
+          ],
+          "desc": [
+            "An ABC speaker has spent the first meeting after victory explaining the future to workers asking about tomorrow's wages. At the next meeting, the workers will speak first. The students need to learn what governing Vinovia requires before asking Aquileia to follow their example. Their hosts have plenty to teach them, beginning with a workshop whose owner has disappeared.",
+            "На первом собрании после победы оратор ABC объяснял будущее рабочим, спрашивавшим о завтрашнем заработке. На следующей встрече первыми выступят они. Студентам необходимо понять, чего требует управление Виновией, прежде чем предлагать Аквелии последовать их примеру. Хозяева могут многому их научить, начиная с устройства мастерской, владелец которой исчез и оставил людей без ответа о жалованье."
+          ]
+        },
+        {
+          "title": [
+            "Schools Beyond the Cities",
+            "Школы за пределами городов"
+          ],
+          "desc": [
+            "The books have arrived, but rain comes through the roof of the village school. ABC volunteers who expected to give lessons find themselves borrowing ladders instead. Their argument for a different social order will be heard more readily if they return to finish the work. Other provinces will judge the programme by children learning here, not by the promise on its posters.",
+            "Книги прибыли, но дождь протекает сквозь крышу деревенской школы. Добровольцы ABC, рассчитывавшие вести занятия, отправляются искать лестницы. Их доводы в пользу нового общественного устройства выслушают охотнее, если они вернутся закончить работу. Другие провинции будут судить о программе по тому, чему здесь учатся дети, а не по обещанию на плакате, прибитом у самой школьной двери."
+          ]
+        },
+        {
+          "title": [
+            "Elect Local Councils",
+            "Избрать местные советы"
+          ],
+          "desc": [
+            "The neighbours who carried messages during the fighting now bring their own proposals to the ABC meeting. They want a say in the government taking shape around them. Councils rooted in those streets and villages could give the movement a programme worth presenting across Aquileia. The students must begin by accepting amendments from people who never sat beside them in a lecture hall.",
+            "Соседи, переносившие донесения во время боёв, теперь приходят на собрание ABC со своими предложениями. Они хотят участвовать в формировании правительства. Советы, опирающиеся на эти улицы и деревни, могут дать движению программу, достойную обсуждения по всей Аквелии. Студентам следует начать с принятия поправок от людей, которые никогда не сидели рядом с ними в университетской аудитории."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "Who Gets the Chalk?",
+          "Кому достанется мел?"
+        ],
+        "desc": [
+          "The schoolroom is too small for the meeting, so the ABC organisers open the windows and move the blackboard into the yard. A student writes a plan for rebuilding Vinovia. Before she reaches the second line, a mill worker asks why every speaker so far has come from the same lecture hall.\n\nThe question draws laughter, then an uncomfortable silence. Local councils could choose their own priorities and send accountable delegates to a common congress. A stronger coordinating council could instead gather scarce teachers and workshop capacity where they are most needed. Both plans promise a social republic. The movement must decide how much of its programme it is prepared to let its new neighbours rewrite.",
+          "Класс слишком мал для собрания, поэтому организаторы ABC открывают окна и выносят доску во двор. Студентка записывает план восстановления Виновии. Прежде чем она заканчивает вторую строку, рабочий мельницы спрашивает, почему все выступающие до сих пор оказались из одной аудитории.\n\nВопрос вызывает смех, затем неловкое молчание. Местные советы могли бы сами определять приоритеты и посылать подотчётных делегатов на общий съезд. Более сильный координационный совет мог бы направлять немногочисленных учителей и возможности мастерских туда, где они нужнее всего. Оба проекта обещают социальную республику. Движению предстоит решить, какую часть своей программы оно готово позволить переписать новым соседям."
+        ],
+        "a": [
+          "Let the communities help write the programme.",
+          "Пусть общины участвуют в составлении программы."
+        ],
+        "b": [
+          "Give a common council the means to coordinate it.",
+          "Дать общему совету средства для её согласованного проведения."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Congress Has New Voices",
+          "Новые голоса на съезде"
+        ],
+        "a_desc": [
+          "The congress of reunited Aquileia is louder than the ABC founders expected. A village teacher objects to a plan drafted by university friends; a workshop delegate proposes something none of them discussed before the revolution. The chair keeps calling for patience, then realises that the room is doing what the movement asked of it.\n\nA social federation cannot remain the private seminar of its first organisers. The delegates begin revising the programme together. By evening, the blackboard contains several different handwritings, and the original author is helping a newcomer make room for another line.",
+          "Съезд объединённой Аквелии оказался шумнее, чем ожидали основатели ABC. Сельская учительница возражает против плана университетских друзей, делегат мастерской предлагает то, чего никто из них не обсуждал до революции. Председатель призывает к терпению, затем понимает, что зал делает именно то, к чему движение его призывало.\n\nСоциальная федерация не может оставаться закрытым семинаром первых организаторов. Делегаты вместе исправляют программу. К вечеру на доске видны разные почерки, а первоначальный автор помогает новичку освободить место для ещё одной строки. Учительница остаётся после заседания, чтобы переписать предложения своей деревни начисто."
+        ],
+        "b_desc": [
+          "The common council of reunited Aquileia receives more requests for teachers than the ABC organisers can possibly meet at once. It assigns the first teams to districts where schools have remained closed longest. A delegation from another province arrives furious that its promised visit has been postponed.\n\nThe council must explain its priorities without treating disappointment as ignorance. Its members have accepted the power to coordinate the country's recovery, and now discover how many reasonable demands compete for the same resources. The lecture notes that once supplied every answer remain closed on the chair's desk.",
+          "Общий совет объединённой Аквелии получает столько просьб прислать учителей, что организаторы ABC не могут выполнить их сразу. Первые группы направляются в округа, где школы закрыты дольше всего. Делегация другой провинции приезжает в ярости: обещанный ей визит отложен.\n\nСовету предстоит объяснить приоритеты, не принимая разочарование за невежество. Его участники получили право координировать восстановление страны и теперь видят, сколько разумных требований соперничает за одни ресурсы. Конспекты, прежде дававшие ответ на всё, лежат закрытыми на столе председателя. Он просит делегатов рассказать, как их школа пережила последнюю зиму."
+        ]
+      },
+      "border": {
+        "title": [
+          "A School with Two Voices",
+          "Школа на двух языках"
+        ],
+        "a_desc": [
+          "The settlement divides the Herzland land in our possession between Aquileian border districts and a dependent republic. ABC volunteers arrive with books and discover that the village already has a teacher. She welcomes the supplies, then asks why the lessons in every donated reader assume that her pupils speak Aquileian at home.\n\nThe visitors sit down to revise the teaching plan with her. Educational access cannot depend on abandoning a local language. Representatives from both sides of the new boundary join the discussion, bringing the same demand for participation that once drew the ABC into village schoolrooms.",
+          "Урегулирование разделяет герцландские земли в нашем владении между аквелийскими пограничными округами и зависимой республикой. Добровольцы ABC приезжают с книгами и обнаруживают, что в деревне уже есть учительница. Она благодарит за помощь, затем спрашивает, почему все подаренные учебники предполагают, что её ученики говорят дома по-аквелийски.\n\nПриезжие садятся вместе с ней пересматривать план занятий. Доступ к образованию не должен требовать отказа от местного языка. Представители по обе стороны новой границы присоединяются к разговору с тем же требованием участия, которое прежде привело ABC в сельские классы. Учительница приносит собственные тетради."
+        ],
+        "b_desc": [
+          "The coordinating council assigns rebuilding teams to the Herzland territories now held by our country. Border districts are incorporated into Aquileia; the remaining holdings receive a dependent republic. The first schedule sends teachers and repair workers together so that lessons can begin when the roofs are sound.\n\nLocal organisers object to a uniform curriculum arriving with the supplies. The council's representative revises the instructions: coordination concerns where help is sent, while teaching must account for the language and experience of its pupils. A timetable can bring a classroom into use. It cannot decide everything that should be said inside.",
+          "Координационный совет направляет восстановительные группы на земли Герцланда, которыми теперь владеет наша страна. Пограничные округа входят в Аквелию, остальные владения получают зависимую республику. Первое расписание отправляет учителей вместе с ремонтниками, чтобы занятия начинались под исправными крышами.\n\nМестные организаторы возражают против единой учебной программы, прибывшей вместе с припасами. Представитель совета исправляет указания: координация определяет направление помощи, а преподавание должно учитывать язык и опыт учеников. Расписание позволит открыть класс, но не решит, что следует говорить внутри. Учителям предлагают остаться на встречу с родителями прежде, чем начинать первый урок."
+        ]
+      }
+    },
+    {
+      "id": "VIN_chevaliers",
+      "title": [
+        "The Chevaliers of Fidelity",
+        "Рыцари верности"
+      ],
+      "native_hint": [
+        "Choose the Chevaliers' programme of Vinovian self-government. Ratification requires revolutionary victory and peace, despite the movement's conservative outlook.",
+        "Выберите программу виновийского самоуправления рыцарей верности. Её утверждение требует победы революции и мира, несмотря на консервативные взгляды движения."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Muster the Local Guard",
+            "Собрать местную гвардию"
+          ],
+          "desc": [
+            "The Chevaliers' volunteers have returned from the fighting with rifles and conflicting instructions. A shopkeeper asks which captain can give her the key to the requisitioned storeroom. Before speaking for Vinovia in a national settlement, the movement must answer her. Its guards should protect the daily life their banners celebrate, and learn when a neighbour no longer needs a soldier's permission.",
+            "Добровольцы рыцарей верности вернулись с боёв с винтовками и противоречивыми приказами. Лавочница спрашивает, какой капитан может отдать ей ключ от реквизированного склада. Прежде чем представлять Виновию на общих переговорах, движению предстоит ответить ей. Гвардейцы должны защищать повседневную жизнь, которую прославляют их знамёна, и понимать, когда соседке больше не требуется разрешение солдата, чтобы открыть собственную дверь."
+          ]
+        },
+        {
+          "title": [
+            "Sustain Community Charities",
+            "Поддержать общинную помощь"
+          ],
+          "desc": [
+            "A Chevalier helping at the kitchen meets a family displaced from another province. Their account of a damaged school sounds painfully familiar. The movement has learned to defend Vinovian institutions; it can also recognise their worth elsewhere. The next appeal for supplies will include these newcomers, giving its organisers a practical answer when asked what they owe to the rest of Aquileia.",
+            "Рыцарь верности, помогающий в столовой, знакомится с семьёй переселенцев из другой провинции. Рассказ о разрушенной школе оказывается болезненно знакомым. Движение научилось защищать виновийские учреждения и способно признать ценность чужих. Следующий сбор помощи охватит и новоприбывших, дав организаторам конкретный ответ на вопрос, что они готовы сделать для остальной Аквелии и почему забота не должна заканчиваться у знакомых улиц."
+          ]
+        },
+        {
+          "title": [
+            "Prepare a Federal Programme",
+            "Подготовить федеративную программу"
+          ],
+          "desc": [
+            "The Chevaliers' delegates spread Vinovia's proposed charter beside letters from other provinces. Their neighbours ask whether its protections could apply beyond their homeland. A federal programme for Aquileia would require the movement to accept obligations as well as guarantees. They will begin by making their own provincial government answerable, then seek partners willing to offer the same protection to one another.",
+            "Делегаты рыцарей верности кладут проект виновийской хартии рядом с письмами из других провинций. Соседи спрашивают, могут ли её гарантии действовать за пределами их родины. Федеративная программа для Аквелии потребует от движения принять обязанности вместе с правами. Сначала они сделают собственное областное правительство подотчётным, затем найдут партнёров, готовых предоставить друг другу такую же защиту."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Guard and the Town Hall",
+          "Гвардия и ратуша"
+        ],
+        "desc": [
+          "The captain of a local guard brings a petition to the town hall. His men protected the district through the fighting, and he wants a permanent command capable of moving them wherever danger appears. The hall's keeper remembers the same men helping her carry soup to the wounded. She also remembers promising the neighbours that their guard would remain answerable to them.\n\nThe Chevaliers must choose how to make that promise endure. Town councils could retain close control over their own institutions, or a common executive could coordinate the guards and workshops across Vinovia. The captain places his sword on an empty bench. For once, nobody asks him to lead a procession.",
+          "Капитан местной гвардии приносит прошение в ратушу. Его бойцы защищали округ во время сражений, и теперь он хочет постоянное командование, способное направлять их туда, где возникает опасность. Смотрительница зала помнит, как те же бойцы помогали ей носить суп раненым. Она помнит и обещание соседям: их гвардия останется перед ними в ответе.\n\nРыцарям верности предстоит решить, как сохранить это обещание. Городские советы могли бы непосредственно управлять своими учреждениями, либо общий исполнительный орган координировал бы гвардию и мастерские всей Виновии. Капитан кладёт меч на свободную скамью. На этот раз никто не просит его возглавить торжественное шествие."
+        ],
+        "a": [
+          "Keep the guard answerable to its communities.",
+          "Сохранить подотчётность гвардии общинам."
+        ],
+        "b": [
+          "Coordinate the guards through a common executive.",
+          "Согласовывать действия гвардии через общую исполнительную власть."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "A Union Worth Defending",
+          "Союз, который стоит защищать"
+        ],
+        "a_desc": [
+          "The Chevaliers explain their part in Aquileia's reunification through a confederal promise. Vinovia can protect its institutions more securely among provinces that recognise the same rights than beneath another distant, unrestrained centre. The new assembly will have to make that argument convincing beyond their homeland.\n\nA delegate from a smaller province asks to retain a local ceremony unfamiliar to the Vinovians. The chair invites him to describe it. This is the bargain the Chevaliers offered: their own traditions deserve protection because local communities deserve it, including communities whose customs they have never learned.",
+          "Рыцари верности объясняют своё участие в объединении Аквелии обещанием конфедерации. Виновия надёжнее сохранит свои учреждения среди провинций, признающих одинаковые права, чем под властью очередного далёкого и ничем не ограниченного центра. Новому собранию предстоит убедительно доказать это за пределами их родины.\n\nДелегат небольшой провинции просит сохранить местную церемонию, неизвестную виновийцам. Председатель предлагает рассказать о ней. Именно такую договорённость предлагали рыцари: их традиции заслуживают защиты потому, что её заслуживают местные общины, в том числе общины с незнакомыми обычаями. Слушатели откладывают приготовленные возражения и дают гостю закончить."
+        ],
+        "b_desc": [
+          "A reunited Aquileia gives the Chevaliers a problem they cannot solve by invoking Vinovia alone. Their proposed confederation must protect provincial institutions while sustaining a common defence. They have accepted a firmer executive to coordinate that defence, and other provinces want to know where its authority ends.\n\nThe first joint command meeting begins with the provincial charter laid beside the campaign map. Officers receive common instructions, while local representatives challenge requests that reach beyond the agreement. The Chevaliers' reason for unification must survive their new ability to issue orders across someone else's homeland.",
+          "Объединённая Аквелия ставит перед рыцарями верности задачу, которую нельзя решить одной заботой о Виновии. Предложенная ими конфедерация должна защищать учреждения провинций и обеспечивать общую оборону. Они приняли более сильную исполнительную власть для согласования этой обороны, и другие провинции хотят знать пределы её полномочий.\n\nПервое совещание общего командования начинается с провинциальной хартии рядом с картой походов. Офицеры получают согласованные распоряжения, местные представители оспаривают требования за пределами договора. Обоснование объединения должно выдержать новую возможность рыцарей отдавать приказы на чужой родине. Председатель возвращает спорную заявку офицеру для повторного обсуждения."
+        ]
+      },
+      "border": {
+        "title": [
+          "The Neighbour's Traditions",
+          "Традиции соседа"
+        ],
+        "a_desc": [
+          "The settlement divides our Herzland holdings between border districts joining Aquileia and a dependent government over the remaining territory. A delegation asks to preserve its charitable society and the hall where local veterans meet. The Chevaliers recognise the request immediately; they once used almost the same words before an Aquileian official.\n\nTheir representatives invite the society's keeper to help draft the guarantees. Cultural protection cannot stop at the edge of Vinovia. The dependent government and the incorporated communities must have room for institutions that belong to their own history, even when their banners look unfamiliar.",
+          "Урегулирование разделяет наши герцландские владения между пограничными округами, входящими в Аквелию, и зависимым правительством на оставшейся территории. Делегация просит сохранить благотворительное общество и зал встреч местных ветеранов. Рыцари верности сразу узнают просьбу: когда-то они почти теми же словами обращались к аквелийскому чиновнику.\n\nПредставители движения приглашают смотрителя общества участвовать в составлении гарантий. Защита культуры не может заканчиваться у границ Виновии. Зависимое правительство и присоединённые общины должны сохранить место для учреждений собственной истории, даже если их знамёна выглядят непривычно. Смотритель показывает старую опись зала и объясняет, что означают вышитые на знамёнах имена."
+        ],
+        "b_desc": [
+          "The common executive proposes coordinated frontier patrols across the Herzland lands in our possession. Border districts are incorporated into Aquileia, with a dependent government established over the remaining holdings. Local officers agree to exchange information but object to replacing every familiar unit emblem with an Aquileian one.\n\nThe Chevalier heading the talks removes that instruction from the draft. Common command needs reliable signals and clear responsibilities; it need not erase the histories of the people serving beneath it. The agreement will be judged by whether the dependent neighbour can cooperate without surrendering every institution that makes it recognisable.",
+          "Общая исполнительная власть предлагает согласованные пограничные патрули на герцландских землях в нашем владении. Пограничные округа входят в Аквелию, на остальных владениях создаётся зависимое правительство. Местные офицеры согласны обмениваться сведениями, но возражают против замены всех привычных эмблем частей аквелийскими.\n\nВозглавляющий переговоры рыцарь убирает это указание из проекта. Общему командованию нужны надёжная связь и ясная ответственность, а не уничтожение памяти тех, кто ему служит. Договор будут оценивать по способности зависимого соседа сотрудничать, сохраняя собственные учреждения. Офицеры возвращаются к карте, оставив спорные образцы эмблем лежать в стороне от остальных бумаг."
+        ]
+      }
+    },
+    {
+      "id": "VIN_sis",
+      "title": [
+        "The Society of Intellectual Students",
+        "Общество студентов-интеллектуалов"
+      ],
+      "native_hint": [
+        "Choose the SIS programme of republican institutions. Ratification requires Vinovia's revolutionary camp to prevail and peace to return.",
+        "Выберите республиканскую программу Общества студентов-интеллектуалов. Её утверждение требует победы революционного лагеря Виновии и возвращения мира."
+      ],
+      "focuses": [
+        {
+          "title": [
+            "Gather Jurists and Teachers",
+            "Собрать юристов и преподавателей"
+          ],
+          "desc": [
+            "Letters from former students have begun arriving again now that the fighting is over. One describes a court without records; another, a school whose teacher has not returned. The society will bring their authors together to work through these problems. The national republic needs more than sympathetic speeches from Vinovia: it needs people who can make its promises useful in ordinary offices.",
+            "После окончания боёв вновь приходят письма бывших студентов. Одно рассказывает о суде без архивов, другое — о школе, куда не вернулся учитель. Общество соберёт авторов, чтобы вместе разобраться с этими трудностями. Общей республике нужны от Виновии не только сочувственные речи, но и люди, способные придать её обещаниям смысл в обычных учреждениях, куда жители приходят каждый день."
+          ]
+        },
+        {
+          "title": [
+            "Protect the Independent Press",
+            "Защитить независимую печать"
+          ],
+          "desc": [
+            "The editor who once printed the society's arguments now publishes a complaint against one of its organisers. Several colleagues want the article withdrawn. Others remind them that victory has made their words powerful enough to silence a critic. Vinovia's contribution to the national republic should begin with a newspaper free to embarrass the very people who promised to protect it.",
+            "Редактор, прежде печатавший доводы общества, теперь публикует жалобу на одного из его организаторов. Некоторые коллеги требуют убрать статью. Другие напоминают, что после победы их слова обрели достаточно силы, чтобы заставить критика замолчать. Вклад Виновии в общее республиканское дело должен начаться с газеты, свободной ставить в неудобное положение именно тех, кто обещал её защищать."
+          ]
+        },
+        {
+          "title": [
+            "Prepare Civil Administration",
+            "Подготовить гражданское управление"
+          ],
+          "desc": [
+            "Society members arrive at the provincial offices with drafts amended during their first weeks of peace. The clerks ask how those promises should change the petitions already waiting on their desks. Answering them will give Vinovia something useful to bring into national republican politics. The society intends to support that cause with a working administration, and with officials prepared to admit a mistake.",
+            "Участники общества приходят в областные учреждения с проектами, исправленными за первые мирные недели. Писари спрашивают, как эти обещания изменят судьбу прошений, уже лежащих на столах. Ответ даст Виновии полезный опыт для участия в общей республиканской политике. Общество намерено поддержать это дело работающим управлением и чиновниками, готовыми признать ошибку перед гражданином, который пришёл добиваться справедливости."
+          ]
+        }
+      ],
+      "debate": {
+        "title": [
+          "The Petition with a Muddy Clawprint",
+          "Прошение со следом грязного когтя"
+        ],
+        "desc": [
+          "The proposed civil code lies open beneath a petition marked by a muddy clawprint. Its author has travelled from a village whose customary water rights do not fit the categories in the draft. A society jurist explains that equal citizenship requires common rules. A former teacher asks him to explain those rules to the farmer waiting outside.\n\nThe new government can let provincial representatives examine how reforms affect local practice, or give a professional executive the authority to apply a common programme and review disputes afterwards. Neither approach excuses arbitrary rule. The disagreement concerns how much of a citizen's life the reformers should understand before they decide what must change.",
+          "Проект гражданского кодекса раскрыт под прошением, на котором остался грязный след когтя. Его автор приехал из деревни, где привычные права пользования водой не укладываются в категории проекта. Юрист общества объясняет, что равное гражданство требует общих правил. Бывший учитель предлагает объяснить эти правила крестьянину, ожидающему за дверью.\n\nНовое правительство может поручить представителям провинций проверять влияние реформ на местный уклад либо дать профессиональному исполнительному органу право проводить общую программу с последующим рассмотрением споров. Ни один подход не оправдывает произвола. Разногласие касается того, сколько реформаторы должны знать о жизни гражданина, прежде чем решать, что в ней необходимо изменить."
+        ],
+        "a": [
+          "Hear the provinces before settling the rules.",
+          "Выслушать провинции прежде, чем утвердить правила."
+        ],
+        "b": [
+          "Let a professional executive carry out the programme.",
+          "Поручить проведение программы профессиональному исполнительному органу."
+        ]
+      },
+      "epilogue": {
+        "title": [
+          "The Republic Reads Its Critics",
+          "Республика читает своих критиков"
+        ],
+        "a_desc": [
+          "The society's members once borrowed arguments from distant republican movements. In reunited Aquileia, they must now answer questions from provinces close enough to send a delegation by morning. A local newspaper prints a sharp criticism of their proposed civil service appointments. The author is invited to explain the objection before the assembly.\n\nHe arrives expecting a reprimand and finds a place reserved among the speakers. The society's network has helped build a republic, but membership in that network cannot become a qualification for being heard. The chair asks the newspaper editor to publish the reply in full.",
+          "Участники общества прежде заимствовали доводы у далёких республиканских движений. В объединённой Аквелии им приходится отвечать провинциям, способным прислать делегацию уже к утру. Местная газета резко критикует предложенные назначения на государственную службу. Автора приглашают объяснить возражения перед собранием.\n\nОн приезжает в ожидании выговора и находит для себя место среди выступающих. Связи общества помогли построить республику, но принадлежность к этому кругу не может стать условием права быть услышанным. Председатель просит редактора полностью напечатать ответ. После заседания критик остаётся поговорить с кандидатом, чьё назначение оспаривал, и задаёт ему ещё несколько вопросов."
+        ],
+        "b_desc": [
+          "The new Aquileian administration sends trained officials into provinces where the society previously knew little beyond a few correspondents. Their instructions are clear, their confidence considerable. The first returned report describes a town council refusing to abandon a longstanding arrangement for maintaining its wells.\n\nThe executive calls the official back to explain what the common rules would actually improve. Professional authority must be able to justify itself without sheltering behind a diploma. The society has chosen to govern decisively; its reputation will depend on whether expertise helps it recognise a mistake before that mistake becomes an order.",
+          "Новая аквелийская администрация направляет подготовленных служащих в провинции, о которых общество прежде знало лишь по нескольким письмам. Указания ясны, уверенность велика. В первом докладе говорится, что городской совет отказывается менять давний порядок содержания колодцев.\n\nИсполнительный орган вызывает служащего объяснить, что именно улучшат общие правила. Профессиональная власть должна обосновывать себя, не прячась за дипломом. Общество выбрало решительное управление; его репутация зависит от того, поможет ли опыт распознать ошибку прежде, чем она станет приказом. Служащий возвращается с записями местного смотрителя колодцев, которых не счёл нужным приложить к первоначальному докладу."
+        ]
+      },
+      "border": {
+        "title": [
+          "A Constitution Needs a Translation",
+          "Конституции нужен перевод"
+        ],
+        "a_desc": [
+          "The Herzland settlement assigns the border districts in our possession to Aquileia and the remaining holdings to a dependent republic. Society jurists bring a constitutional draft to the talks. Their interpreter pauses over a term whose neat definition would dissolve several local arrangements for shared land.\n\nA village delegate asks to describe how those arrangements work before the sentence is translated. The jurists agree to hear him. Constitutional cooperation cannot rest on the assumption that every familiar word means the same thing across a frontier. The dependent government needs an agreement its citizens can understand and influence.",
+          "Герцландское урегулирование передаёт пограничные округа в нашем владении Аквелии, а остальные земли — зависимой республике. Юристы общества приносят на переговоры проект конституции. Переводчик останавливается на термине, чьё аккуратное определение отменило бы несколько местных способов совместного пользования землёй.\n\nСельский делегат просит рассказать об этих порядках прежде, чем переводить фразу. Юристы соглашаются его выслушать. Конституционное сотрудничество не может исходить из того, что знакомые слова всюду означают одно и то же. Зависимому правительству нужен договор, который граждане способны понять и изменить. Переводчик откладывает готовый вариант и берёт новый лист."
+        ],
+        "b_desc": [
+          "The executive sends a professional commission to organise the Herzland territory under our control. Border districts will enter Aquileia, while the remaining holdings receive a dependent republic. The commissioners bring a common schedule for opening offices and settling which government will hear each kind of petition.\n\nAt the first meeting, local lawyers point out that the proposed forms leave several customary rights unnamed. The commission must revise its instructions without losing the coordination it was sent to establish. An administration can arrive with authority and still need instruction from the people who will live under its decisions.",
+          "Исполнительный орган направляет профессиональную комиссию для устройства земель Герцланда под нашим контролем. Пограничные округа войдут в Аквелию, остальные владения получат зависимую республику. Комиссары привозят общий график открытия учреждений и порядок распределения прошений между двумя правительствами.\n\nНа первой встрече местные юристы указывают, что предложенные бланки не учитывают несколько обычных прав. Комиссии предстоит исправить указания, сохранив согласованность, ради которой её прислали. Администрация может обладать полномочиями и всё же нуждаться в объяснениях тех, кому жить по её решениям. Комиссары остаются за столом, когда первоначально отведённое для встречи время заканчивается."
+        ]
+      }
+    }
+  ]
+}

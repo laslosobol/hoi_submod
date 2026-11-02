@@ -1,0 +1,868 @@
+{
+  "assets": [
+    {
+      "id": "opening",
+      "kind": "focus",
+      "title": "Letters without an Answer",
+      "brief": "An ivory correspondence envelope, a cobalt blue ribbon, a SMALL PLAIN BLUE WAX SEAL with no imprinted device. Do not draw any coat of arms or symbol on the seal.",
+      "targets": [
+        {
+          "id": "HSM_AET_opening",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "refuge",
+      "kind": "focus",
+      "title": "Rooms for the Displaced",
+      "brief": "A little open oak doorway sheltering a neatly folded wool blanket and a travel suitcase. Warm light within the doorway, no light outside the cutout. Ivory and cobalt cloth, dark oak.",
+      "targets": [
+        {
+          "id": "HSM_AET_refuge",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "home_budget",
+      "kind": "focus",
+      "title": "The County's Own Table",
+      "brief": "A compact open household account ledger beside a little pile of worn silver coins and a single wheat ear. No legible writing. Ivory, cobalt binding, dark brown wood detail.",
+      "targets": [
+        {
+          "id": "HSM_AET_home_budget",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "congress",
+      "kind": "focus",
+      "title": "A Congress of Those Present",
+      "brief": "A semicircle of three wooden high backed council chairs around a compact oak table with one ivory document. No people, no flags, graphite and cobalt cushions, modest bronze details.",
+      "targets": [
+        {
+          "id": "HSM_AET_congress",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "mandate",
+      "kind": "focus",
+      "title": "A Duty Accepted Freely",
+      "brief": "A carefully folded ivory constitutional charter resting under a small plain pointed gold circlet, wrapped with black white and cobalt ribbons. Crown is a simple five pointed coronet, NO fleur de lis, NO crosses, NO heraldic animals.",
+      "targets": [
+        {
+          "id": "HSM_AET_mandate",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "household",
+      "kind": "focus",
+      "title": "Beyond the Palace Door",
+      "brief": "An open little wooden palace doorway behind a large open schoolbook, a small cobalt satchel beside it. Education outside court. No figures. Paper ivory, cobalt satchel, brown oak.",
+      "targets": [
+        {
+          "id": "HSM_AET_household",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "court_accounts",
+      "kind": "focus",
+      "title": "The Household Ledger",
+      "brief": "A thick cobalt financial ledger opened beside a small brass abacus with evenly spaced beads, an ivory paper receipt sticking from the book. Clean blocky legible silhouettes, no text.",
+      "targets": [
+        {
+          "id": "HSM_AET_court_accounts",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "service",
+      "kind": "focus",
+      "title": "An Oath with Limits",
+      "brief": "A sheathed steel officer sword laid diagonally BEHIND an ivory charter fastened with a cobalt ribbon; charter is visually dominant, steel blade not exposed. No people, no heraldic emblem.",
+      "targets": [
+        {
+          "id": "HSM_AET_service",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "working_table",
+      "kind": "focus",
+      "title": "The Papers Between Us",
+      "brief": "Two folded ivory dossiers placed side by side with a small brass balance scale between them, blue and charcoal bindings. Visual of judgement and accountability. No writing.",
+      "targets": [
+        {
+          "id": "HSM_AET_working_table",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "prepare",
+      "kind": "focus",
+      "title": "The Keys Held in Trust",
+      "brief": "A large silver ceremonial key laid diagonally across a folded ivory treaty and a short cobalt ribbon. Key has a simple ring bow and practical teeth, no heraldic emblem or lettering.",
+      "targets": [
+        {
+          "id": "HSM_AET_prepare",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "obituary",
+      "kind": "focus",
+      "title": "The Name in the Black Border",
+      "brief": "A small gold pointed circlet resting on folded charcoal black mourning cloth, one ivory candle beside it. Solemn restrained composition. Plain pointed coronet, no fleur de lis, no crosses.",
+      "targets": [
+        {
+          "id": "HSM_AET_obituary",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "interim",
+      "kind": "focus",
+      "title": "Until the Assembly Meets",
+      "brief": "A solid small dark oak clerk desk with one closed ivory folder, a plain cobalt desk lamp with warm light confined to objects. Temporary civil administration, no figures, no text.",
+      "targets": [
+        {
+          "id": "HSM_AET_interim",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "delegates",
+      "kind": "focus",
+      "title": "Every District at the Table",
+      "brief": "Three wooden delegate chairs of equal height gathered around a single ivory constitution roll tied with a blue cord. Black white and cobalt upholstery, restrained silver hardware, no flags or coats of arms.",
+      "targets": [
+        {
+          "id": "HSM_AET_delegates",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "union",
+      "kind": "focus",
+      "title": "A Union by Consent",
+      "brief": "Three short black, ivory, and cobalt fabric ribbons joined through a solid silver ring above a thick folded ivory constitutional charter. Clear interlinked union symbol, no crown, no crest, no writing.",
+      "targets": [
+        {
+          "id": "HSM_AET_union",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "revenues",
+      "kind": "focus",
+      "title": "What the Districts Keep",
+      "brief": "A small open wooden treasury chest with silver coin stacks split into two neat groups, cobalt account ribbon draped across the front. No gold mountain, no currency signs.",
+      "targets": [
+        {
+          "id": "HSM_AET_revenues",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "succession",
+      "kind": "focus",
+      "title": "The Office Beyond the Name",
+      "brief": "An empty solid oak council chair, with a silver key and ivory constitutional roll at its feet. Cobalt blue upholstery, simple sober civic authority, no crown, no heraldry.",
+      "targets": [
+        {
+          "id": "HSM_AET_succession",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "winter",
+      "kind": "focus",
+      "title": "The First Winter Budget",
+      "brief": "A compact charcoal iron stove with warm orange light in its firebox, a small stack of split firewood and a folded blue budget ledger beside it. No scenery or smoke cloud.",
+      "targets": [
+        {
+          "id": "HSM_AET_winter",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "workshops",
+      "kind": "focus",
+      "title": "Tools Brought out of Storage",
+      "brief": "A sturdy steel bench vise holding a small clean metal component, one wood handled hammer tucked behind it. Cobalt industrial enamel, graphite steel, warm wood.",
+      "targets": [
+        {
+          "id": "HSM_AET_workshops",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "roads",
+      "kind": "focus",
+      "title": "Roads That Reach a Door",
+      "brief": "A compact grey stone arched bridge segment, a winding ivory cobbled road crossing it, one small cobalt roadside post. No map, landscape, sky or background scenery.",
+      "targets": [
+        {
+          "id": "HSM_AET_roads",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "scholars",
+      "kind": "focus",
+      "title": "A Place for the Scholars",
+      "brief": "A well used ivory open book with a brass drawing compass resting on its pages and a small cobalt notebook underneath. Blank pages with minimal unobtrusive lines, no letters.",
+      "targets": [
+        {
+          "id": "HSM_AET_scholars",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "demobilisation",
+      "kind": "focus",
+      "title": "A Trade after Service",
+      "brief": "A plain steel military helmet placed behind a large carpentry hand plane and a short wood plank. Cobalt folded work apron. Peaceful veteran apprenticeship, no gun, no uniform body.",
+      "targets": [
+        {
+          "id": "HSM_AET_demobilisation",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "letters",
+      "kind": "focus",
+      "title": "A Different Hand",
+      "brief": "Two overlapping ivory letters with clearly different simple ink strokes under one silver magnifying glass. Charcoal ink, tiny teal wax fleck, dark cobalt edge. No readable writing or invented glyphs.",
+      "targets": [
+        {
+          "id": "HSM_AET_letters",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "kind": "focus",
+      "title": "Behind the Closed Door",
+      "brief": "A heavy charcoal closed double door with a silver keyhole, a narrow teal inner rim and an ivory evidence folder at the threshold. Subtle intrigue, no face or figure.",
+      "targets": [
+        {
+          "id": "HSM_AET_audience",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "hearing",
+      "kind": "focus",
+      "title": "The Name before the Assembly",
+      "brief": "An ivory evidence dossier laid on a dark wooden witness lectern, with a small silver balance scale beside it. Charcoal, teal and ivory palette, no judge figure, no words.",
+      "targets": [
+        {
+          "id": "HSM_AET_hearing",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "signature",
+      "kind": "focus",
+      "title": "Under One's Own Name",
+      "brief": "A silver fountain pen crossing a clean ivory signed paper, with a plain teal wax seal. A confident simple sweeping ink line, no readable letters or heraldic crest. Charcoal shadows, teal accents.",
+      "targets": [
+        {
+          "id": "HSM_AET_signature",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_oath",
+      "kind": "focus",
+      "title": "A Crown Bound by Its Word",
+      "brief": "A simple gold pointed imperial coronet set above a firmly clasped ivory constitution, orange red narrow ribbon securing it. No fleur de lis, no cross, no bird, no text.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_oath",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_towns",
+      "kind": "focus",
+      "title": "The Towns Reopen",
+      "brief": "Two compact repaired ochre stone townhouse facades with red tiled roofs and an open iron gate, ivory stone, small amber window lights. No landscape or sky, no people.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_towns",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_army",
+      "kind": "focus",
+      "title": "The Army of a Restored State",
+      "brief": "A plain polished steel officer helmet over a folded ivory charter and a gold fringed muted orange red cloth. Disciplined defensive service, no firearm, no heraldic animal.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_army",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_schools",
+      "kind": "focus",
+      "title": "Classrooms for the New Reign",
+      "brief": "An open ivory textbook on a dark red school satchel, one small brass ink pot. Muted orange red and gold accents, no writing, no crown.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_schools",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_debts",
+      "kind": "focus",
+      "title": "Debts of the Restoration",
+      "brief": "An open ivory ledger with a brass account tally and a small balanced stack of silver coins, dark red binding, minimal thin gold clasps. No text or numeric symbols.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_debts",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "GRI_settlement",
+      "kind": "focus",
+      "title": "The Crown and Its Neighbours",
+      "brief": "Two joined silver ceremonial keys above an ivory rolled treaty fastened with one cobalt ribbon and one muted orange red ribbon. Diplomatic equality, no crowns, no flags, no writing.",
+      "targets": [
+        {
+          "id": "HSM_AET_GRI_settlement",
+          "file": "mod/HoISubmod/common/national_focus/HSM_AET_restored.txt"
+        }
+      ]
+    },
+    {
+      "id": "compact",
+      "kind": "dynamic",
+      "title": "Western Compact",
+      "brief": "A compact silver ring gathering black ivory and cobalt ribbons above a thick ivory charter; a small oak leaf at the base. Solemn shared civil administration, no crown, no crest, no lettering.",
+      "targets": [
+        {
+          "id": "HSM_AET_compact",
+          "file": "mod/HoISubmod/common/dynamic_modifiers/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "imperial_compact",
+      "kind": "spirit",
+      "title": "Restoration Charter",
+      "brief": "A bold folded ivory charter secured with an orange red ribbon beneath a simple pointed gold circlet, restrained graphite shadows. No fleur de lis, no crosses, no text, no heraldic animal.",
+      "targets": [
+        {
+          "id": "HSM_AET_imperial_compact",
+          "file": "mod/HoISubmod/common/ideas/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "imperial_settlement",
+      "kind": "spirit",
+      "title": "A Crown Bound by Its Word",
+      "brief": "A small plain pointed gold coronet resting firmly on a thick ivory constitution book with a silver clasp and muted orange red binding. No fleur de lis, no cross, no heraldic animal, no text.",
+      "targets": [
+        {
+          "id": "HSM_AET_imperial_settlement",
+          "file": "mod/HoISubmod/common/ideas/HSM_AET_campaign.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_revanchism",
+      "kind": "spirit",
+      "title": "Adelart Revanchism",
+      "brief": "A snapped boundary post beside an old military bugle and a taut red rally ribbon; the broken post is the dominant shape. No invented map, claims or coat of arms. Palette: weathered brown timber, gunmetal, restrained brick-red, brass bugle highlights. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_revanchism",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_realism",
+      "kind": "spirit",
+      "title": "Political Realism",
+      "brief": "A compact brass balance holding two different sealed diplomatic folios at equal height, with a small county key on the central base. Folios have embossed route diagrams, not pseudo-text. Palette: aged brass, ivory paper, walnut, restrained slate-blue. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_realism",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_true_neutrality",
+      "kind": "spirit",
+      "title": "Neutral Diplomacy",
+      "brief": "An upright closed border barrier with a sheathed sword resting against its base and a peaceful route passing behind it; no flag. Palette: chalk-white painted wood, dark iron, muted cobalt, tan leather. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_true_neutrality",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_military_advisors_JER",
+      "kind": "spirit",
+      "title": "Aquileian Military Advisors",
+      "brief": "A military teaching board with clear formation blocks and a hinged officer's pointer, backed by a neatly folded blue-white-burgundy cloth. No fixed dynastic insignia. Palette: slate-blue board, ivory chalk, burgundy cloth accent, pale brass hinge. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_military_advisors_JER",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_military_advisors_GRI",
+      "kind": "spirit",
+      "title": "Imperial Military Advisors",
+      "brief": "An imperial field-strategy folio opened beneath a large steel compass, with two opposed formation blocks and a plain orange-edged document cover. No crown or invented imperial eagle. Palette: dark steel, parchment ivory, charcoal, restrained burnt-orange binding. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_military_advisors_GRI",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_new_county_politics",
+      "kind": "spirit",
+      "title": "A Greifwaldian Nation",
+      "brief": "A solid county gatehouse with three converging cobbled paths at its base, a folded black ivory and cobalt cloth on the battlement. No flag, no coat of arms or symbolic device. Warm grey stone, cobalt cloth, black iron hinges.",
+      "targets": [
+        {
+          "id": "AET_new_county_politics",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_agriculture_reform",
+      "kind": "spirit",
+      "title": "Agricultural Reforms",
+      "brief": "A freshly sharpened steel ploughshare over a neatly partitioned soil sample tray, with one healthy wheat bundle beside it. Palette: earth umber, steel grey, wheat ochre, subdued leaf green. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_agriculture_reform",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_greifwaldian_army",
+      "kind": "spirit",
+      "title": "The Greifwaldian Army",
+      "brief": "A plain sturdy defensive shield planted before a miniature county watchtower, with one rolled service belt; no generic griffon crest. Palette: blued steel, charcoal leather, pale stone, cobalt cloth accent. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_greifwaldian_army",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_anarchists",
+      "kind": "spirit",
+      "title": "The Berniers",
+      "brief": "A splintered barricade bearing a plain black pennant, with a toppled official ledger caught beneath one broken beam. Depict disruption, not triumphant state authority. Palette: charcoal black, splintered brown wood, dusty ivory paper, rust-red damage accent. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_anarchists",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_anarchists_2",
+      "kind": "spirit",
+      "title": "The Free Territory",
+      "brief": "A repaired village assembly bell on an open timber frame, with a plain black pennant and several equal voting counters arranged in a circle below. Palette: black cloth, warm timber, aged bronze, soft ivory counters. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_anarchists_2",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_black_army",
+      "kind": "spirit",
+      "title": "The Black Army",
+      "brief": "Two mismatched militia cartridge pouches strapped around a short drum, with a plain black pennant rising behind; handmade equipment visibly differs in size. Palette: black wool, worn brown leather, dark iron, muted brass. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_black_army",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_land_given_away",
+      "kind": "spirit",
+      "title": "Land for the Peasantry",
+      "brief": "A farm key laid across a compact surveyed field model, with a scythe blade and ripened grain at the edge. Ownership is shown by the key, not an empty deed. Palette: soil brown, grain gold, dark steel, subdued green growth. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_land_given_away",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_factory_control",
+      "kind": "spirit",
+      "title": "Worker Factory Control",
+      "brief": "A heavy factory handwheel with several equal grip handles, mounted over a short conveyor carrying finished steel billets. No human or griffon hands. Palette: iron grey, oxidized copper, warm steel highlights, black oil-dark recesses. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_factory_control",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_teacher_control",
+      "kind": "spirit",
+      "title": "Autonomous School System",
+      "brief": "An open geometry textbook resting under a small classroom bell, with a movable wooden teaching frame behind. Pages show a triangle and simple measured construction. Palette: ivory paper, warm oak, slate-green board, small brass bell. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_teacher_control",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_mother_anarchy",
+      "kind": "spirit",
+      "title": "Mother Anarchy Loves Her Sons!",
+      "brief": "A plain black banner unfurling above an opened padlock and a compact marching drum. Emphasize liberation and outward motion without a continent silhouette. Palette: black cloth, steel silver, warm dark timber, restrained leather brown. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_mother_anarchy",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_militias",
+      "kind": "spirit",
+      "title": "Archonate Militias",
+      "brief": "A village alarm bell above a simple wicker protective shield and a loosely rolled service strap; practical local defence, no Maar emblem at this early stage. Palette: weathered bronze, wicker tan, dark brown leather, muted stone grey. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_militias",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_militias_2",
+      "kind": "spirit",
+      "title": "Paramilitary Organisation",
+      "brief": "A disciplined rack of three matching plain steel shields with one neatly tightened service belt, keeping the earlier militia bell as a small secondary motif. Palette: dark steel, charcoal leather, muted violet cloth, worn bronze bell. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_militias_2",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_one_language",
+      "kind": "spirit",
+      "title": "The Imperial Dialect",
+      "brief": "An open pronunciation primer with a simple beak-and-sound-wave teaching diagram, pressed beneath a heavy correction stamp beside a rigid school ruler. No lettering or invented state symbol. Palette: ivory paper, oxblood binding, dark iron stamp, warm wooden ruler. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_one_language",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_the_idol",
+      "kind": "spirit",
+      "title": "The Idol of Maar",
+      "brief": "A half-open dark reliquary enclosing a veiled angular stone idol, the lid has simple architectural recessed panels without a coat of arms. Conceal the deity's body beneath dark cloth rather than inventing its anatomy. Obsidian stone, tarnished silver, restrained violet light contained inside the reliquary.",
+      "targets": [
+        {
+          "id": "AET_the_idol",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_militias_3",
+      "kind": "spirit",
+      "title": "Warriors of Maar",
+      "brief": "A single imposing blackened shield and upright ritual spear wrapped in violet cloth, with the old militia bell now hanging beneath as a small relic. No skull pile, blood or invented divine crest. Palette: blackened iron, deep violet cloth, cold silver edge, aged bronze bell. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_militias_3",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_slavery",
+      "kind": "spirit",
+      "title": "Slave Labour",
+      "brief": "A heavy closed shackle chained to a worn quarry hammer and squared stone block. Use oppressive weight and wear; no prisoners or explicit injury. Palette: dull iron, cold grey stone, dusty umber, tiny rust accents. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_slavery",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_one_will",
+      "kind": "spirit",
+      "title": "The Will of Maar",
+      "brief": "A tall black iron command staff with a plain violet faceted crystal at its top, three taut cords drawing smaller iron weights into rigid alignment. No runes, religious symbols or invented coat of arms. Obsidian black, cold silver and controlled deep violet.",
+      "targets": [
+        {
+          "id": "AET_one_will",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_mechanise_agriculture",
+      "kind": "spirit",
+      "title": "Mechanised Agriculture",
+      "brief": "A clearly readable early tractor's rear wheel and plough assembly, accompanied by a short bundle of harvested grain. Palette: faded agricultural green, dark rubber, weathered steel, wheat ochre. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_mechanise_agriculture",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_oil_production",
+      "kind": "spirit",
+      "title": "The Black Country",
+      "brief": "A compact pumpjack silhouette lifting above two connected oil drums, with a small copper valve in the foreground. Palette: oil-black, dark steel, rusty red pump beam, copper valve highlights. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_oil_production",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_recylce_muskets",
+      "kind": "spirit",
+      "title": "Rifle Modernisation",
+      "brief": "An old wooden rifle receiver secured in a workshop vise beside a separate replacement breech and one clean cartridge; emphasize mechanical refurbishment, not a complete firing weapon. Palette: walnut stock, steel grey, brass cartridge, worn charcoal vise. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_recylce_muskets",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_exclude_scientists",
+      "kind": "spirit",
+      "title": "Scientists Exempted from Military Service",
+      "brief": "A laboratory microscope protected beneath a glass bell jar, with a folded military service envelope left outside the glass. No rifle-manufacturing imagery. Palette: clear blue-grey glass, ivory paper, black microscope body, small brass adjustments. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_exclude_scientists",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_heaven",
+      "kind": "spirit",
+      "title": "Intellectual Haven",
+      "brief": "A travel trunk opened into a small scholarly desk, with a geometry book and glowing study lamp; natural material colors distinguish it from a military academy. Palette: warm walnut, ivory pages, muted blue travel cloth, amber lamplight. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_heaven",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_immigration",
+      "kind": "spirit",
+      "title": "Loose Immigration Laws",
+      "brief": "An open county doorway with three differently shaped travel cases passing inward and a plain welcome lantern above. No invented foreign flags. Palette: honey-brown wood, muted teal and burgundy cases, ivory stone, warm amber light. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_immigration",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_changeling_scientists",
+      "kind": "spirit",
+      "title": "Changeling Scientists",
+      "brief": "A laboratory microscope with a translucent cyan insect-wing specimen slide and a compact chemistry flask. The wing belongs to the specimen, not a human or invented national crest. Palette: charcoal apparatus, pale cyan glass, desaturated green liquid, small brass fixtures. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_changeling_scientists",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_ratlines",
+      "kind": "spirit",
+      "title": "Bug Tunnels",
+      "brief": "A worn travel passport with a clearly drawn insect-to-feather identity diagram, an offset ink stamp and a coiled false moustache prop; no readable text or fake official coat of arms. Palette: faded navy cover, ivory paper, dark burgundy ink, black disguise prop. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_ratlines",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_officer_core",
+      "kind": "spirit",
+      "title": "Changeling Officer Core",
+      "brief": "A tightly rolled operations map and field telephone beside a dark officer's cap showing a discreet teal lining under its plain exterior. No invented rank badge. Palette: field grey, black leather, parchment tan, restrained teal lining. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_officer_core",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_aether_travel_idea",
+      "kind": "spirit",
+      "title": "Aether Travel",
+      "brief": "A small stone arch opening into a curved violet passage, with a single supply crate halfway through and a visible short path on both sides. Palette: cold slate, deep violet, pale lilac glow, weathered crate brown. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_aether_travel_idea",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_hellfire_forge_idea",
+      "kind": "spirit",
+      "title": "The Hellfire Forge",
+      "brief": "A compact enclosed furnace with mechanically linked tongs and an emerging metal billet, violet fire visible only inside its mouth. No bodies, sacrifices on-screen or borrowed franchise insignia. Palette: black iron, violet furnace light, heated copper-orange billet, cold steel mechanisms. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_hellfire_forge_idea",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_raise_dead_idea",
+      "kind": "spirit",
+      "title": "The Dead Shall Serve",
+      "brief": "An empty dented service helmet rising from a shallow broken stone slab in a cold violet aura, with a silent hanging service tag. No human skull or graphic corpse. Palette: grave-stone grey, tarnished iron, muted violet glow, pale dust. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_raise_dead_idea",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_madness_and_despair",
+      "kind": "spirit",
+      "title": "Visions of Madness",
+      "brief": "A fractured field compass whose needle points in several impossible directions, backed by a cracked smoked-glass lens showing warped concentric rings. Palette: smoked charcoal glass, desaturated steel, sickly pale violet, faint rust-brown. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_madness_and_despair",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_the_weak",
+      "kind": "spirit",
+      "title": "Cull the Weak",
+      "brief": "A cold extinguished household lantern beside a census bead rail with conspicuous missing beads, crossed by the shadow of a heavy official stamp. No victims or gore. Palette: ash grey, dull black iron, faded ivory beads, restrained dark violet shadow. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_the_weak",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_blessing_of_war_god",
+      "kind": "spirit",
+      "title": "Blessing of War",
+      "brief": "A ceremonial steel spearhead laid across a protective shield while violet incense coils tightly around their edges; no new religious symbol. Palette: cold silver, blue-black steel, deep violet smoke, sparse bronze fittings. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_blessing_of_war_god",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    },
+    {
+      "id": "native_blessing_of_production_god",
+      "kind": "spirit",
+      "title": "Blessing of Diligence",
+      "brief": "A well-used industrial hammer striking a bright fitted gear, with a small censer giving off one controlled violet ribbon of smoke. Palette: dark steel, natural brass gear, warm copper sparks, deep violet incense. Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune.",
+      "targets": [
+        {
+          "id": "AET_blessing_of_production_god",
+          "file": "EaW/common/ideas/zzz_AET_ideas.txt"
+        }
+      ]
+    }
+  ]
+}

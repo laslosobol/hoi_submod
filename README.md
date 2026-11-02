@@ -5,6 +5,36 @@ retain the historical `HoISubmod` / `HSM` prefix.
 
 Current release: **0.6.0**. See [PATCH_NOTES.md](PATCH_NOTES.md) for release history.
 
+In development: **Aquileian Provinces** — Rila, Westkeep, Pridea and Vinovia.
+Pre-revolution politics use EaW's original regional decisions and movements.
+Each region receives one read-only split bar adapted from Aquileia's influence display.
+After the revolution, native allegiances and the surviving movements' influence
+lead into provincial settlements and fifteen postwar programmes, choosing between backing
+an existing national movement and fighting for leadership of Aquileia. A national
+settlement, optional restoration of the native movement, common reconstruction and
+peripheral accession extend the campaign. The regional tree contains 265 authored
+focuses, including twelve distinct economic, military and civic focuses per path
+and four local foundations per region. The 44 copied generic focuses are removed.
+The 112 event definitions include 45 new narrative scenes and inert compatibility
+events. Central incorporation now gives one direct choice: join the incumbent
+government or refuse and immediately fight for national leadership. Matching EN/RU
+text uses native effect previews. No new artwork or player resource meters were added.
+See [expanded campaign and test notes](docs/AQUILEIAN_POSTWAR_CAMPAIGNS.md).
+Use `python -B -X utf8 tools/Test-AquileianRegions.py --eaw EaW` and
+`python -B -X utf8 tools/Build-AquileianRegions.py --check` for source validation.
+Campaign and transition regressions: `tools/Test-AquileianCampaigns.py` and
+`tools/Test-AquileianTransition.py`. Source scenarios do not replace HOI4 playtests.
+
+In development: **Greifwald — Debt to the Crown**. The pragmatic county gains a
+Grover guardianship and independent Herzland restoration, a treaty union after
+his confirmed death, and a four-focus identity crisis when Trimmel impersonates
+Cloudet. The programme adds no continental war goals or player resource meters
+and includes 31 new focus icons and 41 national-spirit icons. Native focus art
+and portraits are preserved. See the [implementation contract](docs/GREIFWALD_IMPLEMENTATION.md)
+and [art register](art/greifwald/README.md).
+Use `python tools/Test-Greifwald.py --eaw EaW` for the source scenario suite and
+`python tools/Build-Greifwald.py --check` for generated-source consistency.
+
 The playable mod root is:
 
 ```text

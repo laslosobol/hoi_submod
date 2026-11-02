@@ -1,0 +1,1391 @@
+{
+  "tag": "VIN",
+  "foundations": [
+    {
+      "slot": "f1",
+      "title": [
+        "The Carts Before Dawn",
+        "Телеги до рассвета"
+      ],
+      "desc": [
+        "Before the cafés open, carts squeeze past Vinovia's market stalls with flour, vegetables and timber. A blocked culvert can delay half a district's deliveries. The road keepers know which stretches fail first, although nobody has asked them together. Bringing their repairs onto one schedule will give the morning market a chance to begin before the arguments do.",
+        "До открытия кафе телеги с мукой, овощами и лесом протискиваются мимо виновийских торговых рядов. Забитая водосточная труба способна задержать подвоз для половины округа. Дорожные смотрители знают, какие участки первыми становятся непроходимыми, но прежде их никогда не собирали вместе. Общий порядок ремонта позволит утреннему рынку открываться вовремя, прежде чем торговцы опять начнут спорить из-за опоздавшего товара."
+      ],
+      "days": 35,
+      "reward": "infrastructure"
+    },
+    {
+      "slot": "f2",
+      "title": [
+        "Both Names for the Street",
+        "Оба названия улицы"
+      ],
+      "desc": [
+        "A visitor's letter has circled the town because the street on its envelope bears one name in official records and another in everyday Vinovian speech. Postmasters, midwives and market clerks will compare the names they actually use. A directory made from their corrections should help a messenger find the right door without first finding someone to translate it.",
+        "Письмо приезжего обошло весь город: указанная на конверте улица носит одно название в официальных книгах и другое в повседневной речи виновийцев. Почтмейстеры, повитухи и рыночные писари сопоставят названия, которыми действительно пользуются. Справочник с их поправками поможет посыльному найти нужную дверь, даже если поблизости не окажется никого, кто мог бы объяснить ему местное название переулка."
+      ],
+      "days": 35,
+      "reward": "pp50"
+    },
+    {
+      "slot": "f3",
+      "title": [
+        "The Gunsmiths' Shared Bench",
+        "Общий верстак оружейников"
+      ],
+      "desc": [
+        "Vinovia's gunsmiths inherit weapons as readily as their customers inherit family stories. A rifle awaiting a spring may lie beside another whose stock alone remains sound. The garrison armourer proposes an afternoon when private workshops bring their repairable pieces together. Experienced claws can recover serviceable weapons from these mismatched heaps without waiting for an entirely new consignment.",
+        "Виновийские оружейники получают старое оружие так же часто, как их заказчики наследуют семейные предания. Рядом с винтовкой без пружины лежит другая, у которой уцелел только приклад. Гарнизонный мастер предлагает собрать ремонтопригодные детали из частных мастерских за общим верстаком. Опытные когти смогут вернуть оружие в строй, пока очередная новая партия ещё находится где-то в пути."
+      ],
+      "days": 35,
+      "reward": "rifles500"
+    },
+    {
+      "slot": "f4",
+      "title": [
+        "A Wagon Through Every Gate",
+        "Телега пройдёт в любые ворота"
+      ],
+      "desc": [
+        "A supply wagon that passes the barracks gate may still stick beneath the arch of a village granary. Vinovia's quartermasters will walk their routes with the carters who know those obstacles by heart. Loading drills beside the actual bridges and storehouses should expose mistakes while a spilled sack remains an embarrassment rather than a hungry company's only supper.",
+        "Обозная телега проходит в казарменные ворота, но застревает под аркой деревенского амбара. Виновийские квартирмейстеры пройдут свои маршруты вместе с возчиками, которые наизусть помнят каждое препятствие. Учебная погрузка у настоящих мостов и складов выявит ошибки заранее, пока рассыпанный мешок означает лишь неловкость перед товарищами, а не потерю единственного ужина для целой роты, ожидающей подвоза вдали от казарм."
+      ],
+      "days": 35,
+      "reward": "army_xp20"
+    }
+  ],
+  "routes": [
+    {
+      "id": "VIN_gadiffer",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "Rent Receipts under the Ducal Seal",
+            "Рентные расписки под герцогской печатью"
+          ],
+          "desc": [
+            "Gadiffer's tenants arrive with receipts that his estate managers have never entered in their books. Some paid in grain; others repaired a mill in place of rent. The duke orders these obligations reconciled before another demand leaves his household. Royal loyalty will have firmer roots if the Discret name on a receipt means the debt has truly been paid.",
+            "Арендаторы Гадиффера приносят расписки, которых управляющие его владений не внесли в книги. Одни платили зерном, другие вместо ренты чинили мельницу. Герцог велит сверить обязательства прежде, чем из его дома отправится очередное требование. Верность короне обретёт более прочные корни, если имя Дискретов на расписке будет означать, что долг действительно погашен и его не потребуют снова."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "Grain against the Palace Silver",
+            "Зерно под залог дворцового серебра"
+          ],
+          "desc": [
+            "Merchants will advance grain against Gadiffer's credit, but his steward offers the tenants' next harvest as security. The duke puts household silver on the table instead. Royal standing can open a merchant's warehouse; someone must still bear the risk of a poor season. Vinovia's estate economy will have to discover how far paternal duty reaches into the palace itself.",
+            "Купцы готовы отпустить зерно в долг Гадифферу, однако управляющий предлагает заложить будущий урожай арендаторов. Герцог вместо этого выкладывает дворцовое серебро. Высокое происхождение способно открыть купеческий амбар, но риск неурожая всё равно должен принять кто-то определённый. Хозяйству виновийских поместий предстоит выяснить, насколько далеко отеческая забота распространяется на собственное имущество герцога и привычный достаток его придворных."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Leases for the Millwrights",
+            "Аренда для мельничных мастеров"
+          ],
+          "desc": [
+            "The old estate mill needs machinery its hereditary keeper cannot afford. Gadiffer invites millwrights to lease the workshop on terms that recognise repairs as investment rather than unpaid service. The keeper protests that strangers will inherit his father's place. A written lease must preserve the craft without preserving a broken wheel merely because a familiar family owns it.",
+            "Старой поместной мельнице нужны механизмы, которые её потомственный смотритель не может купить. Гадиффер приглашает мастеров арендовать мастерскую на условиях, признающих ремонт вложением, а не бесплатной повинностью. Смотритель возражает: чужаки займут место его отца. Письменная аренда должна сохранить ремесло, не обрекая всех соседей пользоваться сломанным колесом только потому, что оно принадлежит хорошо знакомому семейству."
+          ],
+          "days": 49,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "The Crown's Purchase Book",
+            "Закупочная книга короны"
+          ],
+          "desc": [
+            "Provincial suppliers have learned to distrust an order bearing a grander seal than its issuer can honour. Gadiffer brings Vinovia's settled accounts to the national purchasing office and asks the crown to bind its buyers to the same discipline. His family name secures the hearing. The suppliers waiting outside will judge the outcome by whether the next invoice is paid.",
+            "Провинциальные поставщики привыкли не доверять заказам, чья пышная печать надёжнее платёжных обещаний заказчика. Гадиффер приносит сверенные виновийские счета в общегосударственную закупочную контору и просит корону обязать покупателей соблюдать тот же порядок. Родовое имя открывает ему дверь. Поставщики, ожидающие снаружи, оценят результат по тому, оплатят ли следующий счёт, не заставляя их снова искать влиятельного заступника."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "A Household Bound to Its Word",
+            "Дом, отвечающий за своё слово"
+          ],
+          "desc": [
+            "An estate once advertised its wealth through the number of guests it could feed. Gadiffer wants his household known for the contracts it can honour through an uncertain season. Surveyors and builders return to works abandoned after earlier promises failed. The duke's example reaches the crown through completed foundations, carrying a quieter claim to authority than another banquet.",
+            "Прежде богатство поместья измеряли числом гостей, которых оно могло накормить. Гадиффер хочет, чтобы его дом знали по обязательствам, исполняемым даже в трудный год. Землемеры и строители возвращаются к работам, оставленным после прежних нарушенных обещаний. Пример герцога дойдёт до короны вместе с завершёнными постройками, подкрепляя его авторитет убедительнее, чем очередной роскошный пир для придворных."
+          ],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "Service beneath the Family Standard",
+            "Служба под родовым знаменем"
+          ],
+          "desc": [
+            "The ducal standard attracts volunteers who know the Discret name better than the duties of a soldier. Gadiffer asks Robert Niverolle to turn their attachment into dependable service. Muster rolls will record trades and previous experience beside family names. A loyal regiment must have room for the carter who can keep it moving as well as the noble who carries its colours.",
+            "Герцогское знамя привлекает добровольцев, которым имя Дискретов знакомо лучше солдатских обязанностей. Гадиффер просит Роберта Ниверолле превратить привязанность к роду в надёжную службу. В списках рядом с именами появятся прежний опыт и ремесло новобранцев. Верному полку нужен возчик, способный обеспечить движение обоза, не меньше, чем дворянин, которому доверят нести его знамя перед строем."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Measure the Gun Teams",
+            "Проверить орудийные расчёты"
+          ],
+          "desc": [
+            "Niverolle watches a battery perform a splendid salute and then struggle to move its pieces away. He orders the next inspection held on an ordinary road with ammunition wagons attached. Gadiffer's officers must show how their guns reach the position they promise to defend. The spectators can wait until the teams have learned to finish the journey.",
+            "Ниверолле наблюдает великолепный салют батареи, после которого расчёты с трудом увозят орудия. Следующий смотр он назначает на обычной дороге, вместе с зарядными повозками. Офицерам Гадиффера придётся показать, как пушки достигнут позиций, которые они обещают защитить. Зрители могут подождать: прежде чем устраивать новое представление, расчётам следует научиться доводить до конца самый обыкновенный переход."
+          ],
+          "days": 42,
+          "reward": "research_artillery"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Bread before the Parade",
+            "Хлеб прежде парада"
+          ],
+          "desc": [
+            "The regiment's parade route crosses a district already supplying its field kitchens. Niverolle proposes scheduled deliveries in place of officers arriving whenever a store runs empty. Gadiffer requires the schedule to respect the harvest work his tenants cannot postpone. The resulting supply arrangements will be tested by hungry soldiers, tired carters and a colonel accustomed to being served first.",
+            "Маршрут полкового парада проходит через округ, который уже снабжает его полевые кухни. Ниверолле предлагает регулярный подвоз вместо внезапных приездов офицеров к опустевшим складам. Гадиффер требует учитывать уборку урожая, которую арендаторы не могут отложить. Новому порядку предстоит выдержать встречу с голодными солдатами, усталыми возчиками и полковником, привыкшим неизменно получать всё необходимое раньше остальных."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "A Ducal Battery for Common Service",
+            "Герцогская батарея на общей службе"
+          ],
+          "desc": [
+            "The national command requests batteries that can exchange ammunition and reports without exchanging their loyalties. Gadiffer offers a Vinovian workshop to produce fittings to the common specification. Niverolle brings worn pieces for the craftsmen to examine. Serving the crown beyond the duchy now means accepting that another province's gun crew may need to use what our own has made.",
+            "Общее командование просит батареи, способные обмениваться боеприпасами и донесениями, сохраняя свою верность. Гадиффер предлагает виновийскую мастерскую для изготовления деталей по общему образцу. Ниверолле приносит мастерам изношенные части орудий. Служба короне за пределами герцогства теперь требует признать, что изделиями наших оружейников будет пользоваться расчёт из другой провинции, которому незнакомы местные привычки и названия деталей."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "Officers Who Answer to Their Men",
+            "Офицеры перед своими солдатами"
+          ],
+          "desc": [
+            "Gadiffer has listened to enough disputes over carts to recognise the same excuses in a regimental complaint. Niverolle will assemble the officers to examine failures of supply and command together. A commission remains an honour bestowed in the crown's name, but its bearer must explain what happened to the soldiers entrusted to him when the written arrangements broke down.",
+            "Гадиффер выслушал достаточно споров об обозах, чтобы узнать знакомые оправдания в полковой жалобе. Ниверолле соберёт офицеров для совместного разбора сбоев снабжения и командования. Патент остаётся честью, дарованной от имени короны, однако его обладателю придётся объяснить, что произошло с доверенными ему солдатами, когда письменные распоряжения перестали действовать и решение нужно было принимать на месте."
+          ],
+          "days": 49,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Widows at the Estate Door",
+            "Вдовы у ворот поместья"
+          ],
+          "desc": [
+            "The families of royal volunteers bring the palace letters written by men who will never return. Gadiffer's steward can identify the signatures but finds no provision for the children waiting beside their mothers. The duke sets aside estate income for their upkeep. His household must learn to recognise an obligation that continues after a soldier's name leaves the muster roll.",
+            "Семьи королевских добровольцев приносят во дворец письма тех, кто уже не вернётся домой. Управляющий Гадиффера узнаёт подписи, но не находит никаких распоряжений о детях, ожидающих рядом с матерями. Герцог отводит часть поместных доходов на их содержание. Его дому предстоит признать обязательство, которое сохраняется и после того, как имя солдата исчезает из полкового списка."
+          ],
+          "days": 35,
+          "reward": "poverty"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "Vinovia's Voice beside the Crown",
+            "Голос Виновии рядом с короной"
+          ],
+          "desc": [
+            "Gadiffer's place in national deliberations brings visitors who have never owed rent to his household. They want to know whether his protection depends on that connection. The duke asks them to present their complaints alongside Vinovia's. He will argue for his province within the royal settlement, but kinship with the sovereign cannot make every other province a petitioner at his gate.",
+            "Место Гадиффера в общих совещаниях приводит к нему посетителей, никогда не плативших ренту его дому. Они хотят знать, зависит ли защита от этой связи. Герцог просит представить жалобы рядом с виновийскими. Он намерен отстаивать интересы своей провинции при короне, однако родство с государем не должно превращать все остальные области в просителей у его ворот."
+          ],
+          "days": 42,
+          "reward": "pp75"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Duke's Settled Accounts",
+              "Сверенные счета герцога"
+            ],
+            "desc": [
+              "Recognised receipts let estate workshops plan their work without fearing that an old demand will return.",
+              "Признанные расписки позволяют поместным мастерским планировать работу без опасения, что старое требование вернётся."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Silver behind the Promise",
+              "Серебро за обещанием"
+            ],
+            "desc": [
+              "Gadiffer's household guarantees the agreements that keep tenants and millwrights at work.",
+              "Дом Гадиффера поручается за соглашения, позволяющие арендаторам и мельничным мастерам продолжать работу."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.05,
+              "consumer_goods_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Credit of the Discret Household",
+              "Кредит дома Дискретов"
+            ],
+            "desc": [
+              "The duke's reputation rests on paid suppliers and completed works, making personal patronage answerable to its commitments.",
+              "Репутацию герцога поддерживают оплаченные поставки и завершённые постройки: личное покровительство обязывает выполнять обещания."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.1,
+              "consumer_goods_factor": -0.05,
+              "production_speed_buildings_factor": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "The Ducal Muster",
+              "Герцогский сбор"
+            ],
+            "desc": [
+              "Loyal volunteers learn to serve beside strangers beneath a familiar family standard.",
+              "Верные добровольцы учатся служить рядом с незнакомцами под привычным родовым знаменем."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Regiment's Provision Book",
+              "Книга полкового довольствия"
+            ],
+            "desc": [
+              "Niverolle's supply arrangements bind officers to deliveries their supporting villages can actually make.",
+              "Порядок Ниверолле обязывает офицеров рассчитывать на поставки, которые снабжающие полк деревни действительно могут обеспечить."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.05,
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "Commissions Kept in Good Faith",
+              "Честно исполненные патенты"
+            ],
+            "desc": [
+              "Ducal officers preserve the pride of royal service by answering for the men and stores placed in their care.",
+              "Герцогские офицеры поддерживают честь королевской службы, отвечая за доверенных им солдат и припасы."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.1,
+              "supply_consumption_factor": -0.05
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Last Silver Dish",
+            "Последнее серебряное блюдо"
+          ],
+          "desc": [
+            "The merchant turns Gadiffer's silver dish over and examines the family mark before naming his price. Beside him, a tenant holds a sack of seed grain that she has brought as proof of what the villages cannot spare. The steward objects that selling the dish will feed the district only once. Lending against the coming harvest would preserve the household's standing and keep the arrangement open.\n\nGadiffer asks whose standing survives if the harvest fails. The merchant replies that he sells grain, not confidence. He will release the carts on either security, but the duke must choose where they go first.\n\nOne consignment could reopen the market kitchens before evening. Another could provision the volunteers waiting at the barracks and allow their farmhands to return home. Both requests bear names the duke recognises. He pushes the dish across the table and asks the tenant which road is still passable.",
+            "Купец переворачивает серебряное блюдо Гадиффера и рассматривает родовое клеймо, прежде чем назвать цену. Рядом арендаторша держит мешок посевного зерна: она принесла его показать, чем деревни не могут пожертвовать. Управляющий возражает, что продажа блюда накормит округ лишь однажды. Заём под будущий урожай позволит сохранить положение герцогского дома и обращаться за помощью снова.\n\nГадиффер спрашивает, чьё положение уцелеет, если урожай погибнет. Купец отвечает, что продаёт зерно, а не уверенность. Он отпустит телеги под любой из предложенных залогов, но герцогу придётся решить, куда отправить их прежде всего.\n\nОдна партия позволит вновь открыть рыночные кухни уже к вечеру. Другая обеспечит добровольцев, ожидающих у казарм, и даст возможность вернуть домой занятых при них батраков. На обоих прошениях стоят знакомые герцогу имена. Он придвигает блюдо к купцу и спрашивает арендаторшу, какая дорога ещё проходима. Та ставит мешок на пол и просит принести карту: дворцовый писарь отметил мост, которого больше нет."
+          ],
+          "options": [
+            {
+              "title": [
+                "Send the grain to the market kitchens.",
+                "Отправить зерно в рыночные кухни."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Provision the volunteers and release their farmhands.",
+                "Обеспечить добровольцев и отпустить их батраков."
+              ],
+              "reward": "manpower1500"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Colonel's Empty Bread Bin",
+            "Пустой хлебный ящик полковника"
+          ],
+          "desc": [
+            "Robert Niverolle finds the colonel inspecting an empty bread bin while the village carters unload at the wrong storehouse. The supply schedule bears the colonel's signature. He admits that he moved the field kitchens for a parade without informing the men bringing their flour. Now he wants Gadiffer to order an immediate requisition from the nearest farms.\n\nThe duke arrives with the carter who has already made the journey twice. Niverolle lays the schedule on the bread bin. Someone must accompany the carts, verify the unloading and report the changed route; no signature will do that work alone.\n\nThe colonel offers his junior officers for the task. The carter proposes pairing them with villagers who know every yard and can recruit neighbours for regular transport. Gadiffer can make this an officers' practical exercise or sponsor a civilian transport party. Either will fill the bin. The choice is who learns to prevent it becoming empty again.",
+            "Роберт Ниверолле застаёт полковника возле пустого хлебного ящика, пока деревенские возчики разгружаются у другого склада. На расписании подвоза стоит подпись самого полковника. Он признаёт, что перевёл полевые кухни ради парада и не предупредил тех, кто вёз муку. Теперь он хочет, чтобы Гадиффер распорядился немедленно взять продовольствие у ближайших крестьян.\n\nГерцог приезжает с возчиком, который уже дважды проделал этот путь. Ниверолле кладёт расписание на хлебный ящик. Кому-то придётся сопровождать телеги, проверить разгрузку и сообщить об изменившемся маршруте; одна подпись этой работы не сделает.\n\nПолковник предлагает отправить младших офицеров. Возчик советует дать им в спутники местных жителей, знающих каждый двор и способных собрать соседей для постоянного подвоза. Гадиффер может устроить практические занятия для офицеров либо поддержать гражданскую обозную команду. Оба решения наполнят ящик. Вопрос в том, кто научится не допускать новой задержки. Ниверолле поднимает испачканное расписание и просит полковника самому показать дорогу к новому складу."
+          ],
+          "options": [
+            {
+              "title": [
+                "Send the officers with the carts.",
+                "Отправить офицеров вместе с телегами."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Recruit a village transport party.",
+                "Набрать деревенскую обозную команду."
+              ],
+              "reward": "manpower1500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "A Petition without Our Seal",
+            "Прошение без нашей печати"
+          ],
+          "desc": [
+            "Gadiffer recognises the handwriting of his Vinovian steward before he notices the second petition beneath it. Both concern dependants of soldiers who served the crown. The first has the duchy's seal and a careful recommendation. The second comes from another province, with witness statements folded around a child's drawing of a missing parent.\n\nThe royal office offers a public hearing, but the second delegation cannot afford another long journey. Gadiffer's secretary suggests taking the Vinovian case first; the duke knows those witnesses and could settle it quickly. The other petition may require embarrassing questions about a royal officer's promises.\n\nGadiffer sets the papers side by side. His kinship has carried them into this room, but it cannot decide which family deserves an answer. He can pay to bring both delegations before the royal office. Or he can secure authority for travelling advocates to collect testimony in both districts and present their cases together.",
+            "Гадиффер узнаёт почерк своего виновийского управляющего прежде, чем замечает второе прошение под первым. Оба касаются семей солдат, служивших короне. Первое скреплено печатью герцогства и снабжено обстоятельной рекомендацией. Второе пришло из другой провинции: свидетельские показания обёрнуты вокруг детского рисунка с изображением пропавшего родителя.\n\nКоролевская канцелярия предлагает открытое слушание, но второй делегации не по средствам ещё одна долгая поездка. Секретарь советует сначала заняться виновийским делом: герцог знает свидетелей и быстро разберётся. Другое прошение потребует неудобных вопросов об обещаниях королевского офицера, которого пока никто не вызвал для объяснений.\n\nГадиффер кладёт бумаги рядом. Родство помогло ему внести их в эту комнату, но не позволяет решить, какая семья больше заслуживает ответа. Он может оплатить приезд обеих делегаций в королевскую канцелярию. Либо добьётся полномочий для разъездных поверенных, которые соберут показания в обоих округах и представят дела вместе. Герцог велит пока оставить оба прошения у него, чтобы ни одно не вернулось обратно без ответа."
+          ],
+          "options": [
+            {
+              "title": [
+                "Bring both delegations before the royal office.",
+                "Привезти обе делегации в королевскую канцелярию."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Secure a joint hearing through travelling advocates.",
+                "Добиться общего слушания через разъездных поверенных."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VIN_abc",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Workshop Holds the Keys",
+            "Ключи остаются у мастерской"
+          ],
+          "desc": [
+            "The owner has left, but the workers still know which bearing overheats and which customer owes for last winter's repairs. ABC organisers propose putting the workshop under its crew's elected management. The first meeting must settle who purchases materials and who answers for a spoiled order. Taking down the old sign is easier than keeping the doors open tomorrow.",
+            "Хозяин уехал, но рабочие помнят, какой подшипник перегревается и кто задолжал за прошлогодний ремонт. Организаторы ABC предлагают передать мастерскую выборному управлению её работников. Первому собранию предстоит решить, кто закупает материалы и кто отвечает за испорченный заказ. Снять старую вывеску проще, чем обеспечить работу завтра, когда за дверью снова появятся заказчики с поломанными инструментами."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "Wages from the Cooperative Till",
+            "Заработок из кооперативной кассы"
+          ],
+          "desc": [
+            "A student proudly presents the cooperative's first accounts until a machinist asks where the unpaid apprentices appear. They have shared every emergency without sharing a wage. The ABC committee will bring the apprentices into the discussion of earnings and reserves. Equality must survive an evening when paying someone fairly means postponing a purchase that everyone wants.",
+            "Студент гордо показывает первые кооперативные счета, пока машинист не спрашивает, где учтены неоплаченные ученики. Они пережили все авралы, но заработка не получили. Комитет ABC включит их в обсуждение выплат и запасов. Равенству предстоит выдержать вечер, когда справедливое вознаграждение одному работнику означает отсрочку покупки, которой ждут все остальные, включая тех, кто громче всего призывал делиться."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "A Lathe Bought Together",
+            "Станок, купленный сообща"
+          ],
+          "desc": [
+            "Several small cooperatives can afford a modern lathe only by buying it together. Each wants it installed in its own workshop, close to familiar hands. ABC delegates bring the crews around the same table to arrange shifts and upkeep. Their argument for social ownership will acquire a working spindle, or fail over whose doorway the machine should enter.",
+            "Несколько небольших кооперативов могут позволить себе современный станок, только купив его сообща. Каждый хочет поставить машину в своей мастерской, поближе к знакомым работникам. Делегаты ABC собирают коллективы за одним столом, чтобы договориться о сменах и ремонте. Доводы в пользу общественной собственности обретут работающий шпиндель либо разобьются о спор, через чью дверь следует внести покупку."
+          ],
+          "days": 49,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "Delegates from the Shop Floor",
+            "Делегаты от станков"
+          ],
+          "desc": [
+            "The national economic conference has reserved seats for the cooperatives, but the ABC founders cannot fill them all with university friends. Workshop crews will send delegates carrying their own proposals for shared purchasing and credit. Vinovia's example must become something others can revise. The students will have to defend their calculations before workers who already know what a failed delivery costs.",
+            "На общегосударственном хозяйственном совещании предусмотрены места для кооперативов, но основатели ABC не могут занять их одними университетскими друзьями. Мастерские направят делегатов с собственными предложениями об общих закупках и кредите. Пример Виновии должен стать доступным для чужих поправок. Студентам предстоит защищать расчёты перед рабочими, которые уже знают цену сорванной поставке и не согласны снова оплачивать её последствия."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "The Laboratory after the Shift",
+            "Лаборатория после смены"
+          ],
+          "desc": [
+            "The cooperative's evening visitors bring cracked castings and oilstained notebooks into a university laboratory. Their questions have survived several dismissive answers from scholars who never watched the machines work. ABC organisers arrange a permanent place for these investigations. Knowledge made with working people can travel beyond Vinovia without arriving as another lecture on what their lives ought to be.",
+            "Вечерние посетители кооператива приносят в университетскую лабораторию треснувшие отливки и замасленные тетради. Их вопросы пережили несколько пренебрежительных ответов учёных, которые никогда не видели эти машины в работе. Организаторы ABC добиваются постоянного места для таких исследований. Знание, созданное вместе с рабочими, сможет выйти за пределы Виновии, не превращаясь в очередную лекцию о том, как им следует жить."
+          ],
+          "days": 56,
+          "reward": "research_slot"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "The Barricade Becomes a Company",
+            "Баррикада становится ротой"
+          ],
+          "desc": [
+            "The ABC volunteers remember who stood beside them at the barricade, but their company rolls still contain café nicknames and abandoned addresses. Guillaume Boucarle asks the organisers to assemble the survivors by actual duties. Comradeship will remain precious in the new army. It must also tell a replacement where to report when the familiar face beside him is missing.",
+            "Добровольцы ABC помнят товарищей по баррикаде, но в ротных списках по-прежнему стоят прозвища из кафе и покинутые адреса. Гийом Букарле просит организаторов распределить уцелевших бойцов по настоящим обязанностям. Товарищество сохранит значение в новой армии. Оно должно также помочь новобранцу понять, куда обращаться, если привычного лица рядом не окажется и прежние устные договорённости перестанут работать."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Lessons beside the Sand Table",
+            "Занятия у ящика с песком"
+          ],
+          "desc": [
+            "An ABC lecturer explains a splendid advance across the sand table until a veteran asks where the wounded go. Boucarle makes the class repeat the exercise with stretcher parties and tired messengers. Those who learned courage in the streets must acquire the patience of infantry work. The best lesson may come from someone who never finished a school term.",
+            "Лектор ABC описывает блестящее наступление на песчаном макете, пока ветеран не спрашивает, куда понесут раненых. Букарле заставляет повторить упражнение с санитарами и уставшими связными. Тем, кто научился храбрости на улицах, предстоит освоить терпеливую пехотную работу. Лучший урок вполне может дать товарищ, который не окончил даже одного учебного года, зато вынес раненого из настоящего боя."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Cadres from Every Shift",
+            "Командиры из каждой смены"
+          ],
+          "desc": [
+            "Evening training has filled with machinists, porters and students who cannot leave work for a lengthy residential course. Jean-Baptiste Jules Gélinotte-des-Bois brings instructors to examine what they can learn locally. The ABC council wants opportunity without inherited privilege. It must now give its candidates enough practice to make an unfamiliar platoon trust them when an exercise begins to unravel.",
+            "Вечерние занятия посещают машинисты, грузчики и студенты, которым нельзя надолго оставить работу ради казарменного курса. Жан-Батист Жюль Желинот-де-Буа привозит инструкторов выяснить, чему их можно научить на месте. Совет ABC хочет открыть путь способным людям независимо от происхождения. Теперь кандидатам нужна практика, благодаря которой незнакомый взвод доверится им, даже когда учебный замысел начнёт разваливаться."
+          ],
+          "days": 49,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "The Arsenal's Elected Committee",
+            "Выборный комитет арсенала"
+          ],
+          "desc": [
+            "A national arms order reaches a cooperative whose members once repaired barricade weapons in borrowed rooms. They elect a committee to oversee the expanded arsenal and ask Boucarle's inspectors to explain rejected pieces before the whole shift. Workers' control cannot make a defective breech safe. It can ensure that the maker hears the soldier's complaint without an owner speaking for both.",
+            "Общегосударственный оружейный заказ приходит в кооператив, участники которого прежде ремонтировали баррикадное оружие в чужих комнатах. Они избирают комитет для расширенного арсенала и просят проверяющих Букарле объяснять брак перед всей сменой. Рабочий контроль не исправит опасный затвор сам по себе. Зато изготовитель услышит жалобу солдата без хозяина, который привык говорить от имени их обоих."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "The Citizen Instructor Returns",
+            "Гражданский инструктор возвращается"
+          ],
+          "desc": [
+            "The first workers trained as instructors return to their districts carrying battered notebooks. The ABC council asks them to teach replacements beside the veterans who once doubted their chances. A citizen army will endure through habits passed between ordinary households. Its officers must keep learning how to lead people who can meet them afterwards at a cooperative meeting.",
+            "Первые рабочие, подготовленные как инструкторы, возвращаются в округа с потрёпанными тетрадями. Совет ABC просит их обучать пополнение рядом с ветеранами, прежде сомневавшимися в успехе затеи. Гражданская армия сохранится благодаря навыкам, которые передают друг другу обычные семьи. Её офицерам придётся учиться командовать людьми, с которыми потом можно встретиться на кооперативном собрании и услышать открытое возражение."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Reading after the Factory Bell",
+            "Чтение после фабричного гудка"
+          ],
+          "desc": [
+            "The apprentice can recognise every tool in the workshop but cannot read the agreement his cooperative has asked him to approve. ABC volunteers arrange lessons around the shifts, using wages, letters and newspapers alongside primers. A movement promising to abolish inherited privilege must make its own meetings accessible. Nobody should need a student's whispered explanation to understand a vote.",
+            "Ученик узнаёт любой инструмент в мастерской, но не может прочитать соглашение, которое кооператив просит его одобрить. Добровольцы ABC подстраивают занятия под смены, дополняя буквари расчётными листками, письмами и газетами. Движению, обещающему уничтожить наследственные привилегии, следует открыть собственные собрания. Никому не должно требоваться шепотком спрашивать студента о смысле решения, за которое сейчас предстоит голосовать."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "A Republic beyond the Café",
+            "Республика за порогом кафе"
+          ],
+          "desc": [
+            "ABC's national gathering brings people who have never shared its favourite café or its founders' private jokes. Delegates ask for childcare during meetings and seats for workers on rotating shifts. The movement has offered Aquileia a social republic. Its first test is whether the room where that republic speaks can accommodate citizens whose lives do not resemble those of its organisers.",
+            "Общегосударственное собрание ABC принимает людей, никогда не бывавших в любимом кафе движения и не понимающих шуток его основателей. Делегаты просят присмотр за детьми и места для рабочих со сменным графиком. Движение предложило Аквелии социальную республику. Первым испытанием станет способность её собрания принять граждан, чей повседневный уклад совсем не похож на жизнь устроителей этого заседания."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "Keys in the Workers' Keeping",
+              "Ключи в руках рабочих"
+            ],
+            "desc": [
+              "Elected workshop crews take responsibility for orders once left to absent owners.",
+              "Выборные коллективы мастерских отвечают за заказы, которыми прежде распоряжались отсутствующие хозяева."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Cooperative Machine Room",
+              "Кооперативный машинный зал"
+            ],
+            "desc": [
+              "Shared machinery draws neighbouring crews into practical cooperation over maintenance and production.",
+              "Общие машины приучают соседние коллективы вместе решать вопросы ремонта и производства."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.1,
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Knowledge from the Shop Floor",
+              "Знание из цеха"
+            ],
+            "desc": [
+              "Workers bring the laboratory their stubborn production problems and carry tested answers back to the machines.",
+              "Рабочие приносят в лабораторию нерешённые производственные задачи и возвращаются к станкам с проверенными ответами."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.15,
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "Comrades on the Company Roll",
+              "Товарищи в ротном списке"
+            ],
+            "desc": [
+              "Barricade volunteers learn the routines that let newcomers take their place in the ranks.",
+              "Добровольцы с баррикад осваивают порядок, позволяющий новобранцам занять своё место в строю."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Evening Cadre School",
+              "Вечерняя командирская школа"
+            ],
+            "desc": [
+              "Workers and students learn to lead through exercises fitted around the lives of citizen volunteers.",
+              "Рабочие и студенты учатся командовать на занятиях, согласованных с повседневной жизнью добровольцев."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.1,
+              "army_org_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "A Citizen Army That Teaches",
+              "Гражданская армия, умеющая учить"
+            ],
+            "desc": [
+              "Experienced volunteers return as instructors, turning shared service into knowledge their neighbours can use.",
+              "Опытные добровольцы возвращаются инструкторами, передавая соседям знания, приобретённые на общей службе."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.1,
+              "army_org_factor": 0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Apprentice's Place in the Ledger",
+            "Место ученика в книге"
+          ],
+          "desc": [
+            "Guillaume Boucarle arrives at the cooperative to collect repaired rifles and finds the assembly arguing over an apprentice's wage. The student keeping the books has entered the boy under training expenses. The machinist beside him asks why a training expense was left alone to finish yesterday's order.\n\nBoucarle sets his collection slip on the bench. His men need the weapons, but he cannot decide how the workshop shares its earnings. The apprentice explains that his family has been buying supper on credit while the cooperative congratulates itself on belonging to everyone.\n\nThe members can close the accounts early, pay the overdue wages and suspend the evening shift. They can also pay those wages and invite paid volunteers to complete the rifles overnight, using the reserve kept for their next civilian order. Neither proposal returns the apprentice to his old place in the ledger. The student crosses out the heading and makes room for his name.",
+            "Гийом Букарле приходит в кооператив за отремонтированными винтовками и застаёт спор о заработке ученика. Студент, ведущий книги, записал мальчика в расходы на обучение. Машинист рядом спрашивает, почему эти расходы вчера оставили в одиночестве заканчивать срочный заказ, когда остальные уже ушли домой.\n\nБукарле кладёт накладную на верстак. Его солдатам нужно оружие, но распределять заработок мастерской он не вправе. Ученик объясняет, что семья берёт ужин в долг, пока кооператив поздравляет себя с тем, что теперь принадлежит всем своим работникам.\n\nСобрание может досрочно закрыть счета, выплатить задолженность и отменить вечернюю смену. Можно также выдать заработанное и пригласить оплачиваемых добровольцев закончить винтовки ночью, использовав запас денег для следующего гражданского заказа. Ни одно предложение не возвращает ученика на прежнюю строку книги. Студент зачёркивает заголовок и оставляет место для его имени. Машинист подвигает мальчику стул: сегодня решение будут принимать вместе с ним, а не просто объявят после очередного окончания работы."
+          ],
+          "options": [
+            {
+              "title": [
+                "Pay the arrears and let the shift go home.",
+                "Выплатить задолженность и отпустить смену домой."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Pay volunteers to finish the rifle order.",
+                "Оплатить добровольцам завершение оружейного заказа."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Marshal and the Night Class",
+            "Маршал и вечерний класс"
+          ],
+          "desc": [
+            "Jean-Baptiste Jules Gélinotte-des-Bois reaches the night class while its newest instructor is explaining how to withdraw a platoon. The marshal asks who checks the last room. The answer produces three simultaneous objections from veterans sitting among the students. He sends them outside to demonstrate their alternatives around the schoolyard.\n\nThe exercise lasts until the caretaker brings a lamp. One student has missed the last tram; another must report to the early shift. Their instructor asks whether the army expects citizens to learn command or merely admires the idea of teaching them.\n\nThe marshal offers a limited detachment of experienced instructors. They can spend the coming weeks coaching the existing class until its members can teach others. Alternatively, they can open an introductory course for the workers waiting beyond the gate, several already asking to enlist. The ABC organisers must choose between deepening a small cadre and bringing more neighbours into regular service.",
+            "Жан-Батист Жюль Желинот-де-Буа приходит в вечерний класс, когда новый инструктор объясняет отход взвода. Маршал спрашивает, кто проверяет последнюю комнату. Ответ вызывает сразу три возражения ветеранов, сидящих среди учеников. Он отправляет спорящих во двор показать предложенные варианты на практике, используя школьные двери вместо нарисованных проходов.\n\nУпражнение затягивается, и смотритель выносит лампу. Один студент пропустил последний трамвай, другому утром выходить в первую смену. Инструктор спрашивает, действительно ли армия намерена учить граждан командованию или лишь восхищается самой этой мыслью, пока занятия ничего от неё не требуют.\n\nМаршал предлагает небольшую группу опытных преподавателей. Они могут несколько недель заниматься с нынешним классом, пока выпускники не смогут учить других. Либо они откроют начальный курс для рабочих, ожидающих за воротами; некоторые уже просятся на службу. Организаторам ABC предстоит выбрать между углублённой подготовкой немногих командиров и приёмом большего числа соседей в регулярные части. У ворот всё ещё видны огоньки сигарет ожидающих."
+          ],
+          "options": [
+            {
+              "title": [
+                "Give the existing class time to become instructors.",
+                "Дать нынешнему классу время подготовить инструкторов."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Open the introductory course to waiting volunteers.",
+                "Открыть начальный курс ожидающим добровольцам."
+              ],
+              "reward": "manpower1500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "The Chair Left by the Door",
+            "Стул у самой двери"
+          ],
+          "desc": [
+            "Guillaume Boucarle attends the ABC gathering to hear a petition from soldiers' families. Before he can read it, a workshop delegate rises from the chair nearest the door and says she must leave: the neighbour minding her children begins work shortly. Half the proposals have not yet been discussed.\n\nA founder suggests that she entrust her vote to a colleague. She replies that the republic has finally given her a voice and immediately asked her to lend it away. Boucarle folds his petition. The soldiers wrote it because their households could not always attend such meetings; their complaint is already being spoken aloud.\n\nThe organisers have enough volunteers for one additional effort. They can arrange childcare and repeat meetings near the evening shifts, giving these delegates a dependable place in the congress. Or they can tour the barracks and workers' quarters together, explaining how the social republic will defend households bearing the burdens of service.",
+            "Гийом Букарле приходит на собрание ABC с прошением солдатских семей. Он ещё не успевает прочесть его, когда делегатка мастерской поднимается со стула у самой двери. Ей пора уходить: соседка, присматривающая за детьми, вскоре выходит на работу. Между тем половину предложений пока даже не начали обсуждать.\n\nОдин из основателей советует доверить голос товарищу. Делегатка отвечает, что республика наконец дала ей голос и немедленно попросила передать его кому-нибудь ещё. Букарле складывает прошение. Солдаты написали его именно потому, что их семьи не всегда могут присутствовать на таких собраниях; сейчас их жалоба уже прозвучала вслух.\n\nДобровольцев хватает лишь на одно дополнительное начинание. Организаторы могут устроить присмотр за детьми и повторные встречи рядом с вечерними сменами, обеспечив делегатам постоянное место на съезде. Или они вместе объедут казармы и рабочие кварталы, объясняя, как социальная республика намерена защищать семьи, несущие тяготы службы. Букарле оставляет прошение на столе, чтобы оно не исчезло вместе с уходящими."
+          ],
+          "options": [
+            {
+              "title": [
+                "Make attendance possible for working households.",
+                "Дать рабочим семьям возможность участвовать."
+              ],
+              "reward": "pp50"
+            },
+            {
+              "title": [
+                "Take the families' appeal to barracks and workshops.",
+                "Обсудить обращение семей в казармах и мастерских."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VIN_chevaliers",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Benefactors' Common Purse",
+            "Общая касса благотворителей"
+          ],
+          "desc": [
+            "The Chevaliers' patrons have each endowed a kitchen or shelter, sometimes on opposite sides of the same street. Their stewards will compare what those gifts actually sustain. A common purse can preserve each foundation's history while moving supplies where the queues are longest. Landed generosity will have to accept questions from the people who cook with it every morning.",
+            "Покровители рыцарей верности содержат собственные кухни и приюты, порой на противоположных сторонах одной улицы. Их управляющие сравнят, на что действительно хватает пожертвований. Общая касса сохранит историю каждого учреждения, позволяя направлять припасы туда, где длиннее очередь. Землевладельческой щедрости придётся выслушать вопросы тех, кто каждое утро готовит на её средства еду для ожидающих у дверей."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Fair in Our Own Tongue",
+            "Ярмарка на нашем языке"
+          ],
+          "desc": [
+            "Vinovian craftsmen want a fair where their work need not borrow a fashionable Aquileian name to find a buyer. The Chevaliers offer grounds and patronage, while stallholders ask for passable approaches and honest measures. Pride will bring the opening procession. Repeat custom will depend on whether an unfamiliar merchant receives the same welcome as a neighbouring estate's steward.",
+            "Виновийские ремесленники хотят ярмарку, где товару не требуется модное аквелийское название, чтобы найти покупателя. Рыцари верности предлагают место и покровительство, торговцы просят проезжие подъезды и честные меры. Гордость соберёт праздничное шествие. Вернутся ли покупатели снова, зависит от того, встретят ли незнакомого купца так же приветливо, как управляющего соседним поместьем, привычного к почётному месту."
+          ],
+          "days": 42,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "A Charter for the Craft Hall",
+            "Хартия ремесленного двора"
+          ],
+          "desc": [
+            "An unused estate building could shelter several workshops, but its owner expects the oldest guild families to choose every tenant. The Chevaliers propose a craft charter that protects local methods while admitting apprentices with no inherited place. Their patrons will lend the hall its roof. The craftsmen must decide how to make tradition a livelihood that another generation can enter.",
+            "Пустующее поместное здание вместит несколько мастерских, но владелец ждёт, что старейшие цеховые семьи выберут всех арендаторов. Рыцари верности предлагают ремесленную хартию, сохраняющую местные приёмы и допускающую учеников без наследственного места. Покровители предоставят крышу. Мастерам предстоит решить, как сделать традицию источником заработка, доступным следующему поколению, даже если его представители родились за пределами привычного цехового круга."
+          ],
+          "days": 49,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "Fairs That Recognise Each Other",
+            "Ярмарки, признающие друг друга"
+          ],
+          "desc": [
+            "The national federation brings invitations to fairs whose customs the Vinovian patrons do not know. The Chevaliers send craftsmen to compare measures, guarantees and apprenticeship certificates with their neighbours. Common trade can respect local workmanship if recognition travels both ways. A mark accepted abroad obliges our own stallholders to accept an unfamiliar mark at home.",
+            "Общая федерация приносит приглашения на ярмарки, чьи обычаи виновийским покровителям незнакомы. Рыцари верности отправляют мастеров сравнить меры, поручительства и ученические свидетельства с соседскими. Общая торговля сохранит местное ремесло, если признание будет взаимным. Клеймо, принятое за пределами родной провинции, обязывает наших торговцев признавать чужое у себя, даже когда покупатель прежде никогда не видел такого изделия."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "Endowments beyond Familiar Streets",
+            "Пожертвования за пределами знакомых улиц"
+          ],
+          "desc": [
+            "A provincial foundation asks Vinovia's patrons to support a workshop serving displaced families. Its methods differ from the craft hall's, and its beneficiaries cannot recite the Chevaliers' favourite verses. The federation gives their request a hearing. Extending the endowment will show whether local institutions deserve protection because they are Vinovian, or because communities everywhere need places they can call their own.",
+            "Провинциальное общество просит виновийских покровителей поддержать мастерскую для переселившихся семей. Её приёмы отличаются от ремесленного двора, а подопечные не знают любимых стихов рыцарей верности. Федерация позволяет выслушать просьбу. Расширение помощи покажет, заслуживают ли местные учреждения защиты лишь потому, что они виновийские, или потому, что любой общине нужны места, которые жители могут с полным правом считать своими."
+          ],
+          "days": 49,
+          "reward": "pp75"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "Open the Family Armouries",
+            "Открыть родовые оружейные"
+          ],
+          "desc": [
+            "The Chevaliers' households preserve weapons carried by grandparents alongside rifles bought for the recent struggle. Local guards need the latter, whatever sentiment surrounds the former. The patrons will open their armouries for an inventory conducted with serving soldiers. A martial inheritance becomes useful when its owners can distinguish an honoured keepsake from a weapon another griffon can safely carry.",
+            "В домах рыцарей верности оружие дедов хранится рядом с винтовками, купленными для недавней борьбы. Местной гвардии нужны именно винтовки, какими бы чувствами ни окружали старые клинки. Покровители откроют оружейные для проверки вместе с действующими солдатами. Воинское наследие принесёт пользу, если владельцы сумеют отличить почитаемую реликвию от оружия, которое другой грифон сможет безопасно взять на службу."
+          ],
+          "days": 35,
+          "reward": "rifles500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "The Knight Learns to Take Cover",
+            "Рыцарь учится искать укрытие"
+          ],
+          "desc": [
+            "An instructor praises the courage of the Chevaliers' volunteers, then asks them to cross the exercise ground under observation. Their bright company pennant is spotted before the first patrol moves. The guard will keep its ceremonies and practise concealment away from the reviewing stand. Defending Vinovia's martial tradition requires its heirs to survive long enough to pass it on.",
+            "Инструктор хвалит храбрость добровольцев рыцарей верности, затем предлагает пересечь учебное поле под наблюдением. Яркий ротный вымпел замечают раньше, чем начинает движение первый дозор. Гвардия сохранит церемонии и освоит маскировку вдали от парадной трибуны. Защита виновийской воинской традиции требует, чтобы её наследники прожили достаточно долго и успели передать опыт тем, кто придёт служить после них."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Granaries on the Guard's Road",
+            "Амбары на пути гвардии"
+          ],
+          "desc": [
+            "The guard captains have marked supply stops at estates whose owners attend the same charitable dinners. Isabelle de Pie-Grièche asks what happens when a column takes another road. The Chevaliers will arrange depots with willing towns and villages outside their familiar circle. A local defence must know the whole locality, including households that have never received a patron's invitation.",
+            "Капитаны гвардии наметили остановки у поместий, чьи хозяева встречаются на одних благотворительных обедах. Изабель де Пье-Грийеш спрашивает, что случится, если колонна пойдёт другой дорогой. Рыцари верности договорятся о складах с согласными городами и деревнями за пределами знакомого круга. Местной обороне необходимо знать всю местность, включая дворы, куда никогда не приносили приглашения от влиятельного покровителя."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "Common Parts, Provincial Colours",
+            "Общие детали, провинциальные цвета"
+          ],
+          "desc": [
+            "Federated guards bring rifles bearing different makers' marks and discover that their spare parts will not fit. The Chevaliers sponsor an armoury to produce common replacements while each contingent keeps its colours. A shared workshop need not erase a regiment's memory. It will, however, ask proud captains to stop treating an incompatible screw as an ancestral liberty.",
+            "Федеративные гвардейцы привозят винтовки разных мастеров и обнаруживают, что запасные части не подходят друг к другу. Рыцари верности поддержат оружейную мастерскую общего образца, сохранив цвета каждого отряда. Совместное производство не обязано стирать полковую память. Однако гордым капитанам придётся перестать считать несовместимый винт древней вольностью, которую необходимо защищать даже ценой исправности оружия у соседнего подразделения."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "Each Province Keeps the Next Supplied",
+            "Каждая провинция снабжает соседнюю"
+          ],
+          "desc": [
+            "A joint exercise sends Vinovian guards through another province and places its visiting contingent in our storehouses' care. The Chevaliers have argued that mutual obligations protect local freedoms. Their quartermasters must now make that argument tangible, delivering familiar necessities to unfamiliar uniforms. The exercise ends only when both contingents can return without leaving unpaid households along their routes.",
+            "Совместные учения проводят виновийскую гвардию через соседнюю провинцию и поручают нашим складам снабжать прибывший оттуда отряд. Рыцари верности утверждали, что взаимные обязанности защищают местные свободы. Теперь квартирмейстерам предстоит доказать это, доставляя обычные припасы солдатам в непривычной форме. Учения закончатся, когда оба отряда смогут вернуться, не оставив вдоль дорог дворов, которым так и не заплатили."
+          ],
+          "days": 49,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "The Apprentices Read Their Inheritance",
+            "Ученики читают своё наследие"
+          ],
+          "desc": [
+            "A guild's oldest recipe book is celebrated every year and read by almost nobody outside its senior families. The Chevaliers ask local teachers to prepare readable copies in the language apprentices use at home. Preserving Vinovian culture cannot depend on keeping its words inaccessible. The new readers may find questions in the margins that their patrons have never thought to ask.",
+            "Старинную книгу ремесленных рецептов ежегодно чествуют, но за пределами старших цеховых семей её почти никто не читает. Рыцари верности просят местных учителей подготовить понятные копии на языке, которым ученики пользуются дома. Сохранение виновийской культуры не может зависеть от недоступности её слов. Новые читатели, возможно, обнаружат на полях вопросы, которых покровители прежде никогда не задавали."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "The Other Province's Feast",
+            "Праздник другой провинции"
+          ],
+          "desc": [
+            "The Chevaliers' national partners request protection for a civic feast that looks nothing like Vinovia's ceremonies. Some patrons fear that recognising every custom will leave the federation without a shared character. Their own charter supplies the answer they must now defend. The same guarantee that keeps Vinovia's songs alive must leave room for neighbours whose voices sound entirely different.",
+            "Партнёры рыцарей верности просят защитить гражданский праздник, совсем не похожий на виновийские церемонии. Некоторые покровители опасаются, что признание любого обычая лишит федерацию общего облика. Ответ содержится в их собственной хартии, которую теперь предстоит отстаивать. Гарантия, сохраняющая песни Виновии, должна оставить место соседям с совсем другими голосами, даже когда их слова сначала кажутся чужими и непонятными."
+          ],
+          "days": 42,
+          "reward": "pp75"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Patrons' Shared Table",
+              "Общий стол покровителей"
+            ],
+            "desc": [
+              "Charitable foundations coordinate their purchases while keeping the local trust on which their work depends.",
+              "Благотворительные учреждения согласуют закупки, сохраняя местное доверие, на котором держится их работа."
+            ],
+            "modifiers": {
+              "consumer_goods_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Craft Hall Covenant",
+              "Соглашение ремесленного двора"
+            ],
+            "desc": [
+              "Patrons provide premises while craftsmen bind their shared workshops to workable agreements.",
+              "Покровители предоставляют помещения, а мастера устраивают совместные мастерские на основе исполнимых соглашений."
+            ],
+            "modifiers": {
+              "consumer_goods_factor": -0.05,
+              "production_speed_buildings_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Reciprocal Provincial Credit",
+              "Взаимный кредит провинций"
+            ],
+            "desc": [
+              "Recognised guarantees let provincial craft institutions cooperate without abandoning the methods their communities value.",
+              "Взаимно признанные гарантии позволяют провинциальным ремесленным учреждениям сотрудничать, сохраняя приёмы, которыми дорожат их общины."
+            ],
+            "modifiers": {
+              "consumer_goods_factor": -0.05,
+              "production_speed_buildings_factor": 0.05,
+              "production_factory_max_efficiency_factor": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "Stores for the Local Colours",
+              "Припасы для местных знамён"
+            ],
+            "desc": [
+              "The guards' armouries and supply rooms begin serving actual contingents rather than household prestige.",
+              "Оружейные и склады гвардии начинают служить действующим отрядам, а не престижу знатных домов."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Guard's Wider Neighbourhood",
+              "Расширенный круг гвардии"
+            ],
+            "desc": [
+              "Depots beyond the patrons' estates give local guards dependable support from a broader community.",
+              "Склады за пределами покровительских поместий дают местной гвардии надёжную поддержку более широкого круга жителей."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.05,
+              "army_morale_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Federation's Mutual Watch",
+              "Взаимная стража федерации"
+            ],
+            "desc": [
+              "Provincial contingents preserve their traditions while learning to feed and relieve one another.",
+              "Провинциальные отряды сохраняют традиции, учась снабжать и сменять друг друга."
+            ],
+            "modifiers": {
+              "supply_consumption_factor": -0.1,
+              "army_morale_factor": 0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "A Stall without a Patron",
+            "Лавка без покровителя"
+          ],
+          "desc": [
+            "Isabelle de Pie-Grièche stops at the fair to inspect a gunsmith's offered consignment and finds his stall behind the refuse carts. He has brought rifles repaired by a family recently arrived in Vinovia. The organising patron explains that the best places are reserved for crafts rooted in local tradition. The gunsmith asks how many generations his children must wait before their work acquires roots.\n\nA nearby cook recognises the question. Her dishes once received the same treatment whenever she tried to sell them under their Vinovian names elsewhere. She offers to move her table beside his, although both would lose the main crowd.\n\nThe Chevaliers' stewards can rearrange the fair and publicly welcome the newcomers among the established stalls. Alternatively, they can use the day's purchasing fund to accept the inspected rifles for the guard, giving the family a paid order and a customer willing to sign its name beside theirs.",
+            "Изабель де Пье-Грийеш заходит на ярмарку проверить предложенную оружейником партию и находит его лавку за мусорными телегами. Он привёз винтовки, отремонтированные семьёй, недавно поселившейся в Виновии. Устроитель объясняет, что лучшие места оставлены ремёслам с местными корнями. Оружейник спрашивает, сколько поколений должны ждать его дети, прежде чем такие корни появятся у их собственной работы.\n\nПовариха из соседней лавки узнаёт знакомый вопрос. С её блюдами поступали так же, когда она продавала их в других местах под виновийскими названиями. Она предлагает перенести стол к оружейнику, хотя тогда оба окажутся в стороне от главного потока посетителей.\n\nУправляющие рыцарей верности могут переставить лавки и открыто принять новоприбывших среди признанных мастеров. Либо они направят сегодняшний закупочный фонд на проверенные винтовки для гвардии, обеспечив семью оплаченным заказом и покупателем, готовым поставить своё имя рядом с её именем. Изабель ждёт ответа, положив осмотренную винтовку на прилавок перед хозяином."
+          ],
+          "options": [
+            {
+              "title": [
+                "Make room for the family among the established stalls.",
+                "Дать семье место среди признанных мастеров."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Buy their inspected rifles for the guard.",
+                "Купить проверенные винтовки для гвардии."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Road Past the Manor",
+            "Дорога мимо усадьбы"
+          ],
+          "desc": [
+            "Isabelle de Pie-Grièche takes the guard's supply map to the carters and asks them to trace yesterday's exercise. Their route runs well beyond the estates marked as depots. A captain explains that those estates belong to reliable patrons. Isabelle asks whether reliability makes a wagon arrive before nightfall when the road adds another day's travel.\n\nThe owner of an unmarked village granary offers space, provided the guard pays for what it uses and leaves his neighbours access to their own stores. One patron dislikes entrusting supplies to someone absent from the charitable committee. The captain quietly admits that this same villager fed his stranded patrol.\n\nThe Chevaliers can send their officers to practise opening depots with village hosts, learning the arrangements themselves. Or they can recruit a paid transport party from the carters already travelling these roads. The manor remains a useful storehouse. It simply ceases to be the only place the map remembers.",
+            "Изабель де Пье-Грийеш приносит обозникам карту снабжения гвардии и просит отметить вчерашний учебный переход. Их путь далеко отклоняется от поместий, указанных как склады. Капитан объясняет, что поместья принадлежат надёжным покровителям. Изабель спрашивает, поможет ли надёжность доставить телегу до темноты, если выбранная дорога требует ещё целого дня пути.\n\nХозяин неотмеченного деревенского амбара предлагает место при условии, что гвардия заплатит за взятое и оставит соседям доступ к собственным запасам. Покровителю не нравится доверять припасы человеку, которого нет в благотворительном комитете. Капитан негромко признаётся, что именно этот крестьянин накормил его отставший дозор.\n\nРыцари верности могут отправить офицеров учиться открывать склады вместе с деревенскими хозяевами, лично разбираясь в условиях. Или они наберут оплачиваемую обозную команду из возчиков, уже знающих эти дороги. Усадьба останется полезным хранилищем. Просто она перестанет быть единственным местом, которое помнит карта. Изабель передаёт карандаш обознику и просит отметить остальные пропущенные дворы."
+          ],
+          "options": [
+            {
+              "title": [
+                "Have the officers practise with village hosts.",
+                "Поручить офицерам учения с деревенскими хозяевами."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Hire the carters for regular transport service.",
+                "Нанять возчиков на постоянную обозную службу."
+              ],
+              "reward": "manpower1500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "The Song Our Guests Choose",
+            "Песня, которую выбрали гости"
+          ],
+          "desc": [
+            "The visiting provincial delegation proposes a song for the federation's ceremony. Several Chevalier patrons dislike its unfamiliar rhythm, and one wonders whether a Vinovian march would make the occasion more dignified. Isabelle de Pie-Grièche, attending to arrange the guard of honour, asks which song the visitors promised their households they would hear.\n\nTheir delegate produces a copy worn thin at the folds. He has brought it because the federal guarantee convinced his town that joining Aquileia need not silence its own civic memory. A patron reads the translated verses and discovers that the strange song also remembers neighbours lost defending their streets.\n\nThe organisers can invite the townspeople to learn both songs together before a shared feast. They can instead make the visiting contingent's own march part of a public pledge of mutual defence, with the Vinovian guard answering in its turn. Either choice asks the hosts to listen before they lead.",
+            "Делегация другой провинции предлагает песню для федеративной церемонии. Нескольким покровителям рыцарей верности непривычен её ритм; один спрашивает, не придал бы виновийский марш торжеству больше достоинства. Изабель де Пье-Грийеш, пришедшая согласовать почётный караул, интересуется, какую песню гости обещали своим землякам услышать на этом празднике.\n\nДелегат достаёт лист, протёртый на сгибах. Он привёз его потому, что федеративная гарантия убедила его город: участие в общей Аквелии не потребует отказаться от собственной гражданской памяти. Покровитель читает перевод и обнаруживает, что странная песня тоже вспоминает соседей, погибших при защите своих улиц.\n\nУстроители могут пригласить горожан разучить обе песни перед общей трапезой. Либо марш прибывшего отряда станет частью публичного обещания взаимной защиты, на которое виновийская гвардия ответит своей песней. Оба решения требуют, чтобы хозяева сначала выслушали гостей. Изабель оставляет в церемониальном порядке свободную строку и ждёт, какую последовательность выступлений согласуют делегаты, сидящие за одним столом."
+          ],
+          "options": [
+            {
+              "title": [
+                "Learn both songs before the common feast.",
+                "Разучить обе песни перед общей трапезой."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Let the contingents pledge mutual defence in their own songs.",
+                "Пусть отряды обещают взаимную защиту своими песнями."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VIN_sis",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "One Weight on Every Counter",
+            "Одинаковая гиря на каждом прилавке"
+          ],
+          "desc": [
+            "A society graduate buys the same quantity of flour at three shops and returns with three different weights. The merchants distrust the proposed inspectors, many of whom have never served a customer. SIS will bring traders and trained measurers together at a public bench. Republican confidence can begin with a customer watching the test that determines what a purchase means.",
+            "Выпускник общества покупает одинаковое количество муки в трёх лавках и возвращается с тремя разными отвесами. Торговцы не доверяют будущим проверяющим, многие из которых никогда не обслуживали покупателей. ОСИ соберёт продавцов и обученных измерителей за открытым испытательным столом. Доверие к республике может начаться с покупателя, лично наблюдающего проверку, от которой зависит содержимое его покупки."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Pump Must Work in Public",
+            "Насос должен работать при свидетелях"
+          ],
+          "desc": [
+            "An engineer recommended by an old society acquaintance promises a pump that will transform the town's water supply. The drawings impress the committee; the keeper of the well asks to see it run. SIS will require a demonstration with local operators before accepting the installation. Expertise should survive the inconvenient questions asked by those who must live with its machines.",
+            "Инженер, рекомендованный старым знакомым общества, обещает насос, который изменит городское водоснабжение. Чертежи впечатляют комиссию; смотритель колодца просит показать машину в работе. ОСИ потребует испытания с местными служителями прежде приёмки установки. Профессиональное знание должно выдерживать неудобные вопросы тех, кому предстоит ежедневно пользоваться машиной, устранять неполадки и отвечать соседям, когда из трубы перестаёт поступать вода."
+          ],
+          "days": 42,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Instruments Worth Their Certificate",
+            "Приборы, достойные свидетельства"
+          ],
+          "desc": [
+            "The society's testing bench has outgrown its borrowed room. Instrument makers offer to build gauges and electrical meters nearby, provided the examiners publish what a certificate actually guarantees. A workshop devoted to these instruments will give Vinovia's manufacturers something more useful than an impressive stamp. Its own products will undergo the same public trials as everyone else's.",
+            "Испытательному столу общества стало тесно в заимствованной комнате. Приборные мастера готовы открыть рядом производство калибров и электрических измерителей, если проверяющие опубликуют точный смысл своих свидетельств. Мастерская даст виновийским производителям нечто полезнее внушительной печати. Её собственные изделия пройдут такие же открытые испытания, как чужие, и мастера не смогут ссылаться на дружбу с теми, кто подписывает заключение."
+          ],
+          "days": 49,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "The Same Signal across Aquileia",
+            "Одинаковый сигнал по всей Аквелии"
+          ],
+          "desc": [
+            "National technical delegates discover that equipment approved in one province cannot always communicate with equipment approved in another. SIS offers its testing records to a joint examination of electrical standards. The society's republican network must learn to exchange corrections as readily as manifestos. A circuit that works beyond Vinovia will carry a more convincing argument for cooperation than another celebrated address.",
+            "Технические делегаты обнаруживают, что оборудование, принятое одной провинцией, не всегда связывается с приборами, одобренными другой. ОСИ предоставляет записи испытаний для совместной проверки электрических стандартов. Республиканской сети общества предстоит обмениваться поправками так же охотно, как манифестами. Цепь, работающая за пределами Виновии, станет более убедительным доводом в пользу сотрудничества, чем очередная прославленная речь перед собравшимися сторонниками."
+          ],
+          "days": 42,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "Correspondents with Open Notebooks",
+            "Корреспонденты с открытыми тетрадями"
+          ],
+          "desc": [
+            "The society's correspondents once sent accounts of political changes abroad. Now their letters include failed experiments, workshop measurements and requests for a second opinion. SIS will give these exchanges a permanent research home. The national republic gains a useful institution if the network can welcome a convincing correction from someone who never belonged to its oldest study circles.",
+            "Корреспонденты общества прежде присылали рассказы о политических переменах за рубежом. Теперь в письмах встречаются неудачные опыты, цеховые измерения и просьбы проверить выводы. ОСИ создаст постоянное исследовательское место для такого обмена. Общая республика получит полезное учреждение, если сеть сумеет принять убедительную поправку от человека, который никогда не состоял в её старейших учебных кружках и не знаком с руководителями."
+          ],
+          "days": 56,
+          "reward": "research_slot"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "The Surveyor beside the Sergeant",
+            "Землемер рядом с сержантом"
+          ],
+          "desc": [
+            "SIS volunteers arrive at the barracks carrying maps whose elegant contours omit a footbridge used by every local patrol. Guillaume Boucarle pairs the surveyors with sergeants before accepting their work. The army needs educated specialists who will walk the ground they describe. A shared map begins when the graduate stops correcting the soldier long enough to hear where he has been.",
+            "Добровольцы ОСИ приходят в казармы с картами, на изящных горизонталях которых отсутствует мостик, знакомый каждому местному дозору. Гийом Букарле прикрепляет землемеров к сержантам прежде приёмки работ. Армии нужны образованные специалисты, готовые пройти описанную местность. Общая карта начинается там, где выпускник перестаёт поправлять солдата и даёт ему рассказать, по каким дорогам тот ходил на самом деле."
+          ],
+          "days": 35,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Range Tables Tested on the Ground",
+            "Таблицы дальности на местности"
+          ],
+          "desc": [
+            "The artillery class can solve its exercises quickly, yet two observers return different distances to the same target. Society mathematicians will work with gun crews to find where measurement gives way to assumption. Their corrected tables must remain readable in rain and hurried light. The proof that matters will arrive from a battery using them without their authors standing nearby.",
+            "Артиллерийский класс быстро решает задачи, однако два наблюдателя возвращаются с разными расстояниями до одной цели. Математики общества вместе с расчётами выяснят, где измерение уступило место предположению. Исправленные таблицы должны читаться под дождём и при тусклом свете. Решающее доказательство придёт от батареи, которая воспользуется ими без авторов рядом, когда уточнить смысл записи немедленно будет невозможно."
+          ],
+          "days": 42,
+          "reward": "research_artillery"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "The Staff Exercise Leaves the Library",
+            "Штабное учение выходит из библиотеки"
+          ],
+          "desc": [
+            "A society seminar has produced an excellent supply plan for roads that its participants have never travelled. Boucarle invites the authors to carry it through an exercise with actual carts and messengers. Their calculations will meet late deliveries and contradictory reports. A republican staff must learn to revise an elegant answer before soldiers elsewhere pay for its reluctance to admit uncertainty.",
+            "Семинар общества подготовил превосходный план снабжения по дорогам, где его участники никогда не бывали. Букарле приглашает авторов провести учения с настоящими телегами и связными. Их расчёты столкнутся с задержками и противоречивыми донесениями. Республиканскому штабу предстоит научиться пересматривать стройный ответ прежде, чем солдаты в другом месте заплатят за его нежелание признать собственную неуверенность в непроверенных сведениях."
+          ],
+          "days": 49,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "Optics for a Common Army",
+            "Оптика для общей армии"
+          ],
+          "desc": [
+            "The national army asks Vinovia's instrument makers for sights whose markings remain consistent across provincial contracts. SIS arranges a production workshop beside the testing rooms and insists that soldiers report faults directly. A technical profession serving the republic must accept scrutiny from its users. The sight is finished when the gunner can trust it, whatever the examiner's diploma says.",
+            "Общая армия просит виновийских приборных мастеров выпускать прицелы с одинаковыми обозначениями независимо от провинциального заказчика. ОСИ устраивает производственную мастерскую рядом с испытательными помещениями и настаивает на прямых жалобах солдат. Специалистам, служащим республике, придётся принять проверку со стороны пользователей. Прицел готов лишь тогда, когда наводчик может ему доверять, какие бы дипломы ни предъявлял подписавший заключение экзаменатор."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "The Observer's Unwelcome Correction",
+            "Неудобная поправка наблюдателя"
+          ],
+          "desc": [
+            "An aerial observer returns with a sketch contradicting the route approved by a respected staff lecturer. The society will bring observers, mapmakers and supply officers into the same exercise room. Professional judgement grows stronger when a correction can reach the person who needs it. The army must give an unwelcome report a hearing before it gives another column the wrong road.",
+            "Воздушный наблюдатель возвращается с зарисовкой, противоречащей маршруту, который утвердил уважаемый штабной преподаватель. Общество соберёт наблюдателей, картографов и снабженцев в одном учебном помещении. Профессиональное суждение становится надёжнее, когда поправка доходит до нужного адресата. Армии следует выслушать неудобное донесение прежде, чем она снова направит колонну по неверной дороге и заставит солдат исправлять ошибку долгим обходом."
+          ],
+          "days": 49,
+          "reward": "research_air"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "An Examination without Introductions",
+            "Экзамен без рекомендателей"
+          ],
+          "desc": [
+            "The society's graduates recognise one another at interviews, while an unfamiliar applicant waits with a better written exercise. SIS will remove names and recommendations from the first examination of candidates. Its network helped republican ideas survive; public employment must now reach beyond it. The old study circles will have to accept that a stranger may be better prepared to serve.",
+            "Выпускники общества узнают друг друга на собеседованиях, пока незнакомый соискатель ждёт с более сильной письменной работой. ОСИ уберёт имена и рекомендации с первого этапа проверки кандидатов. Сеть помогла республиканским идеям выжить; теперь государственная служба должна выйти за её пределы. Старым учебным кружкам придётся признать, что незнакомец может оказаться лучше подготовленным к поручаемой работе, чем их товарищ."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "A Republic May Correct Its Teachers",
+            "Республика вправе поправить учителей"
+          ],
+          "desc": [
+            "An old society lecturer hears his own arguments quoted against a national appointment he has recommended. The speaker learned them in one of the society's public classes. SIS must decide what it means to carry the promise of political change into an existing republic. Its most useful national service may be defending a citizen's right to embarrass the people who taught him.",
+            "Старый преподаватель общества слышит собственные доводы против общегосударственного назначения, которое он рекомендовал. Выступающий усвоил их на открытых занятиях самого общества. ОСИ предстоит осмыслить обещание политических перемен внутри существующей республики. Самой полезной службой общему делу может оказаться защита права гражданина ставить в неудобное положение тех, кто его учил, даже если среди них находятся давние друзья и уважаемые коллеги."
+          ],
+          "days": 42,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Public Testing Bench",
+              "Открытый испытательный стол"
+            ],
+            "desc": [
+              "Merchants and examiners establish standards whose meaning a customer can witness.",
+              "Торговцы и проверяющие устанавливают стандарты, смысл которых покупатель может увидеть сам."
+            ],
+            "modifiers": {
+              "production_factory_max_efficiency_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Certificates with Published Methods",
+              "Свидетельства с открытыми методами"
+            ],
+            "desc": [
+              "Instrument makers and inspectors publish the methods behind their claims, making defects easier to identify and correct.",
+              "Приборные мастера и проверяющие публикуют методы испытаний, помогая выявлять и исправлять недостатки."
+            ],
+            "modifiers": {
+              "production_factory_max_efficiency_factor": 0.1,
+              "production_lack_of_resource_penalty_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Correspondents' Technical Exchange",
+              "Технический обмен корреспондентов"
+            ],
+            "desc": [
+              "The society's network carries useful production findings between workshops willing to expose their own mistakes.",
+              "Сеть общества передаёт полезные производственные находки между мастерскими, готовыми открывать собственные ошибки."
+            ],
+            "modifiers": {
+              "production_factory_max_efficiency_factor": 0.1,
+              "production_lack_of_resource_penalty_factor": -0.1,
+              "industrial_capacity_factory": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "Maps with a Sergeant's Corrections",
+              "Карты с сержантскими поправками"
+            ],
+            "desc": [
+              "Surveyors incorporate the routes and obstacles familiar to serving patrols.",
+              "Землемеры учитывают дороги и препятствия, знакомые действующим дозорам."
+            ],
+            "modifiers": {
+              "planning_speed": 0.05
+            }
+          },
+          {
+            "title": [
+              "Calculations That Travel with the Column",
+              "Расчёты, проверенные колонной"
+            ],
+            "desc": [
+              "Staff specialists test supply plans against actual marches and reports from the road.",
+              "Штабные специалисты проверяют планы снабжения настоящими переходами и донесениями с дороги."
+            ],
+            "modifiers": {
+              "planning_speed": 0.1,
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "A Staff That Receives Corrections",
+              "Штаб, принимающий поправки"
+            ],
+            "desc": [
+              "Observers and supply officers can correct shared plans before an elegant mistake becomes a marching order.",
+              "Наблюдатели и снабженцы могут исправить общий план прежде, чем стройная ошибка превратится в приказ о выступлении."
+            ],
+            "modifiers": {
+              "planning_speed": 0.1,
+              "supply_consumption_factor": -0.1,
+              "max_planning_factor": 0.05
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Pump Stops before the Applause",
+            "Насос замолчал раньше аплодисментов"
+          ],
+          "desc": [
+            "Guillaume Boucarle has brought a barracks water cart to the public demonstration. The engineer starts his new pump, the committee prepares to applaud, and the flow stops with a clatter. A well keeper points to the intake. He warned the society's examiner about the grit yesterday, but the approved drawing showed clean water.\n\nThe examiner knows the engineer from an old SIS study circle. He suggests postponing the report until a replacement part arrives. The keeper asks whether the queue outside can also postpone its thirst. Boucarle tells his driver to begin distributing the cart's water while the argument continues.\n\nThe committee can publish the failure immediately and invite the keeper to supervise repairs, accepting an embarrassing morning in exchange for public trust. Or it can keep the demonstration open as a practical lesson, pairing its engineers with Boucarle's transport detail to arrange temporary supply. In either case, the broken part stays on the table.",
+            "Гийом Букарле привозит на открытое испытание казарменную водовозку. Инженер запускает новый насос, комиссия готовится аплодировать, и поток прекращается с громким стуком. Смотритель колодца указывает на водозаборник. Вчера он предупреждал экзаменатора общества о песке, но на утверждённом чертеже вода была чистой и ничто не мешало работе.\n\nЭкзаменатор знаком с инженером по старому кружку ОСИ. Он предлагает отложить отчёт, пока не прибудет запасная деталь. Смотритель спрашивает, может ли очередь за дверью тоже отложить свою жажду. Букарле велит вознице начать раздачу воды из бочки, пока остальные продолжают обсуждение возле сломанного насоса.\n\nКомиссия может немедленно опубликовать сведения о неудаче и пригласить смотрителя наблюдать за ремонтом, приняв публичное смущение ради доверия жителей. Либо испытание продолжится как практическое занятие: инженеры вместе с обозниками Букарле организуют временное снабжение. При любом решении сломанная деталь останется на столе. Смотритель кладёт рядом горсть песка, которую вчера принёс показать проверяющему."
+          ],
+          "options": [
+            {
+              "title": [
+                "Publish the failure and put the keeper beside the repair crew.",
+                "Опубликовать неудачу и включить смотрителя в ремонтную группу."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Train engineers and soldiers through the temporary supply work.",
+                "Обучить инженеров и солдат на временном снабжении."
+              ],
+              "reward": "army_xp20"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Map's Missing Orchard",
+            "Сад, которого нет на карте"
+          ],
+          "desc": [
+            "Guillaume Boucarle lays two reports before the society's staff class. The first says the supply column reached its destination on time. The second comes from the driver still waiting beside an orchard that the map marks as open ground. Both reports were signed by graduates of the same course.\n\nThe lecturer explains that the exercise assumed an unobstructed road. Boucarle asks whether the soldiers should eat the assumption. An aerial observer offers a sketch of the orchard and the narrow lane around it; the quartermaster says the carters knew that lane before the class began.\n\nThe society has enough instructors to repeat one part of the exercise properly. It can concentrate on the transport officers, making them follow and revise the column's route. Or it can bring the observers together with the mapmakers to practise passing corrections before the first wagon leaves. The lecturer takes down his original diagram and leaves the blackboard clear.",
+            "Гийом Букарле кладёт перед штабным классом общества два донесения. Первое сообщает, что обоз вовремя достиг места назначения. Второе пришло от возницы, всё ещё стоящего возле сада, обозначенного на карте как открытое пространство. Оба документа подписаны выпускниками одного и того же курса, причём каждый уверен в правильности своего отчёта.\n\nПреподаватель объясняет, что упражнение предполагало свободную дорогу. Букарле спрашивает, должны ли солдаты поужинать этим предположением. Воздушный наблюдатель предлагает зарисовку сада и узкого объезда; квартирмейстер замечает, что обозники знали этот переулок ещё до начала занятий.\n\nИнструкторов хватает, чтобы как следует повторить одну часть учений. Общество может заняться транспортными офицерами, заставив их пройти и исправить маршрут колонны. Либо оно соберёт наблюдателей вместе с картографами и отработает передачу поправок до отправления первой телеги. Преподаватель снимает первоначальную схему и оставляет доску чистой. Возница уже прислал ещё одно сообщение: нужно решить, куда ему двигаться, пока не стемнело."
+          ],
+          "options": [
+            {
+              "title": [
+                "Repeat the march with the transport officers.",
+                "Повторить переход с транспортными офицерами."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Practise aerial reports with the mapmakers.",
+                "Отработать воздушные донесения вместе с картографами."
+              ],
+              "reward": "air_xp15"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "The Examiner Examined",
+            "Проверка экзаменатора"
+          ],
+          "desc": [
+            "An editorial accuses the society of reserving a national technical appointment for a familiar name. The candidate passed the examination, but the newspaper prints another applicant's answer beside his and asks why the better calculation received the lower mark. SIS members recognise the examiner as a colleague who once lectured on republican equality.\n\nGuillaume Boucarle has been invited because the appointment concerns military instruments. He brings a faulty gauge and asks which candidate can explain it. Both do, then disagree about the repair. The examiner begins to speak for his former pupil; the newspaper's editor asks him to let the applicants finish.\n\nThe society can open an independent review of the marked papers and publish its reasoning, accepting whatever correction follows. Or it can organise a public technical hearing in which both candidates demonstrate their work before soldiers and civilian craftsmen. The republic will hear an answer. The society must decide how to make that answer credible.",
+            "Газетная статья обвиняет общество в том, что общегосударственную техническую должность берегут для знакомого кандидата. Тот выдержал экзамен, однако газета печатает рядом ответ другого соискателя и спрашивает, почему более точный расчёт получил низшую оценку. Участники ОСИ узнают экзаменатора: этот коллега когда-то читал лекции о республиканском равенстве.\n\nГийома Букарле пригласили потому, что должность связана с военными приборами. Он приносит неисправный калибр и просит кандидатов объяснить поломку. Оба справляются, затем расходятся в способе ремонта. Экзаменатор начинает говорить за бывшего ученика; редактор просит дать соискателям закончить собственное объяснение, прежде чем объявлять, кто убедительнее.\n\nОбщество может поручить независимую проверку письменных работ и опубликовать её доводы, приняв необходимые исправления. Либо оно устроит открытое техническое слушание, на котором оба кандидата покажут работу солдатам и гражданским мастерам. Республика получит ответ. Обществу предстоит решить, как сделать этот ответ убедительным для тех, кто не учился вместе с экзаменатором."
+          ],
+          "options": [
+            {
+              "title": [
+                "Publish an independent review of the examination.",
+                "Опубликовать независимую проверку экзамена."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Convene a public demonstration before soldiers and craftsmen.",
+                "Провести открытую демонстрацию перед солдатами и мастерами."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

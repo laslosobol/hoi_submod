@@ -1,0 +1,4172 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "source_file": "EaW/common/ideas/zzz_AET_ideas.txt",
+    "category": "ideas/country",
+    "count": 38,
+    "unique_current_pictures": 24,
+    "family_units_including_singletons": 35,
+    "multi_record_families": 2,
+    "singleton_families": 33,
+    "selection": "Exactly all 38 country ideas in the native zzz_AET_ideas.txt, including every tier. No advisors, designers, focuses or three new HSM_AET spirits in this bounded sidecar.",
+    "status": "Semantic briefs only; no image generation, export, approval, binding or gameplay edits.",
+    "date": "2026-10-30"
+  },
+  "source_sha256": {
+    "EaW/common/ideas/zzz_AET_ideas.txt": "3c13581568cb5e9da66196eb492d0c26fc48827e44d7ec2612d53bf87cfe2c49",
+    "EaW/common/national_focus/AET.txt": "e3ab2433b4a01c4fbc7a1726a8a603ba78259058261b8d998e949fea205efe06",
+    "EaW/localisation/english/country_AET_l_english.yml": "346d5686b316e190b83cc2fa9cbe0438afd0c6a1f97b7379ddcb72b9b9d72ff6",
+    "EaW/localisation/russian/country_AET_l_russian.yml": "8d495821fbed7a7f2c69e0bd3fec83c91bcec0e5a0060e2108e546ed61589522"
+  },
+  "art_direction": {
+    "rules": [
+      "docs/icon-generation-manifest.md",
+      "art/verenia/README.md",
+      "art/verenia/native-spirit-palettes.json"
+    ],
+    "style": "Painted HOI4/EaW national-spirit object icons. One dominant readable silhouette and no more than two supporting motifs. Target 64x64; transparent exterior, no enclosing scene panel.",
+    "heraldry": "The native neutral/democratic AET flag is horizontal black, white, cobalt with the exact joined black diamond device. Never invent a griffon coat of arms for Greifwald. Most briefs use thematic objects and no heraldry at all. The distinct fascist and communist flag devices must not be substituted for the county device.",
+    "palette": "Natural contextual materials determine color. Gold is permitted for actual brass/gilded highlights; it is not a universal wash. Maar-related effects may use restrained violet/cold light; research, agriculture, civic and military subjects retain distinct material palettes.",
+    "negative_or_mixed": "Show disruption or political cost through damaged objects, constrained arrangements and worn materials. Benefit/harm is not mechanically encoded as green/red. Native aggressive or oppressive ideology is depicted as game context, not endorsement.",
+    "prohibitions": "No humans, human hands, invented anatomical crests, generic lilies/crowns, blank seals/documents, pseudo-text, external-franchise insignia, gore or unrelated political symbols. Books and maps show meaningful diagrams. No per-family icon reuse implied.",
+    "family_policy": "All 38 exact idea definitions stay listed. Shared family is composition continuity for related stages, not permission to omit, merge or bind one image without review."
+  },
+  "heraldry_references": {
+    "preview_inspected": "art/greifwald/reference/heraldry.png",
+    "original_sha256": {
+      "EaW/gfx/flags/AET_neutrality.tga": "1923842bab5db8be75d8b4c39dc1081180f25e552703696b859c44b1fe9cee43",
+      "EaW/gfx/flags/AET_democratic.tga": "1923842bab5db8be75d8b4c39dc1081180f25e552703696b859c44b1fe9cee43",
+      "EaW/gfx/flags/AET_fascism.tga": "663f307a2528cd534725b26bcf86d7d6f2af85e193530fb284e028c4c0fe7756",
+      "EaW/gfx/flags/AET_communism.tga": "c024ac0f6514a490f62a05820d209ba93cc386adedebc9a4a42f449e630ae723",
+      "EaW/gfx/flags/GRI_neutrality.tga": "3b871a01f15a97f53c659479512526aa1cb0769c217e317d79e3bc087334ebe7",
+      "EaW/gfx/flags/JER_democratic.tga": "a654fb62da40b5f625a6b1e30f9f3a7b042941b5775041d0843ed117d74fbde4",
+      "EaW/gfx/flags/CHN_fascism.tga": "bf534ebbb1ad08532d6d167531b270ab34cb6602017134015507688aab996e6e"
+    },
+    "notes": [
+      "AET_neutrality and AET_democratic: exact black/white/cobalt horizontal tricolor and joined diamond device.",
+      "AET_fascism: native white central device within blue/violet radiating form on black; copy actual reference only when specifically requested by brief.",
+      "AET_communism: native white anarchist composite device on black. Plain black pennants in briefs are deliberate avoidance of tiny complex heraldry.",
+      "GRI_neutrality: native black griffon on gold/orange field; do not substitute a white or gold griffon.",
+      "JER_democratic and CHN_fascism references are evidence of path-specific heraldry, not automatic motifs for every Aquileian/changeling subject."
+    ]
+  },
+  "families": [
+    {
+      "id": "bernier_transformation",
+      "members": [
+        "AET_anarchists",
+        "AET_anarchists_2"
+      ],
+      "direction": "Maintain continuity while distinguishing the disruption-to-self-government transition."
+    },
+    {
+      "id": "archonate_militia_stages",
+      "members": [
+        "AET_militias",
+        "AET_militias_2",
+        "AET_militias_3"
+      ],
+      "direction": "Village clergy militia, organized Ebonwing paramilitary, then Maarite warriors: distinct silhouette and allegiance at every stage."
+    }
+  ],
+  "shared_picture_audit": {
+    "scan_roots": [
+      "EaW/common/ideas",
+      "mod/HoISubmod/common/ideas"
+    ],
+    "scope_note": "Counts are definition occurrences across source layers, not a resolved runtime idea count. All files parsed without error. Six representative external consumers per record are enough to prove unsafe global replacement; game-base consumers were not needed for that proof.",
+    "shared_picture_count": 24,
+    "rule": "All 24 current picture keys have external consumers. Use new country-specific picture bindings; do not redefine their existing GFX sprite names or overwrite shared textures."
+  },
+  "records": [
+    {
+      "id": "AET_revanchism",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 3,
+      "current_picture": "griffon_army3",
+      "name": "Adelart Revanchism",
+      "names": {
+        "en": "Adelart Revanchism",
+        "ru": "Аделартский реваншизм"
+      },
+      "localized_description": {
+        "en": "The loss of Adelart has made the population more inclined towards war.",
+        "ru": "Потеря Аделарта повысила популярность милитаристских настроений среди населения."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 415,
+          "description_line": 416
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 415,
+          "description_line": 416
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.war_support_factor",
+          "operator": "=",
+          "value": "0.1"
+        },
+        {
+          "key": "modifier.conscription_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "HEL.exists",
+          "operator": "=",
+          "value": "yes"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 24,
+        "examples": [
+          {
+            "id": "BRZ_well_trained_troops",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_principle_of_total_dedication_idea",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_reorganized_officer_corps",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_reorganized_officer_corps_2",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "CHN_army_griffon_type",
+            "file": "EaW/common/ideas/zzz_CHN_ideas.txt"
+          },
+          {
+            "id": "FRN_fascists_2",
+            "file": "EaW/common/ideas/zzz_FRN_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_griffon_army3 sprite or its texture."
+      },
+      "semantics": "Loss of Adelart sustains popular revanchism, raising war support and recruitment.",
+      "brief": "A snapped boundary post beside an old military bugle and a taut red rally ribbon; the broken post is the dominant shape. No invented map, claims or coat of arms.",
+      "palette": {
+        "materials": [
+          "weathered brown timber",
+          "gunmetal",
+          "restrained brick-red",
+          "brass bugle highlights"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The loss of Adelart has made the population more inclined towards war.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": []
+    },
+    {
+      "id": "AET_realism",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 26,
+      "current_picture": "HUN_treaty_of_triannon",
+      "name": "Political Realism",
+      "names": {
+        "en": "Political Realism",
+        "ru": "Политический реализм"
+      },
+      "localized_description": {
+        "en": "We are a small nation between two giants, thus to ensure our safety we must be open to any and all diplomacy.",
+        "ru": "Мы являемся небольшой страной между двух гигантов, поэтому для обеспечения нашей безопасности мы должны быть открыты для любой дипломатии."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 417,
+          "description_line": 418
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 417,
+          "description_line": 418
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.improve_relations_maintain_cost_factor",
+          "operator": "=",
+          "value": "-0.5"
+        },
+        {
+          "key": "modifier.opinion_gain_monthly_factor",
+          "operator": "=",
+          "value": "0.20"
+        },
+        {
+          "key": "modifier.democratic_acceptance",
+          "operator": "=",
+          "value": "25"
+        },
+        {
+          "key": "modifier.fascism_acceptance",
+          "operator": "=",
+          "value": "25"
+        },
+        {
+          "key": "modifier.communism_acceptance",
+          "operator": "=",
+          "value": "25"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 47,
+        "examples": [
+          {
+            "id": "charter_liberties",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "charter_republic",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "charter_commonwealth",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "ARA_tourism_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_townhall_democracy_2_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAL_federal_charter_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_HUN_treaty_of_triannon sprite or its texture."
+      },
+      "semantics": "A small state deals pragmatically with both larger neighbours; diplomacy becomes cheaper and broader.",
+      "brief": "A compact brass balance holding two different sealed diplomatic folios at equal height, with a small county key on the central base. Folios have embossed route diagrams, not pseudo-text.",
+      "palette": {
+        "materials": [
+          "aged brass",
+          "ivory paper",
+          "walnut",
+          "restrained slate-blue"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "We are a small nation between two giants, thus to ensure our safety we must be open to any and all diplomacy.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_realpolitik",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Between Giants",
+          "description_en": "Greifwald sits between two of the largest powers on the continent: The Kingdom of Aquileia and the old Griffonian Empire. It is of the utmost importance that we maintain good relations with both. We cannot let Greifwald fall into the claws of extremists, as it is likely that such a change would put us on the path to war with one or more powers on the Griffonian continent."
+        }
+      ]
+    },
+    {
+      "id": "AET_true_neutrality",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 52,
+      "current_picture": "generic_pp_unity_bonus",
+      "name": "Neutral Diplomacy",
+      "names": {
+        "en": "Neutral Diplomacy",
+        "ru": "Нейтральная дипломатия"
+      },
+      "localized_description": {
+        "en": "It is best we not take a side and let the Empire and Aquileia fight it out.",
+        "ru": "Мы не будем принимать ничью сторону и позволим Империи и Аквелии сражаться друг с другом без нас."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 419,
+          "description_line": 420
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 419,
+          "description_line": 420
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.justify_war_goal_time",
+          "operator": "=",
+          "value": "0.50"
+        },
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.neutrality_drift",
+          "operator": "=",
+          "value": "0.01"
+        },
+        {
+          "key": "modifier.ai_get_ally_desire_factor",
+          "operator": "=",
+          "value": "-50"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 157,
+        "examples": [
+          {
+            "id": "eqs_media_control",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "new_harmonic_administration",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_pp_unity_bonus sprite or its texture."
+      },
+      "semantics": "Neutral diplomacy discourages alliance commitments and slows war justification, while easing domestic political costs.",
+      "brief": "An upright closed border barrier with a sheathed sword resting against its base and a peaceful route passing behind it; no flag.",
+      "palette": {
+        "materials": [
+          "chalk-white painted wood",
+          "dark iron",
+          "muted cobalt",
+          "tan leather"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "It is best we not take a side and let the Empire and Aquileia fight it out.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_complete_neutrality",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "A Policy of Neutrality",
+          "description_en": "We must maintain complete and utter neutrality in our dealings with both the Aquileians and the Imperials. To this end, we will instruct all echelons of power in Greifwald that the highest priority of the State is the preservation of the status quo. Greifwald shall be a beacon of stability in a world full of extremists."
+        }
+      ]
+    },
+    {
+      "id": "AET_military_advisors_JER",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 77,
+      "current_picture": "FRA_scw_intervention_nationalists_focus",
+      "name": "Aquileian Military Advisors",
+      "names": {
+        "en": "Aquileian Military Advisors",
+        "ru": "Аквелийские военные советники"
+      },
+      "localized_description": {
+        "en": null,
+        "ru": null
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 421,
+          "description_line": null
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 421,
+          "description_line": null
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_org_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.planning_speed",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.land_doctrine_cost_factor",
+          "operator": "=",
+          "value": "-0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 121,
+        "examples": [
+          {
+            "id": "ALO_desert_tribes",
+            "file": "EaW/common/ideas/zzz_ALO_ideas.txt"
+          },
+          {
+            "id": "ANG_our_homeland_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_massed_artillery",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy_2",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_selective_philosophy_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_FRA_scw_intervention_nationalists_focus sprite or its texture."
+      },
+      "semantics": "Aquileian military instruction improves organization, planning speed and doctrine learning.",
+      "brief": "A military teaching board with clear formation blocks and a hinged officer's pointer, backed by a neatly folded blue-white-burgundy cloth. No fixed dynastic insignia.",
+      "palette": {
+        "materials": [
+          "slate-blue board",
+          "ivory chalk",
+          "burgundy cloth accent",
+          "pale brass hinge"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Aquileian military instruction improves organization, planning speed and doctrine learning.",
+      "description_origin": "authored_synopsis_from_effects_and_granting_focus",
+      "granting_focus_context": [
+        {
+          "id": "AET_aquileian_adivosrs",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Aquileian Military Mission",
+          "description_en": "The Aquileian Military is one of the most advanced in the world. It may be possible to organise a joint military mission with the Aquileian high command. We would be able to learn a lot of new tactics and doctrines for our own military."
+        }
+      ],
+      "lore_notes": "Native AET_aquileian_adivosrs grants this spirit. The opposite advisor focus merely checks it as a prohibition; it is not a granting source. Aquileia may be monarchist or republican: no unconditional lily or royal crown."
+    },
+    {
+      "id": "AET_military_advisors_GRI",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 98,
+      "current_picture": "FRA_scw_intervention_nationalists_focus",
+      "name": "Imperial Military Advisors",
+      "names": {
+        "en": "Imperial Military Advisors",
+        "ru": "Имперские военные советники"
+      },
+      "localized_description": {
+        "en": null,
+        "ru": null
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 422,
+          "description_line": null
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 422,
+          "description_line": null
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_attack_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.army_defence_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.land_doctrine_cost_factor",
+          "operator": "=",
+          "value": "-0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 121,
+        "examples": [
+          {
+            "id": "ALO_desert_tribes",
+            "file": "EaW/common/ideas/zzz_ALO_ideas.txt"
+          },
+          {
+            "id": "ANG_our_homeland_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_massed_artillery",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy_2",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_selective_philosophy_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_FRA_scw_intervention_nationalists_focus sprite or its texture."
+      },
+      "semantics": "Imperial officers teach attack, defence and doctrine through structured staff training.",
+      "brief": "An imperial field-strategy folio opened beneath a large steel compass, with two opposed formation blocks and a plain orange-edged document cover. No crown or invented imperial eagle.",
+      "palette": {
+        "materials": [
+          "dark steel",
+          "parchment ivory",
+          "charcoal",
+          "restrained burnt-orange binding"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Imperial officers teach attack, defence and doctrine through structured staff training.",
+      "description_origin": "authored_synopsis_from_effects_and_granting_focus",
+      "granting_focus_context": [
+        {
+          "id": "AET_imperial_adivosrs",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Imperial Military Mission",
+          "description_en": "The Imperial military is very well structured and uses advanced tactics and doctrines. By sending some of our officers to study Imperial military strategy, we should be able implement many new tactics and doctrines into our armed forces."
+        }
+      ],
+      "lore_notes": "Native AET_imperial_adivosrs grants this spirit. The opposite advisor focus merely checks it as a prohibition. Imperial motifs must use the native GRI reference if included."
+    },
+    {
+      "id": "AET_new_county_politics",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 119,
+      "current_picture": "generic_victors_of_ww1",
+      "name": "A Greifwaldian Nation",
+      "names": {
+        "en": "A Greifwaldian Nation",
+        "ru": "Грайфвальдская нация"
+      },
+      "localized_description": {
+        "en": "We are not Imperials nor are we Aquileians, we are Greifwaldians and we shall fight for our nation to the last breath.",
+        "ru": "Мы не имперцы и не аквелийцы, мы - грайфвальдцы, и будем бороться за нашу страну до последнего вздоха!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 423,
+          "description_line": 424
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 423,
+          "description_line": 424
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.MONTHLY_POPULATION",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.drift_defence_factor",
+          "operator": "=",
+          "value": "0.25"
+        },
+        {
+          "key": "modifier.political_power_factor",
+          "operator": "=",
+          "value": "0.10"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 74,
+        "examples": [
+          {
+            "id": "ANG_resistance",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_resistance_2",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_resistance_3",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_resistance_3_2",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_megas_arantigos",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_riverlands_the_nation_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_victors_of_ww1 sprite or its texture."
+      },
+      "semantics": "A distinct Greifwaldian civic identity supports population growth, political authority and resistance to foreign ideological pressure.",
+      "brief": "A solid county gatehouse carrying one small faithfully copied native AET flag, with three converging cobbled paths at its base. Preserve the exact black-white-cobalt bands and joined black diamond device.",
+      "palette": {
+        "materials": [
+          "stone grey",
+          "natural slate",
+          "flag black-white-cobalt",
+          "sparse brass fittings"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "We are not Imperials nor are we Aquileians, we are Greifwaldians and we shall fight for our nation to the last breath.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_new_country",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Springtime for Greifwald",
+          "description_en": "The Unification of Greifwald has had a tremendous effect on our nation: for the first time in decades, the griffons of Greifwald can be proud of their nation, and support for our government is at an all-time high. We must capitalise on this, and lead the Greifwaldian people into a new age of happiness and prosperity."
+        }
+      ]
+    },
+    {
+      "id": "AET_agriculture_reform",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 143,
+      "current_picture": "generic_agrarian_society",
+      "name": "Agricultural Reforms",
+      "names": {
+        "en": "Agricultural Reforms",
+        "ru": "Аграрные реформы"
+      },
+      "localized_description": {
+        "en": "Agricultural reforms shall lead our nation in to the future.",
+        "ru": "Аграрные реформы приведут наш народ в будущее."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 425,
+          "description_line": 426
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 425,
+          "description_line": 426
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.local_resources_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.production_factory_max_efficiency_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 70,
+        "examples": [
+          {
+            "id": "ARA_sparletan_vinyards",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_1",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_2",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_3",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_native_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAL_rural_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_agrarian_society sprite or its texture."
+      },
+      "semantics": "Land-management reform improves resource extraction and the production-efficiency ceiling.",
+      "brief": "A freshly sharpened steel ploughshare over a neatly partitioned soil sample tray, with one healthy wheat bundle beside it.",
+      "palette": {
+        "materials": [
+          "earth umber",
+          "steel grey",
+          "wheat ochre",
+          "subdued leaf green"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Agricultural reforms shall lead our nation in to the future.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_land_reform",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Massive Agricultural Reforms",
+          "description_en": "Our heavy industry has improved significantly, but our agriculture is still lagging behind in many fields. We must fix this as soon as possible and start a massive reform of our agriculture. This \"Agricultural Revolution\" will make our agricultural industry one of the most advanced on the continent."
+        }
+      ]
+    },
+    {
+      "id": "AET_greifwaldian_army",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 161,
+      "current_picture": "general_staff",
+      "name": "The Greifwaldian Army",
+      "names": {
+        "en": "The Greifwaldian Army",
+        "ru": "Грайфвальдская армия"
+      },
+      "localized_description": {
+        "en": "A strong army shall protect the Greifwaldian people.",
+        "ru": "Сильная армия защитит грайфвальдский народ."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 427,
+          "description_line": 428
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 427,
+          "description_line": 428
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_core_defence_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.conscription",
+          "operator": "=",
+          "value": "0.03"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 52,
+        "examples": [
+          {
+            "id": "ARA_new_school_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_off_aca",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_off_aca_1",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_off_aca_2",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAK_special_forces_review_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAK_special_forces_review_2_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_general_staff sprite or its texture."
+      },
+      "semantics": "The national army raises recruitment and provides stronger defence on home territory.",
+      "brief": "A plain sturdy defensive shield planted before a miniature county watchtower, with one rolled service belt; no generic griffon crest.",
+      "palette": {
+        "materials": [
+          "blued steel",
+          "charcoal leather",
+          "pale stone",
+          "cobalt cloth accent"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "A strong army shall protect the Greifwaldian people.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_new_army",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Form the Greifwaldian National Army",
+          "description_en": "Since the successful war of unification, support for the military is at an all-time high, and many griffons are joining the military every day. Now that a true Greifwaldian nation exists, we can launch a significant expansion of our military. Greifwald shall never be divided again."
+        }
+      ]
+    },
+    {
+      "id": "AET_anarchists",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 184,
+      "current_picture": "trotskyite_plot",
+      "name": "The Berniers",
+      "names": {
+        "en": "The Berniers",
+        "ru": "Берньеры"
+      },
+      "localized_description": {
+        "en": "The GAP or more commonly known as the Berniers have finally decide to strike and are waging a war against the Greifwaldian government.",
+        "ru": "СГА или более известные как берньеры, наконец, решили нанести удар и начать войну против правительства Грайфвальда."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 429,
+          "description_line": 430
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 429,
+          "description_line": 430
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "0.50"
+        },
+        {
+          "key": "modifier.communism_drift",
+          "operator": "=",
+          "value": "0.07"
+        },
+        {
+          "key": "modifier.stability_factor",
+          "operator": "=",
+          "value": "-0.20"
+        },
+        {
+          "key": "modifier.conscription_factor",
+          "operator": "=",
+          "value": "-0.50"
+        }
+      ],
+      "availability_evidence": [],
+      "shared_picture": {
+        "external_definition_count": 12,
+        "examples": [
+          {
+            "id": "ANG_worker_congress",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "AVI_the_strong_arm_of_the_revolution",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BRZ_socialist_agitation",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_lingering_socialist_agitation",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "CTL_great_communist_purge",
+            "file": "EaW/common/ideas/zzz_CTL_ideas.txt"
+          },
+          {
+            "id": "EYE_authority_great_leader",
+            "file": "EaW/common/ideas/zzz_EYE_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_trotskyite_plot sprite or its texture."
+      },
+      "semantics": "Bernier insurgency destabilizes the existing government, drains political capacity and recruitment, and spreads anarchist allegiance.",
+      "brief": "A splintered barricade bearing a plain black pennant, with a toppled official ledger caught beneath one broken beam. Depict disruption, not triumphant state authority.",
+      "palette": {
+        "materials": [
+          "charcoal black",
+          "splintered brown wood",
+          "dusty ivory paper",
+          "rust-red damage accent"
+        ],
+        "polarity": "negative",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": "bernier_transformation",
+      "description": "The GAP or more commonly known as the Berniers have finally decide to strike and are waging a war against the Greifwaldian government.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_anarchy",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Anarchy in Greifwald",
+          "description_en": "The griffons of Greifwald have long lacked any strong opinions on matters one way or the other, but how can they continue like that when there's still a state that might take a position on events? The only solution is revolution! Nestor Bernier, a notorious guerrilla fighter, is already forming plans to topple the Count's rule."
+        },
+        {
+          "id": "AET_free_territory_established",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Proclaim the Free Territory",
+          "description_en": "The government is dead! Now that anarchy has prevailed Nestor Bernier, the leader of the revolutionary fighters, is making preparations to declare Greifwald a free territory. Let the whole world know that those who seek to rule will find only death here."
+        }
+      ]
+    },
+    {
+      "id": "AET_anarchists_2",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 203,
+      "current_picture": "trotskyite_plot",
+      "name": "The Free Territory",
+      "names": {
+        "en": "The Free Territory",
+        "ru": "Вольная Территория"
+      },
+      "localized_description": {
+        "en": "No Gods, no Kings, only Griffons!",
+        "ru": "Ни богов, ни господ, только грифоны!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 431,
+          "description_line": 432
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 431,
+          "description_line": 432
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.communism_drift",
+          "operator": "=",
+          "value": "0.02"
+        },
+        {
+          "key": "modifier.army_morale_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.conscription_factor",
+          "operator": "=",
+          "value": "0.10"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 12,
+        "examples": [
+          {
+            "id": "ANG_worker_congress",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "AVI_the_strong_arm_of_the_revolution",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BRZ_socialist_agitation",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_lingering_socialist_agitation",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "CTL_great_communist_purge",
+            "file": "EaW/common/ideas/zzz_CTL_ideas.txt"
+          },
+          {
+            "id": "EYE_authority_great_leader",
+            "file": "EaW/common/ideas/zzz_EYE_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_trotskyite_plot sprite or its texture."
+      },
+      "semantics": "The successful Free Territory replaces insurgent disruption with communal recruitment and recovering army morale.",
+      "brief": "A repaired village assembly bell on an open timber frame, with a plain black pennant and several equal voting counters arranged in a circle below.",
+      "palette": {
+        "materials": [
+          "black cloth",
+          "warm timber",
+          "aged bronze",
+          "soft ivory counters"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": "bernier_transformation",
+      "description": "No Gods, no Kings, only Griffons!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_free_territory_established",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Proclaim the Free Territory",
+          "description_en": "The government is dead! Now that anarchy has prevailed Nestor Bernier, the leader of the revolutionary fighters, is making preparations to declare Greifwald a free territory. Let the whole world know that those who seek to rule will find only death here."
+        }
+      ]
+    },
+    {
+      "id": "AET_black_army",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 224,
+      "current_picture": "GRF_militias",
+      "name": "The Black Army",
+      "names": {
+        "en": "The Black Army",
+        "ru": "Чёрная гвардия"
+      },
+      "localized_description": {
+        "en": "The Revolutionary Insurrectionary Army of Greifwald, also known as the Black Army, is an anarchist army formed largely of Greifwaldian peasants and workers, whose task it is to protect the people of Greifwald.",
+        "ru": "Новая Революционная Иррегулярная Армия Грайфвальда, известная как Черная Армия, состоит в основном из грайфвальдских крестьян и рабочих, задача которых - защитить жителей Грайфвальда."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 433,
+          "description_line": 434
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 433,
+          "description_line": 434
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_org_factor",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.planning_speed",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.army_attack_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.army_defence_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.conscription",
+          "operator": "=",
+          "value": "0.02"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "FAL_militias_idea",
+            "file": "EaW/common/ideas/zzz_FAL_ideas.txt"
+          },
+          {
+            "id": "FEZ_expand_military_idea",
+            "file": "EaW/common/ideas/zzz_FEZ_ideas.txt"
+          },
+          {
+            "id": "FLO_western_barracks_idea",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "GRF_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias_2",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_GRF_militias sprite or its texture."
+      },
+      "semantics": "Worker and peasant irregulars gain combat strength and recruitment but suffer weaker organization and slower planning.",
+      "brief": "Two mismatched militia cartridge pouches strapped around a short drum, with a plain black pennant rising behind; handmade equipment visibly differs in size.",
+      "palette": {
+        "materials": [
+          "black wool",
+          "worn brown leather",
+          "dark iron",
+          "muted brass"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The Revolutionary Insurrectionary Army of Greifwald, also known as the Black Army, is an anarchist army formed largely of Greifwaldian peasants and workers, whose task it is to protect the people of Greifwald.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_black_army_formation",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Form the RIAG",
+          "description_en": "The new Revolutionary Insurrectionary Army of Greifwald, otherwise known as RIAG or simply as the Black Army, shall form the backbone of the revolution. Nestor Bernier will be its figurehead and workers and peasants will voluntarily join its ranks. Liberty or death!"
+        }
+      ],
+      "lore_notes": "English name says Black Army; Russian says Black Guard while its description also calls it Black Army. Retain both native strings; depict irregular peasant/worker military equipment rather than a modern elite guard."
+    },
+    {
+      "id": "AET_land_given_away",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 247,
+      "current_picture": "generic_agrarian_society",
+      "name": "Land for the Peasantry",
+      "names": {
+        "en": "Land for the Peasantry",
+        "ru": "Земля - крестьянам!"
+      },
+      "localized_description": {
+        "en": "The peasants shall from this day forth own the land they work.",
+        "ru": "С этого дня, крестьяне будут владеть землей!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 435,
+          "description_line": 436
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 435,
+          "description_line": 436
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.local_resources_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "-0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 70,
+        "examples": [
+          {
+            "id": "ARA_sparletan_vinyards",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_1",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_2",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_3",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_native_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAL_rural_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_agrarian_society sprite or its texture."
+      },
+      "semantics": "Peasants own the soil they cultivate; agricultural resources improve and political upkeep falls.",
+      "brief": "A farm key laid across a compact surveyed field model, with a scythe blade and ripened grain at the edge. Ownership is shown by the key, not an empty deed.",
+      "palette": {
+        "materials": [
+          "soil brown",
+          "grain gold",
+          "dark steel",
+          "subdued green growth"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The peasants shall from this day forth own the land they work.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_peasant_land",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Land for the Peasants!",
+          "description_en": "The end is nigh for the 'owners' of farms. Now it is the peasantry who shall control the land they work, no one else! Anarchist communes will replace the old estates of aristocrat scum."
+        }
+      ]
+    },
+    {
+      "id": "AET_factory_control",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 262,
+      "current_picture": "generic_production_bonus",
+      "name": "Worker Factory Control",
+      "names": {
+        "en": "Worker Factory Control",
+        "ru": "Рабочий контроль"
+      },
+      "localized_description": {
+        "en": "The workers shall control the means of production, even if we have to kill every bourgeois pig to make sure it happens.",
+        "ru": "Рабочие должны контролировать средства производства, даже если мы должны убить каждую буржуазную свинью, чтобы убедиться, что это произойдет."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 437,
+          "description_line": 438
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 437,
+          "description_line": 438
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.production_factory_max_efficiency_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.industrial_capacity_factory",
+          "operator": "=",
+          "value": "0.10"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 217,
+        "examples": [
+          {
+            "id": "ANG_industrial_center",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_syndicates_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_syndicates_cooperation",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_industrious_nation",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_mass_contruction_projects",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_democratic_syndicates",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_production_bonus sprite or its texture."
+      },
+      "semantics": "Workers control industrial production, increasing factory output and efficiency.",
+      "brief": "A heavy factory handwheel with several equal grip handles, mounted over a short conveyor carrying finished steel billets. No human or griffon hands.",
+      "palette": {
+        "materials": [
+          "iron grey",
+          "oxidized copper",
+          "warm steel highlights",
+          "black oil-dark recesses"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The workers shall control the means of production, even if we have to kill every bourgeois pig to make sure it happens.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_worker_control",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Factories for the Workers!",
+          "description_en": "No hierarchies, or else! That is the motto of the GFT, and to achieve that goal we must tear down the hated oppression of 'the boss.' Once the factory owners are six feet under the workers will form cooperatives and be free to run the factory as they see fit."
+        }
+      ]
+    },
+    {
+      "id": "AET_teacher_control",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 282,
+      "current_picture": "generic_research_bonus",
+      "name": "Autonomous School System",
+      "names": {
+        "en": "Autonomous School System",
+        "ru": "Автономная школьная система"
+      },
+      "localized_description": {
+        "en": "Who better to control the school system than those who teach in the schools?",
+        "ru": "Кто лучше контролирует школьную систему, чем те, кто преподает в них?"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 439,
+          "description_line": 440
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 439,
+          "description_line": 440
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.research_speed_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 102,
+        "examples": [
+          {
+            "id": "ANG_free_education_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_new_institutions_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_foreign_experts_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_scienceexchange",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_secularism",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAR_singularity_idea",
+            "file": "EaW/common/ideas/zzz_BAR_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_research_bonus sprite or its texture."
+      },
+      "semantics": "Teachers administer autonomous schools and improve research.",
+      "brief": "An open geometry textbook resting under a small classroom bell, with a movable wooden teaching frame behind. Pages show a triangle and simple measured construction.",
+      "palette": {
+        "materials": [
+          "ivory paper",
+          "warm oak",
+          "slate-green board",
+          "small brass bell"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Who better to control the school system than those who teach in the schools?",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_anarch_teachers",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "An Autonomous School System",
+          "description_en": "Any form of compulsory education shall be abolished and both temple schools and public schools will be a thing of the past. In their place new democratic education centers will be founded, ran by volunteer teachers who are passionate about their work."
+        }
+      ]
+    },
+    {
+      "id": "AET_mother_anarchy",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 301,
+      "current_picture": "FRA_scw_intervention_republicans_focus",
+      "name": "Mother Anarchy Loves Her Sons!",
+      "names": {
+        "en": "Mother Anarchy Loves Her Sons!",
+        "ru": "Мама-Анархия и её сыновья!"
+      },
+      "localized_description": {
+        "en": "No Gods, no masters, anarchism shall spread across entire Griffonia! Freedom from the hierarchies!",
+        "ru": "Ни богов, ни господ, идеи анархии распространятся по всей Грифонии! Свобода от оков иерархии!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 441,
+          "description_line": 442
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 441,
+          "description_line": 442
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.non_core_manpower",
+          "operator": "=",
+          "value": "0.1"
+        },
+        {
+          "key": "modifier.justify_war_goal_time",
+          "operator": "=",
+          "value": "-0.50"
+        },
+        {
+          "key": "modifier.army_morale_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.ai_focus_aggressive_factor",
+          "operator": "=",
+          "value": "0.75"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "communism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 84,
+        "examples": [
+          {
+            "id": "political_turmoil",
+            "file": "EaW/common/ideas/_event.txt"
+          },
+          {
+            "id": "ANG_republican_sentiments_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_army_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_republican_army_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_new_army_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_army_idea_2",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_FRA_scw_intervention_republicans_focus sprite or its texture."
+      },
+      "semantics": "Anarchist revolution spreads outward, gaining non-core recruitment and morale with faster war justification.",
+      "brief": "A plain black banner unfurling above an opened padlock and a compact marching drum. Emphasize liberation and outward motion without a continent silhouette.",
+      "palette": {
+        "materials": [
+          "black cloth",
+          "steel silver",
+          "warm dark timber",
+          "restrained leather brown"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "No Gods, no masters, anarchism shall spread across entire Griffonia! Freedom from the hierarchies!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_spread_anarchy",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Mother Anarchy and Her Sons",
+          "description_en": "Mother Anarchy is the griffonisation of our movement. It's time we started to use her on our banners and flags as a symbol of the revolution. Let her inspire us to greater deeds, so ultimately all of griffonkind can be freed!"
+        }
+      ]
+    },
+    {
+      "id": "AET_militias",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 323,
+      "current_picture": "GRF_militias",
+      "name": "Archonate Militias",
+      "names": {
+        "en": "Archonate Militias",
+        "ru": "Ополченцы архоната"
+      },
+      "localized_description": {
+        "en": "Militia groups composed of believers in the griffon Gods and lead by the clergy to protect their homes and villages.",
+        "ru": "Группы ополченцев, состоящие из верующих в Богов Грифонии и возглавляемые духовенством, защищают свои дома и деревни."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 443,
+          "description_line": 444
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 443,
+          "description_line": 444
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.training_time_army_factor",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "modifier.conscription",
+          "operator": "=",
+          "value": "0.015"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "fascism"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "FAL_militias_idea",
+            "file": "EaW/common/ideas/zzz_FAL_ideas.txt"
+          },
+          {
+            "id": "FEZ_expand_military_idea",
+            "file": "EaW/common/ideas/zzz_FEZ_ideas.txt"
+          },
+          {
+            "id": "FLO_western_barracks_idea",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "GRF_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias_2",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_GRF_militias sprite or its texture."
+      },
+      "semantics": "Village believers organize defensive militias under local clergy.",
+      "brief": "A village alarm bell above a simple wicker protective shield and a loosely rolled service strap; practical local defence, no Maar emblem at this early stage.",
+      "palette": {
+        "materials": [
+          "weathered bronze",
+          "wicker tan",
+          "dark brown leather",
+          "muted stone grey"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": "archonate_militia_stages",
+      "description": "Militia groups composed of believers in the griffon Gods and lead by the clergy to protect their homes and villages.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_paramilitaries",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Organise Militias",
+          "description_en": "Now that sterling noble griffons of unquestionable character and not a hint of heresy are backing the government it's time for the commoners to join in the new military. A militia of mighty griffons of valour shall be formed, and among them not a single cultist shall be found. This new divine military shall surely help us."
+        },
+        {
+          "id": "AET_paramilitaries_2",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Expand the Militia System",
+          "description_en": "It's time to expand the militia system previously implemented, even if we have to scrape the bottom of the barrel to do it. Those brigands and convicts are sure to be turned into upstanding griffons, and make no mistake about it, they are not being used for some ulterior motive."
+        }
+      ],
+      "lore_notes": "Early Archonate militia serves the griffon gods in the plural. Do not back-project the later Maar cult into this stage."
+    },
+    {
+      "id": "AET_militias_2",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 346,
+      "current_picture": "GRF_militias",
+      "name": "Paramilitary Organisation",
+      "names": {
+        "en": "Paramilitary Organisation",
+        "ru": "Военизированная организация"
+      },
+      "localized_description": {
+        "en": "The Militia system has been expanded and turned into a system of paramilitaries loyal to Prelate Ebonwing.",
+        "ru": "Система ополчения была расширена и превращена в систему военизированных формирований, преданных прелату Эбонвингу."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 445,
+          "description_line": 446
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 445,
+          "description_line": 446
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.training_time_army_factor",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.conscription",
+          "operator": "=",
+          "value": "0.03"
+        },
+        {
+          "key": "modifier.fascism_drift",
+          "operator": "=",
+          "value": "0.01"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "fascism"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "FAL_militias_idea",
+            "file": "EaW/common/ideas/zzz_FAL_ideas.txt"
+          },
+          {
+            "id": "FEZ_expand_military_idea",
+            "file": "EaW/common/ideas/zzz_FEZ_ideas.txt"
+          },
+          {
+            "id": "FLO_western_barracks_idea",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "GRF_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias_2",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_GRF_militias sprite or its texture."
+      },
+      "semantics": "Ebonwing turns local militias into loyal organized paramilitary formations.",
+      "brief": "A disciplined rack of three matching plain steel shields with one neatly tightened service belt, keeping the earlier militia bell as a small secondary motif.",
+      "palette": {
+        "materials": [
+          "dark steel",
+          "charcoal leather",
+          "muted violet cloth",
+          "worn bronze bell"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": "archonate_militia_stages",
+      "description": "The Militia system has been expanded and turned into a system of paramilitaries loyal to Prelate Ebonwing.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_paramilitaries_2",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Expand the Militia System",
+          "description_en": "It's time to expand the militia system previously implemented, even if we have to scrape the bottom of the barrel to do it. Those brigands and convicts are sure to be turned into upstanding griffons, and make no mistake about it, they are not being used for some ulterior motive."
+        },
+        {
+          "id": "AET_warriors_of_maar",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Let Loose the Warriors of Maar",
+          "description_en": "By removing our military from any legal or moral restrictions, we can allow them to fully take advantage of their natural brutality. The only remaining law for them shall be to have unquestioning devotion to the Archon who speaks for Maar. Other than that, they can have their fun."
+        }
+      ]
+    },
+    {
+      "id": "AET_one_language",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 370,
+      "current_picture": "generic_pp_unity_bonus",
+      "name": "The Imperial Dialect",
+      "names": {
+        "en": "The Imperial Dialect",
+        "ru": "Имперский диалект"
+      },
+      "localized_description": {
+        "en": "No Aquileian gibberish, no Greifwaldian rubbish, the only way to speak Griffish is with a proper Imperial accent and stiff upper beak.",
+        "ru": "Никакой аквелийской тарабарщины, никакого грайфвальдского лингвистического мусора, единственный способ говорить для грифонов с правильным имперским акцентом и сильным высоким клювом!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 447,
+          "description_line": 448
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 447,
+          "description_line": 448
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.stability_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "0.10"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 157,
+        "examples": [
+          {
+            "id": "eqs_media_control",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "new_harmonic_administration",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_pp_unity_bonus sprite or its texture."
+      },
+      "semantics": "Compulsory Imperial speech standardization raises stability but costs political effort.",
+      "brief": "An open pronunciation primer with a simple beak-and-sound-wave teaching diagram, pressed beneath a heavy correction stamp beside a rigid school ruler. No lettering or invented state symbol.",
+      "palette": {
+        "materials": [
+          "ivory paper",
+          "oxblood binding",
+          "dark iron stamp",
+          "warm wooden ruler"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "No Aquileian gibberish, no Greifwaldian rubbish, the only way to speak Griffish is with a proper Imperial accent and stiff upper beak.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_language",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Enforce the Imperial Dialect",
+          "description_en": "The Imperial Dialect of our language is the most glorious dialect of our language to have ever been spoken, and any words to the contrary are heresy. Reports from test classes of bleeding from the ears when speaking backwards or in anagrams is also heresy."
+        },
+        {
+          "id": "AET_enslave",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Exploit the Heretics",
+          "description_en": "While sacrifices are preferred, that is not always the most productive way to further the struggle. Setting up work camps shall allow us to both kill them and get something out of them before the end. We shall also legalise every other kind of slavery to make sure there is always an underclass to exploit for Maar."
+        }
+      ]
+    },
+    {
+      "id": "AET_the_idol",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 390,
+      "current_picture": "BOI_idol_of_boreas_lost",
+      "name": "The Idol of Maar",
+      "names": {
+        "en": "The Idol of Maar",
+        "ru": "Идол Маара"
+      },
+      "localized_description": {
+        "en": "The one true god of griffonkind has gifted us with his idol, let the heretics quiver before us.",
+        "ru": "Единственный истинный бог грифоньей расы одарил нас своим идолом, пусть еретики трепещут перед нами."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 449,
+          "description_line": 450
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 449,
+          "description_line": 450
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.stability_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.war_support_factor",
+          "operator": "=",
+          "value": "0.15"
+        },
+        {
+          "key": "modifier.surrender_limit",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.army_morale_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 14,
+        "examples": [
+          {
+            "id": "BRZ_the_centre_of_griffonhood_1",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_the_centre_of_griffonhood_2",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_symbol_of_the_state",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "CNT_cornerstone_loss",
+            "file": "EaW/common/ideas/zzz_CNT_ideas.txt"
+          },
+          {
+            "id": "KAT_faint_of_faith",
+            "file": "EaW/common/ideas/zzz_KAT_ideas.txt"
+          },
+          {
+            "id": "KAT_anti_knight",
+            "file": "EaW/common/ideas/zzz_KAT_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_BOI_idol_of_boreas_lost sprite or its texture."
+      },
+      "semantics": "Maar's relic strengthens religious cohesion, morale, war support and refusal to surrender.",
+      "brief": "A half-open dark reliquary enclosing a veiled angular stone idol, with the exact native AET fascist device inset on the lid only. Do not invent the deity's body or reuse Boreas's idol.",
+      "palette": {
+        "materials": [
+          "obsidian black",
+          "stone ash",
+          "deep cobalt-violet",
+          "small cold ivory motif"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The one true god of griffonkind has gifted us with his idol, let the heretics quiver before us.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_idol_of_maar",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "A Boon From the Gods",
+          "description_en": "The Prelate has returned from a recent trip holding aloft a wicked wooden idol. This is the Idol of Maar, and all who see it must bow down or be destroyed."
+        },
+        {
+          "id": "AET_will_of_maar",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Spread the Will of Maar",
+          "description_en": "We must continue to attack all those who stand against us, and all stand against us. Thus our attacks must never stop, they must be ever happening. Through the dirges of war, we spread the glory of Maar."
+        }
+      ],
+      "lore_notes": "BOI_idol_of_boreas_lost is a shared placeholder, not evidence that this is Boreas. The localization explicitly identifies Maar. Preserve the native AET fascist device when the brief calls for one; do not invent deity anatomy or borrow external-franchise symbols."
+    },
+    {
+      "id": "AET_militias_3",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 412,
+      "current_picture": "GRF_militias",
+      "name": "Warriors of Maar",
+      "names": {
+        "en": "Warriors of Maar",
+        "ru": "Воины Маара"
+      },
+      "localized_description": {
+        "en": "The world shall tremble before the might of Maar!",
+        "ru": "Мир будет трепетать перед мощью Маара!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 451,
+          "description_line": 452
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 451,
+          "description_line": 452
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.conscription",
+          "operator": "=",
+          "value": "0.04"
+        },
+        {
+          "key": "modifier.army_attack_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.fascism_drift",
+          "operator": "=",
+          "value": "0.02"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "FAL_militias_idea",
+            "file": "EaW/common/ideas/zzz_FAL_ideas.txt"
+          },
+          {
+            "id": "FEZ_expand_military_idea",
+            "file": "EaW/common/ideas/zzz_FEZ_ideas.txt"
+          },
+          {
+            "id": "FLO_western_barracks_idea",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "GRF_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          },
+          {
+            "id": "GRF_better_militias_2",
+            "file": "EaW/common/ideas/zzz_GRF_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_GRF_militias sprite or its texture."
+      },
+      "semantics": "The transformed militias become Maar's committed warriors, with increased recruitment, attack and ideological drift.",
+      "brief": "A single imposing blackened shield and upright ritual spear wrapped in violet cloth, with the old militia bell now hanging beneath as a small relic. No skull pile, blood or invented divine crest.",
+      "palette": {
+        "materials": [
+          "blackened iron",
+          "deep violet cloth",
+          "cold silver edge",
+          "aged bronze bell"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": "archonate_militia_stages",
+      "description": "The world shall tremble before the might of Maar!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_warriors_of_maar",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Let Loose the Warriors of Maar",
+          "description_en": "By removing our military from any legal or moral restrictions, we can allow them to fully take advantage of their natural brutality. The only remaining law for them shall be to have unquestioning devotion to the Archon who speaks for Maar. Other than that, they can have their fun."
+        }
+      ]
+    },
+    {
+      "id": "AET_slavery",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 433,
+      "current_picture": "saf_history_of_segregation",
+      "name": "Slave Labour",
+      "names": {
+        "en": "Slave Labour",
+        "ru": "Рабский труд"
+      },
+      "localized_description": {
+        "en": "The unbelievers shall be made to toll in the name of Maar!",
+        "ru": "Неверующие станут марионетками Его, во славу Его!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 453,
+          "description_line": 454
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 453,
+          "description_line": 454
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.production_speed_buildings_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.industrial_capacity_factory",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "0.15"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 32,
+        "examples": [
+          {
+            "id": "BAL_gulags",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAL_gulags_2",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAR_undead_minimal_aut",
+            "file": "EaW/common/ideas/zzz_BAR_ideas.txt"
+          },
+          {
+            "id": "BRF_yes_enslave",
+            "file": "EaW/common/ideas/zzz_BRF_rw_ideas.txt"
+          },
+          {
+            "id": "CYA_opened_outback",
+            "file": "EaW/common/ideas/zzz_CYA_ideas.txt"
+          },
+          {
+            "id": "CYA_ignored_outback",
+            "file": "EaW/common/ideas/zzz_CYA_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_saf_history_of_segregation sprite or its texture."
+      },
+      "semantics": "Religious forced labour improves construction and production at a continuing political cost.",
+      "brief": "A heavy closed shackle chained to a worn quarry hammer and squared stone block. Use oppressive weight and wear; no prisoners or explicit injury.",
+      "palette": {
+        "materials": [
+          "dull iron",
+          "cold grey stone",
+          "dusty umber",
+          "tiny rust accents"
+        ],
+        "polarity": "negative",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The unbelievers shall be made to toll in the name of Maar!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_enslave",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Exploit the Heretics",
+          "description_en": "While sacrifices are preferred, that is not always the most productive way to further the struggle. Setting up work camps shall allow us to both kill them and get something out of them before the end. We shall also legalise every other kind of slavery to make sure there is always an underclass to exploit for Maar."
+        }
+      ]
+    },
+    {
+      "id": "AET_one_will",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 452,
+      "current_picture": "BOI_idol_of_boreas_lost",
+      "name": "The Will of Maar",
+      "names": {
+        "en": "The Will of Maar",
+        "ru": "Воля Маара"
+      },
+      "localized_description": {
+        "en": "The world shall kneel before the glory of Maar!",
+        "ru": "Мир преклонится пред славой Маара"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 455,
+          "description_line": 456
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 455,
+          "description_line": 456
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.justify_war_goal_time",
+          "operator": "=",
+          "value": "-0.50"
+        },
+        {
+          "key": "modifier.stability_factor",
+          "operator": "=",
+          "value": "0.20"
+        },
+        {
+          "key": "modifier.war_support_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.army_morale_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.ai_focus_aggressive_factor",
+          "operator": "=",
+          "value": "0.75"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 14,
+        "examples": [
+          {
+            "id": "BRZ_the_centre_of_griffonhood_1",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_the_centre_of_griffonhood_2",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_symbol_of_the_state",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "CNT_cornerstone_loss",
+            "file": "EaW/common/ideas/zzz_CNT_ideas.txt"
+          },
+          {
+            "id": "KAT_faint_of_faith",
+            "file": "EaW/common/ideas/zzz_KAT_ideas.txt"
+          },
+          {
+            "id": "KAT_anti_knight",
+            "file": "EaW/common/ideas/zzz_KAT_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_BOI_idol_of_boreas_lost sprite or its texture."
+      },
+      "semantics": "Maar's coercive unified will drives stability, morale, mobilization and outward aggression.",
+      "brief": "A tall command staff whose upper fixture holds the exact native AET fascist device, with three taut cords drawing smaller plain weights into rigid alignment. No unrelated occult runes.",
+      "palette": {
+        "materials": [
+          "obsidian shaft",
+          "cold ivory device",
+          "deep cobalt-violet",
+          "tarnished silver"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The world shall kneel before the glory of Maar!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_will_of_maar",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Spread the Will of Maar",
+          "description_en": "We must continue to attack all those who stand against us, and all stand against us. Thus our attacks must never stop, they must be ever happening. Through the dirges of war, we spread the glory of Maar."
+        }
+      ],
+      "lore_notes": "BOI_idol_of_boreas_lost is a shared placeholder, not evidence that this is Boreas. The localization explicitly identifies Maar. Preserve the native AET fascist device when the brief calls for one; do not invent deity anatomy or borrow external-franchise symbols."
+    },
+    {
+      "id": "AET_mechanise_agriculture",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 475,
+      "current_picture": "generic_agrarian_society",
+      "name": "Mechanised Agriculture",
+      "names": {
+        "en": "Mechanised Agriculture",
+        "ru": "Механизация сельского хозяйства"
+      },
+      "localized_description": {
+        "en": "Tractors will in fact not eat your soul if you use them.",
+        "ru": "Научно доказано, что тракторы не съедят вашу душу, если вы будете ими пользоваться."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 457,
+          "description_line": 458
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 457,
+          "description_line": 458
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.local_resources_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.production_factory_max_efficiency_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "is_subject",
+          "operator": "=",
+          "value": "no"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 70,
+        "examples": [
+          {
+            "id": "ARA_sparletan_vinyards",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_1",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_2",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "AVI_agri_3",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_native_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAL_rural_communes_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_agrarian_society sprite or its texture."
+      },
+      "semantics": "Tractors mechanize farming, improving resources and productive efficiency.",
+      "brief": "A clearly readable early tractor's rear wheel and plough assembly, accompanied by a short bundle of harvested grain.",
+      "palette": {
+        "materials": [
+          "faded agricultural green",
+          "dark rubber",
+          "weathered steel",
+          "wheat ochre"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Tractors will in fact not eat your soul if you use them.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_mechainsed_agriculture",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Mechanise Agriculture",
+          "description_en": "Heavy machinery can not be used only for war. Using tractors and other machines in our agriculture will increase our food surplus, which may in turn stimulate our economy."
+        }
+      ]
+    },
+    {
+      "id": "AET_oil_production",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 490,
+      "current_picture": "generic_exploit_mines",
+      "name": "The Black Country",
+      "names": {
+        "en": "The Black Country",
+        "ru": "Черная страна"
+      },
+      "localized_description": {
+        "en": "Eagleton and Lissay have become the oil capitals of not just Greifwald, but all of Griffonia.",
+        "ru": "Иглтон и Лиссей стали нефтяными столицами не только Грайфвальда, но и всей Грифонии."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 459,
+          "description_line": 460
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 459,
+          "description_line": 460
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.production_oil_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.consumer_goods_factor",
+          "operator": "=",
+          "value": "-0.1"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "is_subject",
+          "operator": "=",
+          "value": "no"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 43,
+        "examples": [
+          {
+            "id": "ABY_salt_mine_idea",
+            "file": "EaW/common/ideas/zzz_ABY_ideas.txt"
+          },
+          {
+            "id": "BAK_proper_autarky_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAK_proper_autarky_idea_2",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAN_mines",
+            "file": "EaW/common/ideas/zzz_BAN_ideas.txt"
+          },
+          {
+            "id": "BRF_new_excavation",
+            "file": "EaW/common/ideas/zzz_BRF_rw_ideas.txt"
+          },
+          {
+            "id": "BUF_national_wealth_idea",
+            "file": "EaW/common/ideas/zzz_BUF_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_exploit_mines sprite or its texture."
+      },
+      "semantics": "Eagleton and Lissay develop a large oil economy, increasing oil output and reducing consumer-goods burden.",
+      "brief": "A compact pumpjack silhouette lifting above two connected oil drums, with a small copper valve in the foreground.",
+      "palette": {
+        "materials": [
+          "oil-black",
+          "dark steel",
+          "rusty red pump beam",
+          "copper valve highlights"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Eagleton and Lissay have become the oil capitals of not just Greifwald, but all of Griffonia.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_oil_p",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Black Gold",
+          "description_en": "Our efforts to increase oil extraction have born fruit: Our oil industry is booming, and it doesn't show signs of stopping. It is believed that with increased funding, more synthetic oil can be produced. We will also be able to further expand the Adelart Oil Fields, and take advantage of any source that remains untapped. It is likely that the \"Black Gold\", as many griffons have named it, will continue to flow for many decades more."
+        }
+      ]
+    },
+    {
+      "id": "AET_recylce_muskets",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 505,
+      "current_picture": "generic_flexible_foreign_policy2",
+      "name": "Rifle Modernisation",
+      "names": {
+        "en": "Rifle Modernisation",
+        "ru": "Модернизация винтовок"
+      },
+      "localized_description": {
+        "en": null,
+        "ru": null
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 461,
+          "description_line": null
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 461,
+          "description_line": null
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.equipment_conversion_speed",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "equipment_bonus.infantry_equipment.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.infantry_equipment.instant",
+          "operator": "=",
+          "value": "yes"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "is_subject",
+          "operator": "=",
+          "value": "no"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 21,
+        "examples": [
+          {
+            "id": "BRF_inner_peace_idea",
+            "file": "EaW/common/ideas/zzz_BRF_rw_ideas.txt"
+          },
+          {
+            "id": "BRF_inner_peace_idea_lar",
+            "file": "EaW/common/ideas/zzz_BRF_rw_ideas.txt"
+          },
+          {
+            "id": "BRZ_dog_griffon_unity",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BRZ_panspecies_unity",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "HLR_Recovery1_idea",
+            "file": "EaW/common/ideas/zzz_HLR_ideas.txt"
+          },
+          {
+            "id": "HLR_Recovery2_idea",
+            "file": "EaW/common/ideas/zzz_HLR_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_flexible_foreign_policy2 sprite or its texture."
+      },
+      "semantics": "Old blackpowder rifles are economically converted to modern ammunition; conversion is faster and infantry equipment cheaper.",
+      "brief": "An old wooden rifle receiver secured in a workshop vise beside a separate replacement breech and one clean cartridge; emphasize mechanical refurbishment, not a complete firing weapon.",
+      "palette": {
+        "materials": [
+          "walnut stock",
+          "steel grey",
+          "brass cartridge",
+          "worn charcoal vise"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Old blackpowder rifles are economically converted to modern ammunition; conversion is faster and infantry equipment cheaper.",
+      "description_origin": "authored_synopsis_from_effects_and_granting_focus",
+      "granting_focus_context": [
+        {
+          "id": "AET_army_5",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Recycle the Old Guns",
+          "description_en": "As tempting as it is to throw away all our old weapons for the shiny new ones we should keep cost concerns in mind. If we can adapt an old blackpowder rifle for smokeless cartridges for half the cost of building a new rifle from scratch why not take it? If nothing else it should cut down on training time."
+        }
+      ],
+      "lore_notes": "Preserve the native misspelled ID recylce. This is refurbishment of old rifles, not diplomacy despite its generic_flexible_foreign_policy2 placeholder."
+    },
+    {
+      "id": "AET_exclude_scientists",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 525,
+      "current_picture": "generic_manpower_bonus",
+      "name": "Scientists Exempted from Military Service",
+      "names": {
+        "en": "Scientists Exempted from Military Service",
+        "ru": "Ученые трудятся над модификацией винтовок"
+      },
+      "localized_description": {
+        "en": null,
+        "ru": null
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 462,
+          "description_line": null
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 462,
+          "description_line": null
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.research_speed_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.conscription_factor",
+          "operator": "=",
+          "value": "-0.10"
+        }
+      ],
+      "availability_evidence": [],
+      "shared_picture": {
+        "external_definition_count": 97,
+        "examples": [
+          {
+            "id": "ANG_national_guard_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_man_my_armies_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_national_guard_2_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_imperial_guard",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_enforced_languages",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_mandatory_training_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_manpower_bonus sprite or its texture."
+      },
+      "semantics": "Scientists are exempted from conscription, trading available recruits for faster research.",
+      "brief": "A laboratory microscope protected beneath a glass bell jar, with a folded military service envelope left outside the glass. No rifle-manufacturing imagery.",
+      "palette": {
+        "materials": [
+          "clear blue-grey glass",
+          "ivory paper",
+          "black microscope body",
+          "small brass adjustments"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Scientists are exempted from conscription, trading available recruits for faster research.",
+      "description_origin": "authored_synopsis_from_effects_and_granting_focus",
+      "granting_focus_context": [
+        {
+          "id": "AET_army_8",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Exempt Scientists From Military Service",
+          "description_en": "Our military's continued success depends are newer and better technology. We must never again lag behind the curve. To that end we must allow our scientists to go about their business without fear of draft letters coming in the mail."
+        }
+      ],
+      "lore_notes": "The Russian native label says scientists work on rifle modification, but the English name, AET_army_8 narrative and +research/-conscription modifiers establish exemption from military service. Brief follows that evidence; localization is preserved unchanged."
+    },
+    {
+      "id": "AET_heaven",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 543,
+      "current_picture": "generic_army_war_college",
+      "name": "Intellectual Haven",
+      "names": {
+        "en": "Intellectual Haven",
+        "ru": "Гавань для ученых"
+      },
+      "localized_description": {
+        "en": "The constant warfare which has plagued Griffonia for years has drawn many intellectuals to our little country due to our relative stability, and their contributions have increased our scientific base significantly. However an unfortunate side-effect of their residence is their nigh constant complaining.",
+        "ru": "Постоянная война, как большой гнойный нарыв на теле Грифонии, но благодаря тому, что у нас на протяжении многих лет царит мир и процветание к нам тянутся множество талантливых ученых. Однако статья расходов \"На науку\" растет с каждым днем..."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 463,
+          "description_line": 464
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 463,
+          "description_line": 464
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.research_speed_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.political_power_cost",
+          "operator": "=",
+          "value": "0.30"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 14,
+        "examples": [
+          {
+            "id": "AVI_studentexchange",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "CTC_meritocratic_values",
+            "file": "EaW/common/ideas/zzz_CTH_ideas.txt"
+          },
+          {
+            "id": "DMT_new_officer_school",
+            "file": "EaW/common/ideas/zzz_DMT_ideas.txt"
+          },
+          {
+            "id": "EQC_royal_military_academy_sunset",
+            "file": "EaW/common/ideas/zzz_EQC_ideas.txt"
+          },
+          {
+            "id": "SCV_hyenian_aid_3",
+            "file": "EaW/common/ideas/zzz_HYE_ideas.txt"
+          },
+          {
+            "id": "KTZ_the_katown_pyramid",
+            "file": "EaW/common/ideas/zzz_KTZ_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_army_war_college sprite or its texture."
+      },
+      "semantics": "Refugee intellectuals expand scientific capacity while imposing political or budgetary burdens.",
+      "brief": "A travel trunk opened into a small scholarly desk, with a geometry book and glowing study lamp; natural material colors distinguish it from a military academy.",
+      "palette": {
+        "materials": [
+          "warm walnut",
+          "ivory pages",
+          "muted blue travel cloth",
+          "amber lamplight"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "The constant warfare which has plagued Griffonia for years has drawn many intellectuals to our little country due to our relative stability, and their contributions have increased our scientific base significantly. However an unfortunate side-effect of their residence is their nigh constant complaining.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_invite_scientists",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "A Haven for the Sound of Mind",
+          "description_en": "Many scientists have taken up our offer of citizenship, but we can still improve upon this number. By granting significant subsidies to scientists and giving them more protection under the law, we can make Greifwald even more attractive to intelligent people looking for a safe haven."
+        }
+      ],
+      "lore_notes": "English description emphasizes intellectuals complaining; Russian describes rising science spending. Both are preserved. The actual cost is political_power_cost = 0.30, not an explicit treasury mechanic."
+    },
+    {
+      "id": "AET_immigration",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 566,
+      "current_picture": "generic_pp_unity_bonus",
+      "name": "Loose Immigration Laws",
+      "names": {
+        "en": "Loose Immigration Laws",
+        "ru": "Ослабленный иммиграционный закон"
+      },
+      "localized_description": {
+        "en": "Wingbardians, Aquileians, Imperials? No sir, those griffons are Greifwaldians.",
+        "ru": "Вингбардийцы, Аквелийцы, Имперцы? Нет, сэр, это Грифоны Грайфвальда!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 465,
+          "description_line": 466
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 465,
+          "description_line": 466
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.MONTHLY_POPULATION",
+          "operator": "=",
+          "value": "0.25"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 157,
+        "examples": [
+          {
+            "id": "eqs_media_control",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "new_harmonic_administration",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_pp_unity_bonus sprite or its texture."
+      },
+      "semantics": "Loose immigration rules welcome different Griffonian origins as Greifwaldians, increasing population growth.",
+      "brief": "An open county doorway with three differently shaped travel cases passing inward and a plain welcome lantern above. No invented foreign flags.",
+      "palette": {
+        "materials": [
+          "honey-brown wood",
+          "muted teal and burgundy cases",
+          "ivory stone",
+          "warm amber light"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Wingbardians, Aquileians, Imperials? No sir, those griffons are Greifwaldians.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_immigration_act",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Loosen Immigration Laws",
+          "description_en": "Many people, griffons and others, seek to emigrate their native land in search of a better place to live. We have the industry and agriculture to support a very large population, and so we could take advantage of thousands of immigrants. But first, a loosening of our immigration laws is in order."
+        }
+      ]
+    },
+    {
+      "id": "AET_changeling_scientists",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 588,
+      "current_picture": "generic_research_bonus",
+      "name": "Changeling Scientists",
+      "names": {
+        "en": "Changeling Scientists",
+        "ru": "Чейнджлинги-ученые"
+      },
+      "localized_description": {
+        "en": "We're fairly certain they didn't commit any crimes during the war.",
+        "ru": "Мы вполне уверены, что они не совершали никаких преступлений во время войны."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 467,
+          "description_line": 468
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 467,
+          "description_line": 468
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.research_speed_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 102,
+        "examples": [
+          {
+            "id": "ANG_free_education_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_new_institutions_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_foreign_experts_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "AVI_scienceexchange",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_secularism",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAR_singularity_idea",
+            "file": "EaW/common/ideas/zzz_BAR_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_research_bonus sprite or its texture."
+      },
+      "semantics": "Changeling refugee scientists improve research; the source hints uneasily at their wartime past.",
+      "brief": "A laboratory microscope with a translucent cyan insect-wing specimen slide and a compact chemistry flask. The wing belongs to the specimen, not a human or invented national crest.",
+      "palette": {
+        "materials": [
+          "charcoal apparatus",
+          "pale cyan glass",
+          "desaturated green liquid",
+          "small brass fixtures"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "We're fairly certain they didn't commit any crimes during the war.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_changeling_science",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Invite the Scientists",
+          "description_en": "Many brilliant Changeling researchers were forced to leave their home, simply because of their political views. We have already established ourselves as a haven for any and all free thinkers, provided they have talent. By inviting more bug scientists to Greifwald, we should be able to significantly improve our scientific base."
+        }
+      ],
+      "lore_notes": "The cynical source wording leaves wartime misconduct implied, not proven; avoid depicting a named crime or human experiment."
+    },
+    {
+      "id": "AET_ratlines",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 610,
+      "current_picture": "generic_pp_unity_bonus",
+      "name": "Bug Tunnels",
+      "names": {
+        "en": "Bug Tunnels",
+        "ru": "Тоннели жуков"
+      },
+      "localized_description": {
+        "en": "A fake stamp here, a glued on moustache here, a fake passport over there, and all of a sudden a changeling finds itself in Greifwald.",
+        "ru": "Поддельный штамп здесь, наклеенные усы там, поддельный паспорт и внезапно чейнджлинг оказывается грайфвальдцем."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 469,
+          "description_line": 470
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 469,
+          "description_line": 470
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.MONTHLY_POPULATION",
+          "operator": "=",
+          "value": "0.10"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 157,
+        "examples": [
+          {
+            "id": "eqs_media_control",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_law_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "eqs_war_admin_extreme",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "new_harmonic_administration",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_pp_unity_bonus sprite or its texture."
+      },
+      "semantics": "Forged identities and clandestine escape routes bring changelings into Greifwald.",
+      "brief": "A worn travel passport with a clearly drawn insect-to-feather identity diagram, an offset ink stamp and a coiled false moustache prop; no readable text or fake official coat of arms.",
+      "palette": {
+        "materials": [
+          "faded navy cover",
+          "ivory paper",
+          "dark burgundy ink",
+          "black disguise prop"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "A fake stamp here, a glued on moustache here, a fake passport over there, and all of a sudden a changeling finds itself in Greifwald.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_escape",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "A Blind Eye",
+          "description_en": "Many Changelings are still on the run, having to flee their homeland because of simple ideological differences. And indeed, many of these bugs could be highly useful to the Greifwaldian nation. We should seek to set up ways to make it easier for \"oppressed\" Changelings to seek asylum in Greifwald. This will surely benefit our nation! After all, what could possibly go wrong?"
+        }
+      ]
+    },
+    {
+      "id": "AET_officer_core",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 632,
+      "current_picture": "CHN_continous_war_plan",
+      "name": "Changeling Officer Core",
+      "names": {
+        "en": "Changeling Officer Core",
+        "ru": "Офицерский корпус чейнджлингов"
+      },
+      "localized_description": {
+        "en": "Nothing to see here, move along fellow griffons.",
+        "ru": "Иди своей дорогой, грифон."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 471,
+          "description_line": 472
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 471,
+          "description_line": 472
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.planning_speed",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.army_org_factor",
+          "operator": "=",
+          "value": "0.05"
+        },
+        {
+          "key": "modifier.command_power_gain",
+          "operator": "=",
+          "value": "0.02"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "neutrality"
+        },
+        {
+          "key": "OR.has_government",
+          "operator": "=",
+          "value": "democratic"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 13,
+        "examples": [
+          {
+            "id": "BAL_PRO_no_recruits_0",
+            "file": "EaW/common/ideas/zzz_BAL_PRO_ideas.txt"
+          },
+          {
+            "id": "BAL_PRO_no_recruits_1",
+            "file": "EaW/common/ideas/zzz_BAL_PRO_ideas.txt"
+          },
+          {
+            "id": "BAL_PRO_no_recruits_2",
+            "file": "EaW/common/ideas/zzz_BAL_PRO_ideas.txt"
+          },
+          {
+            "id": "BAL_PRO_no_recruits_3",
+            "file": "EaW/common/ideas/zzz_BAL_PRO_ideas.txt"
+          },
+          {
+            "id": "BAL_PRO_no_recruits_4",
+            "file": "EaW/common/ideas/zzz_BAL_PRO_ideas.txt"
+          },
+          {
+            "id": "continous_war_plan_CHN",
+            "file": "EaW/common/ideas/zzz_CHN_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_CHN_continous_war_plan sprite or its texture."
+      },
+      "semantics": "Concealed changeling officers improve staff planning, organization and command generation.",
+      "brief": "A tightly rolled operations map and field telephone beside a dark officer's cap showing a discreet teal lining under its plain exterior. No invented rank badge.",
+      "palette": {
+        "materials": [
+          "field grey",
+          "black leather",
+          "parchment tan",
+          "restrained teal lining"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Nothing to see here, move along fellow griffons.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_army_leader",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Old Friends",
+          "description_en": "Following our great accommodation of the Changeling high command, even more former generals and soldiers have made their way to Greifwald in search of refuge. Our officer cadre is now composed of some of the greatest military minds the world has to offer, and we will benefit immensely by it, no doubt."
+        }
+      ]
+    },
+    {
+      "id": "AET_aether_travel_idea",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 656,
+      "current_picture": "CZE_planning_bonus",
+      "name": "Aether Travel",
+      "names": {
+        "en": "Aether Travel",
+        "ru": "Путешествие через Эфир"
+      },
+      "localized_description": {
+        "en": "Father Maar has granted us safe passage through his part of the Aether, let us use this gift to spread his glory.",
+        "ru": "Отец Маар предоставил нам безопасный проход через свою часть Эфира, давайте использовать этот дар, чтобы распространить Его славу."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 473,
+          "description_line": 474
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 473,
+          "description_line": 474
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_speed_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.supply_consumption_factor",
+          "operator": "=",
+          "value": "-0.15"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "AVI_de_arse",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAK_proper_support_squads_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAT_military_logistics_department_idea",
+            "file": "EaW/common/ideas/zzz_BAT_ideas.txt"
+          },
+          {
+            "id": "BRZ_groverist_tactics",
+            "file": "EaW/common/ideas/zzz_BRZ_ideas.txt"
+          },
+          {
+            "id": "BUF_planned_economy",
+            "file": "EaW/common/ideas/zzz_BUF_ideas.txt"
+          },
+          {
+            "id": "CHN_logistics_in_polaria",
+            "file": "EaW/common/ideas/zzz_CHN_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_CZE_planning_bonus sprite or its texture."
+      },
+      "semantics": "Maar grants passage through the Aether, improving movement and reducing supply demand.",
+      "brief": "A small stone arch opening into a curved violet passage, with a single supply crate halfway through and a visible short path on both sides.",
+      "palette": {
+        "materials": [
+          "cold slate",
+          "deep violet",
+          "pale lilac glow",
+          "weathered crate brown"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Father Maar has granted us safe passage through his part of the Aether, let us use this gift to spread his glory.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_aether_travel",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Aether Travel",
+          "description_en": "The sacrifice has not been sufficient enough, yet. Further souls must be collected and brought before Him, so that we mortals may enter his layer of the Aether ourselves. If we can survive this journey, nothing can stop us."
+        }
+      ]
+    },
+    {
+      "id": "AET_hellfire_forge_idea",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 676,
+      "current_picture": "generic_production_bonus",
+      "name": "The Hellfire Forge",
+      "names": {
+        "en": "The Hellfire Forge",
+        "ru": "Инфернальные кузницы"
+      },
+      "localized_description": {
+        "en": "A pinnacle of the Dark Mechanicus' genius, the Hellfire Forge is practically an automated factory capable of producing nearly anything at a rapid pace, provided of course it receives enough sacrifices.",
+        "ru": "Вершина гения тёмных механиков – инфернальная кузница – практически автоматизированная фабрика, способная производить что угодно быстрыми темпами, при условии, что она получает достаточные жертвы."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 475,
+          "description_line": 476
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 475,
+          "description_line": 476
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "equipment_bonus.artillery_equipment.build_cost_ic",
+          "operator": "=",
+          "value": "-0.1"
+        },
+        {
+          "key": "equipment_bonus.artillery_equipment.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.infantry_equipment.build_cost_ic",
+          "operator": "=",
+          "value": "-0.1"
+        },
+        {
+          "key": "equipment_bonus.infantry_equipment.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.light_tank_chassis.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.light_tank_chassis.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.medium_tank_chassis.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.medium_tank_chassis.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.heavy_tank_chassis.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.heavy_tank_chassis.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.modern_tank_chassis.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.modern_tank_chassis.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.super_heavy_tank_chassis.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.super_heavy_tank_chassis.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.motorized_equipment.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.motorized_equipment.instant",
+          "operator": "=",
+          "value": "yes"
+        },
+        {
+          "key": "equipment_bonus.mechanized_equipment.build_cost_ic",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "equipment_bonus.mechanized_equipment.instant",
+          "operator": "=",
+          "value": "yes"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 217,
+        "examples": [
+          {
+            "id": "ANG_industrial_center",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_syndicates_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_syndicates_cooperation",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_industrious_nation",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_mass_contruction_projects",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ANG_democratic_syndicates",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_generic_production_bonus sprite or its texture."
+      },
+      "semantics": "A sacrificial supernatural automated forge produces weapons and vehicles at reduced industrial cost.",
+      "brief": "A compact enclosed furnace with mechanically linked tongs and an emerging metal billet, violet fire visible only inside its mouth. No bodies, sacrifices on-screen or borrowed franchise insignia.",
+      "palette": {
+        "materials": [
+          "black iron",
+          "violet furnace light",
+          "heated copper-orange billet",
+          "cold steel mechanisms"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "A pinnacle of the Dark Mechanicus' genius, the Hellfire Forge is practically an automated factory capable of producing nearly anything at a rapid pace, provided of course it receives enough sacrifices.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_hellfire_forge",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "The Hellfire Forge",
+          "description_en": "Maar beckons, he calls for greater sacrifice to extend his hold in our mortal world. So be it! With weapons forged in the deepest pits of the Aether, our warriors will conquer the weak, and their souls will become Maar's! Onwards, to glory!"
+        }
+      ]
+    },
+    {
+      "id": "AET_raise_dead_idea",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 730,
+      "current_picture": "ENG_the_war_to_end_all_wars",
+      "name": "The Dead Shall Serve",
+      "names": {
+        "en": "The Dead Shall Serve",
+        "ru": "Мёртвые будут служить"
+      },
+      "localized_description": {
+        "en": "Just because your flesh is weak does not mean that your service to Father Maar may end!",
+        "ru": "Просто потому, что ваша плоть слаба, это не значит, что ваше служение отцу Маару может закончиться!"
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 477,
+          "description_line": 478
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 477,
+          "description_line": 478
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.non_core_manpower",
+          "operator": "=",
+          "value": "0.1"
+        },
+        {
+          "key": "modifier.land_reinforce_rate",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.army_org_factor",
+          "operator": "=",
+          "value": "-0.05"
+        },
+        {
+          "key": "modifier.army_morale_factor",
+          "operator": "=",
+          "value": "-0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 28,
+        "examples": [
+          {
+            "id": "CYA_mit_intensified_tribal_conflicts",
+            "file": "EaW/common/ideas/zzz_CYA_ideas.txt"
+          },
+          {
+            "id": "DED_converting",
+            "file": "EaW/common/ideas/zzz_DED_ideas.txt"
+          },
+          {
+            "id": "FLO_wet_plague",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "FLO_plague_memorial_idea",
+            "file": "EaW/common/ideas/zzz_FLO_ideas.txt"
+          },
+          {
+            "id": "WIT_disease_idea",
+            "file": "EaW/common/ideas/zzz_GREG_ideas.txt"
+          },
+          {
+            "id": "HLQ_victim_memorial",
+            "file": "EaW/common/ideas/zzz_HLQ_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_ENG_the_war_to_end_all_wars sprite or its texture."
+      },
+      "semantics": "Necromantic service supplies non-core manpower and reinforcements at a cost to organization and morale.",
+      "brief": "An empty dented service helmet rising from a shallow broken stone slab in a cold violet aura, with a silent hanging service tag. No human skull or graphic corpse.",
+      "palette": {
+        "materials": [
+          "grave-stone grey",
+          "tarnished iron",
+          "muted violet glow",
+          "pale dust"
+        ],
+        "polarity": "mixed",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Just because your flesh is weak does not mean that your service to Father Maar may end!",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_raise_dead",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Even in Death We Serve",
+          "description_en": "As the will of Maar spreads throughout the land, He calls out to the dead bodies that lie upon the vast battlefields. Soulless and puppets to Maar himself, the undead shall rise and march upon the heathens. Some balk at the thought, but they are weak! Maar ensures these puppets will not harm us."
+        }
+      ]
+    },
+    {
+      "id": "AET_madness_and_despair",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 752,
+      "current_picture": "triumphant_will",
+      "name": "Visions of Madness",
+      "names": {
+        "en": "Visions of Madness",
+        "ru": "Безумные видения"
+      },
+      "localized_description": {
+        "en": "Visions of madness, death and destruction plague the waking and sleeping moments of our soldiers making the war that much harder.",
+        "ru": "Видения безумия, смерти и разрушения поражают бодрствующие и спящие умы наших солдат, делая войну намного труднее."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 479,
+          "description_line": 480
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 479,
+          "description_line": 480
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.planning_speed",
+          "operator": "=",
+          "value": "-0.15"
+        },
+        {
+          "key": "modifier.political_power_gain",
+          "operator": "=",
+          "value": "-0.15"
+        },
+        {
+          "key": "modifier.army_attack_factor",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.army_defence_factor",
+          "operator": "=",
+          "value": "-0.10"
+        },
+        {
+          "key": "modifier.army_org_factor",
+          "operator": "=",
+          "value": "-0.05"
+        }
+      ],
+      "availability_evidence": [],
+      "shared_picture": {
+        "external_definition_count": 74,
+        "examples": [
+          {
+            "id": "ANG_new_nobility",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_sunny_spot_idea",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_target_harmonists_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAK_controlled_opposition_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          },
+          {
+            "id": "BAN_rise_up",
+            "file": "EaW/common/ideas/zzz_BAN_ideas.txt"
+          },
+          {
+            "id": "BAT_conservative_propaganda",
+            "file": "EaW/common/ideas/zzz_BAT_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_triumphant_will sprite or its texture."
+      },
+      "semantics": "Disturbing visions impair political authority, planning and the army's combat performance.",
+      "brief": "A fractured field compass whose needle points in several impossible directions, backed by a cracked smoked-glass lens showing warped concentric rings.",
+      "palette": {
+        "materials": [
+          "smoked charcoal glass",
+          "desaturated steel",
+          "sickly pale violet",
+          "faint rust-brown"
+        ],
+        "polarity": "negative",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Visions of madness, death and destruction plague the waking and sleeping moments of our soldiers making the war that much harder.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": []
+    },
+    {
+      "id": "AET_the_weak",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 772,
+      "current_picture": "vittoria_mutilata",
+      "name": "Cull the Weak",
+      "names": {
+        "en": "Cull the Weak",
+        "ru": "Отбросить слабых"
+      },
+      "localized_description": {
+        "en": "Not everyone is fit to serve Father Maar at least in this realm. Thus we shall have to find a better use for them in the next one.",
+        "ru": "Не каждый способен служить отцу Маару в этом мире. Таким образом, нам нужно будет найти лучшее применение для них в следующем."
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 481,
+          "description_line": 482
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 481,
+          "description_line": 482
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.MONTHLY_POPULATION",
+          "operator": "=",
+          "value": "-0.25"
+        },
+        {
+          "key": "modifier.political_power_gain",
+          "operator": "=",
+          "value": "0.15"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 32,
+        "examples": [
+          {
+            "id": "AVI_declared_neutral",
+            "file": "EaW/common/ideas/zzz_AVI_ideas.txt"
+          },
+          {
+            "id": "BAL_single_culture_idea",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          },
+          {
+            "id": "BAN_blackrocks_land_idea",
+            "file": "EaW/common/ideas/zzz_BAN_ideas.txt"
+          },
+          {
+            "id": "CYA_neundrachen_chamber",
+            "file": "EaW/common/ideas/zzz_CYA_ideas.txt"
+          },
+          {
+            "id": "FAL_culture_spreads",
+            "file": "EaW/common/ideas/zzz_FAL_ideas.txt"
+          },
+          {
+            "id": "FEA_fascist_ressistance",
+            "file": "EaW/common/ideas/zzz_FEA_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_vittoria_mutilata sprite or its texture."
+      },
+      "semantics": "Maar's regime sacrifices population growth for political power through coercive culling.",
+      "brief": "A cold extinguished household lantern beside a census bead rail with conspicuous missing beads, crossed by the shadow of a heavy official stamp. No victims or gore.",
+      "palette": {
+        "materials": [
+          "ash grey",
+          "dull black iron",
+          "faded ivory beads",
+          "restrained dark violet shadow"
+        ],
+        "polarity": "negative",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "Not everyone is fit to serve Father Maar at least in this realm. Thus we shall have to find a better use for them in the next one.",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": [
+        {
+          "id": "AET_pave_the_path",
+          "file": "EaW/common/national_focus/AET.txt",
+          "name_en": "Pave the Path",
+          "description_en": "The need for sacrifice grows ever larger. It is time to tap into our \"reserves\". Maar will have his mortal blood delivered, and the weak souls of our society shall pay the price. Faith is purest when it is unquestioned."
+        }
+      ]
+    },
+    {
+      "id": "AET_blessing_of_war_god",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 792,
+      "current_picture": "FRA_scw_intervention_nationalists_focus",
+      "name": "Blessing of War",
+      "names": {
+        "en": "Blessing of War",
+        "ru": "Благословение войны"
+      },
+      "localized_description": {
+        "en": "\"Father Maar, blessed be thy name,\\ngrant us strength and courage,\\nso that we may overcome our foe,\\nto bring glory to thy temple.\"",
+        "ru": "\"Отец Маар, да святится Твое имя,\\nдаруй нам силу и мужество,\\nчтобы могли победить врагов,\\nи прославить храм Твой.\""
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 483,
+          "description_line": 484
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 483,
+          "description_line": 484
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.army_attack_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.army_defence_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.army_speed_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 121,
+        "examples": [
+          {
+            "id": "ALO_desert_tribes",
+            "file": "EaW/common/ideas/zzz_ALO_ideas.txt"
+          },
+          {
+            "id": "ANG_our_homeland_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_massed_artillery",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "ARA_legacy_2",
+            "file": "EaW/common/ideas/zzz_ARA_ideas.txt"
+          },
+          {
+            "id": "BAK_selective_philosophy_idea",
+            "file": "EaW/common/ideas/zzz_BAK_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_FRA_scw_intervention_nationalists_focus sprite or its texture."
+      },
+      "semantics": "Maarite ritual blessings improve attack, defence and army movement.",
+      "brief": "A ceremonial steel spearhead laid across a protective shield while violet incense coils tightly around their edges; no new religious symbol.",
+      "palette": {
+        "materials": [
+          "cold silver",
+          "blue-black steel",
+          "deep violet smoke",
+          "sparse bronze fittings"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "\"Father Maar, blessed be thy name,\\ngrant us strength and courage,\\nso that we may overcome our foe,\\nto bring glory to thy temple.\"",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": []
+    },
+    {
+      "id": "AET_blessing_of_production_god",
+      "kind": "spirit",
+      "file": "EaW/common/ideas/zzz_AET_ideas.txt",
+      "line": 813,
+      "current_picture": "FRA_factory_strikes",
+      "name": "Blessing of Diligence",
+      "names": {
+        "en": "Blessing of Diligence",
+        "ru": "Благословение усердного труда"
+      },
+      "localized_description": {
+        "en": "\"All praises be to Maar,\\nHe who has given us souls,\\nwe express our devotion to thee,\\nmay He accept our gifts of labour.\"",
+        "ru": "\"Хвала Маару,\\nКоторый дал нам души,\\nмы верны Ему,\\nда примет Он плоды трудов наших.\""
+      },
+      "localization_sources": {
+        "en": {
+          "file": "EaW/localisation/english/country_AET_l_english.yml",
+          "name_line": 485,
+          "description_line": 486
+        },
+        "ru": {
+          "file": "EaW/localisation/russian/country_AET_l_russian.yml",
+          "name_line": 485,
+          "description_line": 486
+        }
+      },
+      "effect_evidence": [
+        {
+          "key": "modifier.production_factory_max_efficiency_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.production_speed_buildings_factor",
+          "operator": "=",
+          "value": "0.10"
+        },
+        {
+          "key": "modifier.production_factory_efficiency_gain_factor",
+          "operator": "=",
+          "value": "0.05"
+        }
+      ],
+      "availability_evidence": [
+        {
+          "key": "has_government",
+          "operator": "=",
+          "value": "fascism"
+        }
+      ],
+      "shared_picture": {
+        "external_definition_count": 56,
+        "examples": [
+          {
+            "id": "alternate_political_dockworker_strike",
+            "file": "EaW/common/ideas/_event.txt"
+          },
+          {
+            "id": "alternate_political_dockworker_strike_demands_met",
+            "file": "EaW/common/ideas/_event.txt"
+          },
+          {
+            "id": "alternate_political_major_protest",
+            "file": "EaW/common/ideas/_event.txt"
+          },
+          {
+            "id": "democratic_protest",
+            "file": "EaW/common/ideas/EQS_ideas.txt"
+          },
+          {
+            "id": "ANG_worker_right_idea",
+            "file": "EaW/common/ideas/zzz_ANG_ideas.txt"
+          },
+          {
+            "id": "BAL_self_managed_factories",
+            "file": "EaW/common/ideas/zzz_BAL_ideas.txt"
+          }
+        ],
+        "integration_rule": "Allocate a new unique AET picture key and change only this country-idea binding; never override the shared GFX_idea_FRA_factory_strikes sprite or its texture."
+      },
+      "semantics": "Maarite diligence rituals improve construction, maximum efficiency and production growth.",
+      "brief": "A well-used industrial hammer striking a bright fitted gear, with a small censer giving off one controlled violet ribbon of smoke.",
+      "palette": {
+        "materials": [
+          "dark steel",
+          "natural brass gear",
+          "warm copper sparks",
+          "deep violet incense"
+        ],
+        "polarity": "positive",
+        "instruction": "Natural object materials first; palette accents are not national heraldry. No uniform gold tint, red/green morality code, or mandatory rune."
+      },
+      "shared_family": null,
+      "description": "\"All praises be to Maar,\\nHe who has given us souls,\\nwe express our devotion to thee,\\nmay He accept our gifts of labour.\"",
+      "description_origin": "native_english_localization",
+      "granting_focus_context": []
+    }
+  ]
+}

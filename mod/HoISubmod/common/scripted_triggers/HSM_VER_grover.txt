@@ -138,12 +138,13 @@ HSM_VER_GRO_partnership = {
 # Delayed native event windows must recheck the actual household, not just ROOT.
 HSM_VER_GRO_protected_household = {
 	OR = {
+		HSM_AET_protected_household = yes
 		GRI = { exists = yes has_country_flag = HSM_VER_GRO_restored has_character = GRI_emperor_grover_vi }
 		ERI = { HSM_VER_GRO_government = yes has_country_flag = HSM_VER_GRO_started has_character = GRI_emperor_grover_vi NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished } }
 		EYR = { HSM_VER_GRO_government = yes has_country_flag = HSM_VER_GRO_started has_character = GRI_emperor_grover_vi NOT = { has_country_flag = HSM_VER_GRO_completed has_country_flag = HSM_VER_GRO_civil_finished } }
 	}
 }
-HSM_VER_GRO_native_ruler_allowed = { NOT = { has_country_flag = HSM_VER_GRO_restored } }
+HSM_VER_GRO_native_ruler_allowed = { NOT = { has_country_flag = HSM_VER_GRO_restored has_country_flag = HSM_AET_restored } }
 HSM_VER_GRO_native_household_allowed = { NOT = { HSM_VER_GRO_protected_household = yes } }
 HSM_VER_GRO_native_childhood_allowed = {
 	HSM_VER_GRO_native_ruler_allowed = yes

@@ -19,6 +19,14 @@ ROOT, MOD, EAW = BASE["ROOT"], BASE["MOD"], BASE["OPT"].eaw
 DECISIONS = Path("common/decisions/griffon_decisions.txt")
 CATEGORIES = Path("common/decisions/categories/eaw_formable_categories.txt")
 BLOCKED = {"form_griffon_empire": ("ERI", "EYR"), "form_aquileia": ("ERI", "AVI")}
+# AQR replaces formation and timed internal unification. Its category and
+# external expansion remain native. VER's broader exclusions differ.
+REGIONAL_BLOCKED = ("JEB", "JRR", "JFT", "VIN")
+REGIONAL_GUARDED = {
+    "form_griffon_empire": "form_griffon_empire_category",
+    "form_aquileia": "form_aquileia_category",
+    "unite_aquileia_proper": "form_aquileia_category",
+}
 GOVERNMENTS = ("neutrality", "democratic", "fascism", "communism")
 
 
@@ -33,6 +41,15 @@ def guards(tags):
     return parse(" ".join(f"NOT = {{ original_tag = {tag} }}" for tag in tags))
 
 
+def pragmatic_aet_guard():
+    return parse("NOT = { AND = { original_tag = AET has_completed_focus = AET_realpolitik } }")
+
+
+def regional_formation_guard():
+    return parse("NOT = { OR = { " + " ".join(
+        f"original_tag = {tag}" for tag in REGIONAL_BLOCKED) + " } }")
+
+
 def expected_override(path, upstream):
     expected = copy.deepcopy(upstream)
     for decision, tags in BLOCKED.items():
@@ -43,7 +60,7 @@ def expected_override(path, upstream):
                 allowed.extend(guards(tags))
             else:
                 allowed[:0] = guards(tags)
-            category.children.append(Node("visible", "=", guards(tags)))
+            category.children.append(Node("visible", "=", pragmatic_aet_guard() + guards(tags)))
         else:
             entry = one(category.children, decision)
             if decision == "form_griffon_empire":
@@ -52,7 +69,12 @@ def expected_override(path, upstream):
                 )
             else:
                 entry.children.insert(1, Node("allowed", "=", guards(tags)))
-            one(entry.children, "visible").children[:0] = guards(tags)
+            one(entry.children, "visible").children[:0] = pragmatic_aet_guard() + guards(tags)
+            one(entry.children, "available").children[:0] = pragmatic_aet_guard()
+    if path == DECISIONS:
+        for decision, category_name in REGIONAL_GUARDED.items():
+            entry = one(one(expected, category_name).children, decision)
+            one(entry.children, "allowed").children[:0] = regional_formation_guard()
     return expected
 
 
@@ -160,7 +182,7 @@ class Formables(unittest.TestCase):
                 self.assertEqual(self.local[path], expected_override(path, self.upstream[path]))
 
     def test_upstream_text_is_preserved_with_only_guard_insertions(self):
-        for path, added in ((DECISIONS, 10), (CATEGORIES, 12)):
+        for path, added in ((DECISIONS, 20), (CATEGORIES, 14)):
             with self.subTest(path=path):
                 old = (EAW / path).read_text(encoding="utf-8-sig").splitlines()
                 new = (MOD / path).read_text(encoding="utf-8-sig").splitlines()
@@ -169,13 +191,13 @@ class Formables(unittest.TestCase):
                 self.assertEqual(len(new) - len(old), added)
 
     def test_all_original_countries_and_governments_keep_upstream_eligibility(self):
-        self.assertTrue({"ERI", "EYR", "AVI", "CYA", "JES"}.issubset(self.tags))
+        self.assertTrue({"ERI", "EYR", "AVI", "CYA", "JES", *REGIONAL_BLOCKED}.issubset(self.tags))
         for tag, government, decision in itertools.product(self.tags, GOVERNMENTS, BLOCKED):
             with self.subTest(tag=tag, government=government, decision=decision):
                 country = Country(tag, government=government)
                 before = self.selectable(self.upstream, decision, country)
                 self.assertEqual(self.selectable(self.local, decision, country),
-                                 before and tag not in BLOCKED[decision])
+                                 before and tag not in BLOCKED[decision] and tag not in REGIONAL_BLOCKED)
 
     def test_allowed_and_visible_each_reject_blocked_original_tags(self):
         for decision, tags in BLOCKED.items():
@@ -196,12 +218,85 @@ class Formables(unittest.TestCase):
                                                Country(tag, current, cosmetic, government)))
 
     def test_remaining_aquileia_candidates_still_form(self):
-        candidates = ("JFT", "JEB", "JRR", "VIN", "POM", "FLO", "AET", "FEZ", "FRN")
+        candidates = ("POM", "FLO", "AET", "FEZ", "FRN")
         for tag in candidates:
             with self.subTest(tag=tag):
                 self.assertTrue(self.selectable(self.local, "form_aquileia", Country(tag)))
         for tag in ("EYR", "CYA"):
             self.assertFalse(self.selectable(self.local, "form_aquileia", Country(tag)))
+
+    def test_regional_origins_use_focus_replacements_only_for_generic_formation(self):
+        for decision, tag, current, cosmetic, government, flags in itertools.product(
+                BLOCKED, REGIONAL_BLOCKED, ("JER", "GRI", "D01"),
+                ("", "JER_formed", "GRIF_EMPIRE"), GOVERNMENTS,
+                (frozenset(), frozenset({"HSM_AQR_started"}))):
+            country = Country(tag, current, cosmetic, government, flags=flags)
+            with self.subTest(decision=decision, country=country):
+                self.assertFalse(self.eligibility.check(self.entry(self.local, decision).get("allowed"), country))
+                self.assertFalse(self.selectable(self.local, decision, country))
+                # The new policy is decision allowed-only, not a category-wide
+                # restriction or a conditional ban beginning after the opening.
+                self.assertEqual(self.eligibility.check(self.category(self.local, decision).get("allowed"), country),
+                                 self.eligibility.check(self.category(self.upstream, decision).get("allowed"), country))
+                self.assertEqual(self.selectable(self.local, decision, country, include_allowed=False),
+                                 self.selectable(self.upstream, decision, country, include_allowed=False))
+        for tag in REGIONAL_BLOCKED:
+            country = Country(tag, owned=frozenset({377}))
+            self.assertTrue(self.selectable(self.upstream, "form_aquileia", country))
+            self.assertFalse(self.selectable(self.local, "form_aquileia", country))
+        for decision, tag, current in itertools.product(BLOCKED, ("POM", "FLO", "CYA", "JES"), REGIONAL_BLOCKED):
+            country = Country(tag, current, flags=frozenset({"HSM_AQR_started"}))
+            with self.subTest(decision=decision, country=country):
+                self.assertEqual(self.selectable(self.local, decision, country),
+                                 self.selectable(self.upstream, decision, country))
+
+    def test_only_pragmatic_original_aet_loses_generic_formation(self):
+        for decision, current, cosmetic, government in itertools.product(
+                BLOCKED, ("AET", "D01"), ("", "HSM_AET_REGENCY", "GRIF_EMPIRE"), GOVERNMENTS):
+            for focuses in (frozenset(), frozenset({"AET_anarchy"}), frozenset({"AET_archonate_help"}),
+                            frozenset({"AET_realpolitik"})):
+                with self.subTest(decision=decision, current=current, government=government, focuses=focuses):
+                    country = Country("AET", current, cosmetic, government, focuses=focuses)
+                    native = self.selectable(self.upstream, decision, country)
+                    self.assertEqual(self.selectable(self.local, decision, country),
+                                     native and "AET_realpolitik" not in focuses)
+                    self.assertEqual(self.selectable(self.local, decision, country, include_allowed=False),
+                                     self.selectable(self.upstream, decision, country, include_allowed=False)
+                                     and "AET_realpolitik" not in focuses)
+                    if "AET_realpolitik" in focuses:
+                        self.assertFalse(self.eligibility.check(self.category(self.local, decision).get("visible"), country))
+                        self.assertFalse(self.eligibility.check(self.entry(self.local, decision).get("visible"), country))
+                        self.assertFalse(self.eligibility.check(self.entry(self.local, decision).get("available"), country))
+        # Current/cosmetic tag and a stray focus on another country are insufficient.
+        for decision in BLOCKED:
+            country = Country("FLO", "AET", "HSM_AET_REGENCY", focuses=frozenset({"AET_realpolitik"}))
+            self.assertEqual(self.selectable(self.local, decision, country),
+                             self.selectable(self.upstream, decision, country))
+
+    def test_exact_three_regional_guards_preserve_external_expansion(self):
+        actual = set()
+        for category in self.local[DECISIONS]:
+            for decision in category.children:
+                if regional_formation_guard()[0] in decision.get("allowed", []):
+                    actual.add((decision.key, category.key))
+        self.assertEqual(actual, set(REGIONAL_GUARDED.items()))
+
+        category = one(self.local[DECISIONS], "form_aquileia_category")
+        upstream = one(self.upstream[DECISIONS], "form_aquileia_category")
+        internal = one(category.children, "unite_aquileia_proper")
+        native_internal = one(upstream.children, "unite_aquileia_proper")
+        for tag, government in itertools.product(self.tags, GOVERNMENTS):
+            country = Country(tag, government=government, flags=frozenset({"JER_formed", "HSM_AQR_started"}))
+            with self.subTest(tag=tag, government=government):
+                native_allowed = self.eligibility.check(native_internal.get("allowed"), country)
+                self.assertEqual(self.eligibility.check(internal.get("allowed"), country),
+                                 native_allowed and tag not in REGIONAL_BLOCKED)
+        for name in ("reclaim_northwest_peripherie", "reclaim_eastern_peripherie", "aquileia_strikes_back"):
+            entry = one(category.children, name)
+            self.assertEqual(entry, one(upstream.children, name))
+            for tag in REGIONAL_BLOCKED:
+                with self.subTest(decision=name, tag=tag):
+                    self.assertTrue(self.eligibility.check(entry.get("allowed"), Country(tag)))
 
     def test_native_conditions_still_apply_to_unblocked_countries(self):
         cases = {
@@ -218,8 +313,6 @@ class Formables(unittest.TestCase):
                 with self.subTest(decision=decision, country=country):
                     self.assertFalse(self.selectable(self.upstream, decision, country))
                     self.assertFalse(self.selectable(self.local, decision, country))
-        for tag in ("JFT", "JEB", "JRR", "VIN"):
-            self.assertTrue(self.selectable(self.local, "form_aquileia", Country(tag, owned=frozenset({377}))))
 
     def test_every_standard_aquileia_entry_is_blocked_at_category_level(self):
         category = one(self.local[DECISIONS], "form_aquileia_category")
@@ -285,16 +378,27 @@ class Formables(unittest.TestCase):
 
     def test_delta_contract_rejects_missing_guards_wrong_tags_and_unrelated_changes(self):
         expected = expected_override(DECISIONS, self.upstream[DECISIONS])
-        for kind in ("missing", "current_tag", "wrong_country", "unrelated_effect"):
+        for kind in ("missing", "current_tag", "wrong_country", "unrelated_effect", "blanket_aet",
+                     "regional_missing", "regional_current_tag", "regional_extra_country"):
             changed = copy.deepcopy(self.local[DECISIONS])
             entry = one(one(changed, "form_griffon_empire_category").children, "form_griffon_empire")
-            exclusions = one(entry.get("allowed"), "NOT").children
+            exclusions = one([n for n in entry.get("allowed") if not n.all("OR")], "NOT").children
             if kind == "missing":
                 exclusions.pop(0)
             elif kind == "current_tag":
                 exclusions[0].key = "tag"
             elif kind == "wrong_country":
                 exclusions[0].value = "CYA"
+            elif kind == "blanket_aet":
+                one(entry.children, "visible").children[0] = parse("NOT = { original_tag = AET }")[0]
+            elif kind.startswith("regional_"):
+                regional = one(one([n for n in entry.get("allowed") if n.all("OR")], "NOT").children, "OR").children
+                if kind == "regional_missing":
+                    regional.pop()
+                elif kind == "regional_current_tag":
+                    regional[0].key = "tag"
+                else:
+                    regional.append(Node("original_tag", "=", "CYA"))
             else:
                 entry.get("complete_effect").append(Node("add_political_power", "=", "100"))
             with self.subTest(kind=kind):

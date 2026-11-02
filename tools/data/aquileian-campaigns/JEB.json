@@ -1,0 +1,1387 @@
+{
+  "tag": "JEB",
+  "foundations": [
+    {
+      "slot": "f1",
+      "title": [
+        "Sound the Pélis Approaches",
+        "Промерить подходы к Пелису"
+      ],
+      "desc": [
+        "The merchant captains of Pélis know which harbour marks have shifted and which stretches of quay swallow a cartwheel after rain. Their complaints seldom reach Rila together. A survey party will travel with the pilots, mark the troublesome approaches and carry its drawings ashore, where dockworkers can point out everything a captain cannot see from the deck.",
+        "Капитаны торговых судов Пелиса знают, какие знаки на подходах к гавани сместились и где после дождя в причале вязнет колесо телеги. Обычно их жалобы доходят до Рилы поодиночке. Землемеры отправятся вместе с лоцманами, отметят опасные места и принесут чертежи докерам: с палубы даже опытному моряку видны далеко не все изъяны портового хозяйства."
+      ],
+      "days": 35,
+      "reward": "infrastructure"
+    },
+    {
+      "slot": "f2",
+      "title": [
+        "The Fairground Scales",
+        "Весы на ярмарочной площади"
+      ],
+      "desc": [
+        "A farmer brings grain to a Rilan fair and discovers that the buyer's measure differs from the one used at the harbour. Both vessels carry respectable seals. Inspectors will compare the weights in front of the stalls and leave a reference set with the market keeper. Bargaining should begin with the price, without an argument over the size of a sack.",
+        "Крестьянин привозит зерно на рильскую ярмарку и обнаруживает, что мера покупателя отличается от портовой. На обеих ёмкостях стоят внушительные печати. Проверяющие сравнят гири перед торговыми рядами и оставят смотрителю образцовый набор. О цене будут по-прежнему спорить до хрипоты, зато продавцу больше не придётся гадать, сколько зерна покупатель подразумевает под одним и тем же мешком."
+      ],
+      "days": 35,
+      "reward": "pp50"
+    },
+    {
+      "slot": "f3",
+      "title": [
+        "Oil for the Stored Rifles",
+        "Смазка для складских винтовок"
+      ],
+      "desc": [
+        "The armourer opens a crate whose inventory promises serviceable rifles. Salt air has reached the locks, and the packing straw is damp. Rila's coastal stores need a patient inspection before another consignment is accepted on the strength of its label. Apprentices will clean the recoverable weapons beside experienced smiths, sorting usable parts from those that should never return to a rifle.",
+        "Оружейник вскрывает ящик с винтовками, которые по описи считаются исправными. Солёный воздух добрался до замков, а упаковочная солома отсырела. Прибрежным складам Рилы нужна тщательная проверка, прежде чем очередную партию примут по одной лишь надписи. Подмастерья вместе с опытными мастерами очистят пригодное оружие и отделят исправные детали от тех, которым уже нельзя возвращаться в строй."
+      ],
+      "days": 35,
+      "reward": "rifles500"
+    },
+    {
+      "slot": "f4",
+      "title": [
+        "A Dispatch Along the Coast",
+        "Донесение вдоль побережья"
+      ],
+      "desc": [
+        "A coastal exercise begins with an unremarkable instruction: deliver a sealed message and a loaded supply cart to the same rendezvous. The messenger arrives first, then waits while the driver searches for a passable road. The officers will walk the route with the carters afterwards. A supply plan drawn in Rila must survive the journey beyond the city gates.",
+        "Учение на побережье начинается с простого задания: доставить запечатанное донесение и гружёную повозку к одному месту встречи. Посыльный прибывает первым и ждёт, пока возчик ищет проезжую дорогу. После учений офицеры пройдут весь путь вместе с обозниками. План снабжения, составленный в Риле, должен выдерживать дорогу за городскими воротами, где ровные линии карты превращаются в грязные колеи."
+      ],
+      "days": 35,
+      "reward": "army_xp20"
+    }
+  ],
+  "routes": [
+    {
+      "id": "JEB_royal",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Duke's Fair Must Pay Its Way",
+            "Ярмарка герцога должна себя кормить"
+          ],
+          "desc": [
+            "Michel's treasurer can name every noble exemption and scarcely any reason for keeping it. At the fair, an artisan pays for a stall while a privileged merchant fills a whole street. The duke asks for both accounts. A royal market should sustain the town around it; the court will have to surrender some comfortable customs to make that promise credible.",
+            "Казначей Мишеля помнит каждую дворянскую льготу, но почти ни одну не может объяснить. На ярмарке ремесленник платит за место, пока привилегированный торговец занимает целую улицу. Герцог требует обе книги сборов. Королевский рынок должен кормить окружающий город, и ради этого обещания двору придётся расстаться с некоторыми удобными привычками, которые давно считались совершенно естественными."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "Tools Under the Royal Seal",
+            "Инструменты под королевской печатью"
+          ],
+          "desc": [
+            "A broken press and an idle saw tell Michel more about recovery than the court's ceremonial addresses. He invites Rilan craftsmen to submit work for a common tool shop under ducal patronage. The palace can guarantee an order, but it cannot judge a cutting edge. That task will belong to the artisans who must use what the shop produces.",
+            "Сломанный пресс и простаивающая пила говорят Мишелю о восстановлении больше придворных приветствий. Он приглашает рильских мастеров предложить заказы для общей инструментальной мастерской под герцогским покровительством. Дворец способен поручиться за заказ, но не определить качество режущей кромки. Проверять изделия будут ремесленники, которым предстоит ими работать, даже если поставщика давно и хорошо знают в дворцовой приёмной."
+          ],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Flowerino's Road to Market",
+            "Дорога Фловерино на ярмарку"
+          ],
+          "desc": [
+            "Farmers outside Flowerino can see the fair's tents long before their carts reach them. Ruts and a neglected crossing consume the morning, leaving the best stalls to merchants with lighter wagons. Michel sends his road surveyors out with the next produce convoy. The crown's protection will be measured along the journey, where a broken axle can spoil an entire week's work.",
+            "Крестьяне под Фловерино видят ярмарочные шатры задолго до приезда. Колеи и запущенная переправа отнимают утро, а лучшие места достаются торговцам с лёгкими повозками. Мишель отправляет дорожных мастеров со следующим обозом. Королевское попечение будут оценивать по всему пути, где сломанная ось способна погубить недельный труд, а встречный возчик полезнее парадного чиновника с красивой дорожной картой."
+          ],
+          "days": 42,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "A Slipway for Pélis",
+            "Стапель для Пелиса"
+          ],
+          "desc": [
+            "The Chantiers de Pélis wants room for another hull, and its workers want reassurance that a royal celebration will not swallow the wages. Michel's representatives bring a construction agreement to the yard instead of a parade order. The duchy's maritime craft can serve Aquileia's crown best when the shipwright who lays the keel knows who will pay for it.",
+            "Верфи Пелиса нужно место для нового корпуса, а рабочим — уверенность, что королевский праздник не поглотит их жалованье. Представители Мишеля привозят договор о строительстве вместо приказа готовить парад. Морское ремесло герцогства послужит короне Аквелии лучше, если корабельщик, закладывающий киль, знает, кто оплатит работу и куда обратиться, когда обещанные деньги снова задержатся в чьей-нибудь конторе."
+          ],
+          "days": 49,
+          "reward": "dockyard"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "Patronage That Outlives the Feast",
+            "Покровительство дольше праздника"
+          ],
+          "desc": [
+            "Aquileian visitors have admired Rila's fairs and ships; Michel now asks them to stay for the workshop inspections. A crown cannot live indefinitely on gratitude for a splendid afternoon. The duke's engineers will share their drawings with royal contractors beyond his province, carrying the less glamorous habits that keep a crane working after the banners have been taken down.",
+            "Гости из Аквелии уже полюбовались рильскими ярмарками и кораблями; теперь Мишель приглашает их остаться на осмотр мастерских. Корона не может бесконечно жить благодарностью за прекрасный праздник. Герцогские инженеры поделятся чертежами с королевскими подрядчиками других провинций и передадут незаметные навыки, благодаря которым кран продолжает работать после того, как знамёна сняты, а почётные гости разъехались по домам."
+          ],
+          "days": 56,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "Harnais Inspects the Garrisons",
+            "Гарне осматривает гарнизоны"
+          ],
+          "desc": [
+            "Beau Harnais finds a garrison proud of its banners and careless with its stores. He asks the youngest sentry to describe what happens if the coastal road is cut. The answer brings the captain down from his horse. Rila's loyal regiments will begin with the work that earns a soldier's confidence: dependable reliefs, sound positions and officers who know the ground.",
+            "Бо Гарне встречает гарнизон, который гордится знамёнами и небрежно хранит припасы. Он спрашивает молодого часового, что случится, если прибрежную дорогу перережут. Ответ заставляет капитана спешиться. Верные полки Рилы начнут с того, что внушает солдату доверие: своевременной смены, надёжных позиций и офицеров, знающих местность лучше, чем порядок построения перед очередным визитом высокого начальства."
+          ],
+          "days": 35,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "One Rifle, One Armourer's Pattern",
+            "Винтовка по единому образцу"
+          ],
+          "desc": [
+            "Crates received from royal suppliers do not always agree with the weapons already on the racks. Harnais brings armourers into the barracks and has the soldiers lay their rifles beside the spare parts. Courtiers may argue about prestigious contracts elsewhere. Here the argument ends when a replacement bolt fits, and a company can march without borrowing tools from the next.",
+            "Ящики от королевских поставщиков не всегда подходят к оружию на полковых стойках. Гарне приглашает оружейников в казармы и велит солдатам положить винтовки рядом с запасными деталями. О престижных контрактах придворные могут спорить в другом месте. Здесь спор заканчивается, когда сменный затвор подходит, а рота может выступить, не одалживая нужные инструменты у соседей перед самым выходом."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "The Cart Behind the Colour",
+            "Повозка за знаменем"
+          ],
+          "desc": [
+            "A regimental standard reaches the village before the bread wagon, and the welcome soon becomes an argument about requisitions. Harnais follows the missing cart back along its route. The army of a lawful crown cannot ask every village to repair its mistakes. Its quartermasters will learn to arrange deliveries before the march, and its captains to respect the arrangements.",
+            "Полковое знамя появляется в деревне раньше хлебной повозки, и приветствия вскоре сменяются спором о реквизициях. Гарне отправляется по следу отставшего обоза. Войско законной короны не вправе требовать, чтобы каждая деревня исправляла его ошибки. Интендантам придётся договариваться о поставках до выступления, а капитанам — соблюдать договорённости, даже когда проще всего просто войти в ближайший амбар."
+          ],
+          "days": 42,
+          "reward": "research_support"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "The Crown's Coastal Watch",
+            "Береговая стража короны"
+          ],
+          "desc": [
+            "From Pélis, a merchant captain can trace an unfamiliar silhouette long before a headquarters clerk hears of it. Royal service should make use of that knowledge without turning every fishing trip into an interrogation. Naval officers will meet the pilots at their own tables, agreeing signals and rendezvous that let coastal communities shelter the crown's shipping and warn its escorts.",
+            "Из Пелиса торговый капитан замечает незнакомый силуэт задолго до того, как о нём узнают в штабе. Королевской службе пригодится этот опыт, но каждый выход на рыбалку не должен превращаться в допрос. Морские офицеры встретятся с лоцманами за их столами и согласуют сигналы и места встречи, чтобы жители побережья помогали укрывать суда и предупреждать корабли сопровождения."
+          ],
+          "days": 49,
+          "reward": "navy_xp15"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "Regiments Worthy of Their Oath",
+            "Полки, достойные своей присяги"
+          ],
+          "desc": [
+            "Harnais lays the Rilan exercise reports before officers arriving from other royal formations. They have brought different habits and the same question: what must a soldier preserve when orders become confused? He begins with the supply route and the ground entrusted to each company. Michel wants Rila's service to strengthen the legitimate crown through competence that other regiments can recognise.",
+            "Гарне раскладывает отчёты рильских учений перед офицерами других королевских частей. У них разные привычки и общий вопрос: что должен сохранять солдат, когда приказы противоречат друг другу? Гарне начинает с пути снабжения и участка каждой роты. Мишель хочет укреплять законную корону службой Рилы, качество которой смогут признать и полки, никогда прежде не подчинявшиеся его герцогской власти."
+          ],
+          "days": 56,
+          "reward": "research_artillery"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "The Books Returned to Their Shelves",
+            "Книги возвращаются на полки"
+          ],
+          "desc": [
+            "Booksellers bring Michel lists of missing volumes, some seized by guards and others hidden before a search could begin. His old guests remember the promise that Rila would shelter thought. The duke offers rooms for reading and instruction, then asks the librarians what they need to reopen. No courtier is invited to choose which peaceful argument a pupil may encounter there.",
+            "Книготорговцы приносят Мишелю списки пропавших томов: одни забрала стража, другие успели спрятать перед обыском. Прежние гости герцога помнят обещание предоставить мысли убежище в Риле. Он выделяет комнаты для чтения и занятий, затем спрашивает библиотекарей, что нужно для открытия. Придворным не предлагают выбирать, с какими мирными суждениями разрешат знакомиться ученикам, пришедшим сюда после работы."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "A Loyal Voice Beyond Rila",
+            "Голос верной Рилы"
+          ],
+          "desc": [
+            "Michel's delegation carries complaints as well as assurances of loyalty to the national royal movement. Provincial families have lost relatives on both sides, and a triumphal address cannot answer all their questions. The duke will put those petitions before the crown's representatives. Rila's place beside the legitimate dynasty must include the awkward work of telling its allies what their subjects endure.",
+            "Делегация Мишеля везёт общегосударственному монархическому движению не только заверения в верности, но и жалобы. Провинциальные семьи теряли близких по обе стороны баррикад, и торжественная речь не отвечает на все вопросы. Герцог представит прошения представителям короны. Служба Рилы законной династии должна включать неудобную обязанность рассказывать союзникам, что приходится переживать подданным, от имени которых произносят верноподданнические слова."
+          ],
+          "days": 49,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Fair's Own Accounts",
+              "Счета самой ярмарки"
+            ],
+            "desc": [
+              "Michel's patronage begins to carry an obligation: favoured merchants must explain what their privileges contribute to Rila's working streets.",
+              "Покровительство Мишеля обретает обязательства: приближённые торговцы должны объяснить, какую пользу их привилегии приносят трудовой Риле."
+            ],
+            "modifiers": {
+              "production_speed_industrial_complex_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Roads Beneath the Royal Banners",
+              "Дороги под королевскими знамёнами"
+            ],
+            "desc": [
+              "The fair and its suppliers are learning to depend on a maintained road, a signed order and a workshop that opens on time.",
+              "Ярмарка и её поставщики привыкают полагаться на исправную дорогу, подписанный заказ и мастерскую, которая открывается вовремя."
+            ],
+            "modifiers": {
+              "production_speed_industrial_complex_factor": 0.075,
+              "industrial_capacity_dockyard": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Crown's Rilan Suppliers",
+              "Рильские поставщики короны"
+            ],
+            "desc": [
+              "From Flowerino's carts to the Pélis slipways, royal patronage rests on craftsmen whose work must justify the seal above their doors.",
+              "От повозок Фловерино до стапелей Пелиса королевское покровительство опирается на мастеров, чья работа должна оправдывать печать над их дверями."
+            ],
+            "modifiers": {
+              "production_speed_industrial_complex_factor": 0.1,
+              "industrial_capacity_dockyard": 0.1
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "Harnais's Garrison Rounds",
+              "Гарнизонные обходы Гарне"
+            ],
+            "desc": [
+              "Loyalty keeps the colours flying; Harnais insists that prepared positions and attentive officers must keep the soldiers beneath them alive.",
+              "Верность удерживает знамёна на древках; Гарне требует, чтобы подготовленные позиции и внимательные офицеры сохраняли жизнь стоящим под ними солдатам."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Provisioned Royal Garrisons",
+              "Обеспеченные королевские гарнизоны"
+            ],
+            "desc": [
+              "The bread wagon now belongs in the captain's plans alongside the company standard. Royal troops are learning to hold ground without exhausting their hosts.",
+              "Хлебная повозка занимает в планах капитана место рядом с ротным знаменем. Королевские части учатся удерживать позиции, не разоряя принимающие их селения."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.075,
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Rilan Standard of Service",
+              "Рильский образец службы"
+            ],
+            "desc": [
+              "Rila offers the crown a disciplined defensive service, with coastal stores and marching columns arranged around the same dependable deliveries.",
+              "Рила предлагает короне надёжную оборонительную службу, в которой прибрежные склады и походные колонны опираются на согласованное снабжение."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.1,
+              "supply_consumption_factor": -0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Patron's Empty Place",
+            "Пустое место покровителя"
+          ],
+          "desc": [
+            "Michel arrives at the new tool shop to find a velvet chair standing beside an unfinished press. The master has kept it for the merchant who guaranteed the iron. That merchant has sent a servant instead, carrying a demand that his old market exemptions be confirmed before the next delivery.\n\nThe treasurer calls it a small concession. A wheelwright opens his account book: he has paid the fair's fees through every lean season, and the promised press is meant to serve his neighbours as well. Michel runs a claw over the rough casting. Until the iron arrives, the royal seal above the door protects an empty room.\n\nThere are two ways to settle this particular claim. The duke can summon his guarantor to honour the signed undertaking in front of the craftsmen. He can also use his household funds to release the disputed consignment, leaving the larger privilege dispute for another hearing. Either solution will be remembered at the next fair.",
+            "Мишель приходит в новую инструментальную мастерскую и видит бархатное кресло рядом с недостроенным прессом. Мастер оставил его для купца, поручившегося за поставку железа. Купец прислал слугу с требованием: прежде чем отправлять следующую партию, он хочет подтверждения прежних ярмарочных льгот.\n\nКазначей называет уступку незначительной. Колёсный мастер раскрывает книгу счетов: он исправно платил сборы даже в самые голодные сезоны, а обещанный пресс нужен и его соседям. Мишель проводит когтем по шероховатой отливке. Пока железо не привезено, королевская печать над дверью охраняет пустое помещение. За окнами ждут подмастерья, которых уже успели нанять, но которым пока нечего поручить.\n\nУ этого спора есть два ближайших решения. Герцог может вызвать поручителя и потребовать исполнения подписанного обязательства перед собравшимися ремесленниками. Можно также оплатить спорную партию из средств собственного двора, оставив большой спор о привилегиях для отдельного разбирательства. Казначей придвигает расходную книгу к краю стола. Колёсный мастер не закрывает свою. Оба ждут ответа, который на следующей ярмарке будут пересказывать далеко за пределами этой мастерской."
+          ],
+          "options": [
+            {
+              "title": [
+                "Require the guarantor to answer before the craftsmen.",
+                "Потребовать отчёта поручителя перед мастерами."
+              ],
+              "reward": "pp50"
+            },
+            {
+              "title": [
+                "Settle this delivery from the ducal household.",
+                "Оплатить эту поставку средствами герцогского двора."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "Bread Before the Parade",
+            "Хлеб до парада"
+          ],
+          "desc": [
+            "Beau Harnais stops the practice march at a village crossroads. The advance company has arrived with polished equipment, while its ration wagon remains behind a broken bridge. The captain asks permission to requisition bread. The baker says he has already promised his morning's work to the surrounding farms.\n\nMichel has come to watch the exercise. Several officers look towards him, expecting an easy order that will spare the regiment embarrassment. Harnais instead asks the captain to explain how the same march would work without a duke beside it. The captain spreads his map on an overturned crate, and the baker points to a cart track missing from the drawing.\n\nThe exercise can pause while the officers retrace the supply route with local drivers, making a useful lesson of the failure. Alternatively, the party can escort a delayed military consignment along the newly identified track and bring its usable rifles back to the stores. Neither task requires taking the bread promised to the farms.",
+            "Бо Гарне останавливает учебную колонну на деревенском перекрёстке. Передовая рота пришла с начищенным снаряжением, но продовольственная повозка осталась за сломанным мостом. Капитан просит разрешить реквизицию хлеба. Пекарь отвечает, что уже обещал утреннюю выпечку окрестным фермам, и показывает записанные заказы.\n\nМишель приехал наблюдать за учениями. Несколько офицеров поглядывают на него, ожидая простого приказа, который избавит полк от неловкости. Гарне вместо этого просит капитана объяснить, как прошёл бы такой марш без герцога рядом. Капитан расстилает карту на перевёрнутом ящике, а пекарь указывает на отсутствующую в чертеже просёлочную дорогу. Возчик узнаёт её и говорит, что утром там прошла тяжёлая телега.\n\nУчение можно приостановить: офицеры проверят путь снабжения с местными возчиками и разберут допущенную ошибку. Другой выход — провести по найденной дороге задержавшийся военный груз и доставить исправные винтовки на склады. Капитан ждёт решения с раскрытой картой. Ни для одного дела не потребуется забирать хлеб, уже обещанный соседним хозяйствам, и пекарь наконец возвращается к своей печи."
+          ],
+          "options": [
+            {
+              "title": [
+                "Walk the failed route and teach the officers.",
+                "Пройти сорванный маршрут и разобрать ошибки офицеров."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Escort the stranded arms consignment.",
+                "Провести задержавшийся груз оружия."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "The Hymn and the Petition",
+            "Гимн и прошение"
+          ],
+          "desc": [
+            "At a meeting of the national royal movement, Michel waits while a choir finishes the hymn. His delegation has brought a petition from Rilan families whose sons have not returned from detention. A court organiser suggests presenting it privately after the loyal addresses. The duke asks whether the families have been invited to that private meeting. They have not.\n\nThe organiser is no enemy of mercy. He fears that every royal gathering will become a recital of grievances while the crown still needs defenders. Michel knows that argument; he has used versions of it himself. Beside the petition lies a list of volunteers willing to serve if their households can discover where their missing relatives are held.\n\nThe delegation can arrange an open reception for the families and make the crown's representatives hear their claims today. It can instead spend its speaking time explaining the limited service requested of the volunteers, with the petition delivered directly afterwards. Rila must choose how to use this audience without pretending that loyalty has erased its wounds.",
+            "На собрании общегосударственного монархического движения Мишель ждёт окончания гимна. Его делегация привезла прошение рильских семей, чьи сыновья не вернулись из-под ареста. Придворный распорядитель предлагает передать его частным образом после верноподданнических речей. Герцог спрашивает, приглашены ли сами семьи на эту встречу. Оказывается, нет.\n\nРаспорядитель не возражает против милосердия. Он боится, что каждое королевское собрание превратится в перечень обид, пока короне ещё нужны защитники. Мишель хорошо знает этот довод: прежде он и сам говорил подобное. Рядом с прошением лежит список добровольцев, готовых служить, если их домашние смогут узнать, где находятся пропавшие родственники. В списке есть подписи, сделанные неровным, непривычным к письму когтем.\n\nДелегация может устроить открытый приём семей и добиться, чтобы представители короны сегодня выслушали их требования. Можно посвятить отведённую речь разъяснению ограниченных обязанностей добровольцев, а прошение вручить сразу после неё. Рила должна выбрать, как использовать эту встречу. Верность династии не заставила исчезнуть раны, и стоящие у дверей посетители ждут ответа именно на принесённые ими вопросы."
+          ],
+          "options": [
+            {
+              "title": [
+                "Give the waiting families the floor.",
+                "Предоставить слово ожидающим семьям."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Explain the volunteers' service before the gathering.",
+                "Объяснить собравшимся обязанности добровольцев."
+              ],
+              "reward": "war_support5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JEB_constitutional",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "The Seal Beside the Vote",
+            "Печать рядом с решением собрания"
+          ],
+          "desc": [
+            "After Michel's return under the charter, his former suppliers still bring invoices to the palace. The assembly sends them to the minister who placed the orders. A ducal promise must now meet an appropriation openly agreed by representatives. The first contracts will establish whether old acquaintances can work within the settlement without slipping through the gaps between its signatures.",
+            "После возвращения Мишеля на условиях хартии прежние поставщики по-прежнему несут счета во дворец. Собрание направляет их к министру, разместившему заказы. Теперь герцогское обещание должно опираться на расходы, открыто одобренные представителями. Первые договоры покажут, способны ли старые знакомые работать в рамках соглашения, не проскальзывая между подписями, каждая из которых раньше казалась достаточным разрешением."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "A Tender on the Reading Table",
+            "Подряд на столе читальни"
+          ],
+          "desc": [
+            "A proposal for a machine workshop circulates through Rila's reading rooms before the assembly chooses a contractor. Michel recognises one bidder; the printers recognise another from unpaid wartime bills. Neither recognition settles the question. The delegates will compare drawings and hear the workers who must operate the machines, giving the charter its first substantial undertaking outside the debating chamber.",
+            "Предложение построить механическую мастерскую проходит через рильские читальни, прежде чем собрание выберет подрядчика. Мишель узнаёт одного участника; печатники помнят другого по неоплаченным военным счетам. Ни одно знакомство не решает вопрос. Делегаты сравнят чертежи и выслушают будущих работников, чтобы хартия обрела первое большое дело за стенами зала, где до сих пор обсуждали главным образом её формулировки."
+          ],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "The Gauge Has No Title",
+            "У калибра нет титула"
+          ],
+          "desc": [
+            "A foreman rejects a delivery bearing an impressive coat of arms: the fittings do not match the order. The supplier appeals to Michel, who passes the disputed pieces to the workshop's examiners. Rila's constitutional bargain needs places where evidence can inconvenience an influential patron. A common testing room will let the craftsmen settle such arguments with measurements that both sides can repeat.",
+            "Мастер отвергает поставку с внушительным гербом: детали не соответствуют заказу. Поставщик обращается к Мишелю, а тот передаёт спорные изделия испытателям мастерской. Конституционному соглашению Рилы нужны места, где доказательства способны поставить влиятельного покровителя в неудобное положение. Общая испытательная комната позволит ремесленникам решать подобные споры измерениями, которые обе стороны могут повторить самостоятельно и в присутствии друг друга."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "Questions Carried by Wire",
+            "Вопросы по проводам"
+          ],
+          "desc": [
+            "Representatives outside Rila complain that the ministry's answers arrive after the work they concern has already begun. The constitutional delegation proposes linking provincial offices and technical schools by reliable telegraph service. An engineer lays the circuit drawings beside the unanswered letters. A responsible cabinet must be reachable from beyond the corridor where its ministers recognise every visitor by sight.",
+            "Представители за пределами Рилы жалуются: ответы министров приходят, когда обсуждаемая работа уже началась. Конституционная делегация предлагает связать провинциальные учреждения и технические школы надёжным телеграфом. Инженер кладёт схемы цепей рядом с письмами без ответа. Ответственное правительство должно быть доступно не только из того коридора, где министры узнают каждого посетителя в лицо и знают, кто его рекомендовал."
+          ],
+          "days": 49,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "The Appropriation Survives Its Patron",
+            "Заказ переживёт покровителя"
+          ],
+          "desc": [
+            "A contractor asks what becomes of a provincial order if its sponsoring minister loses the assembly's confidence. Michel has no private guarantee to offer. The charter's advocates will make the approved undertaking answerable to the chamber itself, with records that a successor can follow. Their national programme must promise continuity without granting any officeholder a right to remain forever.",
+            "Подрядчик спрашивает, что станет с провинциальным заказом, если поддержавший его министр утратит доверие собрания. Мишель не предлагает личного поручительства. Сторонники хартии поставят одобренное дело под ответственность самой палаты и оставят документы, понятные преемнику. Их общегосударственная программа должна обещать преемственность работы, не предоставляя ни одному чиновнику права навсегда остаться на месте только ради сохранения начатого проекта."
+          ],
+          "days": 56,
+          "reward": "pp75"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "The Oath Read in Full",
+            "Присяга без пропущенных строк"
+          ],
+          "desc": [
+            "Recruits gather beneath a charter posted beside the enlistment table. Some expect an oath to Michel; others fear another club's private army. Anne-Josephine de Mericourt reads the text aloud before asking for volunteers. Service belongs to the lawful institutions they have established together. A soldier should understand whose orders bind the regiment, and who can demand an account of them.",
+            "Новобранцы собираются у хартии, вывешенной рядом со столом записи. Одни ожидают присяги Мишелю, другие опасаются частного войска очередного клуба. Анна-Жозефина де Мерикур читает текст вслух, прежде чем позвать добровольцев. Служить предстоит законным учреждениям, созданным совместно. Солдат должен понимать, чьи распоряжения обязательны для полка и кто вправе потребовать отчёта о приказах, отданных от имени новой власти."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Promotion Before a Witness",
+            "Повышение при свидетелях"
+          ],
+          "desc": [
+            "A veteran instructor and a young clerk arrive for the same officer examination. One knows the ground; the other can read every instruction without help. Mericourt asks both to lead a squad through an unfamiliar exercise. The constitutional army will need schools where experience can be taught and learning tested, without a family connection deciding whose mistakes deserve forgiveness.",
+            "Опытный инструктор и молодой писарь приходят на один офицерский экзамен. Первый знает местность; второй без помощи читает любое наставление. Мерикур предлагает обоим провести отделение через незнакомое упражнение. Конституционной армии нужны школы, где можно передавать опыт и проверять знания, не позволяя семейным связям решать, чьи ошибки простительны и кого признают неспособным после первой же неудачной попытки."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "The Emergency Order Has an Author",
+            "У чрезвычайного приказа есть автор"
+          ],
+          "desc": [
+            "A mobilisation exercise reveals an order signed only with the name of a committee. The stationmaster cannot discover who may change it, and two companies wait beside a loaded train. Mericourt brings the instruction to the ministry. The charter must allow urgent action while leaving a recognisable officer responsible for explaining what was ordered and why the railway stopped.",
+            "На мобилизационных учениях обнаруживается приказ, подписанный только названием комитета. Начальник станции не может узнать, кто вправе его изменить, и две роты ждут у загруженного поезда. Мерикур приносит распоряжение в министерство. Хартия должна допускать срочные действия, но оставлять конкретного офицера, обязанного объяснить, что было приказано и почему железная дорога остановилась перед отправкой давно готового состава."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "An Arsenal Open to Inspection",
+            "Арсенал, открытый для проверки"
+          ],
+          "desc": [
+            "The assembly receives an offer to expand arms manufacture under a confidential arrangement. Its military delegates accept that drawings need protection, but ask why the invoices should be hidden as well. A supervised arsenal will give the constitutional programme a practical answer. Workers, inspectors and officers will each know which door they may open without seeking a patron's favour.",
+            "Собранию предлагают расширить оружейное производство по закрытому соглашению. Военные делегаты признают необходимость охранять чертежи, но спрашивают, почему нужно скрывать ещё и счета. Подотчётный арсенал даст конституционной программе практический ответ. Рабочие, проверяющие и офицеры будут знать, какую дверь вправе открыть, не добиваясь милости покровителя и не оправдывая каждый обычный вопрос подозрением в измене."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "A Staff Answerable to the Chamber",
+            "Штаб, отвечающий перед палатой"
+          ],
+          "desc": [
+            "Maps brought from several provinces cover the ministry's table. Each delegation has a different memory of what emergency powers once permitted. Mericourt proposes a common staff exercise, with civilian representatives examining the dispatches afterwards. The constitutional movement must show that a coordinated army can obey a clear command while leaving its government's authority open to an awkward question.",
+            "Карты нескольких провинций покрывают министерский стол. Каждая делегация по-своему помнит, что когда-то позволяла чрезвычайная власть. Мерикур предлагает общие штабные учения с последующим разбором донесений гражданскими представителями. Конституционное движение должно показать, что согласованная армия способна выполнять ясные приказы, сохраняя за обществом право задавать неудобные вопросы правительству, от чьего имени эти приказы были отданы."
+          ],
+          "days": 56,
+          "reward": "research_support"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "A Petition Without a Patron",
+            "Прошение без покровителя"
+          ],
+          "desc": [
+            "The assembly's visitors still ask which influential name should appear above their own. Michel hears a servant explain that this was how petitions reached him before the charter. A public reception will admit claimants in the order they arrive, including those who know nobody in the chamber. The settlement must change the experience of waiting outside as well as speaking within.",
+            "Посетители собрания всё ещё спрашивают, чьё влиятельное имя нужно поставить над собственным. Мишель слышит объяснение слуги: до хартии именно так прошения попадали к нему. Открытая приёмная будет приглашать просителей по очереди, включая совершенно незнакомых палате. Соглашение должно изменить жизнь тех, кто ждёт за дверью, так же заметно, как жизнь тех, кто выступает внутри."
+          ],
+          "days": 35,
+          "reward": "society"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "The Duke Takes a Place in the Queue",
+            "Герцог ждёт своей очереди"
+          ],
+          "desc": [
+            "Rila's constitutional delegation carries a charter into a national meeting where other provinces have brought their own demands. Michel asks for the speaking list instead of the chair. His return was authorised by Rilan representatives; any wider place must be argued afresh. The movement's credibility now depends on whether its most recognisable advocate will accept amendments he did not propose.",
+            "Конституционная делегация Рилы привозит хартию на общегосударственное собрание, где другие провинции предъявляют собственные требования. Мишель просит список выступающих вместо председательского кресла. Его возвращение разрешили представители Рилы; любое более широкое положение нужно обосновывать заново. Доверие к движению теперь зависит от того, примет ли его самый известный сторонник поправки, которые предложил кто-то другой и которых он не ожидал."
+          ],
+          "days": 49,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "Countersigned Workshop Orders",
+              "Заказы с ответственной подписью"
+            ],
+            "desc": [
+              "Rila's new contracts require an appropriation and an accountable minister, giving craftsmen a promise they can present beyond the palace doors.",
+              "Новые рильские договоры требуют одобренных расходов и ответственного министра: у ремесленников появляется обещание, с которым можно обратиться за пределы дворца."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Assembly's Testing Rooms",
+              "Испытательные комнаты собрания"
+            ],
+            "desc": [
+              "Measurements and recorded specifications are replacing the recommendation of a familiar patron in Rila's public workshops.",
+              "В общественных мастерских Рилы измерения и записанные требования постепенно заменяют рекомендацию знакомого покровителя."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.1,
+              "production_factory_max_efficiency_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Contracts Beneath the Charter",
+              "Договоры под защитой хартии"
+            ],
+            "desc": [
+              "Technical evidence travels with public orders, and approved work survives a change of ministry. Rila's charter has acquired a practical industrial life.",
+              "Технические обоснования сопровождают общественные заказы, а утверждённая работа переживает смену министров. Рильская хартия обретает практическую жизнь в промышленности."
+            ],
+            "modifiers": {
+              "production_factory_efficiency_gain_factor": 0.1,
+              "production_factory_max_efficiency_factor": 0.05,
+              "research_speed_factor": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "A Charter in the Barracks",
+              "Хартия в казарме"
+            ],
+            "desc": [
+              "The recruit's oath identifies the lawful institutions above the regiment. Personal loyalty must find its place inside that common undertaking.",
+              "Присяга новобранца указывает законные учреждения над полком. Личной верности предстоит найти место внутри общего обязательства."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "Signed Emergency Dispatches",
+              "Подписанные срочные донесения"
+            ],
+            "desc": [
+              "Urgent orders now have authors who can be found and questioned. Officers can prepare together without losing the thread of responsibility.",
+              "У срочных приказов теперь есть авторы, которых можно найти и расспросить. Офицеры готовятся совместно, сохраняя ясную ответственность."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.075,
+              "planning_speed": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Constitutional General Staff",
+              "Конституционный генеральный штаб"
+            ],
+            "desc": [
+              "A common staff coordinates the provincial formations while its ministers remain answerable for the authority they entrust to it.",
+              "Общий штаб согласует действия провинциальных частей, а министры отвечают за предоставленные ему полномочия."
+            ],
+            "modifiers": {
+              "army_org_factor": 0.1,
+              "planning_speed": 0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Bid Michel Recognises",
+            "Знакомое имя в заявке"
+          ],
+          "desc": [
+            "Michel pauses over the workshop bids. One bears the name of a supplier who served his household before his flight from Rila. The proposed price is good, and the drawings are competent. An assembly delegate places an unpaid printer's bill beside them. The same firm, she says, cannot plead poverty to its old creditors while seeking a new public advance.\n\nThe minister asks for time. Refusing a useful workshop because its contractor has enemies would be easy; explaining why a ducal acquaintance received special indulgence would be harder. Michel closes the folder and leaves it on the delegates' side of the table.\n\nThe committee can call the supplier to a public explanation now, giving the assembly a clear answer before it endorses the order. Alternatively, it can invite the affected craftsmen to reconcile the disputed bills with the supplier under its supervision. Either course concerns this contract alone. Michel's signature on the charter cannot tell the representatives which remedy they must prefer.",
+            "Мишель задерживается над заявками на строительство мастерской. На одной стоит имя поставщика, работавшего для его двора до бегства из Рилы. Цена разумна, чертежи убедительны. Делегатка собрания кладёт рядом неоплаченный счёт печатника. Та же фирма, говорит она, не может ссылаться на бедность перед прежними кредиторами и одновременно просить новый общественный аванс.\n\nМинистр просит время на проверку. Отказаться от полезной мастерской потому, что у подрядчика есть враги, было бы легко. Объяснить особое снисхождение к знакомому герцога будет труднее. Мишель закрывает папку и оставляет её на стороне стола, где сидят делегаты. Печатник ждёт у стены; он пришёл за ответом, а не за новой рекомендацией.\n\nКомитет может немедленно вызвать поставщика для открытого объяснения, чтобы собрание получило ясный ответ до утверждения заказа. Другой путь — пригласить пострадавших мастеров сверить спорные счета с подрядчиком под наблюдением представителей. Оба решения относятся к этому договору. Подпись Мишеля под хартией не даёт ему права заранее выбрать за остальных способ разрешения спора."
+          ],
+          "options": [
+            {
+              "title": [
+                "Require a public explanation before endorsement.",
+                "Потребовать открытого объяснения до утверждения."
+              ],
+              "reward": "pp50"
+            },
+            {
+              "title": [
+                "Bring the creditors and contractor together.",
+                "Свести кредиторов и подрядчика за одним столом."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "Who May Open the Gate?",
+            "Кто вправе открыть ворота?"
+          ],
+          "desc": [
+            "Anne-Josephine de Mericourt arrives at the assembly carrying an exercise order with three endorsements and no usable instruction. A reserve company waited at a closed depot while its captain sought permission from each signatory in turn. Michel recognises the palace secretary's handwriting on one endorsement. Recognition does nothing to explain who could have opened the gate.\n\nA veteran deputy says the answer is obvious: give the commander freedom to act. Another remembers when that freedom meant entering a house without asking. Mericourt puts the exercise map between them. This case concerns a depot already assigned to the army, not a house, and the distinction ought to appear in the order.\n\nThe officers can return to the field and repeat the exercise with a clearly named duty commander. They can instead spend the afternoon at the depot with its armourers, sorting the usable reserve weapons while the ministry corrects the instruction. The charter needs both capable command and limits that soldiers can understand without a lawyer beside every gate.",
+            "Анна-Жозефина де Мерикур приходит в собрание с учебным приказом, на котором стоят три визы, но нет выполнимого указания. Резервная рота ждала у закрытого склада, пока капитан поочерёдно добивался разрешения каждого подписавшего. Мишель узнаёт почерк дворцового секретаря. Знакомая рука ничего не объясняет: кто всё-таки мог открыть ворота?\n\nДепутат-ветеран считает ответ очевидным: командиру нужна свобода действий. Другой помнит, как такая свобода позволяла входить в чужие дома без спроса. Мерикур кладёт между ними карту учений. Здесь речь о складе, уже переданном армии, а не о жилом доме; разница должна быть видна в самом приказе. Несколько депутатов наклоняются над отметкой у ворот.\n\nОфицеры могут вернуться в поле и повторить упражнение с прямо назначенным дежурным командиром. Можно провести остаток дня на складе вместе с оружейниками, отобрав исправное резервное оружие, пока министерство исправляет указание. Хартии нужны и способное командование, и границы полномочий, понятные солдату без юриста у каждых ворот. Мерикур оставляет спорный лист на столе и ждёт решения."
+          ],
+          "options": [
+            {
+              "title": [
+                "Repeat the exercise with clear responsibility.",
+                "Повторить учение с ясной ответственностью."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Inspect and release the serviceable reserve weapons.",
+                "Проверить и выдать исправное резервное оружие."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "A Crown Is Not an Amendment",
+            "Корона — не поправка"
+          ],
+          "desc": [
+            "At the national constitutional meeting, a visitor addresses Michel as though a Rilan duke must naturally preside over Aquileia. The room grows quiet. Across the table, a provincial delegate draws her own proposed amendment back towards her. She came to discuss a government answerable to representatives, not to witness a succession announced by courtesy.\n\nMichel asks the secretary to retain his ducal title in the minutes and nothing more. His reconciliation with Rila gave him a place under its charter. It did not settle the national crown, nor give him authority over the representatives now listening. The visitor apologises, but the withdrawn amendment remains beneath its author's claw.\n\nThere is time for one further intervention before the session ends. Michel can yield it to the delegate and let her challenge the Rilan draft in public. He can instead read a carefully limited statement of his own mandate into the record, closing the misunderstanding before the next round of negotiations. Either action must make consent visible where a flattering title nearly concealed it.",
+            "На общегосударственной конституционной встрече один из гостей обращается к Мишелю так, словно рильскому герцогу естественно возглавлять Аквелию. В комнате становится тихо. Напротив провинциальная делегатка придвигает к себе предложенную поправку. Она приехала обсуждать правительство, отвечающее перед представителями, а не присутствовать при объявлении престолонаследия через любезное обращение.\n\nМишель просит секретаря сохранить в протоколе его герцогский титул и ничего больше. Примирение с Рилой дало ему место под её хартией. Оно не определило судьбу общегосударственной короны и не предоставило власти над присутствующими представителями. Гость извиняется, но отозванная поправка остаётся под когтем её автора. Секретарь перестаёт писать и смотрит на председательствующего.\n\nДо конца заседания осталось время для одного выступления. Мишель может уступить его делегатке, позволив открыто оспорить рильский проект. Можно вместо этого внести в протокол точное и ограниченное изложение собственного мандата, закрыв недоразумение перед следующими переговорами. Любой шаг должен сделать согласие видимым там, где лестный титул едва его не заслонил. Никто не убирает бумаги со стола, ожидая выбора."
+          ],
+          "options": [
+            {
+              "title": [
+                "Yield the floor to the provincial amendment.",
+                "Уступить слово автору провинциальной поправки."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "State the limits of Michel's mandate for the record.",
+                "Зафиксировать границы мандата Мишеля."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JEB_moderate",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "A Stall Without a Patron",
+            "Прилавок без покровителя"
+          ],
+          "desc": [
+            "The moderate clubs find the same names on every list of favoured market traders. Outside the gates, a basket maker waits for someone important to recommend her. Société Justice will hear these sellers before drafting the new market rules. A republic defended by small workshops should let their owners reach a customer without first acquiring a friend in government.",
+            "Умеренные клубы находят одни и те же имена во всех списках привилегированных торговцев. За воротами плетельщица корзин ждёт рекомендации важного лица. Société Justice выслушает таких продавцов перед составлением новых рыночных правил. Республика, которую защищали небольшие мастерские, должна позволить их владельцам добираться до покупателя, не обзаводясь сначала приятелем среди людей, распоряжающихся местами у торговых рядов."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Subscribers' Machine Hall",
+            "Машинный зал на общие взносы"
+          ],
+          "desc": [
+            "A printer needs a lathe only occasionally; a cartwright cannot afford one at all. At a meeting hosted by De Becignier, craftsmen propose a machine hall supported by subscriptions and open appointments. The moderate committee will help them turn the proposal into a working shop. Its machines must remain available to neighbours whose club badges differ from the founders'.",
+            "Печатнику токарный станок нужен изредка; тележный мастер вовсе не может его купить. На встрече у Де Бекинье ремесленники предлагают открыть машинный зал на общие взносы с доступом по записи. Умеренный комитет поможет превратить замысел в действующую мастерскую. Её станки должны быть доступны и соседям, чьи клубные значки отличаются от значков учредителей, первыми внесших деньги."
+          ],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "Receipts Survive the Barricades",
+            "Расписки пережили баррикады"
+          ],
+          "desc": [
+            "Small suppliers arrive with revolutionary receipts that nobody knows how to redeem. Some furnished paper, others bread or iron, and several now owe their own neighbours. The moderate clubs will reconcile these claims in a common clearing office. Restarting production means tracing promises back to the work they purchased, without treating every inconvenient creditor as an enemy of the republic.",
+            "Мелкие поставщики приносят революционные расписки, которые никто не умеет погасить. Одни доставляли бумагу, другие хлеб или железо; многие теперь сами должны соседям. Умеренные клубы сверят требования в общей расчётной конторе. Возвращение к работе требует связать обещания с оплаченным ими трудом, не объявляя каждого неудобного кредитора врагом республики только за просьбу выполнить старое обязательство."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "A Wagon for the Smaller Town",
+            "Вагон для малого города"
+          ],
+          "desc": [
+            "The largest republican clubs can fill a freight wagon with their supporters' goods. A smaller town cannot, and its crates remain on the platform while speeches praise national solidarity. Rila's moderate delegates propose collecting small consignments along a shared route. Their contribution to the national republic will be judged by merchants who need a timetable more than another invitation to applaud.",
+            "Крупнейшие республиканские клубы легко заполняют вагон товарами своих сторонников. Маленький город не может, и его ящики остаются на платформе под речи об общегосударственной солидарности. Рильские умеренные предлагают собирать небольшие партии вдоль общего маршрута. Их вклад в общую республику оценят торговцы, которым расписание нужнее очередного приглашения аплодировать на собрании, пока груз мокнет под открытым небом."
+          ],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "Prices Beyond the Club Door",
+            "Цены за дверями клуба"
+          ],
+          "desc": [
+            "A merchant receives news of a distant shortage before the market hears it and buys every available sack. The clubs' printers want to publish regular quotations from other provinces, with telegraph operators helping verify them. The moderate programme will carry this modest service into national republican politics: information that reaches a small producer before a well-connected buyer has finished bargaining.",
+            "Торговец узнаёт о далёкой нехватке раньше рынка и скупает все свободные мешки. Клубные печатники предлагают публиковать регулярные цены из других провинций, сверяя сообщения с телеграфистами. Умеренные принесут в общую республиканскую политику эту скромную службу: сведения должны доходить до мелкого производителя прежде, чем осведомлённый покупатель закончит торг и увезёт весь товар, оставив остальным только слухи."
+          ],
+          "days": 56,
+          "reward": "research_electronics"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "The Volunteer Has a Workshop",
+            "У добровольца есть мастерская"
+          ],
+          "desc": [
+            "A guard roster reaches a workshop with every skilled worker's name marked for the same week. The owner and apprentices bring it to the moderate committee together. Mericourt will arrange service around the occupations that keep a district alive, asking employers and volunteers to agree workable rotations. A citizen army must remain recognisable as part of the society it defends.",
+            "В мастерскую приносят караульный список: все опытные работники назначены на одну неделю. Хозяин и подмастерья вместе идут в умеренный комитет. Мерикур согласует службу с занятиями, которые поддерживают жизнь округа, предложив работодателям и добровольцам составить выполнимые смены. Гражданское войско должно оставаться узнаваемой частью общества, которое оно защищает, а не оставлять за собой закрытые двери нужных соседям мастерских."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Proof Every Donated Rifle",
+            "Проверить каждую подаренную винтовку"
+          ],
+          "desc": [
+            "The clubs proudly display weapons collected during the uprising, including rifles that jam when warmed by repeated firing. A familiar donor asks the armourer not to embarrass him before the volunteers. The moderate committee backs the inspection. Gratitude can be expressed in a speech; the recruits deserve instructors who will set aside a dangerous gift without asking who presented it.",
+            "Клубы гордо показывают оружие, собранное во время восстания, включая винтовки, которые заклинивает после нескольких выстрелов. Знакомый даритель просит оружейника не позорить его перед добровольцами. Умеренный комитет поддерживает проверку. Благодарность можно выразить в речи; новобранцам нужны инструкторы, способные отложить опасный подарок, не выясняя, кто его преподнёс и сколько хороших знакомых сидит у этого дарителя в ближайшем клубе."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "The Relief Arrives Before the Vote",
+            "Смена приходит до голосования"
+          ],
+          "desc": [
+            "An evening assembly begins while the district guards are still waiting for relief. Their neighbours have already taken the best seats and begun deciding the agenda. Mericourt brings the roster to the club representatives. Duties must pass reliably between units so that service does not silence the citizen. The same habit will matter when exhaustion replaces a meeting as the reason to change the watch.",
+            "Вечернее собрание начинается, пока окружная стража ждёт смены. Соседи уже заняли лучшие места и определяют повестку. Мерикур приносит расписание клубным представителям. Обязанности должны надёжно переходить между подразделениями, чтобы служба не лишала гражданина голоса. Та же привычка пригодится, когда причиной сменить караул станет усталость, а не заседание, и рядом не окажется председателя, способного лично разыскать опоздавших."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "Repair Orders Without Club Colours",
+            "Ремонт без клубных цветов"
+          ],
+          "desc": [
+            "Officers from outside Rila arrive with damaged weapons and discover that local repair queues still follow old political friendships. The moderate delegates propose a dedicated arms workshop whose orders are ranked by condition and need. Supporting the national republic means accepting unfamiliar formations at the same bench, even when their soldiers sing a different version of the revolutionary songs.",
+            "Офицеры из других провинций привозят повреждённое оружие и обнаруживают, что ремонтная очередь по-прежнему зависит от старой политической дружбы. Умеренные делегаты предлагают отдельную оружейную мастерскую, где порядок определят состояние изделий и нужда. Поддерживать общую республику значит принимать незнакомые части у того же верстака, даже когда их солдаты поют другой вариант революционной песни и носят непривычные кокарды."
+          ],
+          "days": 49,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "A Citizen's Place in the Reserve",
+            "Место гражданина в резерве"
+          ],
+          "desc": [
+            "A returning volunteer knows where his unit will assemble but not who will bring the stretcher carts or replace the exhausted sentries. The moderate clubs invite medical workers and reserve instructors to plan together. Their army will defend the republic through districts able to sustain a position, relieve their neighbours and welcome the injured home without losing the thread of common service.",
+            "Вернувшийся доброволец знает место сбора своей части, но не знает, кто привезёт санитарные повозки и сменит уставших часовых. Умеренные клубы приглашают медиков и инструкторов резерва составить общий план. Их армия будет защищать республику силами округов, способных удерживать позицию, сменять соседей и принимать раненых домой, не теряя связи с общей службой после первых дней напряжения."
+          ],
+          "days": 56,
+          "reward": "research_support"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "Read the Motion for Yourself",
+            "Прочесть предложение самому"
+          ],
+          "desc": [
+            "The Fanal's messengers once carried printed words for workers who could not read them. In the moderate clubs' evening rooms, a compositor now sets a short motion beside a spelling exercise. Learners can question the sentence as soon as they understand it. The republic will gain citizens who need neither a landlord nor a friendly orator to tell them what a paper says.",
+            "Посыльные «Фанала» когда-то разносили печатные слова рабочим, которые не умели их читать. В вечерних комнатах умеренных клубов наборщик кладёт короткое предложение для собрания рядом с упражнением по чтению. Ученики смогут оспорить фразу, как только разберут её смысл. Республика получит граждан, которым не нужны ни землевладелец, ни доброжелательный оратор, объясняющий, что написано на листе."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "The Clubs That Lose a Vote",
+            "Клубы, проигравшие голосование"
+          ],
+          "desc": [
+            "The moderate delegation returns from a national republican meeting without winning every argument. At home, an impatient supporter wants the rejected speakers excluded from the next public hall. Société Justice refuses the suggestion. The clubs have joined a broader movement whose decisions will sometimes disappoint them; their place in it depends on making disagreement survivable for their neighbours as well.",
+            "Умеренная делегация возвращается с общегосударственного республиканского собрания, не победив во всех спорах. Дома нетерпеливый сторонник требует больше не пускать отвергнутых ораторов в общественный зал. Société Justice отклоняет предложение. Клубы вошли в широкое движение, чьи решения порой будут их разочаровывать; достойное место в нём требует сделать разногласия переносимыми и для соседей, проигравших сегодняшнее голосование."
+          ],
+          "days": 49,
+          "reward": "stability5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Unendorsed Market Stall",
+              "Прилавок без рекомендации"
+            ],
+            "desc": [
+              "Small Rilan producers can seek customers without first borrowing the reputation of a courtier or a club director.",
+              "Мелкие рильские производители ищут покупателей, не одалживая сначала имя придворного или клубного руководителя."
+            ],
+            "modifiers": {
+              "production_speed_buildings_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Craftsmen's Clearing House",
+              "Расчётная контора ремесленников"
+            ],
+            "desc": [
+              "Shared equipment and reconciled receipts let independent workshops undertake work that none could carry through alone.",
+              "Общее оборудование и сверенные расписки позволяют самостоятельным мастерским браться за работу, непосильную каждой по отдельности."
+            ],
+            "modifiers": {
+              "production_speed_buildings_factor": 0.075
+            }
+          },
+          {
+            "title": [
+              "The Moderate Producers' Compact",
+              "Соглашение производителей и умеренных"
+            ],
+            "desc": [
+              "Small consignments, public prices and dependable claims bind Rila's independent producers into a useful part of the national republican economy.",
+              "Сборные грузы, общедоступные цены и надёжные расчёты связывают самостоятельных производителей Рилы с общереспубликанским хозяйством."
+            ],
+            "modifiers": {
+              "production_speed_buildings_factor": 0.1,
+              "consumer_goods_factor": -0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "The Workshop Volunteer Roster",
+              "График добровольцев из мастерских"
+            ],
+            "desc": [
+              "Local service is arranged around the households and trades that keep each district standing. The citizen guard knows the places it must protect.",
+              "Местную службу согласуют с занятиями семей и ремесленников, поддерживающих жизнь округа. Гражданская стража знает места, которые должна защищать."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Reliable Relief",
+              "Надёжная смена"
+            ],
+            "desc": [
+              "The guards have learned to hand over their positions before exhaustion turns a willing volunteer into an inattentive sentry.",
+              "Стража учится передавать позиции до того, как усталость превратит добросовестного добровольца в невнимательного часового."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.075,
+              "army_morale_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Republic's District Reserves",
+              "Окружные резервы республики"
+            ],
+            "desc": [
+              "Medical workers, repair shops and reserve companies sustain a defensive service rooted in the republic's ordinary districts.",
+              "Медики, ремонтные мастерские и резервные роты поддерживают оборонительную службу, опирающуюся на повседневную жизнь республиканских округов."
+            ],
+            "modifiers": {
+              "army_defence_factor": 0.1,
+              "army_morale_factor": 0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "A Debt in an Unfamiliar Crate",
+            "Долг в незнакомом ящике"
+          ],
+          "desc": [
+            "De Becignier has lent a room for the machine hall's subscribers, and the meeting has almost ended when a porter brings in a long wooden crate. A trader who owes the craftsmen money has offered rifles in settlement. They are left from the clubs' hurried purchases abroad, bought when a weapon's mere arrival seemed a victory.\n\nThe printer wants payment he can spend on paper. A volunteer instructor asks to see the locks before anyone dismisses the offer. The trader has also brought a written acknowledgement of the debt; he says that a public guarantee from his associates will let him settle it in ordinary goods shortly. Several subscribers recognise those associates and disagree sharply about their reliability.\n\nThe moderate committee can accept only the weapons that pass inspection, releasing them to the district stores against the disputed account. Alternatively, it can bring the guarantors before the subscribers and obtain an acknowledged settlement. De Becignier moves his own chair aside so the people owed the money can reach the table.",
+            "Де Бекинье предоставил комнату для участников машинного зала, и встреча почти закончилась, когда носильщик вносит длинный деревянный ящик. Торговец, задолжавший ремесленникам, предлагает расплатиться винтовками. Они остались от поспешных закупок клубов за границей, когда само прибытие оружия уже казалось победой и исправность каждой детали проверяли далеко не сразу.\n\nПечатник хочет получить расчёт, на который можно купить бумагу. Инструктор добровольцев просит осмотреть замки, прежде чем отвергать предложение. Торговец принёс и письменное признание долга: по его словам, открытое поручительство товарищей позволит вскоре рассчитаться обычными товарами. Несколько участников знают этих поручителей и резко расходятся во мнениях об их надёжности. Старые знакомства вновь делят собравшихся сильнее, чем размеры внесённых взносов.\n\nУмеренный комитет может принять только оружие, выдержавшее проверку, и передать его окружным складам в счёт спорного долга. Можно вызвать поручителей перед собранием вкладчиков и добиться признанного соглашения о расчёте. Де Бекинье отодвигает собственное кресло, чтобы люди, которым должны деньги, могли подойти к столу. Печатник берёт счёт и первым поднимается с места."
+          ],
+          "options": [
+            {
+              "title": [
+                "Accept inspected rifles against the debt.",
+                "Принять проверенные винтовки в счёт долга."
+              ],
+              "reward": "rifles500"
+            },
+            {
+              "title": [
+                "Have the guarantors acknowledge the settlement publicly.",
+                "Потребовать открытого признания соглашения поручителями."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "The Sentry's Empty Chair",
+            "Пустое кресло часового"
+          ],
+          "desc": [
+            "Anne-Josephine de Mericourt enters a club hall carrying a guard roster. The sentries from the western stores are still outside on duty, although their relief was due before the meeting began. Inside, their neighbours are arguing over the next appointments to the district reserve. An empty chair near the front belongs to a corporal whose name is already being discussed.\n\nThe chair of the meeting offers to read the absent guards' opinions from a note. Mericourt asks whether he would accept the same courtesy when someone else decided what he meant. The argument stops long enough for a messenger to explain the delay: the incoming section had been directed to the wrong gate.\n\nThe officers can use the remainder of the evening to repeat the handover, letting both sections trace the mistake together. The club can instead suspend its deliberation until the returning guards take their places, hearing their account in front of their neighbours. The roster needs correction in either case. The immediate question is where the lesson will be learned.",
+            "Анна-Жозефина де Мерикур входит в клубный зал с караульным расписанием. Часовые западных складов всё ещё стоят на постах, хотя смена должна была прийти до начала собрания. Внутри соседи спорят о назначениях в окружной резерв. Пустое кресло у первого ряда принадлежит капралу, чьё имя уже обсуждают без него.\n\nПредседатель предлагает зачитать мнения отсутствующих по записке. Мерикур спрашивает, понравилась бы ему такая любезность, если бы кто-то другой определял смысл его слов. Спор затихает, и посыльный успевает объяснить задержку: заступающее отделение отправили не к тем воротам. На полях расписания обнаруживается старая отметка, которую никто не исправил после переноса поста.\n\nОфицеры могут посвятить остаток вечера повторной передаче караула, чтобы оба отделения вместе разобрали ошибку. Клуб может вместо этого отложить обсуждение до возвращения часовых и выслушать их рассказ перед соседями. Расписание придётся исправить в любом случае. Сейчас решается, где именно будет усвоен урок. Мерикур кладёт лист на пустующее кресло и просит не принимать решение о капрале до его появления."
+          ],
+          "options": [
+            {
+              "title": [
+                "Repeat the relief and teach both sections.",
+                "Повторить смену и разобрать ошибку с обоими отделениями."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Wait for the guards and hear them in the hall.",
+                "Дождаться часовых и выслушать их в зале."
+              ],
+              "reward": "stability5"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "The Press After the Defeat",
+            "Типография после поражения"
+          ],
+          "desc": [
+            "A printer arrives at the Committee of Public Safety with a damaged bundle of notices. His club lost the last debate within the national republican movement, and a group of victors has decided that its meeting no longer deserves publicity. They have not banned the paper, they insist. They merely persuaded the carriers to leave it behind.\n\nDe Becignier recognises the printer. His press once served clubs that could not safely announce where they met. A moderate representative says that memory should settle the matter. Another asks who will carry tonight's notices if everyone remains here praising yesterday's courage. The printer lays the bundle between them and says the meeting begins before sunset.\n\nThe committee can lend its couriers to deliver this issue and publicly defend the losing club's right to meet. It can instead summon the organisers who obstructed distribution and require an open acknowledgement of the committee's decision. Neither response changes the defeated motion. The republic's supporters must discover whether losing an argument still leaves them a place in the next one.",
+            "Печатник приходит в Комитет общественной безопасности с помятой связкой объявлений. Его клуб проиграл последние прения внутри общегосударственного республиканского движения, и несколько победителей решили, что его собрание больше не заслуживает огласки. Газету они не запрещали, уверяют они. Просто убедили разносчиков оставить её лежать.\n\nДе Бекинье узнаёт печатника. Его станок когда-то служил клубам, которые не могли безопасно объявить место встречи. Умеренный представитель говорит, что одного этого воспоминания достаточно. Другой спрашивает, кто доставит сегодняшние объявления, если все останутся здесь восхвалять вчерашнюю храбрость. Печатник кладёт связку между ними: собрание начинается до заката, а за окнами уже заметно темнеет.\n\nКомитет может поручить своим посыльным разнести этот выпуск и открыто защитить право проигравшего клуба собраться. Можно вызвать организаторов срыва распространения и потребовать публичного признания решения комитета. Ни один ответ не изменит отклонённого предложения. Сторонникам республики предстоит выяснить, оставляет ли поражение в одном споре место в следующем. Печатник ждёт практического решения и время от времени поправляет бечёвку, которую успели порвать на улице."
+          ],
+          "options": [
+            {
+              "title": [
+                "Send couriers with the notices and defend the meeting.",
+                "Отправить посыльных с объявлениями и защитить собрание."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Require the obstructing organisers to answer publicly.",
+                "Потребовать открытого ответа от организаторов срыва."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JEB_cocardiers",
+      "focuses": [
+        {
+          "slot": "e1",
+          "title": [
+            "Account for the Rupins' Stores",
+            "Учесть склады богатеев"
+          ],
+          "desc": [
+            "The Cocardiers bring the keys of seized warehouses to the Committee of Public Safety. Inside are goods taken in the revolution's name, some useful and some already disappearing into private hands. Their promise was to break the wealth that sustained restoration. They must now put those stores to public work, beginning with inventories that even a victorious club cannot quietly alter.",
+            "Кокардьеры приносят в Комитет общественной безопасности ключи от захваченных складов. Внутри лежат товары, изъятые именем революции: одни ещё пригодны, другие уже расходятся по частным рукам. Движение обещало сломить богатство, поддерживавшее реставрацию. Теперь припасы должны послужить общественной работе, начиная с описей, которые даже победивший клуб не сможет незаметно переписать в пользу собственных влиятельных товарищей."
+          ],
+          "days": 35,
+          "reward": "pp50"
+        },
+        {
+          "slot": "e2",
+          "title": [
+            "The Coach House Makes Pumps",
+            "Насосы вместо экипажей"
+          ],
+          "desc": [
+            "A confiscated coach house still smells of polished leather while neighbouring workshops wait for pumps and repair tools. The Cocardiers call its former craftsmen back to fit benches beneath the empty harness racks. Turning an estate's luxury into useful work will test their revolutionary claim more severely than another raid: the machines must serve people who cannot simply seize replacements.",
+            "В конфискованной каретной ещё пахнет начищенной кожей, пока соседние мастерские ждут насосов и ремонтного инструмента. Кокардьеры зовут прежних мастеров установить верстаки под опустевшими стойками упряжи. Превращение усадебной роскоши в полезный труд проверит революционные притязания строже очередного налёта: машины должны служить людям, которые не могут просто захватить замену, если обещанное изделие сломается после первой недели работы."
+          ],
+          "days": 42,
+          "reward": "civ_factory"
+        },
+        {
+          "slot": "e3",
+          "title": [
+            "One Order for the Foundry",
+            "Один заказ для литейной"
+          ],
+          "desc": [
+            "The foundry has received demands for machine parts, rifle fittings and an ornamental revolutionary bell, each marked urgent by a different club. Its workers ask the committee which furnace charge should come first. The Cocardiers will bring their requisitions into a common production schedule. Revolutionary resolve cannot melt the same iron three times, however loudly its claimants pronounce the republic's name.",
+            "Литейная получила требования изготовить детали машин, оружейную фурнитуру и парадный революционный колокол; разные клубы пометили каждый заказ срочным. Рабочие спрашивают комитет, что плавить первым. Кокардьеры сведут реквизиции в общий производственный план. Революционная решимость не позволит трижды расплавить одно железо, как бы громко заказчики ни произносили имя республики и какими заслугами ни подкрепляли свои настойчивые требования."
+          ],
+          "days": 42,
+          "reward": "research_industry"
+        },
+        {
+          "slot": "e4",
+          "title": [
+            "The Freight Behind the Proclamation",
+            "Грузы вслед за воззванием"
+          ],
+          "desc": [
+            "Aquileian clubs answer the Cocardiers' national appeal with requests for tools, not merely speakers. The dispatch room discovers that pledged supplies are waiting on several disconnected schedules. Its delegates will travel with the railway workers to join those journeys together. A movement claiming to defend the entire republic must reach workshops beyond Rila before asking them to trust its commands.",
+            "Аквелийские клубы отвечают на общегосударственное обращение кокардьеров просьбами об инструментах, а не только об ораторах. В диспетчерской обнаруживают, что обещанные грузы ждут по нескольким несогласованным расписаниям. Делегаты отправятся с железнодорожниками связать эти поездки. Движение, обещающее защищать всю республику, должно добраться до мастерских за пределами Рилы, прежде чем просить их доверять приказам далёкого революционного комитета."
+          ],
+          "days": 49,
+          "reward": "infrastructure"
+        },
+        {
+          "slot": "e5",
+          "title": [
+            "Arms from the Public Workshops",
+            "Оружие общественных мастерских"
+          ],
+          "desc": [
+            "The memory of paying smugglers for unreliable rifles still angers the Cocardiers' veterans. A national revolutionary programme cannot rest on another desperate purchase. The committee will dedicate a workshop to military manufacture, drawing on the foundry's common specifications and the armourers' experience. Its weapons must leave the bench ready for inspection by the recruits who will carry them.",
+            "Воспоминание о деньгах, отданных контрабандистам за ненадёжные винтовки, до сих пор злит ветеранов-кокардьеров. Общегосударственная революционная программа не может опираться на новую отчаянную закупку. Комитет выделит мастерскую для военного производства, используя общие образцы литейной и опыт оружейников. Со станка оружие должно выходить готовым к проверке новобранцами, которым предстоит нести его и отвечать за исправность в строю."
+          ],
+          "days": 56,
+          "reward": "mil_factory"
+        },
+        {
+          "slot": "m1",
+          "title": [
+            "The Club Goes to the Muster",
+            "Клуб выходит на сбор"
+          ],
+          "desc": [
+            "The Cocardiers' volunteers arrive by club, each group expecting to keep its own watchwords and commanders. Boreas Babeuf counts the gaps between them as carefully as the recruits themselves. The committee will ask each club to send a complete contingent into common service. Its revolutionary army must be able to stand together when the familiar meeting hall is far behind.",
+            "Добровольцы-кокардьеры приходят по клубам, ожидая сохранить собственные пароли и командиров. Бореас Бабеф считает промежутки между группами столь же внимательно, как самих новобранцев. Комитет предложит каждому клубу направить полный отряд на общую службу. Революционная армия должна уметь стоять вместе, когда знакомый зал собраний останется далеко позади и ближайшим соседом окажется грифон из прежде соперничавшего клуба."
+          ],
+          "days": 35,
+          "reward": "manpower1500"
+        },
+        {
+          "slot": "m2",
+          "title": [
+            "Lessons from the Smuggled Rifles",
+            "Уроки контрабандных винтовок"
+          ],
+          "desc": [
+            "At Dilven, an instructor spreads the old imported weapons across a bench. Some were obsolete when bought; others never worked properly. The recruits laugh until he asks which one they would trust during a retreat. The Cocardiers will turn that bitter collection into practical instruction, teaching soldiers to recognise faults, keep sound weapons working and refuse dangerous improvisation disguised as revolutionary courage.",
+            "В Дилвене инструктор раскладывает старое привозное оружие на верстаке. Одни винтовки устарели ещё до покупки, другие никогда толком не работали. Новобранцы смеются, пока он не спрашивает, какую взяли бы при отступлении. Кокардьеры превратят горькую коллекцию в практический урок: распознавать неисправности, беречь исправное оружие и отвергать опасную импровизацию, которую слишком легко выдать за революционную смелость."
+          ],
+          "days": 42,
+          "reward": "research_infantry"
+        },
+        {
+          "slot": "m3",
+          "title": [
+            "Babeuf Counts the Empty Wagons",
+            "Бабеф считает пустые повозки"
+          ],
+          "desc": [
+            "Babeuf orders a rapid exercise and discovers that three clubs have sent ammunition to the same company while another receives none. Their messengers all carry valid committee seals. The revolutionary command will drill dispatchers and quartermasters alongside the soldiers. A shared purpose requires a supply route that survives competing loyalties, or the quickest march will merely bring hungry volunteers together.",
+            "Бабеф назначает быстрое учение и обнаруживает, что три клуба отправили патроны одной роте, оставив другую без снабжения. У всех посыльных действительные печати комитета. Революционное командование будет обучать диспетчеров и интендантов вместе с солдатами. Общему делу нужен путь снабжения, выдерживающий соперничество привязанностей; иначе самый быстрый марш лишь соберёт голодных добровольцев там, где уже нечем поделиться."
+          ],
+          "days": 42,
+          "reward": "army_xp20"
+        },
+        {
+          "slot": "m4",
+          "title": [
+            "The Gun Crew Beyond Its Club",
+            "Расчёт за пределами своего клуба"
+          ],
+          "desc": [
+            "Artillery pieces arrive with crews who have served only beside their own comrades. Babeuf places observers from another formation at the range and tells them to request support. The first attempt dissolves into incompatible signals. A revolutionary army seeking a national role must learn the patient language of shared fire plans, where a familiar slogan cannot tell a gunner where to aim.",
+            "Орудия прибывают с расчётами, служившими только рядом со своими товарищами. Бабеф ставит на полигоне наблюдателей другой части и велит им запросить поддержку. Первая попытка рассыпается из-за несовместимых сигналов. Революционная армия, претендующая на общегосударственную роль, должна освоить терпеливый язык общих огневых планов, где знакомый лозунг не подскажет наводчику, куда целиться и кто находится перед выбранной позицией."
+          ],
+          "days": 49,
+          "reward": "research_artillery"
+        },
+        {
+          "slot": "m5",
+          "title": [
+            "An Army That Can Leave the Barricade",
+            "Армия, способная уйти с баррикады"
+          ],
+          "desc": [
+            "The old barricade fighters know every doorway in their own district. Beyond it, they need cooks, repair carts and messengers who can find an unfamiliar road. The Cocardiers will build their common service around those uncelebrated duties. Their promise to defend the republic across Aquileia demands troops able to travel without making each village surrender the means of feeding itself.",
+            "Прежние бойцы баррикад знают каждый подъезд своего квартала. За его пределами нужны повара, ремонтные повозки и посыльные, способные найти незнакомую дорогу. Кокардьеры построят общую службу вокруг этих неприметных обязанностей. Обещание защищать республику по всей Аквелии требует войск, умеющих двигаться дальше, не заставляя каждую деревню отдавать всё, чем её жители собирались кормиться после ухода проходящей колонны."
+          ],
+          "days": 56,
+          "reward": "research_support"
+        },
+        {
+          "slot": "c1",
+          "title": [
+            "The Fanal Reads Its Own Demands",
+            "«Фанал» читает свои требования"
+          ],
+          "desc": [
+            "The Fanal's workers have carried other clubs' pamphlets through Rila for years. Now a reader hesitates over a requisition that claims to speak for them. The Cocardiers will open lessons around actual workshop notices and meeting papers. Those who supplied the revolution's feet should be able to read its promises, challenge a forged instruction and recognise their own words in print.",
+            "Рабочие «Фанала» годами разносили по Риле листовки других клубов. Теперь чтец запинается над реквизицией, которая будто бы выражает их волю. Кокардьеры откроют занятия на основе настоящих мастерских объявлений и бумаг собраний. Те, кто носил революционные воззвания, должны уметь читать обещания, оспаривать поддельные распоряжения и узнавать собственные слова в печати, не полагаясь каждый раз на объяснение другого."
+          ],
+          "days": 35,
+          "reward": "literacy"
+        },
+        {
+          "slot": "c2",
+          "title": [
+            "The Revolution Hears Its Witnesses",
+            "Революция выслушивает свидетелей"
+          ],
+          "desc": [
+            "Delegates beyond Rila ask the Cocardiers why their committee should be trusted with wider revolutionary responsibility. Its defenders bring accounts of courage; its critics bring accounts of confiscations and frightened neighbours. The national campaign will hear both before proclaiming what must be preserved. A movement determined to prevent another restoration must explain which victories belong to the republic and which merely rewarded a club.",
+            "Делегаты за пределами Рилы спрашивают кокардьеров, почему их комитету следует доверить широкую революционную ответственность. Защитники приносят свидетельства храбрости, критики — рассказы о конфискациях и напуганных соседях. Общегосударственная кампания выслушает обе стороны, прежде чем объявить, что нужно сохранить. Движение, решившее не допустить новой реставрации, должно объяснить, какие победы принадлежат республике, а какие только обогатили отдельный клуб."
+          ],
+          "days": 49,
+          "reward": "war_support5"
+        }
+      ],
+      "ideas": {
+        "economy": [
+          {
+            "title": [
+              "The Seized Warehouse Inventory",
+              "Опись захваченного склада"
+            ],
+            "desc": [
+              "The Cocardiers begin turning confiscated privilege into working supplies, with an inventory that challenges private claims made in the revolution's name.",
+              "Кокардьеры превращают конфискованные привилегии в рабочие запасы, а описи оспаривают частные притязания, предъявляемые от имени революции."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Common Furnace Schedule",
+              "Общий график плавок"
+            ],
+            "desc": [
+              "Competing club requisitions give way to a foundry schedule that workers can follow without guessing which seal matters most.",
+              "Соперничающие клубные реквизиции уступают место графику литейной, понятному рабочим без догадок о том, чья печать важнее."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.1,
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          },
+          {
+            "title": [
+              "The Republic's Working Arsenals",
+              "Действующие арсеналы республики"
+            ],
+            "desc": [
+              "The public workshops connect seized stores, common specifications and arms manufacture. Revolutionary claims must now produce usable work.",
+              "Общественные мастерские связывают изъятые запасы, общие образцы и оружейное производство. Революционные притязания теперь должны давать пригодные изделия."
+            ],
+            "modifiers": {
+              "industrial_capacity_factory": 0.15,
+              "production_factory_efficiency_gain_factor": 0.05
+            }
+          }
+        ],
+        "military": [
+          {
+            "title": [
+              "The Clubs' Common Muster",
+              "Общий сбор клубов"
+            ],
+            "desc": [
+              "Cocardier volunteers begin learning a shared service beyond the customs of their own meeting halls.",
+              "Добровольцы-кокардьеры осваивают общую службу за пределами привычек собственных клубных залов."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "Ammunition Beyond the Club Seal",
+              "Патроны независимо от клубной печати"
+            ],
+            "desc": [
+              "Common dispatch exercises teach the revolutionary formations to send supplies where they are needed, rather than where an old comrade is waiting.",
+              "Общие учения диспетчеров учат революционные части направлять припасы туда, где они нужны, а не туда, где ждёт старый товарищ."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.075,
+              "supply_consumption_factor": -0.05
+            }
+          },
+          {
+            "title": [
+              "The Marching Revolutionary Service",
+              "Походная служба революции"
+            ],
+            "desc": [
+              "The club contingents carry their common drills, repair teams and provisioning habits beyond the streets where they first assembled.",
+              "Клубные отряды уносят общие навыки, ремонтные команды и порядок снабжения за пределы улиц, где впервые собрались."
+            ],
+            "modifiers": {
+              "training_time_army_factor": -0.1,
+              "supply_consumption_factor": -0.1
+            }
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "after": "e2",
+          "title": [
+            "The Lock Inside the Seized Chest",
+            "Замок в захваченном сундуке"
+          ],
+          "desc": [
+            "The Committee of Public Safety receives two inventories for the same seized coach house. One lists tools for the new pump workshop. The other lists a locked chest that a Cocardier patrol removed before the craftsmen arrived. A Fanal delegate brings the chest into the meeting herself. Inside lie rifle parts, household papers and the wages set aside for the estate's servants.\n\nA patrol member says everything belonged to a noble and therefore belonged to the revolution. The delegate places a servant's pay note on the table. The workshop foreman examines the metal pieces: some can restore weapons already in the district stores. The rest of the chest cannot be melted into a useful answer.\n\nThe committee can make restitution of the identified wages its first public act in the disputed workshop, returning them before the waiting workers. It can instead begin by handing the serviceable rifle parts to the armourers and demonstrating where the patrol's seizure has gone. The papers remain available for investigation in either case; nobody receives permission to pocket the remainder.",
+            "Комитет общественной безопасности получает две описи одной захваченной каретной. В первой перечислены инструменты для новой насосной мастерской. Во второй — запертый сундук, который патруль кокардьеров унёс до прихода ремесленников. Делегатка «Фанала» сама приносит его на заседание. Внутри лежат оружейные детали, хозяйственные бумаги и деньги, отложенные для жалованья усадебным слугам.\n\nУчастник патруля говорит, что всё принадлежало дворянину, а значит, принадлежит революции. Делегатка кладёт на стол расчётную записку прислуги. Мастер осматривает металлические части: некоторые позволят восстановить оружие на окружных складах. Остальное содержимое сундука невозможно переплавить в удобный ответ. За дверью ждут работники, чьи имена встречаются в найденных бумагах.\n\nКомитет может начать открытое разбирательство в спорной мастерской с возврата установленного жалованья, передав деньги при ожидающих рабочих. Можно первым делом отправить пригодные детали оружейникам и показать, куда поступило изъятое патрулём имущество. Бумаги в обоих случаях останутся для расследования; никто не получает права присвоить остальное. Делегатка держит сундук открытым, пока секретарь записывает всё его содержимое и решение собравшихся."
+          ],
+          "options": [
+            {
+              "title": [
+                "Return the identified wages before the workers.",
+                "Вернуть установленное жалованье при рабочих."
+              ],
+              "reward": "stability5"
+            },
+            {
+              "title": [
+                "Account publicly for the parts sent to the armourers.",
+                "Открыто передать учтённые детали оружейникам."
+              ],
+              "reward": "rifles500"
+            }
+          ]
+        },
+        {
+          "after": "m3",
+          "title": [
+            "Babeuf's Unfired Exercise",
+            "Учение Бабефа без выстрелов"
+          ],
+          "desc": [
+            "Boreas Babeuf signals the start of the exercise, and the company on his left fails to fire. Its volunteers raise empty ammunition pouches. On the right, another company has enough cartridges to practise all afternoon. Both quartermasters produce instructions stamped by the Committee of Public Safety, and both insist that their own club followed its orders faithfully.\n\nBabeuf wants the march resumed immediately. A recruit asks whether he should carry a loaded neighbour's spare pouch or wait for his own committee to approve the exchange. The question irritates the officers because it exposes exactly what the exercise was meant to conceal: a common army still living on private habits.\n\nThe command can halt the march and make the quartermasters redistribute and record the ammunition together, repeating the signals afterwards. Alternatively, the officers can bring waiting volunteer groups into the exercise as supply runners, enrolling those who complete the practical instruction. The lesson is the same, but the afternoon can be spent correcting the staff or widening the service.",
+            "Бореас Бабеф подаёт сигнал к началу учения, но рота слева не открывает огонь. Добровольцы показывают пустые патронные сумки. Справа у другой роты достаточно боеприпасов на весь день. Оба интенданта предъявляют распоряжения с печатью Комитета общественной безопасности и уверяют, что их клуб добросовестно исполнил полученный приказ.\n\nБабеф требует немедленно продолжить марш. Новобранец спрашивает, можно ли взять запасную сумку у обеспеченного соседа или нужно ждать одобрения собственного комитета. Вопрос раздражает офицеров: он показывает именно то, что упражнение должно было скрыть. Общая армия всё ещё живёт частными привычками, а правильные печати не заставляют патроны попадать в пустые сумки.\n\nКомандование может остановить марш, заставить интендантов вместе распределить и записать боеприпасы, а затем повторить сигналы. Другой путь — привлечь ожидающие группы добровольцев к подноске припасов и зачислить прошедших практическое обучение. Урок остаётся прежним, но день можно посвятить исправлению штабной работы или расширению службы. Бабеф смотрит на часы и опускает поднятое крыло: прежде следующего сигнала придётся выбрать, кто именно будет учиться."
+          ],
+          "options": [
+            {
+              "title": [
+                "Repeat the exercise after a joint supply reckoning.",
+                "Повторить учение после общей сверки снабжения."
+              ],
+              "reward": "army_xp20"
+            },
+            {
+              "title": [
+                "Train and enrol the waiting volunteer supply parties.",
+                "Обучить и зачислить ожидающие добровольческие команды снабжения."
+              ],
+              "reward": "manpower1500"
+            }
+          ]
+        },
+        {
+          "after": "c2",
+          "title": [
+            "A Witness Beneath the Cockade",
+            "Свидетель под кокардой"
+          ],
+          "desc": [
+            "Anne-Josephine de Mericourt stands beside the Committee of Public Safety's speakers at a meeting for delegates from other provinces. The Cocardiers have displayed accounts of defended streets and liberated prisoners. A worker in the audience raises a requisition bearing their seal and asks why the tools taken from his neighbours never reached a public workshop.\n\nA veteran calls the interruption a gift to the monarchists. Mericourt asks him to let the worker finish. The visitor has worn his republican cockade throughout the speech; he wants the revolution's promise applied to the people who claim to carry it. Several provincial delegates put down their prepared endorsements and listen.\n\nThe committee can give the next speaking period to witnesses of the clubs' common defence, asking them to explain why they still believe the republic worth serving. It can instead keep this particular claimant at the table and require the responsible requisition delegates to answer before the meeting. Neither course withdraws the national revolutionary programme. What changes is the evidence its advocates choose to present first.",
+            "Анна-Жозефина де Мерикур стоит рядом с ораторами Комитета общественной безопасности на встрече делегатов других провинций. Кокардьеры выставили свидетельства защиты улиц и освобождения заключённых. Рабочий в зале поднимает реквизицию с их печатью и спрашивает, почему инструменты, забранные у его соседей, так и не попали в общественную мастерскую.\n\nВетеран называет вмешательство подарком монархистам. Мерикур просит дать рабочему договорить. Посетитель всё выступление носил республиканскую кокарду: он хочет применить обещание революции к людям, которые говорят от её имени. Несколько провинциальных делегатов откладывают подготовленные приветствия и начинают слушать. Рабочий разглаживает лист, чтобы подписи были видны с другого конца стола.\n\nКомитет может предоставить следующее выступление свидетелям общей обороны клубов, предложив объяснить, почему они по-прежнему считают республику достойной службы. Можно оставить просителя за столом и потребовать ответа от делегатов, отвечавших за реквизицию, прямо перед собранием. Ни один выбор не отменяет общегосударственную революционную программу. Меняется свидетельство, которое её сторонники предъявят первым. Мерикур отступает от стола, освобождая место тому, кого сейчас вызовут."
+          ],
+          "options": [
+            {
+              "title": [
+                "Hear why the defenders still offer their service.",
+                "Выслушать защитников, по-прежнему готовых служить."
+              ],
+              "reward": "war_support5"
+            },
+            {
+              "title": [
+                "Make the requisition delegates answer this claim.",
+                "Потребовать от делегатов ответа по этой реквизиции."
+              ],
+              "reward": "pp50"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

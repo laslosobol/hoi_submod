@@ -1,0 +1,165 @@
+# Explicit territorial/custody transitions. No foreign sovereign is annexed by this programme.
+HSM_AET_handover = {
+ if = {
+  limit = { HSM_AET_can_handover = yes }
+  GRI = { set_country_flag = HSM_AET_restored }
+  set_country_flag = HSM_AET_completed
+  set_country_flag = HSM_AET_handover_done
+  HSM_AET_remove_temporary_cores = yes
+  every_owned_state = {
+   limit = { HSM_VER_GRO_herzland_state = yes is_fully_controlled_by = PREV }
+   add_core_of = GRI transfer_state_to = GRI
+  }
+  GRI = {
+   if = { limit = { is_subject = yes } overlord = { set_autonomy = { target = GRI autonomy_state = autonomy_free } } }
+   drop_cosmetic_tag = yes
+   set_capital = { state = 382 remember_old_capital = no }
+   inherit_technology = PREV
+   save_global_event_target_as = griffonian_empire
+   set_variable = { global.griffonian_empire_var = THIS }
+   remove_ideas = GRI_grover_vi
+  }
+  remove_ideas = GRI_grover_vi
+  GRI_emperor_grover_vi = { set_nationality = GRI }
+  GRI = {
+   set_politics = { ruling_party = neutrality elections_allowed = no }
+   set_popularities = { neutrality = 70 democratic = 25 fascism = 5 communism = 0 }
+   set_portraits = { character = GRI_emperor_grover_vi civilian = { large = "gfx/leaders/GRI/Grover_VI_good.tga" } }
+   add_country_leader_role = {
+    character = GRI_emperor_grover_vi promote_leader = yes
+    country_leader = { desc = HSM_AET_grover_desc expire = "1965.1.1" ideology = constitutional_monarchism traits = { } }
+   }
+   # Old imperial decisions, coronation and reclamation trees are guarded by the restoration flag.
+   load_focus_tree = { tree = HSM_AET_restored_empire keep_completed = no }
+   every_country = {
+    limit = { exists = yes NOT = { tag = GRI } }
+    GRI = {
+     remove_wargoal = { type = annex_everything target = PREV }
+     remove_wargoal = { type = take_state_focus target = PREV }
+     remove_wargoal = { type = puppet_wargoal_focus target = PREV }
+    }
+   }
+   give_guarantee = AET give_military_access = AET
+   add_ideas = HSM_AET_imperial_compact
+  }
+  # Remove old imperial claims on the partner's remaining land, never the partner's actual cores.
+  every_owned_state = { remove_core_of = GRI remove_claim_by = GRI }
+  give_guarantee = GRI give_military_access = GRI
+  if = { limit = { is_in_faction = no } create_faction = HSM_AET_western_compact }
+  if = { limit = { is_faction_leader = yes } add_to_faction = GRI }
+  else = {
+   faction_leader = {
+    set_country_flag = { flag = HSM_AET_alliance_request days = 30 value = 1 }
+    country_event = { id = HSM_AET_system.3 days = 1 }
+   }
+  }
+  transfer_units_fraction = {
+   target = GRI size = 0 army_ratio = 0.25 air_ratio = 0.25 navy_ratio = 0 stockpile_ratio = 0.25
+   keep_unit_leaders_trigger = { always = yes }
+  }
+  if = { limit = { has_country_flag = HSM_AET_school_open } GRI = { set_country_flag = HSM_AET_school_open } }
+  if = { limit = { has_country_flag = HSM_AET_judge_patron } GRI = { set_country_flag = HSM_AET_judge_patron } }
+  if = { limit = { has_country_flag = HSM_AET_protect_patron } GRI = { set_country_flag = HSM_AET_protect_patron } }
+  if = { limit = { has_country_flag = HSM_AET_service_law } GRI = { set_country_flag = HSM_AET_service_law } }
+  if = { limit = { has_country_flag = HSM_AET_trimmel_ratified } GRI = { set_country_flag = HSM_AET_trimmel_ratified } }
+  clr_country_flag = HSM_AET_mandate
+  if = { limit = { has_cosmetic_tag = HSM_AET_REGENCY } drop_cosmetic_tag = yes }
+  set_capital = { state = 495 remember_old_capital = no }
+  HSM_AET_refresh = yes
+  country_event = { id = HSM_AET.17 days = 1 }
+  GRI = { country_event = { id = HSM_AET_system.4 days = 2 } }
+ }
+}
+HSM_AET_interrupt = {
+ if = {
+  limit = { has_country_flag = HSM_AET_mandate }
+  clr_country_flag = HSM_AET_mandate
+  set_country_flag = HSM_AET_interrupted
+  remove_ideas = GRI_grover_vi
+  HSM_AET_remove_temporary_cores = yes
+  if = { limit = { has_cosmetic_tag = HSM_AET_REGENCY } drop_cosmetic_tag = yes }
+  country_event = { id = HSM_AET_system.1 days = 1 }
+ }
+}
+HSM_AET_close_relief = {
+ if = {
+  limit = { HSM_AET_active = yes has_war = no NOT = { has_country_flag = HSM_AET_mandate has_country_flag = HSM_AET_union_done has_country_flag = HSM_AET_completed } }
+  set_country_flag = HSM_AET_closed
+  HSM_AET_remove_temporary_cores = yes
+  remove_ideas = GRI_grover_vi
+  remove_dynamic_modifier = { modifier = HSM_AET_compact }
+ }
+}
+HSM_AET_maintain = {
+ if = {
+  limit = { has_country_flag = HSM_AET_started }
+  if = {
+   limit = {
+    has_country_flag = HSM_AET_mandate
+    OR = { NOT = { HSM_AET_government = yes } NOT = { HSM_AET_local_alive = yes } GRI = { exists = yes } }
+   }
+   HSM_AET_interrupt = yes
+  }
+  if = {
+   limit = { HSM_AET_active = yes }
+   # Reconcile saves that completed the restoration before its county reward existed.
+   if = {
+    limit = { has_country_flag = HSM_AET_completed has_country_flag = HSM_AET_prepare_done NOT = { has_country_flag = HSM_AET_union_done has_country_flag = HSM_AET_handover_done } }
+    set_country_flag = HSM_AET_handover_done
+   }
+   HSM_AET_recover = yes
+   if = {
+    limit = { HSM_AET_trimmel = yes NOT = { has_country_flag = HSM_AET_identity_seen } }
+    set_country_flag = HSM_AET_identity_seen
+    set_country_flag = HSM_AET_identity_pending
+    country_event = { id = HSM_AET_system.2 days = 1 }
+   }
+   if = {
+    limit = { HSM_AET_adult = yes has_country_flag = HSM_AET_mandate NOT = { has_country_flag = HSM_AET_adult_acknowledged } }
+    set_country_flag = HSM_AET_adult_acknowledged remove_ideas = GRI_grover_vi
+    country_event = { id = HSM_AET_system.5 days = 1 }
+   }
+   # Every delayed packet can recover after a war or interrupted government.
+   if = { limit = { has_completed_focus = HSM_AET_opening } HSM_AET_retry_opening = yes }
+   if = { limit = { has_completed_focus = HSM_AET_refuge } HSM_AET_finish_refuge = yes }
+   if = { limit = { has_completed_focus = HSM_AET_home_budget } HSM_AET_finish_home_budget = yes }
+   if = { limit = { has_completed_focus = HSM_AET_congress } HSM_AET_finish_congress = yes }
+   if = { limit = { has_completed_focus = HSM_AET_mandate } HSM_AET_finish_mandate = yes }
+   if = { limit = { has_completed_focus = HSM_AET_household } HSM_AET_finish_household = yes }
+   HSM_AET_retry_gift = yes
+   if = { limit = { has_completed_focus = HSM_AET_court_accounts } HSM_AET_finish_court_accounts = yes }
+   if = { limit = { has_completed_focus = HSM_AET_service } HSM_AET_finish_service = yes }
+   if = { limit = { has_completed_focus = HSM_AET_working_table } HSM_AET_finish_working_table = yes }
+   if = { limit = { has_completed_focus = HSM_AET_prepare } HSM_AET_finish_prepare = yes }
+   if = { limit = { has_completed_focus = HSM_AET_obituary } HSM_AET_finish_obituary = yes }
+   if = { limit = { has_completed_focus = HSM_AET_interim } HSM_AET_finish_interim = yes }
+   if = { limit = { has_completed_focus = HSM_AET_delegates } HSM_AET_finish_delegates = yes }
+   if = { limit = { has_completed_focus = HSM_AET_union } HSM_AET_finish_union = yes }
+   if = { limit = { has_completed_focus = HSM_AET_revenues } HSM_AET_finish_revenues = yes }
+   if = { limit = { has_completed_focus = HSM_AET_succession } HSM_AET_finish_succession = yes }
+   if = { limit = { has_completed_focus = HSM_AET_winter } HSM_AET_finish_winter = yes }
+   if = { limit = { has_completed_focus = HSM_AET_letters } HSM_AET_finish_letters = yes }
+   if = { limit = { has_completed_focus = HSM_AET_audience } HSM_AET_finish_audience = yes }
+   if = { limit = { has_completed_focus = HSM_AET_hearing } HSM_AET_finish_hearing = yes }
+   if = { limit = { has_completed_focus = HSM_AET_signature } HSM_AET_finish_signature = yes }
+   if = { limit = { has_completed_focus = HSM_AET_workshops } HSM_AET_finish_workshops = yes }
+   if = { limit = { has_completed_focus = HSM_AET_roads } HSM_AET_finish_roads = yes }
+   if = { limit = { has_completed_focus = HSM_AET_scholars } HSM_AET_finish_scholars = yes }
+   if = { limit = { has_completed_focus = HSM_AET_demobilisation } HSM_AET_finish_demobilisation = yes }
+   if = {
+    limit = { HSM_AET_regency = yes has_country_flag = HSM_AET_judgement_done NOT = { has_country_flag = HSM_AET_working_table_done has_country_flag = HSM_AET_disagreement_queued } }
+    set_country_flag = { flag = HSM_AET_disagreement_queued days = 60 value = 1 }
+    country_event = { id = HSM_AET.15 days = 25 }
+   }
+   HSM_AET_handover = yes
+   HSM_AET_refresh = yes
+  }
+ }
+}
+HSM_AET_restored_maintain = {
+ # Old saves may already have completed the replacement tree's first focus.
+ if = {
+  limit = { tag = GRI has_country_flag = HSM_AET_restored has_completed_focus = HSM_AET_GRI_oath has_idea = GRI_bureaucracy }
+  remove_ideas = GRI_bureaucracy
+ }
+}
